@@ -78,6 +78,14 @@ const ROWS: KillRow[] = [
     severity: "bridge",
   },
   {
+    area: "Spectral running α_s",
+    paper: "Doc 1 · CMB-S4 + DESI + Euclid (v494)",
+    criterion:
+      "The R² attractor fixes the running parameter-free: α_s = −2/N★² = −r/6 ∈ [−8.0, −5.6]×10⁻⁴. Plateau potentials give α_s < 0, so any robust POSITIVE running at ≥5σ kills the branch — the P-ACT-LB record leg already has a positive central value (+0.0062 ± 0.0052, −1.33σ from TFPT): the watch channel.",
+    formal: "\\alpha_s > 0 \\text{ robust } (\\geq 5\\sigma) \\;\\Rightarrow\\; \\text{plateau branch killed}",
+    severity: "bridge",
+  },
+  {
     area: "Neutrino ordering / m_ββ",
     paper: "Doc 2 · LEGEND, nEXO",
     criterion:

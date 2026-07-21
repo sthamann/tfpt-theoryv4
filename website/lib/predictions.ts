@@ -793,6 +793,81 @@ export const predictions: Prediction[] = [
     },
   },
   {
+    id: "alpha-s-running",
+    slug: "spectral-running",
+    title: "Spectral Running — R² Consistency Relation",
+    shortTitle: "α_s",
+    target: "α_s = −2/N★² = −r/6 ∈ [−8.0, −5.6]×10⁻⁴ (LO band)",
+    targetLatex:
+      "\\alpha_s = -\\tfrac{2}{N_\\star^2} = -\\tfrac{r}{6} \\in [-8.0,\\,-5.6]\\times 10^{-4}",
+    numericValue: "-7.1e-4",
+    status: "Conditional",
+    dependencyClass: "Inflation (R²)",
+    killTest:
+      "Robust α_s < −5×10⁻³ or > +3×10⁻³ at ≥5σ; any robust POSITIVE running kills the plateau branch (plateau potentials give α_s < 0).",
+    derivationFormulas: [
+      "\\alpha_s = \\frac{dn_s}{d\\ln k} = -\\tfrac{2}{N_\\star^2} = -\\tfrac{r}{6}, \\qquad \\beta_s = -\\tfrac{4}{N_\\star^3} \\ \\text{(leading order)}",
+      "\\text{exact slow roll: } \\alpha_s(51.4) = -7.09\\times 10^{-4},\\ \\beta_s(51.4) = -2.70\\times 10^{-5}",
+    ],
+    pdf: "/papers/tfpt_1_architecture_e8.pdf",
+    description:
+      "The same R² attractor that fixes n_s, r and A_s also fixes the running of the tilt — a parameter-free consistency relation, α_s = −2/N★² = −r/6 at leading order (machine-checked in v494, exact slow roll on the Starobinsky potential). The 2026-07-20 prediction of record: Planck 2018 sits +0.57σ from the branch; the P-ACT-LB record leg (+0.0062 ± 0.0052) pulls −1.33σ with a POSITIVE central value — the watch channel: plateau models cannot give positive running.",
+    category: "Cosmology",
+    confrontation: {
+      derivation: "\\alpha_s = -\\tfrac{2}{N_\\star^2},\\ N_\\star \\in [50,60]",
+      tfptValue: "−7.1×10⁻⁴ (band −8.0…−5.6×10⁻⁴)",
+      measured: "−0.0045 ± 0.0067 (Planck) · +0.0062 ± 0.0052 (P-ACT-LB)",
+      deviation: "+0.57σ (Planck) · −1.33σ (P-ACT-LB record leg)",
+      source: "Planck 2018 X · ACT DR6 (Calabrese+ 2025)",
+      decisive: "CMB-S4 + DESI + Euclid (σ(α_s) ~ 3.3×10⁻⁴, systematics-limited)",
+    },
+    experiment: {
+      summary:
+        "experiments/tfpt-discovery/alpha_s_running_probe.py computes the exact slow-roll α_s/β_s on the Starobinsky potential and confronts the 2025/2026 data landscape (Planck 2018, P-ACT, P-ACT-LB); promoted to v494_cosmo_running_mu_record.py.",
+      result:
+        "α_s = −7.09×10⁻⁴ at N⋆ = 51.4 (LO band [−8.0, −5.6]×10⁻⁴): +0.57σ vs Planck 2018, −1.33σ vs the P-ACT-LB record leg — consistent, with the positive P-ACT-LB central value flagged as the watch channel.",
+      finding: "consistent",
+      repoPath: "experiments/tfpt-discovery",
+    },
+  },
+  {
+    id: "mu-distortion",
+    slug: "mu-distortion",
+    title: "μ-Distortion — A_s/N★ Branch Discriminator",
+    shortTitle: "μ",
+    target: "μ ∈ [1.5, 2.3]×10⁻⁸ (band); 1.6×10⁻⁸ sharp / 2.0×10⁻⁸ profiled",
+    targetLatex:
+      "\\mu \\in [1.5,\\,2.3]\\times 10^{-8}\\ \\ (1.6\\times 10^{-8}\\ \\text{at}\\ N_\\star{=}51.4)",
+    numericValue: "1.6e-8",
+    status: "Conditional",
+    dependencyClass: "Inflation (R²)",
+    killTest: "Robust μ < 0.9×10⁻⁸ or > 4×10⁻⁸.",
+    derivationFormulas: [
+      "\\mu \\approx 2.2 \\int P_\\zeta(k)\\,W_\\mu(k)\\,d\\ln k \\ \\ (\\text{Chluba window, calibrated on the } \\Lambda\\text{CDM anchor})",
+      "\\mu(51.4) = 1.6\\times 10^{-8},\\ \\mu(56.1) = 2.0\\times 10^{-8},\\ \\Delta\\mu = 3\\times 10^{-9}",
+    ],
+    pdf: "/papers/tfpt_2_standard_model.pdf",
+    description:
+      "Silk damping of the TFPT primordial spectrum fixes the CMB μ-distortion per N★ branch (v494): 1.6×10⁻⁸ on the sharp reheating point 51.4, 2.0×10⁻⁸ on the A_s-profiled record 56.1 — the 23% split (Δμ = 3×10⁻⁹) is a 3σ branch decision at σ(μ) = 10⁻⁹ (Voyage-2050 class). Data-limited: the PIXIE baseline (9×10⁻⁸) does not reach the band. Honest S15 typing: the frozen recovery log-comb is structurally blind here (|F| = 0.033, δμ = 7.4×10⁻¹² = 0.007σ) — the theory itself predicts where it is invisible.",
+    category: "Cosmology",
+    confrontation: {
+      derivation: "\\mu \\approx 2.2 \\int P_\\zeta W_\\mu \\, d\\ln k",
+      tfptValue: "1.5–2.3×10⁻⁸ (1.6×10⁻⁸ sharp / 2.0×10⁻⁸ profiled)",
+      measured: "|μ| < 9×10⁻⁵ (95%)",
+      deviation: "data-limited (4 dex below the bound)",
+      source: "COBE/FIRAS (1996)",
+      decisive: "PIXIE-class / Voyage-2050 (σ_μ ~ 10⁻⁹): 3σ branch decision",
+    },
+    experiment: {
+      summary:
+        "experiments/tfpt-discovery/mu_distortion_probe.py integrates the TFPT spectrum through the Chluba μ window per branch and scans the frozen log-comb modulation; promoted to v494_cosmo_running_mu_record.py.",
+      result:
+        "μ band 1.5–2.3×10⁻⁸; branch split 3.0×10⁻⁹ = 3σ at Voyage-2050 σ(μ) = 10⁻⁹; PIXIE baseline does not reach (0.18× limit); the frozen comb is structurally blind in the window (0.007σ).",
+      finding: "data_limited",
+      repoPath: "experiments/tfpt-discovery",
+    },
+  },
+  {
     id: "scalaron",
     slug: "scalaron-mass",
     title: "Scalaron Mass — Seam Power",
@@ -1328,7 +1403,7 @@ export const TEST_SURFACE_GROUPS: {
   {
     label: "Conditional cosmology tests",
     tone: "border-amber-400/25 bg-amber-500/5 text-amber-200",
-    items: ["r", "n_s", "A_s", "Ω_b", "η_B", "w ≠ −1"],
+    items: ["r", "n_s", "A_s", "α_s", "μ-distortion", "Ω_b", "η_B", "w ≠ −1"],
   },
   {
     label: "Honest non-claims",

@@ -151,14 +151,31 @@ ROWS = [
      "strain_level_test", "Jodrell Bank Crab monthly ephemeris (479 nu/nudot points, 1988-2026)",
      "a log-periodic comb at omega=2.58 is special vs the off-kernel periodogram in a clean segment",
      "data_limited"],
-    ["pulsar", "real NICER Vela reduction pipeline (PG.06b)",
-     "download L2 events + PINT barycentre + H-test fold of the long-interval target (Vela)",
-     "PIPELINE PROVEN ON REAL DATA: 665 NICER Vela obs confirmed (HEASARC, ~7.9 yr); one obs "
-     "downloaded + PINT-barycentred (no HEASoft) -> Vela pulsation DETECTED at F0=11.193 Hz "
-     "(89.34 ms, H=18.4). Comb-quality nu(t) still needs phase-connected timing (~6.5 GB, multi-hour)", None,
-     "search_target", "boundary recovery kernel (dynamic, real-data pipeline)",
-     "strain_level_test", "HEASARC NICER Vela pulsar PSR B0833-45 (665 obs) + PINT",
-     "a phase-connected nu(t) over a >~2.8-period Vela inter-glitch recovery shows the omega=2.58 comb",
+    ["pulsar", "recovery comb on the full NICER Vela X-ray nu(t) (PG.06b FULL)",
+     "log-periodic comb at omega=2pi/ln((3/2)^6)=2.583 in the piecewise-coherent X-ray nu(t) recovery",
+     "FULL archive reduced (2026-07-21): 665/665 NICER Vela obs downloaded (2.6 GB, raw gitignored), "
+     "491 usable, 240 per-obs detections, 119 segment-coherent nu(t) points (108 fully coherent, "
+     "median sigma_nu ~0.6 uHz; barycentring PINT-validated to 3.4 us) = the FIRST X-ray nu(t) leg "
+     "of the search program. SANITY GATE PASS: dnu/nu 2019 = 2.39e-6 vs 2.5012e-6 published, 2021 = "
+     "1.272e-6 vs 1.26e-6 (2024 glitch not reducible: ~150-s snapshots, 9.7 ks, documented). Frozen "
+     "kernel comb (omega=2.5827069, eps_pred=0.0173): reach 2019 = 2.17 periods (< 2.8 gate; beats "
+     "PG.08's public Vela .tim reach 1.83), 2021 = 1.38; 2019 raw p=0.014 BUT Bonferroni x10 = 0.14 "
+     "+ shuffle p=0.395 -> chance-level by the preregistered escalation rule (audit flag, NOT a "
+     "candidate); 2021 p=0.731; ln-tau stack p=0.049/shuffle 0.307. Surrogate-calibrated injection "
+     "at real sampling+noise: eps_50~0.55 (2019 only), eps_90 never reached below eps=1, 0% power at "
+     "the predicted eps=0.0173 -> weaker amplitude probe than PG.08's radio residuals (eps_50~0.30 "
+     "class) but independently reproduces the PG.06 range-blindness on real data. Second off-kernel "
+     "flag: lambda=e in 2021 (raw p=0.002, Bonferroni 0.018; same non-kernel periodicity class as "
+     "PG.08 J0742-2822 -- flagged, not claimed). CORRECTION on record: the old PG.06b 'pipeline "
+     "proven' fold F0=11.19275 Hz (H=18.4) was a noise peak; the true Vela frequency is 11.1861692 "
+     "Hz (H=99.7, PuMA-ephemeris-consistent). Next decider: early-window (<3 d post-glitch) X-ray "
+     "observations of a future Vela glitch (eXTP class) -- the sub-day window that would clear the "
+     "2.8-period gate is absent from the archive (first usable obs 3.4 d / 7 d post-glitch)", None,
+     "search_target", "boundary recovery kernel (dynamic, X-ray nu(t))",
+     "strain_level_test", "HEASARC NICER Vela pulsar PSR B0833-45 full archive (665 obs) + PINT; "
+     "results/pg06b_full_vela.json",
+     "a log-periodic comb at omega=2.58 is special vs shuffle + off-kernel battery in a "
+     ">=2.8-period X-ray nu(t) Vela recovery",
      "data_limited"],
     ["pulsar", "dense J0537 stacked recovery comb + range finding (PG.06)",
      "same omega=2.583 comb, stacked over many J0537 glitches (NICER/RXTE, dense)",

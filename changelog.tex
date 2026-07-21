@@ -60,6 +60,134 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (IV) (Wolfram engine reactivated --- the deferred second-path mirrors VERIFIED: base $116/116$ $+$ extension $394/394$ ($378\to394$, the 16 mirrors accumulated since 2026-07-14 now counted); \texttt{GATE.WOLFRAM.01/02} and all counter surfaces synced; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Verified engine run 2026-07-21 (Wolfram Engine 14.3, license reactivated).}
+\texttt{wolframscript -file verification/wolfram/tfpt\_readouts.wl} $\to$ \texttt{116 passed, 0 failed},
+\texttt{ALL WOLFRAM CHECKS PASSED}; \texttt{tfpt\_readouts\_extension.wl} $\to$ \texttt{394 passed, 0
+failed}, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}. The 16 exact mirrors added while the engine was
+unactivated all enter the counted total ($378\to394$): \texttt{v479} Kronheimer bridge (2), \texttt{v491}
+partition corollary (3), \texttt{v493} celestial WP2 clock deformation (4), \texttt{v495} celestial WP3
+Green--Schwarz alignment (3), \texttt{v496} celestial WP4 character shadow (4).
+\item \textbf{Counter surfaces synced.} \texttt{verification/wolfram/README.md} (current-state block
+$+$ the five deferral notes resolved; \texttt{v484}/\texttt{v485}/\texttt{v486}/\texttt{v487}/\texttt{v488}/\texttt{v492}
+stay mirrorable-but-unmirrored, Python-exact, so they are \emph{not} counted); ledger
+\texttt{GATE.WOLFRAM.01} (re-verified 2026-07-21) $+$ \texttt{GATE.WOLFRAM.02} ($394/394$, UPDATE note);
+\texttt{tfpt\_safeguards} Layer-6 count $+$ website \texttt{papers.ts} mirrors ($116/116 + 394/394$);
+\texttt{v479} registry/\texttt{run\_all} deferral note resolved. No numeric claim changes; the second
+computational path is simply verified-current again.
+\end{itemize}
+
+\subsection*{2026-07-21 (III) (CELEST.SEAM.01 WP3 $+$ WP4 executed and promoted: \texttt{v495} Green--Schwarz alignment (verdict B, honestly non-selective) $+$ \texttt{v496} character-vs-S-algebra type mismatch (verdict B(ii), boundary-limit shadow); contract now WP1--WP4 done, WP5 \mO; \emph{no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} untouched})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v495\_celestial\_wp3\_gs\_alignment.py} (\texttt{CELEST.WP3.01}, 25 checks, exact
+Fraction/sympy).} The pre-registered WP3 ``alignment test only'': the Okubo coefficient
+$\mathrm{Tr}_{\mathrm{adj}}X^4/(\mathrm{Tr}_{\mathrm{adj}}X^2)^2=5/(2(\dim\mathfrak g{+}2))$ is
+\emph{derived} as an exact polynomial identity for all 8 algebras on Costello's list (sl$_2$, sl$_3$,
+g$_2$, so$_8$, f$_4$, e$_6$, e$_7$, e$_8$; e$_6$/e$_7$ carved out of the \texttt{v492} $E_8$ root set;
+negative control: sl$_4$ fails, $5/32$ vs $3/32$); the closed form
+$\tilde\lambda^2=10h^{\vee2}/(\dim{+}2)=h^\vee{+}6$ holds exactly across the Deligne series; $E_8$:
+$\tilde\lambda=6$ (unit-trace) resp.\ $\lambda_{\mathrm{fund}}=1/10$ (adjoint-trace) exact, so
+$(\kappa/c_3)^2=12=|\mu_4|N_{\mathrm{fam}}$ resp.\ $1/300$ --- with $\kappa/c_3$ itself
+\emph{irrational} ($2\sqrt3$). Byproduct: the printed $\lambda^2_{\mathrm{so}_8}=3/2$ in Costello's
+appendix A is a factor-2 slip (his own weight content gives 3). \textbf{Look-elsewhere (the hard
+fence):} the alignment format passes $8/8$ across the whole list (zero selectivity),
+$\tilde\lambda$-integrality $2/8$ (shared with sl$_3$), only $g_{\mathrm{car}}{=}5\mid h^\vee$ is
+e$_8$-selective ($1/8$), the isolating conjunction is post hoc. Kill test K3 does \emph{not} fire but is
+scope-demoted: \emph{alignment survives; selectivity does not} --- compatibility, not e$_8$-selective
+evidence. Verdict B.
+\item \textbf{\texttt{v496\_celestial\_wp4\_character\_shadow.py} (\texttt{CELEST.WP4.01}, 25 checks,
+exact integer/Fraction/sympy).} WP4, the type mismatch head-on: the $(E_8)_1$ character
+$E_4/\eta^8=(1,248,4124,34752,213126,\dots)$ is \emph{not} a conformal block of the glue-equivariant
+$E_8[\mathbb C^2]$ S-algebra in its own jet grading --- localised three ways: (a) spin $1-d/2$ unbounded
+below and 248 never a tower dimension ($d\le100$); (b) growth $n^{2/3}$ vs $n^{1/2}$ (quadratic
+cumulative count $31s^2{+}92s{+}60$, $31=k{+}h^\vee$; $f_n/\chi_n$ strictly increasing $n=1..12$); (c)
+the level-2 null ideal deletes exactly $27000=30^3=(h^\vee)^3$ out of
+$\mathrm{Sym}^2(248)=1{+}3875{+}27000$ --- no jet analogue. \emph{But} the boundary/period reading holds
+exactly at the current stratum (zero modes $=60=C_0$ currents, jet slice cycles $(60,64,60,64)$, one
+$\mu_4$ period sums to 248, glue weights $(0,1,1,1)$ integer; free loop Fock $897266\gg248$, so the
+truncation must come from a limit) --- the same MMST scaling-limit shape as \texttt{SEAM.EQUIV.01}
+(\texttt{v336}/\texttt{v449}). K4 fires only against the exact-block reading; the constructive limit
+question passes to WP5. Verdict B(ii).
+\item \textbf{Contract $+$ surfaces synced.} \texttt{tfpt\_research\_contracts} WP3/WP4 bullets moved to
+\emph{done} with the look-elsewhere demotion in the text, K3/K4 marked evaluated, status line now
+``WP1--WP4 executed (verdicts B, B, B, B(ii)), WP5 \mO''; one conservative sentence added to the
+\texttt{tfpt\_3} celestial paragraph; ledger rows \texttt{CELEST.WP3.01} $+$ \texttt{CELEST.WP4.01} (new)
+and \texttt{CELEST.SEAM.01} updated; \texttt{v495}/\texttt{v496} Wolfram mirrors added to
+\texttt{tfpt\_readouts\_extension.wl} (3 $+$ 4 exact checks; count with the next verified engine run ---
+engine still unactivated); website \texttt{papers.ts} contract highlight ``WP1--WP4 done'' $+$ DAG
+\texttt{qft} node extended. Suite now 490 scripts, all green; \texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
+\subsection*{2026-07-21 (II) (PG.06b FULL: the complete NICER Vela archive reduced --- the first X-ray $\nu(t)$ leg of the recovery-comb search, verdict \texttt{data\_limited}; the old PG.06b ``pipeline proven'' fold corrected on record; \emph{experiments level only --- no verification module, no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{experiments/pulsar-glitch-recovery} PG.06b FULL executed (\texttt{tfpt-pulsar vela-full}).}
+The full NICER Vela-pulsar (PSR B0833-45) L2 archive is reduced, with the manifest frozen \emph{before} the
+bulk download (\texttt{manifest\_full\_reduction.json}: all 665 ObsIDs, preregistered 2019/2021/2024 glitch
+windows, 20-GB abort gate): 665/665 obs downloaded (2.6\,GB, raw gitignored) $\to$ 491 usable $\to$ 240
+per-obs detections $\to$ \textbf{119 segment-coherent $\nu(t)$ points} (108 fully coherent), median
+$\sigma_\nu\approx0.6\,\mu$Hz; barycentring validated against PINT to $3.4\,\mu$s --- the \emph{first
+X-ray $\nu(t)$ probe} of the search program. Sanity gate PASS: $\Delta\nu/\nu$ 2019 $=2.39\times10^{-6}$
+vs $2.5012\times10^{-6}$ published, 2021 $=1.272\times10^{-6}$ vs $1.26\times10^{-6}$; the 2024 glitch is
+not reducible (only $\sim$150-s snapshots, 9.7\,ks --- documented).
+\item \textbf{Frozen-kernel comb ($\omega=2.5827$, $\varepsilon_{\mathrm{pred}}=0.0173$): verdict
+\texttt{data\_limited} (range- and amplitude-limited).} Reach 2019: 2.17 comb periods ($<$ the 2.8-period
+gate; beats the PG.08 public Vela reach 1.83), 2021: 1.38; the 2019 raw $p=0.014$ has the kernel as
+smallest-$p$ battery member BUT Bonferroni $\times10=0.14$ and shuffle $p=0.395$ $\Rightarrow$ chance-level
+by the preregistered escalation rule (audit flag, NOT a candidate); 2021 $p=0.731$; $\ln\tau$ stack
+$p=0.049$/shuffle $0.307$. Surrogate-calibrated injection at the real sampling and noise:
+$\varepsilon_{50}\approx0.55$ (2019 only), $\varepsilon_{90}$ never reached below $\varepsilon=1$, 0\% power
+at the predicted $\varepsilon=0.0173$ --- a weaker amplitude probe than the PG.08 radio residuals, but it
+independently reproduces the PG.06 range-blindness on real data. Second off-kernel flag: $\lambda=e$ in the
+2021 leg (raw $p=0.002$, Bonferroni $0.018$; the same non-kernel periodicity class as PG.08 J0742$-$2822 ---
+flagged, not claimed). The sub-day early window that would clear the gate is absent from the archive (first
+usable obs 3.4\,d / 7\,d post-glitch); next decider: $<$3-d post-glitch X-ray observations of a future Vela
+glitch (eXTP class).
+\item \textbf{Correction on record.} The old PG.06b single-obs ``pipeline proven'' detection at
+$F_0=11.19275$\,Hz ($H=18.4$) was a noise peak; the true Vela frequency at that epoch is
+$F_0=11.1861692$\,Hz ($H=99.7$, consistent with the phase-connected PuMA ephemeris). The pipeline remains
+proven --- by the corrected fold. Scorecard row updated to ``recovery comb on the full NICER Vela X-ray
+nu(t) (PG.06b FULL)'' (status stays \texttt{data\_limited}; counters unchanged, 120 rows: 49 consistent / 9
+tension / 26 null / 33 data-limited / 3 parked); \texttt{experiments/README.md} catalog $+$ \S1 prose,
+pulsar README, \texttt{experiments/next.txt} synced. No claim; firewall intact.
+\end{itemize}
+
+\subsection*{2026-07-21 (the two 2026-07-20 prediction-of-record rows promoted to the suite: \texttt{v494} --- $\alpha_s$ running $+$ $\mu$-distortion branch discriminator machine-checked, ledger rows \texttt{COSMO.RUNNING.01}/\texttt{COSMO.MUDIST.01}, prediction surfaces synced; \emph{no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v494\_cosmo\_running\_mu\_record.py} (23 checks, all green).} The $\alpha_s$-running and
+$\mu$-distortion scorecard rows of 2026-07-20 (IV) get their load-bearing module so the new paper/website
+statements are machine-backed. \mE\ leading-order identities (sympy exact):
+$\alpha_s=\mathrm dn_s/\mathrm d\ln k=-2/N_\star^2=-r/6$, $\beta_s=-4/N_\star^3$ (NOT $-8/N^3$); LO band
+$N_\star\in[50,60]$: $[-8.0,-5.6]\times10^{-4}$. \mE\ exact slow roll on the Einstein-frame Starobinsky
+potential (third-order Lyth--Riotto $+$ finite-difference cross-check $<1\%$):
+$\alpha_s(51.4)=-7.09\times10^{-4}$, $\beta_s(51.4)=-2.70\times10^{-5}$. \mC\ data: Planck 2018
+($-0.0045\pm0.0067$) $+0.57\sigma$; record leg P-ACT-LB ($+0.0062\pm0.0052$) $-1.33\sigma$ (watch channel:
+positive central value; kill: robust $\alpha_s<-5\times10^{-3}$ or $>+3\times10^{-3}$ at $\ge5\sigma$; any
+robust POSITIVE running kills the plateau branch). \mC\ $\mu$-distortion (Chluba window, $+21\%$ calibrated
+on the $\Lambda$CDM anchor): sharp branch $N_\star{=}51.4$ $\mu=1.6\times10^{-8}$, profiled record
+$N_\star{=}56.1$ $\mu=1.94\times10^{-8}$, band $1.5$--$2.3\times10^{-8}$; branch split
+$\Delta\mu=3.0\times10^{-9}$ $\Rightarrow$ $3\sigma$ $A_s/N_\star$ branch decision at
+$\sigma(\mu)=10^{-9}$ (Voyage-2050 class; PIXIE baseline $9\times10^{-8}$ does not reach; kill: robust
+$\mu<0.9\times10^{-8}$ or $>4\times10^{-8}$). \mE\ comb blindness (honest S15): the frozen log-comb
+($\omega=2.5827$, $\varepsilon=0.0173$) is structurally invisible in the $\mu$ window
+($|F(\omega)|=0.033$, $\delta\mu=7.4\times10^{-12}=0.007\sigma$ even at Voyage-2050). Fences: $N_\star$
+stays an external reheating input (\texttt{GATE.NSTAR.01}); the frozen band $[50,60]$ stays the surface of
+record (v84/v86). Ledger rows \texttt{COSMO.RUNNING.01} and \texttt{COSMO.MUDIST.01} added.
+\item \textbf{Prediction surfaces synced (the missing mirror of 2026-07-20 (IV)).} \texttt{predictions.txt}
+gains the two rows ($\alpha_s$ \mC\ with the $-1.33\sigma$ P-ACT-LB pull and the positive-running kill;
+$\mu$-distortion \mC\ data-limited with the Voyage-2050 branch split); website \texttt{lib/predictions.ts}
+gains the matching cards \texttt{alpha-s-running} and \texttt{mu-distortion} (confrontation $+$ experiment
+blocks pointing at \texttt{experiments/tfpt-discovery}); the cosmology DAG node lists \texttt{v494} and
+states the running/$\mu$ readouts.
+\item \textbf{Paper bodies.} tfpt\_1 (Inflation interface) gains the running consistency-relation paragraph
+($\alpha_s=-2/N_\star^2=-r/6$, exact slow roll, pulls, positive-running kill) with
+\texttt{\textbackslash veri\{v494\_cosmo\_running\_mu\_record.py\}}; tfpt\_2 (inflation-pivot keybox) gains
+the $\mu$-distortion branch-decider sentence (sharp $1.6\times10^{-8}$ vs profiled $2.0\times10^{-8}$,
+$3\sigma$ at Voyage-2050) with the same \texttt{\textbackslash veri}. No marker of any existing claim
+changes. (v494 is numerical/quadrature, Python-only by the suite convention, flagged in the docstring;
+\texttt{GATE.WOLFRAM.01/02} untouched.)
+\end{itemize}
+
 \subsection*{2026-07-20 (VIII) (E8 mass-ladder blind-recovery bed EXECUTED: verdict \texttt{validated} at the detector level --- the Cartan--PF ladder pipeline blindly recovers the published Zamolodchikov-E8 spectra of BaCo$_2$V$_2$O$_8$ (8/8) and CoNb$_2$O$_6$ (6/8 in-window) and rejects every control class; \emph{experiments level only --- confirms Zamolodchikov E8, not TFPT; no verification module, no gate closes, no marker moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{experiments/e8-ladder-bed/} executed (preregistered \texttt{hypotheses/e8\_ladder\_bed\_v1.yaml}).}

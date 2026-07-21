@@ -42,6 +42,2343 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "IV) (Wolfram engine reactivated — the deferred second-path mirrors VERIFIED: base "
+      },
+      {
+        "k": "m",
+        "v": "116/116"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " extension "
+      },
+      {
+        "k": "m",
+        "v": "394/394"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "378\\to394"
+      },
+      {
+        "k": "t",
+        "v": ", the 16 mirrors accumulated since 2026-07-14 now counted); "
+      },
+      {
+        "k": "c",
+        "v": "GATE.WOLFRAM.01/02"
+      },
+      {
+        "k": "t",
+        "v": " and all counter surfaces synced; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Verified engine run 2026-07-21 (Wolfram Engine 14.3, license reactivated)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "wolframscript -file verification/wolfram/tfpt_readouts.wl"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "116 passed, 0 failed"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "394 passed, 0 failed"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": ". The 16 exact mirrors added while the engine was unactivated all enter the counted total ("
+        },
+        {
+          "k": "m",
+          "v": "378\\to394"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "c",
+          "v": "v479"
+        },
+        {
+          "k": "t",
+          "v": " Kronheimer bridge (2), "
+        },
+        {
+          "k": "c",
+          "v": "v491"
+        },
+        {
+          "k": "t",
+          "v": " partition corollary (3), "
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": " celestial WP2 clock deformation (4), "
+        },
+        {
+          "k": "c",
+          "v": "v495"
+        },
+        {
+          "k": "t",
+          "v": " celestial WP3 Green–Schwarz alignment (3), "
+        },
+        {
+          "k": "c",
+          "v": "v496"
+        },
+        {
+          "k": "t",
+          "v": " celestial WP4 character shadow (4)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Counter surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "verification/wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": " (current-state block "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the five deferral notes resolved; "
+        },
+        {
+          "k": "c",
+          "v": "v484"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v485"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v486"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v487"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v488"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": " stay mirrorable-but-unmirrored, Python-exact, so they are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " counted); ledger "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.01"
+        },
+        {
+          "k": "t",
+          "v": " (re-verified 2026-07-21) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "394/394"
+        },
+        {
+          "k": "t",
+          "v": ", UPDATE note); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " mirrors ("
+        },
+        {
+          "k": "m",
+          "v": "116/116 + 394/394"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "v479"
+        },
+        {
+          "k": "t",
+          "v": " registry/"
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " deferral note resolved. No numeric claim changes; the second computational path is simply verified-current again."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "III) (CELEST.SEAM.01 WP3 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " WP4 executed and promoted: "
+      },
+      {
+        "k": "c",
+        "v": "v495"
+      },
+      {
+        "k": "t",
+        "v": " Green–Schwarz alignment (verdict B, honestly non-selective) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v496"
+      },
+      {
+        "k": "t",
+        "v": " character-vs-S-algebra type mismatch (verdict B(ii), boundary-limit shadow); contract now WP1–WP4 done, WP5 "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves, "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.EQUIV.01"
+          },
+          {
+            "k": "t",
+            "v": " untouched"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v495_celestial_wp3_gs_alignment.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP3.01"
+            },
+            {
+              "k": "t",
+              "v": ", 25 checks, exact Fraction/sympy)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The pre-registered WP3 “alignment test only”: the Okubo coefficient "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}_{\\mathrm{adj}}X^4/(\\mathrm{Tr}_{\\mathrm{adj}}X^2)^2=5/(2(\\dim\\mathfrak g{+}2))"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "derived"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " as an exact polynomial identity for all 8 algebras on Costello's list (sl"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": ", sl"
+        },
+        {
+          "k": "m",
+          "v": "_3"
+        },
+        {
+          "k": "t",
+          "v": ", g"
+        },
+        {
+          "k": "m",
+          "v": "_2"
+        },
+        {
+          "k": "t",
+          "v": ", so"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": ", f"
+        },
+        {
+          "k": "m",
+          "v": "_4"
+        },
+        {
+          "k": "t",
+          "v": ", e"
+        },
+        {
+          "k": "m",
+          "v": "_6"
+        },
+        {
+          "k": "t",
+          "v": ", e"
+        },
+        {
+          "k": "m",
+          "v": "_7"
+        },
+        {
+          "k": "t",
+          "v": ", e"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": "; e"
+        },
+        {
+          "k": "m",
+          "v": "_6"
+        },
+        {
+          "k": "t",
+          "v": "/e"
+        },
+        {
+          "k": "m",
+          "v": "_7"
+        },
+        {
+          "k": "t",
+          "v": " carved out of the "
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " root set; negative control: sl"
+        },
+        {
+          "k": "m",
+          "v": "_4"
+        },
+        {
+          "k": "t",
+          "v": " fails, "
+        },
+        {
+          "k": "m",
+          "v": "5/32"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "3/32"
+        },
+        {
+          "k": "t",
+          "v": "); the closed form "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda^2=10h^{\\vee2}/(\\dim{+}2)=h^\\vee{+}6"
+        },
+        {
+          "k": "t",
+          "v": " holds exactly across the Deligne series; "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda=6"
+        },
+        {
+          "k": "t",
+          "v": " (unit-trace) resp. "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{fund}}=1/10"
+        },
+        {
+          "k": "t",
+          "v": " (adjoint-trace) exact, so "
+        },
+        {
+          "k": "m",
+          "v": "(\\kappa/c_3)^2=12=|\\mu_4|N_{\\mathrm{fam}}"
+        },
+        {
+          "k": "t",
+          "v": " resp. "
+        },
+        {
+          "k": "m",
+          "v": "1/300"
+        },
+        {
+          "k": "t",
+          "v": " — with "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa/c_3"
+        },
+        {
+          "k": "t",
+          "v": " itself "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "irrational"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "2\\sqrt3"
+        },
+        {
+          "k": "t",
+          "v": "). Byproduct: the printed "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^2_{\\mathrm{so}_8}=3/2"
+        },
+        {
+          "k": "t",
+          "v": " in Costello's appendix A is a factor-2 slip (his own weight content gives 3). "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Look-elsewhere (the hard fence):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the alignment format passes "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": " across the whole list (zero selectivity), "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda"
+        },
+        {
+          "k": "t",
+          "v": "-integrality "
+        },
+        {
+          "k": "m",
+          "v": "2/8"
+        },
+        {
+          "k": "t",
+          "v": " (shared with sl"
+        },
+        {
+          "k": "m",
+          "v": "_3"
+        },
+        {
+          "k": "t",
+          "v": "), only "
+        },
+        {
+          "k": "m",
+          "v": "g_{\\mathrm{car}}{=}5\\mid h^\\vee"
+        },
+        {
+          "k": "t",
+          "v": " is e"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": "-selective ("
+        },
+        {
+          "k": "m",
+          "v": "1/8"
+        },
+        {
+          "k": "t",
+          "v": "), the isolating conjunction is post hoc. Kill test K3 does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fire but is scope-demoted: "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "alignment survives; selectivity does not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — compatibility, not e"
+        },
+        {
+          "k": "m",
+          "v": "_8"
+        },
+        {
+          "k": "t",
+          "v": "-selective evidence. Verdict B."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v496_celestial_wp4_character_shadow.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP4.01"
+            },
+            {
+              "k": "t",
+              "v": ", 25 checks, exact integer/Fraction/sympy)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " WP4, the type mismatch head-on: the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " character "
+        },
+        {
+          "k": "m",
+          "v": "E_4/\\eta^8=(1,248,4124,34752,213126,\\dots)"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a conformal block of the glue-equivariant "
+        },
+        {
+          "k": "m",
+          "v": "E_8[\\mathbb C^2]"
+        },
+        {
+          "k": "t",
+          "v": " S-algebra in its own jet grading — localised three ways: (a) spin "
+        },
+        {
+          "k": "m",
+          "v": "1-d/2"
+        },
+        {
+          "k": "t",
+          "v": " unbounded below and 248 never a tower dimension ("
+        },
+        {
+          "k": "m",
+          "v": "d\\le100"
+        },
+        {
+          "k": "t",
+          "v": "); (b) growth "
+        },
+        {
+          "k": "m",
+          "v": "n^{2/3}"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "n^{1/2}"
+        },
+        {
+          "k": "t",
+          "v": " (quadratic cumulative count "
+        },
+        {
+          "k": "m",
+          "v": "31s^2{+}92s{+}60"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "31=k{+}h^\\vee"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "f_n/\\chi_n"
+        },
+        {
+          "k": "t",
+          "v": " strictly increasing "
+        },
+        {
+          "k": "m",
+          "v": "n=1..12"
+        },
+        {
+          "k": "t",
+          "v": "); (c) the level-2 null ideal deletes exactly "
+        },
+        {
+          "k": "m",
+          "v": "27000=30^3=(h^\\vee)^3"
+        },
+        {
+          "k": "t",
+          "v": " out of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Sym}^2(248)=1{+}3875{+}27000"
+        },
+        {
+          "k": "t",
+          "v": " — no jet analogue. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "But"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the boundary/period reading holds exactly at the current stratum (zero modes "
+        },
+        {
+          "k": "m",
+          "v": "=60=C_0"
+        },
+        {
+          "k": "t",
+          "v": " currents, jet slice cycles "
+        },
+        {
+          "k": "m",
+          "v": "(60,64,60,64)"
+        },
+        {
+          "k": "t",
+          "v": ", one "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " period sums to 248, glue weights "
+        },
+        {
+          "k": "m",
+          "v": "(0,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " integer; free loop Fock "
+        },
+        {
+          "k": "m",
+          "v": "897266\\gg248"
+        },
+        {
+          "k": "t",
+          "v": ", so the truncation must come from a limit) — the same MMST scaling-limit shape as "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v336"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v449"
+        },
+        {
+          "k": "t",
+          "v": "). K4 fires only against the exact-block reading; the constructive limit question passes to WP5. Verdict B(ii)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " WP3/WP4 bullets moved to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "done"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the look-elsewhere demotion in the text, K3/K4 marked evaluated, status line now “WP1–WP4 executed (verdicts B, B, B, B(ii)), WP5 "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "”; one conservative sentence added to the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial paragraph; ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP3.01"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP4.01"
+        },
+        {
+          "k": "t",
+          "v": " (new) and "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " updated; "
+        },
+        {
+          "k": "c",
+          "v": "v495"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v496"
+        },
+        {
+          "k": "t",
+          "v": " Wolfram mirrors added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " (3 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 4 exact checks; count with the next verified engine run — engine still unactivated); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " contract highlight “WP1–WP4 done” "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " DAG "
+        },
+        {
+          "k": "c",
+          "v": "qft"
+        },
+        {
+          "k": "t",
+          "v": " node extended. Suite now 490 scripts, all green; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "II) (PG.06b FULL: the complete NICER Vela archive reduced — the first X-ray "
+      },
+      {
+        "k": "m",
+        "v": "\\nu(t)"
+      },
+      {
+        "k": "t",
+        "v": " leg of the recovery-comb search, verdict "
+      },
+      {
+        "k": "c",
+        "v": "data_limited"
+      },
+      {
+        "k": "t",
+        "v": "; the old PG.06b “pipeline proven” fold corrected on record; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "experiments level only — no verification module, no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "experiments/pulsar-glitch-recovery"
+            },
+            {
+              "k": "t",
+              "v": " PG.06b FULL executed ("
+            },
+            {
+              "k": "c",
+              "v": "tfpt-pulsar vela-full"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The full NICER Vela-pulsar (PSR B0833-45) L2 archive is reduced, with the manifest frozen "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "before"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the bulk download ("
+        },
+        {
+          "k": "c",
+          "v": "manifest_full_reduction.json"
+        },
+        {
+          "k": "t",
+          "v": ": all 665 ObsIDs, preregistered 2019/2021/2024 glitch windows, 20-GB abort gate): 665/665 obs downloaded (2.6 GB, raw gitignored) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 491 usable "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 240 per-obs detections "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "119 segment-coherent "
+            },
+            {
+              "k": "m",
+              "v": "\\nu(t)"
+            },
+            {
+              "k": "t",
+              "v": " points"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (108 fully coherent), median "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_\\nu\\approx0.6\\,\\mu"
+        },
+        {
+          "k": "t",
+          "v": "Hz; barycentring validated against PINT to "
+        },
+        {
+          "k": "m",
+          "v": "3.4\\,\\mu"
+        },
+        {
+          "k": "t",
+          "v": "s — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "first X-ray "
+            },
+            {
+              "k": "m",
+              "v": "\\nu(t)"
+            },
+            {
+              "k": "t",
+              "v": " probe"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the search program. Sanity gate PASS: "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta\\nu/\\nu"
+        },
+        {
+          "k": "t",
+          "v": " 2019 "
+        },
+        {
+          "k": "m",
+          "v": "=2.39\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "2.5012\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " published, 2021 "
+        },
+        {
+          "k": "m",
+          "v": "=1.272\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1.26\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": "; the 2024 glitch is not reducible (only "
+        },
+        {
+          "k": "m",
+          "v": "\\sim"
+        },
+        {
+          "k": "t",
+          "v": "150-s snapshots, 9.7 ks — documented)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Frozen-kernel comb ("
+            },
+            {
+              "k": "m",
+              "v": "\\omega=2.5827"
+            },
+            {
+              "k": "t",
+              "v": ", "
+            },
+            {
+              "k": "m",
+              "v": "\\varepsilon_{\\mathrm{pred}}=0.0173"
+            },
+            {
+              "k": "t",
+              "v": "): verdict "
+            },
+            {
+              "k": "c",
+              "v": "data_limited"
+            },
+            {
+              "k": "t",
+              "v": " (range- and amplitude-limited)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Reach 2019: 2.17 comb periods ("
+        },
+        {
+          "k": "m",
+          "v": "<"
+        },
+        {
+          "k": "t",
+          "v": " the 2.8-period gate; beats the PG.08 public Vela reach 1.83), 2021: 1.38; the 2019 raw "
+        },
+        {
+          "k": "m",
+          "v": "p=0.014"
+        },
+        {
+          "k": "t",
+          "v": " has the kernel as smallest-"
+        },
+        {
+          "k": "m",
+          "v": "p"
+        },
+        {
+          "k": "t",
+          "v": " battery member BUT Bonferroni "
+        },
+        {
+          "k": "m",
+          "v": "\\times10=0.14"
+        },
+        {
+          "k": "t",
+          "v": " and shuffle "
+        },
+        {
+          "k": "m",
+          "v": "p=0.395"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " chance-level by the preregistered escalation rule (audit flag, NOT a candidate); 2021 "
+        },
+        {
+          "k": "m",
+          "v": "p=0.731"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\ln\\tau"
+        },
+        {
+          "k": "t",
+          "v": " stack "
+        },
+        {
+          "k": "m",
+          "v": "p=0.049"
+        },
+        {
+          "k": "t",
+          "v": "/shuffle "
+        },
+        {
+          "k": "m",
+          "v": "0.307"
+        },
+        {
+          "k": "t",
+          "v": ". Surrogate-calibrated injection at the real sampling and noise: "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_{50}\\approx0.55"
+        },
+        {
+          "k": "t",
+          "v": " (2019 only), "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_{90}"
+        },
+        {
+          "k": "t",
+          "v": " never reached below "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=1"
+        },
+        {
+          "k": "t",
+          "v": ", 0% power at the predicted "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0.0173"
+        },
+        {
+          "k": "t",
+          "v": " — a weaker amplitude probe than the PG.08 radio residuals, but it independently reproduces the PG.06 range-blindness on real data. Second off-kernel flag: "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=e"
+        },
+        {
+          "k": "t",
+          "v": " in the 2021 leg (raw "
+        },
+        {
+          "k": "m",
+          "v": "p=0.002"
+        },
+        {
+          "k": "t",
+          "v": ", Bonferroni "
+        },
+        {
+          "k": "m",
+          "v": "0.018"
+        },
+        {
+          "k": "t",
+          "v": "; the same non-kernel periodicity class as PG.08 J0742"
+        },
+        {
+          "k": "m",
+          "v": "-"
+        },
+        {
+          "k": "t",
+          "v": "2822 — flagged, not claimed). The sub-day early window that would clear the gate is absent from the archive (first usable obs 3.4 d / 7 d post-glitch); next decider: "
+        },
+        {
+          "k": "m",
+          "v": "<"
+        },
+        {
+          "k": "t",
+          "v": "3-d post-glitch X-ray observations of a future Vela glitch (eXTP class)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Correction on record."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The old PG.06b single-obs “pipeline proven” detection at "
+        },
+        {
+          "k": "m",
+          "v": "F_0=11.19275"
+        },
+        {
+          "k": "t",
+          "v": " Hz ("
+        },
+        {
+          "k": "m",
+          "v": "H=18.4"
+        },
+        {
+          "k": "t",
+          "v": ") was a noise peak; the true Vela frequency at that epoch is "
+        },
+        {
+          "k": "m",
+          "v": "F_0=11.1861692"
+        },
+        {
+          "k": "t",
+          "v": " Hz ("
+        },
+        {
+          "k": "m",
+          "v": "H=99.7"
+        },
+        {
+          "k": "t",
+          "v": ", consistent with the phase-connected PuMA ephemeris). The pipeline remains proven — by the corrected fold. Scorecard row updated to “recovery comb on the full NICER Vela X-ray nu(t) (PG.06b FULL)” (status stays "
+        },
+        {
+          "k": "c",
+          "v": "data_limited"
+        },
+        {
+          "k": "t",
+          "v": "; counters unchanged, 120 rows: 49 consistent / 9 tension / 26 null / 33 data-limited / 3 parked); "
+        },
+        {
+          "k": "c",
+          "v": "experiments/README.md"
+        },
+        {
+          "k": "t",
+          "v": " catalog "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " 1 prose, pulsar README, "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": " synced. No claim; firewall intact."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "the two 2026-07-20 prediction-of-record rows promoted to the suite: "
+      },
+      {
+        "k": "c",
+        "v": "v494"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha_s"
+      },
+      {
+        "k": "t",
+        "v": " running "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mu"
+      },
+      {
+        "k": "t",
+        "v": "-distortion branch discriminator machine-checked, ledger rows "
+      },
+      {
+        "k": "c",
+        "v": "COSMO.RUNNING.01"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "COSMO.MUDIST.01"
+      },
+      {
+        "k": "t",
+        "v": ", prediction surfaces synced; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v494_cosmo_running_mu_record.py"
+            },
+            {
+              "k": "t",
+              "v": " (23 checks, all green)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s"
+        },
+        {
+          "k": "t",
+          "v": "-running and "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-distortion scorecard rows of 2026-07-20 (IV) get their load-bearing module so the new paper/website statements are machine-backed. "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "leading-order identities (sympy exact): "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s=\\mathrm dn_s/\\mathrm d\\ln k=-2/N_\\star^2=-r/6"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_s=-4/N_\\star^3"
+        },
+        {
+          "k": "t",
+          "v": " (NOT "
+        },
+        {
+          "k": "m",
+          "v": "-8/N^3"
+        },
+        {
+          "k": "t",
+          "v": "); LO band "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star\\in[50,60]"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "[-8.0,-5.6]\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "exact slow roll on the Einstein-frame Starobinsky potential (third-order Lyth–Riotto "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " finite-difference cross-check "
+        },
+        {
+          "k": "m",
+          "v": "<1\\%"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s(51.4)=-7.09\\times10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_s(51.4)=-2.70\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "data: Planck 2018 ("
+        },
+        {
+          "k": "m",
+          "v": "-0.0045\\pm0.0067"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+0.57\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; record leg P-ACT-LB ("
+        },
+        {
+          "k": "m",
+          "v": "+0.0062\\pm0.0052"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "-1.33\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " (watch channel: positive central value; kill: robust "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s<-5\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " or "
+        },
+        {
+          "k": "m",
+          "v": ">+3\\times10^{-3}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\ge5\\sigma"
+        },
+        {
+          "k": "t",
+          "v": "; any robust POSITIVE running kills the plateau branch). "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-distortion (Chluba window, "
+        },
+        {
+          "k": "m",
+          "v": "+21\\%"
+        },
+        {
+          "k": "t",
+          "v": " calibrated on the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda"
+        },
+        {
+          "k": "t",
+          "v": "CDM anchor): sharp branch "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star{=}51.4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu=1.6\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ", profiled record "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star{=}56.1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu=1.94\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ", band "
+        },
+        {
+          "k": "m",
+          "v": "1.5"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.3\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "; branch split "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta\\mu=3.0\\times10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "A_s/N_\\star"
+        },
+        {
+          "k": "t",
+          "v": " branch decision at "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma(\\mu)=10^{-9}"
+        },
+        {
+          "k": "t",
+          "v": " (Voyage-2050 class; PIXIE baseline "
+        },
+        {
+          "k": "m",
+          "v": "9\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " does not reach; kill: robust "
+        },
+        {
+          "k": "m",
+          "v": "\\mu<0.9\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " or "
+        },
+        {
+          "k": "m",
+          "v": ">4\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "comb blindness (honest S15): the frozen log-comb ("
+        },
+        {
+          "k": "m",
+          "v": "\\omega=2.5827"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0.0173"
+        },
+        {
+          "k": "t",
+          "v": ") is structurally invisible in the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": " window ("
+        },
+        {
+          "k": "m",
+          "v": "|F(\\omega)|=0.033"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\mu=7.4\\times10^{-12}=0.007\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " even at Voyage-2050). Fences: "
+        },
+        {
+          "k": "m",
+          "v": "N_\\star"
+        },
+        {
+          "k": "t",
+          "v": " stays an external reheating input ("
+        },
+        {
+          "k": "c",
+          "v": "GATE.NSTAR.01"
+        },
+        {
+          "k": "t",
+          "v": "); the frozen band "
+        },
+        {
+          "k": "m",
+          "v": "[50,60]"
+        },
+        {
+          "k": "t",
+          "v": " stays the surface of record (v84/v86). Ledger rows "
+        },
+        {
+          "k": "c",
+          "v": "COSMO.RUNNING.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "COSMO.MUDIST.01"
+        },
+        {
+          "k": "t",
+          "v": " added."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prediction surfaces synced (the missing mirror of 2026-07-20 (IV))."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "predictions.txt"
+        },
+        {
+          "k": "t",
+          "v": " gains the two rows ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "with the "
+        },
+        {
+          "k": "m",
+          "v": "-1.33\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " P-ACT-LB pull and the positive-running kill; "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-distortion "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "data-limited with the Voyage-2050 branch split); website "
+        },
+        {
+          "k": "c",
+          "v": "lib/predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": " gains the matching cards "
+        },
+        {
+          "k": "c",
+          "v": "alpha-s-running"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "mu-distortion"
+        },
+        {
+          "k": "t",
+          "v": " (confrontation "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " experiment blocks pointing at "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery"
+        },
+        {
+          "k": "t",
+          "v": "); the cosmology DAG node lists "
+        },
+        {
+          "k": "c",
+          "v": "v494"
+        },
+        {
+          "k": "t",
+          "v": " and states the running/"
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": " readouts."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper bodies."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " tfpt_1 (Inflation interface) gains the running consistency-relation paragraph ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_s=-2/N_\\star^2=-r/6"
+        },
+        {
+          "k": "t",
+          "v": ", exact slow roll, pulls, positive-running kill) with "
+        },
+        {
+          "k": "c",
+          "v": "\\veri{v494_cosmo_running_mu_record.py}"
+        },
+        {
+          "k": "t",
+          "v": "; tfpt_2 (inflation-pivot keybox) gains the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-distortion branch-decider sentence (sharp "
+        },
+        {
+          "k": "m",
+          "v": "1.6\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": " vs profiled "
+        },
+        {
+          "k": "m",
+          "v": "2.0\\times10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "3\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " at Voyage-2050) with the same "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": ". No marker of any existing claim changes. (v494 is numerical/quadrature, Python-only by the suite convention, flagged in the docstring; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.01/02"
+        },
+        {
+          "k": "t",
+          "v": " untouched.)"
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-20",
     "dateLabel": "2026-07-20",
     "heading": [

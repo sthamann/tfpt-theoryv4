@@ -20,6 +20,13 @@ data/nicer_j0537/*
 !data/nicer_vela/
 data/nicer_vela/*
 !data/nicer_vela/vela_observations.csv
+# PG.06b FULL reduction: raw/ (~2.6 GB events+orbits) and bary/ (~120 MB photon
+# caches) stay ignored (refetched/rebuilt on demand); the frozen manifest, the
+# download log and the small derived nu(t) CSVs are committed for reproducibility
+!data/nicer_vela/manifest_full_reduction.json
+!data/nicer_vela/download_log_full.json
+!data/nicer_vela/vela_nu_perobs_full.csv
+!data/nicer_vela/vela_nu_t_full.csv
 # PG.07: the 2024 Vela giant-glitch release (Zenodo 10.5281/zenodo.17735648).
 # Commit the tiny phase-connected .par (provenance) + the derived nudot(t) CSV;
 # ignore any large raw tarballs pulled alongside it.

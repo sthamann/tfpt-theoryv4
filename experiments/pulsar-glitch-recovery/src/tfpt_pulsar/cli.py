@@ -16,6 +16,9 @@ Commands:
     pg08      PG.08: the recovery comb on REAL PuMA/IAR daily-cadence ToA RESIDUALS
               (GitHub data release; Vela-2021 + J0742-2822 + J1740-3015); the residual
               product PG.07 said was decisive; end-to-end injection at real sampling/noise
+    vela-full PG.06b FULL: the comb test on the complete NICER Vela reduction
+              (all 665 archive obs -> piecewise-coherent nu(t); requires
+              scripts/download_vela_all.py + scripts/reduce_vela_full.py stage1/rescue/stage2)
 """
 
 from __future__ import annotations
@@ -357,6 +360,55 @@ def _pg08(seed: int) -> int:
     return 0
 
 
+def _vela_full(seed: int) -> int:
+    """PG.06b FULL -- the frozen comb test on the complete NICER Vela reduction."""
+    from .vela_full_comb import RESULTS as OUT
+    from .vela_full_comb import make_plots, pg06b_full, to_json
+
+    res, recs = pg06b_full(seed=seed)
+    print("=" * 80)
+    print("PG.06b FULL -- recovery comb on the COMPLETE NICER Vela reduction")
+    print(f"  kernel omega = {res.omega:.4f}; predicted eps ~ {res.eps_predicted:.4f}; "
+          f"reach gate {res.reach_gate_periods} periods")
+    print("=" * 80)
+    print(f"  reduction: {res.n_obs_archive} archive obs -> {res.n_obs_usable} usable "
+          f"-> {res.n_obs_detected} per-obs detections -> {res.n_segments} segments "
+          f"({res.n_segments_coherent} coherent)")
+    for x in res.legs:
+        print(f"\n  [{x.name}] glitch MJD {x.glep_mjd:.4f}: dnu/nu measured "
+              f"{x.dnu_nu_measured:.3e} vs published {x.dnu_nu_published:.3e} "
+              f"-> sanity {'PASS' if x.sanity_pass else 'FAIL'}")
+        print(f"    {x.n_seg} segments, tau {x.tau_min_d:.2f}..{x.tau_max_d:.0f} d "
+              f"-> reach {x.reach_periods:.2f} periods "
+              f"(gate {'PASSED' if x.gate_passed else 'not passed'}); "
+              f"residual RMS {x.resid_rms_uhz:.2f} uHz")
+        print(f"    comb at omega: gain={x.comb_gain:.3f} p={x.comb_p:.3f}; "
+              f"shuffle p={x.shuffle_p:.3f}; kernel smallest-p: {x.kernel_smallest}")
+        n_b = len(x.battery)
+        for label, om, p in x.battery:
+            print(f"      {label:38s} omega={om:5.2f}  p={p:.3f}  "
+                  f"(Bonferroni p={min(1.0, p * n_b):.3f})")
+        if x.injection:
+            inj = x.injection
+            grid = ", ".join(f"{e:.3g}->{100*r:.0f}%"
+                             for e, r in zip(inj.eps_grid, inj.rates))
+            print(f"    injection ({inj.n_phases} phases): {grid}; "
+                  f"eps=0 fp {100*inj.false_positive_rate:.0f}%")
+            print(f"    -> eps_50 = {inj.eps_50 if inj.eps_50 else 'not reached'}, "
+                  f"eps_90 = {inj.eps_90 if inj.eps_90 else 'not reached'}, "
+                  f"rate at predicted eps: {100*inj.rate_at_predicted:.0f}%")
+    print(f"\n  stack (concatenated legs): reach {res.stack_reach:.2f} periods, "
+          f"comb p={res.stack_comb_p:.3f}, shuffle p={res.stack_shuffle_p:.3f}")
+    print(f"\n==> VERDICT: {res.verdict}")
+
+    OUT.mkdir(exist_ok=True)
+    (OUT / "pg06b_full_vela.json").write_text(to_json(res), encoding="utf-8")
+    print(f"\nWrote {OUT / 'pg06b_full_vela.json'}")
+    for p in make_plots(res, recs, OUT / "pg06b_full", seed=seed):
+        print(f"Wrote {p}")
+    return 0
+
+
 def _analyze(seed: int) -> int:
     records = load_catalog()
     sizes = glitch_sizes(records)
@@ -488,7 +540,7 @@ def main(argv: list[str] | None = None) -> int:
         description="TFPT recovery-kernel search in pulsar glitches (Jodrell Bank)")
     ap.add_argument("command",
                     choices=["audit", "validate", "analyze", "dynamic", "nicer", "vela",
-                             "pg07", "vela2024", "pg08"],
+                             "pg07", "vela2024", "pg08", "vela-full"],
                     nargs="?", default="analyze")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--download", action="store_true",
@@ -508,6 +560,8 @@ def main(argv: list[str] | None = None) -> int:
         return _pg07(args.seed)
     if args.command == "pg08":
         return _pg08(args.seed)
+    if args.command == "vela-full":
+        return _vela_full(args.seed)
     return _analyze(args.seed)
 
 

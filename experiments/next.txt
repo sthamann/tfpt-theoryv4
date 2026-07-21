@@ -1,3 +1,81 @@
+## 2026-07-21 (III) — v495 + v496: WP3 (GS-Alignment) und WP4 (Charakter-Schatten) des celestial Contracts promoviert — Contract auf „WP1–WP4 done", WP5 [O]
+
+Die beiden Proben celestial_seam_wp3_gs_axion_alignment_probe.py und
+celestial_seam_wp4_character_salgebra_probe.py aus experiments/tfpt-discovery/
+sind als **v495_celestial_wp3_gs_alignment.py (CELEST.WP3.01)** und
+**v496_celestial_wp4_character_shadow.py (CELEST.WP4.01)** promoviert
+(je 25 Checks, exakt, Suite grün, jetzt 490 Skripte).
+
+- **WP3 (Verdikt B):** Okubo-Koeffizient 5/(2(dim+2)) HERGELEITET für alle 8
+  Algebren (sl4-Negativkontrolle 5/32 ≠ 3/32); λ̃² = h∨+6 geschlossen über die
+  Deligne-Reihe; **E8: λ̃ = 6, λ_fund = 1/10 exakt**, (κ/c3)² = 12 = |μ₄|·N_fam
+  bzw. 1/300 — κ/c3 selbst irrational (2√3); Costellos so8-Slip lokalisiert
+  (exakt 3, gedruckt 3/2). BRUTAL EHRLICH (Look-elsewhere): Alignment-Format
+  8/8 (null Selektivität), λ̃-Ganzzahligkeit 2/8 (mit sl3), einzig g_car|h∨
+  ist E8-selektiv (1/8), Konjunktion post hoc. K3 feuert nicht, aber
+  Scope-Demotion: „alignment survives; selectivity does not" — Kompatibilität,
+  keine E8-selektive Evidenz.
+- **WP4 (Verdikt B(ii)):** der (E8)₁-Charakter ist KEIN konformer Block der
+  S-Algebra in der Jet-Graduierung — Mismatch dreifach lokalisiert (Spin
+  unbeschränkt; Wachstum n^{2/3} vs n^{1/2}; Level-2-Nullideal löscht exakt
+  27000 = 30³ = h∨³, kein Jet-Analogon). ABER der Rand-/Periodenlimes hält
+  exakt an der Strom-Schicht (Zero-Modes 60, Jet-Slice (60,64,60,64),
+  μ₄-Periodensumme 248, Glue-Gewichte (0,1,1,1) ganz; Loop-Fock 897266 ≫ 248)
+  — dieselbe MMST-Scaling-Limit-Struktur wie SEAM.EQUIV.01 (v336/v449). K4
+  feuert nur gegen die Exakt-Lesart; konstruktiver Limes → WP5.
+
+Integration: Contract-Section WP3/WP4 → done (K3/K4 „evaluated" mit
+Scope-Demotion im Text, Statuszeile „WP1–WP4 executed, WP5 [O]"); Ledger-Zeilen
+CELEST.WP3.01 + CELEST.WP4.01 (neu) + CELEST.SEAM.01-Update + GATE.WOLFRAM.02
+(3 + 4 exakte Mirrors, zählen mit nächstem verifizierten Engine-Lauf — Engine
+weiter unaktiviert); \veri{v495}/\veri{v496} im Contract + tfpt_3-Celestial-
+Absatz (konservativ); papers.ts Highlight „WP1–WP4 done" + DAG-qft-Knoten;
+Changelog 2026-07-21 (III). SEAM.EQUIV.01 bleibt [O]; als Nächstes WP5
+(konstruktiver Rand-Limes, Costello–Li-Grad — trägt jetzt die WP4-Frage).
+
+## 2026-07-21 (II) — PG.06b FULL: das komplette NICER-Vela-Archiv reduziert — erste Röntgen-ν(t)-Probe, Verdikt data_limited; F0-Korrektur des alten „pipeline proven"-Laufs
+
+Die volle Reduktion (665/665 Obs, 2.6 GB → 491 nutzbar → 240 Detektionen → 119
+segment-kohärente ν(t)-Punkte, σ_ν≈0.6 µHz, PINT-validiert 3.4 µs) ist gelaufen;
+Sanity-Gate PASS (Δν/ν 2019: 2.39e-6 vs. 2.5012e-6, 2021: 1.272e-6 vs. 1.26e-6;
+2024 nicht reduzierbar — 150-s-Schnappschüsse). Eingefrorener Kamm: Reach 2019
+2.17 Perioden (< 2.8-Gate, schlägt PG.08-Vela 1.83), 2021 1.38; 2019 raw p=0.014
+ABER Bonferroni ×10 = 0.14 + Shuffle 0.40 → per Eskalationsregel Zufallsniveau
+(Audit-Flag, kein Kandidat); Stack p=0.049/Shuffle 0.31; Injektion ε_50≈0.55 (nur
+2019), ε_90 nie unter ε=1, 0 % bei ε_pred=0.0173 → range- UND amplitudenlimitiert
+(Frühfenster <3.4 d fehlt im Archiv; nächster Entscheider: <3 d nach künftigem
+Glitch, eXTP-Klasse). Zweites Off-Kernel-Flag λ=e in 2021 (raw 0.002, Bonf.
+0.018; gleiche Klasse wie PG.08 J0742). WICHTIG (Korrektur): der alte
+PG.06b-„pipeline proven"-Peak F0=11.19275 Hz (H=18.4) war ein Rauschpeak; wahr
+ist 11.1861692 Hz (H=99.7, PuMA-konsistent) — Scorecard-Zeile, README-Katalog +
+§1 und pulsar-README korrigiert. Scorecard-Zeile PG.06b → „recovery comb on the
+full NICER Vela X-ray nu(t) (PG.06b FULL)", Status bleibt data_limited (Zähler
+unverändert 120/49/9/26/33/3; S2b 9→10). Kein Claim; Firewall intakt.
+
+## 2026-07-21 — v494: die zwei Prediction-of-Record-Zeilen vom 2026-07-20 (α_s-Running + μ-Distortion) in die Suite promoted; Sync-Lücke der Vorhersage-Oberflächen geschlossen
+
+Die beiden Scorecard-Zeilen vom 2026-07-20 (IV) hatten keine Spiegel auf den
+Vorhersage-Oberflächen (predictions.txt, predictions.ts, Paper-Body). Jetzt:
+
+- **v494_cosmo_running_mu_record.py (23 Checks grün):** [E] LO-Identitäten
+  α_s = −2/N★² = −r/6, β_s = −4/N★³ (sympy exakt) + exakter Slow-Roll am
+  Starobinsky-Potential (α_s(51.4) = −7.09e-4, β_s = −2.70e-5; FD-Cross-Check
+  <1%); [C] Pulls +0.57σ (Planck 2018) / −1.33σ (P-ACT-LB, Record-Leg;
+  Watch-Kanal: positiver Zentralwert, Plateau-Kill); [C] μ-Distortion
+  (Chluba-Fenster, +21% am ΛCDM-Anker kalibriert): sharp 1.6e-8 / profiled
+  1.94e-8, Band 1.5–2.3e-8, Zweig-Split 3.0e-9 = 3σ bei Voyage-2050
+  σ(μ)=1e-9 (PIXIE-Baseline reicht nicht); [E] Comb-Blindheit |F(2.5827)| =
+  0.033, δμ = 7.4e-12 (S15: strukturell unsichtbar). Fences: N★ bleibt Input
+  (GATE.NSTAR.01), Band [50,60] bleibt Record.
+- **Sync:** Ledger COSMO.RUNNING.01 + COSMO.MUDIST.01; predictions.txt zwei
+  neue Zeilen (α_s, μ); predictions.ts Karten alpha-s-running + mu-distortion
+  + DAG-Knoten cosmo; \veri{v494} in tfpt_1 (Inflation interface, Running-
+  Absatz) und tfpt_2 (Pivot-Keybox, μ-Zweig-Entscheider); Changelog 2026-07-21;
+  Counts 488.
+- **Wolfram:** Engine weiter unaktiviert (mathpass abgelaufen 2026-07-13);
+  v491/v493-Mirrors bleiben „zählen mit dem nächsten verifizierten Engine-Lauf";
+  v494 ist numerisch/Quadratur → Python-only per Konvention.
+
 ## 2026-07-20 (V) — e8-ladder-bed AUSGEFÜHRT: Verdikt `validated` (Detektor-Ebene) — blinde Recovery der publizierten Zamolodchikov-E8-Spektren
 
 Das E8-Massenleiter-Blind-Recovery-Bett (experiments/e8-ladder-bed, prereg

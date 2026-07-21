@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`487` registered scripts · `554` ledger claims · `10` clusters.
+`490` registered scripts · `558` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -236,7 +236,7 @@ _The Majorana texture, the dual anchor, and the previously open solar angle from
 - **v482_seesaw_rung_decision** [C/O] `FLAV.NUSCALE.03` — FLAV.NUSCALE.03: the decision computation named by v481, EXECUTED in bracketed form -- the integer rung M_R = c3^3 Mbar is EXCLUDED as an unstructured exact pin (conditional on the
   - deps: v272_nu_mass_scale, v481_seesaw_carrier_ladder, v249_ps_unification, v249, v272, v354, v355, v481 · cited: 2 standard model
 
-### `gravity` — Gravity, inflation & cosmology  (6 scripts)
+### `gravity` — Gravity, inflation & cosmology  (7 scripts)
 _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmological readouts._
 
 - **v7_gravity_cosmo** [E] `GRAV.SCAL.01, COSMO.LAM.01, COSMO.INF.01, COSMO.OMB.01` — scalaron c₃⁷, A_s, n_s, r, Ω_b, sin²θ₁₂
@@ -251,6 +251,8 @@ _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmologic
   - deps: v152_norm_is_anchor, v68_seeley_dewitt_residual, v60_lambda_metrology_branch · cited: 4 frontier
 - **v206_h0_lambda_branch** [E/C] `GRAV.H0.01` — must be displayed); [N] ρ_Λ=M_Pl⁴δ_Σ≈2.4×10⁻⁴⁷ GeV⁴ (observed vacuum order); [N] 123-orders cross-link |log₁₀δ_Σ|≈122.96, consistent with the v60 split 122.948; [C] under flatness 
   - deps: v60_lambda_metrology_branch, v55_coxeter_cycle · cited: 4 frontier
+- **v494_cosmo_running_mu_record** [E/C/X] `COSMO.RUNNING.01, COSMO.MUDIST.01` — α_s/β_s running + μ-distortion promoted to the suite: [E] LO identities α_s=−2/N★²=−r/6, β_s=−4/N★³ (sympy exact) + exact slow roll α_s(51.4)=−7.09×10⁻⁴, β_s=−2.70×10⁻⁵ (band −8.0…
+  - deps: v7_gravity_cosmo, v86_nstar_reheating, v22_open_gates_audit · cited: 1 architecture e8, 2 standard model
 
 ### `horizon` — Horizon code & Origin Theory (self-consistency)  (20 scripts)
 _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem._
@@ -324,7 +326,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (163 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (165 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -653,6 +655,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v1_e8_glue, v92, v125, v128, v168, v179 · cited: 3 e8 audit bootstrap, research contracts
 - **v493_celestial_wp2_clock_deformation** [E/C/O] `CELEST.WP2.01` — CELEST.WP2.01: WP2 of the celestial-holographic research contract CELEST.SEAM.01 -- the clock-invariant deformation XY = Z^4 + a0 of the A3 seam orbifold (geometry, periods/monodro
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v92, v125, v128, v168, v179, v180 · cited: 3 e8 audit bootstrap, research contracts
+- **v495_celestial_wp3_gs_alignment** [E/C/O/X] `CELEST.WP3.01` — CELEST.WP3.01: WP3 of the celestial-holographic research contract CELEST.SEAM.01 -- the Green-Schwarz axion coefficient lambda_g of celestial SDYM (Costello, arXiv:2111.08879) vs t
+  - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v92, v125, v128, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
+- **v496_celestial_wp4_character_shadow** [E/C/O] `CELEST.WP4.01` — CELEST.WP4.01: WP4 of the celestial-holographic research contract CELEST.SEAM.01 -- the (E8)_1 character E4/eta^8 vs the glue-equivariant E8[C^2] S-algebra (the 'type mismatch, hea
+  - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v125, v128, v336, v377, v449, v492 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1039,15 +1045,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×70, `v336`×35, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×72, `v336`×36, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v482_seesaw_rung_decision** — `FLAV.NUSCALE.03`
-- **v483_pillowcase_exact_traces** — `HYP.PHI0.GEOM.01`
-- **v484_seam_contact_unit** — `SEAM.CONTACT.UNIT.01`
 - **v485_contact_diagonal_closed** — `SEAM.CONTACT.UNIT.02`
 - **v486_transfer_full_rule** — `HYP.REWRITE.02`
 - **v487_transfer_clock_rungs** — `HYP.REWRITE.03`
@@ -1057,4 +1060,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v491_p2_partition_corollary** — `P2.PARTITION.01`
 - **v492_celestial_z4_orbifold** — `CELEST.WP1.01, CELEST.SEAM.01`
 - **v493_celestial_wp2_clock_deformation** — `CELEST.WP2.01`
+- **v494_cosmo_running_mu_record** — `COSMO.RUNNING.01, COSMO.MUDIST.01`
+- **v495_celestial_wp3_gs_alignment** — `CELEST.WP3.01`
+- **v496_celestial_wp4_character_shadow** — `CELEST.WP4.01`
 

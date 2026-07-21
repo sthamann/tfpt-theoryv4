@@ -3207,6 +3207,109 @@ Module[{Zs, a0s, a1s, a2s, a3s, ws, ts, c2s, Xs, Ys, Pgen, diffP, sol, prodq,
     linok && Expand[remEH - (Xs Ys - c2s)] === 0];
 ];
 
+(* ==== v495 round: CELEST.WP3.01 -- the Green-Schwarz axion coefficient lambda_g
+   (Costello) vs c3 = 1/(8 pi) (WP3 of CELEST.SEAM.01, alignment test only).
+   Exact content mirrored: the Deligne closed form lambda~^2 = 10 h_vee^2/(dim+2)
+   = h_vee + 6 for all 8 algebras on Costello's list, with the dimension formula
+   dim = 2(5h_vee-6)(h_vee+1)/(h_vee+6) and the fundamental-index values
+   (h_vee+6)/i^2; the E8 alignment (kappa/c3)^2 = lambda^2/3 = 12 = |mu4| N_fam
+   resp. 1/300 with kappa/c3 itself irrational; the so8 factor-2 slip (exact 3,
+   printed 3/2); the look-elsewhere pass counts (smooth 8/8, lambda-integrality
+   2/8 = {sl3, e8}, g_car | h_vee 1/8 = {e8}, phi(h_vee) = rank 4/8, phi(h) =
+   rank 5/8) and the e8 exponents = totatives of 30; mirrors v495.  The Okubo
+   root-sum identity itself is polynomial (verified in Python from explicit
+   root systems); its arithmetic consequence lambda~^2 = h_vee + 6 is mirrored
+   here. ==== *)
+Module[{algs, hvs, hs, ranks, dims, idx, lamU, lamF, smooth235, squares,
+        fives, phiv, phih, tot},
+  (* {dim, h_vee, h (Coxeter), rank, i_fund} per algebra, Costello's list *)
+  algs = {{3, 2, 2, 1, 1}, {8, 3, 3, 2, 1}, {14, 4, 6, 2, 2},
+          {28, 6, 6, 4, 2}, {52, 9, 12, 4, 6}, {78, 12, 12, 6, 6},
+          {133, 18, 18, 7, 12}, {248, 30, 30, 8, 60}};
+  dims = algs[[All, 1]]; hvs = algs[[All, 2]]; hs = algs[[All, 3]];
+  ranks = algs[[All, 4]]; idx = algs[[All, 5]];
+  lamU = MapThread[10 #2^2/(#1 + 2) &, {dims, hvs}];
+  lamF = MapThread[(#2 + 6)/#3^2 &, {dims, hvs, idx}];
+  checkExact["v495 CELEST.WP3.01 (i): DELIGNE CLOSED FORM -- lambda~^2 = 10 h_vee^2/(dim+2) = h_vee + 6 EXACTLY for all 8 algebras on Costello's list, values (8,9,10,12,15,18,24,36); dimension formula dim = 2(5h_vee-6)(h_vee+1)/(h_vee+6) exact; fundamental-trace lambda^2 = (h_vee+6)/i^2 = (8,9,5/2,3,5/12,1/2,1/6,1/100) with i_R = (1,1,2,2,6,6,12,60); E8: lambda~ = 6, lambda_fund = 1/10 exact",
+    lamU === MapThread[#2 + 6 &, {dims, hvs}] &&
+    lamU === {8, 9, 10, 12, 15, 18, 24, 36} &&
+    And @@ MapThread[#1 (#2 + 6) == 2 (5 #2 - 6) (#2 + 1) &, {dims, hvs}] &&
+    lamF === {8, 9, 5/2, 3, 5/12, 1/2, 1/6, 1/100} &&
+    Sqrt[Last[lamU]] === 6 && Sqrt[Last[lamF]] === 1/10];
+  checkExact["v495 CELEST.WP3.01 (ii): E8 ALIGNMENT -- kappa = lambda_g/(8 pi sqrt 3) gives (kappa/c3)^2 = lambda^2/3 = 36/3 = 12 = |mu4| N_fam (unit-trace) resp. (1/100)/3 = 1/300 (adjoint-trace), both exact anchor rationals; kappa/c3 ITSELF is irrational (2 sqrt 3 resp. 1/(10 sqrt 3)); anchors h_vee = 30 = 2*3*5 (all three atoms once), EulerPhi(30) = 8 = rank, dim+2 = 250 = 2*5^3, lambda~ = 6 = |Z2| N_fam, lambda_fund = 1/10 = 1/(|Z2| g_car); so8 slip: Costello's own weight content gives Sum w^4 = 192, lambda^2 = 192/64 = 3 (Okubo-consistent 12/4), NOT the printed 3/2",
+    36/3 === 12 && 12 === 4*3 && (1/100)/3 === 1/300 &&
+    Simplify[Sqrt[12]] === 2 Sqrt[3] && Simplify[Sqrt[1/300]] === 1/(10 Sqrt[3]) &&
+    30 === 2*3*5 && EulerPhi[30] === 8 && 250 === 2 5^3 &&
+    6 === 2*3 && 1/10 === 1/(2*5) && 36 === 30 + 6 &&
+    12 2^4 === 192 && 192/64 === 3 && 192/64 =!= 3/2 && (6 + 6)/2^2 === 3];
+  smooth235 = Max[FactorInteger[#][[All, 1]]] <= 5 &;
+  squares = Flatten[Position[hvs, _?(IntegerQ[Sqrt[# + 6]] &)]];
+  fives = Flatten[Position[hvs, _?(Mod[#, 5] == 0 &)]];
+  phiv = Flatten[Position[Range[8], _?(EulerPhi[hvs[[#]]] == ranks[[#]] &)]];
+  phih = Flatten[Position[Range[8], _?(EulerPhi[hs[[#]]] == ranks[[#]] &)]];
+  tot = Select[Range[29], CoprimeQ[#, 30] &];
+  checkExact["v495 CELEST.WP3.01 (iii): LOOK-ELSEWHERE PASS COUNTS (alignment != selection) -- '(kappa/c3)^2 rational' passes 8/8 by construction and 'h_vee {2,3,5}-smooth' 8/8 (zero selectivity); 'lambda~ integer' 2/8 (positions {2,8} = sl3, e8); 'g_car = 5 | h_vee' 1/8 (position {8} = e8 ONLY); 'phi(h_vee) = rank' 4/8 (sl2, sl3, g2, e8); 'phi(h) = rank' 5/8 (+f4); e8 exponents = totatives of 30 = {1,7,11,13,17,19,23,29}, sum 120 = #positive roots, degrees product 696729600 = |W(E8)|",
+    Count[hvs, _?smooth235] === 8 && squares === {2, 8} && fives === {8} &&
+    phiv === {1, 2, 3, 8} && phih === {1, 2, 3, 5, 8} &&
+    tot === {1, 7, 11, 13, 17, 19, 23, 29} && Total[tot] === 120 &&
+    (Times @@ (tot + 1)) === 696729600];
+];
+
+(* ==== v496 round: CELEST.WP4.01 -- the (E8)_1 character E4/eta^8 vs the
+   glue-equivariant E8[C^2] S-algebra (WP4 of CELEST.SEAM.01, the type
+   mismatch head-on).  Exact content mirrored: the character coefficients
+   through q^6 with the q j = E4^3/eta^24 cross-check; the equivariant Hilbert
+   series (60+128t+60t^2)/(1-t^2)^2 with the quadratic cumulative count
+   31 s^2 + 92 s + 60 and the SU(2)_+ slice; the two-sided jet-Fock mismatch
+   f = (1,128,8436,381056) with strictly increasing f_n/chi_n (n = 1..12);
+   the level-2 null ideal 27000 = 30^3 = h_vee^3; the boundary bridges (mu4
+   period sum 248, 248 not a tower dimension, loop Fock 897266); mirrors
+   v496. ==== *)
+Module[{q, t, u, e4, chi, jq, Ddim, hilb, cum, slice, f, verma, dims4, lf,
+        period, tower},
+  q = \[FormalQ]; t = \[FormalT]; u = \[FormalU];
+  e4 = 1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 12}];
+  chi = CoefficientList[
+    Normal[Series[e4/Product[(1 - q^n)^8, {n, 1, 12}], {q, 0, 12}]], q];
+  jq = CoefficientList[
+    Normal[Series[e4^3/Product[(1 - q^n)^24, {n, 1, 12}], {q, 0, 3}]], q];
+  checkExact["v496 CELEST.WP4.01 (i): CHARACTER SIDE EXACT -- chi_(E8)_1 = E4/eta^8 = (1, 248, 4124, 34752, 213126, 1057504, 4530744) through q^6 (the v377/v492 series extended); machinery cross-check q j(tau) = E4^3/eta^24 = (1, 744, 196884, 21493760); Sugawara c = 248/31 = 8 = 2|mu4| and the null-ideal bookkeeping 4124 = 1 + 248 + 3875, Sym^2(248) = 1 + 3875 + 27000 = 30876",
+    Take[chi, 7] === {1, 248, 4124, 34752, 213126, 1057504, 4530744} &&
+    jq === {1, 744, 196884, 21493760} &&
+    248/(1 + 30) === 8 && 8 === 2*4 &&
+    248 + 3875 + 1 === 4124 && 1 + 3875 + 27000 === 30876];
+  Ddim[d_] := If[EvenQ[d], 60 (d + 1), 64 (d + 1)];
+  hilb = CoefficientList[
+    Normal[Series[(60 + 128 t + 60 t^2)/(1 - t^2)^2, {t, 0, 12}]], t];
+  cum = And @@ Table[Sum[Ddim[d], {d, 0, s}] ===
+    31 s^2 + If[EvenQ[s], 92 s + 60, 94 s + 63], {s, 0, 12}];
+  slice = CoefficientList[
+    Normal[Series[(60 + 64 t)/(1 - t^2), {t, 0, 6}]], t];
+  checkExact["v496 CELEST.WP4.01 (ii): EQUIVARIANT HILBERT SERIES -- chi_sp(t) = (60 + 128 t + 60 t^2)/(1-t^2)^2 reproduces the tower D[d] = 60(d+1) even / 64(d+1) odd exactly (d <= 12), palindromic numerator with 60+128+60 = 248 at t = 1; cumulative generator count QUADRATIC 31 s^2 + 92 s + 60 (even) / 31 s^2 + 94 s + 63 (odd) with 31 = k + h_vee and 31*8 = 248; the SU(2)_+ primary slice (60+64t)/(1-t^2) cycles (60,64,60,64) -- bounded but never (1, 248, ...)",
+    hilb === Table[Ddim[d], {d, 0, 12}] && 60 + 128 + 60 === 248 &&
+    cum && 31 === 1 + 30 && 31*8 === 248 &&
+    slice === {60, 64, 60, 64, 60, 64, 60}];
+  f = CoefficientList[
+    Normal[Series[Product[(1 - q^d)^-Ddim[d], {d, 1, 12}], {q, 0, 12}]], q];
+  verma = CoefficientList[
+    Normal[Series[Product[(1 - q^n)^-248, {n, 1, 2}], {q, 0, 2}]], q];
+  dims4 = {60, 64, 60, 64};
+  lf = SeriesCoefficient[
+    Series[Product[(1 - u^n)^-dims4[[Mod[n, 4] + 1]], {n, 1, 8}], {u, 0, 4}],
+    4];
+  period = Sum[dims4[[Mod[n, 4] + 1]], {n, 1, 4}];
+  tower = Select[Range[0, 100], Ddim[#] == 248 &];
+  checkExact["v496 CELEST.WP4.01 (iii): MISMATCH LOCALISED -- equivariant jet Fock f = (1, 128, 8436, 381056) vs chi = (1, 248, 4124, 34752): TWO-SIDED failure (f1 = 128 < 248 undercount, f2 = 8436 > 4124 overcount); f_n/chi_n strictly increasing for n = 1..12 (exact cross-multiplication); free-current level-2 count 31124 = 248 + Sym^2(248), character keeps 4124, deficit EXACTLY 27000 = 30^3 = h_vee^3 (the (E8)_1 null ideal, absent from the jets; level 1 agrees 248 = 248)",
+    Take[f, 4] === {1, 128, 8436, 381056} &&
+    f[[2]] < chi[[2]] && f[[3]] > chi[[3]] &&
+    (And @@ Table[f[[n + 2]] chi[[n + 1]] > f[[n + 1]] chi[[n + 2]],
+      {n, 1, 11}]) &&
+    verma === {1, 248, 31124} && verma[[3]] - chi[[3]] === 27000 &&
+    27000 === 30^3];
+  checkExact["v496 CELEST.WP4.01 (iv): BOUNDARY BRIDGES -- one full mu4 period of loop energies carries dim g_(n mod 4) = (64,60,64,60), sum = 248 EXACTLY (the single-particle level of the 248q stage); 248 is NOT a jet-tower dimension (no d <= 100 with 60(d+1) or 64(d+1) = 248) -- only the period collapse produces it; BUT the free loop Fock at integer level 1 (u^4) counts 897266 >> 248: the rational truncation must be imposed in the limit (the SEAM.EQUIV.01 scaling-limit shape)",
+    period === 248 && tower === {} && lf === 897266 && lf > 248];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

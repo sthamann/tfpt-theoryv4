@@ -2853,18 +2853,52 @@ difference; the seam-scale reading via clock$^2=$deck); the full deformed twiste
 $W(\mu)$-type scaling limit for $k{=}4$ stay \mO. The \vref{v216} $[$O$]$-residual is \emph{typed}, not
 moved: given the order-$4$ clock, the deformation freezes the $(2,2,2,2)$ modulus to the square
 automatically --- a relocation of the same order-$4$ carrier input, not a new derivation.
-\item \textbf{WP3 (alignment test only) \mO:} the Green--Schwarz axion coefficient of the celestial
-$E_8$ theory, $\lambda_{\mathfrak e_8}/(8\pi\sqrt3)$ (Costello's normalisation), against the TFPT seam
-constant $\cthree=1/(8\pi)$ --- an \emph{alignment} check between two fixed normalisations, never a
-derivation of $\cthree$ from celestial data.
-\item \textbf{WP4 (the type mismatch, head-on) \mO:} the $(E_8)_1$ \emph{character} as a conformal block
-of the celestial $E_8[\mathbb C^2]$ S-algebra --- WP1 shows the four glue sectors sum to the $(E_8)_1$
-character at the counting level, but the S-algebra is graded by polynomial degree ($60/64$ towers), not by
-conformal weight; WP4 must either produce the character from the S-algebra trace or localise the
-obstruction.
+\item \textbf{WP3 (\emph{done}, verdict B) \mE/\mC:} the Green--Schwarz alignment test, executed and
+machine-verified as \texttt{CELEST.WP3.01} \veri{v495\_celestial\_wp3\_gs\_alignment.py} (exact
+Fraction/sympy, $25$ checks). The arithmetic side is sharp: the Okubo coefficient
+$\mathrm{Tr}_{\mathrm{adj}}X^4/(\mathrm{Tr}_{\mathrm{adj}}X^2)^2=5/(2(\dim\mathfrak g{+}2))$ is
+\emph{derived} as a polynomial identity for all $8$ algebras on Costello's list (with a sharp
+$\mathfrak{sl}_4$ negative control: $5/32$ vs $3/32$), the closed form
+$\tilde\lambda^2=10h^{\vee2}/(\dim{+}2)=h^\vee{+}6$ holds exactly across the Deligne series, and for $E_8$
+the axion coefficient is \emph{exactly} $\tilde\lambda=6$ (unit-trace) resp.\
+$\lambda_{\mathrm{fund}}=1/10$ (adjoint-trace), so the GS coupling
+$\kappa=\lambda_{\mathfrak g}/(8\pi\sqrt3)$ satisfies $(\kappa/\cthree)^2=12=|\mu_4|\Nfam$ resp.\ $1/300$
+--- exact anchor rationals, with the anchor decomposition $h^\vee{=}30{=}|\Z_2|\Nfam\gcar$,
+$\varphi(30){=}8{=}\operatorname{rank}$, $\tilde\lambda{=}|\Z_2|\Nfam$,
+$\lambda_{\mathrm{fund}}{=}1/(|\Z_2|\gcar)$ (a byproduct: the printed $\lambda^2_{\mathfrak{so}_8}=3/2$
+in Costello's appendix A is a factor-$2$ slip; his own weight content gives $3$, Okubo-consistent).
+$\kappa/\cthree$ itself is \emph{irrational} ($2\sqrt3$): only the squared alignment is exact. \textbf{The
+look-elsewhere caveat is part of the result} \mC: the same squared-rational alignment holds for \emph{all
+eight} algebras on the list ($8/8$ --- the test as such has zero selective power), $\tilde\lambda$-integrality
+passes $2/8$ (shared with $\mathfrak{sl}_3$), and the only $\mathfrak e_8$-selective single test is
+$\gcar{=}5\mid h^\vee$ ($1/8$); the conjunction that isolates $\mathfrak e_8$ is post hoc, not
+preregistered. \emph{Alignment survives; selectivity does not} --- the $\cthree$-connection of the
+celestial route is convention-level compatibility plus genuine $\lambda$-arithmetic, \emph{not}
+$\mathfrak e_8$-selective evidence, and never a derivation of $\cthree$ from celestial data.
+\item \textbf{WP4 (\emph{done}, verdict B(ii)) \mE/\mC:} the type mismatch, executed head-on and
+machine-verified as \texttt{CELEST.WP4.01} \veri{v496\_celestial\_wp4\_character\_shadow.py} (exact
+integer/Fraction/sympy, $25$ checks). The $(E_8)_1$ character is \emph{not} a conformal block of the
+celestial $E_8[\mathbb C^2]$ S-algebra in its own (jet) grading --- the obstruction is localised
+\emph{three} independent ways: (a) the CP grading gives spin $1-d/2$, unbounded below, and $248$ is never
+a jet-tower dimension ($60(d{+}1)/64(d{+}1)$, $d\le100$); (b) the cumulative generator count is quadratic
+($31s^2{+}92s{+}60$, $31=k{+}h^\vee$), so the jet Fock grows as $n^{2/3}$ against the character's
+$n^{1/2}$ (Meinardus poles $s{=}2$ vs $s{=}1$; the ratio $f_n/\chi_n$ increases strictly for $n=1..12$);
+(c) the level-$2$ null ideal of $(E_8)_1$ deletes \emph{exactly}
+$27000=30^3=(h^\vee)^3$ out of $\operatorname{Sym}^2(248)=1{+}3875{+}27000$ (the character keeps
+$4124=1{+}248{+}3875$) --- and has no jet analogue. \textbf{But the boundary/period reading holds exactly
+at the current stratum}: the zero-mode slice is the $60$ vacuum-sector currents, the single-line jet slice
+cycles the four sector counts $(60,64,60,64)$, one full $\mu_4$ period of loop energies sums exactly to
+$248$ (the single-particle level of the $248q$ stage), and the glue-diagonal weights $(0,1,1,1)$ are
+integers --- while the free loop Fock at level $1$ counts $897266\gg248$, i.e.\ the rational truncation
+must be \emph{imposed in a limit}. That is precisely the MMST scaling-limit shape of
+\texttt{SEAM.EQUIV.01} (\vref{v336}/\vref{v449}: the rational net exists in the \emph{limit} of the
+lattice collar, not in the pre-limit algebra): WP4 is hereby \emph{retyped} from ``character as conformal
+block'' to ``character as boundary/limit shadow'', and the constructive limit question (which limit, which
+topology, convergence) passes to WP5.
 \item \textbf{WP5 (the summit) \mO:} the twistorial construction as a \emph{second continuum route} for
 \texttt{SEAM.EQUIV.01} --- a Costello--Li-grade construction of the holomorphic boundary theory from the
-twistor uplift; hard, and explicitly typed as a research programme.
+twistor uplift, now carrying the WP4 constructive-boundary-limit question as its concrete entry point;
+hard, and explicitly typed as a research programme.
 \end{itemize}
 
 \par\smallskip\noindent\textbf{Kill tests (pre-registered).} \textbf{(K1)} the equivariant sector could
@@ -2876,21 +2910,30 @@ occurred; the clock-variant controls fail in two independent ways each). \textbf
 associativity of the celestial
 $E_8$ theory demanded extra fields that TFPT does not possess, the contract dies (Costello's axionic
 mechanism is the first pass: $E_8$ is admissible; the TFPT-specific field content is the open half).
-\textbf{(K3)} if WP3 finds no exact alignment between the GS coefficient and the $\cthree$ normalisation,
-the $\cthree$-connection of the celestial route dies (the orbifold arithmetic of WP1 survives on its own).
-\textbf{(K4)} if WP4 is negative, the contract degrades to ``$E_8$ is an admissible gauge algebra for
-celestial SDYM'' --- already known from the literature, i.e.\ zero TFPT content.
+\textbf{(K3)} --- \emph{evaluated by WP3} (\veri{v495\_celestial\_wp3\_gs\_alignment.py}): the trigger
+(``no exact alignment between the GS coefficient and the $\cthree$ normalisation'') does \emph{not} fire
+--- exact alignment exists ($(\kappa/\cthree)^2=12$ resp.\ $1/300$). But the look-elsewhere battery
+\emph{demotes the scope of K3 itself}: the alignment format passes $8/8$ across Costello's whole list, so
+surviving K3 certifies compatibility plus $\lambda$-arithmetic, \emph{not} $\mathfrak e_8$-selective
+evidence --- alignment survives, selectivity does not.
+\textbf{(K4)} --- \emph{evaluated by WP4} (\veri{v496\_celestial\_wp4\_character\_shadow.py}): K4 fires
+only against the \emph{exact}-block reading (the character is provably not a conformal block in the jet
+grading); it does \emph{not} degrade the contract to ``$E_8$ is an admissible gauge algebra for celestial
+SDYM'', because the sector arithmetic holds exactly --- WP4 lands at the boundary-limit reading (verdict
+B(ii), the \texttt{SEAM.EQUIV.01} scaling-limit shape), with the constructive limit handed to WP5.
 
 \par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success (WP5: a
-second continuum route to \texttt{SEAM.EQUIV.01}) is low --- it is constructive holography at the
-Costello--Li grade. The probability of \emph{partial} findings is high: WP3 is a finite computation on
-fixed data, and WP1/WP2 already returned nontrivial structural matches (verdict B each) with sharp
-refinements --- the WP1 critical correction (clock $\neq$ deck; clock$^2=$ deck) and the WP2 sharpenings
-(the clock \emph{is} the Picard--Lefschetz/Coxeter monodromy of the seam deformation; the surviving
-direction is the $\chi_1$-Fourier diagonal, $a_0$ pure scale with the $\tau{=}i$ shape frozen) --- exactly
-the kind of sharp, falsifiable refinement the contract format is for. Status: \texttt{CELEST.SEAM.01}
-\mO\ (research contract); \texttt{CELEST.WP1.01} \mE/\mC\ (executed); \texttt{CELEST.WP2.01} \mE/\mC\
-(executed); \texttt{SEAM.EQUIV.01} untouched, stays \mO.
+second continuum route to \texttt{SEAM.EQUIV.01}) remains low --- it is constructive holography at the
+Costello--Li grade. The \emph{partial}-findings expectation is now \emph{realised}: WP1--WP4 are all
+executed with sharp structural results (verdicts B, B, B, B(ii)) --- the WP1 critical correction (clock
+$\neq$ deck; clock$^2=$ deck), the WP2 sharpenings (the clock \emph{is} the Picard--Lefschetz/Coxeter
+monodromy of the seam deformation; $a_0$ pure scale with the $\tau{=}i$ shape frozen), the WP3
+non-selective alignment (exact $\lambda$-arithmetic, honestly typed by the $8/8$ look-elsewhere table),
+and the WP4 boundary-limit localisation of the character mismatch (three exactly-located obstructions,
+one surviving limit structure) --- exactly the kind of sharp, falsifiable refinement the contract format
+is for. Status: \texttt{CELEST.SEAM.01} \mO\ (research contract, WP5 open); \texttt{CELEST.WP1.01}
+\mE/\mC\ (executed); \texttt{CELEST.WP2.01} \mE/\mC\ (executed); \texttt{CELEST.WP3.01} \mE/\mC\
+(executed); \texttt{CELEST.WP4.01} \mE/\mC\ (executed); \texttt{SEAM.EQUIV.01} untouched, stays \mO.
 
 % =====================================================================
 \section*{Certifiability and recommended order}

@@ -1826,7 +1826,7 @@ mechanism.
 % =====================================================================
 \section{Inflation interface}
 % =====================================================================
-\noindent\emph{Machine checks for this section:} \veri{v7\_\allowbreak gravity\_\allowbreak cosmo.py} \veri{v86\_\allowbreak nstar\_\allowbreak reheating.py}
+\noindent\emph{Machine checks for this section:} \veri{v7\_\allowbreak gravity\_\allowbreak cosmo.py} \veri{v86\_\allowbreak nstar\_\allowbreak reheating.py} \veri{v494\_\allowbreak cosmo\_\allowbreak running\_\allowbreak mu\_\allowbreak record.py}
 
 
 The documented scalaron is Starobinsky $R^2$; with the pivot $N_\star=57.1$:
@@ -1856,6 +1856,15 @@ residual being the geometric-gravity (Hodge) closure on which that sector rests 
 note:} $A_s\propto N_\star^2$, so
 the quoted $2.17\times10^{-9}$ uses the pivot $N_\star=57.1$; the alternative seed pivot $N_\star=3/\useed-1=55.4$
 gives $2.05\times10^{-9}$. A number should only be quoted with $N_\star$ fixed.
+
+\noindent\textbf{Running (consistency relation).} The same attractor also fixes the \emph{running}
+of the tilt parameter-free: $\alpha_s=\mathrm dn_s/\mathrm d\ln k=-2/N_\star^2=-r/6$ and
+$\beta_s=-4/N_\star^3$ at leading order; the exact slow roll on the Starobinsky potential gives
+$\alpha_s=-7.09\times10^{-4}$, $\beta_s=-2.70\times10^{-5}$ at the reheating point $N_\star{=}51.4$
+(leading-order band $[-8.0,-5.6]\times10^{-4}$ over $N_\star\in[50,60]$). Current data are
+consistent (Planck 2018 $-0.0045\pm0.0067$: $+0.57\sigma$; P-ACT-LB $+0.0062\pm0.0052$:
+$-1.33\sigma$), and since plateau potentials give $\alpha_s<0$, any robust \emph{positive} running
+would kill the branch. \mC\ \veri{v494\_\allowbreak cosmo\_\allowbreak running\_\allowbreak mu\_\allowbreak record.py}
 
 % =====================================================================
 \section{Further simple bridges}

@@ -20,7 +20,8 @@ wolframscript -file tfpt_readouts.wl
 
 `wolframscript` is installed (`brew install --cask wolfram-engine`, 14.3.0.0),
 the kernel path is configured, and the free Wolfram Engine license is
-**activated**. `wolframscript -file tfpt_readouts.wl` runs clean:
+**activated** (re-activated and both files re-verified on 2026-07-21).
+`wolframscript -file tfpt_readouts.wl` runs clean:
 
 ```
 --- Wolfram readouts: 116 passed, 0 failed ---
@@ -102,10 +103,13 @@ time `v99`, horizon anchor `v101`, seam orientation `v102`, trisection normal fo
 
 **Status: verified.** First engine run 2026-06-11 (Wolfram Engine 14.3): the
 v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
-the same day, the v141–v144 block on 2026-06-12. Current state:
+the same day, the v141–v144 block on 2026-06-12. Current state (verified
+engine run 2026-07-21, license reactivated, Wolfram Engine 14.3 — the 16
+mirrors deferred since 2026-07-14 now counted, 378 → 394: v479 (2) + v491 (3)
++ v493 (4) + v495 (3) + v496 (4)):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477: 378 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496: 394 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -229,11 +233,10 @@ The 2026-07-14 Kronheimer bridge `v479_kronheimer_quiver_bridge.py` has its
 two exact mirrors ADDED to `tfpt_readouts_extension.wl` (the Kac marks as
 null/Perron vector of the affine-E₈ Cartan/adjacency; the hyper-Kähler
 quotient dimension count `dim_R X = 4` with `Σ_edges d_i d_j = Σ d_i² = 120 =
-|μ₄|h(E₈)`; the unimodular finite-E₈ Cartan with SNF = identity), but the
-VERIFIED count stays `378/378`: the local Wolfram Engine is currently
-unactivated (license), so the two new checks enter the counted total only
-with the next verified engine run — the identical statements are
-machine-verified in Python (sympy, exact) in `v479` itself. The 2026-07-14
+|μ₄|h(E₈)`; the unimodular finite-E₈ Cartan with SNF = identity); they are
+COUNTED since the verified 2026-07-21 engine run (part of the 378 → 394
+step) — the identical statements are machine-verified in Python (sympy,
+exact) in `v479` itself. The 2026-07-14
 companions `v480_multilocal_four_interval.py` (numpy lattice modular data)
 and `v481_seesaw_carrier_ladder.py` (explicit 1-loop RG integration) are
 numerical, Python-only by the suite convention, flagged here rather than
@@ -247,26 +250,26 @@ Python-only, with the exact arithmetic (48c₃⁴ = 3/(256π⁴), ratio 3/16)
 sympy-exact inside the module; `v484_seam_contact_unit.py` is sympy-exact +
 40-digit mpmath polylog (the unit chain 1/(2π) = 4c₃, the mark-Green integers
 −4/−8 · c₃ln2, circ(0,1,2,1) spectrum {4,−2,0,−2}, the Λ prefactor 3/(4π²) =
-48c₃²) — mirrorable in principle, kept out of the `.wl` count until the next
-verified engine run (engine currently unactivated), flagged here per the
-suite convention. Likewise `v485_contact_diagonal_closed.py` (the diagonal
+48c₃²) — mirrorable in principle but NOT yet mirrored in the `.wl` file
+(so the verified 2026-07-21 engine run does not count it), flagged here per
+the suite convention. Likewise `v485_contact_diagonal_closed.py` (the diagonal
 zero at the KMS scale G_reg(0;ℓ) = (1/π)ln(ℓ/2π), the closed-form mark
 determinant (1−4u)(1+2u)², the exact charge sums Tr₁₆Y² = 10/3 and Ginsparg
 (3/5)(41/6) = 41/10): sympy/Fraction-exact in Python, mirrorable in
-principle, deferred to the same next engine run.
+principle, still unmirrored.
 
 The 2026-07-15 generator round `v486_transfer_full_rule.py` (the unique lazy
 Z₂-pair walk (1/2, 1/6, 1/3) generating eig(B⁶) = {64/729, 1/729} exactly)
 and its closure `v487_transfer_clock_rungs.py` (the split forced by the v124
 clock-ladder faithfulness: eig(M) = {1, 2/3, 1/3} = the complete ladder below
 the wall; deck parity = rung index; ω₁/ω₂ = log_{3/2}3 the bend) are
-sympy-exact in Python, mirrorable in principle, deferred to the same next
-verified engine run (engine currently unactivated), flagged here per the
-suite convention.  Likewise `v488_majorana_clebsch_door.py` (the 3/5
-Clebsch door closed: sym²(16) = 10 + 126, 16×16bar = 1 + 45 + 210, the
-ν^c charge table with Tr₁₆Y² = 10/3, the {2,3}-smooth channel weights and
+sympy-exact in Python, mirrorable in principle but NOT yet mirrored in the
+`.wl` file (so the verified 2026-07-21 engine run does not count them),
+flagged here per the suite convention.  Likewise `v488_majorana_clebsch_door.py`
+(the 3/5 Clebsch door closed: sym²(16) = 10 + 126, 16×16bar = 1 + 45 + 210,
+the ν^c charge table with Tr₁₆Y² = 10/3, the {2,3}-smooth channel weights and
 k_Y = 5/3 decoupled by Y(ν^c) = 0): Fraction/sympy-exact, mirrorable in
-principle, deferred to the same run.
+principle, still unmirrored.
 
 The 2026-07-20 ground-state-witness round: `v489_seam_modular_commutator.py`
 (the Kim–Shehab–Kim modular commutator c₋ = 8 on the exact BdG ground state)
@@ -278,26 +281,46 @@ Python). The exact partition corollary `v491_p2_partition_corollary.py`
 (P2.PARTITION.01: 4 into exactly 3 positive parts uniquely {1,1,2} ⇒
 e = (4,5,2) ⇒ g_car = 5, |Z₂| = 2, N_fam = 3 as corollaries, with all four
 negative controls and the v53 sharpening) has its THREE exact mirrors ADDED
-to `tfpt_readouts_extension.wl`, but the VERIFIED count stays unchanged:
-the local Wolfram Engine is currently unactivated (license), so the new
-checks enter the counted total only with the next verified engine run —
-the identical statements are machine-verified in Python (sympy, exact) in
-`v491` itself.
+to `tfpt_readouts_extension.wl`; they are COUNTED since the verified
+2026-07-21 engine run (part of the 378 → 394 step) — the identical
+statements are machine-verified in Python (sympy, exact) in `v491` itself.
 
 The 2026-07-20 celestial round: `v492_celestial_z4_orbifold.py`
 (CELEST.WP1.01: the E₈ μ₄-glue as inner order-4 torus element / flat Z₄
 monodromy, the equivariant 60/64 towers, the (E₈)₁ character sum, the
-clock²=deck spin bridge) is sympy-exact and mirrorable in principle,
-deferred to the next verified engine run (flagged in its docstring).
+clock²=deck spin bridge) is sympy-exact and mirrorable in principle but
+NOT yet mirrored in the `.wl` file (so the verified 2026-07-21 engine run
+does not count it; flagged in its docstring).
 `v493_celestial_wp2_clock_deformation.py` (CELEST.WP2.01: the clock-invariant
 deformation XY = Z⁴ + a₀ — sharp selection, disc = 256a₀³, quartic
 invariants I = 12a₀ / J = 0 identically ⇒ j = 1728 frozen, the Coxeter/
 Picard–Lefschetz monodromy with the χ₁-Fourier eigenline, versal weights
 (1,2,3,0), S-algebra corrections linear in a₀ with the EH k = 2 analogue)
-has its FOUR exact mirrors ADDED to `tfpt_readouts_extension.wl`, same
-convention: the VERIFIED count stays unchanged until the next verified
-engine run; the identical statements are machine-verified in Python
+has its FOUR exact mirrors ADDED to `tfpt_readouts_extension.wl`; they are
+COUNTED since the verified 2026-07-21 engine run (part of the 378 → 394
+step); the identical statements are machine-verified in Python
 (sympy, exact, 47 checks) in `v493` itself.
+
+The 2026-07-21 celestial WP3/WP4 round:
+`v495_celestial_wp3_gs_alignment.py` (CELEST.WP3.01: the Green–Schwarz
+alignment test — Deligne closed form λ̃² = h∨+6 across Costello's list,
+λ_E8 = 6 resp. 1/10 exact, (κ/c₃)² = 12 = |μ₄|N_fam resp. 1/300 with
+κ/c₃ itself irrational, the so8 factor-2 slip, and the look-elsewhere
+pass counts 8/8 / 2/8 / 1/8 / 4/8 / 5/8 with the e8 exponents =
+totatives of 30) has its THREE exact mirrors ADDED, and
+`v496_celestial_wp4_character_shadow.py` (CELEST.WP4.01: the character
+vs S-algebra type mismatch — E₄/η⁸ through q⁶ with the q·j cross-check,
+the equivariant Hilbert series (60+128t+60t²)/(1−t²)² with the quadratic
+cumulative count 31s²+92s+60, the two-sided jet-Fock mismatch with
+strictly increasing f_n/χ_n and the level-2 null ideal 27000 = 30³ =
+h∨³, and the boundary bridges: μ₄ period sum 248, 248 never a tower
+dimension, loop Fock 897266) has its FOUR exact mirrors ADDED — all
+seven COUNTED since the verified 2026-07-21 engine run (completing the
+378 → 394 step); the identical statements are
+machine-verified in Python (Fraction/sympy, exact, 25 checks each) in
+`v495`/`v496` themselves.  The Okubo root-sum identity of `v495`
+(polynomial in x over explicit root systems) stays Python-verified; its
+arithmetic consequence λ̃² = h∨+6 is what the mirror checks.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

@@ -1,0 +1,212 @@
+{
+  "kernel_omega": 2.5827069463082895,
+  "eps_predicted": 0.01730246011431484,
+  "reach_gate_periods": 2.8,
+  "reduction": {
+    "n_obs_archive": 665,
+    "n_obs_usable": 491,
+    "n_obs_detected": 240,
+    "n_segments": 119,
+    "n_segments_coherent": 108
+  },
+  "legs": [
+    {
+      "name": "2019",
+      "glep_mjd": 58515.5929,
+      "n_seg": 44,
+      "tau_min_d": 4.46749439999985,
+      "tau_max_d": 885.2333630699941,
+      "reach_periods": 2.1740561958002322,
+      "gate_passed": false,
+      "dnu_nu_measured": 2.3943447217810546e-06,
+      "dnu_nu_published": 2.5012e-06,
+      "sanity_pass": true,
+      "resid_rms_uhz": 5.038684738348455,
+      "comb_gain": 0.04608895585070031,
+      "comb_p": 0.014492753623188406,
+      "shuffle_p": 0.39520958083832336,
+      "kernel_smallest": true,
+      "battery": [
+        {
+          "label": "(3/2)^6 [kernel]",
+          "omega": 2.5827069463082895,
+          "p": 0.014492753623188406
+        },
+        {
+          "label": "(3/2)^5",
+          "omega": 3.0992483355699476,
+          "p": 0.11392405063291139
+        },
+        {
+          "label": "(3/2)^7",
+          "omega": 2.213748811121391,
+          "p": 0.5036363636363637
+        },
+        {
+          "label": "(3/2)^8",
+          "omega": 1.937030209731217,
+          "p": 0.6406533575317604
+        },
+        {
+          "label": "lambda=2",
+          "omega": 9.064720283654388,
+          "p": 0.17117117117117117
+        },
+        {
+          "label": "lambda=3",
+          "omega": 5.7192017347602535,
+          "p": 0.7166064981949458
+        },
+        {
+          "label": "lambda=e",
+          "omega": 6.283185307179586,
+          "p": 0.29347826086956524
+        },
+        {
+          "label": "(3/2)^3 [Z2 half-period]",
+          "omega": 5.165413892616579,
+          "p": 1.0
+        },
+        {
+          "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+          "omega": 3.874060419462434,
+          "p": 0.35431654676258995
+        },
+        {
+          "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+          "omega": 1.2913534731541447,
+          "p": 0.4532871972318339
+        }
+      ],
+      "injection": {
+        "eps_grid": [
+          0.01730246011431484,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "rates": [
+          0.0,
+          0.125,
+          0.125,
+          0.25,
+          0.25,
+          0.4583333333333333,
+          0.6666666666666666,
+          0.625
+        ],
+        "false_positive_rate": 0.0,
+        "rate_at_predicted": 0.0,
+        "eps_90": null,
+        "eps_50": 0.55,
+        "n_phases": 24
+      }
+    },
+    {
+      "name": "2021",
+      "glep_mjd": 59417.6194,
+      "n_seg": 13,
+      "tau_min_d": 12.053183359996183,
+      "tau_max_d": 347.2774926399943,
+      "reach_periods": 1.3814568666383054,
+      "gate_passed": false,
+      "dnu_nu_measured": 1.271771890712858e-06,
+      "dnu_nu_published": 1.26e-06,
+      "sanity_pass": true,
+      "resid_rms_uhz": 0.7951394996584176,
+      "comb_gain": 0.113730418639167,
+      "comb_p": 0.7309833024118738,
+      "shuffle_p": 0.562874251497006,
+      "kernel_smallest": false,
+      "battery": [
+        {
+          "label": "(3/2)^6 [kernel]",
+          "omega": 2.5827069463082895,
+          "p": 0.7309833024118738
+        },
+        {
+          "label": "(3/2)^5",
+          "omega": 3.0992483355699476,
+          "p": 0.7859778597785978
+        },
+        {
+          "label": "(3/2)^7",
+          "omega": 2.213748811121391,
+          "p": 0.5722120658135283
+        },
+        {
+          "label": "(3/2)^8",
+          "omega": 1.937030209731217,
+          "p": 0.5069686411149826
+        },
+        {
+          "label": "lambda=2",
+          "omega": 9.064720283654388,
+          "p": 0.08483754512635379
+        },
+        {
+          "label": "lambda=3",
+          "omega": 5.7192017347602535,
+          "p": 0.021660649819494584
+        },
+        {
+          "label": "lambda=e",
+          "omega": 6.283185307179586,
+          "p": 0.0018018018018018018
+        },
+        {
+          "label": "(3/2)^3 [Z2 half-period]",
+          "omega": 5.165413892616579,
+          "p": 0.20833333333333334
+        },
+        {
+          "label": "(3/2)^4 [Z2 antiperiodic harmonic]",
+          "omega": 3.874060419462434,
+          "p": 0.7985611510791367
+        },
+        {
+          "label": "(3/2)^12 [Z2 antiperiodic fundamental]",
+          "omega": 1.2913534731541447,
+          "p": 0.47420965058236275
+        }
+      ],
+      "injection": {
+        "eps_grid": [
+          0.01730246011431484,
+          0.05,
+          0.1,
+          0.2,
+          0.3,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "rates": [
+          0.0,
+          0.0,
+          0.0,
+          0.041666666666666664,
+          0.041666666666666664,
+          0.125,
+          0.0,
+          0.125
+        ],
+        "false_positive_rate": 0.041666666666666664,
+        "rate_at_predicted": 0.0,
+        "eps_90": null,
+        "eps_50": null,
+        "n_phases": 24
+      }
+    }
+  ],
+  "stack": {
+    "reach_periods": 2.1740561958002322,
+    "comb_p": 0.04891304347826087,
+    "shuffle_p": 0.3073852295409182
+  },
+  "verdict": "data_limited (range- and amplitude-limited, honestly quantified). The FULL NICER Vela archive is now reduced (665 obs -> 491 usable -> 240 per-obs detections -> 119 piecewise-coherent segments, 108 fully coherent), superseding the single-obs PG.06b proof (whose F0=11.19275 'detection' is corrected: the true Vela F0 there is 11.18617 Hz). SANITY GATE: the published glitch steps are reproduced (2019, 2021; skipped: none; 2024 window not reducible -- NICER post-2024 coverage is ~150 s snapshots). Achieved ln(tau) reach: 2019: 2.17, 2021: 1.38 comb periods -- all BELOW the 2.8-period localisation gate (first usable NICER obs is 3.4 d (2019) / 7 d (2021) post-glitch; the sub-day early window that would clear the gate is not in the archive), and the concatenated ln-tau stack (2.17 periods, p=0.05, shuffle p=0.31) buys amplitude, not range (PG.06). No preregistered escalation fires (comb p = 2019: 0.014, 2021: 0.731). AUDIT FLAG -- 2019: raw comb_p=0.014 (kernel smallest-p) but Bonferroni x10 = 0.14, shuffle p=0.40 (no ln-tau phase coherence) and reach 2.17 < 2.8 -- an audit-level chance feature, not a candidate (prereg escalation needs p<0.01 + shuffle<0.05 + gate). Surrogate-calibrated injection at the real sampling and real noise amplitudes: 2019: eps_50=0.55/eps_90=n/r, 2021: eps_50=n/r/eps_90=n/r (predicted eps~0.0173 -> chance level everywhere; n/r = not reached below eps=1). So the full ~2.6-GB (665-obs) reduction delivers the first X-ray nu(t) recovery test of the kernel comb, whose sensitivity never reaches 90% below eps=1 (range-blind, PG.06) -- an honest bounded null, NOT a well-powered kill (prereg: data_limited_if reach < 2.8 or predicted-eps power < 0.5). No claim; firewall intact."
+}

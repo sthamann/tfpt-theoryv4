@@ -154,10 +154,13 @@ real observation (~10 MB) and **`src/tfpt_pulsar/vela.py`** runs the reduction e
 > download cleaned **L2** events + orbit → **PINT** barycentres (`get_NICER_TOAs` + satellite
 > observatory from the `.orb`, **no HEASoft**) → H-test fold.
 
-**Real-data result (obsid 0020180102):** 430,739 photons barycentred; the **Vela pulsation is
-DETECTED at F0 = 11.19275 Hz (period 89.34 ms, H = 18.4)** — exactly the Vela spin. **The
-download → barycentre → fold pipeline is proven on REAL data**, with PINT alone (HEASoft not
-installed and not needed).
+**Real-data result (obsid 0020180102):** 430,739 photons barycentred; the download →
+barycentre → fold pipeline runs end-to-end on real data with PINT alone (HEASoft not
+installed and not needed). **Correction (2026-07-21, found by the FULL reduction below):**
+the originally reported "detection" at F0 = 11.19275 Hz (H = 18.4 on a 40k-photon subsample)
+was a **noise peak**; the true Vela frequency at that epoch — predicted by the phase-connected
+PuMA ephemeris and confirmed on all 430,739 photons — is **F0 = 11.1861692 Hz (H = 99.7,
+145 in the 0.2–1.2 keV soft band)**. The pipeline is proven, but by the corrected fold.
 
 **Honest wall (no claim).** A comb-*quality* `nu(t)` lives at the ~µHz level (the recovery
 structure), so it needs a **phase-connected timing solution** across all 665 observations
@@ -172,6 +175,55 @@ obs (resumable; `--max-obs 0` = all ~6.5 GB / hours) → `data/nicer_vela/vela_n
 (secular spin-down + big glitches at ~mHz); STAGE 2 (documented research step) = phase-connect the
 TOAs with tempo2/PINT (+ glitch model) → `vela_nu_t.csv` at µHz; STAGE 3 hook = `detect_comb` at
 ω=2.58 on that `nu(t)`. Tested here on one obs (F0=11.19275 Hz); the full run is offline by design.
+
+## PG.06b FULL — the COMPLETE NICER Vela reduction (2026-07-21, `tfpt-pulsar vela-full`)
+
+`experiments/next.txt` recorded PG.06b as "pipeline proven only". This stage reduces the
+**entire** NICER Vela archive — the job PG.06b quantified and left open. Manifest frozen
+**before** the bulk download (`data/nicer_vela/manifest_full_reduction.json`: all 665 ObsIDs,
+preregistered glitch windows 2019/2021/2024, 20-GB abort gate); download
+`scripts/download_vela_all.py` (665/665 ok, 1.46 GB gz → 2.6 GB events+orbits, gitignored);
+reduction `scripts/reduce_vela_full.py`:
+
+- **STAGE 1 (per obs):** fast barycentring (astropy + DE421 + orbit-file spline; **validated
+  against PINT to 3.4 µs RMS** = 4e-5 cycles), soft band PI 20–120 (0.2–1.2 keV, chosen on the
+  public proof obs; affects SNR only), Z²/H frequency scan centred on a piecewise ephemeris
+  predictor (PuMA 2021 `.par` / LVK 2024 `.par` / JBO 2019 step), scan window 8e-5 Hz kept below
+  the ISS-orbit alias spacing (~1.8e-4 Hz), plus a rescue pass centred on a local spin model →
+  **491/665 usable obs, 240 per-obs detections** (`vela_nu_perobs_full.csv`); the 174 unusable
+  obs are <300 soft-band photons or <64 s span.
+- **STAGE 2 (segments):** all usable photons grouped into ≤6-d segments (gap ≤1.5 d, never
+  across a glitch), one **coherent Z² fit per segment** with a cycle-slip check (coherent Z²
+  vs incoherent per-obs sum; fallback = inverse-variance mean — the preregistered *piecewise*
+  alternative to a full multi-month phase connection, which timing noise + the 46–60 d archive
+  gaps make a separate research project) → **119 segments (108 coherent), median σ_ν ≈ 0.6 µHz**
+  (`vela_nu_t_full.csv`).
+- **SANITY GATE (passed):** the published glitch steps are reproduced — 2019:
+  **Δν/ν = 2.39e-6** measured vs 2.50e-6 published (96%, pre-glitch-extrapolation mode; no
+  public phase-connected model exists for 2019); 2021: **1.27e-6** vs 1.26e-6 (101%,
+  model-residual mode against the PuMA `.par`). The **2024 window is not reducible**: NICER
+  post-2024 coverage is ~150-s snapshots (63 obs, 9.7 ks total) — too faint for the fold.
+- **STAGE 3 (comb, frozen PG.05/07/08 battery):** PG.08 protocol on the δν(τ) recoveries
+  (refit-absorption basis projected out, off-kernel periodogram + within-segment shuffle +
+  λ battery Bonferroni + surrogate-calibrated injection).
+
+**Result (`results/pg06b_full_vela.json`): `data_limited` — range- and amplitude-limited,
+honestly quantified.** Reach 2019: **2.17** periods (τ = 4.5–885 d), 2021: **1.38** (τ =
+12–347 d, PuMA-par window) — both below the 2.8 gate (first usable NICER obs is 3.4 d / 7 d
+post-glitch; the sub-day early window is not in the archive). No preregistered escalation:
+comb p = 2019: **0.014** / 2021: **0.73**. **Audit flag (not a candidate):** the 2019 leg's
+raw p=0.014 has the kernel as smallest-p battery member, but Bonferroni ×10 = 0.14, shuffle
+p = 0.40 (no ln-τ phase coherence) and sub-gate reach — chance-level by the preregistered
+escalation rule (needs p<0.01 + shuffle<0.05 + gate). Concatenated stack: p=0.049, shuffle
+0.31 — same class. Injection (surrogate-calibrated, real sampling + noise): ε_50 ≈ 0.55 (2019),
+never 50% (2021); **ε_90 not reached below ε=1** in either leg; at the predicted ε=0.0173 the
+power is 0% — vs PG.08's radio-residual legs (J1740: 50% at ε=0.30) the X-ray ν(t) is the
+**weaker amplitude probe**, but it is the first X-ray leg and it independently reproduces the
+PG.06 range-blindness on real data. **Audit note (not a TFPT channel):** in the 2021 leg the
+*off-kernel* battery member λ=e (ω≈6.28) has raw p=0.002 (Bonferroni 0.018) on 13 points —
+the same unexplained non-kernel periodicity class PG.08 flagged in J0742−2822; flagged, not
+claimed. **No claim; firewall intact.** Also corrected here: the
+old PG.06b single-obs "F0=11.19275" detection (noise peak; true 11.1861692 Hz, see above).
 
 ## PG.07 — the recovery comb on the REAL 2024 Vela GIANT glitch (NEW, `tfpt-pulsar pg07`)
 
@@ -304,6 +356,11 @@ python scripts/fetch_vela_2024.py       # PG.07: download the 2024 Vela glitch p
 tfpt-pulsar pg07                        # PG.07: recovery comb (omega=2.58) on the REAL 2024 Vela giant glitch
 python scripts/fetch_puma_iar.py        # PG.08: download the PuMA/IAR daily-cadence .par/.tim release (GitHub)
 tfpt-pulsar pg08                        # PG.08: recovery comb on REAL PuMA/IAR ToA residuals (3 glitches)
+python scripts/download_vela_all.py     # PG.06b FULL: bulk-download all 665 NICER Vela obs (~1.5 GB gz; manifest-frozen)
+python scripts/reduce_vela_full.py stage1   # PG.06b FULL: per-obs barycentre + Z^2 fold (parallel, resumable)
+python scripts/reduce_vela_full.py rescue   # PG.06b FULL: second pass with local-spin-model scan centres
+python scripts/reduce_vela_full.py stage2   # PG.06b FULL: segment-coherent nu fits -> vela_nu_t_full.csv
+tfpt-pulsar vela-full                   # PG.06b FULL: sanity gate + frozen comb battery + injection (eps_90)
 # or without install:  PYTHONPATH=src python -m tfpt_pulsar.cli analyze
 ```
 
@@ -318,6 +375,8 @@ scripts/fetch_nicer_vela.py      # HEASARC nicermastr -> data/nicer_vela/vela_ob
 scripts/reduce_vela_nu_t.py      # OFFLINE heavy driver: download+barycentre+fold all Vela obs -> nu(t) (PG.06b)
 scripts/fetch_vela_2024.py       # PG.07: download 2024 Vela glitch .par (Zenodo 17735649) -> data/vela_2024/
 scripts/fetch_puma_iar.py        # PG.08: download PuMA/IAR daily .par/.tim release (GitHub) -> data/puma_iar/
+scripts/download_vela_all.py     # PG.06b FULL: manifest-frozen bulk download of all 665 NICER Vela obs
+scripts/reduce_vela_full.py      # PG.06b FULL: stage1 (per-obs) / rescue / stage2 (coherent segments) driver
 data/jbo_glitches.csv            # committed derived size catalogue (726 glitches)
 data/yu2013_recovery.csv         # committed derived recovery table (60 Q/tau_d components, 46 glitches)
 data/crab_ephemeris.csv          # committed derived Crab nu/nudot(t) monthly series (479 points, PG.05)
@@ -331,11 +390,17 @@ src/tfpt_pulsar/dsi.py           # discrete-scale-invariance predictor (omega=2p
 src/tfpt_pulsar/nu_recovery.py   # PG.05: dynamic recovery comb (omega=2.58) on real Crab nu(t) + injection
 src/tfpt_pulsar/nicer_j0537.py   # PG.06: J0537 stacked-recovery scaffold (PINT upstream + comb downstream)
 src/tfpt_pulsar/vela.py          # PG.06b: REAL NICER Vela download + PINT barycentre + H-test fold
+src/tfpt_pulsar/vela_full.py     # PG.06b FULL: fast barycentring (PINT-validated), Z^2 scans, spin models, segments
+src/tfpt_pulsar/vela_full_comb.py# PG.06b FULL: recovery build + sanity gate + frozen comb battery + injection
 src/tfpt_pulsar/vela2024.py      # PG.07: recovery comb on the REAL 2024 Vela giant glitch (.par model)
 src/tfpt_pulsar/puma_iar.py      # PG.08: recovery comb on REAL PuMA/IAR ToA residuals + end-to-end injection
 src/tfpt_pulsar/validation.py    # injection-recovery self-check
 src/tfpt_pulsar/cli.py           # `tfpt-pulsar audit|validate|analyze|dynamic|nicer|vela|pg07`
 data/nicer_vela/vela_observations.csv  # committed list of 665 NICER Vela-pulsar observations (PG.06b)
+data/nicer_vela/manifest_full_reduction.json  # PG.06b FULL: manifest frozen BEFORE the bulk download
+data/nicer_vela/vela_nu_perobs_full.csv       # PG.06b FULL: per-obs frequencies (491 usable, 240 detections)
+data/nicer_vela/vela_nu_t_full.csv            # PG.06b FULL: 119 segment-coherent nu(t) points (108 coherent)
+data/nicer_vela/raw/, bary/            # gitignored: 2.6 GB L2 events+orbits, 120 MB photon caches
 data/vela_2024/J0835-4510_long_F3.par  # committed phase-connected 2024 Vela glitch ephemeris (PG.07)
 data/vela_2024/vela2024_nudot.csv      # committed derived post-glitch nudot(tau) recovery (PG.07)
 data/vela_2024/vela_glitch_recoveries.csv  # committed Vela giant-glitch recovery params 2016-2024 (PG.07)
@@ -344,4 +409,5 @@ hypotheses/pulsar_pg07_v1.yaml   # preregistered PG.07 hypothesis (frozen kernel
 hypotheses/pulsar_pg08_v1.yaml   # preregistered PG.08 hypothesis (residual product, end-to-end injection)
 results/results.json             # committed summary (+ pg01/pg05/pg06 png, gitignored)
 results/pg05_recovery_comb.json, pg06_nicer_j0537.json, pg06b_vela.json, pg07_vela2024.json, pg08_puma_iar.json  # committed summaries
+results/pg06b_full_vela.json     # PG.06b FULL: reduction stats + sanity gate + comb battery + injection (eps_90)
 ```
