@@ -2264,6 +2264,15 @@ An explicit realising matrix is
 \noindent So the three per-sector \emph{anchors} $(1,1,2)$ are \emph{not} free: they are the balanced
 integer splitting type of the $\mathbb Z_4$-symmetric parabolic flavor connection, fixed by Schur--Horn
 plus stability, and they coincide with the underlying bundle degrees $\mathcal O(-2)\oplus\mathcal O(-1)^2$.
+The ``balanced'' selection is now \emph{typed}, not heuristic: $\{0,2,2\}$ contains an $\mathcal O(0)$
+summand with $h^0=1$, while stability of the Deligne extension (irreducible unitary monodromy,
+\vref{v117}) forces $h^0(E)=0$ --- positivity \emph{is} the selection, and the Schur--Horn and
+Deligne/Birkhoff--Grothendieck routes converge on $\{1,1,2\}$
+(\veri{v499\_p2\_weights\_deligne\_bg.py}, \texttt{P2.TYPING.01}). The \vref{v499} residual R1 (the
+module identification) is now identified with the QGEO modulus rest: both reduce to the \emph{same}
+order-$4$ carrier input --- the clock $=$ Coxeter of $W(A_3)$ $=$ the cusp class
+(\veri{v503\_qgeo\_emergence\_light.py}, \texttt{QGEO.EMERGE.LIGHT.01}; one common residual, markers
+unchanged).
 
 \begin{proposition}[Per-sector assignment from the cusp ordering --- part (i) closed]
 A parabolic line sub-bundle $\ell$ of the slope-$0$ semistable $E$ obeys
@@ -3286,7 +3295,9 @@ three winding magnitudes are three positive integers summing to $4$, and
 \]
 so $E=\mathcal O(-2)\oplus\mathcal O(-1)^2$ and $a=(1,1,2)$ --- machine-checked with its negative
 controls (positivity/sum/part-count/integrality each load-bearing; $\gcar=e_2=5$ a corollary) in
-\veri{v491\_p2\_partition\_corollary.py}, sharpening \vref{v53}.
+\veri{v491\_p2\_partition\_corollary.py}, sharpening \vref{v53}; the typing behind (a) --- integrality,
+positivity $=h^0{=}0$, sum $=-\deg E$ --- is itself derived as Deligne $+$ Birkhoff--Grothendieck $+$
+Mehta--Seshadri stability in \veri{v499\_p2\_weights\_deligne\_bg.py} (\texttt{P2.TYPING.01}).
 \textbf{(b) Residue branch.} An explicit $D_4$-symmetric $SU(3)$ monodromy (each puncture carrying the
 cusp triple $\{1,\omega,\omega^2\}$, product $=\mathbf1$ at residual $10^{-11}$) realises $r\bmod3$; among
 the two $D_6$-admissible branches exactly one has $\operatorname{coker}R=\Z_{h(D_5)}=\Z_8$

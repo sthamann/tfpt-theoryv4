@@ -1,0 +1,287 @@
+{
+  "D1_tornado_width_yd": {
+    "n": 37146,
+    "ln_range": 8.43,
+    "tones": {
+      "omega_1 2.583": {
+        "n_used": 1,
+        "gain": 0.0031,
+        "p_value": 0.8175,
+        "comb_detected": false
+      },
+      "omega_2 0.953": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      },
+      "omega_3 1.511": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      }
+    },
+    "omega1_base10_degenerate": true,
+    "decade_comb": {
+      "n_used": 1,
+      "gain": 0.0053,
+      "p_value": 0.7398,
+      "comb_detected": false
+    },
+    "divisibility": {
+      "n_integer": 37146,
+      "frac_integer": 1.0,
+      "div_5": {
+        "frac": 0.978,
+        "excess": 4.9
+      },
+      "div_10": {
+        "frac": 0.819,
+        "excess": 8.2
+      },
+      "div_25": {
+        "frac": 0.648,
+        "excess": 16.2
+      },
+      "div_50": {
+        "frac": 0.509,
+        "excess": 25.4
+      },
+      "div_100": {
+        "frac": 0.243,
+        "excess": 24.3
+      }
+    },
+    "forbidden_window": {
+      "n": 36577,
+      "largest_gap_ln": 0.0,
+      "gap_edges": null,
+      "note": "no interior window with >= 3 empty reporting cells",
+      "p_value": 1.0
+    },
+    "free_scan": {
+      "omega": 3.485,
+      "p": 0.0002,
+      "lambda": 6.07,
+      "robustness": {
+        "binning_ps": [
+          0.2529,
+          0.0002,
+          0.2894,
+          0.9355,
+          0.0142,
+          0.2389
+        ],
+        "bootstrap_frac_below_05": 0.45,
+        "detuned_ps": [
+          1.0,
+          0.6733
+        ],
+        "robust": false
+      }
+    }
+  },
+  "D2_tornado_length_mi": {
+    "n": 37496,
+    "ln_range": 9.73,
+    "tones": {
+      "omega_1 2.583": {
+        "n_used": 1,
+        "gain": 0.0242,
+        "p_value": 0.129,
+        "comb_detected": false
+      },
+      "omega_2 0.953": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      },
+      "omega_3 1.511": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      }
+    },
+    "omega1_base10_degenerate": true,
+    "decade_comb": {
+      "n_used": 1,
+      "gain": 0.0126,
+      "p_value": 0.4056,
+      "comb_detected": false
+    },
+    "divisibility": {
+      "n_integer": 6043,
+      "frac_integer": 0.161,
+      "div_5": {
+        "frac": 0.123,
+        "excess": 0.6
+      },
+      "div_10": {
+        "frac": 0.039,
+        "excess": 0.4
+      },
+      "div_25": {
+        "frac": 0.003,
+        "excess": 0.1
+      },
+      "div_50": {
+        "frac": 0.001,
+        "excess": 0.0
+      },
+      "div_100": {
+        "frac": 0.0,
+        "excess": 0.0
+      }
+    },
+    "forbidden_window": {
+      "n": 37122,
+      "largest_gap_ln": 0.0,
+      "gap_edges": null,
+      "note": "no interior window with >= 3 empty reporting cells",
+      "p_value": 1.0
+    },
+    "free_scan": {
+      "omega": 3.234,
+      "p": 0.0547,
+      "lambda": 6.98
+    }
+  },
+  "D3_sunspot_peak_area_uHem": {
+    "n": 14373,
+    "ln_range": 8.66,
+    "tones": {
+      "omega_1 2.583": {
+        "n_used": 1,
+        "gain": 0.0522,
+        "p_value": 0.0072,
+        "comb_detected": true,
+        "robustness": {
+          "binning_ps": [
+            0.6831,
+            0.0072,
+            0.0002,
+            0.0977,
+            0.0142,
+            0.4591
+          ],
+          "bootstrap_frac_below_05": 0.6,
+          "detuned_ps": [
+            0.4304,
+            0.818
+          ],
+          "robust": false
+        }
+      },
+      "omega_2 0.953": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      },
+      "omega_3 1.511": {
+        "n_used": 0,
+        "gain": 0.0,
+        "p_value": 1.0,
+        "comb_detected": false
+      }
+    },
+    "omega1_base10_degenerate": true,
+    "decade_comb": {
+      "n_used": 1,
+      "gain": 0.0375,
+      "p_value": 0.4051,
+      "comb_detected": false
+    },
+    "divisibility": {
+      "n_integer": 14373,
+      "frac_integer": 1.0,
+      "div_5": {
+        "frac": 0.429,
+        "excess": 2.1
+      },
+      "div_10": {
+        "frac": 0.353,
+        "excess": 3.5
+      },
+      "div_25": {
+        "frac": 0.063,
+        "excess": 1.6
+      },
+      "div_50": {
+        "frac": 0.05,
+        "excess": 2.5
+      },
+      "div_100": {
+        "frac": 0.02,
+        "excess": 2.0
+      }
+    },
+    "forbidden_window": {
+      "n": 14093,
+      "largest_gap_ln": 0.0,
+      "gap_edges": null,
+      "note": "no interior window with >= 3 empty reporting cells",
+      "p_value": 1.0
+    },
+    "free_scan": {
+      "omega": 7.373,
+      "p": 0.0002,
+      "lambda": 2.34,
+      "robustness": {
+        "binning_ps": [
+          0.5556,
+          0.0002,
+          0.7171,
+          0.4826,
+          0.0002,
+          0.2137
+        ],
+        "bootstrap_frac_below_05": 0.4,
+        "detuned_ps": [
+          0.3337,
+          0.5136
+        ],
+        "robust": false
+      }
+    }
+  },
+  "D4_hurdat_winds_control": {
+    "n_integer": 55173,
+    "frac_integer": 1.0,
+    "div_5": {
+      "frac": 1.0,
+      "excess": 5.0
+    },
+    "div_10": {
+      "frac": 0.549,
+      "excess": 5.5
+    },
+    "div_25": {
+      "frac": 0.221,
+      "excess": 5.5
+    },
+    "div_50": {
+      "frac": 0.102,
+      "excess": 5.1
+    },
+    "div_100": {
+      "frac": 0.015,
+      "excess": 1.5
+    }
+  },
+  "D4_control_pass": true,
+  "D5_dib_catalog": {
+    "n_bands": 557,
+    "ln_range": 0.722,
+    "comb_periods": 0.3,
+    "range_blind": true,
+    "pair_spacing": {
+      "peak_cm1": 16.0,
+      "stat": 1.31,
+      "p_value": 0.317
+    }
+  }
+}

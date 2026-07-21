@@ -148,6 +148,24 @@ export const GLOSSARY: GlossaryEntry[] = [
     short:
       "The tracked [O] target: prove F_U(1) is the exact Quillen determinant functional of the seam U(1). v470 sharpens it: the α³ level = the computed bulk Chern invariant |C| = 1 (inflow), the F-normalisation = the embedding index k_Y = 5/3. v472 exhibits the bridge lemma at the finite level: the determinant line over the U(1)-twist moduli of the collar carries curvature = 1 = the inflow level; what stays [O] is the continuum ζ-det identification. The α⁻¹ value itself stays [E].",
   },
+  {
+    term: "celestial route",
+    alias: ["CELEST.SEAM.01", "celestial sphere", "celestial-holographic route"],
+    short:
+      "The fourth research contract: the seam's boundary 2-sphere IS the celestial sphere of null directions (Möb ≅ PSL(2,ℂ)), and the E₈ μ₄-glue is a flat ℤ₄ monodromy on the A₃ ALE space ℂ²/ℤ₄. WP1–WP5d plus the WP5e α stage executed exactly (v492–v502: clock² = deck, null ideal derived, deleting operator explicit, GNS limit state constructed, two-interval index measured, prefactor + level k = 1 pinned on the CFT side); WP5e proper (the BCOV/Costello–Li twistor inflow) and WP5d-β open [O]. A second, quantitative approach to SEAM.EQUIV.01 — which stays [O].",
+  },
+  {
+    term: "ALE space",
+    alias: ["A₃ ALE", "A3 ALE space", "ℂ²/ℤ₄"],
+    short:
+      "An asymptotically locally Euclidean hyperkähler 4-space resolving ℂ²/Γ. TFPT's case is Γ = ℤ₄: ℂ²/ℤ₄ is the A₃ singularity XY = Z⁴, whose deck group induces the sheet flip on the celestial sphere while the μ₄ clock is the Kähler U(2) phase diag(i,1) with clock² = deck (v492).",
+  },
+  {
+    term: "null ideal",
+    alias: ["level-2 null ideal", "the 27000"],
+    short:
+      "The maximal submodule the (E₈)₁ vacuum character deletes at level 2: exactly 27000 = 30³ = (h∨)³ out of Sym²(248) = 27000+3875+1, derived from root data (v497); its generator is the explicit singular vector |s⟩ = (E^θ_{−1})²|0⟩ with J^a_1|s⟩ = 0 on all 248 generators (v498). Quotient 4124 = the μ₄ sector sum.",
+  },
 ];
 
 const NORMALISE = (s: string) => s.toLowerCase().trim();

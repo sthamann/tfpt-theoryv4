@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`491` registered scripts · `559` ledger claims · `10` clusters.
+`498` registered scripts · `566` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (54 scripts)
+### `core` — Compiler core & the E₈ glue  (55 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -119,6 +119,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v286_seam_equivalence_contract, v489_seam_modular_commutator, v367_seam_s3_lattice, v378_seam_s3_modular, v336, v351, v367, v378 · cited: research contracts
 - **v491_p2_partition_corollary** [E/C/O] `P2.PARTITION.01` — P2.PARTITION.01: g_car = 5 as a COROLLARY of the four marks -- the partition sharpening of v53 (sympy exact). The lemma: exactly 3 positive integers summing to 4 = uniquely {1,1,2}
   - deps: AX.P2.01, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v23, v53, v115, v137 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
+- **v499_p2_weights_deligne_bg** [E/C/O] `P2.TYPING.01` — P2.TYPING.01: the P2 weight-typing postulate HARDENED (the v491 check-9 residual) -- the anchor a = (1,1,2) typed as the Birkhoff-Grothendieck splitting exponents of the DELIGNE CA
+  - deps: AX.P2.01, v491_p2_partition_corollary, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v181_clock_is_conformal_symmetry, v33, v40 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -326,7 +328,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (166 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (172 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -661,6 +663,18 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v125, v128, v336, v377, v449, v492 · cited: 3 e8 audit bootstrap, research contracts
 - **v497_celestial_wp5a_null_ideal** [E/C/O] `CELEST.WP5A.01` — CELEST.WP5A.01: WP5a of the celestial-holographic research contract CELEST.SEAM.01 -- 'the null ideal from the limit', first constructive milestone of WP5 (the v496 boundary-limit 
   - deps: v492_celestial_z4_orbifold, v496_celestial_wp4_character_shadow, v286_seam_equivalence_contract, v125, v128, v336, v377, v449 · cited: 3 e8 audit bootstrap, research contracts
+- **v498_celestial_wp5b_singular_vector** [E/C/O/X] `CELEST.WP5B.01` — CELEST.WP5B.01: WP5b of the celestial-holographic research contract CELEST.SEAM.01 -- 'the singular vector as an operator', the second constructive milestone of WP5 (WP5a fixed the
+  - deps: v492_celestial_z4_orbifold, v497_celestial_wp5a_null_ideal, v496_celestial_wp4_character_shadow, v286_seam_equivalence_contract, v128, v492, v496, v497 · cited: 3 e8 audit bootstrap, research contracts
+- **v500_celestial_wp5c_gns_limit_state** [E/C/O/X] `CELEST.WP5C.01` — CELEST.WP5C.01: WP5c of the celestial-holographic research contract CELEST.SEAM.01 -- 'the GNS limit state', the third constructive milestone of WP5 (WP5a made the limit precise, W
+  - deps: v492_celestial_z4_orbifold, v497_celestial_wp5a_null_ideal, v498_celestial_wp5b_singular_vector, v286_seam_equivalence_contract, v128, v492, v496, v497 · cited: 3 e8 audit bootstrap, research contracts
+- **v501_celestial_wp5d_two_interval_index** [E/C/O/X] `CELEST.WP5D.01` — CELEST.WP5D.01: WP5d-alpha of the celestial-holographic research contract CELEST.SEAM.01 -- 'the two-interval index from the lattice' (the local-net question, alpha stage). numpy/s
+  - deps: v492_celestial_z4_orbifold, v500_celestial_wp5c_gns_limit_state, v489_seam_modular_commutator, v490_seam_parity_census, v286_seam_equivalence_contract, v367, v378, v450 · cited: 3 e8 audit bootstrap, research contracts
+- **v502_celestial_wp5e_prefactor_level** [E/C/O] `CELEST.WP5E.ALPHA.01` — CELEST.WP5E.ALPHA.01: WP5e-alpha of the celestial-holographic research contract CELEST.SEAM.01 -- 'prefactor and level bookkeeping', the CFT-side anchor stage of WP5e (the BCOV/Cos
+  - deps: v492_celestial_z4_orbifold, v496_celestial_wp4_character_shadow, v497_celestial_wp5a_null_ideal, v498_celestial_wp5b_singular_vector, v500_celestial_wp5c_gns_limit_state, v501_celestial_wp5d_two_interval_index, v286_seam_equivalence_contract, v492 · cited: 3 e8 audit bootstrap, research contracts
+- **v503_qgeo_emergence_light** [E/C/O] `QGEO.EMERGE.LIGHT.01` — QGEO.EMERGE.LIGHT.01: the v215 deferred emergence test (lever 7) EXECUTED in its first honest LIGHT version, plus the RESIDUAL-CONVERGENCE result QGEO-R1 == P2-R1 (analysis/kill-te
+  - deps: v215_seam_deck_killtest, v168_qgeo_rigidity, v499_p2_weights_deligne_bg, v492_celestial_z4_orbifold, v493_celestial_wp2_clock_deformation, v215, v216, v264 · cited: introduction, origin theory, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v504_celestial_wp5d_klm_completeness** [E/C/O] `CELEST.WP5DB.01` — CELEST.WP5DB.01: WP5d-beta of the celestial-holographic research contract CELEST.SEAM.01 -- 'split + strong additivity from the lattice', the two remaining KLM legs of complete rat
+  - deps: v492_celestial_z4_orbifold, v501_celestial_wp5d_two_interval_index, v489_seam_modular_commutator, v490_seam_parity_census, v286_seam_equivalence_contract, v367, v450, v489 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -834,7 +848,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v167_inventory_post_closure** [E] `SYNTH.INVENTORY.03` — the irreducible core {π, v_geo}, a THEOREM (No-Unit, v153, ANCHOR.VGEO.01/02), nothing to close; Tier 1 — ONE hinge (seam = flavour = horizon): A2 net existence (assembly of establ
   - deps: v123_inventory_update, v160_seam_gaussianity_from_pf, v161_one_particle_reduction, v162_seam_transport_identification, v165_premise_a_closure, v153_no_unit_theorem, FR.ETAB.01 · cited: origin theory
 - **v168_qgeo_rigidity** [E/C/O] `QGEO.RIGID.01, QGEO.REALIZE.01` — the FINITE half of the Tier-1 hinge GATE.QGEO, hardened. EXACT: μ4={1,i,−1,−i} has cross-ratio 2 and Möbius stabiliser ⟨z→iz, z→1/z⟩ of order 8=|D4| (faithful: 4-cycle + reflection
-  - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v50_q_geometry, v13_open_gates, v137_qplus_cohomology, v168_qgeo_rigidity, v165_premise_a_closure · cited: research contracts
+  - deps: v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v50_q_geometry, v13_open_gates, v137_qplus_cohomology, v168_qgeo_rigidity, v165_premise_a_closure, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg · cited: research contracts
 - **v169_etaB_boltzmann_interface** [C] `FR.ETAB.02` — the η_B leptogenesis transfer operationalised (Tier-3 F_transfer, NOT a new class): type-I thermal leptogenesis η_B ~ 0.96e-2·ε₁·κ_f (sphaleron 28/79) fed by TFPT's NO neutrino spe
   - deps: FR.ETAB.01, v163_rg_stability_flavor, v9_neutrino_texture · cited: 4 frontier
 - **v170_diamond_slice_compression** [E] `E8.SLICE.01` — anchor power sums P=(3,4,6,10) (p_n=2+2^n) and Sheet-Diamond determinants D=(3,4,8,14,20,32). The K4 edge products (12,18,30,24,40,60) are all carrier blocks; ΣdetM=81=N_fam⁴; all 
@@ -1047,22 +1061,22 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×73, `v336`×37, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×78, `v336`×37, `QGEO.SYM.01`×33, `v216`×24, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v486_transfer_full_rule** — `HYP.REWRITE.02`
-- **v487_transfer_clock_rungs** — `HYP.REWRITE.03`
-- **v488_majorana_clebsch_door** — `FLAV.NUSCALE.04`
-- **v489_seam_modular_commutator** — `SEAM.CCC.01`
-- **v490_seam_parity_census** — `SEAM.MU.01`
-- **v491_p2_partition_corollary** — `P2.PARTITION.01`
-- **v492_celestial_z4_orbifold** — `CELEST.WP1.01, CELEST.SEAM.01`
 - **v493_celestial_wp2_clock_deformation** — `CELEST.WP2.01`
 - **v494_cosmo_running_mu_record** — `COSMO.RUNNING.01, COSMO.MUDIST.01`
 - **v495_celestial_wp3_gs_alignment** — `CELEST.WP3.01`
 - **v496_celestial_wp4_character_shadow** — `CELEST.WP4.01`
 - **v497_celestial_wp5a_null_ideal** — `CELEST.WP5A.01`
+- **v498_celestial_wp5b_singular_vector** — `CELEST.WP5B.01`
+- **v499_p2_weights_deligne_bg** — `P2.TYPING.01`
+- **v500_celestial_wp5c_gns_limit_state** — `CELEST.WP5C.01`
+- **v501_celestial_wp5d_two_interval_index** — `CELEST.WP5D.01`
+- **v502_celestial_wp5e_prefactor_level** — `CELEST.WP5E.ALPHA.01`
+- **v503_qgeo_emergence_light** — `QGEO.EMERGE.LIGHT.01`
+- **v504_celestial_wp5d_klm_completeness** — `CELEST.WP5DB.01`
 

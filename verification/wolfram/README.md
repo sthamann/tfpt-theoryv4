@@ -108,10 +108,19 @@ engine run 2026-07-21, license reactivated, Wolfram Engine 14.3 — the 16
 mirrors deferred since 2026-07-14 counted with the reactivation run, 378 →
 394: v479 (2) + v491 (3) + v493 (4) + v495 (3) + v496 (4); the same-day
 `v497` WP5a round adds 4 more exact mirrors, verified directly with the
-active engine, 394 → 398):
+active engine, 394 → 398; the same-day `v498` WP5b round adds 5 more exact
+mirrors, verified directly with the active engine, 398 → 403; the same-day
+`v499` P2 weight-typing round adds 5 more exact mirrors, verified directly
+with the active engine, 403 → 408; the same-day `v500` WP5c round adds 4
+more exact mirrors and the same-day `v501` WP5d-alpha round adds 4 more,
+both verified directly with the active engine, 408 → 416; the same-day
+`v502` WP5e-alpha round adds 4 more exact mirrors and the same-day `v503`
+QGEO-emergence-light round adds 4 more, both verified directly with the
+active engine, 416 → 424; the same-day `v504` WP5d-beta round adds 5 more
+exact mirrors, verified directly with the active engine, 424 → 429):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497: 398 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504: 429 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -343,6 +352,145 @@ integrability ⟨2θ,θ∨⟩ = 4, ⟨ω,θ∨⟩ = 2; quotient 31124 − 27000 
 The Freudenthal/peeling residual-zero derivation itself (exact
 integer/Fraction recursion) stays Python-side in `v497`; the
 Weyl-dimension and counting consequences are what the mirrors check.
+
+The 2026-07-21 celestial WP5b round:
+`v498_celestial_wp5b_singular_vector.py` (CELEST.WP5B.01: "the singular
+vector as an operator") has its FIVE exact mirrors ADDED and VERIFIED the
+same day with the active engine (398 → 403): (i) the case classification
+of the J^a_1 condition over the 248-element basis from the standard E₈
+root data — tally (190, 57, 1), exactly one case sees the level k;
+θ-grading dims (1,56,134,56,1), a+2θ re-enters for exactly one root
+(a = −θ); (ii) the level dial DERIVED from the affine sl₂ commutation —
+F^θ_1 (E^θ_{−1})ⁿ|0⟩ = n(k−n+1)(E_{−1})^{n−1}|0⟩, square coefficient
+2(k−1) = −2(1−k) with values (−2, 0, 2) at k = 0, 1, 2, Shapovalov
+2k(k−1) (0 at k = 1, 4 at k = 2), cube singular exactly at k = 2;
+(iii) the μ₄ glue data — 240 glue roots with classes (52,64,60,64), inner
+grading ⟨α,h⟩ = class mod 4 on all 240, ⟨θ,h⟩ = 5 ⟹ j(θ) = 1, clock
+phase i² = −1, cross-table rows (1,56,126,56,1); (iv) the 27000 match +
+comark discriminator — mult(2θ) = 1 in the level-2 Fock, 27000 = 30³,
+(2θ,2θ)/2 = 4 > 2, E₈ comarks (2,2,3,3,4,4,5,6) all ≥ 2 vs D₈
+(1,1,1,2,2,2,2,2) with h = (1/2,1,1); (v) the twisted-slot tension —
+two sector-C₁ modes never sum to 8 quarters (minimum 6 = q^{3/2}),
+per-period 248. The full Chevalley/Frenkel–Kac construction and the PBW
+singularity run (J^a_1|s⟩ = 0 on all 248 basis elements, engine
+unit-tested on all 61504 pairs, exact Fractions) stay Python-side in
+`v498`; the counting/dial/grading consequences are what the mirrors
+check.
+
+The 2026-07-21 P2 weight-typing round:
+`v499_p2_weights_deligne_bg.py` (P2.TYPING.01: the anchor a = (1,1,2) as
+the Birkhoff–Grothendieck splitting exponents of the Deligne canonical
+extension — the v491 check-9 residual hardened) has its FIVE exact
+mirrors ADDED and VERIFIED the same day with the active engine
+(403 → 408): (i) the partition enumeration under the full typing (unique
+{1,1,2}, e₂ = 5; BG dictionary h⁰ = 0 ⟺ aᵢ ≥ 1 on the exhaustive window;
+the naive-typing negative control h¹(E′) = 3 ⟹ deg −6 with three
+splittings, e₂ never 5; the h¹ discrepancy h¹(anchor bundle) = 1 ≠ 3);
+(ii) the Deligne residue-trace degree (cusp exponents {0,1/3,2/3} = the
+unique lift of spec(λ³−1) to [0,1), trace 1 per mark, deg E = −4,
+par-deg 0, witness A₀* char poly λ(λ−1/3)(λ−2/3)); (iii) the Schur–Horn
+permutohedron integer points {(2,2,0),(2,1,1)} with h⁰ = 0 killing
+{2,2,0}; (iv) the Biswas ℤ₃-cover degree arithmetic (genus 2,
+eigensheaves O(−2)², χ cross-check −1 = −1, regular-rep weights, the
+decomposable model {0,2,2} with h⁰ = 1 = the unstable companion; deck
+double genus 1, j = 1728); (v) the n-mark formula e₂ = (n−2)(n+1)/2 = 5
+only at n = 4. The sympy symbolic parts (H¹ residue basis, monodromy
+group closure |⟨U,M₀⟩| = 24, the 324-case stability skeleton) stay
+Python-side in `v499`.
+
+The 2026-07-21 WP5c GNS-limit-state round:
+`v500_celestial_wp5c_gns_limit_state.py` (CELEST.WP5C.01: the state whose
+GNS kernel contains the null ideal) has its FOUR exact mirrors ADDED and
+VERIFIED the same day with the active engine (408 → 412): (i) the level-2
+block census from the E₈ root data (31124 = 248 + 30876 monomials in 9361
+weight blocks, dim profile {164:1, 37:240, 7:2160, 1:6960}, orbit census
+by norm (240, 6720, 2160, 240, 1)); (ii) the rank/kernel arithmetic (rank
+table (0,0,1,8,44) ⟹ total 4124 = 1 + 248 + 3875 = χ₂ with
+dim V(ω) = 3875 recomputed by Weyl; kernel per orbit (1,1,6,29,120)
+summing to 27000 = 30³ = dim V(2θ)); (iii) the clock-class split at the
+state level (the glue-frame census turns the rank table into
+(1036,1024,1040,1024) = Θ_Cj/η⁸ at q², level 1 = (60,64,60,64));
+(iv) the threshold + level-dial + D₈ arithmetic (w·r ≥ N+1 for all r ≥ 1
+iff w ≥ N+1 sharp at w = N; ⟨s|s⟩ = 2k(k−1); D₈ census 7380 in 2705
+blocks, quotient 2076). The exact Gram itself (9361 blocks over
+Fractions, PSD inertia, the highest-weight norms (3844, 49, 2, 0), the
+anti-involution and contravariance machine checks on 61504 pairs) stays
+Python-side in `v500`.
+
+The 2026-07-21 WP5d-alpha two-interval-index round:
+`v501_celestial_wp5d_two_interval_index.py` (CELEST.WP5D.01: the KLM
+two-interval index from the lattice) has its FOUR exact mirrors ADDED and
+VERIFIED the same day with the active engine (412 → 416): (i) the Cartan
+determinants (det D₅ = det A₃ = 4, product 16; det D₈ = 4; det E₈ = 1,
+explicit matrices); (ii) the KLM/Longo–Rehren quotients μ/|L|²
+(16/4² = 1, 16/2² = 4 → 4/2² = 1, both routes exact); (iii) the Σd²
+cross-checks (Ising 4, SO(16)₁ 4, (E₈)₁ 1) + the index-reading arithmetic
+([F:F_even] = e^{ln 2} = 2, μ_gauged = 4, 16 ln 2 = ln 2¹⁶, budget
+ln 4 = ln μ(SO(16)₁)); (iv) the 16-fold-way condensability (θ_v = 1
+exactly at ν = 2c₋ = 16 vs the rivals ν = 1, 2, 8). The lattice curves
+(Peschel covariance, Rényi-2 offsets, the ln 2 plateau, the
+duality-asymmetry witness, all ED validations) are numerical and stay
+Python-only in `v501`.
+
+The 2026-07-21 WP5e-alpha prefactor-and-level round:
+`v502_celestial_wp5e_prefactor_level.py` (CELEST.WP5E.ALPHA.01: the
+CFT-side anchor of the twistor uplift) has its FOUR exact mirrors ADDED
+and VERIFIED the same day with the active engine (416 → 420): (i) the
+Hurwitz-ζ vacuum energies (ζ(−1,θ) = −B₂(θ)/2 at rational twists,
+E_b = −1/24 + θ(1−θ)/4, Ising shift 1/16, vacuum 8·(−1/24) = −1/3 =
+−c/24 with Sugawara 248/31 = 8, η⁸ exponent 8/24 = 1/3); (ii) the
+discriminant-form = Casimir identity (exact coset minima (0,5/8,1/2,5/8) /
+(0,3/8,1/2,3/8) / glue (0,1,1,1); spectral flow j²(h,h)/32 with
+(h,h) = 20, (h′,h′) = 12, sum 32; free-fermion route n/16 on
+10 + 6 = 16 = 2^{g_car−1} Majoranas; deck failure 3/16 ≠ 3/8); (iii) the
+k = 1 fixing equations (closed forms 5k/8, 3k/8; glue integrality for ALL
+k = 1..8 — the honest "fixes nothing" finding; current condition h(J) =
+k = 1; embedding 47k² + 219k − 266 = (k−1)(47k+266) and 128k(1−k) = 0;
+central charge 240(k−1) = 0; Shapovalov 2k(k−1) = (0,4,12,24); Weyl dims
+248/3875/27000, count 31124 − 27000 = 4124); (iv) the character sums (the
+four glue-coset thetas sum to E₄ = (1,240,2160,6720); sector characters
+(1,64,60,64)/(60,64,60,64) sum to E₄/η⁸ = q^{−1/3}(1,248,4124,34752);
+D₈ control Θ_D8 + Θ_s = E₄ with h_v = 1/2). The sympy symbolics and the
+PBW engine stay Python-side in `v502`.
+
+The 2026-07-21 QGEO-emergence-light round:
+`v503_qgeo_emergence_light.py` (QGEO.EMERGE.LIGHT.01: the v215 lever-7
+light execution + the residual convergence QGEO-R1 ≡ P2-R1) has its FOUR
+mirrors ADDED and VERIFIED the same day with the active engine
+(420 → 424): (i) the CM-point identities (the q-series E₂ reproduces
+E₂(i) = 3/π and E₂(ρ) = 2√3/π to 30 digits, so E₂*(i) = E₂*(ρ) = 0
+exactly by arithmetic; j(i) = 1728, j(ρ) = 0 via KleinInvariantJ;
+DedekindEta[I] = Γ(1/4)/(2π^{3/4}) exact); (ii) the no-dynamical-selection
+witnesses (logF S-invariant at 30 digits; the hexagonal winner
+logF(ρ) − logF(i) = 0.02116…; the saddle signature of τ = i); (iii) the
+pillowcase halving (exact N = 8 discrete-torus spectrum, 3 nonzero
+self-paired cone modes + 30 ±-pairs, dim(even) = 34 = (N²+4)/2,
+det′_even² = det′_torus·prod_self exactly); (iv) clock ⇒ square + Coxeter
+(SolveAlways forces a₃ = a₂ = a₁ = 0, j = 1728 identically; charpoly
+λ³+λ²+λ+1, order 4 = |μ₄| = N_fam + 1; Aut(hexagonal) = ℤ₆ has no
+order-4 element). The v280-style lattice DtN curves (mod-4 off-character
+weights via sqrtm/expm) are numerical and stay Python-only in `v503`.
+
+The 2026-07-21 WP5d-beta round:
+`v504_celestial_wp5d_klm_completeness.py` (CELEST.WP5DB.01: "split + strong
+additivity from the lattice" — the two remaining KLM legs of complete
+rationality; the μ-index is v501) has its FIVE mirrors ADDED and VERIFIED
+the same day with the active engine (424 → 429): (i) the GF2 span theorem
+(Majorana monomials multiply as GF(2) labels, so the strong-additivity
+span is an exact set count: shared boundary Majorana ⇒ Even(A) ∨ Even(B) =
+Even(A∪B) exactly, 64/64, 256/256, 1024/1024; disjoint exactly half =
+index 2); (ii) the Pimsner–Popa identity + attainment (E(a) − a/2 = PaP/2
+identically on a symbolic 4×4 matrix; explicit gamma matrices give
+E(x*x) − λ·x*x = 2(1−λ) − 2λh with spec(h) = ±1, so λ_PP = 1/2 =
+1/[F:F_even] exactly); (iii) the two-interval group + index consistency
+(E₄(vv⁺) = I/4 exactly ⇒ λ_E4 = 1/4 = 1/μ; (1/λ_PP)² = 4 = 1/λ_E4 =
+μ(SO(16)₁) = det Cartan(D₈)); (iv) the Λ²-compound (Minors[·,2]:
+Cauchy–Binet functoriality, diag products {σ_a σ_b}, and Minors[−C,2] =
+Minors[C,2] identically — the exact orbifold split-inheritance mechanism);
+(v) the U(1) PP control (dephasing on m modes gives λ = 1/(m+1) → 0
+exactly: infinite index). The lattice curves (deficit tables, Ising
+exponent p = 0.2444, elliptic-nome ladder, Klich–Levitov slope, ED
+validations) are numerical and stay Python-only in `v504`.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

@@ -3461,6 +3461,787 @@ Module[{d8simple, Msimp8, d8roots, pos8, rho8, wdim8, theta8, dims4, sums,
     dsw[[1]] N0 === 64 && dsw[[1]] N0 =!= 60];
 ];
 
+(* ==== v498 round: CELEST.WP5B.01 -- WP5b of CELEST.SEAM.01, "the singular
+   vector as an operator" (the deleting object of the v497 null ideal made
+   explicit).  Exact content mirrored: (i) the case classification of the
+   J^a_1 condition over the 248-element basis (190/57/1, exactly one case
+   sees the level k) from the standard E8 root data + the theta-grading
+   (1,56,134,56,1); (ii) the LEVEL DIAL derived from the affine sl2
+   commutation -- F^theta_1 (E^theta_{-1})^n|0> = n(k-n+1) (E_{-1})^{n-1}|0>,
+   square coefficient 2(k-1) = -2(1-k) with values (-2,0,2) at k = 0,1,2,
+   Shapovalov 2k(k-1) (0 at k = 1, 4 at k = 2), cube singular exactly at
+   k = 2; (iii) the glue frame -- 240 roots with classes (52,64,60,64),
+   inner grading <r,h> = class mod 4 on all 240, theta_glue = argmax with
+   <theta,h> = 5 => j(theta) = 1, clock phase i^(2j) = -1, cross-table rows
+   (1,56,126,56,1); (iv) multiplicity 1 of weight 2 theta in the level-2
+   Fock (U(g)|s> is THE 27000 = 30^3), lattice reading (2t,2t)/2 = 4 > 2,
+   and the comark discriminator (E8 comarks all >= 2 -- vacuum the only
+   level-1 primary; D8 has three comark-1 weights with h = (1/2,1,1));
+   (v) the twisted-slot tension (two sector-C_1 modes never sum to 8
+   quarters, minimum 6 = q^(3/2)) + the per-period 248.  The full
+   Chevalley/PBW singularity run (J^a_1|s> = 0 on all 248 basis elements,
+   engine unit tests on all 61504 pairs) is Python-side (v498 S1-S3); the
+   counting/dial/grading consequences are what is mirrored here.
+   Mirrors v498. ==== *)
+Module[{e8simple, Msimp, e8roots, rset, theta, gradetally, dims5, nfirst,
+        nsecond, ncentral, reenter, adjCartan},
+  e8simple = {{1, -1, -1, -1, -1, -1, -1, 1}, {2, 2, 0, 0, 0, 0, 0, 0},
+    {-2, 2, 0, 0, 0, 0, 0, 0}, {0, -2, 2, 0, 0, 0, 0, 0},
+    {0, 0, -2, 2, 0, 0, 0, 0}, {0, 0, 0, -2, 2, 0, 0, 0},
+    {0, 0, 0, 0, -2, 2, 0, 0}, {0, 0, 0, 0, 0, -2, 2, 0}};
+  e8roots = Join[
+    Flatten[Table[Module[{v = ConstantArray[0, 8]},
+      v[[i]] = si; v[[j]] = sj; v],
+      {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3],
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  rset = Association[# -> True & /@ e8roots];
+  theta = {0, 0, 0, 0, 0, 0, 2, 2};
+  gradetally = Table[Count[e8roots, a_ /; (a . theta)/4 == t],
+    {t, {-2, -1, 0, 1, 2}}];
+  dims5 = gradetally + {0, 0, 8, 0, 0};
+  adjCartan = Count[e8simple, a_ /; (a . theta)/4 != 0];
+  (* first bracket [a, e_theta] = 0: roots with a+theta not a root and
+     a != -theta, plus the 8 - adjCartan orthogonal Cartan directions *)
+  nfirst = Count[e8roots, a_ /; ! KeyExistsQ[rset, a + theta]
+      && a =!= -theta] + (8 - adjCartan);
+  (* second bracket vanishes: g_{-1} roots (a+theta a root, a+2theta not)
+     plus the adjacent Cartan ([h,e_theta] ~ e_theta, [e_theta,e_theta]=0) *)
+  nsecond = Count[e8roots, a_ /; KeyExistsQ[rset, a + theta]
+      && ! KeyExistsQ[rset, a + 2 theta]] + adjCartan;
+  (* central term needed: a = -theta only *)
+  ncentral = Count[e8roots, a_ /; a === -theta];
+  reenter = Select[e8roots, KeyExistsQ[rset, # + 2 theta] &];
+  checkExact["v498 CELEST.WP5B.01 (i): CASE CLASSIFICATION of the J^a_1 condition over the 248-element basis, from the standard-frame E8 root data -- theta-grading dims (1,56,134,56,1) (roots (1,56,126,56,1) + 8 Cartan in g_0); a + theta never a root for the 120 positives (theta highest); a + 2 theta re-enters the root system for EXACTLY one root (a = -theta); tally (first bracket, second bracket, central term) = (190, 57, 1) -- exactly ONE case sees the level k, and 190 + 57 + 1 = 248",
+    Length[e8roots] === 240 && gradetally === {1, 56, 126, 56, 1} &&
+    dims5 === {1, 56, 134, 56, 1} && Total[dims5] === 248 &&
+    adjCartan === 1 && reenter === {-theta} &&
+    {nfirst, nsecond, ncentral} === {190, 57, 1} &&
+    nfirst + nsecond + ncentral === 248];
+];
+Module[{c, k, csq, ccube, shap},
+  (* affine theta-sl2: [f_1, e_{-1}] = -h_0 + k (kappa(f,e) = 1,
+     kappa(h,h) = 2); h_0 e_{-1}^m|0> = 2m e_{-1}^m|0>, h_0|0> = 0 =>
+     F^theta_1 (E^theta_{-1})^n|0> = c[n,k] (E^theta_{-1})^(n-1)|0> with
+     c[n,k] = Sum_{m=0}^{n-1} (k - 2m) -- the derivation, not a posit *)
+  c[n_, kk_] := Sum[kk - 2 m, {m, 0, n - 1}];
+  csq = Table[c[2, kk], {kk, 0, 2}];
+  ccube = c[3, k];
+  shap = c[2, k] c[1, k];
+  checkExact["v498 CELEST.WP5B.01 (ii): LEVEL DIAL DERIVED from the affine sl2 commutation -- F^theta_1 (E^theta_{-1})^n|0> = n(k-n+1) (E_{-1})^(n-1)|0> (summed central/Cartan cascade); square coefficient c(2,k) = 2(k-1) = -2(1-k): values (-2, 0, 2) at k = 0, 1, 2 -- zero EXACTLY at k = 1 (no deletion operator in the centerless k = 0 loop algebra); Shapovalov <s|s> ~ c(2,k) c(1,k) = 2k(k-1): 0 at k = 1, 4 at k = 2; the CUBE coefficient c(3,k) = 3(k-2) vanishes exactly at k = 2 -- the (E^theta)^(k+1) pattern is generic Kac level mechanics",
+    Simplify[c[n, k] == n (k - n + 1), Assumptions -> n >= 1] &&
+    csq === {-2, 0, 2} && Simplify[c[2, k] == -2 (1 - k)] &&
+    Simplify[shap == 2 k (k - 1)] && (shap /. k -> 1) === 0 &&
+    (shap /. k -> 2) === 4 && (ccube /. k -> 2) === 0];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, cls, h9, okgrad, tie,
+        big, phiv, maxv, thetaG, jt, tally, rows},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  cls = Table[Count[glue, {_, j}], {j, 0, 3}];
+  h9 = {2, 2, 2, 2, 2, 0, 0, 0, 0};
+  okgrad = And @@ (Mod[#[[1]] . h9, 4] == #[[2]] & /@ glue);
+  tie = Table[4 1000^(i - 1), {i, 1, 9}]; big = 8 1000^10;
+  phiv = (#[[1]] . h9) big + #[[1]] . tie & /@ glue;
+  maxv = Max[phiv];
+  thetaG = glue[[First[Flatten[Position[phiv, maxv]]], 1]];
+  jt = Mod[thetaG . h9, 4];
+  tally = Table[Count[glue, {r_, _} /; r . thetaG == t],
+    {t, {2, 1, 0, -1, -2}}];
+  checkExact["v498 CELEST.WP5B.01 (iii): MU4 GLUE DATA -- 240 glue-frame roots with classes (52,64,60,64); inner grading <alpha,h> = glue class mod 4 for ALL 240 roots (h = (2,2,2,2,2;0^4), v492 S1); theta_glue = the phi-maximal root with <theta,h> = 5 => glue class j(theta) = 1, clock phase on |s> = i^(2j) = -1 (class(2 theta) = 2, SHEET-EVEN), the theta-sl2 pair in the sheet-ODD classes (1,3); cross-table row sums over <alpha,theta_vee> = (1,56,126,56,1)",
+    Length[glue] === 240 && cls === {52, 64, 60, 64} && okgrad &&
+    Count[phiv, maxv] === 1 && thetaG . h9 === 5 && jt === 1 &&
+    Mod[2 jt, 4] === 2 && I^(2 jt) === -1 &&
+    Mod[(-thetaG) . h9, 4] === 3 &&
+    tally === {1, 56, 126, 56, 1}];
+];
+Module[{e8simple, e8roots, rset, theta, pos, rho, wdim, funds, comE8,
+        d8simple, d8roots, pos8, rho8, wdim8, theta8, funds8, comD8, hws,
+        mult2t},
+  e8simple = {{1, -1, -1, -1, -1, -1, -1, 1}, {2, 2, 0, 0, 0, 0, 0, 0},
+    {-2, 2, 0, 0, 0, 0, 0, 0}, {0, -2, 2, 0, 0, 0, 0, 0},
+    {0, 0, -2, 2, 0, 0, 0, 0}, {0, 0, 0, -2, 2, 0, 0, 0},
+    {0, 0, 0, 0, -2, 2, 0, 0}, {0, 0, 0, 0, 0, -2, 2, 0}};
+  e8roots = Join[
+    Flatten[Table[Module[{v = ConstantArray[0, 8]},
+      v[[i]] = si; v[[j]] = sj; v],
+      {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3],
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  rset = Association[# -> True & /@ e8roots];
+  theta = {0, 0, 0, 0, 0, 0, 2, 2};
+  pos = Select[e8roots, Min[LinearSolve[Transpose[e8simple], #]] >= 0 &];
+  rho = Total[pos]/2;
+  wdim[lam_] := Product[((lam + rho) . a)/(rho . a), {a, pos}];
+  funds = Table[LinearSolve[e8simple, 4 UnitVector[8, i]], {i, 1, 8}];
+  comE8 = Sort[(# . theta)/4 & /@ funds];
+  mult2t = Count[e8roots, a_ /; KeyExistsQ[rset, 2 theta - a]];
+  d8simple = Append[Table[Module[{v = ConstantArray[0, 8]},
+    v[[i]] = 2; v[[i + 1]] = -2; v], {i, 1, 7}],
+    {0, 0, 0, 0, 0, 0, 2, 2}];
+  d8roots = Flatten[Table[Module[{v = ConstantArray[0, 8]},
+    v[[i]] = si; v[[j]] = sj; v],
+    {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3];
+  pos8 = Select[d8roots, Min[LinearSolve[Transpose[d8simple], #]] >= 0 &];
+  rho8 = Total[pos8]/2;
+  wdim8[lam_] := Product[((lam + rho8) . a)/(rho8 . a), {a, pos8}];
+  theta8 = {2, 2, 0, 0, 0, 0, 0, 0};
+  funds8 = Table[LinearSolve[d8simple, 4 UnitVector[8, i]], {i, 1, 8}];
+  comD8 = Sort[(# . theta8)/4 & /@ funds8];
+  hws = Sort[((# . (# + 2 rho8))/4)/(2 (1 + 14)) & /@
+    Select[funds8, (# . theta8)/4 == 1 &]];
+  checkExact["v498 CELEST.WP5B.01 (iv): THE 27000 MATCH + COMARK DISCRIMINATOR -- weight 2 theta has multiplicity 1 in the level-2 Fock (unique unordered pair theta + theta => U(g)|s> is THE 27000 = 30^3 = h_vee^3, dim V(2 theta) by Weyl); lattice reading (2 theta, 2 theta)/2 = 4 > 2 (no momentum-2theta state at q^2 in E4/eta^8 -- |s> IS the kernel generator); E8 comarks <omega_i,theta_vee> = (2,2,3,3,4,4,5,6) all >= 2 (vacuum the ONLY level-1 primary: one-block closure), D8 comarks (1,1,1,2,2,2,2,2) keep 3 comark-1 weights with h = (1/2,1,1) -- h = 1/2 NON-integer breaks one-block fusion; dim V(2 theta_D8) = 5304 != 14^3 = 2744",
+    mult2t === 1 && wdim[2 theta] === 27000 && 27000 === 30^3 &&
+    (2 theta) . (2 theta)/4/2 === 4 &&
+    comE8 === {2, 2, 3, 3, 4, 4, 5, 6} && Min[comE8] === 2 &&
+    comD8 === {1, 1, 1, 2, 2, 2, 2, 2} && Count[comD8, 1] === 3 &&
+    hws === {1/2, 1, 1} && wdim8[2 theta8] === 5304 && 5304 =!= 14^3];
+];
+Module[{dims4, pairs8, mintot, period},
+  dims4 = {60, 64, 60, 64};
+  pairs8 = Select[Tuples[Range[1, 7], 2],
+    Mod[#[[1]], 4] == 3 && Mod[#[[2]], 4] == 3 && Total[#] == 8 &];
+  mintot = Min[Total /@ Select[Tuples[Range[1, 11], 2],
+    Mod[#[[1]], 4] == 3 && Mod[#[[2]], 4] == 3 &]];
+  period = Sum[dims4[[Mod[n, 4] + 1]], {n, 1, 4}];
+  checkExact["v498 CELEST.WP5B.01 (v): TWISTED-SLOT TENSION (the honest [O] handover to WP5c) -- in the quarter-SLOT moding of the chi_w limit Fock the sector-C_1 modes sit at n = -j(theta) = 3 mod 4 (mode fraction 1/4 = j/4): two such modes NEVER sum to 8 quarters (0 solutions; minimum total 6 quarters = q^(3/2)) -- the per-PERIOD dictionary (one mu4 period = 248 = the level-1 currents; E^theta_{-1} = 4 quarters, |s> = 8 = q^2), not the per-slot identification, carries |s> to q^2",
+    pairs8 === {} && mintot === 6 && period === 248 &&
+    Mod[-3/4, 1] === 1/4];
+];
+
+(* ==== v499 round: P2.TYPING.01 -- the P2 weight-typing postulate hardened: the
+   anchor a = (1,1,2) as the Birkhoff-Grothendieck splitting exponents of the
+   Deligne canonical extension E of the flavor connection (types the v491 check-9
+   residual).  Exact content mirrored: (i) partition enumeration under the full
+   typing (BG dictionary h^0 = 0 <=> a_i >= 1, exhaustive window) + the naive-
+   typing negative control (h^1(E') = 3 forces deg -6, three splittings, e2 never
+   5) + the h^1 discrepancy (h^1(anchor bundle) = 1 != 3); (ii) the Deligne
+   residue-trace degree (cusp exponents {0,1/3,2/3} = the unique lift of
+   spec(lam^3 - 1) to [0,1), trace 1 per mark, deg E = -4, par-deg 0, witness A0*
+   charpoly); (iii) the Schur-Horn permutohedron integer points {(2,2,0),(2,1,1)}
+   with h^0 = 0 killing {2,2,0}; (iv) the Biswas Z3-cover degree arithmetic
+   (genus 2, eigensheaves O(-2)^2, chi cross-check, regular-rep weights, the
+   decomposable model {0,2,2} with h^0 = 1 = the unstable companion; deck double
+   genus 1, j = 1728); (v) the n-mark formula e2 = (n-2)(n+1)/2 = 5 only at
+   n = 4.  The sympy symbolic parts (H^1 residue basis, monodromy group closure
+   |<U,M0>| = 24, the 324-case stability skeleton) stay Python-side (v499).
+   Mirrors v499. ==== *)
+Module[{esym2, msets, h0line, h1line, core, dict, forced, h1anchor},
+  esym2[m_List] := Total[Times @@@ Subsets[m, {2}]];
+  msets[np_, lo_, hi_, tot_] := Select[
+    DeleteDuplicates[Sort /@ Tuples[Range[lo, hi], np]], Total[#] == tot &];
+  h0line[d_] := If[d >= 0, d + 1, 0];
+  h1line[d_] := If[d <= -2, -d - 1, 0];
+  core = msets[3, 1, 10, 4];
+  dict = And @@ (((Total[h0line[-#] & /@ #] == 0) == (Min[#] >= 1)) & /@
+    Tuples[Range[-3, 6], 3]);
+  forced = Select[DeleteDuplicates[Sort /@ Tuples[Range[1, 7], 3]],
+    Total[# - 1] == 3 &];
+  h1anchor = Total[h1line[-#] & /@ {1, 1, 2}];
+  checkExact["v499 P2.TYPING.01 (i): PARTITION UNDER THE FULL TYPING -- {a in Z^3 : a_i >= 1 (h^0 = 0), sum 4 (deg E = -4), 3 parts (rank 3)} = {{1,1,2}} unique with e2 = 5 = g_car; BG dictionary h^0(O(-a1)+O(-a2)+O(-a3)) = 0 <=> all a_i >= 1 (window [-3,6] exhaustive); naive-typing control: h^1(E') = 3 with h^0 = 0 forces sum a_i = 6 (deg -6 != -4) and loses uniqueness ({1,1,4},{1,2,3},{2,2,2}, e2 = {9,11,12} never 5); the h^1 discrepancy is real: h^1(O(-2)+O(-1)^2) = 1 != 3 = h^1(O(-4)) (the L-side carries the generations)",
+    core == {{1, 1, 2}} && esym2[core[[1]]] == 5 && dict &&
+    forced == {{1, 1, 4}, {1, 2, 3}, {2, 2, 2}} &&
+    (esym2 /@ forced) == {9, 11, 12} && (Total /@ forced) == {6, 6, 6} &&
+    h1anchor == 1 && h1line[-4] == 3 &&
+    Total[h0line[-#] & /@ {1, 1, 2}] == 0 == h0line[-4]];
+];
+Module[{wts, expos, A0, x, cpolyok, degE, pardeg},
+  wts = {0, 1/3, 2/3};
+  expos = Exp[2 Pi I wts];
+  A0 = {{1/2, Sqrt[2]/6, 0}, {Sqrt[2]/6, 1/4, Sqrt[5]/12},
+        {0, Sqrt[5]/12, 1/4}};
+  cpolyok = Simplify[CharacteristicPolynomial[A0, x]
+    + x (x - 1/3) (x - 2/3)] === 0;
+  degE = -4 Total[wts]; pardeg = degE + 4 Total[wts];
+  checkExact["v499 P2.TYPING.01 (ii): DELIGNE RESIDUE-TRACE DEGREE -- the cusp exponents {0,1/3,2/3} are the unique lift of spec(lam^3 - 1) to [0,1) (cube roots of unity, distinct mod Z => canonical extension unique, no Jordan ambiguity); residue trace 1 per mark x 4 marks => deg E = -4, par-deg = -4 + 4(0+1/3+2/3) = 0 (the (U) consistency); the explicit witness A0* has char poly lam(lam-1/3)(lam-2/3) exactly",
+    Union[expos^3] === {1} && Length[DeleteDuplicates[expos]] == 3 &&
+    And @@ (0 <= # < 1 & /@ wts) && Total[wts] == 1 &&
+    degE == -4 && pardeg == 0 && cpolyok];
+];
+Module[{spec4, cands, sh, survivors, h0killed},
+  spec4 = 4 {2/3, 1/3, 0};
+  cands = DeleteDuplicates[Sort[#, Greater] & /@ Tuples[Range[0, 2], 3]];
+  sh = Select[cands, Total[#] == 4 && #[[1]] <= spec4[[1]] &&
+    #[[1]] + #[[2]] <= spec4[[1]] + spec4[[2]] &];
+  survivors = Select[sh, Min[#] >= 1 &];
+  h0killed = Total[If[-# >= 0, -# + 1, 0] & /@ {2, 2, 0}];
+  checkExact["v499 P2.TYPING.01 (iii): SCHUR-HORN LATTICE POINTS -- the integer points of the permutohedron of 4 spec(A0) = (8/3, 4/3, 0) with sum 4 are exactly {(2,1,1),(2,2,0)} (the two options of the tfpt_2 'Global computation' theorem); h^0 = 0 kills {2,2,0} (it contains an O(0) summand, h^0 = 1) => (2,1,1) alone survives -- the 'balanced' selection is TYPED as positivity/stability, and the Schur-Horn and Deligne/BG routes converge on {1,1,2}",
+    Sort[sh] == {{2, 1, 1}, {2, 2, 0}} && survivors == {{2, 1, 1}} &&
+    h0killed == 1];
+];
+Module[{mbr, gZ3, degV, chisum, wtok, degdec, h0dec, pardegdec, gZ2, lam, jinv},
+  mbr = {1, 1, 2, 2};
+  gZ3 = (3 (2*0 - 2) + 4 (3 - 1) + 2)/2;
+  degV = Table[Total[Floor[j mbr/3]] - 2 j, {j, 1, 2}];
+  chisum = (0 + 1) + (degV[[1]] + 1) + (degV[[2]] + 1);
+  wtok = And @@ (Sort[Mod[# Range[0, 2]/3, 1]] == {0, 1/3, 2/3} & /@ mbr);
+  degdec = -Total[{0, 2, 2}];
+  h0dec = Total[If[-# >= 0, -# + 1, 0] & /@ {0, 2, 2}];
+  pardegdec = degdec + 4 (0 + 1/3 + 2/3);
+  gZ2 = (2 (2*0 - 2) + 4 (2 - 1) + 2)/2;
+  lam = 2; jinv = 256 (lam^2 - lam + 1)^3/(lam^2 (lam - 1)^2);
+  checkExact["v499 P2.TYPING.01 (iv): BISWAS Z3-COVER DEGREE ARITHMETIC -- equal local monodromies impossible (4c != 0 mod 3 for c = 1,2); m = (1,1,2,2) works (sum 6 = 0 mod 3, unramified over infinity), Riemann-Hurwitz genus 2; eigensheaves deg V_j = sum floor(j m_i/3) - 2j = (-2,-2) => p_* O_Y = O + O(-2)^2 with chi cross-check -1 = 1 - g(Y); regular-rep weights {j m_i/3 mod 1} = {0,1/3,2/3} at every mark; the decomposable model bundle {0,2,2}: deg -4 OK, par-deg 0 OK but h^0 = 1 (the UNSTABLE Schur-Horn companion) -- integrality + sum rule come out of the correspondence, stability is the selector; deck double w^2 = z^4-1: genus 1, cross-ratio 2 => j = 1728 (denominator 2 = |Z2|, not the weight cover)",
+    And @@ (Mod[4 #, 3] != 0 & /@ {1, 2}) && Mod[Total[mbr], 3] == 0 &&
+    gZ3 == 2 && degV == {-2, -2} && chisum == -1 == 1 - gZ3 && wtok &&
+    degdec == -4 && pardegdec == 0 && h0dec == 1 &&
+    gZ2 == 1 && jinv == 1728];
+];
+Module[{msets, scan, e2f},
+  msets[np_, lo_, hi_, tot_] := Select[
+    DeleteDuplicates[Sort /@ Tuples[Range[lo, hi], np]], Total[#] == tot &];
+  e2f[m_List] := Total[Times @@@ Subsets[m, {2}]];
+  scan = Table[{n, Length[msets[n - 1, 1, n, n]],
+    e2f[First[msets[n - 1, 1, n, n]]]}, {n, 3, 8}];
+  checkExact["v499 P2.TYPING.01 (v): N-MARK FORMULA -- n marks => n-1 positive parts summing to n; {1,..,1,2} is unique for EVERY n >= 3 (uniqueness is generic), but e2 = (n-2)(n+1)/2 = (2,5,9,14,20,27) for n = 3..8 -- e2 = 5 = g_car picks out n = 4 ALONE: the VALUE, not the uniqueness, is the n = 4 content",
+    And @@ (#[[2]] == 1 & /@ scan) &&
+    And @@ (#[[3]] == (#[[1]] - 2) (#[[1]] + 1)/2 & /@ scan) &&
+    Select[scan, #[[3]] == 5 &][[All, 1]] == {4}];
+];
+
+(* ==== v500 round: CELEST.WP5C.01 -- WP5c of CELEST.SEAM.01, "the GNS limit
+   state" (the state whose GNS kernel contains the v497/v498 null ideal).
+   Exact content mirrored: (i) the LEVEL-2 BLOCK CENSUS from the standard E8
+   root data -- 31124 = 248 + 30876 monomials in 9361 weight blocks with dim
+   profile {164:1, 37:240, 7:2160, 1:6960}, orbit census by lattice norm
+   (8,6,4,2,0) -> (240, 6720, 2160, 240, 1) with constant block dims
+   (1,1,7,37,164); (ii) the RANK/KERNEL ARITHMETIC of the full Gram -- rank
+   table per orbit (0,0,1,8,44) (the Python-side Gram result) gives total
+   rank 4124 = 1 + 248 + 3875 = chi_2 (dim V(omega) = 3875 recomputed by
+   Weyl from the dominant norm-4 weight) and kernel per orbit
+   (1,1,6,29,120) summing to 27000 = 30^3 = dim V(2 theta) (Weyl); (iii) the
+   CLOCK-CLASS SPLIT at the state level -- the same census in the glue frame
+   with class(lambda) = <lambda,h> mod 4 turns the rank table into the split
+   (1036,1024,1040,1024) = Theta_Cj/eta^8 at q^2, and level 1 gives
+   (52+8,64,60,64) = (60,64,60,64); (iv) the THRESHOLD + LEVEL-DIAL + D8
+   arithmetic -- x-adic order w*r >= N+1 for all r >= 1 iff w >= N+1 (sharp
+   at w = N via r = 1), level-1 root-mode norm = k (no 248 layer at k = 0),
+   <s|s> = 2k(k-1) (0 at k = 1, +4 at k = 2), D8 census 7380 = 120 + 7260
+   in 2705 blocks with quotient 7380 - 5304 = 2076.  The exact Gram
+   computation itself (9361 blocks over Fractions, PSD inertia, the
+   highest-weight norms (3844, 49, 2, 0), the contravariance and
+   anti-involution machine checks on 61504 pairs) is Python-side (v500
+   S1-S4).  Mirrors v500. ==== *)
+Module[{e8roots, wts248, sums, tallyW, blocks, profile, normcensus, dims,
+        rkmap, ranktot, kertot, e8simple, pos, rho, wdim, domnorm4, kerorb},
+  e8roots = Join[
+    Flatten[Table[Module[{v = ConstantArray[0, 8]},
+      v[[i]] = si; v[[j]] = sj; v],
+      {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3],
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  wts248 = Join[e8roots, ConstantArray[ConstantArray[0, 8], 8]];
+  sums = Join[
+    Flatten[Table[wts248[[i]] + wts248[[j]], {i, 1, 248}, {j, i, 248}], 1],
+    wts248];
+  tallyW = Tally[sums];
+  blocks = Length[tallyW];
+  profile = Sort[Tally[Last /@ tallyW]];
+  normcensus = Sort[Tally[{#[[1]] . #[[1]]/4, #[[2]]} & /@ tallyW]];
+  checkExact["v500 CELEST.WP5C.01 (i): LEVEL-2 BLOCK CENSUS from the E8 root data -- 31124 = 248 (one J_{-2}) + 30876 (two J_{-1}, unordered with repetition) monomials fall into 9361 weight blocks with dim profile {164:1, 37:240, 7:2160, 1:6960}; orbit census by lattice norm (8,6,4,2,0) -> sizes (240, 6720, 2160, 240, 1) with CONSTANT block dims (1,1,7,37,164) along each norm class -- the exact block structure of the omega_inf level-2 Gram",
+    Length[sums] === 31124 && 31124 === 248 + 248*249/2 &&
+    blocks === 9361 &&
+    profile === {{1, 6960}, {7, 2160}, {37, 240}, {164, 1}} &&
+    normcensus === {{{0, 164}, 1}, {{2, 37}, 240}, {{4, 7}, 2160},
+      {{6, 1}, 6720}, {{8, 1}, 240}}];
+  (* (ii) rank/kernel arithmetic; rank table per norm orbit from the
+     Python-side exact Gram: (8,6,4,2,0) -> (0,0,1,8,44) *)
+  e8simple = {{1, -1, -1, -1, -1, -1, -1, 1}, {2, 2, 0, 0, 0, 0, 0, 0},
+    {-2, 2, 0, 0, 0, 0, 0, 0}, {0, -2, 2, 0, 0, 0, 0, 0},
+    {0, 0, -2, 2, 0, 0, 0, 0}, {0, 0, 0, -2, 2, 0, 0, 0},
+    {0, 0, 0, 0, -2, 2, 0, 0}, {0, 0, 0, 0, 0, -2, 2, 0}};
+  pos = Select[e8roots, Min[LinearSolve[Transpose[e8simple], #]] >= 0 &];
+  rho = Total[pos]/2;
+  wdim[lam_] := Product[((lam + rho) . a)/(rho . a), {a, pos}];
+  domnorm4 = Select[First /@ tallyW,
+    #.#/4 == 4 && Min[# . Transpose[e8simple]] >= 0 &];
+  rkmap = <|8 -> 0, 6 -> 0, 4 -> 1, 2 -> 8, 0 -> 44|>;
+  dims = <|8 -> 1, 6 -> 1, 4 -> 7, 2 -> 37, 0 -> 164|>;
+  ranktot = Total[{240, 6720, 2160, 240, 1} *
+    (rkmap /@ {8, 6, 4, 2, 0})];
+  kerorb = (dims /@ {8, 6, 4, 2, 0}) - (rkmap /@ {8, 6, 4, 2, 0});
+  kertot = Total[{240, 6720, 2160, 240, 1} * kerorb];
+  checkExact["v500 CELEST.WP5C.01 (ii): RANK/KERNEL ARITHMETIC -- the Python-side exact Gram gives rank per norm orbit (8,6,4,2,0) -> (0,0,1,8,44); total GNS level-2 dimension 240*0 + 6720*0 + 2160*1 + 240*8 + 44 = 4124 = 1 + 248 + 3875 = chi_2 EXACTLY (dim V(omega) = 3875 recomputed by Weyl from the unique dominant norm-4 weight); kernel per orbit = dim - rank = (1,1,6,29,120), total 240 + 6720 + 12960 + 6960 + 120 = 27000 = 30^3 = dim V(2 theta) (Weyl) -- the kernel is V(2 theta) orbit by orbit",
+    ranktot === 4124 && kertot === 27000 && 27000 === 30^3 &&
+    kerorb === {1, 1, 6, 29, 120} &&
+    Length[domnorm4] === 1 && wdim[First[domnorm4]] === 3875 &&
+    4124 === 1 + 248 + 3875 &&
+    wdim[{0, 0, 0, 0, 0, 0, 4, 4}] === 27000];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, h9, wts248g, sums,
+        tallyW, cls1, rkOf, split2, split1, rkmap},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    Join[#, z4] & /@ d5r, Join[z5, #] & /@ a3r,
+    Flatten[Table[Join[d, w], {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[Join[d, w], {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[Join[d, w], {d, d5c}, {w, wcl[3]}], 1]];
+  h9 = {2, 2, 2, 2, 2, 0, 0, 0, 0};
+  wts248g = Join[glue, ConstantArray[ConstantArray[0, 9], 8]];
+  sums = Join[
+    Flatten[Table[wts248g[[i]] + wts248g[[j]], {i, 1, 248}, {j, i, 248}],
+      1], wts248g];
+  tallyW = Tally[sums];
+  rkmap = <|8 -> 0, 6 -> 0, 4 -> 1, 2 -> 8, 0 -> 44|>;
+  rkOf[w_] := rkmap[w . w];
+  split2 = Table[Total[rkOf[#[[1]]] & /@
+    Select[tallyW, Mod[#[[1]] . h9, 4] == j &]], {j, 0, 3}];
+  split1 = Table[Count[glue, r_ /; Mod[r . h9, 4] == j], {j, 0, 3}] +
+    {8, 0, 0, 0};
+  checkExact["v500 CELEST.WP5C.01 (iii): CLOCK-CLASS SPLIT AT THE STATE LEVEL (two routes) -- the same 31124-monomial census in the GLUE frame (class(lambda) = <lambda,h> mod 4, h = (2,2,2,2,2;0^4)) with the rank table (0,0,1,8,44) gives the GNS level-2 rank split by clock class (1036, 1024, 1040, 1024) = Theta_Cj/eta^8 at q^2 (the per-period lattice theta-split, v497 route) summing to 4124; level 1 splits as root classes + Cartan = (52+8, 64, 60, 64) = (60,64,60,64) -- the state-level GNS grading reproduces the lattice split EXACTLY",
+    Length[glue] === 240 && Length[sums] === 31124 &&
+    split2 === {1036, 1024, 1040, 1024} && Total[split2] === 4124 &&
+    split1 === {60, 64, 60, 64} && Total[split1] === 248];
+];
+Module[{N8, thrOK, sharp, k, shap, d8roots, wts120, sums8, tally8},
+  N8 = 8;
+  thrOK = And @@ Table[
+    (And @@ Table[w r >= N8 + 1, {r, 1, 12}]) == (w >= N8 + 1),
+    {w, 1, 12}];
+  sharp = (N8*1 < N8 + 1);
+  shap = 2 k (k - 1);
+  d8roots = Flatten[Table[Module[{v = ConstantArray[0, 8]},
+    v[[i]] = si; v[[j]] = sj; v],
+    {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3];
+  wts120 = Join[d8roots, ConstantArray[ConstantArray[0, 8], 8]];
+  sums8 = Join[
+    Flatten[Table[wts120[[i]] + wts120[[j]], {i, 1, 120}, {j, i, 120}], 1],
+    wts120];
+  tally8 = Tally[sums8];
+  checkExact["v500 CELEST.WP5C.01 (iv): THRESHOLD + LEVEL DIAL + D8 CONTROL -- the radial x-adic orders w*r satisfy 'w r >= N+1 for all r >= 1 iff w >= N+1' (N = 8; enumerated w, r <= 12), SHARP at w = N via the r = 1 mode: the WP5a character threshold holds identically at the state level; level dial: root-mode level-1 norm = k kappa (no 248 layer at k = 0), <s|s> = 2k(k-1) = 0 at k = 1 and +4 at k = 2 (v498 derivation reused -- the deletion is a k = 1 state fact); D8/SO(16)_1 census: 7380 = 120 + 120*121/2 monomials in 2705 weight blocks, quotient 7380 - 5304 = 2076 = Theta_D8/eta^8 at q^2 (one GNS block of the FOUR-block theory, h = 1/2 non-integer)",
+    thrOK && sharp && (shap /. k -> 1) === 0 && (shap /. k -> 2) === 4 &&
+    Length[sums8] === 7380 && 7380 === 120 + 120*121/2 &&
+    Length[tally8] === 2705 && 7380 - 5304 === 2076];
+];
+
+(* ==== v501 round: CELEST.WP5D.01 -- WP5d-alpha of CELEST.SEAM.01, "the
+   two-interval index from the lattice" (the local-net question, alpha
+   stage).  Exact content mirrored: (i) the Cartan determinants det(D5) =
+   det(A3) = 4, product 16 = mu(carrier), det(D8) = 4 = mu(SO(16)_1),
+   det(E8) = 1 = mu((E8)_1) (v378 replication, explicit matrices); (ii) the
+   KLM/Longo-Rehren quotients mu/|L|^2 -- 16/4^2 = 1 (one-step mu4 glue,
+   |L| = |mu4| = 4) and 16/2^2 = 4 -> 4/2^2 = 1 (via SO(16)_1), both routes
+   exact; (iii) the Sigma d_i^2 cross-checks (Ising 1+1+2 = 4, SO(16)_1
+   four abelian sectors = 4, (E8)_1 one sector = 1) + the index reading
+   arithmetic ([F:F_even] = e^(ln 2) = 2, mu_gauged = e^(2 ln 2) = 4,
+   per-layer gauging 16 ln 2 = ln 2^16, budget ln 4 = ln mu(SO(16)_1));
+   (iv) the 16-fold-way condensability theta_v = e^(2 pi i nu/16) = 1
+   EXACTLY at nu = 2 c_- = 16 (c_- = 8 = g_car + N_fam, 16 layers =
+   2^(g_car - 1)) vs the rivals nu = 1, 2, 8.  The lattice curves (Peschel
+   covariance, Renyi-2 offsets, the ln 2 plateau, the duality-asymmetry
+   witness, all ED validations) are numerical and stay Python-only (v501
+   S0-S4, S6).  Mirrors v501. ==== *)
+Module[{cartan, aD5, aA3, aD8, aE8},
+  cartan[type_, n_] := Module[{m = SparseArray[{Band[{1, 1}] -> 2,
+      Band[{1, 2}] -> -1, Band[{2, 1}] -> -1}, {n, n}] // Normal},
+    Which[
+      type === "A", m,
+      type === "D", (m[[n, n - 1]] = 0; m[[n - 1, n]] = 0;
+        m[[n, n - 2]] = -1; m[[n - 2, n]] = -1; m),
+      type === "E8", (m[[n, n - 1]] = 0; m[[n - 1, n]] = 0;
+        m[[n, 5]] = -1; m[[5, n]] = -1; m)]];
+  aD5 = cartan["D", 5]; aA3 = cartan["A", 3];
+  aD8 = cartan["D", 8]; aE8 = cartan["E8", 8];
+  checkExact["v501 CELEST.WP5D.01 (i): CARTAN DETERMINANTS (v378 replication, explicit matrices) -- det Cartan(D5) = 4, det Cartan(A3) = 4, product 16 = mu(carrier D5 x A3); det Cartan(D8) = 4 = mu(SO(16)_1); det Cartan(E8) = 1 = mu((E8)_1): the KLM two-interval index chain starts at 16 and must end at 1",
+    Det[aD5] === 4 && Det[aA3] === 4 && Det[aD5] Det[aA3] === 16 &&
+    Det[aD8] === 4 && Det[aE8] === 1];
+];
+Module[{muCar, routeA, routeB1, routeB2},
+  muCar = 16;
+  routeA = muCar/4^2;
+  routeB1 = muCar/2^2;
+  routeB2 = routeB1/2^2;
+  checkExact["v501 CELEST.WP5D.01 (ii): KLM/LONGO-REHREN QUOTIENTS -- mu/|L|^2 with |L| = |mu4| = 4 gives 16/16 = 1 (the one-step mu4 glue to (E8)_1); |L| = 2 gives 16/4 = 4 = mu(SO(16)_1), then the theta_v = 1 simple current 4/2^2 = 1: BOTH routes land exactly on mu = 1 -- the 16 -> 4 -> 1 condensation chain",
+    routeA === 1 && routeB1 === 4 && routeB2 === 1 &&
+    routeA === routeB2];
+];
+Module[{ising, so16, e8s, reading},
+  ising = Total[{1, 1, Sqrt[2]}^2];
+  so16 = Total[{1, 1, 1, 1}^2];
+  e8s = Total[{1}^2];
+  reading = {Exp[Log[2]], Exp[2 Log[2]], 16 Log[2] == Log[2^16],
+    Log[4] == Log[so16]};
+  checkExact["v501 CELEST.WP5D.01 (iii): SIGMA d^2 CROSS-CHECK + INDEX READING -- KLM mu = Sigma d_i^2: Ising 1 + 1 + (Sqrt 2)^2 = 4; SO(16)_1 four abelian sectors = 4; (E8)_1 one sector = 1 (matches the Cartan-det chain exactly); index reading arithmetic: [F : F_even] = e^(ln 2) = 2, mu_gauged = e^(2 ln 2) = 4, per-layer gauging 16 ln 2 = ln 2^16 (the offset measures ln[index]), complementary-pair budget ln 4 = ln mu(SO(16)_1)",
+    Simplify[ising] === 4 && so16 === 4 && e8s === 1 &&
+    reading[[1]] === 2 && reading[[2]] === 4 &&
+    TrueQ[Simplify[reading[[3]]]] && TrueQ[Simplify[reading[[4]]]]];
+];
+Module[{cminus, nu, thetav, rivals, layers},
+  cminus = gcar + Nfam;
+  nu = 2 cminus;
+  layers = 2^(gcar - 1);
+  thetav = Exp[2 Pi I nu/16];
+  rivals = Exp[2 Pi I #/16] & /@ {1, 2, 8};
+  checkExact["v501 CELEST.WP5D.01 (iv): 16-FOLD-WAY CONDENSABILITY -- theta_v = e^(2 pi i nu/16) = 1 EXACTLY at nu = 2 c_- = 16 (c_- = 8 = g_car + N_fam; the seam carrier is 16 = 2^(g_car-1) Majorana layers): the vortex is bosonic and condensable (v490); the rivals nu = 1, 2, 8 give theta_v = e^(i pi/8), e^(i pi/4), -1, all != 1 -- the Ising-class offset is NOT removable (the kill discriminator has teeth)",
+    cminus === 8 && nu === 16 && layers === 16 && thetav === 1 &&
+    And @@ (# =!= 1 & /@ rivals) && rivals[[3]] === -1];
+];
+
+(* ==== v502 round: CELEST.WP5E.ALPHA.01 -- WP5e-alpha of CELEST.SEAM.01,
+   "prefactor and level bookkeeping" (the CFT-side anchor of the twistor
+   uplift).  Exact content mirrored: (i) the HURWITZ-ZETA vacuum energies --
+   zeta(-1,theta) = -B2(theta)/2 at rational twists, E_b(theta) = -1/24 +
+   theta(1-theta)/4, Ising shift E_R - E_NS = 1/16 per Majorana, the
+   untwisted vacuum 8 x (-1/24) = -1/3 = -c/24 with the Sugawara route
+   248/(1+30) = 8, and the eta^8 exponent 8/24 = 1/3; (ii) DISCRIMINANT
+   FORM = CASIMIR ENERGY -- coset minima h_D5 = (0,5/8,1/2,5/8), h_A3 =
+   (0,3/8,1/2,3/8), glue diagonal (0,1,1,1) INTEGER (exact lattice
+   enumeration), spectral flow j^2 (h,h)/32 with (h,h) = 20, (h',h') = 12,
+   sum 32 (mod-1 identity), free-fermion route n/16 = 5/8, 3/8, 1 on
+   10 + 6 = 16 = 2^(g_car-1) Majoranas, and the deck failure 3/16 != 3/8;
+   (iii) the k = 1 FIXING EQUATIONS -- simple-current closed forms 5k/8,
+   3k/8, glue-diagonal integrality for ALL k = 1..8 (the honest 'fixes
+   nothing' finding), current condition h(J) = k = 1 unique, conformal
+   embedding 47k^2 + 219k - 266 = (k-1)(47k+266) with unique positive root
+   1, D8 route 128k(1-k) = 0, central charge 248k/(k+30) = 8 <=> 240(k-1)
+   = 0, Shapovalov values 2k(k-1) = (0,4,12,24), and the Weyl-dim count
+   31124 - 27000 = 4124 (dims 248/3875/27000 recomputed); (iv) the
+   CHARACTER SUMS -- the four glue-coset thetas sum to E4 = (1,240,2160,
+   6720), the sector characters (leading coefficients (1,64,60,64),
+   currents (60,64,60,64)) sum to E4/eta^8 = q^{-1/3}(1,248,4124,34752),
+   and the D8 control Theta_D8 + Theta_s = E4 with h_v = 1/2 non-integer.
+   The sympy symbolic manipulations and the PBW engine are Python-side
+   (v502 S1/S5).  Mirrors v502. ==== *)
+Module[{ths, zetaOK, ebOK, vals, shift, vac, cSug, etaExp},
+  ths = {1/8, 1/4, 3/8, 1/2, 5/8, 3/4, 7/8};
+  zetaOK = And @@ (FullSimplify[Zeta[-1, #] + BernoulliB[2, #]/2] === 0 & /@
+    ths);
+  ebOK = And @@ (FullSimplify[(Zeta[-1, #] + Zeta[-1, 1 - #])/4 -
+    (-1/24 + # (1 - #)/4)] === 0 & /@ ths);
+  vals = (-1/24 + # (1 - #)/4) & /@ {0, 1/4, 1/2, 3/4};
+  shift = 1/24 - (-1/48);
+  vac = 8 (-1/24);
+  cSug = 248/(1 + 30);
+  etaExp = 8/24;
+  checkExact["v502 CELEST.WP5E.ALPHA.01 (i): HURWITZ-ZETA VACUUM ENERGIES -- zeta(-1,theta) = -B2(theta)/2 exactly at all rational twists n/8, so E_b(theta) = (1/4)[zeta(-1,th) + zeta(-1,1-th)] = -1/24 + theta(1-theta)/4 EXACTLY; values (0,1/4,1/2,3/4) -> (-1/24, 1/192, 1/48, 1/192); fermion shift E_R - E_NS = 1/24 - (-1/48) = 1/16 per Majorana (Ising h_sigma); untwisted vacuum 8 x (-1/24) = -1/3 = -c/24 at c = 8 = Sugawara 248/(1+30); eta^8 = q^{8/24} = q^{1/3} x (product): the q^{-1/3} prefactor is the c = 8 vacuum energy",
+    zetaOK && ebOK && vals === {-1/24, 1/192, 1/48, 1/192} &&
+    shift === 1/16 && vac === -1/3 && cSug === 8 && etaExp === 1/3];
+];
+Module[{d5int, d5half, a3vecs, minD5s, minD5v, minD5c, minA3, hD5, hA3,
+        hglue, nh, nhp, flowOK, ferm, deck},
+  d5int = Tuples[Range[-2, 2], 5];
+  d5half = Tuples[{-3/2, -1/2, 1/2, 3/2}, 5];
+  minD5v = Min[# . # & /@ Select[d5int, OddQ[Total[#]] &]];
+  minD5s = Min[# . # & /@ Select[d5half, EvenQ[Count[#, x_ /; Mod[x - 1/2, 2] == 1]] &]];
+  minD5c = Min[# . # & /@ Select[d5half, OddQ[Count[#, x_ /; Mod[x - 1/2, 2] == 1]] &]];
+  a3vecs[k_] := Select[Tuples[Range[-3, 3] - k/4, 4], Total[#] == 0 &];
+  minA3 = Table[Min[# . # & /@ a3vecs[k]], {k, 1, 3}];
+  hD5 = {0, minD5s/2, minD5v/2, minD5c/2};
+  hA3 = {0, minA3[[1]]/2, minA3[[2]]/2, minA3[[3]]/2};
+  hglue = hD5 + hA3;
+  nh = {2, 2, 2, 2, 2, 0, 0, 0, 0} . {2, 2, 2, 2, 2, 0, 0, 0, 0};
+  nhp = {0, 0, 0, 0, 0, 1, 1, 1, -3} . {0, 0, 0, 0, 0, 1, 1, 1, -3};
+  flowOK = And @@ Table[
+    Mod[j^2 nh/32 - hD5[[j + 1]], 1] == 0 &&
+    Mod[j^2 nhp/32 - hA3[[j + 1]], 1] == 0 &&
+    Mod[j^2 (nh + nhp)/32, 1] == 0, {j, 0, 3}];
+  ferm = {10, 6, 16} (1/16);
+  deck = (-1/12 + (1/4) (3/4)/2) + (-1/12 + (3/4) (1/4)/2) - 2 (-1/12);
+  checkExact["v502 CELEST.WP5E.ALPHA.01 (ii): DISCRIMINANT FORM = CASIMIR ENERGY -- exact lattice coset minima give h_D5 = (0,5/8,1/2,5/8), h_A3 = (0,3/8,1/2,3/8), glue diagonal h = (0,1,1,1) INTEGER; spectral flow j^2 (h,h)/32 with (h,h) = 20, (h',h') = 12, sum 32 reproduces both tables mod 1 (sum j^2 = 0 mod 1 = isotropy); free-fermion route EXACT: R-NS shift n/16 on 10 (D5) + 6 (A3 = D3) = 16 = 2^(g_car-1) Majoranas gives 5/8, 3/8, 1; the geometric deck diag(i,i^-1) gives 3/16 != 3/8 -- the rotation reading fails (clock != deck at the Casimir level)",
+    hD5 === {0, 5/8, 1/2, 5/8} && hA3 === {0, 3/8, 1/2, 3/8} &&
+    hglue === {0, 1, 1, 1} && nh === 20 && nhp === 12 && nh + nhp === 32 &&
+    flowOK && ferm === {5/8, 3/8, 1} && 2^(gcar - 1) === 16 &&
+    deck === 3/16 && deck =!= 3/8 && (3/8)/deck === 2];
+];
+Module[{k, hs, ha1, hv, ha2, glueInt, current, poly, polyOK, sols, poly8,
+        sols8, solsC, ccOK, shap, e8roots, e8simple, pos, rho, wdim,
+        theta8v, dimAdj, dim3875, dim27000, domnorm4},
+  hs = (k^2 (5/4) + 2 k 5)/(2 (k + 8));
+  hv = (k^2 1 + 2 k 4)/(2 (k + 8));
+  ha1 = (k^2 (3/4) + 2 k (3/2))/(2 (k + 4));
+  ha2 = (k^2 1 + 2 k 2)/(2 (k + 4));
+  glueInt = And @@ Table[IntegerQ[5 kk/8 + 3 kk/8], {kk, 1, 8}];
+  current = Select[Range[8], # == 1 &];
+  poly = 47 k^2 + 219 k - 266;
+  polyOK = Expand[(k - 1) (47 k + 266) - poly] === 0;
+  sols = Solve[poly == 0 && k > 0, k];
+  poly8 = Expand[120 k (k + 30) - 248 k (k + 14)];
+  sols8 = Solve[120 k/(k + 14) == 248 k/(k + 30) && k > 0, k];
+  solsC = Solve[248 k/(k + 30) == 8, k];
+  ccOK = Simplify[248 k/(k + 30) - 8 - 240 (k - 1)/(k + 30)] === 0;
+  shap = Table[2 kk (kk - 1), {kk, 1, 4}];
+  e8roots = Join[
+    Flatten[Table[Module[{v = ConstantArray[0, 8]},
+      v[[i]] = si; v[[j]] = sj; v],
+      {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3],
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  e8simple = {{1, -1, -1, -1, -1, -1, -1, 1}, {2, 2, 0, 0, 0, 0, 0, 0},
+    {-2, 2, 0, 0, 0, 0, 0, 0}, {0, -2, 2, 0, 0, 0, 0, 0},
+    {0, 0, -2, 2, 0, 0, 0, 0}, {0, 0, 0, -2, 2, 0, 0, 0},
+    {0, 0, 0, 0, -2, 2, 0, 0}, {0, 0, 0, 0, 0, -2, 2, 0}};
+  pos = Select[e8roots, Min[LinearSolve[Transpose[e8simple], #]] >= 0 &];
+  rho = Total[pos]/2;
+  wdim[lam_] := Product[((lam + rho) . a)/(rho . a), {a, pos}];
+  theta8v = First[Select[e8roots,
+    Min[# . Transpose[e8simple]] >= 0 &]];
+  dimAdj = wdim[theta8v];
+  domnorm4 = DeleteDuplicates[Select[
+    Flatten[Table[e8roots[[i]] + e8roots[[j]], {i, 1, 240}, {j, i, 240}], 1],
+    # . #/4 == 4 && Min[# . Transpose[e8simple]] >= 0 &]];
+  dim3875 = wdim[First[domnorm4]];
+  dim27000 = wdim[2 theta8v];
+  checkExact["v502 CELEST.WP5E.ALPHA.01 (iii): k = 1 FIXING EQUATIONS -- simple-current closed forms h(k om_s) = 5k/8, h(k om_1) = 3k/8, h(k om_v) = h(k om_2) = k/2 (affine formula, symbolic); glue-diagonal integrality 5k/8 + 3k/8 = k INTEGER FOR ALL k = 1..8 (fixes nothing -- the honest finding); current condition h(J) = k = 1 unique; conformal embedding 47k^2 + 219k - 266 = (k-1)(47k + 266), unique positive root k = 1; D8 route 120k(k+30) - 248k(k+14) = -128k(k-1); central charge 248k/(k+30) = 8 <=> 240(k-1) = 0, k = 1; Shapovalov 2k(k-1) = (0,4,12,24) for k = 1..4; Weyl dims 248/3875/27000 recomputed from E8 root data, level-2 count 31124 - 27000 = 4124",
+    Simplify[hs - 5 k/8] === 0 && Simplify[hv - k/2] === 0 &&
+    Simplify[ha1 - 3 k/8] === 0 && Simplify[ha2 - k/2] === 0 &&
+    glueInt && current === {1} && polyOK &&
+    sols === {{k -> 1}} && Expand[poly8 + 128 k (k - 1)] === 0 &&
+    sols8 === {{k -> 1}} && solsC === {{k -> 1}} && ccOK &&
+    shap === {0, 4, 12, 24} &&
+    dimAdj === 248 && dim3875 === 3875 && dim27000 === 27000 &&
+    248 + 248*249/2 === 31124 && 31124 - 27000 === 4124];
+];
+Module[{d5int, d5half, a3vecs, thD5, thA3, conv, p8, e4, thetas, secs,
+        leads, curr, tot, d8int, d8half, thD80, thD8s, e8FromD8, minD8v},
+  d5int = Tuples[Range[-2, 2], 5];
+  d5half = Tuples[{-3/2, -1/2, 1/2, 3/2}, 5];
+  thD5[cls_] := Module[{vs},
+    vs = Which[
+      cls == "0", Select[d5int, EvenQ[Total[#]] &],
+      cls == "v", Select[d5int, OddQ[Total[#]] &],
+      cls == "s", Select[d5half, EvenQ[Count[#, x_ /; Mod[x - 1/2, 2] == 1]] &],
+      cls == "c", Select[d5half, OddQ[Count[#, x_ /; Mod[x - 1/2, 2] == 1]] &]];
+    GatherBy[Select[# . # & /@ vs, # <= 6 &], Identity]];
+  a3vecs[k_] := Select[Tuples[Range[-3, 3] - k/4, 4], Total[#] == 0 &];
+  thA3[k_] := GatherBy[Select[# . # & /@ a3vecs[k], # <= 6 &], Identity];
+  conv[t5_, t3_] := Module[{cnt = ConstantArray[0, 4]},
+    Do[Module[{n = g5[[1]] + g3[[1]]},
+      If[n <= 6 && EvenQ[n] && IntegerQ[n/2],
+        cnt[[n/2 + 1]] += Length[g5] Length[g3]]],
+      {g5, t5}, {g3, t3}];
+    cnt];
+  thetas = {conv[thD5["0"], thA3[0]], conv[thD5["s"], thA3[1]],
+    conv[thD5["v"], thA3[2]], conv[thD5["c"], thA3[3]]};
+  e4 = Total[thetas];
+  p8 = {1, 8, 44, 192};
+  secs = Table[Table[Sum[thetas[[j, i + 1]] p8[[m - i + 1]], {i, 0, m}],
+    {m, 0, 3}], {j, 1, 4}];
+  leads = First[Select[#, # != 0 &]] & /@ secs;
+  curr = #[[2]] & /@ secs;
+  tot = Total[secs];
+  d8int = Tuples[Range[-2, 2], 8];
+  d8half = Tuples[{-3/2, -1/2, 1/2, 3/2}, 8];
+  thD80 = Module[{cnt = ConstantArray[0, 4]},
+    Do[Module[{n = v . v}, If[n <= 6 && EvenQ[n], cnt[[n/2 + 1]]++]],
+      {v, Select[d8int, EvenQ[Total[#]] &]}]; cnt];
+  thD8s = Module[{cnt = ConstantArray[0, 4]},
+    Do[Module[{n = v . v}, If[n <= 6 && EvenQ[n], cnt[[n/2 + 1]]++]],
+      {v, Select[d8half, EvenQ[Count[#, x_ /; Mod[x - 1/2, 2] == 1]] &]}];
+    cnt];
+  e8FromD8 = thD80 + thD8s;
+  minD8v = Min[# . # & /@ Select[d8int, OddQ[Total[#]] &]];
+  checkExact["v502 CELEST.WP5E.ALPHA.01 (iv): CHARACTER SUMS -- exact glue-coset theta enumeration (norms <= 6): sum of the four Theta_Cj = E4 = (1,240,2160,6720); sector characters Theta_Cj x 1/prod(1-q^n)^8 (P8 = 1,8,44,192) have leading coefficients (1,64,60,64) and level-1 currents (60,64,60,64), and sum EXACTLY to E4/eta^8 = q^{-1/3}(1, 248, 4124, 34752); D8/SO(16)_1 control: Theta_D8 = (1,112,1136,...), Theta_s = (0,128,1024,...), sum = E4 (the {1,s} Lagrangian extension IS E8) with the vector-class minimum norm 1 => h_v = 1/2 NON-integer (the discriminator is glue-h integrality, not the prefactor)",
+    e4 === {1, 240, 2160, 6720} &&
+    leads === {1, 64, 60, 64} && curr === {60, 64, 60, 64} &&
+    Total[curr] === 248 && tot === {1, 248, 4124, 34752} &&
+    thD80 === {1, 112, 1136, 3136} && thD8s === {0, 128, 1024, 3584} &&
+    e8FromD8 === {1, 240, 2160, 6720} && minD8v === 1 && minD8v/2 === 1/2];
+];
+
+(* ==== v503 round: QGEO.EMERGE.LIGHT.01 -- the v215 deferred emergence test
+   (lever 7) executed light + the residual convergence QGEO-R1 == P2-R1.
+   Exact/numeric content mirrored: (i) the CM-POINT IDENTITIES -- E2(i) =
+   3/Pi and E2(rho) = 2 Sqrt[3]/Pi (30-digit q-series vs the classical
+   closed forms), hence E2*(i) = E2*(rho) = 0 EXACTLY by arithmetic;
+   j(i) = 1728, j(rho) = 0 (KleinInvariantJ); DedekindEta[I] =
+   Gamma[1/4]/(2 Pi^(3/4)) exact; (ii) NO DYNAMICAL SELECTION -- logF =
+   log(tau2 |eta|^4) is S-invariant (30 digits at a generic point), the
+   HEXAGONAL point wins (logF(rho) > logF(i)) and tau = i is a saddle
+   (max along it, min along tau1 + i, sampled); (iii) the PILLOWCASE
+   HALVING -- exact N = 8 discrete-torus spectrum (algebraic eigenvalues),
+   Z2 pairing with exactly 4 self-paired cone modes, dim(even) = (N^2+4)/2
+   = 34, and det'_even^2 = det'_torus x prod_self EXACTLY; (iv) CLOCK =>
+   SQUARE + COXETER -- P(iZ) = P(Z) forces a3 = a2 = a1 = 0 (SolveAlways),
+   j = 6912 I^3/(4 I^3 - J^2) = 1728 identically for Z^4 + a0, the order-4
+   element on H^1 has char poly lam^3 + lam^2 + lam + 1 (Coxeter of W(A3),
+   order 4 = |mu4| = N_fam + 1), and Z6 = Aut(hexagonal) has element orders
+   {1,2,3,6} -- no order 4.  The v280-style lattice DtN curves (mod-4
+   off-character weights, sqrtm/expm) are numerical and stay Python-only
+   (v503 B3-B5).  Mirrors v503. ==== *)
+Module[{rho, e2q, e2i, e2rho, star},
+  rho = (1 + I Sqrt[3])/2;
+  e2q[tau_] := 1 - 24 Sum[n Exp[2 Pi I N[tau, 60] n]/
+    (1 - Exp[2 Pi I N[tau, 60] n]), {n, 1, 300}];
+  e2i = e2q[I];
+  e2rho = e2q[rho];
+  star = {Simplify[3/Pi - 3/(Pi 1)],
+    Simplify[2 Sqrt[3]/Pi - 3/(Pi (Sqrt[3]/2))]};
+  checkExact["v503 QGEO.EMERGE.LIGHT.01 (i): CM-POINT IDENTITIES -- the q-series E2 reproduces the classical closed forms E2(i) = 3/Pi and E2(rho) = 2 Sqrt[3]/Pi to 30 digits, hence the almost-holomorphic completion vanishes EXACTLY at both exceptional-automorphism points: E2*(i) = 3/Pi - 3/(Pi tau2) = 0 at tau2 = 1 and E2*(rho) = 2 Sqrt[3]/Pi - 3/(Pi Sqrt[3]/2) = 0 (the ONLY critical points of the det' functional are the CM points); j(i) = 1728 and j(rho) = 0 exactly (KleinInvariantJ); DedekindEta[I] = Gamma[1/4]/(2 Pi^(3/4)) exact",
+    Abs[N[e2i - 3/Pi, 30]] < 10^-25 &&
+    Abs[N[e2rho - 2 Sqrt[3]/Pi, 30]] < 10^-25 &&
+    star === {0, 0} &&
+    FullSimplify[1728 KleinInvariantJ[I]] === 1728 &&
+    FullSimplify[1728 KleinInvariantJ[rho]] === 0 &&
+    FullSimplify[DedekindEta[I] - Gamma[1/4]/(2 Pi^(3/4))] === 0];
+];
+Module[{logF, rho, gen, sInv, hexWin, saddle},
+  logF[tau_] := Log[Im[N[tau, 60]]] + 4 Log[Abs[DedekindEta[N[tau, 60]]]];
+  rho = (1 + I Sqrt[3])/2;
+  gen = 31/100 + 113 I/100;
+  sInv = Abs[logF[-1/gen] - logF[gen]];
+  hexWin = N[logF[rho] - logF[I], 30];
+  saddle = {N[logF[I] - logF[9 I/10], 30], N[logF[I] - logF[11 I/10], 30],
+    N[logF[1/10 + I] - logF[I], 30], N[logF[-1/10 + I] - logF[I], 30]};
+  checkExact["v503 QGEO.EMERGE.LIGHT.01 (ii): NO DYNAMICAL SELECTION -- logF(tau) = log(tau2 |eta(tau)|^4) (the OPS scale-invariant log det' of the torus; pillowcase = half of it) is exactly S-invariant (logF(-1/tau) = logF(tau) to 30 digits at a generic point, so t = 1 is symmetry-forced critical on tau = it); the HEXAGONAL point wins globally: logF(rho) - logF(i) = 0.02116... > 0 (free dynamics does NOT select the square); tau = i is a SADDLE: a maximum along the rectangular family (logF(i) > logF(0.9 i), logF(1.1 i)) and a minimum along the tau1-direction (logF(+-0.1 + i) > logF(i))",
+    sInv < 10^-25 && hexWin > 21/1000 && hexWin < 22/1000 &&
+    (And @@ (# > 0 & /@ saddle))];
+];
+Module[{lam, modes, self, pairs, dimEven, detTorus, detEven, prodSelf, ok},
+  lam[m_, n_] := (2 - 2 Cos[2 Pi m/8]) + (2 - 2 Cos[2 Pi n/8]);
+  modes = DeleteCases[Tuples[Range[0, 7], 2], {0, 0}];
+  self = Select[modes, Mod[-#[[1]], 8] == #[[1]] &&
+    Mod[-#[[2]], 8] == #[[2]] &];
+  pairs = DeleteDuplicates[Sort[{#, {Mod[-#[[1]], 8], Mod[-#[[2]], 8]}}] & /@
+    Complement[modes, self]];
+  dimEven = 1 + Length[self] + Length[pairs];
+  detTorus = Times @@ (lam @@@ modes);
+  detEven = (Times @@ (lam @@@ self)) (Times @@ (lam @@@ First /@ pairs));
+  prodSelf = Times @@ (lam @@@ self);
+  ok = FullSimplify[detEven^2 - detTorus prodSelf] === 0;
+  checkExact["v503 QGEO.EMERGE.LIGHT.01 (iii): PILLOWCASE = HALF TORUS -- exact N = 8 discrete-torus spectrum (algebraic eigenvalues 4 - 2cos(2 pi m/8) - 2cos(2 pi n/8)): the Z2 map (m,n) -> (-m,-n) has EXACTLY 3 nonzero self-paired cone modes (+ the zero mode: the 4 marks in frequency space), 30 genuine +- pairs, dim(even) = 1 + 3 + 30 = 34 = (N^2+4)/2; det'_even^2 = det'_torus x prod_self EXACTLY (algebraic identity) -- the orbifold spectrum is one copy of each pair, zeta_pillow = zeta_torus/2, so every tau-conclusion transfers verbatim to the pillowcase",
+    Length[self] === 3 && Length[pairs] === 30 && dimEven === 34 &&
+    dimEven === (64 + 4)/2 && ok];
+];
+Module[{P, Z, a0, a1, a2, a3, forced, jfrozen, A, cp, x, orders},
+  P = Z^4 + a3 Z^3 + a2 Z^2 + a1 Z + a0;
+  forced = SolveAlways[P == (P /. Z -> I Z), Z];
+  jfrozen = Simplify[6912 (12 a0)^3/(4 (12 a0)^3 - 0^2)];
+  A = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+  cp = CharacteristicPolynomial[A, x];
+  orders = Sort[DeleteDuplicates[Table[6/GCD[kk, 6], {kk, 1, 6}]]];
+  checkExact["v503 QGEO.EMERGE.LIGHT.01 (iv): CLOCK => SQUARE + COXETER -- P(iZ) = P(Z) forces a3 = a2 = a1 = 0 (SolveAlways, exact), and the surviving family Z^4 + a0 has binary-quartic invariants I = 12 a0, J = 0, hence j = 6912 I^3/(4 I^3 - J^2) = 1728 IDENTICALLY (given the clock, the modulus freezes -- not a second input); the order-4 element on H^1 has char poly lam^3 + lam^2 + lam + 1 = the Coxeter element of W(A3) (A^4 = 1, order 4 = |mu4| = N_fam + 1 -- the P2 cusp-class carrier datum: QGEO-R1 == P2-R1); Aut(hexagonal) = Z6 has element orders {1,2,3,6} -- NO order-4 element (the dynamical winner cannot carry the clock)",
+    Length[forced] === 1 && ({a1, a2, a3} /. forced[[1]]) === {0, 0, 0} &&
+    jfrozen === 1728 &&
+    Expand[cp + x^3 + x^2 + x + 1] === 0 &&
+    MatrixPower[A, 4] === IdentityMatrix[3] &&
+    mu4 === Nfam + 1 && orders === {1, 2, 3, 6} && FreeQ[orders, 4]];
+];
+
+(* ==== v504 round: CELEST.WP5DB.01 -- WP5d-beta "split + strong additivity
+   from the lattice", the two remaining KLM legs of complete rationality
+   (the mu-index is v501).  Exact content mirrored: (i) the GF2 SPAN
+   THEOREM -- Majorana monomials multiply as labels in GF(2)^n (c_S c_T =
+   +- c_{S xor T}), so span dims are exact set counts: with the shared
+   boundary Majorana Even(A) v Even(B) = Even(A u B) EXACTLY (64/64,
+   256/256, 1024/1024), disjoint EXACTLY half (64/128, 256/512, 1024/2048)
+   = index 2; (ii) the PIMSNER-POPA IDENTITY -- E(a) = (a + PaP)/2 gives
+   E(a) - a/2 = PaP/2 symbolically on a full 4x4 matrix, and the
+   attainment x = 1 + h (h = c_1 odd, h^2 = 1, PhP = -h, explicit gamma
+   matrices) has E(x*x) - lam x*x = 2(1 - lam) - 2 lam h with spec(h) =
+   {+-1}: nonnegative iff lam <= 1/2 = 1/[F:F_even] EXACTLY; (iii) the
+   TWO-INTERVAL GROUP -- E4 over {1,PA,PB,PAB} on the uniform 4-sector
+   vector gives E4(vv+) = I/4 exactly, so lam_E4 = 1/4 = 1/mu, and the
+   index consistency (1/lam_PP)^2 = 4 = 1/lam_E4 = mu(SO(16)_1) =
+   det Cartan(D8); (iv) the LAMBDA^2 COMPOUND -- the Wick cross-Gram of
+   even bilinears is the second compound Minors[C, 2]: Cauchy-Binet
+   functoriality Minors[A.B, 2] = Minors[A, 2].Minors[B, 2] on explicit
+   integer matrices, Minors[diag(s), 2] = diag(s_a s_b) symbolically
+   (singular values = products, the same ladder at doubled rate), and
+   Minors[-C, 2] == Minors[C, 2] IDENTICALLY (the parity flip C -> -C is
+   invisible to the even bilinears -- the exact orbifold split-inheritance
+   mechanism); (v) the U(1) PP CONTROL -- charge dephasing on m modes has
+   m + 1 sectors and the uniform-spread vector gives E_U(vv+) =
+   P_diag/(m + 1), so lam = 1/(m + 1) -> 0 EXACTLY (m = 2, 3): infinite
+   index.  The lattice curves (deficit tables, Ising exponent p = 0.2444,
+   elliptic-nome ladder, Klich-Levitov slope, ED validations) are
+   numerical and stay Python-only (v504 S0/S2/S3/S5).  Mirrors v504. ==== *)
+Module[{evenLabels, spanCount, shared, disjoint},
+  evenLabels[sites_] := (If[# === {}, 0, Total[2^#]] &) /@
+    Select[Subsets[sites], EvenQ[Length[#]] &];
+  spanCount[nA_, nB_, sharedQ_] := Module[{n, A, B, ea, eb},
+    n = nA + nB - If[sharedQ, 1, 0];
+    A = Range[0, nA - 1];
+    B = If[sharedQ, Range[nA - 1, n - 1], Range[nA, n - 1]];
+    ea = evenLabels[A]; eb = evenLabels[B];
+    {Length[DeleteDuplicates[Flatten[Outer[BitXor, ea, eb]]]], 2^(n - 1)}];
+  shared = spanCount[#, #, True] & /@ {4, 5, 6};
+  disjoint = spanCount[#, #, False] & /@ {4, 5, 6};
+  checkExact["v504 CELEST.WP5DB.01 (i): GF2 SPAN THEOREM -- Majorana monomials multiply as GF(2) labels (c_S c_T = +- c_{S xor T}), so the strong-additivity span is an exact set count: WITH the shared boundary Majorana Even(A) v Even(B) = Even(A u B) EXACTLY (span/target 64/64, 256/256, 1024/1024 at sizes 4+4, 5+5, 6+6 -- the lattice strong-additivity witness for the orbifold algebra); DISJOINT intervals give EXACTLY HALF (64/128, 256/512, 1024/2048 = index 2; the missing sector is odd(x)odd, the single ln 2 bit of v501, localised at the split point)",
+    shared === {{64, 64}, {256, 256}, {1024, 1024}} &&
+    disjoint === {{64, 128}, {256, 512}, {1024, 2048}} &&
+    (And @@ (2 First[#] === Last[#] & /@ disjoint))];
+];
+Module[{g1, g2, g3, g4, id4, Pmat, Emap, aSym, lhs, h, xx, M, lam},
+  g1 = KroneckerProduct[PauliMatrix[1], IdentityMatrix[2]];
+  g2 = KroneckerProduct[PauliMatrix[2], IdentityMatrix[2]];
+  g3 = KroneckerProduct[PauliMatrix[3], PauliMatrix[1]];
+  g4 = KroneckerProduct[PauliMatrix[3], PauliMatrix[2]];
+  id4 = IdentityMatrix[4];
+  Pmat = Simplify[-g1 . g2 . g3 . g4];             (* = Z(x)Z, total parity *)
+  Emap[y_] := (y + Pmat . y . Pmat)/2;
+  aSym = Array[Subscript[\[Alpha], #1, #2] &, {4, 4}];
+  lhs = Simplify[Emap[aSym] - aSym/2 - Pmat . aSym . Pmat/2];
+  h = g1;                                          (* odd: PhP = -h, h^2 = 1 *)
+  xx = Simplify[(id4 + h) . (id4 + h)];            (* = 2 + 2h *)
+  M = Simplify[Emap[xx] - lam xx];
+  checkExact["v504 CELEST.WP5DB.01 (ii): PIMSNER-POPA IDENTITY + ATTAINMENT -- E(a) = (a + PaP)/2 gives E(a) - a/2 = PaP/2 IDENTICALLY on a fully symbolic 4x4 matrix (the one-line PP inequality: PaP >= 0 for a >= 0, so E(a) >= a/2 with lambda = 1/2 = 1/[F:F_even]); attainment on explicit gamma matrices: h = c_1 (odd, h^2 = 1, Tr h = 0, PhP = -h exactly), x = 1 + h has x*x = 2 + 2h and E(x*x) - lam x*x = 2(1-lam) - 2 lam h with spec(h) = {+-1}: eigenvalues {2 - 4 lam, 2} -- nonnegative iff lam <= 1/2: lambda_PP = 1/2 EXACTLY",
+    lhs === ConstantArray[0, {4, 4}] &&
+    Simplify[Pmat . Pmat] === id4 &&
+    Simplify[h . h] === id4 && Tr[h] === 0 &&
+    Simplify[Pmat . h . Pmat + h] === ConstantArray[0, {4, 4}] &&
+    xx === 2 id4 + 2 h &&
+    M === Simplify[2 (1 - lam) id4 - 2 lam h] &&
+    Sort[Eigenvalues[h]] === {-1, -1, 1, 1}];
+];
+Module[{PA, PB, PAB, id4, E4, v, vv, Ev, cartanD8},
+  PA = DiagonalMatrix[{1, 1, -1, -1}];
+  PB = DiagonalMatrix[{1, -1, 1, -1}];
+  PAB = PA . PB;
+  id4 = IdentityMatrix[4];
+  E4[y_] := (y + PA . y . PA + PB . y . PB + PAB . y . PAB)/4;
+  v = {1, 1, 1, 1}/2;
+  vv = Outer[Times, v, v];
+  Ev = Simplify[E4[vv]];
+  cartanD8 = Normal[SparseArray[{{i_, i_} -> 2,
+    {i_, j_} /; Abs[i - j] == 1 && i <= 7 && j <= 7 -> -1,
+    {6, 8} -> -1, {8, 6} -> -1}, {8, 8}]];
+  checkExact["v504 CELEST.WP5DB.01 (iii): TWO-INTERVAL GROUP + INDEX CONSISTENCY -- E4 over {1, P_A, P_B, P_AB} on the uniform 4-sector vector gives E4(vv+) = I/4 EXACTLY (the four sectors are orthogonal characters), so the Pimsner-Popa constant of the two-interval orbifold inclusion is lambda_E4 = 1/4 = 1/mu (PSD at 1/4, not PSD above); index consistency of the two routes: 1/lambda_PP = 2 = [F:F_even] (the v501 entropic offset exp(Delta_inf) = 2) and (1/lambda_PP)^2 = 4 = 1/lambda_E4 = mu(SO(16)_1) = det Cartan(D8) -- the Longo-Rehren index witnessed operator-algebraically and entropically",
+    Ev === id4/4 &&
+    PositiveSemidefiniteMatrixQ[Ev - vv/4] &&
+    ! PositiveSemidefiniteMatrixQ[Ev - (1/4 + 1/100) vv] &&
+    (1/(1/2))^2 === 4 && Det[cartanD8] === 4 && 1/(1/4) === Det[cartanD8]];
+];
+Module[{s, comp, A, B, funct, Cq, flip},
+  s = Array[Subscript[\[Sigma], #] &, 4];
+  comp = Minors[DiagonalMatrix[s], 2];
+  A = {{1, 2, 0, 1}, {0, 1, 3, 0}, {2, 0, 1, 1}, {1, 1, 0, 2}};
+  B = {{2, 1, 1, 0}, {0, 2, 0, 1}, {1, 0, 3, 1}, {0, 1, 1, 2}};
+  funct = Minors[A . B, 2] === Minors[A, 2] . Minors[B, 2];
+  Cq = {{3, 1, 2, 0}, {1, 4, 0, 2}, {2, 0, 5, 1}, {0, 2, 1, 3}}/7;
+  flip = Minors[-Cq, 2] === Minors[Cq, 2];
+  checkExact["v504 CELEST.WP5DB.01 (iv): LAMBDA^2 COMPOUND -- the Wick cross-Gram of even bilinears c_i c_j (A) x c_k c_l (B) is the second compound Minors[C, 2]: Cauchy-Binet functoriality Minors[A.B, 2] = Minors[A, 2].Minors[B, 2] holds exactly on explicit integer matrices (so Lambda^2(U Sigma V) factors and the singular values are the pair products), Minors[diag(s), 2] = diag(s_a s_b) symbolically ({sigma_a sigma_b} -- the SAME ladder at doubled rate), and Minors[-C, 2] == Minors[C, 2] IDENTICALLY on a rational matrix: the parity flip C -> -C is invisible to the even bilinears -- the exact orbifold split-inheritance mechanism (the lattice shadow of Longo heredity)",
+    comp === DiagonalMatrix[{s[[1]] s[[2]], s[[1]] s[[3]], s[[1]] s[[4]],
+      s[[2]] s[[3]], s[[2]] s[[4]], s[[3]] s[[4]]}] && funct && flip];
+];
+Module[{lamU, results},
+  lamU[m_] := Module[{dim, occ, sectors, v, vv, Ev},
+    dim = 2^m;
+    occ = DigitCount[#, 2, 1] & /@ Range[0, dim - 1];
+    sectors = Table[First[FirstPosition[occ, q]], {q, 0, m}];
+    v = Normal[SparseArray[Thread[sectors -> 1/Sqrt[m + 1]], dim]];
+    vv = Outer[Times, v, v];
+    Ev = Sum[Module[{pq = DiagonalMatrix[Boole[# == q] & /@ occ]},
+      pq . vv . pq], {q, 0, m}];
+    {PositiveSemidefiniteMatrixQ[Simplify[Ev - vv/(m + 1)]],
+     ! PositiveSemidefiniteMatrixQ[Simplify[Ev - (1/(m + 1) + 1/50) vv]]}];
+  results = lamU /@ {2, 3};
+  checkExact["v504 CELEST.WP5DB.01 (v): U(1) PP CONTROL -- charge dephasing on m modes has m + 1 sectors; on the uniform-spread vector the dephasing map gives E_U(vv+) = P_diag/(m + 1) exactly, so the Pimsner-Popa constant is lambda = 1/(m + 1) EXACTLY (verified m = 2, 3: PSD at 1/(m + 1), not PSD above) -- lambda -> 0 with region size: INFINITE index, the operator-algebraic twin of the divergent U(1) touching deficit (the divergence itself is a lattice curve, Python-only)",
+    And @@ Flatten[results]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

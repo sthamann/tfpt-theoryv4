@@ -44,7 +44,7 @@ const SELF_VERIFIED: { path: string; value: string; body: string }[] = [
   },
   {
     path: "Wolfram mirror",
-    value: "116/116 + 398/398",
+    value: "116/116 + 429/429",
     body: "An independent second path for the exact algebraic / identity / lattice results, on the Wolfram Engine.",
   },
   {

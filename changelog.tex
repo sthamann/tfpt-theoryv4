@@ -60,6 +60,383 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (XIV) (\texttt{v504} --- WP5d-$\beta$ of \texttt{CELEST.SEAM.01} ``split $+$ strong additivity from the lattice'' promoted as \texttt{CELEST.WP5DB.01}: the two remaining KLM legs of complete rationality witnessed for the orbifold prescription --- strong additivity ALGEBRAICALLY EXACT with the shared boundary Majorana ($\mathrm{Even}(A)\vee\mathrm{Even}(B)=\mathrm{Even}(A\cup B)$, GF2 spans full, rank $32/32$; disjoint exactly index $2$ $=$ the \texttt{v501} $\ln2$ bit), the entropic touching defect BOUNDED $<\ln2$ with the Ising $\tfrac14$-exponent approach ($p=0.2444$) while the preregistered $U(1)$/Dirac control DIVERGES (Klich--Levitov pinned, infinite index), the split property at the elliptic-nome rate $\pi K(1-x)/K(x)$ ($1.3$--$2.0\%$) with EXACT orbifold inheritance ($C\to-C$ $+$ the $\Lambda^2C$ compound --- Longo heredity), and Pimsner--Popa $E(a)-a/2=PaP/2$ identically ($\lambda=\tfrac12=1/[F{:}F_{\mathrm{even}}]$, $\lambda_{E_4}=\tfrac14=1/\mu$, $e^{\Delta_\infty}=2=1/\lambda_{\mathrm{PP}}$ --- two independent index routes); with \texttt{v501} ALL THREE KLM ingredients carry lattice witnesses; the continuum uplift stays \mO\ --- ``finite-group orbifolds of completely rational nets are completely rational'' is XU'S THEOREM, cited not claimed; Wolfram extension $424\to429$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, \texttt{CELEST.SEAM.01} stays Open, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v504\_celestial\_wp5d\_klm\_completeness.py} (\texttt{CELEST.WP5DB.01}, 37
+checks, $\sim$12 s; numpy/scipy Gaussian machinery ED-validated $+$ exact GF2/integer algebra;
+deterministic).} Complete rationality (Kawahigashi--Longo--M\"uger) $=$ split $+$ strong additivity
+$+$ finite two-interval $\mu$-index; \texttt{v501} (WP5d-$\alpha$) witnessed the index, \texttt{v504}
+witnesses the other two legs on the same critical Majorana seam edge, with the $U(1)$/Dirac
+number-conserving subnet as the preregistered negative control (the current net, where strong
+additivity famously \emph{fails} in the continuum --- Buchholz--Schulz--Mirbach). \emph{Strong
+additivity, exact algebra}: ``touching $=$ shared boundary Majorana'' gives
+$\mathrm{Even}(A)\vee\mathrm{Even}(B)=\mathrm{Even}(A\cup B)$ EXACTLY (GF2 spans full $64/64$,
+$256/256$, $512/512$, $1024/1024$; literal matrix rank $32/32$); disjoint intervals give exactly
+HALF (rank $16/32$, index $2$ --- the missing sector $\mathrm{odd}\otimes\mathrm{odd}$ is the
+\texttt{v501} $\ln2$ bit, localised at the split point); the neutral $U(1)$ algebras do NOT generate
+the union even with the shared site (gaps $2/10/52$, growing). \emph{Entropic witness}: the
+fermionic touching MI carries the pure UV point-gap law ($(c/3)\ln2$ increments, $0.115525$, dev
+$1.2\times10^{-6}$ --- present for every net, no discriminator); the honest discriminator is
+\emph{bounded vs divergent}: the $\Z_2$/orbifold deficit rises $0.4045\to0.5899$ ($N=64\to4096$),
+stays $<\ln2$, and $(\ln2-\Delta_2)\sim N^{-p}$ with $p=0.2444$ vs $2\Delta_\mu=\tfrac14$ (Ising
+disorder exponent); split-point scan reflection-symmetric to $3.9\times10^{-14}$; ED vN same
+direction; gap continuity to the \texttt{v501} $x\to1$ endpoint; honest note: ``defect $\to0$''
+would be \emph{false} at the sharp lattice split --- bounded $\Leftrightarrow$ finite index
+(Longo--Xu) is the correct statement; the $U(1)$ control bursts $\ln2$ from $L=128$ and grows as
+$\tfrac12\ln\operatorname{Var}Q_A$ (Klich--Levitov slope $0.10134$ vs $1/\pi^2=0.10132$).
+\emph{Split/nuclearity}: coupling-block $\sigma_k$ fall exponentially at the elliptic-nome rate
+$\pi K(1-x)/K(x)$ to $1.3$--$2.0\%$ (rates $2.29/3.24/4.82/5.81$ at $d=16/64/256/512$);
+$\sigma_1\sim x^{0.5044}$ (vs $\tfrac12$); trace norm summable; dimerised control exponential.
+\emph{Orbifold inheritance exact}: $P_A$ flips $C\to-C$ ($\sigma_k$ identical, $8.3\times10^{-17}$)
+and the even-bilinear coupling Gram is the second compound $\Lambda^2C$ (singular values
+$\{\sigma_a\sigma_b\}$, $2.8\times10^{-14}$) --- the same ladder at doubled rate (Longo heredity,
+\mC). \emph{Pimsner--Popa, exact}: $E(a)-a/2=PaP/2$ identically; attainment in integers (all
+$16384$ (even, odd) monomial pairs at $N=8$: $8192$ extremal with $M^2=4$, $\operatorname{Tr}M=0$,
+$PMP=-M$, $0$ violations; $2048/2048$ at $N=12$; pencil $\min\lambda=0.5000000000$);
+$\lambda_{E_4}=\tfrac14=1/\mu$; index consistency $e^{\Delta_\infty}=2.000000000=
+1/\lambda_{\mathrm{PP}}$ and $e^{2\Delta_\infty}=4=\mu$; $U(1)$: $\lambda=1/(m{+}1)\to0$.
+\emph{Controls $+$ honesty}: dimerised phase trivial (drift $3.6\times10^{-15}$); wrong prescription
+$\{1,P_{AB}\}$ deficit exactly $0$; $\Z_2$ finite-size honesty ($14.9\%$ below $\ln2$ at $N=4096$
+--- witness, not proof). VERDICT: with \texttt{v501} all THREE KLM ingredients of complete
+rationality are witnessed on the lattice; the continuum theorem for finite-group orbifolds is
+\emph{Xu's} (cited, not claimed), the concrete seam quotient net and the condensed $(E_8)_1$ net
+stay WP5e/Costello--Li.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row \texttt{CELEST.WP5DB.01};
+\texttt{CELEST.SEAM.01} updated to ``WP5d: $\alpha$ ($\mu$-index) $+$ $\beta$ (split $+$ strong
+additivity) executed via \texttt{v501}/\texttt{v504} --- all three KLM ingredients witnessed on the
+lattice; continuum uplift stays \mO\ (Xu's theorem cited)'' at \emph{unchanged} Open status. Papers:
+contracts WP5d bullet $\to$ ``both stages done'' with the $\beta$-stage numbers $+$ Xu fence
+(kill-test and honest-success paragraphs consistent); \texttt{tfpt\_3} celestial section becomes the
+\emph{ten}-step story (new Step 10 ``the KLM completion on the lattice'', ``what remains'' $=$ WP5e
+twistor inflow only); \texttt{tfpt\_4} keystone note updated. Wolfram: five mirrors (GF2 span
+theorem; Pimsner--Popa identity $+$ attainment on explicit gamma matrices; two-interval group
+$\lambda_{E_4}=\tfrac14$ $+$ index consistency; the $\Lambda^2$/Minors compound with Cauchy--Binet
+and $\mathrm{Minors}[-C,2]=\mathrm{Minors}[C,2]$; the $U(1)$ dephasing $\lambda=1/(m{+}1)$ family)
+verified with the active engine the same day ($424\to429$, \texttt{ALL WOLFRAM EXTENSION CHECKS
+PASSED}); the lattice curves stay Python-only (flagged). \texttt{VerificationDag} qft node gains
+\texttt{v504}; registry $+$ \texttt{run\_all} (498 modules, suite green). No gate closes, no marker
+moves --- \texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
+\subsection*{2026-07-21 (XIII) (\texttt{v503} --- the \texttt{v215} deferred emergence test (lever 7) executed \emph{light} and promoted as \texttt{QGEO.EMERGE.LIGHT.01}: NO dynamical selection of the square modulus --- the free field's global $\det{}'$ winner is the \emph{hexagonal} torus, $\tau{=}i$ is a saddle, criticality at the square is Palais symmetry; the square is pinned by \emph{rigidity} alone (the raw DtN is mod-$4$ block-diagonal \emph{iff} $\tau{=}i$, an isolated zero); and the residual \emph{converges}: QGEO-R1 $\equiv$ P2-R1 $=$ one common rest, ``why does the raw seam carry the order-$4$ clock''; Wolfram extension $420\to424$ (verified engine run); \emph{NO marker moves --- \texttt{QGEO.REALIZE.01} stays \mC/\mO, \texttt{AX.P2.01} stays a declared axiom})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v503\_qgeo\_emergence\_light.py} (\texttt{QGEO.EMERGE.LIGHT.01}, 17 checks;
+mpmath $40$ digits $+$ \texttt{v280}-style lattice DtN $+$ sympy exact).} The \texttt{v215} lever 7
+(``the decisive kill is deferred: compute the raw seam-collar DtN \emph{without} inputting the marks
+and check whether four square marks \emph{emerge}'') executed in its first honest \emph{light}
+version. \emph{No dynamical selection}: $\log F=\log(\tau_2|\eta|^4)$ (Osgood--Phillips--Sarnak) is
+exactly $S$-invariant (dev $<10^{-35}$), so $t{=}1$ is symmetry-forced critical on the rectangular
+family $\tau=it$; there $g''(1)=-1.298<0$ (strict maximum) but the $\tau_1$-direction has
+$h''(0)=+0.298>0$: $\tau{=}i$ is a \emph{saddle} of the full moduli space; the only critical points
+are the CM points ($E_2^*(i)=E_2^*(\rho)=0$ at $40$ digits, generic $0.163\neq0$); the \emph{global}
+$\det{}'$ winner at fixed area is the \emph{hexagonal} torus ($\log F(\rho)=-1.03352>\log
+F(i)=-1.05469$, diff $0.021169$); criticality at the square is Palais symmetric criticality (the
+independent heat trace is equally critical). \emph{Sharp rigidity}: the DtN mod-$4$ off-character
+indicator (the \texttt{v215}-K3 lever as a \emph{modulus function}) vanishes to $8\times10^{-15}$
+exactly at $\tau{=}i$ and rises strictly monotonically both ways (min $8.4\times10^{-2}$ away) ---
+an isolated zero; $R^2=\Z_2$ exact as permutation matrices (the \texttt{v492} $\Z_8$ bridge on the
+lattice); $j(it)\ge1728$ with equality only at $t{=}1$. \emph{The $\Z_2$ chain is modulus-blind}:
+$4$ marks $+$ $[\Z_2,\Delta_t]=0$ on \emph{every} torus (\texttt{v216} confirmed without mark
+input); pillowcase $\det{}'=\tfrac12$ torus $\det{}'$ exactly ($\pm$-pair structure) --- only the
+order-$4$ clock distinguishes $\tau{=}i$; $\mathrm{Aut}(E_\rho)=\Z_6$ has \emph{no} order-$4$
+element (the dynamical winner cannot carry the clock); given the clock the modulus freezes
+automatically ($j=1728$ identically, \texttt{v493} mini). \emph{Residual convergence (the core
+finding)}: the order-$4$ element on $H^1$ is a Coxeter element of $W(A_3)$ (char poly
+$\lambda^3{+}\lambda^2{+}\lambda{+}1$, order $4=|\mu_4|=\Nfam{+}1$) $=$ the P2 cusp-class carrier
+datum of \texttt{v499} R1 $\Rightarrow$ \emph{QGEO-R1 $\equiv$ P2-R1, one common residual}; chain:
+marks derived (\texttt{v216}), square derived \emph{given} the clock (\texttt{v493}), clock $=$
+carrier input [\mC], rest $=$ its dynamical realisation \mO; route classification (\texttt{v347}
+analogue): B-rigidity in the sharpened form ``RP seam data $\Rightarrow$ order-$4$ clock'' is the
+live route. \texttt{v215} lever 7 thereby moves from ``deferred, not executable'' to ``light version
+executed: rigidity, not dynamical selection'' --- documented in \texttt{v503}, \texttt{v215} itself
+unchanged.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{QGEO.EMERGE.LIGHT.01}; \texttt{QGEO.REALIZE.01} text \emph{precised} (rest $=$ the order-$4$
+clock, identical with the P2 typing rest R1; square $+$ mark count derived) at \emph{unchanged}
+marker \mC/\mO; cross-reference added in \texttt{P2.TYPING.01} (convergence theorem). Papers:
+contracts kill-test paragraph (lever-7 light result $+$ the residual-convergence sentence, both with
+\texttt{v503}), \texttt{tfpt\_3} Step 2 (light-converse sentence), \texttt{origin\_theory}
+necessity paragraph, \texttt{introduction}/\texttt{tfpt\_1}/\texttt{tfpt\_2} one-residual
+cross-references. Wolfram: four mirrors (CM-point identities $E_2(i)=3/\pi$, $E_2(\rho)=2\sqrt3/\pi$
+$\Rightarrow$ $E_2^*=0$ exact, $j$/DedekindEta special values; the no-dynamical-selection witnesses;
+the pillowcase halving as an exact algebraic identity; clock $\Rightarrow$ square $+$ Coxeter)
+verified with the active engine the same day ($420\to424$, \texttt{ALL WOLFRAM EXTENSION CHECKS
+PASSED}); the lattice DtN curves stay Python-only (flagged). \texttt{VerificationDag} masses node
+gains \texttt{v503}; registry $+$ \texttt{run\_all} (497 modules, suite green). No gate closes, no
+marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (XII) (\texttt{v502} --- WP5e-$\alpha$ of \texttt{CELEST.SEAM.01} ``prefactor and level bookkeeping'' promoted as \texttt{CELEST.WP5E.ALPHA.01}: the $q^{-1/3}$ prefactor of $E_4/\eta^8$ IS exact $\mu_4$ vacuum-energy bookkeeping (the clock is inner $\Rightarrow$ shift orbifold $\theta=0^8$, common $-c/24=-\tfrac13$; discriminant form $=$ Casimir via spectral flow AND $16$-Majorana free fermions), and $k=1$ is forced THREE independent ways (current condition; conformal embedding; central charge $=$ the prefactor itself; plus the WP5b singular-vector dial $31124-27000=4124$); honest sharpening: glue-$h$ integrality holds for ALL $k$ and fixes nothing; the BCOV/Costello--Li twistor inflow stays \mO\ --- WP5e is subdivided ($\alpha$ done, WP5e proper open); Wolfram extension $416\to420$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v502\_celestial\_wp5e\_prefactor\_level.py} (\texttt{CELEST.WP5E.ALPHA.01}, 33
+checks, exact sympy/Fraction, no floats).} The two exactly computable consistency anchors of the
+WP5e twistor uplift established. \emph{Part A --- the prefactor}: Hurwitz-$\zeta$ exact
+($\zeta(-1,\theta)=-B_2(\theta)/2$; $E_b(\theta)=-\tfrac1{24}+\theta(1-\theta)/4$; Ising shift
+$\tfrac1{16}$ per Majorana); the clock is \emph{inner} ($h=(2,2,2,2,2;0^4)$ and $h'=(0^5;1,1,1,-3)$
+both read the class mod $4$ on all $240$ roots; $(h,h)=20$, $(h',h')=12$, sum $32$) $\Rightarrow$
+twist $\theta=0^8$ in all four sectors --- a \emph{shift} orbifold, NOT a rotation orbifold ---
+so $E_{\mathrm{osc}}=-\tfrac13=-c/24$ is sector-independent ($c=8=$ rank $=$ Sugawara $248/31$;
+one common $\eta^8$); sector ground exponents $-\tfrac13+(0,1,1,1)$; \emph{discriminant form $=$
+Casimir energy} two ways (spectral flow $j^2(h,h)/32$ mod $1$; free fermions exact: $D_5=10$
+Majorana $\to\tfrac58$, $A_3=D_3=6\to\tfrac38$, glue diagonal $=16=2^{\gcar-1}$ $=$ the WP5d seam
+carrier $\to1$); the rotation reading \emph{fails} (deck $\tfrac3{16}\neq\tfrac38$ --- ``clock
+$\neq$ deck'' at the Casimir level); the four sector characters sum exactly to
+$E_4/\eta^8=q^{-1/3}(1,248,4124,34752)$. \emph{Part B --- the level}: $k=1$ forced three
+independent ways --- (i) the current condition $h(J)=k=1$ (adjoint closure $60{+}64{+}60{+}64=248$
+at spin $1$); (ii) the conformal embedding ($47k^2{+}219k{-}266=47(k{-}1)(k{+}266/47)=0$; $D_8$:
+$128k(1{-}k)=0$); (iii) $c=8\Leftrightarrow240(k{-}1)=0$ ($=$ the prefactor); plus the \texttt{v498}
+singular-vector dial ($\|(E^\theta_{-1})^m0\|^2=m!\,k(k{-}1)\cdots(k{-}m{+}1)$, singular vector at
+grade $k{+}1$; $31124-27000=4124$ at $k{=}1$ only, $\langle s|s\rangle=+4$ at $k{=}2$).
+\emph{Honest sharpening (mandatory)}: glue-$h$ integrality $h(J^j;k)=k\,(0,1,1,1)$ is integer for
+ALL $k=1..8$ --- the originally conjectured integrality route fixes \emph{nothing}; the three other
+dials carry. \emph{Negative controls}: $D_8/SO(16)_1$ (same $c=8$, SAME $q^{-1/3}$ prefactor, but
+$h=(0,\tfrac12,1,1)$: the discriminator is glue-$h$ integrality, not the prefactor;
+$\Theta_{D_8}+\Theta_s=E_4$); $\Z_2$ rotation ($E=+\tfrac16$, $h=\tfrac12$); $\mu_4$ rotation
+(sector-dependent $(-\tfrac13,\tfrac1{24},\tfrac16,\tfrac1{24})$ --- the common prefactor breaks);
+wrong $k\in\{2,3,4\}$ fails all five dials coherently (residuals $360/814/1362$; $\langle
+s|s\rangle=4/12/24$; $31124\neq4124$). [\mC] Kac generation for $k\ge3$ ($k=1,2$ machine-anchored by
+WP5b/WP5c). \mO\ the BCOV/Costello--Li twistor inflow itself (Costello's one-loop axion
+$\lambda_g/(8\pi\sqrt3)$ on $\mathbb{PT}$, the Costello--Paquette--Sharma level-from-flux mechanism)
+--- v502 anchors the \emph{CFT side} of WP5e only; the KILL branch (``inflow demands a level
+$\neq1$'') is not triggered on the CFT side, its twistor side is untested.
+\item \textbf{Contract $+$ ledger $+$ Wolfram $+$ website.} \texttt{tfpt\_research\_contracts}: the
+WP5e bullet \emph{subdivided} --- ``WP5e-$\alpha$ (done) \mE/\mC: the CFT-side prefactor $+$ level
+pinning'' with the core numbers and \texttt{v502\_celestial\_wp5e\_prefactor\_level.py}; ``WP5e
+proper \mO: the twistor inflow''; summit header, honest-success paragraph and status roster updated
+(``WP5a--WP5d plus WP5e-$\alpha$ landed; WP5e proper the remaining open piece'').
+\texttt{tfpt\_3} celestial section: new Step 9 (prefactor $+$ level, one paragraph);
+\texttt{tfpt\_4} keystone note updated. Ledger: new row \texttt{CELEST.WP5E.ALPHA.01};
+\texttt{CELEST.SEAM.01} status $\to$ ``WP5e: alpha stage (CFT-side prefactor $+$ level pinning)
+executed via v502; the BCOV/twistor inflow itself stays \mO''. Wolfram: four exact mirrors
+(Hurwitz-$\zeta$ vacuum energies; discriminant $=$ Casimir with the deck failure; the $k$-fixing
+equations incl.\ the ``fixes nothing'' integrality table; the character sums $+$ $D_8$ control)
+verified with the active engine the same day ($416\to420$, \texttt{ALL WOLFRAM EXTENSION CHECKS
+PASSED}). \texttt{wolfram/README.md}, \texttt{GATE.WOLFRAM.02}, \texttt{tfpt\_safeguards} Layer-6
+count and the website counters ($116/116+424/424$ after (XIII)) updated; \texttt{VerificationDag}
+qft node gains \texttt{v502}; registry $+$ \texttt{run\_all} (497 modules, suite green).
+\texttt{SEAM.EQUIV.01} untouched; no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (XI) (\texttt{v501} --- WP5d-$\alpha$ of \texttt{CELEST.SEAM.01} ``the two-interval index from the lattice'' promoted as \texttt{CELEST.WP5D.01}: the KLM Haag-duality discriminator measured entropically on the seam edge --- the $16$-layer carrier saturates the $\ln2$ offset at machine precision, $\mu_{\mathrm{gauged}}=4=$ the \texttt{v490} census, and the condensation arithmetic $16\to4\to1$ closes with $\mu=1$; the preregistered KILL (``$\mu$-offset $\neq0$ after condensation'') does NOT fire; contract now ``WP1--WP5d executed; \emph{WP5e the single remaining milestone}''; Wolfram extension $412\to416$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v501\_celestial\_wp5d\_two\_interval\_index.py} (\texttt{CELEST.WP5D.01}, 39
+checks, numpy/scipy Gaussian machinery $+$ exact Fractions).} The WP5d roadmap discriminator ---
+$(E_8)_1\Rightarrow\mu{=}1$ (Haag-dual two-interval net, one sector) vs $SO(16)_1\Rightarrow\mu{=}4$
+--- executed at the $\alpha$ (lattice-index) stage on the \texttt{v367} seam edge ($16$ critical
+Majorana layers, $c_-=8$, \texttt{v450}-style ring; Peschel-exact, every Gaussian formula
+ED-validated to $\le1.5\times10^{-15}$; the superselection identity $[\rho,P_{AB}]=0$ machine-exact).
+\emph{The $\mu=1$ reference}: the fermionic (fixed-spin-structure) two-interval mutual information is
+\emph{extensive} --- $c$ fit $0.5000$, $\max|F(x)|=5.97\times10^{-5}$ at $N{=}512$, falling
+monotonically to $1.3\times10^{-6}$ at $N{=}1024$ (Casini--Huerta extensivity as a lattice witness).
+\emph{The $\mu$-offset}: R\'enyi-2 exactly $\Delta_2=-\ln[(1{+}R)/2]$; the $16$-layer seam carrier
+saturates $\ln2$ at machine precision ($|\Delta_2-\ln2|=1.1\times10^{-15}$ at $N{=}512$; $R\sim
+N^{-0.500}$); index reading $[F:F_{\mathrm{even}}]=2.000000$, $\mu_{\mathrm{gauged}}=4.000000$ $=$ the
+\texttt{v490} parity census (\emph{two independent lattice witnesses}); per-layer gauging costs
+$16\ln2$ (the offset measures $\ln[\text{index}]$, not a blob). \emph{Haag-duality indicator}:
+fermionic $S(E)=S(E')$ to $8.2\times10^{-12}$; the orbifold \emph{breaks} complementarity
+($D(E)-D(E')=0.427$ at $a{=}64$); the complementary-pair sum is exchange-symmetric and $\le\ln4=
+\ln\mu(SO(16)_1)$ with max $1.2637$ at the self-dual $x=\tfrac12$ --- a \emph{double-limit} statement
+(the first naive fixed-$x$ check was wrong and was replaced --- honestly typed in the module).
+\emph{Condensation arithmetic anchored at both measured ends}: $\det\mathrm{Cartan}(D_5)\cdot\det
+\mathrm{Cartan}(A_3)=16$; KLM/Longo--Rehren $16/4^2=1$ and $16/2^2=4\to4/2^2=1$ (both routes exact);
+$\Sigma d_i^2=(4,4,1)$; $\theta_v=1$ exactly at $\nu=2c_-=16$, rivals $\neq1$ --- so $\mu=1$ after
+condensation ([\mC] the condensed net is interacting, the \texttt{v490} fence): KILL not triggered.
+\emph{Negative controls}: $\nu{=}1$ single Majorana (offset non-removable, $\theta_v=e^{i\pi/8}\neq1$
+--- the discriminator has teeth); trivial phase (all $\le10^{-7}$); wrong sector sum $\{1,P_{AB}\}$
+(offset exactly $0$). \mO\ WP5d-$\beta$ (continuum Haag duality / local normality / split of the
+quotient net; runs as exploration) and WP5e (Costello--Li) stay open.
+\item \textbf{Contract $+$ ledger $+$ Wolfram $+$ website.} \texttt{tfpt\_research\_contracts}: the
+WP5d bullet $\to$ ``$\alpha$ stage done'' with the core numbers and
+\texttt{v501\_celestial\_wp5d\_two\_interval\_index.py}; status line and honest-success paragraph now
+``four of five milestones landed; WP5e (twistor uplift) is the remaining open piece''.
+\texttt{tfpt\_3} celestial section: new Step 8 (one paragraph, conservative); \texttt{tfpt\_4}
+keystone note updated to WP1--WP5d. Ledger: new row \texttt{CELEST.WP5D.01} (fine types Formal $+$
+Lattice/Numerical $+$ [\mC] dictionary); \texttt{CELEST.SEAM.01} status $\to$ ``WP1--WP5d executed;
+WP5e \mO\ (single remaining milestone)''. Wolfram: four exact mirrors (Cartan determinants;
+KLM/Longo--Rehren quotients; $\Sigma d^2$ $+$ index-reading arithmetic; $16$-fold-way $\theta_v$)
+verified with the active engine the same day ($412\to416$, \texttt{ALL WOLFRAM EXTENSION CHECKS
+PASSED}); the lattice curves stay Python-only (flagged). \texttt{wolfram/README.md},
+\texttt{GATE.WOLFRAM.02}, \texttt{tfpt\_safeguards} Layer-6 count and the website counters
+($116/116+416/416$) updated; \texttt{VerificationDag} qft node gains \texttt{v501}; registry $+$
+\texttt{run\_all} (495 modules, suite green). \texttt{SEAM.EQUIV.01} untouched; no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (X) (\texttt{v500} --- WP5c of \texttt{CELEST.SEAM.01} ``the GNS limit state'' promoted as \texttt{CELEST.WP5C.01}: the quasi-free family $\omega_w$ exists, is positive, stabilises exactly at the WP5a threshold, and its limit carries the null ideal in its GNS kernel --- the full $9361$-block exact level-2 Gram has rank $4124$ exactly with kernel $27000=V(2\theta)$ weight by weight; $|s\rangle$ IS the GNS zero vector (the WP5b S4.10 tension resolved at the state level); a CCR obstruction proves the family formulation \emph{necessary}; preregistered SUCCESS criterion met, KILL not triggered; Wolfram extension $408\to412$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v500\_celestial\_wp5c\_gns\_limit\_state.py} (\texttt{CELEST.WP5C.01}, 35
+checks, exact integer/Fraction, no floats, deterministic).} WP5a (\texttt{v497}) made the boundary
+limit precise, WP5b (\texttt{v498}) built the deleting operator; WP5c constructs the \emph{state}.
+$\omega_w$ is quasi-free: loop sector $=$ the affine $k{=}1$ vacuum $n$-point functions via the
+\emph{machine-determined} compact anti-involution $\theta(e_\alpha)={-}e_{-\alpha}$ (the unique sign
+that is an anti-automorphism on all $61504$ basis pairs; contravariance exact); radial sector $=$
+oscillator pairings $x^{wr}$ (the exact Gibbs regulator, $x$-adic). \emph{Convergence sharp}:
+$\omega_w=\omega_\infty\bmod x^{N+1}$ for all $w\ge N{+}1$ ($N{=}8$), not yet at $w=N$ --- the WP5a
+threshold $w=n{+}1$ holds \emph{identically at the state level}; positivity of every $\omega_w$
+checked. \emph{The kernel (core, fully machine)}: the complete exact level-2 Gram --- $31124$
+monomials in $9361$ weight blocks (profile $164{:}1$, $37{:}240$, $7{:}2160$, $1{:}6960$) --- has
+level-1 rank $248$ positive definite (Cartan block $=$ the $E_8$ Cartan matrix, $\det1$), level-2
+rank $4124$ \emph{exactly} (the preregistered target check), kernel $27000$, every block PSD; rank
+per Weyl orbit $(0,0,1,8,44)$; kernel $=V(2\theta)$ \emph{weight by weight} (Freudenthal cross-check
+on all $9361$ weights); highest-weight norms $(3844,49,2,0)$ at $(0,\omega,\theta,2\theta)$; direct
+ideal checks $F_i|s\rangle$, $F_jF_i|s\rangle$ norm $0$. \emph{$\mu_4$-equivariance}:
+$\omega_w\circ\text{clock}=\omega_w$ for all $w$; the clock descends to GNS; level-2 rank split by
+clock class $(1036,1024,1040,1024)=\Theta_{C_j}/\eta^8$ at $q^2$ --- the two-routes identity at the
+\emph{state} level. \emph{Resolution of WP5b S4.10}: $|s\rangle$ \emph{is} the zero vector of
+GNS$(\omega_\infty)$ --- the twisted two-$C_1$-mode floor ($6$ quarters $=q^{3/2}$) concerns only
+pre-limit objects (GNS has no state there, $6\bmod4\neq0$). \emph{Negative controls}: $k{=}2$
+($\langle s|s\rangle={+}4$, dominant blocks full rank --- no ideal in the kernel); $k{=}0$ (level-1
+Gram $\equiv0$ --- no $248$ layer without the central extension); $D_8$ (rank $2076=7380-5304$,
+kernel $=V(2\theta_{D_8})$ PSD, but $h=(0,\tfrac12,1,1)$: one block of four --- one-block
+completeness stays $E_8/\mu_4$-specific); wrong family $E'_w=mw{+}r$ (the $248$ layer erased,
+$710955\neq248$); no damping ($897266\neq248$); \emph{CCR obstruction}: at fixed radial pairing
+$c>0$ positivity forces $\omega(bb^*)\ge c$ --- no $w$-uniform damping state exists, the family
+formulation is \emph{necessary} and the family \emph{exists}: the preregistered KILL is probed and
+not triggered. \mC\ quasi-free extension to the full $*$-algebra; Kac positivity beyond level $2$.
+\mO\ local normality, net structure/Haag duality (WP5d), Costello--Li (WP5e).
+\item \textbf{Contract $+$ ledger $+$ Wolfram $+$ website.} \texttt{tfpt\_research\_contracts}: the
+WP5c bullet $\to$ done with the core numbers (state-level threshold $w=N{+}1$, the full
+$9361$-block Gram rank $4124$/kernel $27000$ weight by weight, the clock-class split, the CCR
+necessity of the family), citing \texttt{v500\_celestial\_wp5c\_gns\_limit\_state.py}; the WP5b
+handover marked answered. \texttt{tfpt\_3} celestial section: new Step 7 (one paragraph,
+conservative). Ledger: new row \texttt{CELEST.WP5C.01} (fine type Formal/Identity \mE\ $+$ \mC\
+identifications $+$ \mO\ net questions). Wolfram: four exact mirrors (level-2 block census from the
+root data; rank/kernel arithmetic with $\dim V(\omega)=3875$ by Weyl; the glue-frame clock-class
+split $(1036,1024,1040,1024)$; threshold $+$ level-dial $+$ $D_8$ census) verified with the active
+engine the same day ($408\to412$); the exact Gram/PSD computation stays Python-side (flagged).
+\texttt{VerificationDag} qft node gains \texttt{v500}; registry $+$ \texttt{run\_all} (494 modules
+at this step, suite green). \texttt{SEAM.EQUIV.01} untouched; no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (IX) (\texttt{v499} --- the P2 weight-typing postulate HARDENED: the anchor $a=(1,1,2)$ typed as the Birkhoff--Grothendieck splitting exponents of the Deligne canonical extension, so integrality/positivity/sum-$4$ become theorems given the \mE\ anchors; the \texttt{v491} check-9 residual sharpened, the tfpt\_2 ``balanced'' selection typed as stability; Wolfram extension $403\to408$ (verified engine run); \emph{no gate closes, no marker moves --- \texttt{AX.P2.01} stays a declared axiom, \texttt{QGEO.SYM} stays \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v499\_p2\_weights\_deligne\_bg.py} (\texttt{P2.TYPING.01}, 23 checks, sympy exact,
+no floats).} \texttt{v491} reduced P2 to ``$3$ positive integers summing to $4$''; its residual was the
+\emph{typing} (why integers, why positive, why sum $4$). Now typed: given the \mE\ anchors ($4$ marks,
+\texttt{v216}; rank $3=\#\text{marks}-1$, \texttt{v137}/\texttt{v228}; cusp-class local monodromy
+$\lambda^3-1$ \emph{and} exact irreducibility $|\langle U,M_0\rangle|=24=|S_4|$, $\sum_g|\chi|^2=24$,
+\texttt{v117}; unitarity (U)), the Deligne canonical extension $E$ of the flavor connection satisfies:
+$\deg E=-4$ \emph{as a theorem} (residue exponents $\{0,\tfrac13,\tfrac23\}$ the unique lift to $[0,1)$,
+trace $1$ per mark; par-deg $0$; $\infty$ apparent, monodromy product $=\mathbf1$ exactly);
+$h^0(E)=0$ \emph{as a theorem} (Mehta--Seshadri stability; all $324$ section-saturation cases; BG
+dictionary $h^0{=}0\Leftrightarrow a_i\ge1$); integrality $=$ Birkhoff--Grothendieck. Hence
+$\{a\}=\{1,1,2\}$ unique and $\gcar=e_2=5$. \emph{Selector typed}: the Schur--Horn permutohedron has
+integer points exactly $\{(2,2,0),(2,1,1)\}$ (the two options of the tfpt\_2 ``Global computation''
+theorem) and $h^0{=}0$ kills $\{0,2,2\}$ --- the ``balanced/minimal-variance'' heuristic is now
+stability/positivity. \emph{The $h^1$ discrepancy, real and resolved}: $h^1(\mathcal
+O(-2){\oplus}\mathcal O(-1)^2)=1\neq3$, so ``generations $=H^1$ of the rank-$3$ bundle'' is FALSE
+(negative control: forcing it demands $\deg-6$ and loses uniqueness, $e_2\in\{9,11,12\}$ never $5$);
+correct two-object typing: $L=\mathcal O(-D)$ carries the generations ($h^1(L)=3=\Nfam$, the
+\texttt{v137} basis $=H^0(\Omega^1(\log D))$), $E$ carries them as its \emph{fiber}. \emph{Biswas
+explicit} (independent witness): the weight denominator $3=\Nfam$ forces the $\Z_3$ cusp cover
+$y^3=(z{-}1)(z{-}i)(z{+}1)^2(z{+}i)^2$ (genus $2$; NOT the pillowcase double, genus $1$, $j=1728$ ---
+the deck side); $p_*\mathcal O_Y=\mathcal O\oplus\mathcal O(-2)^2$; the regular-representation model
+lands on $\{0,2,2\}$ $=$ the \emph{unstable} Schur--Horn companion ($h^0=1$): integrality and the sum
+rule come \emph{out} of the correspondence, stability is the selector. \emph{Negative controls}: no
+positivity $\to4$/$31$ solutions; $\deg-3/-5$ breaks; $n$-mark scan $e_2=(n{-}2)(n{+}1)/2=5$ ONLY at
+$n=4$ (the value, not the uniqueness, is the $n{=}4$ content); MS-rational $e_2=\tfrac{16}3$,
+$\tfrac{44}9$. \emph{Honest residuals} (P2 stays an axiom): R1 module identification \mC\
+(\texttt{QGEO.SYM} territory), R2 (U) \mC\ (\texttt{v33}/\texttt{v40}), R3 analytic monodromy
+(Numerical, \texttt{v117} check 4); non-circular (neither \texttt{v23}'s splitting input nor
+\texttt{v115}'s $\operatorname{diag}A_0=a/4$ input used); the \texttt{v491} direction-reversal note
+carries over. Ledger: new row \texttt{P2.TYPING.01}; the \texttt{v491}/\texttt{P2.PARTITION.01} row
+records ``typing residual sharpened by \texttt{v499}'' (\texttt{v491} stays active, no supersede).
+Registry $+$ \texttt{run\_all} (493 modules, suite green).
+\item \textbf{Wolfram second path $+$ papers $+$ website.} Five exact mirrors added to the extension
+file \texttt{tfpt\_readouts\_extension.wl} (partition enumeration under the full typing $+$ naive-typing
+control $+$ $h^1$ discrepancy; Deligne residue-trace degree with the $A_0^\star$ witness char poly;
+Schur--Horn lattice points; Biswas $\Z_3$-cover degree arithmetic incl.\ deck double $j=1728$; the
+$n$-mark formula), verified with the active engine the same day ($403\to408$, \texttt{ALL WOLFRAM
+EXTENSION CHECKS PASSED}); \texttt{wolfram/README.md} $+$ \texttt{GATE.WOLFRAM.02} $+$
+\texttt{tfpt\_safeguards} Layer-6 count $+$ website counters ($116/116+408/408$). Papers (one sentence
+each, conservative): \texttt{introduction} anchor paragraph, \texttt{tfpt\_1} $(5,3)$ keybox,
+\texttt{tfpt\_2} H2 winbox \emph{and} the ``Global computation'' theorem (the balanced selection typed
+as stability), \texttt{origin\_theory} $(5,3)$ keybox --- all citing
+\texttt{v499\_p2\_weights\_deligne\_bg.py}; no status card changes. Website: \texttt{VerificationDag}
+P2 node gains \texttt{v499}; generated indices via build; no marker moved anywhere.
+\end{itemize}
+
+\subsection*{2026-07-21 (VIII) (Editorial: dedicated celestial-route section in Paper 3 $+$ website mirror --- the scattered celestial sentences consolidated into one coherent six-step section; \emph{no new scripts, no status changes, no marker moves, \texttt{SEAM.EQUIV.01} untouched})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{tfpt\_3\_e8\_audit\_bootstrap}: new section ``The celestial route: from the
+$\mu_4$ clock to the $(E_8)_1$ boundary shadow''.} The celestial-contract material that had accumulated
+as one long paragraph inside ``The M\"obius origin of the irreducible $\pi$'' is consolidated into a
+dedicated section (placed after the bootstrap audit, before ``Honest status''), telling the executed
+WP1--WP5b story in six typed steps: (1) setup --- the $E_8$ $\mu_4$-glue as a flat $\Z_4$ monodromy on
+the $A_3$ ALE space, clock$^2=$ deck (spin $\Z_8$, $8=2|\mu_4|$) \mE\ (\texttt{v492}); (2) deformation
+--- $XY=Z^4{+}a_0$ pure scale, $j=1728$ frozen, clock $=$ Picard--Lefschetz/Coxeter monodromy \mE\
+(\texttt{v493}); (3) consistency honestly demoted --- $(\kappa/\cthree)^2=12$ exact but the alignment
+format passes $8/8$: alignment survives, selectivity does not \mE/\mC\ (\texttt{v495}); (4) type
+mismatch $+$ boundary limit --- the $(E_8)_1$ character is not a jet-grading conformal block (growth
+$n^{2/3}$ vs $n^{1/2}$) but the $\mu_4$ period sum $248$ holds exactly: a boundary-limit shadow of
+\texttt{SEAM.EQUIV.01}/MMST shape \mE\ (\texttt{v496}); (5) the null ideal quantitative --- stabilisation
+threshold $w=n{+}1$, $27000=(h^\vee)^3$ derived, quotient $=$ sector sum $=4124$, $SO(16)_1$ contrast
+\mE\ (\texttt{v497}); (6) the deleting operator explicit --- $|s\rangle=(E^\theta_{-1})^2|0\rangle$,
+$J^a_1|s\rangle=0$ on all $248$ (tally $190/57/1$), level dial $2(1{-}k)$, one-block closure
+$E_8/\mu_4$-specific \mE\ (\texttt{v498}); plus the WP5c--e roadmap and the honest status line (the route
+does \emph{not} close \texttt{SEAM.EQUIV.01}; the GNS/limit question stays \mO). All pre-existing script
+citations (\texttt{v492}--\texttt{v498}) are carried into the new section; the M\"obius section now
+points to it with one sentence. \texttt{tfpt\_research\_contracts}: a reader's note at the head of the \texttt{CELEST.SEAM.01}
+contract cross-references the new Paper-3 section (the contract stays the full technical reference).
+\texttt{tfpt\_4\_frontier}: one sentence in the metric-sector keybox records the celestial route as a
+third, quantitative approach to the keystone (not closing it).
+\item \textbf{Website mirror.} \texttt{papers.ts}: the Paper-3 section list gains the celestial-route
+section (six-step summary in the existing style) and a ``Celestial route'' highlight; the contracts
+mirror gains the same cross-reference sentence. \texttt{glossary.ts}: three new entries (celestial
+route, ALE space, null ideal) in the established technical style. Generated indices via build; no
+status component changes (no marker moved anywhere).
+\end{itemize}
+
+\subsection*{2026-07-21 (VII) (CELEST.SEAM.01 WP5b executed and promoted: \texttt{v498} --- ``the singular vector as an operator'', the deleting object of the \texttt{v497} null ideal constructed explicitly and machine-verified singular; contract now WP1--WP4 $+$ WP5a $+$ WP5b done, WP5c--e \mO\ (roadmap); Wolfram extension $398\to403$ (verified engine run); \emph{no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} untouched})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v498\_celestial\_wp5b\_singular\_vector.py} (\texttt{CELEST.WP5B.01}, 53 checks,
+exact integer/Fraction, deterministic, no floats).} Success on the preregistered WP5b criterion: the
+deleting object exists and is explicit. \emph{Construction}: $|s\rangle=(E^\theta_{-1})^2|0\rangle$
+(weight $2\theta$, level $2=8$ quarter units $=q^2$, an \emph{integer} level) in a machine-built
+Chevalley/Frenkel--Kac basis --- bimultiplicative $2$-cocycle with asymmetry verified on all $57600$
+ordered root pairs, the $[e_\alpha,e_{-\alpha}]$ sign \emph{forced} by the Jacobi identity
+($\mathrm{SGN}=-1$, not chosen), the invariant form $\kappa$ derived
+($\kappa(\theta^\vee,\theta^\vee)=2$), Jacobi exact on all $57600$ $\mathfrak{sl}_2$-slice triples $+$
+$6000$ seeded $+$ all $496$ $\theta$-adjacent, all $N_{\alpha\beta}=\pm1$. \emph{Singularity
+(machine)}: $J^a_1|s\rangle=0$ for all $248$ basis elements ($0$ violations), with the case
+classification $190$ (first bracket) $/$ $57$ (second) $/$ $1$ ($a=F^\theta$ via the central-term
+cancellation --- the \emph{only} case that sees the level $k$); plus $J^a_2|s\rangle=0$,
+$E^a_0|s\rangle=0$, exact weight, Shapovalov norm $0$; the affine PBW engine unit-tested on all $61504$
+basis pairs. \emph{Level dial}: the $F^\theta_1$ coefficient is $2(1{-}k)$ --- $2/0/{-2}$ at $k=0/1/2$:
+without the central extension the deletion operator does not exist. \emph{$\mu_4$ data}: glue class
+$j(\theta)=1$ (machine-built $h$-adapted chamber, $\langle\theta,h\rangle=5$, height $29=h^\vee{-}1$),
+clock phase $i^{2j}=-1$, $\operatorname{class}(2\theta)=2$ sheet-even; the deleting
+$\theta$-$\mathfrak{sl}_2$ crosses the sheet-odd classes $(1,3)$ while its square is sheet-even;
+cross-table $\theta$-grading $\times$ glue class consistent (rows $(1,56,126,56,1)$, columns
+$(52,64,60,64)$); $8$ quarters $=q^2$ via the per-period dictionary. \emph{Level-2 match}: weight
+$2\theta$ has multiplicity $1$ in the level-$2$ Fock, so $U(\mathfrak g)|s\rangle$ is \emph{the}
+$27000=(h^\vee)^3$; the direct $\mathfrak g_0$-orbit BFS matches the Freudenthal multiplicities of
+$V(2\theta)$ exactly through depth $4$ (\mC\ Weyl complete reducibility beyond); quotient
+$31124-27000=4124$; lattice reading $(2\theta,2\theta)/2=4>2$: $|s\rangle$ \emph{is} the kernel
+generator of Fock $\to E_4/\eta^8$. \emph{Negative controls (honest separation)}: the level-$1$
+current state $E^\theta_{-1}|0\rangle$ (one witness, $\to-k|0\rangle$ --- the $248$-current state that
+must remain) and $4$ generic level-$2$ states ($14$--$33$ witnesses) are \emph{not} singular; at
+$k{=}2$ the \emph{cube} is (generic Kac $(E^\theta)^{k+1}$ mechanics, honestly typed); $SO(16)_1$ has
+the same singular vector but keeps three extra level-$1$ primaries ($h=\tfrac12$ breaks one-block
+fusion; $5304\neq14^3$) vs $E_8$ (comarks all $\ge2$, glue weights $(0,1,1,1)$ integer) --- the
+\emph{one-block closure} is the $E_8/\mu_4$-specific part. \emph{Honest} \mO: in the twisted
+quarter-slot moding two sector-$C_1$ modes never sum to $8$ quarters (minimum $6=q^{3/2}$) --- the
+per-period dictionary (\texttt{v496}), not the per-slot identification, carries $|s\rangle$ to $q^2$:
+exactly the WP5c GNS/limit-state question; WP5c--e stay open; \texttt{SEAM.EQUIV.01} untouched.
+\item \textbf{Contract $+$ surfaces synced.} \texttt{tfpt\_research\_contracts}: the WP5b bullet moved
+to \emph{done} with the key numbers (case tally $190/57/1$; level dial $2(1{-}k)$; $j(\theta)=1$, clock
+phase $-1$; orbit BFS through depth $4$; the $D_8$ contrast) and the twisted-slot tension as the
+explicit WP5c handover; honest status line and K4 paragraph updated (``WP1--WP4 $+$ WP5a $+$ WP5b
+executed; WP5c--e \mO''). \texttt{tfpt\_3\_e8\_audit\_bootstrap}: the celestial-contract paragraph
+extended by the WP5b sentence. Ledger: \texttt{CELEST.WP5B.01} (new) $+$ \texttt{CELEST.SEAM.01}
+(``WP1--WP4 $+$ WP5a $+$ WP5b executed; WP5c--e \mO\ (roadmap)''). Wolfram: 5 exact \texttt{v498}
+mirrors added to \texttt{tfpt\_readouts\_extension.wl} and \emph{verified} with the active engine the
+same day ($398\to403$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}); \texttt{wolfram/README.md} $+$
+\texttt{GATE.WOLFRAM.02} counters advanced; \texttt{tfpt\_safeguards} Layer-6 count $+$ website mirrors
+$116/116+403/403$. Website: \texttt{papers.ts} contract mirror (``WP1--WP4 $+$ WP5a $+$ WP5b done,
+WP5c--e roadmap''), DAG \texttt{qft} node $+$ \texttt{v498}, generated indices via build. Suite now
+492 scripts, all green; \texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
 \subsection*{2026-07-21 (VI) (CELEST.SEAM.01 WP5a executed and promoted: \texttt{v497} --- ``the null ideal from the limit'', the \texttt{v496} boundary-limit shadow made a precise coefficientwise limit and the level-2 null ideal derived from root data; contract WP5 subdivided, now WP1--WP4 $+$ WP5a done, WP5b--e \mO\ (roadmap); Wolfram extension $394\to398$ (verified engine run); \emph{no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} untouched})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v497\_celestial\_wp5a\_null\_ideal.py} (\texttt{CELEST.WP5A.01}, 34 checks, exact

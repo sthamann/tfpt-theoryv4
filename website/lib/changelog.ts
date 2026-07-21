@@ -47,6 +47,9040 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "XIV) ("
+      },
+      {
+        "k": "c",
+        "v": "v504"
+      },
+      {
+        "k": "t",
+        "v": " — WP5d-"
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " “split "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " strong additivity from the lattice” promoted as "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5DB.01"
+      },
+      {
+        "k": "t",
+        "v": ": the two remaining KLM legs of complete rationality witnessed for the orbifold prescription — strong additivity ALGEBRAICALLY EXACT with the shared boundary Majorana ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Even}(A)\\vee\\mathrm{Even}(B)=\\mathrm{Even}(A\\cup B)"
+      },
+      {
+        "k": "t",
+        "v": ", GF2 spans full, rank "
+      },
+      {
+        "k": "m",
+        "v": "32/32"
+      },
+      {
+        "k": "t",
+        "v": "; disjoint exactly index "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "c",
+        "v": "v501"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\ln2"
+      },
+      {
+        "k": "t",
+        "v": " bit), the entropic touching defect BOUNDED "
+      },
+      {
+        "k": "m",
+        "v": "<\\ln2"
+      },
+      {
+        "k": "t",
+        "v": " with the Ising "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac14"
+      },
+      {
+        "k": "t",
+        "v": "-exponent approach ("
+      },
+      {
+        "k": "m",
+        "v": "p=0.2444"
+      },
+      {
+        "k": "t",
+        "v": ") while the preregistered "
+      },
+      {
+        "k": "m",
+        "v": "U(1)"
+      },
+      {
+        "k": "t",
+        "v": "/Dirac control DIVERGES (Klich–Levitov pinned, infinite index), the split property at the elliptic-nome rate "
+      },
+      {
+        "k": "m",
+        "v": "\\pi K(1-x)/K(x)"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "1.3"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "2.0\\%"
+      },
+      {
+        "k": "t",
+        "v": ") with EXACT orbifold inheritance ("
+      },
+      {
+        "k": "m",
+        "v": "C\\to-C"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "\\Lambda^2C"
+      },
+      {
+        "k": "t",
+        "v": " compound — Longo heredity), and Pimsner–Popa "
+      },
+      {
+        "k": "m",
+        "v": "E(a)-a/2=PaP/2"
+      },
+      {
+        "k": "t",
+        "v": " identically ("
+      },
+      {
+        "k": "m",
+        "v": "\\lambda=\\tfrac12=1/[F{:}F_{\\mathrm{even}}]"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{E_4}=\\tfrac14=1/\\mu"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "e^{\\Delta_\\infty}=2=1/\\lambda_{\\mathrm{PP}}"
+      },
+      {
+        "k": "t",
+        "v": " — two independent index routes); with "
+      },
+      {
+        "k": "c",
+        "v": "v501"
+      },
+      {
+        "k": "t",
+        "v": " ALL THREE KLM ingredients carry lattice witnesses; the continuum uplift stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "— “finite-group orbifolds of completely rational nets are completely rational” is XU'S THEOREM, cited not claimed; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "424\\to429"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " stays Open, no marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v504_celestial_wp5d_klm_completeness.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5DB.01"
+            },
+            {
+              "k": "t",
+              "v": ", 37 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "12 s; numpy/scipy Gaussian machinery ED-validated "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " exact GF2/integer algebra; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Complete rationality (Kawahigashi–Longo–Müger) "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " split "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " strong additivity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " finite two-interval "
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-index; "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": " (WP5d-"
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": ") witnessed the index, "
+        },
+        {
+          "k": "c",
+          "v": "v504"
+        },
+        {
+          "k": "t",
+          "v": " witnesses the other two legs on the same critical Majorana seam edge, with the "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": "/Dirac number-conserving subnet as the preregistered negative control (the current net, where strong additivity famously "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fails"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the continuum — Buchholz–Schulz–Mirbach). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Strong additivity, exact algebra"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": “touching "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " shared boundary Majorana” gives "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Even}(A)\\vee\\mathrm{Even}(B)=\\mathrm{Even}(A\\cup B)"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY (GF2 spans full "
+        },
+        {
+          "k": "m",
+          "v": "64/64"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "256/256"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "512/512"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1024/1024"
+        },
+        {
+          "k": "t",
+          "v": "; literal matrix rank "
+        },
+        {
+          "k": "m",
+          "v": "32/32"
+        },
+        {
+          "k": "t",
+          "v": "); disjoint intervals give exactly HALF (rank "
+        },
+        {
+          "k": "m",
+          "v": "16/32"
+        },
+        {
+          "k": "t",
+          "v": ", index "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " — the missing sector "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{odd}\\otimes\\mathrm{odd}"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " bit, localised at the split point); the neutral "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " algebras do NOT generate the union even with the shared site (gaps "
+        },
+        {
+          "k": "m",
+          "v": "2/10/52"
+        },
+        {
+          "k": "t",
+          "v": ", growing). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Entropic witness"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the fermionic touching MI carries the pure UV point-gap law ("
+        },
+        {
+          "k": "m",
+          "v": "(c/3)\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " increments, "
+        },
+        {
+          "k": "m",
+          "v": "0.115525"
+        },
+        {
+          "k": "t",
+          "v": ", dev "
+        },
+        {
+          "k": "m",
+          "v": "1.2\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " — present for every net, no discriminator); the honest discriminator is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "bounded vs divergent"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": "/orbifold deficit rises "
+        },
+        {
+          "k": "m",
+          "v": "0.4045\\to0.5899"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "N=64\\to4096"
+        },
+        {
+          "k": "t",
+          "v": "), stays "
+        },
+        {
+          "k": "m",
+          "v": "<\\ln2"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "(\\ln2-\\Delta_2)\\sim N^{-p}"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "p=0.2444"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "2\\Delta_\\mu=\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": " (Ising disorder exponent); split-point scan reflection-symmetric to "
+        },
+        {
+          "k": "m",
+          "v": "3.9\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": "; ED vN same direction; gap continuity to the "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "x\\to1"
+        },
+        {
+          "k": "t",
+          "v": " endpoint; honest note: “defect "
+        },
+        {
+          "k": "m",
+          "v": "\\to0"
+        },
+        {
+          "k": "t",
+          "v": "” would be "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "false"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " at the sharp lattice split — bounded "
+        },
+        {
+          "k": "m",
+          "v": "\\Leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " finite index (Longo–Xu) is the correct statement; the "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " control bursts "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "L=128"
+        },
+        {
+          "k": "t",
+          "v": " and grows as "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12\\ln\\operatorname{Var}Q_A"
+        },
+        {
+          "k": "t",
+          "v": " (Klich–Levitov slope "
+        },
+        {
+          "k": "m",
+          "v": "0.10134"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "1/\\pi^2=0.10132"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Split/nuclearity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": coupling-block "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_k"
+        },
+        {
+          "k": "t",
+          "v": " fall exponentially at the elliptic-nome rate "
+        },
+        {
+          "k": "m",
+          "v": "\\pi K(1-x)/K(x)"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "1.3"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "2.0\\%"
+        },
+        {
+          "k": "t",
+          "v": " (rates "
+        },
+        {
+          "k": "m",
+          "v": "2.29/3.24/4.82/5.81"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "d=16/64/256/512"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_1\\sim x^{0.5044}"
+        },
+        {
+          "k": "t",
+          "v": " (vs "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": "); trace norm summable; dimerised control exponential. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Orbifold inheritance exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "P_A"
+        },
+        {
+          "k": "t",
+          "v": " flips "
+        },
+        {
+          "k": "m",
+          "v": "C\\to-C"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_k"
+        },
+        {
+          "k": "t",
+          "v": " identical, "
+        },
+        {
+          "k": "m",
+          "v": "8.3\\times10^{-17}"
+        },
+        {
+          "k": "t",
+          "v": ") and the even-bilinear coupling Gram is the second compound "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^2C"
+        },
+        {
+          "k": "t",
+          "v": " (singular values "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\sigma_a\\sigma_b\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "2.8\\times10^{-14}"
+        },
+        {
+          "k": "t",
+          "v": ") — the same ladder at doubled rate (Longo heredity, "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Pimsner–Popa, exact"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "E(a)-a/2=PaP/2"
+        },
+        {
+          "k": "t",
+          "v": " identically; attainment in integers (all "
+        },
+        {
+          "k": "m",
+          "v": "16384"
+        },
+        {
+          "k": "t",
+          "v": " (even, odd) monomial pairs at "
+        },
+        {
+          "k": "m",
+          "v": "N=8"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "8192"
+        },
+        {
+          "k": "t",
+          "v": " extremal with "
+        },
+        {
+          "k": "m",
+          "v": "M^2=4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Tr}M=0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "PMP=-M"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations; "
+        },
+        {
+          "k": "m",
+          "v": "2048/2048"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N=12"
+        },
+        {
+          "k": "t",
+          "v": "; pencil "
+        },
+        {
+          "k": "m",
+          "v": "\\min\\lambda=0.5000000000"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{E_4}=\\tfrac14=1/\\mu"
+        },
+        {
+          "k": "t",
+          "v": "; index consistency "
+        },
+        {
+          "k": "m",
+          "v": "e^{\\Delta_\\infty}=2.000000000=\n1/\\lambda_{\\mathrm{PP}}"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "e^{2\\Delta_\\infty}=4=\\mu"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=1/(m{+}1)\\to0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Controls "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " honesty"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": dimerised phase trivial (drift "
+        },
+        {
+          "k": "m",
+          "v": "3.6\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "); wrong prescription "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,P_{AB}\\}"
+        },
+        {
+          "k": "t",
+          "v": " deficit exactly "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " finite-size honesty ("
+        },
+        {
+          "k": "m",
+          "v": "14.9\\%"
+        },
+        {
+          "k": "t",
+          "v": " below "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N=4096"
+        },
+        {
+          "k": "t",
+          "v": " — witness, not proof). VERDICT: with "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": " all THREE KLM ingredients of complete rationality are witnessed on the lattice; the continuum theorem for finite-group orbifolds is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Xu's"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (cited, not claimed), the concrete seam quotient net and the condensed "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " net stay WP5e/Costello–Li."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5DB.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " updated to “WP5d: "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "-index) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " (split "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " strong additivity) executed via "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v504"
+        },
+        {
+          "k": "t",
+          "v": " — all three KLM ingredients witnessed on the lattice; continuum uplift stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(Xu's theorem cited)” at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unchanged"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Open status. Papers: contracts WP5d bullet "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " “both stages done” with the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": "-stage numbers "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Xu fence (kill-test and honest-success paragraphs consistent); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial section becomes the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "ten"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "-step story (new Step 10 “the KLM completion on the lattice”, “what remains” "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " WP5e twistor inflow only); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": " keystone note updated. Wolfram: five mirrors (GF2 span theorem; Pimsner–Popa identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " attainment on explicit gamma matrices; two-interval group "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{E_4}=\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " index consistency; the "
+        },
+        {
+          "k": "m",
+          "v": "\\Lambda^2"
+        },
+        {
+          "k": "t",
+          "v": "/Minors compound with Cauchy–Binet and "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Minors}[-C,2]=\\mathrm{Minors}[C,2]"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "U(1)"
+        },
+        {
+          "k": "t",
+          "v": " dephasing "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=1/(m{+}1)"
+        },
+        {
+          "k": "t",
+          "v": " family) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "424\\to429"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); the lattice curves stay Python-only (flagged). "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " qft node gains "
+        },
+        {
+          "k": "c",
+          "v": "v504"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (498 modules, suite green). No gate closes, no marker moves — "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "XIII) ("
+      },
+      {
+        "k": "c",
+        "v": "v503"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "c",
+        "v": "v215"
+      },
+      {
+        "k": "t",
+        "v": " deferred emergence test (lever 7) executed "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "light"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " and promoted as "
+      },
+      {
+        "k": "c",
+        "v": "QGEO.EMERGE.LIGHT.01"
+      },
+      {
+        "k": "t",
+        "v": ": NO dynamical selection of the square modulus — the free field's global "
+      },
+      {
+        "k": "m",
+        "v": "\\det{}'"
+      },
+      {
+        "k": "t",
+        "v": " winner is the "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "hexagonal"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " torus, "
+      },
+      {
+        "k": "m",
+        "v": "\\tau{=}i"
+      },
+      {
+        "k": "t",
+        "v": " is a saddle, criticality at the square is Palais symmetry; the square is pinned by "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "rigidity"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " alone (the raw DtN is mod-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " block-diagonal "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "iff"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\tau{=}i"
+      },
+      {
+        "k": "t",
+        "v": ", an isolated zero); and the residual "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "converges"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ": QGEO-R1 "
+      },
+      {
+        "k": "m",
+        "v": "\\equiv"
+      },
+      {
+        "k": "t",
+        "v": " P2-R1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " one common rest, “why does the raw seam carry the order-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " clock”; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "420\\to424"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — "
+          },
+          {
+            "k": "c",
+            "v": "QGEO.REALIZE.01"
+          },
+          {
+            "k": "t",
+            "v": " stays "
+          },
+          {
+            "k": "s",
+            "v": "C"
+          },
+          {
+            "k": "t",
+            "v": "/"
+          },
+          {
+            "k": "s",
+            "v": "O"
+          },
+          {
+            "k": "t",
+            "v": ", "
+          },
+          {
+            "k": "c",
+            "v": "AX.P2.01"
+          },
+          {
+            "k": "t",
+            "v": " stays a declared axiom"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v503_qgeo_emergence_light.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "QGEO.EMERGE.LIGHT.01"
+            },
+            {
+              "k": "t",
+              "v": ", 17 checks; mpmath "
+            },
+            {
+              "k": "m",
+              "v": "40"
+            },
+            {
+              "k": "t",
+              "v": " digits "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "c",
+              "v": "v280"
+            },
+            {
+              "k": "t",
+              "v": "-style lattice DtN "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " sympy exact)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": " lever 7 (“the decisive kill is deferred: compute the raw seam-collar DtN "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "without"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " inputting the marks and check whether four square marks "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "emerge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "”) executed in its first honest "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "light"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " version. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "No dynamical selection"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\log F=\\log(\\tau_2|\\eta|^4)"
+        },
+        {
+          "k": "t",
+          "v": " (Osgood–Phillips–Sarnak) is exactly "
+        },
+        {
+          "k": "m",
+          "v": "S"
+        },
+        {
+          "k": "t",
+          "v": "-invariant (dev "
+        },
+        {
+          "k": "m",
+          "v": "<10^{-35}"
+        },
+        {
+          "k": "t",
+          "v": "), so "
+        },
+        {
+          "k": "m",
+          "v": "t{=}1"
+        },
+        {
+          "k": "t",
+          "v": " is symmetry-forced critical on the rectangular family "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=it"
+        },
+        {
+          "k": "t",
+          "v": "; there "
+        },
+        {
+          "k": "m",
+          "v": "g''(1)=-1.298<0"
+        },
+        {
+          "k": "t",
+          "v": " (strict maximum) but the "
+        },
+        {
+          "k": "m",
+          "v": "\\tau_1"
+        },
+        {
+          "k": "t",
+          "v": "-direction has "
+        },
+        {
+          "k": "m",
+          "v": "h''(0)=+0.298>0"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "saddle"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the full moduli space; the only critical points are the CM points ("
+        },
+        {
+          "k": "m",
+          "v": "E_2^*(i)=E_2^*(\\rho)=0"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": " digits, generic "
+        },
+        {
+          "k": "m",
+          "v": "0.163\\neq0"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "global"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\det{}'"
+        },
+        {
+          "k": "t",
+          "v": " winner at fixed area is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "hexagonal"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " torus ("
+        },
+        {
+          "k": "m",
+          "v": "\\log F(\\rho)=-1.03352>\\log\nF(i)=-1.05469"
+        },
+        {
+          "k": "t",
+          "v": ", diff "
+        },
+        {
+          "k": "m",
+          "v": "0.021169"
+        },
+        {
+          "k": "t",
+          "v": "); criticality at the square is Palais symmetric criticality (the independent heat trace is equally critical). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Sharp rigidity"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the DtN mod-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " off-character indicator (the "
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": "-K3 lever as a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "modulus function"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ") vanishes to "
+        },
+        {
+          "k": "m",
+          "v": "8\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " exactly at "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " and rises strictly monotonically both ways (min "
+        },
+        {
+          "k": "m",
+          "v": "8.4\\times10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " away) — an isolated zero; "
+        },
+        {
+          "k": "m",
+          "v": "R^2=\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " exact as permutation matrices (the "
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_8"
+        },
+        {
+          "k": "t",
+          "v": " bridge on the lattice); "
+        },
+        {
+          "k": "m",
+          "v": "j(it)\\ge1728"
+        },
+        {
+          "k": "t",
+          "v": " with equality only at "
+        },
+        {
+          "k": "m",
+          "v": "t{=}1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "\\Z_2"
+            },
+            {
+              "k": "t",
+              "v": " chain is modulus-blind"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " marks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "[\\Z_2,\\Delta_t]=0"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " torus ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": " confirmed without mark input); pillowcase "
+        },
+        {
+          "k": "m",
+          "v": "\\det{}'=\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " torus "
+        },
+        {
+          "k": "m",
+          "v": "\\det{}'"
+        },
+        {
+          "k": "t",
+          "v": " exactly ("
+        },
+        {
+          "k": "m",
+          "v": "\\pm"
+        },
+        {
+          "k": "t",
+          "v": "-pair structure) — only the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock distinguishes "
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Aut}(E_\\rho)=\\Z_6"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "no"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " element (the dynamical winner cannot carry the clock); given the clock the modulus freezes automatically ("
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": " identically, "
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": " mini). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Residual convergence (the core finding)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " element on "
+        },
+        {
+          "k": "m",
+          "v": "H^1"
+        },
+        {
+          "k": "t",
+          "v": " is a Coxeter element of "
+        },
+        {
+          "k": "m",
+          "v": "W(A_3)"
+        },
+        {
+          "k": "t",
+          "v": " (char poly "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^3{+}\\lambda^2{+}\\lambda{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", order "
+        },
+        {
+          "k": "m",
+          "v": "4=|\\mu_4|=\\Nfam{+}1"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the P2 cusp-class carrier datum of "
+        },
+        {
+          "k": "c",
+          "v": "v499"
+        },
+        {
+          "k": "t",
+          "v": " R1 "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "QGEO-R1 "
+            },
+            {
+              "k": "m",
+              "v": "\\equiv"
+            },
+            {
+              "k": "t",
+              "v": " P2-R1, one common residual"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; chain: marks derived ("
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "), square derived "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "given"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the clock ("
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": "), clock "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " carrier input ["
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "], rest "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " its dynamical realisation "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; route classification ("
+        },
+        {
+          "k": "c",
+          "v": "v347"
+        },
+        {
+          "k": "t",
+          "v": " analogue): B-rigidity in the sharpened form “RP seam data "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock” is the live route. "
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": " lever 7 thereby moves from “deferred, not executable” to “light version executed: rigidity, not dynamical selection” — documented in "
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v215"
+        },
+        {
+          "k": "t",
+          "v": " itself unchanged."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EMERGE.LIGHT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REALIZE.01"
+        },
+        {
+          "k": "t",
+          "v": " text "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "precised"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (rest "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock, identical with the P2 typing rest R1; square "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " mark count derived) at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unchanged"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " marker "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; cross-reference added in "
+        },
+        {
+          "k": "c",
+          "v": "P2.TYPING.01"
+        },
+        {
+          "k": "t",
+          "v": " (convergence theorem). Papers: contracts kill-test paragraph (lever-7 light result "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the residual-convergence sentence, both with "
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 2 (light-converse sentence), "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " necessity paragraph, "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " one-residual cross-references. Wolfram: four mirrors (CM-point identities "
+        },
+        {
+          "k": "m",
+          "v": "E_2(i)=3/\\pi"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E_2(\\rho)=2\\sqrt3/\\pi"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "E_2^*=0"
+        },
+        {
+          "k": "t",
+          "v": " exact, "
+        },
+        {
+          "k": "m",
+          "v": "j"
+        },
+        {
+          "k": "t",
+          "v": "/DedekindEta special values; the no-dynamical-selection witnesses; the pillowcase halving as an exact algebraic identity; clock "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " square "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "420\\to424"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); the lattice DtN curves stay Python-only (flagged). "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " masses node gains "
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (497 modules, suite green). No gate closes, no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "XII) ("
+      },
+      {
+        "k": "c",
+        "v": "v502"
+      },
+      {
+        "k": "t",
+        "v": " — WP5e-"
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " “prefactor and level bookkeeping” promoted as "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5E.ALPHA.01"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "q^{-1/3}"
+      },
+      {
+        "k": "t",
+        "v": " prefactor of "
+      },
+      {
+        "k": "m",
+        "v": "E_4/\\eta^8"
+      },
+      {
+        "k": "t",
+        "v": " IS exact "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " vacuum-energy bookkeeping (the clock is inner "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " shift orbifold "
+      },
+      {
+        "k": "m",
+        "v": "\\theta=0^8"
+      },
+      {
+        "k": "t",
+        "v": ", common "
+      },
+      {
+        "k": "m",
+        "v": "-c/24=-\\tfrac13"
+      },
+      {
+        "k": "t",
+        "v": "; discriminant form "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Casimir via spectral flow AND "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": "-Majorana free fermions), and "
+      },
+      {
+        "k": "m",
+        "v": "k=1"
+      },
+      {
+        "k": "t",
+        "v": " is forced THREE independent ways (current condition; conformal embedding; central charge "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the prefactor itself; plus the WP5b singular-vector dial "
+      },
+      {
+        "k": "m",
+        "v": "31124-27000=4124"
+      },
+      {
+        "k": "t",
+        "v": "); honest sharpening: glue-"
+      },
+      {
+        "k": "m",
+        "v": "h"
+      },
+      {
+        "k": "t",
+        "v": " integrality holds for ALL "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " and fixes nothing; the BCOV/Costello–Li twistor inflow stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "— WP5e is subdivided ("
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " done, WP5e proper open); Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "416\\to420"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v502_celestial_wp5e_prefactor_level.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5E.ALPHA.01"
+            },
+            {
+              "k": "t",
+              "v": ", 33 checks, exact sympy/Fraction, no floats)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The two exactly computable consistency anchors of the WP5e twistor uplift established. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Part A — the prefactor"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Hurwitz-"
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": " exact ("
+        },
+        {
+          "k": "m",
+          "v": "\\zeta(-1,\\theta)=-B_2(\\theta)/2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "E_b(\\theta)=-\\tfrac1{24}+\\theta(1-\\theta)/4"
+        },
+        {
+          "k": "t",
+          "v": "; Ising shift "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac1{16}"
+        },
+        {
+          "k": "t",
+          "v": " per Majorana); the clock is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "inner"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "h=(2,2,2,2,2;0^4)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "h'=(0^5;1,1,1,-3)"
+        },
+        {
+          "k": "t",
+          "v": " both read the class mod "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots; "
+        },
+        {
+          "k": "m",
+          "v": "(h,h)=20"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "(h',h')=12"
+        },
+        {
+          "k": "t",
+          "v": ", sum "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " twist "
+        },
+        {
+          "k": "m",
+          "v": "\\theta=0^8"
+        },
+        {
+          "k": "t",
+          "v": " in all four sectors — a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "shift"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " orbifold, NOT a rotation orbifold — so "
+        },
+        {
+          "k": "m",
+          "v": "E_{\\mathrm{osc}}=-\\tfrac13=-c/24"
+        },
+        {
+          "k": "t",
+          "v": " is sector-independent ("
+        },
+        {
+          "k": "m",
+          "v": "c=8="
+        },
+        {
+          "k": "t",
+          "v": " rank "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Sugawara "
+        },
+        {
+          "k": "m",
+          "v": "248/31"
+        },
+        {
+          "k": "t",
+          "v": "; one common "
+        },
+        {
+          "k": "m",
+          "v": "\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": "); sector ground exponents "
+        },
+        {
+          "k": "m",
+          "v": "-\\tfrac13+(0,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "discriminant form "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " Casimir energy"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " two ways (spectral flow "
+        },
+        {
+          "k": "m",
+          "v": "j^2(h,h)/32"
+        },
+        {
+          "k": "t",
+          "v": " mod "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "; free fermions exact: "
+        },
+        {
+          "k": "m",
+          "v": "D_5=10"
+        },
+        {
+          "k": "t",
+          "v": " Majorana "
+        },
+        {
+          "k": "m",
+          "v": "\\to\\tfrac58"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "A_3=D_3=6\\to\\tfrac38"
+        },
+        {
+          "k": "t",
+          "v": ", glue diagonal "
+        },
+        {
+          "k": "m",
+          "v": "=16=2^{\\gcar-1}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the WP5d seam carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\to1"
+        },
+        {
+          "k": "t",
+          "v": "); the rotation reading "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fails"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (deck "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac3{16}\\neq\\tfrac38"
+        },
+        {
+          "k": "t",
+          "v": " — “clock "
+        },
+        {
+          "k": "m",
+          "v": "\\neq"
+        },
+        {
+          "k": "t",
+          "v": " deck” at the Casimir level); the four sector characters sum exactly to "
+        },
+        {
+          "k": "m",
+          "v": "E_4/\\eta^8=q^{-1/3}(1,248,4124,34752)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Part B — the level"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "k=1"
+        },
+        {
+          "k": "t",
+          "v": " forced three independent ways — (i) the current condition "
+        },
+        {
+          "k": "m",
+          "v": "h(J)=k=1"
+        },
+        {
+          "k": "t",
+          "v": " (adjoint closure "
+        },
+        {
+          "k": "m",
+          "v": "60{+}64{+}60{+}64=248"
+        },
+        {
+          "k": "t",
+          "v": " at spin "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "); (ii) the conformal embedding ("
+        },
+        {
+          "k": "m",
+          "v": "47k^2{+}219k{-}266=47(k{-}1)(k{+}266/47)=0"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "128k(1{-}k)=0"
+        },
+        {
+          "k": "t",
+          "v": "); (iii) "
+        },
+        {
+          "k": "m",
+          "v": "c=8\\Leftrightarrow240(k{-}1)=0"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the prefactor); plus the "
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": " singular-vector dial ("
+        },
+        {
+          "k": "m",
+          "v": "\\|(E^\\theta_{-1})^m0\\|^2=m!\\,k(k{-}1)\\cdots(k{-}m{+}1)"
+        },
+        {
+          "k": "t",
+          "v": ", singular vector at grade "
+        },
+        {
+          "k": "m",
+          "v": "k{+}1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "31124-27000=4124"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "k{=}1"
+        },
+        {
+          "k": "t",
+          "v": " only, "
+        },
+        {
+          "k": "m",
+          "v": "\\langle s|s\\rangle=+4"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "k{=}2"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest sharpening (mandatory)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": glue-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " integrality "
+        },
+        {
+          "k": "m",
+          "v": "h(J^j;k)=k\\,(0,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " is integer for ALL "
+        },
+        {
+          "k": "m",
+          "v": "k=1..8"
+        },
+        {
+          "k": "t",
+          "v": " — the originally conjectured integrality route fixes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "nothing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; the three other dials carry. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "D_8/SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " (same "
+        },
+        {
+          "k": "m",
+          "v": "c=8"
+        },
+        {
+          "k": "t",
+          "v": ", SAME "
+        },
+        {
+          "k": "m",
+          "v": "q^{-1/3}"
+        },
+        {
+          "k": "t",
+          "v": " prefactor, but "
+        },
+        {
+          "k": "m",
+          "v": "h=(0,\\tfrac12,1,1)"
+        },
+        {
+          "k": "t",
+          "v": ": the discriminator is glue-"
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": " integrality, not the prefactor; "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta_{D_8}+\\Theta_s=E_4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": " rotation ("
+        },
+        {
+          "k": "m",
+          "v": "E=+\\tfrac16"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "h=\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " rotation (sector-dependent "
+        },
+        {
+          "k": "m",
+          "v": "(-\\tfrac13,\\tfrac1{24},\\tfrac16,\\tfrac1{24})"
+        },
+        {
+          "k": "t",
+          "v": " — the common prefactor breaks); wrong "
+        },
+        {
+          "k": "m",
+          "v": "k\\in\\{2,3,4\\}"
+        },
+        {
+          "k": "t",
+          "v": " fails all five dials coherently (residuals "
+        },
+        {
+          "k": "m",
+          "v": "360/814/1362"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\langle\ns|s\\rangle=4/12/24"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "31124\\neq4124"
+        },
+        {
+          "k": "t",
+          "v": "). ["
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "] Kac generation for "
+        },
+        {
+          "k": "m",
+          "v": "k\\ge3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "k=1,2"
+        },
+        {
+          "k": "t",
+          "v": " machine-anchored by WP5b/WP5c). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the BCOV/Costello–Li twistor inflow itself (Costello's one-loop axion "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_g/(8\\pi\\sqrt3)"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb{PT}"
+        },
+        {
+          "k": "t",
+          "v": ", the Costello–Paquette–Sharma level-from-flux mechanism) — v502 anchors the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "CFT side"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of WP5e only; the KILL branch (“inflow demands a level "
+        },
+        {
+          "k": "m",
+          "v": "\\neq1"
+        },
+        {
+          "k": "t",
+          "v": "”) is not triggered on the CFT side, its twistor side is untested."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the WP5e bullet "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "subdivided"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — “WP5e-"
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " (done) "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": ": the CFT-side prefactor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " level pinning” with the core numbers and "
+        },
+        {
+          "k": "c",
+          "v": "v502_celestial_wp5e_prefactor_level.py"
+        },
+        {
+          "k": "t",
+          "v": "; “WP5e proper "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ": the twistor inflow”; summit header, honest-success paragraph and status roster updated (“WP5a–WP5d plus WP5e-"
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " landed; WP5e proper the remaining open piece”). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial section: new Step 9 (prefactor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " level, one paragraph); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": " keystone note updated. Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.ALPHA.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " status "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " “WP5e: alpha stage (CFT-side prefactor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " level pinning) executed via v502; the BCOV/twistor inflow itself stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "”. Wolfram: four exact mirrors (Hurwitz-"
+        },
+        {
+          "k": "m",
+          "v": "\\zeta"
+        },
+        {
+          "k": "t",
+          "v": " vacuum energies; discriminant "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Casimir with the deck failure; the "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": "-fixing equations incl. the “fixes nothing” integrality table; the character sums "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " control) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "416\\to420"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count and the website counters ("
+        },
+        {
+          "k": "m",
+          "v": "116/116+424/424"
+        },
+        {
+          "k": "t",
+          "v": " after (XIII)) updated; "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " qft node gains "
+        },
+        {
+          "k": "c",
+          "v": "v502"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (497 modules, suite green). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "XI) ("
+      },
+      {
+        "k": "c",
+        "v": "v501"
+      },
+      {
+        "k": "t",
+        "v": " — WP5d-"
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " “the two-interval index from the lattice” promoted as "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5D.01"
+      },
+      {
+        "k": "t",
+        "v": ": the KLM Haag-duality discriminator measured entropically on the seam edge — the "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": "-layer carrier saturates the "
+      },
+      {
+        "k": "m",
+        "v": "\\ln2"
+      },
+      {
+        "k": "t",
+        "v": " offset at machine precision, "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_{\\mathrm{gauged}}=4="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "c",
+        "v": "v490"
+      },
+      {
+        "k": "t",
+        "v": " census, and the condensation arithmetic "
+      },
+      {
+        "k": "m",
+        "v": "16\\to4\\to1"
+      },
+      {
+        "k": "t",
+        "v": " closes with "
+      },
+      {
+        "k": "m",
+        "v": "\\mu=1"
+      },
+      {
+        "k": "t",
+        "v": "; the preregistered KILL (“"
+      },
+      {
+        "k": "m",
+        "v": "\\mu"
+      },
+      {
+        "k": "t",
+        "v": "-offset "
+      },
+      {
+        "k": "m",
+        "v": "\\neq0"
+      },
+      {
+        "k": "t",
+        "v": " after condensation”) does NOT fire; contract now “WP1–WP5d executed; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "WP5e the single remaining milestone"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": "”; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "412\\to416"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v501_celestial_wp5d_two_interval_index.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5D.01"
+            },
+            {
+              "k": "t",
+              "v": ", 39 checks, numpy/scipy Gaussian machinery "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " exact Fractions)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The WP5d roadmap discriminator — "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1\\Rightarrow\\mu{=}1"
+        },
+        {
+          "k": "t",
+          "v": " (Haag-dual two-interval net, one sector) vs "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1\\Rightarrow\\mu{=}4"
+        },
+        {
+          "k": "t",
+          "v": " — executed at the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " (lattice-index) stage on the "
+        },
+        {
+          "k": "c",
+          "v": "v367"
+        },
+        {
+          "k": "t",
+          "v": " seam edge ("
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " critical Majorana layers, "
+        },
+        {
+          "k": "m",
+          "v": "c_-=8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v450"
+        },
+        {
+          "k": "t",
+          "v": "-style ring; Peschel-exact, every Gaussian formula ED-validated to "
+        },
+        {
+          "k": "m",
+          "v": "\\le1.5\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": "; the superselection identity "
+        },
+        {
+          "k": "m",
+          "v": "[\\rho,P_{AB}]=0"
+        },
+        {
+          "k": "t",
+          "v": " machine-exact). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "\\mu=1"
+            },
+            {
+              "k": "t",
+              "v": " reference"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the fermionic (fixed-spin-structure) two-interval mutual information is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "extensive"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": " fit "
+        },
+        {
+          "k": "m",
+          "v": "0.5000"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\max|F(x)|=5.97\\times10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N{=}512"
+        },
+        {
+          "k": "t",
+          "v": ", falling monotonically to "
+        },
+        {
+          "k": "m",
+          "v": "1.3\\times10^{-6}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N{=}1024"
+        },
+        {
+          "k": "t",
+          "v": " (Casini–Huerta extensivity as a lattice witness). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "\\mu"
+            },
+            {
+              "k": "t",
+              "v": "-offset"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Rényi-2 exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\Delta_2=-\\ln[(1{+}R)/2]"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-layer seam carrier saturates "
+        },
+        {
+          "k": "m",
+          "v": "\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " at machine precision ("
+        },
+        {
+          "k": "m",
+          "v": "|\\Delta_2-\\ln2|=1.1\\times10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "N{=}512"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "R\\sim\nN^{-0.500}"
+        },
+        {
+          "k": "t",
+          "v": "); index reading "
+        },
+        {
+          "k": "m",
+          "v": "[F:F_{\\mathrm{even}}]=2.000000"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_{\\mathrm{gauged}}=4.000000"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "c",
+          "v": "v490"
+        },
+        {
+          "k": "t",
+          "v": " parity census ("
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "two independent lattice witnesses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "); per-layer gauging costs "
+        },
+        {
+          "k": "m",
+          "v": "16\\ln2"
+        },
+        {
+          "k": "t",
+          "v": " (the offset measures "
+        },
+        {
+          "k": "m",
+          "v": "\\ln[\\text{index}]"
+        },
+        {
+          "k": "t",
+          "v": ", not a blob). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Haag-duality indicator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": fermionic "
+        },
+        {
+          "k": "m",
+          "v": "S(E)=S(E')"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "8.2\\times10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": "; the orbifold "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "breaks"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " complementarity ("
+        },
+        {
+          "k": "m",
+          "v": "D(E)-D(E')=0.427"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "a{=}64"
+        },
+        {
+          "k": "t",
+          "v": "); the complementary-pair sum is exchange-symmetric and "
+        },
+        {
+          "k": "m",
+          "v": "\\le\\ln4=\n\\ln\\mu(SO(16)_1)"
+        },
+        {
+          "k": "t",
+          "v": " with max "
+        },
+        {
+          "k": "m",
+          "v": "1.2637"
+        },
+        {
+          "k": "t",
+          "v": " at the self-dual "
+        },
+        {
+          "k": "m",
+          "v": "x=\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " — a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "double-limit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " statement (the first naive fixed-"
+        },
+        {
+          "k": "m",
+          "v": "x"
+        },
+        {
+          "k": "t",
+          "v": " check was wrong and was replaced — honestly typed in the module). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Condensation arithmetic anchored at both measured ends"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\det\\mathrm{Cartan}(D_5)\\cdot\\det\n\\mathrm{Cartan}(A_3)=16"
+        },
+        {
+          "k": "t",
+          "v": "; KLM/Longo–Rehren "
+        },
+        {
+          "k": "m",
+          "v": "16/4^2=1"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "16/2^2=4\\to4/2^2=1"
+        },
+        {
+          "k": "t",
+          "v": " (both routes exact); "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma d_i^2=(4,4,1)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_v=1"
+        },
+        {
+          "k": "t",
+          "v": " exactly at "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=2c_-=16"
+        },
+        {
+          "k": "t",
+          "v": ", rivals "
+        },
+        {
+          "k": "m",
+          "v": "\\neq1"
+        },
+        {
+          "k": "t",
+          "v": " — so "
+        },
+        {
+          "k": "m",
+          "v": "\\mu=1"
+        },
+        {
+          "k": "t",
+          "v": " after condensation (["
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "] the condensed net is interacting, the "
+        },
+        {
+          "k": "c",
+          "v": "v490"
+        },
+        {
+          "k": "t",
+          "v": " fence): KILL not triggered. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\nu{=}1"
+        },
+        {
+          "k": "t",
+          "v": " single Majorana (offset non-removable, "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_v=e^{i\\pi/8}\\neq1"
+        },
+        {
+          "k": "t",
+          "v": " — the discriminator has teeth); trivial phase (all "
+        },
+        {
+          "k": "m",
+          "v": "\\le10^{-7}"
+        },
+        {
+          "k": "t",
+          "v": "); wrong sector sum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,P_{AB}\\}"
+        },
+        {
+          "k": "t",
+          "v": " (offset exactly "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "WP5d-"
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " (continuum Haag duality / local normality / split of the quotient net; runs as exploration) and WP5e (Costello–Li) stay open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the WP5d bullet "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " “"
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " stage done” with the core numbers and "
+        },
+        {
+          "k": "c",
+          "v": "v501_celestial_wp5d_two_interval_index.py"
+        },
+        {
+          "k": "t",
+          "v": "; status line and honest-success paragraph now “four of five milestones landed; WP5e (twistor uplift) is the remaining open piece”. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial section: new Step 8 (one paragraph, conservative); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4"
+        },
+        {
+          "k": "t",
+          "v": " keystone note updated to WP1–WP5d. Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5D.01"
+        },
+        {
+          "k": "t",
+          "v": " (fine types Formal "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Lattice/Numerical "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " ["
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "] dictionary); "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " status "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " “WP1–WP5d executed; WP5e "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(single remaining milestone)”. Wolfram: four exact mirrors (Cartan determinants; KLM/Longo–Rehren quotients; "
+        },
+        {
+          "k": "m",
+          "v": "\\Sigma d^2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " index-reading arithmetic; "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-fold-way "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_v"
+        },
+        {
+          "k": "t",
+          "v": ") verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "412\\to416"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); the lattice curves stay Python-only (flagged). "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count and the website counters ("
+        },
+        {
+          "k": "m",
+          "v": "116/116+416/416"
+        },
+        {
+          "k": "t",
+          "v": ") updated; "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " qft node gains "
+        },
+        {
+          "k": "c",
+          "v": "v501"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (495 modules, suite green). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "X) ("
+      },
+      {
+        "k": "c",
+        "v": "v500"
+      },
+      {
+        "k": "t",
+        "v": " — WP5c of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " “the GNS limit state” promoted as "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5C.01"
+      },
+      {
+        "k": "t",
+        "v": ": the quasi-free family "
+      },
+      {
+        "k": "m",
+        "v": "\\omega_w"
+      },
+      {
+        "k": "t",
+        "v": " exists, is positive, stabilises exactly at the WP5a threshold, and its limit carries the null ideal in its GNS kernel — the full "
+      },
+      {
+        "k": "m",
+        "v": "9361"
+      },
+      {
+        "k": "t",
+        "v": "-block exact level-2 Gram has rank "
+      },
+      {
+        "k": "m",
+        "v": "4124"
+      },
+      {
+        "k": "t",
+        "v": " exactly with kernel "
+      },
+      {
+        "k": "m",
+        "v": "27000=V(2\\theta)"
+      },
+      {
+        "k": "t",
+        "v": " weight by weight; "
+      },
+      {
+        "k": "m",
+        "v": "|s\\rangle"
+      },
+      {
+        "k": "t",
+        "v": " IS the GNS zero vector (the WP5b S4.10 tension resolved at the state level); a CCR obstruction proves the family formulation "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "necessary"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": "; preregistered SUCCESS criterion met, KILL not triggered; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "408\\to412"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v500_celestial_wp5c_gns_limit_state.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5C.01"
+            },
+            {
+              "k": "t",
+              "v": ", 35 checks, exact integer/Fraction, no floats, deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " WP5a ("
+        },
+        {
+          "k": "c",
+          "v": "v497"
+        },
+        {
+          "k": "t",
+          "v": ") made the boundary limit precise, WP5b ("
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": ") built the deleting operator; WP5c constructs the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "state"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_w"
+        },
+        {
+          "k": "t",
+          "v": " is quasi-free: loop sector "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the affine "
+        },
+        {
+          "k": "m",
+          "v": "k{=}1"
+        },
+        {
+          "k": "t",
+          "v": " vacuum "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-point functions via the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "machine-determined"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " compact anti-involution "
+        },
+        {
+          "k": "m",
+          "v": "\\theta(e_\\alpha)={-}e_{-\\alpha}"
+        },
+        {
+          "k": "t",
+          "v": " (the unique sign that is an anti-automorphism on all "
+        },
+        {
+          "k": "m",
+          "v": "61504"
+        },
+        {
+          "k": "t",
+          "v": " basis pairs; contravariance exact); radial sector "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " oscillator pairings "
+        },
+        {
+          "k": "m",
+          "v": "x^{wr}"
+        },
+        {
+          "k": "t",
+          "v": " (the exact Gibbs regulator, "
+        },
+        {
+          "k": "m",
+          "v": "x"
+        },
+        {
+          "k": "t",
+          "v": "-adic). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Convergence sharp"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_w=\\omega_\\infty\\bmod x^{N+1}"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "w\\ge N{+}1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "N{=}8"
+        },
+        {
+          "k": "t",
+          "v": "), not yet at "
+        },
+        {
+          "k": "m",
+          "v": "w=N"
+        },
+        {
+          "k": "t",
+          "v": " — the WP5a threshold "
+        },
+        {
+          "k": "m",
+          "v": "w=n{+}1"
+        },
+        {
+          "k": "t",
+          "v": " holds "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "identically at the state level"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "; positivity of every "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_w"
+        },
+        {
+          "k": "t",
+          "v": " checked. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The kernel (core, fully machine)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the complete exact level-2 Gram — "
+        },
+        {
+          "k": "m",
+          "v": "31124"
+        },
+        {
+          "k": "t",
+          "v": " monomials in "
+        },
+        {
+          "k": "m",
+          "v": "9361"
+        },
+        {
+          "k": "t",
+          "v": " weight blocks (profile "
+        },
+        {
+          "k": "m",
+          "v": "164{:}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "37{:}240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "7{:}2160"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "1{:}6960"
+        },
+        {
+          "k": "t",
+          "v": ") — has level-1 rank "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " positive definite (Cartan block "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Cartan matrix, "
+        },
+        {
+          "k": "m",
+          "v": "\\det1"
+        },
+        {
+          "k": "t",
+          "v": "), level-2 rank "
+        },
+        {
+          "k": "m",
+          "v": "4124"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (the preregistered target check), kernel "
+        },
+        {
+          "k": "m",
+          "v": "27000"
+        },
+        {
+          "k": "t",
+          "v": ", every block PSD; rank per Weyl orbit "
+        },
+        {
+          "k": "m",
+          "v": "(0,0,1,8,44)"
+        },
+        {
+          "k": "t",
+          "v": "; kernel "
+        },
+        {
+          "k": "m",
+          "v": "=V(2\\theta)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "weight by weight"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Freudenthal cross-check on all "
+        },
+        {
+          "k": "m",
+          "v": "9361"
+        },
+        {
+          "k": "t",
+          "v": " weights); highest-weight norms "
+        },
+        {
+          "k": "m",
+          "v": "(3844,49,2,0)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "(0,\\omega,\\theta,2\\theta)"
+        },
+        {
+          "k": "t",
+          "v": "; direct ideal checks "
+        },
+        {
+          "k": "m",
+          "v": "F_i|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "F_jF_i|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " norm "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": "-equivariance"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\omega_w\\circ\\text{clock}=\\omega_w"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "w"
+        },
+        {
+          "k": "t",
+          "v": "; the clock descends to GNS; level-2 rank split by clock class "
+        },
+        {
+          "k": "m",
+          "v": "(1036,1024,1040,1024)=\\Theta_{C_j}/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "q^2"
+        },
+        {
+          "k": "t",
+          "v": " — the two-routes identity at the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "state"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " level. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Resolution of WP5b S4.10"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the zero vector of GNS"
+        },
+        {
+          "k": "m",
+          "v": "(\\omega_\\infty)"
+        },
+        {
+          "k": "t",
+          "v": " — the twisted two-"
+        },
+        {
+          "k": "m",
+          "v": "C_1"
+        },
+        {
+          "k": "t",
+          "v": "-mode floor ("
+        },
+        {
+          "k": "m",
+          "v": "6"
+        },
+        {
+          "k": "t",
+          "v": " quarters "
+        },
+        {
+          "k": "m",
+          "v": "=q^{3/2}"
+        },
+        {
+          "k": "t",
+          "v": ") concerns only pre-limit objects (GNS has no state there, "
+        },
+        {
+          "k": "m",
+          "v": "6\\bmod4\\neq0"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "k{=}2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\langle s|s\\rangle={+}4"
+        },
+        {
+          "k": "t",
+          "v": ", dominant blocks full rank — no ideal in the kernel); "
+        },
+        {
+          "k": "m",
+          "v": "k{=}0"
+        },
+        {
+          "k": "t",
+          "v": " (level-1 Gram "
+        },
+        {
+          "k": "m",
+          "v": "\\equiv0"
+        },
+        {
+          "k": "t",
+          "v": " — no "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " layer without the central extension); "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " (rank "
+        },
+        {
+          "k": "m",
+          "v": "2076=7380-5304"
+        },
+        {
+          "k": "t",
+          "v": ", kernel "
+        },
+        {
+          "k": "m",
+          "v": "=V(2\\theta_{D_8})"
+        },
+        {
+          "k": "t",
+          "v": " PSD, but "
+        },
+        {
+          "k": "m",
+          "v": "h=(0,\\tfrac12,1,1)"
+        },
+        {
+          "k": "t",
+          "v": ": one block of four — one-block completeness stays "
+        },
+        {
+          "k": "m",
+          "v": "E_8/\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-specific); wrong family "
+        },
+        {
+          "k": "m",
+          "v": "E'_w=mw{+}r"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " layer erased, "
+        },
+        {
+          "k": "m",
+          "v": "710955\\neq248"
+        },
+        {
+          "k": "t",
+          "v": "); no damping ("
+        },
+        {
+          "k": "m",
+          "v": "897266\\neq248"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "CCR obstruction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": at fixed radial pairing "
+        },
+        {
+          "k": "m",
+          "v": "c>0"
+        },
+        {
+          "k": "t",
+          "v": " positivity forces "
+        },
+        {
+          "k": "m",
+          "v": "\\omega(bb^*)\\ge c"
+        },
+        {
+          "k": "t",
+          "v": " — no "
+        },
+        {
+          "k": "m",
+          "v": "w"
+        },
+        {
+          "k": "t",
+          "v": "-uniform damping state exists, the family formulation is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "necessary"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " and the family "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exists"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the preregistered KILL is probed and not triggered. "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "quasi-free extension to the full "
+        },
+        {
+          "k": "m",
+          "v": "*"
+        },
+        {
+          "k": "t",
+          "v": "-algebra; Kac positivity beyond level "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "local normality, net structure/Haag duality (WP5d), Costello–Li (WP5e)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the WP5c bullet "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " done with the core numbers (state-level threshold "
+        },
+        {
+          "k": "m",
+          "v": "w=N{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", the full "
+        },
+        {
+          "k": "m",
+          "v": "9361"
+        },
+        {
+          "k": "t",
+          "v": "-block Gram rank "
+        },
+        {
+          "k": "m",
+          "v": "4124"
+        },
+        {
+          "k": "t",
+          "v": "/kernel "
+        },
+        {
+          "k": "m",
+          "v": "27000"
+        },
+        {
+          "k": "t",
+          "v": " weight by weight, the clock-class split, the CCR necessity of the family), citing "
+        },
+        {
+          "k": "c",
+          "v": "v500_celestial_wp5c_gns_limit_state.py"
+        },
+        {
+          "k": "t",
+          "v": "; the WP5b handover marked answered. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial section: new Step 7 (one paragraph, conservative). Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5C.01"
+        },
+        {
+          "k": "t",
+          "v": " (fine type Formal/Identity "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " identifications "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "net questions). Wolfram: four exact mirrors (level-2 block census from the root data; rank/kernel arithmetic with "
+        },
+        {
+          "k": "m",
+          "v": "\\dim V(\\omega)=3875"
+        },
+        {
+          "k": "t",
+          "v": " by Weyl; the glue-frame clock-class split "
+        },
+        {
+          "k": "m",
+          "v": "(1036,1024,1040,1024)"
+        },
+        {
+          "k": "t",
+          "v": "; threshold "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " level-dial "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " census) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "408\\to412"
+        },
+        {
+          "k": "t",
+          "v": "); the exact Gram/PSD computation stays Python-side (flagged). "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " qft node gains "
+        },
+        {
+          "k": "c",
+          "v": "v500"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (494 modules at this step, suite green). "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "IX) ("
+      },
+      {
+        "k": "c",
+        "v": "v499"
+      },
+      {
+        "k": "t",
+        "v": " — the P2 weight-typing postulate HARDENED: the anchor "
+      },
+      {
+        "k": "m",
+        "v": "a=(1,1,2)"
+      },
+      {
+        "k": "t",
+        "v": " typed as the Birkhoff–Grothendieck splitting exponents of the Deligne canonical extension, so integrality/positivity/sum-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " become theorems given the "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "anchors; the "
+      },
+      {
+        "k": "c",
+        "v": "v491"
+      },
+      {
+        "k": "t",
+        "v": " check-9 residual sharpened, the tfpt_2 “balanced” selection typed as stability; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "403\\to408"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves — "
+          },
+          {
+            "k": "c",
+            "v": "AX.P2.01"
+          },
+          {
+            "k": "t",
+            "v": " stays a declared axiom, "
+          },
+          {
+            "k": "c",
+            "v": "QGEO.SYM"
+          },
+          {
+            "k": "t",
+            "v": " stays "
+          },
+          {
+            "k": "s",
+            "v": "O"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v499_p2_weights_deligne_bg.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "P2.TYPING.01"
+            },
+            {
+              "k": "t",
+              "v": ", 23 checks, sympy exact, no floats)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v491"
+        },
+        {
+          "k": "t",
+          "v": " reduced P2 to “"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " positive integers summing to "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "”; its residual was the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "typing"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (why integers, why positive, why sum "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "). Now typed: given the "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "anchors ("
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " marks, "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": "; rank "
+        },
+        {
+          "k": "m",
+          "v": "3=\\#\\text{marks}-1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v137"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v228"
+        },
+        {
+          "k": "t",
+          "v": "; cusp-class local monodromy "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda^3-1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " exact irreducibility "
+        },
+        {
+          "k": "m",
+          "v": "|\\langle U,M_0\\rangle|=24=|S_4|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_g|\\chi|^2=24"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "v117"
+        },
+        {
+          "k": "t",
+          "v": "; unitarity (U)), the Deligne canonical extension "
+        },
+        {
+          "k": "m",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " of the flavor connection satisfies: "
+        },
+        {
+          "k": "m",
+          "v": "\\deg E=-4"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "as a theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (residue exponents "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,\\tfrac13,\\tfrac23\\}"
+        },
+        {
+          "k": "t",
+          "v": " the unique lift to "
+        },
+        {
+          "k": "m",
+          "v": "[0,1)"
+        },
+        {
+          "k": "t",
+          "v": ", trace "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " per mark; par-deg "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\infty"
+        },
+        {
+          "k": "t",
+          "v": " apparent, monodromy product "
+        },
+        {
+          "k": "m",
+          "v": "=\\mathbf1"
+        },
+        {
+          "k": "t",
+          "v": " exactly); "
+        },
+        {
+          "k": "m",
+          "v": "h^0(E)=0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "as a theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (Mehta–Seshadri stability; all "
+        },
+        {
+          "k": "m",
+          "v": "324"
+        },
+        {
+          "k": "t",
+          "v": " section-saturation cases; BG dictionary "
+        },
+        {
+          "k": "m",
+          "v": "h^0{=}0\\Leftrightarrow a_i\\ge1"
+        },
+        {
+          "k": "t",
+          "v": "); integrality "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Birkhoff–Grothendieck. Hence "
+        },
+        {
+          "k": "m",
+          "v": "\\{a\\}=\\{1,1,2\\}"
+        },
+        {
+          "k": "t",
+          "v": " unique and "
+        },
+        {
+          "k": "m",
+          "v": "\\gcar=e_2=5"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Selector typed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the Schur–Horn permutohedron has integer points exactly "
+        },
+        {
+          "k": "m",
+          "v": "\\{(2,2,0),(2,1,1)\\}"
+        },
+        {
+          "k": "t",
+          "v": " (the two options of the tfpt_2 “Global computation” theorem) and "
+        },
+        {
+          "k": "m",
+          "v": "h^0{=}0"
+        },
+        {
+          "k": "t",
+          "v": " kills "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,2,2\\}"
+        },
+        {
+          "k": "t",
+          "v": " — the “balanced/minimal-variance” heuristic is now stability/positivity. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The "
+            },
+            {
+              "k": "m",
+              "v": "h^1"
+            },
+            {
+              "k": "t",
+              "v": " discrepancy, real and resolved"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "h^1(\\mathcal\nO(-2){\\oplus}\\mathcal O(-1)^2)=1\\neq3"
+        },
+        {
+          "k": "t",
+          "v": ", so “generations "
+        },
+        {
+          "k": "m",
+          "v": "=H^1"
+        },
+        {
+          "k": "t",
+          "v": " of the rank-"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " bundle” is FALSE (negative control: forcing it demands "
+        },
+        {
+          "k": "m",
+          "v": "\\deg-6"
+        },
+        {
+          "k": "t",
+          "v": " and loses uniqueness, "
+        },
+        {
+          "k": "m",
+          "v": "e_2\\in\\{9,11,12\\}"
+        },
+        {
+          "k": "t",
+          "v": " never "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": "); correct two-object typing: "
+        },
+        {
+          "k": "m",
+          "v": "L=\\mathcal O(-D)"
+        },
+        {
+          "k": "t",
+          "v": " carries the generations ("
+        },
+        {
+          "k": "m",
+          "v": "h^1(L)=3=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": ", the "
+        },
+        {
+          "k": "c",
+          "v": "v137"
+        },
+        {
+          "k": "t",
+          "v": " basis "
+        },
+        {
+          "k": "m",
+          "v": "=H^0(\\Omega^1(\\log D))"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " carries them as its "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "fiber"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Biswas explicit"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (independent witness): the weight denominator "
+        },
+        {
+          "k": "m",
+          "v": "3=\\Nfam"
+        },
+        {
+          "k": "t",
+          "v": " forces the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_3"
+        },
+        {
+          "k": "t",
+          "v": " cusp cover "
+        },
+        {
+          "k": "m",
+          "v": "y^3=(z{-}1)(z{-}i)(z{+}1)^2(z{+}i)^2"
+        },
+        {
+          "k": "t",
+          "v": " (genus "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "; NOT the pillowcase double, genus "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": " — the deck side); "
+        },
+        {
+          "k": "m",
+          "v": "p_*\\mathcal O_Y=\\mathcal O\\oplus\\mathcal O(-2)^2"
+        },
+        {
+          "k": "t",
+          "v": "; the regular-representation model lands on "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,2,2\\}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unstable"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Schur–Horn companion ("
+        },
+        {
+          "k": "m",
+          "v": "h^0=1"
+        },
+        {
+          "k": "t",
+          "v": "): integrality and the sum rule come "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "out"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " of the correspondence, stability is the selector. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": no positivity "
+        },
+        {
+          "k": "m",
+          "v": "\\to4"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "31"
+        },
+        {
+          "k": "t",
+          "v": " solutions; "
+        },
+        {
+          "k": "m",
+          "v": "\\deg-3/-5"
+        },
+        {
+          "k": "t",
+          "v": " breaks; "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-mark scan "
+        },
+        {
+          "k": "m",
+          "v": "e_2=(n{-}2)(n{+}1)/2=5"
+        },
+        {
+          "k": "t",
+          "v": " ONLY at "
+        },
+        {
+          "k": "m",
+          "v": "n=4"
+        },
+        {
+          "k": "t",
+          "v": " (the value, not the uniqueness, is the "
+        },
+        {
+          "k": "m",
+          "v": "n{=}4"
+        },
+        {
+          "k": "t",
+          "v": " content); MS-rational "
+        },
+        {
+          "k": "m",
+          "v": "e_2=\\tfrac{16}3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac{44}9"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest residuals"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " (P2 stays an axiom): R1 module identification "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "QGEO.SYM"
+        },
+        {
+          "k": "t",
+          "v": " territory), R2 (U) "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v33"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v40"
+        },
+        {
+          "k": "t",
+          "v": "), R3 analytic monodromy (Numerical, "
+        },
+        {
+          "k": "c",
+          "v": "v117"
+        },
+        {
+          "k": "t",
+          "v": " check 4); non-circular (neither "
+        },
+        {
+          "k": "c",
+          "v": "v23"
+        },
+        {
+          "k": "t",
+          "v": "'s splitting input nor "
+        },
+        {
+          "k": "c",
+          "v": "v115"
+        },
+        {
+          "k": "t",
+          "v": "'s "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{diag}A_0=a/4"
+        },
+        {
+          "k": "t",
+          "v": " input used); the "
+        },
+        {
+          "k": "c",
+          "v": "v491"
+        },
+        {
+          "k": "t",
+          "v": " direction-reversal note carries over. Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "P2.TYPING.01"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "c",
+          "v": "v491"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "P2.PARTITION.01"
+        },
+        {
+          "k": "t",
+          "v": " row records “typing residual sharpened by "
+        },
+        {
+          "k": "c",
+          "v": "v499"
+        },
+        {
+          "k": "t",
+          "v": "” ("
+        },
+        {
+          "k": "c",
+          "v": "v491"
+        },
+        {
+          "k": "t",
+          "v": " stays active, no supersede). Registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (493 modules, suite green)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram second path "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Five exact mirrors added to the extension file "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " (partition enumeration under the full typing "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " naive-typing control "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "h^1"
+        },
+        {
+          "k": "t",
+          "v": " discrepancy; Deligne residue-trace degree with the "
+        },
+        {
+          "k": "m",
+          "v": "A_0^\\star"
+        },
+        {
+          "k": "t",
+          "v": " witness char poly; Schur–Horn lattice points; Biswas "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_3"
+        },
+        {
+          "k": "t",
+          "v": "-cover degree arithmetic incl. deck double "
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-mark formula), verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "403\\to408"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " website counters ("
+        },
+        {
+          "k": "m",
+          "v": "116/116+408/408"
+        },
+        {
+          "k": "t",
+          "v": "). Papers (one sentence each, conservative): "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " anchor paragraph, "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(5,3)"
+        },
+        {
+          "k": "t",
+          "v": " keybox, "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " H2 winbox "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "and"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the “Global computation” theorem (the balanced selection typed as stability), "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(5,3)"
+        },
+        {
+          "k": "t",
+          "v": " keybox — all citing "
+        },
+        {
+          "k": "c",
+          "v": "v499_p2_weights_deligne_bg.py"
+        },
+        {
+          "k": "t",
+          "v": "; no status card changes. Website: "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " P2 node gains "
+        },
+        {
+          "k": "c",
+          "v": "v499"
+        },
+        {
+          "k": "t",
+          "v": "; generated indices via build; no marker moved anywhere."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "VIII) (Editorial: dedicated celestial-route section in Paper 3 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " website mirror — the scattered celestial sentences consolidated into one coherent six-step section; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no new scripts, no status changes, no marker moves, "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.EQUIV.01"
+          },
+          {
+            "k": "t",
+            "v": " untouched"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "tfpt_3_e8_audit_bootstrap"
+            },
+            {
+              "k": "t",
+              "v": ": new section “The celestial route: from the "
+            },
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": " clock to the "
+            },
+            {
+              "k": "m",
+              "v": "(E_8)_1"
+            },
+            {
+              "k": "t",
+              "v": " boundary shadow”."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The celestial-contract material that had accumulated as one long paragraph inside “The Möbius origin of the irreducible "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "” is consolidated into a dedicated section (placed after the bootstrap audit, before “Honest status”), telling the executed WP1–WP5b story in six typed steps: (1) setup — the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-glue as a flat "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " monodromy on the "
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " ALE space, clock"
+        },
+        {
+          "k": "m",
+          "v": "^2="
+        },
+        {
+          "k": "t",
+          "v": " deck (spin "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "8=2|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": "); (2) deformation — "
+        },
+        {
+          "k": "m",
+          "v": "XY=Z^4{+}a_0"
+        },
+        {
+          "k": "t",
+          "v": " pure scale, "
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": " frozen, clock "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Picard–Lefschetz/Coxeter monodromy "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": "); (3) consistency honestly demoted — "
+        },
+        {
+          "k": "m",
+          "v": "(\\kappa/\\cthree)^2=12"
+        },
+        {
+          "k": "t",
+          "v": " exact but the alignment format passes "
+        },
+        {
+          "k": "m",
+          "v": "8/8"
+        },
+        {
+          "k": "t",
+          "v": ": alignment survives, selectivity does not "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v495"
+        },
+        {
+          "k": "t",
+          "v": "); (4) type mismatch "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " boundary limit — the "
+        },
+        {
+          "k": "m",
+          "v": "(E_8)_1"
+        },
+        {
+          "k": "t",
+          "v": " character is not a jet-grading conformal block (growth "
+        },
+        {
+          "k": "m",
+          "v": "n^{2/3}"
+        },
+        {
+          "k": "t",
+          "v": " vs "
+        },
+        {
+          "k": "m",
+          "v": "n^{1/2}"
+        },
+        {
+          "k": "t",
+          "v": ") but the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " period sum "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " holds exactly: a boundary-limit shadow of "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "/MMST shape "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v496"
+        },
+        {
+          "k": "t",
+          "v": "); (5) the null ideal quantitative — stabilisation threshold "
+        },
+        {
+          "k": "m",
+          "v": "w=n{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "27000=(h^\\vee)^3"
+        },
+        {
+          "k": "t",
+          "v": " derived, quotient "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " sector sum "
+        },
+        {
+          "k": "m",
+          "v": "=4124"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " contrast "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v497"
+        },
+        {
+          "k": "t",
+          "v": "); (6) the deleting operator explicit — "
+        },
+        {
+          "k": "m",
+          "v": "|s\\rangle=(E^\\theta_{-1})^2|0\\rangle"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "J^a_1|s\\rangle=0"
+        },
+        {
+          "k": "t",
+          "v": " on all "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " (tally "
+        },
+        {
+          "k": "m",
+          "v": "190/57/1"
+        },
+        {
+          "k": "t",
+          "v": "), level dial "
+        },
+        {
+          "k": "m",
+          "v": "2(1{-}k)"
+        },
+        {
+          "k": "t",
+          "v": ", one-block closure "
+        },
+        {
+          "k": "m",
+          "v": "E_8/\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-specific "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "("
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": "); plus the WP5c–e roadmap and the honest status line (the route does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " close "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": "; the GNS/limit question stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "). All pre-existing script citations ("
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": ") are carried into the new section; the Möbius section now points to it with one sentence. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": a reader's note at the head of the "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " contract cross-references the new Paper-3 section (the contract stays the full technical reference). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": ": one sentence in the metric-sector keybox records the celestial route as a third, quantitative approach to the keystone (not closing it)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ": the Paper-3 section list gains the celestial-route section (six-step summary in the existing style) and a “Celestial route” highlight; the contracts mirror gains the same cross-reference sentence. "
+        },
+        {
+          "k": "c",
+          "v": "glossary.ts"
+        },
+        {
+          "k": "t",
+          "v": ": three new entries (celestial route, ALE space, null ideal) in the established technical style. Generated indices via build; no status component changes (no marker moved anywhere)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "VII) (CELEST.SEAM.01 WP5b executed and promoted: "
+      },
+      {
+        "k": "c",
+        "v": "v498"
+      },
+      {
+        "k": "t",
+        "v": " — “the singular vector as an operator”, the deleting object of the "
+      },
+      {
+        "k": "c",
+        "v": "v497"
+      },
+      {
+        "k": "t",
+        "v": " null ideal constructed explicitly and machine-verified singular; contract now WP1–WP4 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " WP5a "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " WP5b done, WP5c–e "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "(roadmap); Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "398\\to403"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves, "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.EQUIV.01"
+          },
+          {
+            "k": "t",
+            "v": " untouched"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v498_celestial_wp5b_singular_vector.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5B.01"
+            },
+            {
+              "k": "t",
+              "v": ", 53 checks, exact integer/Fraction, deterministic, no floats)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Success on the preregistered WP5b criterion: the deleting object exists and is explicit. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Construction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "|s\\rangle=(E^\\theta_{-1})^2|0\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " (weight "
+        },
+        {
+          "k": "m",
+          "v": "2\\theta"
+        },
+        {
+          "k": "t",
+          "v": ", level "
+        },
+        {
+          "k": "m",
+          "v": "2=8"
+        },
+        {
+          "k": "t",
+          "v": " quarter units "
+        },
+        {
+          "k": "m",
+          "v": "=q^2"
+        },
+        {
+          "k": "t",
+          "v": ", an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "integer"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " level) in a machine-built Chevalley/Frenkel–Kac basis — bimultiplicative "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-cocycle with asymmetry verified on all "
+        },
+        {
+          "k": "m",
+          "v": "57600"
+        },
+        {
+          "k": "t",
+          "v": " ordered root pairs, the "
+        },
+        {
+          "k": "m",
+          "v": "[e_\\alpha,e_{-\\alpha}]"
+        },
+        {
+          "k": "t",
+          "v": " sign "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "forced"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " by the Jacobi identity ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{SGN}=-1"
+        },
+        {
+          "k": "t",
+          "v": ", not chosen), the invariant form "
+        },
+        {
+          "k": "m",
+          "v": "\\kappa"
+        },
+        {
+          "k": "t",
+          "v": " derived ("
+        },
+        {
+          "k": "m",
+          "v": "\\kappa(\\theta^\\vee,\\theta^\\vee)=2"
+        },
+        {
+          "k": "t",
+          "v": "), Jacobi exact on all "
+        },
+        {
+          "k": "m",
+          "v": "57600"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathfrak{sl}_2"
+        },
+        {
+          "k": "t",
+          "v": "-slice triples "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "6000"
+        },
+        {
+          "k": "t",
+          "v": " seeded "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " all "
+        },
+        {
+          "k": "m",
+          "v": "496"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-adjacent, all "
+        },
+        {
+          "k": "m",
+          "v": "N_{\\alpha\\beta}=\\pm1"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Singularity (machine)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "J^a_1|s\\rangle=0"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": " basis elements ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " violations), with the case classification "
+        },
+        {
+          "k": "m",
+          "v": "190"
+        },
+        {
+          "k": "t",
+          "v": " (first bracket) "
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "57"
+        },
+        {
+          "k": "t",
+          "v": " (second) "
+        },
+        {
+          "k": "m",
+          "v": "/"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "a=F^\\theta"
+        },
+        {
+          "k": "t",
+          "v": " via the central-term cancellation — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "only"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " case that sees the level "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": "); plus "
+        },
+        {
+          "k": "m",
+          "v": "J^a_2|s\\rangle=0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "E^a_0|s\\rangle=0"
+        },
+        {
+          "k": "t",
+          "v": ", exact weight, Shapovalov norm "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": "; the affine PBW engine unit-tested on all "
+        },
+        {
+          "k": "m",
+          "v": "61504"
+        },
+        {
+          "k": "t",
+          "v": " basis pairs. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Level dial"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "F^\\theta_1"
+        },
+        {
+          "k": "t",
+          "v": " coefficient is "
+        },
+        {
+          "k": "m",
+          "v": "2(1{-}k)"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "m",
+          "v": "2/0/{-2}"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "k=0/1/2"
+        },
+        {
+          "k": "t",
+          "v": ": without the central extension the deletion operator does not exist. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "m",
+              "v": "\\mu_4"
+            },
+            {
+              "k": "t",
+              "v": " data"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": glue class "
+        },
+        {
+          "k": "m",
+          "v": "j(\\theta)=1"
+        },
+        {
+          "k": "t",
+          "v": " (machine-built "
+        },
+        {
+          "k": "m",
+          "v": "h"
+        },
+        {
+          "k": "t",
+          "v": "-adapted chamber, "
+        },
+        {
+          "k": "m",
+          "v": "\\langle\\theta,h\\rangle=5"
+        },
+        {
+          "k": "t",
+          "v": ", height "
+        },
+        {
+          "k": "m",
+          "v": "29=h^\\vee{-}1"
+        },
+        {
+          "k": "t",
+          "v": "), clock phase "
+        },
+        {
+          "k": "m",
+          "v": "i^{2j}=-1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{class}(2\\theta)=2"
+        },
+        {
+          "k": "t",
+          "v": " sheet-even; the deleting "
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-"
+        },
+        {
+          "k": "m",
+          "v": "\\mathfrak{sl}_2"
+        },
+        {
+          "k": "t",
+          "v": " crosses the sheet-odd classes "
+        },
+        {
+          "k": "m",
+          "v": "(1,3)"
+        },
+        {
+          "k": "t",
+          "v": " while its square is sheet-even; cross-table "
+        },
+        {
+          "k": "m",
+          "v": "\\theta"
+        },
+        {
+          "k": "t",
+          "v": "-grading "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " glue class consistent (rows "
+        },
+        {
+          "k": "m",
+          "v": "(1,56,126,56,1)"
+        },
+        {
+          "k": "t",
+          "v": ", columns "
+        },
+        {
+          "k": "m",
+          "v": "(52,64,60,64)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " quarters "
+        },
+        {
+          "k": "m",
+          "v": "=q^2"
+        },
+        {
+          "k": "t",
+          "v": " via the per-period dictionary. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Level-2 match"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": weight "
+        },
+        {
+          "k": "m",
+          "v": "2\\theta"
+        },
+        {
+          "k": "t",
+          "v": " has multiplicity "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " in the level-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " Fock, so "
+        },
+        {
+          "k": "m",
+          "v": "U(\\mathfrak g)|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "the"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "27000=(h^\\vee)^3"
+        },
+        {
+          "k": "t",
+          "v": "; the direct "
+        },
+        {
+          "k": "m",
+          "v": "\\mathfrak g_0"
+        },
+        {
+          "k": "t",
+          "v": "-orbit BFS matches the Freudenthal multiplicities of "
+        },
+        {
+          "k": "m",
+          "v": "V(2\\theta)"
+        },
+        {
+          "k": "t",
+          "v": " exactly through depth "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "Weyl complete reducibility beyond); quotient "
+        },
+        {
+          "k": "m",
+          "v": "31124-27000=4124"
+        },
+        {
+          "k": "t",
+          "v": "; lattice reading "
+        },
+        {
+          "k": "m",
+          "v": "(2\\theta,2\\theta)/2=4>2"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "is"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the kernel generator of Fock "
+        },
+        {
+          "k": "m",
+          "v": "\\to E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls (honest separation)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " current state "
+        },
+        {
+          "k": "m",
+          "v": "E^\\theta_{-1}|0\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " (one witness, "
+        },
+        {
+          "k": "m",
+          "v": "\\to-k|0\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "m",
+          "v": "248"
+        },
+        {
+          "k": "t",
+          "v": "-current state that must remain) and "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " generic level-"
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " states ("
+        },
+        {
+          "k": "m",
+          "v": "14"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "33"
+        },
+        {
+          "k": "t",
+          "v": " witnesses) are "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " singular; at "
+        },
+        {
+          "k": "m",
+          "v": "k{=}2"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "cube"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is (generic Kac "
+        },
+        {
+          "k": "m",
+          "v": "(E^\\theta)^{k+1}"
+        },
+        {
+          "k": "t",
+          "v": " mechanics, honestly typed); "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " has the same singular vector but keeps three extra level-"
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " primaries ("
+        },
+        {
+          "k": "m",
+          "v": "h=\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": " breaks one-block fusion; "
+        },
+        {
+          "k": "m",
+          "v": "5304\\neq14^3"
+        },
+        {
+          "k": "t",
+          "v": ") vs "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " (comarks all "
+        },
+        {
+          "k": "m",
+          "v": "\\ge2"
+        },
+        {
+          "k": "t",
+          "v": ", glue weights "
+        },
+        {
+          "k": "m",
+          "v": "(0,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " integer) — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one-block closure"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "m",
+          "v": "E_8/\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-specific part. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ": in the twisted quarter-slot moding two sector-"
+        },
+        {
+          "k": "m",
+          "v": "C_1"
+        },
+        {
+          "k": "t",
+          "v": " modes never sum to "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " quarters (minimum "
+        },
+        {
+          "k": "m",
+          "v": "6=q^{3/2}"
+        },
+        {
+          "k": "t",
+          "v": ") — the per-period dictionary ("
+        },
+        {
+          "k": "c",
+          "v": "v496"
+        },
+        {
+          "k": "t",
+          "v": "), not the per-slot identification, carries "
+        },
+        {
+          "k": "m",
+          "v": "|s\\rangle"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "m",
+          "v": "q^2"
+        },
+        {
+          "k": "t",
+          "v": ": exactly the WP5c GNS/limit-state question; WP5c–e stay open; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": the WP5b bullet moved to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "done"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the key numbers (case tally "
+        },
+        {
+          "k": "m",
+          "v": "190/57/1"
+        },
+        {
+          "k": "t",
+          "v": "; level dial "
+        },
+        {
+          "k": "m",
+          "v": "2(1{-}k)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "j(\\theta)=1"
+        },
+        {
+          "k": "t",
+          "v": ", clock phase "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": "; orbit BFS through depth "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "D_8"
+        },
+        {
+          "k": "t",
+          "v": " contrast) and the twisted-slot tension as the explicit WP5c handover; honest status line and K4 paragraph updated (“WP1–WP4 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5a "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5b executed; WP5c–e "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "”). "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3_e8_audit_bootstrap"
+        },
+        {
+          "k": "t",
+          "v": ": the celestial-contract paragraph extended by the WP5b sentence. Ledger: "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5B.01"
+        },
+        {
+          "k": "t",
+          "v": " (new) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " (“WP1–WP4 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5a "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5b executed; WP5c–e "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(roadmap)”). Wolfram: 5 exact "
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": " mirrors added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "398\\to403"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " counters advanced; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " website mirrors "
+        },
+        {
+          "k": "m",
+          "v": "116/116+403/403"
+        },
+        {
+          "k": "t",
+          "v": ". Website: "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " contract mirror (“WP1–WP4 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5a "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5b done, WP5c–e roadmap”), DAG "
+        },
+        {
+          "k": "c",
+          "v": "qft"
+        },
+        {
+          "k": "t",
+          "v": " node "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v498"
+        },
+        {
+          "k": "t",
+          "v": ", generated indices via build. Suite now 492 scripts, all green; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
         "v": "VI) (CELEST.SEAM.01 WP5a executed and promoted: "
       },
       {

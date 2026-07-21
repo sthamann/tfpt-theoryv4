@@ -47,6 +47,7 @@ email_hossenfelder.html
 email_jaimungal_toe.html
 email_baez_e8.html
 email_keating_cmb.html
+email_eit_kit4.html
 
 # Local problem / working notes (not shipped)
 problem_*
@@ -58,6 +59,10 @@ verification/pyrate/*.generated.txt
 # RXTE raw event/science files (~4.4 GB; refetched on demand by
 # experiments/hfqpo-ladder/scripts -- the small catalog/manifest/log JSONs stay tracked)
 experiments/hfqpo-ladder/data/archive/raw/
+
+# Macro-quantization discovery probe raw downloads (~26 MB; refetched on demand by
+# experiments/tfpt-discovery/macro_quantization_probe.py -- sources documented in the script)
+experiments/tfpt-discovery/data_macro/
 
 # Local secrets (Zenodo token, etc.)
 .env

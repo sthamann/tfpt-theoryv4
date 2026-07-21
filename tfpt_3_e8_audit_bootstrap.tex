@@ -1049,31 +1049,9 @@ $z\mapsto iz$ is an elliptic $\mathrm{PSL}(2,\mathbb C)$ rotation of that sphere
 $v_\gamma=v_g=c$ of \texttt{tfpt\_horizon\_readouts}) is the same Lorentz structure read off the seam. So
 ``Möbius origin of $\pi$'' and ``one Lorentzian cone'' are two faces of one boundary $\mathrm{PSL}(2,\mathbb C)$
 --- not a coincidence of names. \mO\ ($\pi$ stays primitive; the identification is a structural reading).
-The celestial reading of this sphere is now pinned at the exact-arithmetic level: on the $A_3$ ALE orbifold
-$\mathbb C^2/\Z_4$ the deck group induces only the sheet flip $z\mapsto-z$, while the order-$4$ clock is the
-K\"ahler $U(2)$ phase $\operatorname{diag}(i,1)$ whose spin lift squares to the deck ($\Z_8$ bridge,
-$8=2|\mu_4|$ --- the $\cthree=1/(8\pi)$ winding integer), and the $E_8$ $\mu_4$-glue is the flat $\Z_4$
-monodromy of the glue-equivariant celestial chiral algebra there --- WP1 of the research contract
-\texttt{CELEST.SEAM.01} (\texttt{tfpt\_research\_contracts}), \mE\ arithmetic with the celestial-dual
-construction itself left \mO\ \veri{v492\_celestial\_z4\_orbifold.py}. The deformation theory of that
-orbifold (WP2) is executed as well: the clock-invariant family $XY{=}Z^4{+}a_0$ carries \emph{no} shape
-modulus --- the binary-quartic invariants are $I{=}12a_0$, $J{=}0$ identically, so $j{=}1728$ and the
-$\tau{=}i$ pillowcase is frozen for every $a_0$ ($a_0$ is a pure scale) --- and the clock \emph{is} the
-Picard--Lefschetz/Coxeter monodromy of the family (eigenvalues $\{i,-1,-i\}$ $=$ the $A_3$ exponents,
-$h(A_3){=}4{=}|\mu_4|$), verdict B with the deformed-algebra transfer grade-conserving
-\veri{v493\_celestial\_wp2\_clock\_deformation.py}. WP3 and WP4 of the contract are executed as well,
-conservatively typed: the Green--Schwarz coefficient of celestial $E_8$ is exactly
-$\tilde\lambda=6$ with $(\kappa/\cthree)^2=12=|\mu_4|\Nfam$, but the alignment format holds for
-\emph{all eight} algebras on Costello's list ($8/8$) --- compatibility, not $\mathfrak e_8$-selective
-evidence \veri{v495\_celestial\_wp3\_gs\_alignment.py}; and the $(E_8)_1$ character is \emph{not} a
-conformal block of the celestial S-algebra in its jet grading (null ideal $27000=(h^\vee)^3$ localised),
-surviving only as a boundary/limit shadow at the current stratum --- the \texttt{SEAM.EQUIV.01}
-scaling-limit shape \veri{v496\_celestial\_wp4\_character\_shadow.py}. The first WP5 milestone (WP5a)
-makes that shadow a \emph{precise coefficientwise limit} (stabilisation threshold $w=n{+}1$ in an exact
-$\chi_w$ family containing the jet grading at $w{=}2$) and \emph{derives} the null ideal from root data
-($\operatorname{Sym}^2(248)=27000{+}3875{+}1$, $27000=(h^\vee)^3$; quotient $31124{-}27000=4124=$ the
-independent $\mu_4$ theta-split sector sum), with an $SO(16)_1$ negative control --- the operator
-statements stay \mO\ (WP5b--e) \veri{v497\_celestial\_wp5a\_null\_ideal.py}.
+The \emph{celestial} reading of this sphere has since been pinned at the exact-arithmetic level and has
+grown into an eight-step programme of its own (the research contract \texttt{CELEST.SEAM.01}); it is
+presented as a dedicated section below (Section~\ref{sec:celestial}).
 
 \par\smallskip\noindent\textbf{Net: two axioms $\to$ one primitive $+$ one fixed point.}
 \begin{keyeq}
@@ -1151,6 +1129,154 @@ $\phiz$ & derived readout & $\tfrac43\cthree+48\cthree^4$ \\
 \textbf{Correct one-liner:} \emph{TFPT has no freely tunable fundamental numbers left; the only remaining
 continuous origin is $\pi$ from the Möbius boundary geometry.} (Not ``zero axioms''.) \mE/\mO
 \end{keybox}
+
+% =====================================================================
+\section{The celestial route: from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow}\label{sec:celestial}
+% =====================================================================
+The previous section identified the seam's boundary $2$-sphere with the celestial sphere of null
+directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
+clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
+and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent ten-step
+story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$ stage of the
+research contract
+\texttt{CELEST.SEAM.01}, whose
+full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
+step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
+\emph{programme} \mO, not a claim, and nothing in it moves \texttt{SEAM.EQUIV.01}.
+
+\par\smallskip\noindent\textbf{Step 1 --- the setup: the $\mu_4$ glue is a flat $\Z_4$ monodromy on the
+$A_3$ ALE space \mE.} The $E_8$ $\mu_4$-glue grading
+$240=52{+}64{+}60{+}64$ (\vref{v128}) is \emph{inner}: $h=(2,2,2,2,2;0^4)$ reads the glue class mod~$4$
+on all $240$ roots, so the glue is $\operatorname{Ad}(\exp(2\pi ih/4))$ --- a flat $\Z_4$ monodromy in
+the Kronheimer--Nakajima sense on the $A_3$ ALE orbifold $\mathbb C^2/\Z_4$ (which \emph{is} the $A_3$
+singularity $XY=Z^4$, exactly). The glue-equivariant SDYM$(E_8)$ sector closes as a Lie algebra with
+graded dimensions $60(d{+}1)/64(d{+}1)$ --- possible \emph{only} because
+$\dim\mathfrak g_j=(60,64,60,64)$ --- with zero modes $=$ the carrier $D_5{\oplus}A_3{+}$Cartan $=60$,
+and the four glue-sector characters sum \emph{exactly} to the $(E_8)_1$ character
+$\chi=1{+}248q{+}4124q^2{+}34752q^3$ (\vref{v377}). The critical correction: the $A_3$ deck induces on
+the celestial sphere only the sheet flip $z\mapsto-z$; the order-$4$ clock $z\mapsto iz$ is realised as
+the K\"ahler $U(2)$ phase $\operatorname{diag}(i,1)$, and \textbf{clock$^2=$ deck} exactly (spin bridge
+$\Z_8$, $8=2|\mu_4|$ --- the $\cthree=1/(8\pi)$ seam winding integer).
+\veri{v492\_celestial\_z4\_orbifold.py}
+
+\par\smallskip\noindent\textbf{Step 2 --- the deformation: $a_0$ is a pure scale and the clock is the
+monodromy \mE.} Clock-invariance selects from the
+versal $A_3$ family exactly the one-parameter slice $XY=Z^4{+}a_0$, and $a_0$ carries \emph{no} shape
+modulus: the binary-quartic invariants are $I=12a_0$, $J=0$ \emph{identically}, so $j=1728$ and the
+$\tau{=}i$ pillowcase (\vref{v168}/\vref{v214}) is frozen for every $a_0$. The clock acts on $H_2$ as a
+\emph{Coxeter element} of $W(A_3)$ (eigenvalues $\{i,-1,-i\}$ $=$ the $A_3$ exponents,
+$h(A_3){=}4{=}|\mu_4|$) and \emph{is} the Picard--Lefschetz monodromy of the family; the deformed-algebra
+pattern transfers $\Z_2\to\Z_4$ grade-conserving (no $\mu_4$-sector leak).
+\veri{v493\_celestial\_wp2\_clock\_deformation.py} The converse is now tested \emph{light}: the free
+field alone does \emph{not} select $\tau=i$ (the global $\det{}'$ winner is the hexagonal torus, whose
+$\Z_6$ carries no order-$4$ element) --- the square is pinned by the clock's \emph{rigidity} (the raw
+DtN is mod-$4$ block-diagonal \emph{iff} $\tau=i$), and this order-$4$ clock is the \emph{same} carrier
+datum as the P2 cusp class (\vref{v499}): one common residual, not two
+(\veri{v503\_qgeo\_emergence\_light.py}; the v215 deferred emergence test, light version --- no marker
+moves, \texttt{QGEO.REALIZE.01} stays \mC/\mO).
+
+\par\smallskip\noindent\textbf{Step 3 --- consistency, honestly demoted \mE/\mC.}
+$E_8$ is on Costello's axionic-consistency list (no
+independent quartic Casimir; the Okubo coefficient is \emph{derived}, not quoted), and the Green--Schwarz
+alignment is exact: $\tilde\lambda=6$ and $(\kappa/\cthree)^2=12=|\mu_4|\Nfam$. \emph{But} the
+look-elsewhere battery shows the same alignment format passes for \emph{all eight} algebras on the list
+($8/8$): \emph{alignment survives; selectivity does not} --- the $\cthree$-connection is compatibility
+plus genuine $\lambda$-arithmetic, not $\mathfrak e_8$-selective evidence.
+\veri{v495\_celestial\_wp3\_gs\_alignment.py}
+
+\par\smallskip\noindent\textbf{Step 4 --- the type mismatch and the boundary limit \mE.}
+The $(E_8)_1$ character is \emph{not} a conformal
+block of the celestial S-algebra in its own jet grading --- the jet Fock grows as $n^{2/3}$ against the
+character's $n^{1/2}$, and the level-$2$ truncation has no jet analogue. But the boundary/period reading
+holds \emph{exactly} at the current stratum: one full $\mu_4$ period of loop energies sums to $248$, and
+the glue-diagonal weights $(0,1,1,1)$ are integers. The character is a \emph{boundary-limit shadow} of
+the S-algebra --- precisely the scaling-limit shape of \texttt{SEAM.EQUIV.01} (MMST: the rational net
+exists in the limit of the lattice collar, not in the pre-limit algebra; \vref{v336}/\vref{v449}).
+\veri{v496\_celestial\_wp4\_character\_shadow.py}
+
+\par\smallskip\noindent\textbf{Step 5 --- the null ideal, quantitatively \mE.}
+The shadow is made a \emph{precise coefficientwise
+limit}: the exact $\chi_w$ family contains the jet grading at $w{=}2$ and stabilises with threshold
+$w=n{+}1$. The deleted ideal is \emph{derived} from root data (Freudenthal $+$ Weyl $+$ peeling):
+$\operatorname{Sym}^2(248)=27000{+}3875{+}1$ with $27000=30^3=(h^\vee)^3$ exactly, and the level-$2$
+quotient $31124{-}27000=4124$ equals the independent $\mu_4$ theta-split sector sum --- two routes, one
+number. The $SO(16)_1$ negative control separates: four blocks, $5304\neq14^3$, half-integer weight
+breaking one-block fusion. \veri{v497\_celestial\_wp5a\_null\_ideal.py}
+
+\par\smallskip\noindent\textbf{Step 6 --- the deleting object as an operator \mE.}
+The level-$2$ singular vector is constructed
+explicitly, $|s\rangle=(E^\theta_{-1})^2|0\rangle$, in a machine-built Chevalley/Frenkel--Kac basis, and
+$J^a_1|s\rangle=0$ is machine-verified for all $248$ generators (case tally $190/57/1$ --- exactly one
+case sees the level). The \emph{level dial} is the $F^\theta_1$ coefficient $2(1{-}k)$: only $k{=}1$
+deletes --- without the central extension the deletion operator does not exist. $\mu_4$ data: glue class
+$j(\theta)=1$, clock phase $-1$ on $|s\rangle$. The $D_8$ contrast types the finding honestly: the
+singular-vector mechanism is level-$1$ \emph{generic}; the \emph{one-block closure} is the
+$E_8/\mu_4$-specific part. \veri{v498\_celestial\_wp5b\_singular\_vector.py}
+
+\par\smallskip\noindent\textbf{Step 7 --- the limit state \mE/\mC.} The state exists: the quasi-free
+family $\omega_w$ (affine $k{=}1$ vacuum on the currents $+$ $x^{wr}$-contracted radial oscillators)
+stabilises exactly at the WP5a threshold $w=N{+}1$, and its limit carries the null ideal in its GNS
+kernel --- the complete $9361$-block exact level-$2$ Gram has rank $4124$ with kernel
+$27000=V(2\theta)$ weight by weight, $|s\rangle$ \emph{is} the GNS zero vector, and a CCR obstruction
+shows no $w$-uniform state could do this (the family is \emph{necessary}).
+\veri{v500\_celestial\_wp5c\_gns\_limit\_state.py}
+
+\par\smallskip\noindent\textbf{Step 8 --- the two-interval index \mE/\mC.} The Haag-duality
+discriminator is measured on the seam lattice edge: the fermionic two-interval mutual information is
+extensive ($\mu{=}1$ reference) while the orbifold prescription pays exactly one classical bit (the
+$\ln2$ plateau at machine precision), giving $\mu_{\mathrm{gauged}}=4$ $=$ the \vref{v490} parity
+census, and the condensation arithmetic $16\to4\to1$ (KLM/Longo--Rehren, $\theta_v=1$ at $\nu=16$)
+closes with $\mu=1$ --- the preregistered kill (``$\mu$-offset $\neq0$ after condensation'') does not
+fire. \veri{v501\_celestial\_wp5d\_two\_interval\_index.py}
+
+\par\smallskip\noindent\textbf{Step 9 --- the prefactor and the level, pinned on the CFT side
+\mE/\mC.} The two exactly computable consistency anchors of the twistor uplift hold. The $q^{-1/3}$
+prefactor of $E_4/\eta^8$ is exact $\mu_4$ vacuum-energy bookkeeping: the clock is \emph{inner}, so
+the twist on the $8$ torus bosons is $\theta=0^8$ in every sector (a \emph{shift} orbifold --- not a
+rotation orbifold) and each sector carries the same $-c/24=-\tfrac13$ at $c=8$; the sector weights
+$(0,1,1,1)$ \emph{are} Casimir energies, via spectral flow and exactly via the $16$-Majorana seam
+carrier (R--NS shift $n/16$: $\tfrac58,\tfrac38,1$); and $k=1$ is forced three independent ways
+(current condition $h(J)=k$, conformal embedding $47(k{-}1)(k{+}266/47)=0$, central charge
+$240(k{-}1)=0$) plus the Step-6 singular-vector dial ($31124-27000=4124$ at $k=1$ only). Honest
+sharpening: glue-$h$ \emph{integrality} holds at every level and fixes nothing --- the naive
+integrality route is retired; the deck rotation reading fails ($\tfrac3{16}\neq\tfrac38$).
+\veri{v502\_celestial\_wp5e\_prefactor\_level.py}
+
+\par\smallskip\noindent\textbf{Step 10 --- the KLM completion on the lattice \mE/\mC.} Complete
+rationality (Kawahigashi--Longo--M\"uger) has three ingredients --- split property, strong
+additivity, finite two-interval $\mu$-index --- and with Step 8 supplying the index, the two
+remaining legs are now witnessed for the same orbifold prescription. Strong additivity is
+\emph{algebraically exact}: with the shared boundary Majorana,
+$\mathrm{Even}(A)\vee\mathrm{Even}(B)=\mathrm{Even}(A\cup B)$ exactly (GF2 spans full, matrix rank
+$32/32$), while disjoint intervals give exactly index $2$ --- the Step-8 $\ln2$ bit, localised at
+the split point; entropically the touching defect stays \emph{bounded} by $\ln2$ with the Ising
+$\tfrac14$-exponent approach while the preregistered $U(1)$/Dirac control \emph{diverges}
+(Klich--Levitov pinned): bounded-vs-divergent is the lattice discriminator (the naive
+``defect $\to0$'' expectation is false at a sharp lattice split --- bounded $\Leftrightarrow$
+finite index, Longo--Xu). The split property is quantitative: the coupling singular values fall at
+the elliptic-nome rate $\pi K(1-x)/K(x)$ to $1.3$--$2.0\%$, and the orbifold \emph{inherits} the
+same ladder exactly ($C\to-C$; the $\Lambda^2C$ compound --- Longo heredity). The Pimsner--Popa
+bound is a one-line identity, $E(a)-a/2=PaP/2$, attained in exact integers
+($\lambda=\tfrac12=1/[F:F_{\mathrm{even}}]$, $\lambda_{E_4}=\tfrac14=1/\mu$), and the index is
+pinned by two independent routes ($e^{\Delta_\infty}=2=1/\lambda_{\mathrm{PP}}$). All three KLM
+ingredients now carry lattice witnesses; the continuum uplift is honestly fenced --- ``finite-group
+orbifolds of completely rational nets are completely rational'' is \emph{Xu's theorem}, cited, not
+claimed. \veri{v504\_celestial\_wp5d\_klm\_completeness.py}
+
+\par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
+The single open step is the BCOV/Costello--Li twistor uplift itself: the boundary
+partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the $q^{-1/3}$
+prefactor whose CFT side Step 9 has pinned (WP5e proper), with preregistered success/kill
+criteria in the contract --- together with the continuum uplift of the Step-10 lattice witnesses
+(Xu's theorem for the abstract orbifold statement; the concrete seam quotient net and the
+interacting condensed $(E_8)_1$ net are Costello--Li territory). The route does \emph{not} close
+\texttt{SEAM.EQUIV.01}; it gives the keystone a
+second, quantitative approach --- the same two-step shape as MMST (limit $+$ maximal ideal) with the
+ideal quantitatively fixed, the deleting operator explicit, the limit state constructed, the index
+chain measured, and the KLM triple witnessed --- while the twistor uplift stays open.
+\texttt{SEAM.EQUIV.01}
+stays \mO\ throughout; no marker moves.
 
 % =====================================================================
 \section{Honest status: bootstrap, not creation from nothing}

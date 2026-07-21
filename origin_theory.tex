@@ -123,6 +123,10 @@ compiler atoms $(|\mu_4|,\gcar,|\Z_2|)=(4,5,2)$; equivalently $\chi_a(t)=(t{-}1)
 Sharper (\veri{v491\_p2\_partition\_corollary.py}): only $e_1{=}4$ is needed --- three positive integers
 summing to $4$ already force $\{1,1,2\}$, so $\gcar{=}5$ and $|\Z_2|{=}2$ are corollaries of the four
 marks given the weight typing; \texttt{AX.P2.01} stays the declared axiom (the residual is the typing).
+And the typing is itself hardened (\veri{v499\_p2\_weights\_deligne\_bg.py}): Deligne $+$
+Birkhoff--Grothendieck $+$ Mehta--Seshadri stability derive integrality, positivity ($h^0{=}0$) and the
+sum $4$ from the four marks, rank $3$, the cusp class and (U) --- the \mC\ residual is the module
+identification plus (U) itself.
 \end{keybox}
 
 The two glue discriminant norms are likewise $(\gcar,\Nfam)$ over the glue index: $q(D_5)=\gcar/|\mu_4|=\tfrac54$,
@@ -1754,7 +1758,14 @@ residual. (The mark-locality criterion behind this --- offset-4 couplings commut
 is itself now exact Lean linear algebra over $\Z[i]$, \texttt{FORM.MU4COMM.01}.) The order-4 uniqueness ($S$ fixes
 $\tau{=}i$, the unique order-4 elliptic point) and the fact that the square is the \emph{Fekete attractor} of
 symmetric mark-equilibration are machine-checked in \veri{v333\_cm\_selection.py}, sharpening the residual to ``the
-deck acts geometrically''.
+deck acts geometrically''. The \emph{light} emergence test now locates that residual exactly
+(\veri{v503\_qgeo\_emergence\_light.py}): free-field dynamics does \emph{not} select $\tau=i$ --- the global
+$\det{}'$ winner at fixed area is the \emph{hexagonal} torus ($\Z_6$, no order-$4$ element), $\tau=i$ is a saddle,
+and criticality at the square is Palais symmetry --- while the square \emph{is} pinned by rigidity (the raw DtN is
+mod-$4$ block-diagonal \emph{iff} $\tau=i$, an isolated zero) and freezes automatically \emph{given} the clock
+(\vref{v493}). The irreducible rest is therefore ``why the raw seam carries the order-$4$ clock'' --- the
+\emph{same} carrier datum (Coxeter of $W(A_3)$ $=$ the cusp class) as the P2-typing rest R1 of \vref{v499}: one
+common residual, not two; no marker moves.
 
 \par\smallskip\noindent\textbf{The transfer functor as a runnable solver suite}
 (\veri{v326\_ftransfer\_suite.py}). The four $F_{\mathrm{transfer}}$ readouts are productised into one harness, each

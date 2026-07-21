@@ -1,3 +1,439 @@
+## 2026-07-21 (XIV) — v504 (CELEST.WP5DB.01): WP5d-beta „Split + Strong Additivity vom Gitter" promoviert — alle DREI KLM-Zutaten der vollständigen Rationalität mit Gitter-Zeugen; Contract-WP5d „both stages done", WP5e-Twistor-Inflow der einzige offene Meilenstein
+
+Die celestial_seam_wp5dbeta_klm_split_strong_additivity_probe.py aus
+experiments/tfpt-discovery/ ist als **v504_celestial_wp5d_klm_completeness.py
+(CELEST.WP5DB.01)** promoviert (37 Checks, ~12 s, deterministisch; Suite gruen,
+jetzt 498 Skripte). Vollständige Rationalität (KLM) = Split + Strong Additivity
++ endlicher Zwei-Intervall-mu-Index; v501 (alpha) lieferte den Index, v504 die
+beiden anderen Beine — U(1)/Dirac als preregistrierte Negativkontrolle (das
+Stromnetz, wo Strong Additivity im Kontinuum bekanntlich scheitert):
+
+- **Strong Additivity ALGEBRAISCH EXAKT [E]:** „Berühren" = geteilter
+  Rand-Majorana => Even(A) v Even(B) = Even(A u B) EXAKT (GF2-Spans voll
+  64/64, 256/256, 512/512, 1024/1024; Matrixrang 32/32); disjunkt exakt halb
+  (Rang 16/32, Index 2 — der fehlende Sektor odd(x)odd ist das v501-ln-2-Bit,
+  am Splitpunkt lokalisiert); U(1)-neutrale Algebren erzeugen die Union NICHT
+  (Lücken 2/10/52 wachsend).
+- **Entropischer Zeuge [N]:** Berühr-MI mit exakten (c/3)ln2-Inkrementen
+  (0.115525, Abw. 1.2e-6 — reine UV-Referenz, kein Diskriminator); der ehrliche
+  Diskriminator ist BESCHRÄNKT vs. DIVERGENT: Z2-Defekt monoton, < ln 2,
+  (ln2 − Δ₂) ~ N^(−0.2444) vs. 2Δ_μ = 1/4 (Ising-Disorder-Exponent);
+  Splitpunkt-Scan reflexionssymmetrisch 3.9e-14; „Defekt → 0" wäre am scharfen
+  Gitter-Split FALSCH — beschränkt ⟺ endlicher Index (Longo–Xu); U(1)
+  durchbricht ln 2 ab L = 128 und wächst wie (1/2)ln Var Q (Klich–Levitov
+  0.10134 vs. 1/π² = 0.10132: unendlicher Index).
+- **Split/Nuklearität [N]:** σ_k exponentiell mit Rate = elliptischer Nome
+  πK(1−x)/K(x) auf 1.3–2.0 % (Raten 2.29/3.24/4.82/5.81 bei d = 16/64/256/512);
+  σ₁ ~ x^0.5044; Trace-Norm summierbar; dimerisierte Kontrolle exponentiell.
+- **Orbifold-Vererbung EXAKT [E]:** P_A: C → −C (σ_k identisch 8.3e-17);
+  Kopplungs-Gram der geraden Bilinearen = Λ²C mit {σ_a σ_b} (2.8e-14) —
+  dieselbe Leiter, verdoppelte Rate (Longo-Heredität [C]).
+- **Pimsner–Popa EXAKT [E]:** E(a) − a/2 = PaP/2 identisch => λ = 1/2 =
+  1/[F:F_even]; Attainment in Integern (16384 + 2048 Monome, 0 Verletzungen;
+  Pencil min λ = 0.5000000000); λ_E4 = 1/4 = 1/μ exakt; Index-Konsistenz
+  zweier Routen exp(Δ) = 2.000000000 = 1/λ_PP, exp(2Δ) = 4 = μ; U(1):
+  λ = 1/(m+1) → 0.
+- **Ehrlichkeit:** Z2-Finite-Size (14.9 % unter ln 2 bei N = 4096 — Zeuge,
+  kein Beweis); falsche Vorschrift {1,P_AB}: Defekt exakt 0.
+
+Integration: Ledger neue Zeile CELEST.WP5DB.01; CELEST.SEAM.01 auf „WP5d:
+alpha (mu-index) + beta (split + strong additivity) executed via v501/v504 —
+all three KLM ingredients witnessed on the lattice; continuum uplift stays [O]
+(Xu's theorem cited)" bei UNVERÄNDERTEM Open-Status; Contract-WP5d-Bullet
+„both stages done" + Honest-Success konsistent; tfpt_3-Celestial-Section jetzt
+TEN-Step (neuer Step 10 „KLM completion on the lattice", „What remains" nur
+noch WP5e-Twistor-Inflow); tfpt_4-Keystone-Notiz; Wolfram FÜNF exakte Spiegel
+(GF2-Span-Theorem, PP-Identität + Attainment, Zwei-Intervall-Gruppe +
+Index-Konsistenz, Λ²/Minors-Kompound mit Cauchy–Binet und Minors[−C,2] =
+Minors[C,2], U(1)-Dephasing-λ-Familie) mit aktiver Engine verifiziert
+424→429 (Gitterkurven Python-only, geflaggt); Website (papers.ts „10 steps,
+WP5d complete", VerificationDag-qft-Knoten + v504, Zähler 116/116 + 429/429).
+Der Kontinuums-Uplift bleibt [O]: „Endgruppen-Orbifolds vollständig rationaler
+Netze sind vollständig rational" ist XUS THEOREM (zitiert, nicht beansprucht);
+das konkrete Seam-Quotienten-Netz und das interagierende kondensierte
+(E8)₁-Netz bleiben WP5e/Costello–Li. SEAM.EQUIV.01 bleibt [O], kein Marker
+bewegt.
+
+## 2026-07-21 (XIII) — v503 (QGEO.EMERGE.LIGHT.01): v215-Lever-7 "deferred emergence test" LIGHT ausgeführt — Rigidität statt dynamischer Selektion; Residual-Konvergenz QGEO-R1 == P2-R1
+
+Die qgeo_r1_deferred_emergence_probe.py aus experiments/tfpt-discovery/ ist als
+**v503_qgeo_emergence_light.py (QGEO.EMERGE.LIGHT.01)** promoviert (17 Checks,
+mpmath 40 Stellen + v280-Gitter-DtN + sympy exakt, ~1.2 s; Suite gruen, jetzt
+497 Skripte). Ergebnis der Light-Version des v215-Lever-7:
+
+- **KEINE dynamische Selektion [N]:** logF = log(tau2 |eta|^4) exakt S-invariant;
+  tau = i ist Maximum NUR der Rechteckfamilie (g''(1) = -1.298), Sattel des
+  vollen Modulraums (tau1-Richtung +0.298); kritische Punkte = CM-Punkte
+  (E2*(i) = E2*(rho) = 0); globaler det'-Gewinner ist der HEXAGONALE Punkt
+  (logF(rho) = -1.03352 > logF(i) = -1.05469, OPS 1988); Kritikalitaet =
+  Palais-Symmetrie. Aut(hexagonal) = Z6 enthaelt KEIN Order-4-Element.
+- **Scharfe Rigiditaet [N]:** DtN-mod-4-Indikator (v280-Gitter, N = 8):
+  off4 = 8e-15 GENAU bei tau = i, strikt monoton steigend beidseitig
+  (isolierte Nullstelle, min 8.4e-2 fuer t != 1); R^2 = Z2 exakt
+  (v492-Z8-Bruecke am Gitter); j(it) = 1728 nur bei t = 1.
+- **Z2-Kette modulus-blind [E]:** 4 Marken + [Z2,Delta_t] = 0 auf JEDEM Torus
+  (v216 ohne Marken-Input bestaetigt); Pillowcase-det' = 1/2 Torus-det' exakt;
+  einzig die Order-4-Uhr unterscheidet tau = i; Uhr => Quadrat automatisch
+  (a3 = a2 = a1 = 0, j = 1728 identisch, v493-Mini).
+- **Residual-Konvergenz [C/O] (Kernbefund):** Uhr = Coxeter von W(A3)
+  (charpoly lam^3+lam^2+lam+1, Ordnung 4 = |mu4| = N_fam+1) = das
+  P2-Cusp-Klassen-Carrier-Datum (v499 R1) => QGEO-R1 == P2-R1 = EIN
+  gemeinsamer Rest: "warum traegt der rohe Seam die Order-4-Uhr". Kette:
+  Marken derived (v216), Quadrat derived GEGEBEN die Uhr (v493), Uhr =
+  Carrier-Input [C], Rest = dynamische Realisierung [O]. Routen (v347-Analog):
+  B-rigidity in der Form "RP-Seam-Daten => Order-4-Uhr" ist die Live-Route.
+- v215 Lever 7 damit von "deferred, nicht ausfuehrbar" auf "light ausgefuehrt:
+  Rigiditaet statt dynamischer Selektion" gehoben — dokumentiert in v503,
+  v215 selbst UNVERAENDERT. KEIN Marker bewegt: QGEO.REALIZE.01 bleibt
+  [C]/[O] (Ledger-Text praezisiert), AX.P2.01 bleibt Axiom.
+- Wolfram: 4 exakte Mirrors (CM-Identitaeten E2(i) = 3/pi, E2(rho) = 2sqrt3/pi
+  => E2* = 0 exakt; Hexagonal-Gewinner; Pillowcase-Halbierung exakt; Uhr =>
+  Quadrat + Coxeter) — Engine-Lauf 420 -> 424 (ALL WOLFRAM EXTENSION CHECKS
+  PASSED); Gitter-DtN-Kurven Python-only (geflaggt).
+
+## 2026-07-21 (XII) — v502 (CELEST.WP5E.ALPHA.01): WP5e-alpha "Praefaktor + Level" promoviert — Contract auf "WP5e: alpha done (CFT-Seite), BCOV/Twistor-Inflow bleibt [O]"
+
+Die celestial_seam_wp5e_prefactor_level_probe.py aus experiments/tfpt-discovery/
+ist als **v502_celestial_wp5e_prefactor_level.py (CELEST.WP5E.ALPHA.01)**
+promoviert (33 Checks, exakt sympy/Fraction, ~1.2 s). Die beiden exakt
+rechenbaren Konsistenz-Anker des Twistor-Uplifts stehen:
+
+- **Teil A [E]:** q^{-1/3}-Praefaktor = exakte mu4-Vakuumenergie-Buchhaltung:
+  Uhr INNER ((h,h) = 20, (h',h') = 12, Summe 32) => Twist theta = 0^8 in allen
+  vier Sektoren (SHIFT-Orbifold, KEIN Rotations-Twist), E_osc = -1/3 = -c/24
+  sektorunabhaengig (c = 8 = rank = Sugawara 248/31); Sektor-Grundexponenten
+  -1/3 + (0,1,1,1); Diskriminantenform = Casimir zweifach (Spektralfluss
+  j^2(h,h)/32 mod 1; exakt via 16 Majoranas, R-NS-Shift n/16 = 5/8, 3/8, 1);
+  Charaktersumme = E4/eta^8 = q^{-1/3}(1,248,4124,34752) exakt; Deck-Rotations-
+  Lesart scheitert (3/16 != 3/8).
+- **Teil B [E]:** k = 1 DREIFACH erzwungen: (i) Strombedingung h(J) = k = 1
+  (Adjoint-Schluss 60+64+60+64 = 248 bei Spin 1); (ii) konforme Einbettung
+  47(k-1)(k+266/47) = 0 bzw. D8: 128k(1-k) = 0; (iii) c = 8 <=> 240(k-1) = 0
+  (= der Praefaktor selbst); plus WP5b-Singulaervektor-Dial (31124 - 27000 =
+  4124 nur bei k = 1; <s|s> = 0/4/12/24).
+- **Ehrliche Schaerfung (Pflicht):** Glue-h-Ganzzahligkeit h(J^j;k) = k(0,1,1,1)
+  gilt fuer ALLE k = 1..8 und fixiert NICHTS — die urspruenglich vermutete
+  Integralitaets-Route ist tot; die drei anderen Dials tragen.
+- **Negativkontrollen:** D8/SO(16)_1 (gleicher Praefaktor, h = (0,1/2,1,1) —
+  Diskriminator ist die h-Ganzzahligkeit, nicht der Praefaktor); Z2-/mu4-
+  ROTATION bricht den gemeinsamen Praefaktor; falsches k scheitert an allen
+  fuenf Dials koheraent (Residuen 360/814/1362).
+- **[O]:** der BCOV/Costello-Li-Twistor-Inflow selbst bleibt offen — v502
+  verankert NUR die CFT-Seite von WP5e (alpha); KILL-Zweig ("Inflow verlangt
+  Level != 1") CFT-seitig nicht ausgeloest, Twistor-Seite ungetestet.
+  Contract-WP5e-Bullet untergliedert (alpha done, WP5e proper [O]);
+  SEAM.EQUIV.01 unberuehrt, kein Marker bewegt.
+- Wolfram: 4 exakte Mirrors (Hurwitz-zeta-Vakuumenergien; Diskriminante =
+  Casimir + Deck-Fehlschlag; k-Fixierungs-Gleichungen inkl. "fixiert nichts"-
+  Tabelle; Charaktersummen + D8-Kontrolle) — Engine-Lauf 416 -> 420.
+
+## 2026-07-21 (XI) — v501 (CELEST.WP5D.01): WP5d-alpha „der Zwei-Intervall-Index vom Gitter" promoviert — Contract auf „WP1–WP5d executed; WP5e [O] (single remaining milestone)"
+
+Die celestial_seam_wp5d_two_interval_index_probe.py aus experiments/tfpt-discovery/
+ist als **v501_celestial_wp5d_two_interval_index.py (CELEST.WP5D.01)** promoviert
+(39 Checks, numpy/scipy-Gauß + exakte Fractions, ~8.6 s standalone; Suite grün,
+jetzt 495 Skripte). Der WP5d-Roadmap-Diskriminator — (E8)₁ ⇒ μ = 1 (Haag-duales
+Zwei-Intervall-Netz, EIN Sektor), SO(16)₁ ⇒ μ = 4 — auf der α-Stufe (Gitter-
+Index) ausgeführt; präregistrierter KILL („μ-Offset ≠ 0 nach Kondensation")
+NICHT ausgelöst:
+
+- **Setup [E-machine]/[L]:** kritischer Majorana-Ring (v450-Stil, NS), 16 Layer
+  = Seam-Carrier c₋ = 8; Peschel-exakt; drei Vorschriften (fermionisch /
+  Orbifold-Sektorsumme {1,P_A,P_B,P_AB} / duale Algebra {1,P_AB});
+  Superselektion [ρ,P_AB] = 0 maschinenexakt; JEDE Gauß-Formel gegen exakte
+  Diagonalisierung validiert (≤ 1.5e-15).
+- **Fermionische MI EXTENSIV (μ=1-Referenz) [L/N]:** c-Fit 0.5000, max |F(x)|
+  = 5.97e-5 (N=512), |F| monoton fallend bis 1.3e-6 (N=1024) — Casini–Huerta-
+  Extensivität als Gitter-Zeuge.
+- **Der μ-Offset [L/N]:** Rényi-2 exakt Δ₂ = −ln[(1+R)/2]; der 16-Layer-Carrier
+  saturiert **ln 2 auf Maschinenpräzision** (|Δ₂ − ln 2| = 1.1e-15 bei N=512;
+  R ~ N^(−0.500)); Index-Lesung [F:F_even] = 2.000000, **μ_gauged = 4.000000**
+  = v490-Zensus (zwei unabhängige Gitterzeugen); Layer-weise Eichung kostet
+  16 ln 2 (der Offset misst ln[Index], keinen Klumpen).
+- **Haag-Dualitäts-Indikator [L/N]:** fermionisch S(E) = S(E′) auf 8.2e-12;
+  Orbifold BRICHT Komplementarität (D(E)−D(E′) = 0.427 bei a=64); Paarsumme
+  austauschsymmetrisch ≤ ln 4 = ln μ(SO(16)₁), Max 1.2637 bei x = 1/2 →
+  Doppellimes-Aussage (der erste naive Fixed-x-Check „Paarsumme = ln 4" war
+  FALSCH und wurde ersetzt — ehrlich im Docstring vermerkt).
+- **Kondensations-Arithmetik [E], beidseitig verankert:** det Cartan(D5) ·
+  det Cartan(A3) = 16; KLM/Longo–Rehren 16/4² = 1 und 16/2² = 4 → 4/2² = 1
+  (beide Routen exakt); Σd² (Ising 4, SO(16)₁ 4, (E8)₁ 1); θ_v = 1 exakt bei
+  ν = 2c₋ = 16, Rivalen ν = 1,2,8 ≠ 1. Kette: μ = 1 (graduiert, GEMESSEN) →
+  4 (geeicht, GEMESSEN + v490) → 1 (Arithmetik, [C]; kondensiertes Netz
+  wechselwirkend — v490-Zaun).
+- **Negativkontrollen [E/N]:** ν=1-Einzel-Majorana (Offset nicht-trivial,
+  Δ₂ = 0.6364 bei N=2048, θ_v = e^{iπ/8} nicht entfernbar — der Kill-
+  Diskriminator hat Zähne); triviale Phase (alles ≤ 1e-7); falsche
+  Sektorsumme {1,P_AB} (Offset exakt 0 statt ln 2).
+- **[C]/[O] ehrlich:** Wörterbuch „Offset = ln Index" (KLM/Longo–Xu/CHMP) +
+  Kondensationsschritt [C]; Kontinuums-Haag-Dualität / lokale Normalität /
+  Split der Quotienten-Netz-Fragen = WP5d-beta (läuft als Exploration), plus
+  WP5e (Costello–Li) [O].
+
+Integration: Contract WP5d-Bullet → „α stage done" (Kernzahlen: ln-2-Plateau
+1e-15, μ-Kette 16→4→1 beidseitig gemessen, Komplementaritätsbruch-Zeuge) mit
+\veri{v501}, beta als laufende Exploration; Statuszeile + Honest-Success-Absatz
+„four of five milestones landed; WP5e (twistor uplift) is the remaining open
+piece"; tfpt_3-Celestial-Section Step 8; tfpt_4-Keystone-Notiz WP1–WP5d;
+Ledger CELEST.WP5D.01 (neu, fine types Formal + Lattice/Numerical) +
+CELEST.SEAM.01 → „WP1–WP5d executed; WP5e [O] (single remaining milestone)";
+Wolfram: 4 exakte v501-Mirrors (Cartan-Dets, KLM-Quotienten, Σd² + Index-
+Lesung, θ_v-16-fold-way), mit aktiver Engine direkt verifiziert (412 → 416,
+ALL WOLFRAM EXTENSION CHECKS PASSED; Gitterkurven Python-only, geflaggt);
+README + GATE.WOLFRAM.02 + tfpt_safeguards Layer-6 + Website-Zähler
+116/116 + 416/416; Website: DAG-qft-Knoten + v501, papers.ts (Contract- und
+tfpt_3-Spiegel „WP1–WP5d done", Celestial-Highlight „8 steps"); Changelog
+2026-07-21 (XI). SEAM.EQUIV.01 bleibt [O]; kein Marker bewegt; als Nächstes
+WP5e (Costello–Li-Uplift) + WP5d-beta (läuft als Exploration).
+
+## 2026-07-21 (X) — v500 (CELEST.WP5C.01): WP5c „der GNS-Limes-Zustand" promoviert — das Ideal liegt im GNS-Kern, |s⟩ ist der Nullvektor, die Familie ist NOTWENDIG
+
+Die celestial_seam_wp5c_gns_limit_state_probe.py aus experiments/tfpt-discovery/
+ist als **v500_celestial_wp5c_gns_limit_state.py (CELEST.WP5C.01)** promoviert
+(35 Checks, Integer/Fraction-exakt, keine Floats, ~10.7 s standalone; Suite
+grün, 494 Skripte nach diesem Schritt). ERFOLG nach dem präregistrierten
+WP5c-Kriterium (Ziel-Check dim GNS-Level-2 = 4124 exakt erfüllt):
+
+- **Konstruktion [E]:** quasi-freier Zustand ω_w; Loop-Sektor = affine
+  k=1-Vakuumfunktionen via maschinell DETERMINIERTER kompakter Anti-Involution
+  θ(e_a) = −e_{−a} (einziges Vorzeichen, das auf allen 61504 Basispaaren
+  Anti-Automorphismus ist; Kontravarianz exakt); Radial-Sektor = Oszillator-
+  Paarungen x^{w·r} (exakter Gibbs-Regulator, x-adisch).
+- **Konvergenz SCHARF [E]:** ω_w = ω_∞ mod x^{N+1} für alle w ≥ N+1 (N=8),
+  bei w=N sitzen die r=1-Moden bei Ordnung N — die WP5a-Schwelle w = n+1
+  gilt IDENTISCH auf Zustandsebene; Positivität aller ω_w geprüft.
+- **Kern-Nachweis (stärkster Befund, komplett maschinell) [E]:** volle exakte
+  Gram-Matrix auf Level 2 — 31124 Monome in 9361 Gewichtsblöcken (Profil
+  164:1, 37:240, 7:2160, 1:6960), jeder Block exakt: Level 1 Rang 248 positiv
+  definit (Cartan-Block = E8-Cartan, det 1); Level 2 Rang **4124**, Kern
+  **27000**, jeder Block PSD; Rang pro Weyl-Orbit (Norm 8/6/4/2/0) =
+  (0,0,1,8,44); Kern = V(2θ) GEWICHTSWEISE (Freudenthal-Kreuzcheck auf allen
+  9361 Gewichten); Höchstgewichts-Normen (3844, 49, 2, 0) bei (0, ω, θ, 2θ);
+  direkte Ideal-Checks F_i|s⟩, F_jF_i|s⟩ Norm 0.
+- **μ4-Äquivarianz [E]:** ω_w ∘ Uhr = ω_w für alle w; die Uhr steigt zu GNS
+  ab; GNS-Level-2-Rang nach Uhrklasse = **(1036, 1024, 1040, 1024)** =
+  Θ_{C_j}/η⁸ bei q² (Zwei-Routen-Identität auf ZUSTANDSEBENE); Level 1 =
+  (60,64,60,64). AUFLÖSUNG WP5b-S4.10: |s⟩ ist der NULLVEKTOR von GNS(ω_∞) —
+  der twisted Zwei-C₁-Moden-Boden (6 Viertel = q^{3/2}) betrifft nur
+  Prä-Limes-Objekte (GNS hat dort keinen Zustand, 6 mod 4 ≠ 0).
+- **Negativkontrollen [E]:** k=2 (⟨s|s⟩ = +4, dominante Blöcke voller Rang —
+  kein Ideal im Kern); k=0 (Level-1-Gram ≡ 0 — keine 248-Schicht ohne
+  Zentralerweiterung); D8 (Level 2 Rang 2076 = 7380−5304, Kern = V(2θ_D8)
+  PSD, aber h = (0,1/2,1,1): Vakuum-GNS ist 1 von 4 Blöcken — Ein-Block
+  bleibt E8/μ4-spezifisch); falsche Familie E′_w = m·w+r (Level-1-Limes-Rang
+  0, 248-Schicht GELÖSCHT, u⁴-Inhalt 710955 ≠ 248 — Kill hat Zähne); keine
+  Dämpfung (897266 ≠ 248); CCR-OBSTRUKTION: bei FIXER radialer Paarung c > 0
+  erzwingt Positivität ω(bb*) ≥ c — es gibt KEINEN w-gleichmäßigen dämpfenden
+  Zustand: die Familienformulierung ist NOTWENDIG und die Familie EXISTIERT
+  ⇒ präregistrierter KILL nicht ausgelöst.
+- **[C]/[O] ehrlich:** quasi-freie Fortsetzung auf die volle *-Algebra,
+  Kac-Positivität jenseits Level 2 [C]; lokale Normalität von ω_∞, Netz/
+  Haag-Dualität (WP5d), Costello–Li (WP5e), operatoralgebraischer Abschluss
+  jenseits der graduierten Topologie [O].
+
+Integration: Contract WP5c-Bullet → done (Kernzahlen: Schwelle w = N+1 auf
+Zustandsebene, voller 9361-Block-Gram Rang 4124/Kern 27000 gewichtsweise,
+Uhrklassen-Split, CCR-Notwendigkeit der Familie) mit \veri{v500}, WP5b-
+Übergabe als beantwortet markiert; tfpt_3-Celestial-Section Step 7 (ein
+Absatz, konservativ, „eight-step story"); Ledger CELEST.WP5C.01 (neu);
+Wolfram: 4 exakte v500-Mirrors (Level-2-Block-Zensus aus Wurzeldaten,
+Rang/Kern-Arithmetik mit dim V(ω) = 3875 via Weyl, Glue-Frame-Uhrklassen-
+Split (1036,1024,1040,1024), Schwelle + k-Dial + D8-Zensus 2705 Blöcke),
+mit aktiver Engine direkt verifiziert (408 → 412; der exakte Gram/PSD-Teil
+bleibt Python-seitig, geflaggt); Website: DAG-qft-Knoten + v500; Changelog
+2026-07-21 (X). SEAM.EQUIV.01 bleibt [O]; kein Marker bewegt.
+
+## 2026-07-21 (IX) — v499 (P2.TYPING.01): das P2-Gewichts-Typungs-Postulat GEHÄRTET — der Anker (1,1,2) als Birkhoff–Grothendieck-Splitting der Deligne-Erweiterung; v491-Check-9-Residual getypt, „balanced"-Heuristik = Stabilität
+
+Die p2_weights_bg_deligne_probe.py aus experiments/tfpt-discovery/ ist als
+**v499_p2_weights_deligne_bg.py (P2.TYPING.01)** promoviert (23 Checks, sympy-
+exakt, ~0.6 s; Suite grün, jetzt 493 Skripte). v491 reduzierte P2 auf „3 positive
+ganze Zahlen, Summe 4"; das Residual war die TYPUNG (warum ganzzahlig, warum
+positiv, warum Summe 4). Jetzt getypt: gegeben die [E]-Anker (4 Marken v216,
+Rang 3 v137/v228, Cusp-Klasse + EXAKTE Irreduzibilität |⟨U,M0⟩| = 24 = |S4|,
+Σ|χ|² = 24, v117; Unitarität (U)) sind alle drei Eigenschaften THEOREME der
+Standard-AG:
+
+- **deg E = −4 als Theorem:** Residuen-Exponenten {0,1/3,2/3} = die eindeutige
+  Hebung von spec(λ³−1) nach [0,1), Spur 1 pro Marke × 4 Marken (Deligne-
+  Residuen-Spur-Formel); par-deg 0 = (U)-Konsistenz; ∞ apparent (Monodromie-
+  Produkt = 1 exakt, (M0·U)⁴ = 1).
+- **Positivität als Theorem:** Irreduzibilität + (U) ⇒ Mehta–Seshadri-
+  Stabilität ⇒ h⁰(E) = 0 (alle 324 Saturierungsfälle); BG-Dictionary
+  h⁰ = 0 ⇔ aᵢ ≥ 1 (erschöpfend). Ganzzahligkeit = Birkhoff–Grothendieck.
+  ⇒ {1,1,2} eindeutig (v491-Lemma), g_car = e₂ = 5.
+- **Selektor getypt:** Schur–Horn-Permutoeder-Gitterpunkte exakt
+  {(2,2,0),(2,1,1)} (die zwei Optionen des tfpt_2-„Global computation"-
+  Theorems); h⁰ = 0 tötet {0,2,2} (O(0)-Summand ⇒ h⁰ = 1) — die
+  „balanced/minimal-variance"-Heuristik ist jetzt Stabilität/Positivität.
+- **h¹-Diskrepanz REAL + AUFGELÖST:** h¹(O(−2)⊕O(−1)²) = 1 ≠ 3 — die naive
+  Typung „Generationen = H¹(E)" ist FALSCH (Negativkontrolle: erzwingt deg −6,
+  Eindeutigkeitsverlust, e₂ ∈ {9,11,12} nie 5); Zwei-Objekt-Typung: L = O(−D)
+  trägt die Generationen (h¹(L) = 3 = N_fam = v137-Basis = H⁰(Ω¹(log D))),
+  E trägt sie als FASER (Rang 3); drei verschiedene H¹ koexistieren
+  (3 L-seitig / 1 kohärent / 6 = |R⁺(A3)| Lokalsystem).
+- **Biswas explizit (unabhängiger Konvergenz-Zeuge):** Gewichts-Nenner
+  3 = N_fam ⇒ ℤ₃-Cusp-Cover y³ = (z−1)(z−i)(z+1)²(z+i)² (Genus 2; NICHT das
+  Pillowcase-Doppel, Genus 1, j = 1728 — Deck-Seite); p_*O_Y = O⊕O(−2)²;
+  das Regulär-Darstellungs-Modell landet auf {0,2,2} = dem INSTABILEN
+  Schur–Horn-Begleiter (h⁰ = 1): Ganzzahligkeit + Summenregel kommen aus der
+  Korrespondenz HERAUS, Stabilität ist der Selektor.
+- **Negativkontrollen:** ohne Positivität 4/31 Lösungen; deg −3/−5 bricht;
+  n-Marken-Scan e₂ = (n−2)(n+1)/2 = 5 NUR bei n = 4 (der WERT, nicht die
+  Eindeutigkeit, ist der n=4-Gehalt); MS-rational e₂ = 16/3 bzw. 44/9.
+- **[C]/[N] ehrlich (P2 bleibt Axiom, kein Marker bewegt):** R1 Modul-
+  Identifikation [C] (QGEO.SYM-Territorium, bleibt [O]); R2 (U) [C]
+  (v33/v40); R3 analytische Monodromie [N] (v117 Check 4). NICHT-ZIRKULÄR:
+  weder v23-Splitting-Input noch v115-diag(A0)=a/4 benutzt; Direction-
+  Reversal-Note von v491 übernommen.
+
+Integration: Ledger P2.TYPING.01 (neu) + „typing residual sharpened by v499"
+in der v491-Zeile (v491 bleibt aktiv, kein supersede); \veri{v499} in
+introduction (Anker-Absatz), tfpt_1 ((5,3)-Keybox), tfpt_2 (H2-Winbox + der
+„Global computation"-Absatz: balanced = Stabilität), origin_theory ((5,3)-
+Keybox) — je ein Satz, konservativ; Wolfram: 5 exakte v499-Mirrors in
+tfpt_readouts_extension.wl, mit aktiver Engine direkt verifiziert (403 → 408,
+ALL WOLFRAM EXTENSION CHECKS PASSED; README + GATE.WOLFRAM.02 + tfpt_safeguards
+Layer-6 + Website-Zähler 116/116 + 408/408); Website: DAG-P2-Knoten + v499,
+papers.ts-Spiegel (intro-Anker + Paper-3 „g_car = 5 forced three ways");
+Changelog 2026-07-21 (IX). AX.P2.01 bleibt deklariertes Axiom; QGEO.SYM bleibt
+[O]; kein Gate schließt.
+
+## 2026-07-21 (VIII) — v498 (CELEST.WP5B.01): WP5b „der Singulärvektor als Operator" promoviert — Contract auf „WP1–WP4 + WP5a + WP5b done", WP5c–e [O] (Roadmap)
+
+Die celestial_seam_wp5b_singular_vector_probe.py aus experiments/tfpt-discovery/
+ist als **v498_celestial_wp5b_singular_vector.py (CELEST.WP5B.01)** promoviert
+(53 Checks, exakt Integer/Fraction, deterministisch, ~1.4 s; Suite grün, jetzt
+492 Skripte). ERFOLG nach dem präregistrierten WP5b-Kriterium: das Lösch-Objekt
+existiert und ist explizit.
+
+- **Konstruktion:** |s⟩ = (E^θ_{−1})²|0⟩ (Gewicht 2θ, Level 2 = 8 Viertel =
+  q², GANZZAHLIG) in einer MASCHINELL gebauten Chevalley/Frenkel–Kac-Basis:
+  bimultiplikativer 2-Kozykel (Asymmetrie auf allen 57600 Paaren), das
+  [e_α,e_{−α}]-Vorzeichen durch Jacobi ERZWUNGEN (SGN = −1), κ hergeleitet
+  (κ(θ∨,θ∨) = 2); Jacobi exakt auf 57600 sl2-Slice- + 6000 geseedeten +
+  496 θ-adjazenten Tripeln; alle N_ab = ±1.
+- **Singularität (Maschine):** J^a_1|s⟩ = 0 für ALLE 248 Basiselemente
+  (0 Verletzungen); Fallzählung 190 (erstes Bracket) / 57 (zweites) / 1
+  (F^θ via Zentralterm-Kürzung — der EINZIGE Fall, der k sieht); dazu
+  J^a_2 = 0 (248), E^a_0 = 0 (120), exaktes Gewicht, Shapovalov-Norm 0;
+  affine PBW-Engine auf allen 61504 Basispaaren unit-getestet.
+- **Level-Dial:** F^θ_1-Koeffizient = 2(1−k) — 2/0/−2 bei k = 0/1/2: ohne
+  Zentralerweiterung existiert das Lösch-Objekt nicht.
+- **μ4-Daten:** j(θ) = 1 (h-adaptierte Kammer maschinell: Cartan-Det 1,
+  E8-Diagramm, Äste [1,2,4]; ⟨θ,h⟩ = 5, Höhe 29 = h∨−1); Uhr-Phase
+  i² = −1; Klasse(2θ) = 2 sheet-gerade (WP5a-konsistent), die löschende
+  θ-sl2 sheet-ungerade (1,3); Kreuztabelle Zeilen (1,56,126,56,1) /
+  Spalten (52,64,60,64); 8 Viertel = q² über das Per-Perioden-Wörterbuch.
+- **Level-2-Abgleich:** Mult(2θ) = 1 im Level-2-Fock ⇒ U(g)|s⟩ = DAS
+  27000 = h∨³; direkter g₀-Orbit-BFS = Freudenthal exakt bis Tiefe 4
+  ([C] Weyl-Vollreduzibilität darüber hinaus); Quotient 4124; Gitter-
+  Lesart (2θ,2θ)/2 = 4 > 2 ⇒ |s⟩ IST der Kern-Generator Fock → E₄/η⁸.
+- **Negativkontrollen (ehrliche Trennung):** E^θ_{−1}|0⟩ NICHT singulär
+  (1 Zeuge F^θ → −k|0⟩ — der 248-Strom-Zustand, der bleiben muss); 4
+  generische Level-2-Zustände nicht singulär (14–33 Zeugen); bei k = 2
+  ist erst der KUBUS singulär ((E^θ)^{k+1} = generische Kac-Mechanik);
+  D8/SO(16)₁: Singulärvektor existiert dort AUCH (generisch), aber
+  h = 1/2 bricht die Ein-Block-Fusion (5304 ≠ 14³) vs. E8 (Komarken ≥ 2,
+  Glue-Gewichte (0,1,1,1) ganzzahlig) — Ein-Block-Schließung ist der
+  E8/μ4-spezifische Teil.
+- **[O] ehrlich (die präzise WP5c-Frage):** in der twisted Viertel-Slot-
+  Modierung summieren zwei C₁-Moden nie zu 8 Vierteln (Minimum 6 =
+  q^{3/2}) — das Per-Perioden-Wörterbuch (v496), nicht die Per-Slot-
+  Identifikation, trägt |s⟩ nach q²; genau der GNS-Limes-Zustand
+  (Kern ⊇ Ideal), den WP5c konstruieren muss.
+
+Integration: Contract WP5b-Bullet → done (Kernzahlen 190/57/1, Dial 2(1−k),
+j(θ) = 1, Uhr-Phase −1, Orbit-BFS Tiefe 4, D8-Kontrast) + Twisted-Slot-
+Spannung als explizite WP5c-Übergabe; Statuszeile „WP1–WP4 + WP5a + WP5b
+executed; WP5c–e [O] (roadmap)"; tfpt_3-Absatz erweitert; Ledger
+CELEST.WP5B.01 (neu) + CELEST.SEAM.01-Update; Wolfram: 5 exakte
+v498-Mirrors in tfpt_readouts_extension.wl, mit AKTIVER Engine direkt
+verifiziert (398 → 403, ALL WOLFRAM EXTENSION CHECKS PASSED; README +
+GATE.WOLFRAM.02 fortgeschrieben; tfpt_safeguards Layer-6 + papers.ts
+116/116 + 403/403); papers.ts Highlight „WP1–WP4 + WP5a + WP5b done" +
+DAG-qft-Knoten + v498; Changelog 2026-07-21 (VII). SEAM.EQUIV.01 bleibt
+[O]; als Nächstes WP5c (GNS-Limes-Zustand der χ_w-Familie, Kern ⊇ Ideal —
+die Twisted-Slot-Spannung ist die präzise Eingangsfrage).
+
+## 2026-07-21 (VII) — MACRO.QUANT.01: Signatur-Reframing-Runde („was MUESSTE auftreten?") — Makro-Quantisierung/Verbots-Fenster/DIB getestet, 12-Punkte-Katalog typisiert
+
+Auftrag (User): die Suche umdrehen — nicht „welche ungeloesten Phaenomene gibt es?",
+sondern „welche Signaturen MUESSTEN auftreten, wenn Realitaet ein diskreter
+Fixpunktprozess ist?" — 12 Richtungen (Makro-Quantisierung, Stabilitaetsinseln,
+Informationskompression, Phasenwechsel, verbotene Bereiche, Fixpunktzahlen,
+Gedaechtniseffekte, Sonolumineszenz, langlebige Wirbel, kosmische Ausrichtungen,
+DIBs, Flyby) + Statistik-Ideen A–F + Kolmogorov-Komplexitaets-Verteilung.
+
+NEUE PROBE (Discovery-Sandbox, macro_quantization_probe.py, eingefrorener
+S7-Detektor aus recovery-comb-domains, seed 41, Daten gitignored in data_macro/):
+- D1 Tornado-Breiten (SPC 1995–2024, n=37146, ln-Range 8.4): omega_1 NULL
+  (p=0.82); Divisibility-Zensus x50 = 25.4x Ueberschuss = menschliche Rundung,
+  keine Physik-Quantisierung; Verbots-Fenster nach grid-aware Null KEINS.
+- D2 Tornado-Laengen (n=37496): omega_1 null (p=0.13); kein Verbots-Fenster.
+- D3 Sonnenflecken-Gruppen-Peakflaechen (RGO/USAF 1874–2016, n=14373): omega_1
+  nominal p=0.0072 ABER Anti-Artefakt-Batterie killt (Binning 2/6, detuned
+  +-12% genauso ruhig) -> NOT robust; Free-Peak lambda=2.34 = generische
+  Sornette-Klasse, ebenfalls nicht robust; kein Verbots-Fenster (p=1.0).
+- D4 HURDAT2-Winde (Positiv-Kontrolle): 100% durch 5 kt teilbar -> Instrument
+  erkennt Reporting-Quantisierung (Kontrolle PASS).
+- D5 DIB-Katalog (Fan+2019, 557 Baender): ln-Range 0.72 = 0.30 Perioden von
+  (3/2)^6 -> RANGE-BLIND by construction (Gate 2.8) — das optische DIB-Fenster
+  kann den omega_1-Kamm PRINZIPIELL nie tragen; explorativer
+  Pair-Spacing-Scan (2–300 cm^-1) p=0.32 -> kein bevorzugter Abstand.
+  (Literatur-Check 2026-07: 557 Baender, weiterhin NUR C60+ identifiziert.)
+
+STRUKTURBEFUND (das wichtigste Ergebnis, maschinell belegt): auf jedem
+makroskopischen Katalog mit ln-Range ~8–10 ist die Frequenzaufloesung
+~0.65–0.75 und |omega_1 − 2pi/ln10| = 0.146 -> omega_1 ist auf menschlich
+berichteten Katalogen PRINZIPIELL ENTARTET mit der Dezimal-Reporting-Comb
+(Trennung braeuchte >43 e-folds ln-Range). Makro-Quantisierungs-Suchen auf
+Katalogdaten sind damit als Klasse abgehakt — nicht „noch nicht gefunden",
+sondern instrumentell nicht unterscheidbar. Zwei Artefaktklassen dokumentiert
+und im Code gekillt: (i) Smooth-Null ohne Reporting-Grid liefert falsche
+„Verbots-Fenster" bei exakt ln(6/5)/ln2 (leere Reporting-Zellen); (ii)
+Preferred-Step-Rundung (25/50-yd) erzeugt Loecher, die wie Physik aussehen.
+
+TYPISIERUNG der uebrigen Punkte (kein neuer Test noetig / moeglich):
+- Stabilitaetsinseln: bereits negativ kontrolliert — MCT/Glas-Bend ist
+  systemabhaengig (4.9 sigma gegen universellen Bend, dsi-false-positive-
+  control); TFPT sagt via FO.01 sogar VORAUS, dass uniforme Emissions-Bridges
+  blind sind. Keine universelle Stabilitaetsfamilie zu erwarten ohne B.
+- Informationskompression/Kolmogorov-Idee: als TFPT-Test heute untypisierbar —
+  KC ist unberechenbar (Proxy = Kompressor-Artefakte), kein Theory-Contract
+  erzwingt eine Komplexitaetsklassen-Kollision, S15-Gate (kein benanntes B fuer
+  Bilddaten). Wenn verfolgen, dann als THEORY-CONTRACT zuerst („welche
+  Komplexitaetsobservable erzwingt der Compiler?"), nie data-first.
+- Phasenwechsel: Wall-Signatur (S3.b) laeuft bereits (45/46 <= 2 Moden);
+  generische Kritikalitaet ist nicht TFPT-spezifisch.
+- Fixpunktzahlen (7/13/24/64/96/248): Anti-Numerologie-Disziplin (t0~30/v478);
+  der EINZIGE saubere Known-Answer-Fall laeuft schon (e8-ladder-bed:
+  Zamolodchikov-E8 in BaCo2V2O8/CoNb2O6, detector validated). Freies
+  Integer-Jagen ohne Prereg wird abgelehnt. Notiert als getypte Beobachtung:
+  Fluss-Verzweigungswinkel 2pi/5 = 72 deg (Devauchelle+ 2012, PNAS) ist
+  Laplacian-growth-Theorem, NICHT g_car = 5 — Lehrbeispiel fuer die Falle.
+- Gedaechtniseffekte: FO.02b (kein RM-Memory 33/35+12/12) und FO.10
+  (Zeitpfeil-Null) binden bereits: der TFPT-Kanal ist Markov/CPTP — die
+  Theorie sagt KEIN Langzeitgedaechtnis jenseits der Zwei-Moden-Uhr voraus.
+- Sonolumineszenz: geparkt mit Grund — die Blase wird akustisch GETRIEBEN,
+  die Beobachter-Uhr ist der Drive (keine freie Relaxation) -> Log-Uhr-Comb
+  by construction range-blind; kein TFPT-Contract nennt eine Bruecke in
+  Blasenkollaps; kein oeffentlicher Katalog. Kein Detektor sinnvoll.
+- Langlebige Wirbel / Saturn-Hexagon: n=1-Anekdoten; polare Polygon-Moden
+  {5,6,8} (Juno/Cassini) sind Cherry-Picking-Terrain; Rossby/Jet-Instabilitaet
+  reproduziert das Hexagon im Labor. Keine Suchachse.
+- Kosmische Ausrichtungen: bereits abgedeckt durch cosmic-dipole-watchdog +
+  cosmic-handedness (TFPT steht auf FLRW -> Dissolution-Vorhersage).
+- Flyby: No-Unit-Theorem (v153) verbietet die neue Laengenskala, die eine
+  TFPT-Lesart braeuchte; Metrologie-Residuen deckt der alpha-Lambda-Lock ab.
+- Offene Kandidaten mit echten Daten fuer spaeter (gleiche S15-Typisierung):
+  Sonnenflecken-ABSTAENDE (RGO-Positionen liegen in data_macro/),
+  Galaxien-Pitch-Winkel-Verbots-Fenster (Yu&Ho-Kataloge, Beschaffung offen).
+
+Firewall unveraendert: alles Surface-Leakage ohne benanntes B — Nulls binden
+den Kern nicht, nichts ist Claim/Scorecard-Zeile; Promotion nur via
+promote-to-verification nach unabhaengiger Replikation.
+
 ## 2026-07-21 (VI) — v497 (CELEST.WP5A.01): WP5a „das Nullideal aus dem Limes" promoviert — Contract auf „WP1–WP4 + WP5a done", WP5b–e [O] (Roadmap)
 
 Die celestial_seam_wp5a_null_ideal_limit_probe.py aus experiments/tfpt-discovery/
