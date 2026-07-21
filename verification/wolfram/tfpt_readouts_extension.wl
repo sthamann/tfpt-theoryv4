@@ -3310,6 +3310,157 @@ Module[{q, t, u, e4, chi, jq, Ddim, hilb, cum, slice, f, verma, dims4, lf,
     period === 248 && tower === {} && lf === 897266 && lf > 248];
 ];
 
+(* ==== v497 round: CELEST.WP5A.01 -- WP5a of CELEST.SEAM.01, "the null ideal
+   from the limit" (the v496 boundary-limit shadow made precise).  Exact
+   content mirrored: (i) the chi_w stabilisation family (threshold w = n+1,
+   w = 2 = the chiral jet grading, loop Fock 897266 at u^4); (ii) the null
+   ideal DERIVED via the Weyl dimension formula in the standard E8 frame
+   (Sym^2(248) = 27000 + 3875 + 1, 27000 = h_vee^3, Casimirs/Dynkin indices,
+   level-1 integrability, quotient 31124 - 27000 = 4124); (iii) the two-route
+   identity (mu4 theta-split sector sum at q^2 = (1036,1024,1040,1024) =
+   4124, q^3 = 34752, glue diagonal h = (0,1,1,1)); (iv) the negative
+   controls (SO(16)_1: 5304 + 1820 + 135 + 1, 5304 != 14^3, quotient 2076 =
+   Theta_D8/eta^8, block weights (0,1/2,1,1); false periodisation; swapped
+   glue).  The Freudenthal/peeling residual-zero derivation itself is
+   Python-side (v497 S3); the Weyl-dimension and orbit-independent counting
+   consequences are what is mirrored here.  Mirrors v497. ==== *)
+Module[{u, dims4, dneg, gens, fam, loop, Dch, stab, e8simple, Msimp, e8roots,
+        pos, rho, wdim, theta, lam2t, lamOm, c2, verma, chi2, q, e4, chi},
+  u = \[FormalU]; q = \[FormalQ];
+  dims4 = {60, 64, 60, 64};
+  dneg[m_] := dims4[[Mod[-m, 4] + 1]];
+  gens[w_] := Module[{g = ConstantArray[0, 8]},
+    Do[If[m + w r <= 8, g[[m + w r]] += dneg[m]], {m, 1, 8}, {r, 0, 8}];
+    Do[If[w r <= 8, g[[w r]] += 60], {r, 1, 8}];
+    g];
+  fam[w_] := CoefficientList[Normal[Series[
+    Product[(1 - u^e)^-(gens[w][[e]]), {e, 1, 8}], {u, 0, 8}]], u];
+  loop = CoefficientList[Normal[Series[
+    Product[(1 - u^n)^-dneg[n], {n, 1, 8}], {u, 0, 8}]], u];
+  Dch[d_] := Sum[If[2 p - d >= 0, dims4[[Mod[-(2 p - d), 4] + 1]], 0],
+    {p, 0, d}];
+  stab = And @@ Flatten[Table[
+    If[w >= n + 1, fam[w][[n + 1]] === loop[[n + 1]],
+       fam[w][[n + 1]] > loop[[n + 1]]], {n, 1, 8}, {w, 1, 10}]];
+  checkExact["v497 CELEST.WP5A.01 (i): STABILISATION THEOREM -- the chi_w family (chiral jet generators, E_w = m + w r in quarter units) has u^n coefficient EQUAL to the quarter-moded loop Fock for ALL w >= n+1 and STRICTLY larger for every w <= n (n <= 8, w <= 10); the w = 2 member IS the chiral jet grading (generator counts 64,120,128,180,192,240,256,300 = the p >= q monomial count); loop Fock at u^4 = INTEGER level 1 counts 897266 (the limit alone does NOT give the 248 of the character)",
+    stab && gens[2] === Table[Dch[d], {d, 1, 8}] &&
+    gens[2] === {64, 120, 128, 180, 192, 240, 256, 300} &&
+    loop[[5]] === 897266 && loop[[5]] > 248];
+  e8simple = {{1, -1, -1, -1, -1, -1, -1, 1}, {2, 2, 0, 0, 0, 0, 0, 0},
+    {-2, 2, 0, 0, 0, 0, 0, 0}, {0, -2, 2, 0, 0, 0, 0, 0},
+    {0, 0, -2, 2, 0, 0, 0, 0}, {0, 0, 0, -2, 2, 0, 0, 0},
+    {0, 0, 0, 0, -2, 2, 0, 0}, {0, 0, 0, 0, 0, -2, 2, 0}};
+  Msimp = Transpose[e8simple];
+  e8roots = Join[
+    Flatten[Table[Module[{v = ConstantArray[0, 8]},
+      v[[i]] = si; v[[j]] = sj; v],
+      {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3],
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  pos = Select[e8roots, Min[LinearSolve[Msimp, #]] >= 0 &];
+  rho = Total[pos]/2;
+  wdim[lam_] := Product[((lam + rho) . a)/(rho . a), {a, pos}];
+  theta = {0, 0, 0, 0, 0, 0, 2, 2}; lam2t = 2 theta;
+  lamOm = {0, 0, 0, 0, 0, 0, 0, 4};
+  c2[lam_] := (lam . (lam + 2 rho))/4;
+  verma = CoefficientList[Normal[Series[
+    Product[(1 - q^n)^-248, {n, 1, 2}], {q, 0, 2}]], q];
+  e4 = 1 + 240 Sum[DivisorSigma[3, n] q^n, {n, 1, 6}];
+  chi = CoefficientList[Normal[Series[
+    e4/Product[(1 - q^n)^8, {n, 1, 6}], {q, 0, 3}]], q];
+  checkExact["v497 CELEST.WP5A.01 (ii): NULL IDEAL DERIVED (Weyl dimension formula, standard E8 frame) -- 240 roots, 120 positive, MemberQ theta; dim V(theta) = 248 (unit test), dim V(2 theta) = 27000 = 30^3 = h_vee^3 EXACTLY, dim V(omega) = 3875, Sym^2(248) count 30876 = 1 + 3875 + 27000; Casimirs C2 = (60, 124, 96) = (2 h_vee, ., .), Dynkin indices 6750/750 integers; level-1 integrability <2 theta,theta_vee> = 4 > 1, <omega,theta_vee> = 2 > 1; quotient 31124 - 27000 = 4124 = 1 + 248 + 3875 = chi_2",
+    Length[e8roots] === 240 && Length[pos] === 120 &&
+    MemberQ[e8roots, theta] &&
+    wdim[theta] === 248 && wdim[lam2t] === 27000 &&
+    wdim[lamOm] === 3875 && 27000 === 30^3 &&
+    1 + 3875 + 27000 === 30876 && 248*249/2 === 30876 &&
+    c2[theta] === 60 && c2[lam2t] === 124 && c2[lamOm] === 96 &&
+    c2[lam2t] 27000/(2*248) === 6750 && c2[lamOm] 3875/(2*248) === 750 &&
+    (lam2t . theta)/4 === 4 && (lamOm . theta)/4 === 2 &&
+    verma === {1, 248, 31124} && verma[[3]] - 27000 === 4124 &&
+    4124 === 1 + 248 + 3875 && chi[[3]] === 4124];
+];
+Module[{q, d5int, d5half, d5cls, a3cls, pairing, thetaC, p8, sector, lvl1,
+        lvl2, lvl3, hD5, hA3, hdiag, norms},
+  q = \[FormalQ];
+  d5int = Tuples[Range[-2, 2], 5];
+  d5half = Tuples[{-3/2, -1/2, 1/2, 3/2}, 5];
+  d5cls = <|"0" -> Select[d5int, EvenQ[Total[#]] &],
+            "v" -> Select[d5int, OddQ[Total[#]] &],
+            "s" -> Select[d5half, Mod[Total[#] - 5/2, 2] == 0 &],
+            "c" -> Select[d5half, Mod[Total[#] - 5/2, 2] != 0 &]|>;
+  a3cls = Table[Select[Tuples[Range[-3, 3] - k/4, 4],
+    Total[#] == 0 && #.# <= 6 &], {k, 0, 3}];
+  norms[vs_] := Tally[Select[# . # & /@ vs, # <= 6 &]];
+  pairing = {{"0", 1}, {"s", 2}, {"v", 3}, {"c", 4}};
+  thetaC = Table[Module[{coeffs = ConstantArray[0, 4]},
+    Do[Module[{n = n5[[1]] + n3[[1]]},
+      If[n <= 6 && EvenQ[n] && IntegerQ[n/2],
+        coeffs[[n/2 + 1]] += n5[[2]] n3[[2]]]],
+      {n5, norms[d5cls[pairing[[j, 1]]]]},
+      {n3, norms[a3cls[[pairing[[j, 2]]]]]}];
+    coeffs], {j, 1, 4}];
+  p8 = CoefficientList[Normal[Series[
+    Product[(1 - q^n)^-8, {n, 1, 3}], {q, 0, 3}]], q];
+  sector = Table[CoefficientList[Normal[Series[
+    thetaC[[j]] . (q^Range[0, 3]) Product[(1 - q^n)^-8, {n, 1, 3}],
+    {q, 0, 3}]], q], {j, 1, 4}];
+  lvl1 = sector[[All, 2]]; lvl2 = sector[[All, 3]]; lvl3 = sector[[All, 4]];
+  hD5 = Prepend[Table[Min[Select[# . # & /@ d5cls[k], # > 0 &]]/2,
+    {k, {"s", "v", "c"}}], 0];
+  hA3 = Prepend[Table[Min[Select[# . # & /@ a3cls[[k + 1]], # > 0 &]]/2,
+    {k, 1, 3}], 0];
+  hdiag = hD5 + hA3;
+  checkExact["v497 CELEST.WP5A.01 (iii): TWO ROUTES, ONE NUMBER -- the mu4 theta-split sector characters Theta_Cj/eta^8 give currents (60,64,60,64) at q^1, (1036,1024,1040,1024) at q^2 summing to 4124 = 31124 - 27000 EXACTLY (the independent lattice route hits the Fock quotient), and 34752 = chi_3 at q^3; glue-diagonal weights h = (0,1,1,1) INTEGER (one-block fusion)",
+    lvl1 === {60, 64, 60, 64} &&
+    lvl2 === {1036, 1024, 1040, 1024} && Total[lvl2] === 4124 &&
+    Total[lvl3] === 34752 && hdiag === {0, 1, 1, 1}];
+];
+Module[{d8simple, Msimp8, d8roots, pos8, rho8, wdim8, theta8, dims4, sums,
+        shells, p8, vac16, verma16, minv, mins, minc, h16, q, dsw, N0},
+  q = \[FormalQ];
+  d8simple = Append[Table[Module[{v = ConstantArray[0, 8]},
+    v[[i]] = 2; v[[i + 1]] = -2; v], {i, 1, 7}],
+    {0, 0, 0, 0, 0, 0, 2, 2}];
+  Msimp8 = Transpose[d8simple];
+  d8roots = Flatten[Table[Module[{v = ConstantArray[0, 8]},
+    v[[i]] = si; v[[j]] = sj; v],
+    {i, 1, 7}, {j, i + 1, 8}, {si, {2, -2}}, {sj, {2, -2}}], 3];
+  pos8 = Select[d8roots, Min[LinearSolve[Msimp8, #]] >= 0 &];
+  rho8 = Total[pos8]/2;
+  wdim8[lam_] := Product[((lam + rho8) . a)/(rho8 . a), {a, pos8}];
+  theta8 = {2, 2, 0, 0, 0, 0, 0, 0};
+  verma16 = CoefficientList[Normal[Series[
+    Product[(1 - q^n)^-120, {n, 1, 2}], {q, 0, 2}]], q];
+  shells = Module[{s = {0, 0, 0}},
+    Do[If[EvenQ[Total[v]] && v . v <= 4, s[[v . v/2 + 1]]++],
+      {v, Tuples[Range[-2, 2], 8]}]; s];
+  vac16 = CoefficientList[Normal[Series[
+    shells . (q^Range[0, 2]) Product[(1 - q^n)^-8, {n, 1, 2}],
+    {q, 0, 2}]], q];
+  minv = Min[Select[# . # & /@
+    Select[Tuples[Range[-2, 2], 8], OddQ[Total[#]] &], # > 0 &]];
+  mins = Min[# . # & /@ Select[Tuples[{-3/2, -1/2, 1/2, 3/2}, 8],
+    EvenQ[Total[#]] &]];
+  minc = Min[# . # & /@ Select[Tuples[{-3/2, -1/2, 1/2, 3/2}, 8],
+    OddQ[Total[#]] &]];
+  h16 = {0, minv/2, mins/2, minc/2};
+  dims4 = {60, 64, 60, 64};
+  sums = Table[P -> Sum[dims4[[Mod[-n, 4] + 1]], {n, 1, P}], {P, {1, 2, 4, 8}}];
+  dsw = {64, 60, 64, 60};
+  N0 = 1;   (* one monomial of degree 0 *)
+  checkExact["v497 CELEST.WP5A.01 (iv): NEGATIVE CONTROLS -- SO(16)_1 through the SAME pipeline: dim V(theta) = 120 (unit test), Sym^2(120) = 5304 + 1820 + 135 + 1 (Weyl dims of the FOUR components), 5304 != 14^3 = 2744 (h_vee^3 NOT generic), quotient 7380 - 5304 = 2076 = Theta_D8/eta^8 at q^2 (D8 shells (1,112,1136)); block weights h = (0,1/2,1,1) -- h_vector = 1/2 NON-integer, no one-block fusion (vs E8's (0,1,1,1)); false periodisation P = 1/2/4/8 -> 64/124/248/496 (only P = |mu4| = 4 gives the 248 layer); swapped glue breaks the zero-mode anchor (64 != 60)",
+    Length[d8roots] === 112 && Length[pos8] === 56 &&
+    wdim8[theta8] === 120 &&
+    wdim8[2 theta8] === 5304 && wdim8[{2, 2, 2, 2, 0, 0, 0, 0}] === 1820 &&
+    wdim8[{4, 0, 0, 0, 0, 0, 0, 0}] === 135 &&
+    5304 + 1820 + 135 + 1 === 120*121/2 && 5304 =!= 14^3 &&
+    verma16 === {1, 120, 7380} && verma16[[3]] - 5304 === 2076 &&
+    shells === {1, 112, 1136} && vac16 === {1, 120, 2076} &&
+    h16 === {0, 1/2, 1, 1} &&
+    ({1, 2, 4, 8} /. sums) === {64, 124, 248, 496} &&
+    dsw[[1]] N0 === 64 && dsw[[1]] N0 =!= 60];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

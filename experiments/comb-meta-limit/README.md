@@ -26,10 +26,11 @@ null").
    (A3/A3b), plus the BH late-time tail (A2). This is the number that would matter for the theory.
 
 2. **All-channel** (surface + horizon): additionally folds in the *surface* channels — A1 magnetar,
-   A4 GRB plateau, A5 ENT/AGN-disk-TDE, PG.05 Crab (and PG.07 Vela / crust-cooling when their
-   result files exist). This is legitimate **only** as a bound on a *universal discrete-scale-
-   invariance* amplitude; a surface comb would be a universal-DSI coincidence, **never** a TFPT
-   confirmation, so this number is **never** presented as a TFPT constraint.
+   A4 GRB plateau, A5 ENT/AGN-disk-TDE, PG.05 Crab, PG.06b Vela (FULL NICER archive) and
+   crust-cooling (when its result file exists). This is legitimate **only** as a bound on a
+   *universal discrete-scale-invariance* amplitude; a surface comb would be a universal-DSI
+   coincidence, **never** a TFPT confirmation, so this number is **never** presented as a TFPT
+   constraint.
 
 ## Honest costs (built into the method, not hidden)
 
@@ -52,7 +53,7 @@ null").
 | tier | channels | why |
 |---|---|---|
 | **A — absolute ε** (fed into the limit) | A1 magnetar, A4 GRB, A5 ENT | recovery observable is `y = ln(flux)`, so the fitted comb amplitude **is** the fractional ε the theory predicts; the curves are committed → reproduced locally |
-| **B — normalised / no ε** (enumerated only) | A3, A3b FRB · PG.05 Crab · GW · A2 · PG.07 Vela · crust | raw curve gitignored/absent, **or** the observable is a linear intensity / nu-dot residual (not a fractional flux modulation), **or** a single ringdown is degenerate (the bend needs a many-event cascade). Only a *normalised* amplitude `√(2·gain)` is available — **not** comparable to the absolute 2%. |
+| **B — normalised / no ε** (enumerated only) | A3, A3b FRB · PG.05 Crab · GW · A2 · PG.06b Vela (FULL) · crust | raw curve gitignored/absent, **or** the observable is a linear intensity / nu / nu-dot residual (not a fractional flux modulation), **or** a single ringdown is degenerate (the bend needs a many-event cascade), **or** the injection sensitivity is censored (PG.06b FULL: ε_90 never reached below ε=1). Only a *normalised* amplitude `√(2·gain)` is available — **not** comparable to the absolute 2%. |
 
 The decisive, honest finding falls straight out of this table: **every channel where TFPT predicts
 a universal ε (the horizon group) is amplitude-data-limited**, while the only channels that yield an
@@ -91,7 +92,18 @@ anti-conservative here — confirmed by the coverage check). The one-sided 95% U
   below 2% — it cannot yet constrain the universal-DSI amplitude either.
 - **Per-channel** ε̂ ± σ (absolute, Tier A): A4 GRB 0.027 ± 0.040 (17 curves, the anchor);
   A1 magnetar 0.00 ± 0.074 (2 curves); A5 ENT 0.00 ± 0.064 (1 curve). Tier-B normalised amplitudes
-  `√(2g)`: A3 0.27, A3b 0.58, PG.05 0.76 (context only, not absolute ε).
+  `√(2g)`: A3 0.27, A3b 0.58, PG.05 0.76, PG.06b Vela 0.40 (context only, not absolute ε).
+- **PG.06b FULL Vela ingested (2026-07-21):** the Vela X-ray channel now reads the FULL NICER
+  archive reduction (`pulsar-glitch-recovery/results/pg06b_full_vela.json`: 665 obs → 491 usable →
+  119 piecewise-coherent segments; true Vela F0 = 11.1861692 Hz — the old single-obs
+  "F0=11.19275 Hz detection" was a noise peak, corrected on record). It stays **Tier B / censored**:
+  the observable is a *linear* δν(τ) residual (µHz, not a fractional ln-flux modulation), both legs
+  sit below the 2.8-period gate (2019: 2.17, 2021: 1.38), and the surrogate-calibrated injection
+  never reaches ε_90 below ε=1 (2019: ε_50=0.55; 2021: not reached) — so no absolute per-channel
+  ε-UL exists to feed the DL/HKSJ combination and the channel remains enumerated-only
+  ("no constraint"). The 2019 leg's raw comb p=0.014 is an audit-level chance feature
+  (Bonferroni ×10 = 0.14, shuffle p=0.40, sub-gate reach), not a candidate. The aggregate limits
+  are unchanged.
 - **Injection self-consistency:** inject a known common ε into mock channels and re-run the whole
   pipeline — ε=0→ε̂=0.016 (UL 0.027); ε=0.02→ε̂=0.015 (UL 0.030); **ε=0.05→ε̂=0.048 (UL 0.055)**.
   Coverage of the 95% UL ≈ **0.92** over 150 trials (target 0.95; within Monte-Carlo error — mildly
@@ -113,7 +125,8 @@ PYTHONPATH=src python -m tfpt_metalimit.cli analyze     # -> results/results.jso
 ```
 
 Reads (read-only) the sibling results/data: `recovery-comb-domains/{results,data}`,
-`pulsar-glitch-recovery/results`, `gw-ringdown-echo` (README-level), and
+`pulsar-glitch-recovery/results` (PG.05 `pg05_recovery_comb.json` + PG.06b FULL
+`pg06b_full_vela.json`), `gw-ringdown-echo` (README-level), and
 `crust-cooling-comb/results/*.json` if a parallel sibling has produced it (graceful skip if absent).
 
 ## Layout

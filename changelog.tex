@@ -60,6 +60,80 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (VI) (CELEST.SEAM.01 WP5a executed and promoted: \texttt{v497} --- ``the null ideal from the limit'', the \texttt{v496} boundary-limit shadow made a precise coefficientwise limit and the level-2 null ideal derived from root data; contract WP5 subdivided, now WP1--WP4 $+$ WP5a done, WP5b--e \mO\ (roadmap); Wolfram extension $394\to398$ (verified engine run); \emph{no gate closes, no marker moves, \texttt{SEAM.EQUIV.01} untouched})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v497\_celestial\_wp5a\_null\_ideal.py} (\texttt{CELEST.WP5A.01}, 34 checks, exact
+integer/Fraction, no floats).} Three results make the WP4 limit reading precise. \emph{Stabilisation
+theorem}: the one-parameter family $\chi_w$ of graded Fock characters on the chiral jet generators
+(loop energy $m$, radial number $r$; $E_w=m+wr$ in quarter units $u=q^{1/4}$) contains the chiral jet
+grading as its $w{=}2$ member (generator counts $64,120,128,180,192,240,256,300$ per degree), and its
+$u^n$ coefficient equals the quarter-moded loop Fock for \emph{all} $w\ge n{+}1$, strictly larger for
+every $w\le n$ (verified $n\le8$, $w\le10$) --- the \texttt{v496} ``boundary-limit shadow'' is a
+precise \emph{coefficientwise} limit $\varepsilon=1/w\to0$ with explicit threshold $w=n{+}1$, not a
+slice (convention clarified: $897266=$ the quarter-moded loop Fock at $u^4=$ \emph{integer} level 1).
+\emph{The null ideal derived, not cited}: Freudenthal multiplicities $+$ the Weyl dimension formula $+$
+generic character peeling give $\operatorname{Sym}^2(248)=V(2\theta)\oplus V(\omega)\oplus
+V(0)=27000+3875+1$ with residual exactly zero (independent Weyl-orbit cross-check);
+$27000=30^3=(h^\vee)^3$ exactly; $C_2=(124,96)$, Dynkin indices $6750/750$; level-1 integrability
+($\langle2\theta,\theta^\vee\rangle=4$, $\langle\omega,\theta^\vee\rangle=2$) leaves the vacuum as the
+only level-1 primary (Kac, used only through its counting consequence); level-2 quotient
+$31124-27000=4124=1+248+3875$ exactly. \emph{Two routes, one number}: the $\mu_4$ theta-split sector
+sum at $q^2=(1036,1024,1040,1024)$ gives the \emph{same} $4124$ --- the untwisted null-ideal quotient
+and the boundary/twisted lattice presentation count one space ($q^3$: $34752=\chi_3$). Negative
+controls: $SO(16)_1$ through the same pipeline gives \emph{four} components ($5304+1820+135+1$),
+$5304\neq14^3$ (the $h^{\vee\,3}$ identity is not generic), quotient $2076=\Theta_{D_8}/\eta^8$ at
+$q^2$ (the recipe validated on a second algebra), block weights $(0,\tfrac12,1,1)$ break one-block
+fusion (vs $E_8$'s integer $(0,1,1,1)$); only $P=4=|\mu_4|$ periodisation reproduces the 248 layer;
+swapped glue breaks the zero-mode anchor ($64\neq60$). \emph{Honest} \mO: the limit does \emph{not}
+generate the truncation --- the singular vector as an \emph{operator} in the limit net (WP5b), the GNS
+limit state (WP5c) and local normality/Haag duality (WP5d) stay open; the celestial route now has the
+same two-step shape as MMST (limit $+$ maximal ideal), with the ideal quantitatively fixed;
+\texttt{SEAM.EQUIV.01} untouched.
+\item \textbf{Contract $+$ surfaces synced.} \texttt{tfpt\_research\_contracts}: WP5 subdivided ---
+WP5a moved to \emph{done} with the key numbers (stabilisation threshold $w=n{+}1$; $27000=(h^\vee)^3$
+derived; quotient $=$ sector sum $=4124$; $SO(16)_1$ contrast), WP5b--e added as roadmap bullets with
+success/kill criteria (WP5b singular-vector operator in the quarter-moded current Fock; WP5c GNS limit
+state, kernel $\supseteq$ ideal; WP5d local net/Haag duality via the KLM route; WP5e BCOV/Costello--Li
+twistor uplift, partition function $=E_4/\eta^8$ incl.\ the $q^{-1/3}$ prefactor); K4 paragraph and the
+honest-success status line updated. Ledger: \texttt{CELEST.WP5A.01} (new) $+$ \texttt{CELEST.SEAM.01}
+(``WP1--WP4 $+$ WP5a executed; WP5b--e \mO\ (roadmap)''). Wolfram: 4 exact \texttt{v497} mirrors added
+to \texttt{tfpt\_readouts\_extension.wl} and \emph{verified} with the active engine the same day
+($394\to398$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}); \texttt{wolfram/README.md} $+$
+\texttt{GATE.WOLFRAM.02} counters advanced; \texttt{tfpt\_safeguards} Layer-6 count $+$ website mirrors
+$116/116+398/398$. Website: \texttt{papers.ts} contract mirror (``WP5a done, WP5b--e roadmap''), DAG
+\texttt{qft} node $+$ \texttt{v497}, generated indices via build. Suite now 491 scripts, all green;
+\texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
+\subsection*{2026-07-21 (V) (\texttt{comb-meta-limit} re-run with the PG.06b FULL Vela recovery ingested --- the stale single-obs PG.06b reference (noise-peak $F_0=11.19275$\,Hz) corrected in the channel definitions; the new X-ray channel enters \emph{censored} (no absolute $\varepsilon$), both aggregate limits numerically unchanged; \emph{experiments level only --- no verification module, no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{experiments/comb-meta-limit} channel update (methodology untouched).} The Vela
+X-ray channel (\texttt{channels.py}) now ingests the PG.06b FULL reduction
+(\texttt{pg06b\_full\_vela.json} in \texttt{pulsar-glitch-recovery/results}: 665 obs $\to$ 491
+usable $\to$ 119 segment-coherent $\nu(t)$ points) instead of the superseded single-obs
+\texttt{pg06b\_vela.json};
+the stale code note quoting the noise-peak ``detection'' $F_0=11.19275$\,Hz is corrected on record
+(true Vela $F_0=11.1861692$\,Hz), and the channel key is fixed from the mislabel \texttt{PG.07} to
+\texttt{PG.06b}. Censoring handled exactly by the existing Tier-B rule (nothing invented): the comb
+observable is a \emph{linear} $\delta\nu(\tau)$ residual ($\mu$Hz, not a fractional $\ln$-flux
+modulation), both legs sit below the 2.8-period gate (2019: 2.17, 2021: 1.38), and the
+surrogate-calibrated injection never reaches $\varepsilon_{90}$ below $\varepsilon=1$
+($\varepsilon_{50}=0.55$ in 2019 only) $\Rightarrow$ no absolute per-channel $\varepsilon$-UL exists
+for the DL/HKSJ combination; the channel stays enumerated-only (``no constraint''), carrying the
+normalised context amplitude $\sqrt{2g}=0.40$ (leg gains 0.046/0.114, min $p=0.014$ --- the 2019
+audit-level chance feature: Bonferroni $\times10=0.14$, shuffle $p=0.40$).
+\item \textbf{Full re-run (seed 0, deterministic): both limits numerically unchanged.}
+Boundary/horizon-scoped: \texttt{data\_limited} (still no horizon channel with an absolute
+$\varepsilon$); all-channel universal-DSI 95\% UL $\varepsilon<0.11954$ ($\approx12.0\%$; HKSJ
+$t_2=2.92$, $\rho=0.3$-inflated $0.137$; $6.91\times$ the predicted $\varepsilon=0.0173$), still
+driven by the surface log-flux channels A1/A4/A5 (A4 GRB the anchor, per-channel UL $0.108$); now 10
+channels enumerated / 3 usable. Injection self-consistency unchanged (inject 5\% $\to$ recover
+4.8\%, UL 5.5\%; coverage 0.92/150 trials). Surfaces synced: experiment README (tier table, ingest
+list, PG.06b FULL bullet), \texttt{results/results.json}, scorecard row \texttt{data\_value}/source
+via \texttt{build\_evidence\_scorecard.py} (status stays \texttt{data\_limited}; counters unchanged,
+120 rows), \texttt{experiments/README.md} catalog row. No claim; firewall intact.
+\end{itemize}
+
 \subsection*{2026-07-21 (IV) (Wolfram engine reactivated --- the deferred second-path mirrors VERIFIED: base $116/116$ $+$ extension $394/394$ ($378\to394$, the 16 mirrors accumulated since 2026-07-14 now counted); \texttt{GATE.WOLFRAM.01/02} and all counter surfaces synced; \emph{no gate closes, no marker moves})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Verified engine run 2026-07-21 (Wolfram Engine 14.3, license reactivated).}

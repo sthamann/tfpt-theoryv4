@@ -42,7 +42,8 @@ website/
 ├── components/
 │   ├── Navbar.tsx                Sticky navigation, mobile menu
 │   ├── Footer.tsx                Site footer with downloads
-│   ├── Changelog.tsx             /changelog timeline (renders lib/changelog.ts, math via KaTeX)
+│   ├── Changelog.tsx             /changelog timeline (server-renders lib/changelog.ts; emits raw TeX)
+│   ├── ChangelogMath.tsx         Client hydrator: renders the changelog's raw TeX with KaTeX in-browser
 │   ├── Hero.tsx                  Hero with the compiler map + 6-frame unpacking
 │   ├── Overview.tsx              Four pillars + μ₄ glue + α closure + claim stack
 │   ├── ReconstructionChain.tsx   The compiler pipeline / dependency DAG
@@ -106,6 +107,8 @@ All document and prediction content is read from `lib/papers.ts` and `lib/predic
 PDFs in `public/papers/` are mirrors of the eight active root documents (`introduction.tex`, `tfpt_1`–`tfpt_4`, `tfpt_horizon_readouts`, `origin_theory`, `tfpt_research_contracts`). Replace them in place and run `npm run release:write` to refresh the size + SHA-256 metadata in `lib/release.ts`.
 
 The `/changelog` page is a **generated mirror** of the canonical `../changelog.tex`: `lib/changelog.ts` is produced by `../verification/make_changelog_web.py` (run by `bash ../build.sh gen`) and its freshness is enforced by `../verification/audit_sync.py`. Never edit `lib/changelog.ts` (or the changelog page text) by hand — edit `changelog.tex` and regenerate.
+
+Its ~6.5k inline formulas are **rendered client-side** (`ChangelogMath.tsx`) rather than at build time: the server component emits only the raw TeX per formula so the prerendered HTML stays well under Vercel's 19.07 MB ISR limit (`FALLBACK_BODY_TOO_LARGE`) as the changelog grows. The TeX source stays in the DOM (`data-cl-tex` + `aria-label`) for accessibility, SEO and no-JS readability.
 
 ## Accessibility & SEO
 

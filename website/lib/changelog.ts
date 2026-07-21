@@ -47,6 +47,1311 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "VI) (CELEST.SEAM.01 WP5a executed and promoted: "
+      },
+      {
+        "k": "c",
+        "v": "v497"
+      },
+      {
+        "k": "t",
+        "v": " — “the null ideal from the limit”, the "
+      },
+      {
+        "k": "c",
+        "v": "v496"
+      },
+      {
+        "k": "t",
+        "v": " boundary-limit shadow made a precise coefficientwise limit and the level-2 null ideal derived from root data; contract WP5 subdivided, now WP1–WP4 "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " WP5a done, WP5b–e "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "(roadmap); Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "394\\to398"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "no gate closes, no marker moves, "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.EQUIV.01"
+          },
+          {
+            "k": "t",
+            "v": " untouched"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v497_celestial_wp5a_null_ideal.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5A.01"
+            },
+            {
+              "k": "t",
+              "v": ", 34 checks, exact integer/Fraction, no floats)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three results make the WP4 limit reading precise. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Stabilisation theorem"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the one-parameter family "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_w"
+        },
+        {
+          "k": "t",
+          "v": " of graded Fock characters on the chiral jet generators (loop energy "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": ", radial number "
+        },
+        {
+          "k": "m",
+          "v": "r"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "E_w=m+wr"
+        },
+        {
+          "k": "t",
+          "v": " in quarter units "
+        },
+        {
+          "k": "m",
+          "v": "u=q^{1/4}"
+        },
+        {
+          "k": "t",
+          "v": ") contains the chiral jet grading as its "
+        },
+        {
+          "k": "m",
+          "v": "w{=}2"
+        },
+        {
+          "k": "t",
+          "v": " member (generator counts "
+        },
+        {
+          "k": "m",
+          "v": "64,120,128,180,192,240,256,300"
+        },
+        {
+          "k": "t",
+          "v": " per degree), and its "
+        },
+        {
+          "k": "m",
+          "v": "u^n"
+        },
+        {
+          "k": "t",
+          "v": " coefficient equals the quarter-moded loop Fock for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "all"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "w\\ge n{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", strictly larger for every "
+        },
+        {
+          "k": "m",
+          "v": "w\\le n"
+        },
+        {
+          "k": "t",
+          "v": " (verified "
+        },
+        {
+          "k": "m",
+          "v": "n\\le8"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "w\\le10"
+        },
+        {
+          "k": "t",
+          "v": ") — the "
+        },
+        {
+          "k": "c",
+          "v": "v496"
+        },
+        {
+          "k": "t",
+          "v": " “boundary-limit shadow” is a precise "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "coefficientwise"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " limit "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=1/w\\to0"
+        },
+        {
+          "k": "t",
+          "v": " with explicit threshold "
+        },
+        {
+          "k": "m",
+          "v": "w=n{+}1"
+        },
+        {
+          "k": "t",
+          "v": ", not a slice (convention clarified: "
+        },
+        {
+          "k": "m",
+          "v": "897266="
+        },
+        {
+          "k": "t",
+          "v": " the quarter-moded loop Fock at "
+        },
+        {
+          "k": "m",
+          "v": "u^4="
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "integer"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " level 1). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The null ideal derived, not cited"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Freudenthal multiplicities "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Weyl dimension formula "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " generic character peeling give "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Sym}^2(248)=V(2\\theta)\\oplus V(\\omega)\\oplus\nV(0)=27000+3875+1"
+        },
+        {
+          "k": "t",
+          "v": " with residual exactly zero (independent Weyl-orbit cross-check); "
+        },
+        {
+          "k": "m",
+          "v": "27000=30^3=(h^\\vee)^3"
+        },
+        {
+          "k": "t",
+          "v": " exactly; "
+        },
+        {
+          "k": "m",
+          "v": "C_2=(124,96)"
+        },
+        {
+          "k": "t",
+          "v": ", Dynkin indices "
+        },
+        {
+          "k": "m",
+          "v": "6750/750"
+        },
+        {
+          "k": "t",
+          "v": "; level-1 integrability ("
+        },
+        {
+          "k": "m",
+          "v": "\\langle2\\theta,\\theta^\\vee\\rangle=4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\langle\\omega,\\theta^\\vee\\rangle=2"
+        },
+        {
+          "k": "t",
+          "v": ") leaves the vacuum as the only level-1 primary (Kac, used only through its counting consequence); level-2 quotient "
+        },
+        {
+          "k": "m",
+          "v": "31124-27000=4124=1+248+3875"
+        },
+        {
+          "k": "t",
+          "v": " exactly. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Two routes, one number"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " theta-split sector sum at "
+        },
+        {
+          "k": "m",
+          "v": "q^2=(1036,1024,1040,1024)"
+        },
+        {
+          "k": "t",
+          "v": " gives the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "4124"
+        },
+        {
+          "k": "t",
+          "v": " — the untwisted null-ideal quotient and the boundary/twisted lattice presentation count one space ("
+        },
+        {
+          "k": "m",
+          "v": "q^3"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "34752=\\chi_3"
+        },
+        {
+          "k": "t",
+          "v": "). Negative controls: "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " through the same pipeline gives "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "four"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " components ("
+        },
+        {
+          "k": "m",
+          "v": "5304+1820+135+1"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "5304\\neq14^3"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "h^{\\vee\\,3}"
+        },
+        {
+          "k": "t",
+          "v": " identity is not generic), quotient "
+        },
+        {
+          "k": "m",
+          "v": "2076=\\Theta_{D_8}/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "q^2"
+        },
+        {
+          "k": "t",
+          "v": " (the recipe validated on a second algebra), block weights "
+        },
+        {
+          "k": "m",
+          "v": "(0,\\tfrac12,1,1)"
+        },
+        {
+          "k": "t",
+          "v": " break one-block fusion (vs "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "'s integer "
+        },
+        {
+          "k": "m",
+          "v": "(0,1,1,1)"
+        },
+        {
+          "k": "t",
+          "v": "); only "
+        },
+        {
+          "k": "m",
+          "v": "P=4=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " periodisation reproduces the 248 layer; swapped glue breaks the zero-mode anchor ("
+        },
+        {
+          "k": "m",
+          "v": "64\\neq60"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ": the limit does "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " generate the truncation — the singular vector as an "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "operator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " in the limit net (WP5b), the GNS limit state (WP5c) and local normality/Haag duality (WP5d) stay open; the celestial route now has the same two-step shape as MMST (limit "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " maximal ideal), with the ideal quantitatively fixed; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " untouched."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " surfaces synced."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": WP5 subdivided — WP5a moved to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "done"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the key numbers (stabilisation threshold "
+        },
+        {
+          "k": "m",
+          "v": "w=n{+}1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "27000=(h^\\vee)^3"
+        },
+        {
+          "k": "t",
+          "v": " derived; quotient "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " sector sum "
+        },
+        {
+          "k": "m",
+          "v": "=4124"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)_1"
+        },
+        {
+          "k": "t",
+          "v": " contrast), WP5b–e added as roadmap bullets with success/kill criteria (WP5b singular-vector operator in the quarter-moded current Fock; WP5c GNS limit state, kernel "
+        },
+        {
+          "k": "m",
+          "v": "\\supseteq"
+        },
+        {
+          "k": "t",
+          "v": " ideal; WP5d local net/Haag duality via the KLM route; WP5e BCOV/Costello–Li twistor uplift, partition function "
+        },
+        {
+          "k": "m",
+          "v": "=E_4/\\eta^8"
+        },
+        {
+          "k": "t",
+          "v": " incl. the "
+        },
+        {
+          "k": "m",
+          "v": "q^{-1/3}"
+        },
+        {
+          "k": "t",
+          "v": " prefactor); K4 paragraph and the honest-success status line updated. Ledger: "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5A.01"
+        },
+        {
+          "k": "t",
+          "v": " (new) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " (“WP1–WP4 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " WP5a executed; WP5b–e "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "(roadmap)”). Wolfram: 4 exact "
+        },
+        {
+          "k": "c",
+          "v": "v497"
+        },
+        {
+          "k": "t",
+          "v": " mirrors added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "verified"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "394\\to398"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/README.md"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": " counters advanced; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_safeguards"
+        },
+        {
+          "k": "t",
+          "v": " Layer-6 count "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " website mirrors "
+        },
+        {
+          "k": "m",
+          "v": "116/116+398/398"
+        },
+        {
+          "k": "t",
+          "v": ". Website: "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " contract mirror (“WP5a done, WP5b–e roadmap”), DAG "
+        },
+        {
+          "k": "c",
+          "v": "qft"
+        },
+        {
+          "k": "t",
+          "v": " node "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v497"
+        },
+        {
+          "k": "t",
+          "v": ", generated indices via build. Suite now 491 scripts, all green; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "V) ("
+      },
+      {
+        "k": "c",
+        "v": "comb-meta-limit"
+      },
+      {
+        "k": "t",
+        "v": " re-run with the PG.06b FULL Vela recovery ingested — the stale single-obs PG.06b reference (noise-peak "
+      },
+      {
+        "k": "m",
+        "v": "F_0=11.19275"
+      },
+      {
+        "k": "t",
+        "v": " Hz) corrected in the channel definitions; the new X-ray channel enters "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "censored"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " (no absolute "
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon"
+      },
+      {
+        "k": "t",
+        "v": "), both aggregate limits numerically unchanged; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "experiments level only — no verification module, no gate closes, no marker moves"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "experiments/comb-meta-limit"
+            },
+            {
+              "k": "t",
+              "v": " channel update (methodology untouched)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Vela X-ray channel ("
+        },
+        {
+          "k": "c",
+          "v": "channels.py"
+        },
+        {
+          "k": "t",
+          "v": ") now ingests the PG.06b FULL reduction ("
+        },
+        {
+          "k": "c",
+          "v": "pg06b_full_vela.json"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "pulsar-glitch-recovery/results"
+        },
+        {
+          "k": "t",
+          "v": ": 665 obs "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 491 usable "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " 119 segment-coherent "
+        },
+        {
+          "k": "m",
+          "v": "\\nu(t)"
+        },
+        {
+          "k": "t",
+          "v": " points) instead of the superseded single-obs "
+        },
+        {
+          "k": "c",
+          "v": "pg06b_vela.json"
+        },
+        {
+          "k": "t",
+          "v": "; the stale code note quoting the noise-peak “detection” "
+        },
+        {
+          "k": "m",
+          "v": "F_0=11.19275"
+        },
+        {
+          "k": "t",
+          "v": " Hz is corrected on record (true Vela "
+        },
+        {
+          "k": "m",
+          "v": "F_0=11.1861692"
+        },
+        {
+          "k": "t",
+          "v": " Hz), and the channel key is fixed from the mislabel "
+        },
+        {
+          "k": "c",
+          "v": "PG.07"
+        },
+        {
+          "k": "t",
+          "v": " to "
+        },
+        {
+          "k": "c",
+          "v": "PG.06b"
+        },
+        {
+          "k": "t",
+          "v": ". Censoring handled exactly by the existing Tier-B rule (nothing invented): the comb observable is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "linear"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\nu(\\tau)"
+        },
+        {
+          "k": "t",
+          "v": " residual ("
+        },
+        {
+          "k": "m",
+          "v": "\\mu"
+        },
+        {
+          "k": "t",
+          "v": "Hz, not a fractional "
+        },
+        {
+          "k": "m",
+          "v": "\\ln"
+        },
+        {
+          "k": "t",
+          "v": "-flux modulation), both legs sit below the 2.8-period gate (2019: 2.17, 2021: 1.38), and the surrogate-calibrated injection never reaches "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_{90}"
+        },
+        {
+          "k": "t",
+          "v": " below "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=1"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_{50}=0.55"
+        },
+        {
+          "k": "t",
+          "v": " in 2019 only) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " no absolute per-channel "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon"
+        },
+        {
+          "k": "t",
+          "v": "-UL exists for the DL/HKSJ combination; the channel stays enumerated-only (“no constraint”), carrying the normalised context amplitude "
+        },
+        {
+          "k": "m",
+          "v": "\\sqrt{2g}=0.40"
+        },
+        {
+          "k": "t",
+          "v": " (leg gains 0.046/0.114, min "
+        },
+        {
+          "k": "m",
+          "v": "p=0.014"
+        },
+        {
+          "k": "t",
+          "v": " — the 2019 audit-level chance feature: Bonferroni "
+        },
+        {
+          "k": "m",
+          "v": "\\times10=0.14"
+        },
+        {
+          "k": "t",
+          "v": ", shuffle "
+        },
+        {
+          "k": "m",
+          "v": "p=0.40"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Full re-run (seed 0, deterministic): both limits numerically unchanged."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Boundary/horizon-scoped: "
+        },
+        {
+          "k": "c",
+          "v": "data_limited"
+        },
+        {
+          "k": "t",
+          "v": " (still no horizon channel with an absolute "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon"
+        },
+        {
+          "k": "t",
+          "v": "); all-channel universal-DSI 95% UL "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon<0.11954"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\approx12.0\\%"
+        },
+        {
+          "k": "t",
+          "v": "; HKSJ "
+        },
+        {
+          "k": "m",
+          "v": "t_2=2.92"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\rho=0.3"
+        },
+        {
+          "k": "t",
+          "v": "-inflated "
+        },
+        {
+          "k": "m",
+          "v": "0.137"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "6.91\\times"
+        },
+        {
+          "k": "t",
+          "v": " the predicted "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=0.0173"
+        },
+        {
+          "k": "t",
+          "v": "), still driven by the surface log-flux channels A1/A4/A5 (A4 GRB the anchor, per-channel UL "
+        },
+        {
+          "k": "m",
+          "v": "0.108"
+        },
+        {
+          "k": "t",
+          "v": "); now 10 channels enumerated / 3 usable. Injection self-consistency unchanged (inject 5% "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " recover 4.8%, UL 5.5%; coverage 0.92/150 trials). Surfaces synced: experiment README (tier table, ingest list, PG.06b FULL bullet), "
+        },
+        {
+          "k": "c",
+          "v": "results/results.json"
+        },
+        {
+          "k": "t",
+          "v": ", scorecard row "
+        },
+        {
+          "k": "c",
+          "v": "data_value"
+        },
+        {
+          "k": "t",
+          "v": "/source via "
+        },
+        {
+          "k": "c",
+          "v": "build_evidence_scorecard.py"
+        },
+        {
+          "k": "t",
+          "v": " (status stays "
+        },
+        {
+          "k": "c",
+          "v": "data_limited"
+        },
+        {
+          "k": "t",
+          "v": "; counters unchanged, 120 rows), "
+        },
+        {
+          "k": "c",
+          "v": "experiments/README.md"
+        },
+        {
+          "k": "t",
+          "v": " catalog row. No claim; firewall intact."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
         "v": "IV) (Wolfram engine reactivated — the deferred second-path mirrors VERIFIED: base "
       },
       {

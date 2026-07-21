@@ -105,11 +105,13 @@ time `v99`, horizon anchor `v101`, seam orientation `v102`, trisection normal fo
 v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state (verified
 engine run 2026-07-21, license reactivated, Wolfram Engine 14.3 — the 16
-mirrors deferred since 2026-07-14 now counted, 378 → 394: v479 (2) + v491 (3)
-+ v493 (4) + v495 (3) + v496 (4)):
+mirrors deferred since 2026-07-14 counted with the reactivation run, 378 →
+394: v479 (2) + v491 (3) + v493 (4) + v495 (3) + v496 (4); the same-day
+`v497` WP5a round adds 4 more exact mirrors, verified directly with the
+active engine, 394 → 398):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496: 394 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497: 398 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -321,6 +323,26 @@ machine-verified in Python (Fraction/sympy, exact, 25 checks each) in
 `v495`/`v496` themselves.  The Okubo root-sum identity of `v495`
 (polynomial in x over explicit root systems) stays Python-verified; its
 arithmetic consequence λ̃² = h∨+6 is what the mirror checks.
+
+The 2026-07-21 celestial WP5a round:
+`v497_celestial_wp5a_null_ideal.py` (CELEST.WP5A.01: "the null ideal from
+the limit") has its FOUR exact mirrors ADDED and VERIFIED the same day with
+the active engine (394 → 398): (i) the χ_w stabilisation family (u^n
+coefficient = quarter-moded loop Fock for all w ≥ n+1, strictly larger for
+w ≤ n; w = 2 = the chiral jet grading with generator counts
+64,120,128,180,192,240,256,300; loop Fock 897266 at u⁴); (ii) the null
+ideal DERIVED via the Weyl dimension formula in the standard E₈ frame
+(dim V(2θ) = 27000 = 30³ = h∨³, dim V(ω) = 3875, Sym²(248) count 30876 =
+1+3875+27000; Casimirs (60,124,96), Dynkin indices 6750/750; level-1
+integrability ⟨2θ,θ∨⟩ = 4, ⟨ω,θ∨⟩ = 2; quotient 31124 − 27000 = 4124);
+(iii) the two-route identity (μ₄ theta-split sector sum at q² =
+(1036,1024,1040,1024) = 4124, q³ = 34752, glue diagonal h = (0,1,1,1));
+(iv) the negative controls (SO(16)₁: Weyl dims 5304+1820+135+1, 5304 ≠
+14³, quotient 2076 = Θ_D8/η⁸ with shells (1,112,1136), block weights
+(0,1/2,1,1); false periodisation 64/124/248/496; swapped glue 64 ≠ 60).
+The Freudenthal/peeling residual-zero derivation itself (exact
+integer/Fraction recursion) stays Python-side in `v497`; the
+Weyl-dimension and counting consequences are what the mirrors check.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

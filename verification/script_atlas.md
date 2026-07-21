@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`490` registered scripts · `558` ledger claims · `10` clusters.
+`491` registered scripts · `559` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -326,7 +326,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (165 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (166 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -659,6 +659,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v92, v125, v128, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
 - **v496_celestial_wp4_character_shadow** [E/C/O] `CELEST.WP4.01` — CELEST.WP4.01: WP4 of the celestial-holographic research contract CELEST.SEAM.01 -- the (E8)_1 character E4/eta^8 vs the glue-equivariant E8[C^2] S-algebra (the 'type mismatch, hea
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v125, v128, v336, v377, v449, v492 · cited: 3 e8 audit bootstrap, research contracts
+- **v497_celestial_wp5a_null_ideal** [E/C/O] `CELEST.WP5A.01` — CELEST.WP5A.01: WP5a of the celestial-holographic research contract CELEST.SEAM.01 -- 'the null ideal from the limit', first constructive milestone of WP5 (the v496 boundary-limit 
+  - deps: v492_celestial_z4_orbifold, v496_celestial_wp4_character_shadow, v286_seam_equivalence_contract, v125, v128, v336, v377, v449 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1045,13 +1047,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×72, `v336`×36, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×73, `v336`×37, `QGEO.SYM.01`×32, `v216`×22, `v76`×19, `QG.AMB.01`×18, `v56`×18, `E8.GLU.01`×17, `v367`×16, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v485_contact_diagonal_closed** — `SEAM.CONTACT.UNIT.02`
 - **v486_transfer_full_rule** — `HYP.REWRITE.02`
 - **v487_transfer_clock_rungs** — `HYP.REWRITE.03`
 - **v488_majorana_clebsch_door** — `FLAV.NUSCALE.04`
@@ -1063,4 +1064,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v494_cosmo_running_mu_record** — `COSMO.RUNNING.01, COSMO.MUDIST.01`
 - **v495_celestial_wp3_gs_alignment** — `CELEST.WP3.01`
 - **v496_celestial_wp4_character_shadow** — `CELEST.WP4.01`
+- **v497_celestial_wp5a_null_ideal** — `CELEST.WP5A.01`
 

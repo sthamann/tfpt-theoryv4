@@ -1,16 +1,23 @@
 import { Fragment, type ReactNode } from "react";
-import katex from "katex";
 import {
   CHANGELOG,
   CHANGELOG_MACROS,
   type ChangelogNode,
 } from "@/lib/changelog";
+import { ChangelogMath } from "@/components/ChangelogMath";
 
 /**
- * Static, server-rendered changelog. The data is generated from changelog.tex
- * (the single source of truth) by verification/make_changelog_web.py and never
- * edited by hand. Inline math is rendered with KaTeX at build time, so the page
- * ships as plain HTML + the KaTeX stylesheet already loaded globally.
+ * Server-rendered changelog. The data is generated from changelog.tex (the
+ * single source of truth) by verification/make_changelog_web.py and never edited
+ * by hand.
+ *
+ * Inline math is emitted as raw TeX in the server HTML and upgraded to KaTeX in
+ * the browser by <ChangelogMath> (a single client-side pass). Rendering the
+ * ~6.5k formulas to KaTeX HTML at build time pushed the prerendered page past
+ * Vercel's 19.07 MB ISR limit (FALLBACK_BODY_TOO_LARGE); deferring the render
+ * keeps the prerendered HTML small and bounded as the changelog grows, while the
+ * TeX source stays in the DOM (data-cl-tex + aria-label) for a11y, SEO and
+ * no-JS readability.
  */
 
 const MARKER: Record<string, { label: string; cls: string; title: string }> = {
@@ -37,19 +44,15 @@ const MARKER: Record<string, { label: string; cls: string; title: string }> = {
 };
 
 function InlineMath({ tex }: { tex: string }) {
-  // output: "html" (not "htmlAndMathml") keeps the page well under Vercel's
-  // 19 MB prerender limit: the duplicate MathML tree KaTeX emits per formula was
-  // ~half the changelog HTML across ~10k formulas. Accessibility is preserved by
-  // the role="math" aria-label={tex} wrapper below (the TeX is the accessible name).
-  const html = katex.renderToString(tex, {
-    throwOnError: false,
-    strict: "ignore",
-    output: "html",
-    trust: false,
-    macros: { ...CHANGELOG_MACROS },
-  });
+  // Emit only the raw TeX at build time; <ChangelogMath> renders it with KaTeX
+  // in the browser. This keeps the prerendered page well under Vercel's 19.07 MB
+  // ISR limit (the build-time KaTeX HTML across ~6.5k formulas was ~16 MB of it).
+  // The TeX source stays in the DOM (data-cl-tex + aria-label) for a11y, SEO and
+  // no-JS readability, and the visible text is the sensible pre-hydration fallback.
   return (
-    <span role="math" aria-label={tex} dangerouslySetInnerHTML={{ __html: html }} />
+    <span role="math" aria-label={tex} data-cl-tex={tex}>
+      {tex}
+    </span>
   );
 }
 
@@ -103,7 +106,9 @@ function renderNodes(nodes: ChangelogNode[]): ReactNode {
 
 export function Changelog() {
   return (
-    <ol className="relative space-y-7 border-l border-slate-800/70 pl-5 sm:pl-7">
+    <>
+      <ChangelogMath macros={CHANGELOG_MACROS} />
+      <ol className="relative space-y-7 border-l border-slate-800/70 pl-5 sm:pl-7">
       {CHANGELOG.map((entry, idx) => (
         <li key={idx} className="relative">
           <span
@@ -137,6 +142,7 @@ export function Changelog() {
           </article>
         </li>
       ))}
-    </ol>
+      </ol>
+    </>
   );
 }

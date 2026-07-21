@@ -698,9 +698,9 @@ ROWS = [
     # comb-meta-limit (experiments/comb-meta-limit): first quantitative UL on the comb amplitude eps
     ["cross-domain", "meta-analytic UL on recovery-comb amplitude eps (omega=2.583)",
      "eps = exp(-pi^2/ln((3/2)^6)) = 0.0173 (~2%)",
-     "boundary/horizon-scoped: data_limited (NO horizon channel yields an absolute eps -- GW single-event bend degenerate, FRB raw tails absent/linear-intensity, A2 sub-SNR); all-channel universal-DSI 95% UL eps<0.120 (HKSJ over surface log-flux A1/A4/A5, ~6.9x the 2% prediction); injection self-consistent (inject 5% -> recover 4.8%, UL 5.5%; coverage 0.92)",
+     "boundary/horizon-scoped: data_limited (NO horizon channel yields an absolute eps -- GW single-event bend degenerate, FRB raw tails absent/linear-intensity, A2 sub-SNR); all-channel universal-DSI 95% UL eps<0.120 (HKSJ over surface log-flux A1/A4/A5, ~6.9x the 2% prediction; 10 channels enumerated / 3 usable); re-run 2026-07-21 with PG.06b FULL Vela ingested as a censored Tier-B channel (linear delta-nu observable, reach 2.17/1.38 < 2.8-period gate, injection eps_90 never reached below eps=1 -> no absolute eps; aggregate UL unchanged); injection self-consistent (inject 5% -> recover 4.8%, UL 5.5%; coverage 0.92)",
      None, "search_target", "boundary recovery kernel (meta-analytic UL)",
-     "search_target", "recovery-comb-domains A1/A4/A5 + pulsar PG.05 + GW/FRB (read-only); DL+Hartung-Knapp random-effects UL",
+     "search_target", "recovery-comb-domains A1/A4/A5 + pulsar PG.05 + PG.06b FULL Vela + GW/FRB (read-only); DL+Hartung-Knapp random-effects UL",
      "the boundary/horizon-scoped joint 95% UL on eps falls below 2% (soft constraint on the dynamic kernel)",
      "data_limited"],
     # ---- lab (experiments/lab-residuals) ----

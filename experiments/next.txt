@@ -1,3 +1,48 @@
+## 2026-07-21 (VI) — v497 (CELEST.WP5A.01): WP5a „das Nullideal aus dem Limes" promoviert — Contract auf „WP1–WP4 + WP5a done", WP5b–e [O] (Roadmap)
+
+Die celestial_seam_wp5a_null_ideal_limit_probe.py aus experiments/tfpt-discovery/
+ist als **v497_celestial_wp5a_null_ideal.py (CELEST.WP5A.01)** promoviert
+(34 Checks, exakt Integer/Fraction, ~1.5 s; Suite grün, jetzt 491 Skripte).
+
+- **Stabilisierungssatz (der v496-„Rand-Limes-Schatten" wird präzise):** die
+  Ein-Parameter-Familie χ_w auf den chiralen Jet-Generatoren (E_w = m + w·r,
+  Viertel-Einheiten u = q^{1/4}) ENTHÄLT die chirale Jet-Graduierung als
+  w = 2-Mitglied (Generatoren 64,120,128,180,192,240,256,300 pro Grad); der
+  u^n-Koeffizient von χ_w = quarter-moded Loop-Fock für ALLE w ≥ n+1, strikt
+  größer für w ≤ n (n ≤ 8, w ≤ 10) — koeffizientenweiser Limes ε = 1/w → 0
+  mit expliziter Schwelle w = n+1; Konvention geklärt: 897266 = Loop-Fock
+  bei u⁴ = Integer-Level 1.
+- **Nullideal HERGELEITET (nicht zitiert):** Freudenthal + Weyl + Peeling
+  geben Sym²(248) = V(2θ) ⊕ V(ω) ⊕ V(0) = 27000 + 3875 + 1 (Residual exakt
+  0, Orbit-Summen-Kreuzcheck); 27000 = 30³ = h∨³; C₂ = (124,96), Dynkin
+  6750/750; Level-1-Integrabilität ⟨2θ,θ∨⟩ = 4, ⟨ω,θ∨⟩ = 2 ⇒ einziger
+  Level-1-Primary = Vakuum ([C] Kac, nur Zählkonsequenz); Quotient
+  31124 − 27000 = 4124 = 1+248+3875 exakt.
+- **Zwei Routen, eine Zahl:** μ4-Theta-Split-Sektorsumme bei q² =
+  (1036,1024,1040,1024) = 4124 exakt; q³: 34752 = χ₃.
+- **Negativkontrollen:** SO(16)₁ durch DIESELBE Pipeline: Sym²(120) =
+  5304+1820+135+1 (VIER Komponenten), 5304 ≠ 14³ = 2744 (h∨³ nicht
+  generisch), Quotient 7380−5304 = 2076 = Θ_D8/η⁸ (zweite Algebra
+  validiert), Blockgewichte (0,½,1,1) fusionieren NICHT; falsche
+  Periodisierung: nur P = 4 = |μ4| gibt 248; vertauschter Glue bricht den
+  Zero-Mode-Anker (64 ≠ 60).
+- **[O] ehrlich:** der Limes ERZEUGT die Trunkierung nicht (897266 ≫ 248) —
+  Singulärvektor als OPERATOR (WP5b), GNS-Limes-Zustand (WP5c), lokale
+  Normalität/Haag-Dualität (WP5d), Costello–Li-Uplift (WP5e) offen; die
+  celestial Route hat jetzt dieselbe Zwei-Schritt-Gestalt wie MMST
+  (Limes + maximales Ideal), das Ideal quantitativ fixiert.
+
+Integration: Contract-Section WP5 → WP5a (done, Kernzahlen) + WP5b–e als
+Roadmap-Bullets mit Erfolgs-/Kill-Kriterien; Statuszeile „WP1–WP4 + WP5a
+executed; WP5b–e [O] (roadmap)"; Ledger CELEST.WP5A.01 (neu) +
+CELEST.SEAM.01-Update; Wolfram: 4 exakte v497-Mirrors in
+tfpt_readouts_extension.wl, mit AKTIVER Engine direkt verifiziert
+(394 → 398, ALL WOLFRAM EXTENSION CHECKS PASSED; README + GATE.WOLFRAM.02
+fortgeschrieben; tfpt_safeguards Layer-6 + papers.ts 116/116 + 398/398);
+papers.ts Highlight „WP1–WP4 + WP5a done" + DAG-qft-Knoten + v497;
+Changelog 2026-07-21 (VI). SEAM.EQUIV.01 bleibt [O]; als Nächstes WP5b
+(Singulärvektor-Operator im viertel-modierten Strom-Fock).
+
 ## 2026-07-21 (III) — v495 + v496: WP3 (GS-Alignment) und WP4 (Charakter-Schatten) des celestial Contracts promoviert — Contract auf „WP1–WP4 done", WP5 [O]
 
 Die beiden Proben celestial_seam_wp3_gs_axion_alignment_probe.py und

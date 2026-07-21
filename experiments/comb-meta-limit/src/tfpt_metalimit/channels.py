@@ -13,7 +13,9 @@ Two tiers, by what the sibling experiment leaves on disk:
               A3/A3b FRB tails (linear intensity, raw waterfalls absent),
               PG.05 Crab nudot (linear detrended nudot, monthly cadence),
               GW ringdown (single-event bend degeneracy; no cascade comb eps),
-              A2 BH tail, PG.07/PG.06b Vela (pipeline only), crust-cooling (if present).
+              A2 BH tail, PG.06b Vela FULL X-ray nu(t) (linear delta-nu residual, reach
+              below the 2.8-period gate, injection eps_90 censored below eps=1),
+              crust-cooling (if present).
             We read the stored comb gain and report a NORMALISED amplitude sqrt(2*gain) as context
             only -- explicitly NOT comparable to the absolute 2% prediction.
 
@@ -352,14 +354,66 @@ def channel_pg05() -> ChannelRecord:
 
 
 def channel_vela() -> ChannelRecord:
-    js = _load_json(PULSAR / "results" / "pg06b_vela.json")
-    note = "pg06b_vela.json absent"
+    """PG.06b FULL (2026-07-21): the complete NICER Vela archive reduction.
+
+    Supersedes the single-obs PG.06b 'pipeline only' proof (whose F0=11.19275 Hz
+    'detection' was a NOISE peak -- the true Vela frequency there is 11.1861692 Hz).
+    The FULL run delivers a real X-ray nu(t) recovery, but the comb observable is a
+    LINEAR delta-nu(tau) residual (uHz), not a fractional ln(flux) modulation, and the
+    surrogate-calibrated injection never reaches eps_90 below eps=1 in either leg
+    (censored) -> no absolute per-channel eps UL exists to feed the DL/HKSJ
+    combination; the channel stays enumerated-only (Tier B), exactly like A3/PG.05.
+    """
+    js = _load_json(PULSAR / "results" / "pg06b_full_vela.json")
+    gain = p = None
+    note = "pg06b_full_vela.json absent"
+    per: list[dict] = []
     if js:
-        note = ("REAL NICER Vela reduction PROVEN (F0=11.193 Hz detected) but only a per-obs "
-                "H-test; a comb-quality phase-connected nu(t) needs a multi-hour timing project "
-                "-> no recovery curve, no comb eps. " + js.get("verdict", "")[:160])
-    return _tier_b("PG.07", "NICER Vela recovery comb (pipeline only)", "surface", SURFACE,
-                   "no comb-quality nu(t) yet -> no eps", None, None, "data_limited", note)
+        legs = js.get("legs", [])
+        gains = [float(x.get("comb_gain", 0.0)) for x in legs]
+        ps = [float(x.get("comb_p", 1.0)) for x in legs]
+        per = [{"source": f"glitch_{x.get('name', '?')}", "n_points": x.get("n_seg"),
+                "reach_periods": round(float(x.get("reach_periods", 0.0)), 3),
+                "gate_passed": bool(x.get("gate_passed", False)),
+                "gain": round(float(x.get("comb_gain", 0.0)), 6),
+                "p_value": round(float(x.get("comb_p", 1.0)), 6),
+                "shuffle_p": round(float(x.get("shuffle_p", 1.0)), 6),
+                "norm_amp": round(math.sqrt(2.0 * float(x.get("comb_gain", 0.0))), 6),
+                "eps_50": (x.get("injection") or {}).get("eps_50"),
+                "eps_90": (x.get("injection") or {}).get("eps_90")}
+               for x in legs]
+        if gains:
+            gain = float(np.mean(gains))
+            p = float(np.min(ps))
+            red = js.get("reduction", {})
+            stk = js.get("stack", {})
+            legtxt = "; ".join(
+                f"{d['source']}: reach {d['reach_periods']:.2f} periods "
+                f"(gate {'PASS' if d['gate_passed'] else 'FAIL'}), comb p={d['p_value']:.3f}, "
+                f"shuffle p={d['shuffle_p']:.2f}, "
+                f"eps_50={d['eps_50'] if d['eps_50'] is not None else 'n/r'}, "
+                f"eps_90={d['eps_90'] if d['eps_90'] is not None else 'n/r (censored below eps=1)'}"
+                for d in per)
+            note = (f"REAL FULL NICER Vela reduction (PG.06b FULL, 2026-07-21): "
+                    f"{red.get('n_obs_archive')} archive obs -> {red.get('n_obs_usable')} usable "
+                    f"-> {red.get('n_segments')} piecewise-coherent segments "
+                    f"({red.get('n_segments_coherent')} fully coherent); true Vela F0 = "
+                    "11.1861692 Hz (the old single-obs 'F0=11.19275 Hz detection' was a noise "
+                    f"peak -- corrected on record). {legtxt}. Concatenated ln-tau stack: "
+                    f"{stk.get('reach_periods', 0.0):.2f} periods, p={stk.get('comb_p', 1.0):.3f}, "
+                    f"shuffle p={stk.get('shuffle_p', 1.0):.2f}. LINEAR delta-nu observable + "
+                    "all legs below the 2.8-period gate + injection eps_90 censored below eps=1 "
+                    "-> no absolute eps; the 2019 raw comb_p=0.014 is an audit-level chance "
+                    "feature (Bonferroni x10 = 0.14, shuffle p=0.40, sub-gate reach), not a "
+                    "candidate.")
+    rec = _tier_b("PG.06b", "NICER Vela X-ray nu(t) recovery comb (FULL archive)", "surface",
+                  SURFACE,
+                  "linear delta-nu(tau) residual (uHz) -> normalised amplitude only; injection "
+                  "eps_90 censored (never reached below eps=1) -> no absolute eps",
+                  gain, p, "data_limited", note)
+    rec.per_source = per
+    rec.n_sources = len(per)
+    return rec
 
 
 def channel_crust() -> ChannelRecord:

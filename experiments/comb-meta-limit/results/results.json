@@ -50,7 +50,7 @@
         "A2",
         "GW",
         "PG.05",
-        "PG.07",
+        "PG.06b",
         "crust"
       ],
       "k_channels": 3,
@@ -665,7 +665,7 @@
       "gain": 0.0355,
       "p_value": 0.3414,
       "per_source": [],
-      "note": "Horizon-residual boundary recovery, but the recovery observable is a scattering-dominated linear intensity tail and the raw waterfalls are not on disk -> stacked NULL only, no absolute eps. REAL data: 8 bright FRB burst waterfall(s) across 3 repeater(s) [FRB190520x2, J2000-1234x5, FRB20201124Ax1]; 7 clear the ln-range gate (>= 2.8 comb periods). 117pulse (periods=3.19, p=0.6655); 149pulse (periods=3.02, p=0.2477); 20191003_1032 (periods=2.13, p=0.2116, <gate: range-blind, EXCLUDED); 315-pulse (periods=3.18, p=0.2477); 529-pulse (periods=3.06, p=0.2477); burst1 (1) (periods=3.19, p=0.2477); burst1 (periods=3.28, p=0.2477); pulse1 (periods=2.81, p=0.5181). STACKED over 7 burst tails: kernel omega=2.58 is NOT special (p=0.3414) -> clean NULL (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection)."
+      "note": "Horizon-residual boundary recovery, but the recovery observable is a scattering-dominated linear intensity tail and the raw waterfalls are not on disk -> stacked NULL only, no absolute eps. REAL data: 8 bright FRB burst waterfall(s) across 3 repeater(s) [FRB190520x2, J2000-1234x5, FRB20201124Ax1]; 7 clear the ln-range gate (>= 2.8 comb periods). 117pulse (periods=3.19, p=0.6655); 149pulse (periods=3.02, p=0.2477); 20191003_1032 (periods=2.13, p=0.2116, <gate: range-blind, EXCLUDED); 315-pulse (periods=3.18, p=0.2477); 529-pulse (periods=3.06, p=0.2477); burst1 (1) (periods=3.19, p=0.2477); burst1 (periods=3.28, p=0.2477); pulse1 (periods=2.81, p=0.5181). STACKED over 7 burst tails: kernel omega=2.58 is NOT special (p=0.3414) -> clean NULL (horizon-residual, but FRB tails are scattering/noise-dominated and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.8078 (n=8); (3/2)^4 omega=3.874: p=0.6026 (n=8); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind)."
     },
     {
       "key": "A3b",
@@ -686,7 +686,7 @@
       "gain": 0.1694,
       "p_value": 0.6678,
       "per_source": [],
-      "note": "Cleaner (coherently dedispersed) FRB tails, still linear-intensity + raw data absent -> stacked NULL only, no absolute eps. REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): 8 distinct FRB(s); 8 clear the ln-range gate (>= 2.8 comb periods). FRB20181226E (periods=3.94, p=0.2477); FRB20181231C (periods=4.39, p=0.7541); FRB20190102A (periods=4.04, p=0.1013); FRB20190210B (periods=4.2, p=0.2477); FRB20190213D (periods=4.26, p=0.7016); FRB20190502B (periods=4.48, p=0.6528); FRB20190519H (periods=3.23, p=0.2477); FRB20190627A (periods=4.19, p=0.745). STACKED over 8 CHIME burst tails: kernel omega=2.58 is NOT special (p=0.6678) -> clean NULL (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection)."
+      "note": "Cleaner (coherently dedispersed) FRB tails, still linear-intensity + raw data absent -> stacked NULL only, no absolute eps. REAL CHIME baseband (2.56us, coherently dedispersed, full-Stokes): 8 distinct FRB(s); 8 clear the ln-range gate (>= 2.8 comb periods). FRB20181226E (periods=3.94, p=0.2477); FRB20181231C (periods=4.39, p=0.7541); FRB20190102A (periods=4.04, p=0.1013); FRB20190210B (periods=4.2, p=0.2477); FRB20190213D (periods=4.26, p=0.7016); FRB20190502B (periods=4.48, p=0.6528); FRB20190519H (periods=3.23, p=0.2477); FRB20190627A (periods=4.19, p=0.745). STACKED over 8 CHIME burst tails: kernel omega=2.58 is NOT special (p=0.6678) -> clean NULL (coherently-dedispersed genuine scattering tails -> cleaner than FAST, but a ms burst still has no wide recovery and the comb is an intrinsic ~2% effect -> a weak constraint, not a horizon detection). Z2/Moebius readings (antiperiodic comb has zero power at the kernel omega): (3/2)^3 omega=5.165: p=0.2104 (n=8); (3/2)^4 omega=3.874: p=0.4006 (n=8); (3/2)^12 omega=1.291: n_used=0 (range/Nyquist-blind)."
     },
     {
       "key": "A2",
@@ -802,25 +802,50 @@
       "note": "REAL Crab nudot: 7 inter-glitch segments, monthly cadence; linear detrended nudot (NOT ln-flux) -> normalised amplitude only, and small-N segments are noise-floor-dominated -> no absolute eps. NO kernel recovery comb (omega=2.583) in the real Crab nu(t): across 7 clean inter-glitch segments (of 10 detected glitches over 38 yr) none shows the log-periodic comb above the smooth-trend surrogat"
     },
     {
-      "key": "PG.07",
-      "domain": "NICER Vela recovery comb (pipeline only)",
+      "key": "PG.06b",
+      "domain": "NICER Vela X-ray nu(t) recovery comb (FULL archive)",
       "group": "surface",
       "firewall": "surface",
-      "observable": "no comb-quality nu(t) yet -> no eps",
+      "observable": "linear delta-nu(tau) residual (uHz) -> normalised amplitude only; injection eps_90 censored (never reached below eps=1) -> no absolute eps",
       "data_status": "data_limited",
       "usable_abs": false,
-      "n_sources": 0,
+      "n_sources": 2,
       "n_gated": 0,
       "eps2": null,
       "se_power": null,
       "eps_hat": null,
       "sigma_amp": null,
       "eps95": null,
-      "norm_amp": null,
-      "gain": null,
-      "p_value": null,
-      "per_source": [],
-      "note": "REAL NICER Vela reduction PROVEN (F0=11.193 Hz detected) but only a per-obs H-test; a comb-quality phase-connected nu(t) needs a multi-hour timing project -> no recovery curve, no comb eps. REAL NICER Vela data reduced: 430739 photons barycentred with PINT (NO HEASoft), Vela pulsation DETECTED at F0=11.19275 Hz (H=18.4; period ~89.34 ms) on a 40000"
+      "norm_amp": 0.399774,
+      "gain": 0.07991,
+      "p_value": 0.014493,
+      "per_source": [
+        {
+          "source": "glitch_2019",
+          "n_points": 44,
+          "reach_periods": 2.174,
+          "gate_passed": false,
+          "gain": 0.046089,
+          "p_value": 0.014493,
+          "shuffle_p": 0.39521,
+          "norm_amp": 0.303608,
+          "eps_50": 0.55,
+          "eps_90": null
+        },
+        {
+          "source": "glitch_2021",
+          "n_points": 13,
+          "reach_periods": 1.381,
+          "gate_passed": false,
+          "gain": 0.11373,
+          "p_value": 0.730983,
+          "shuffle_p": 0.562874,
+          "norm_amp": 0.476929,
+          "eps_50": null,
+          "eps_90": null
+        }
+      ],
+      "note": "REAL FULL NICER Vela reduction (PG.06b FULL, 2026-07-21): 665 archive obs -> 491 usable -> 119 piecewise-coherent segments (108 fully coherent); true Vela F0 = 11.1861692 Hz (the old single-obs 'F0=11.19275 Hz detection' was a noise peak -- corrected on record). glitch_2019: reach 2.17 periods (gate FAIL), comb p=0.014, shuffle p=0.40, eps_50=0.55, eps_90=n/r (censored below eps=1); glitch_2021: reach 1.38 periods (gate FAIL), comb p=0.731, shuffle p=0.56, eps_50=n/r, eps_90=n/r (censored below eps=1). Concatenated ln-tau stack: 2.17 periods, p=0.049, shuffle p=0.31. LINEAR delta-nu observable + all legs below the 2.8-period gate + injection eps_90 censored below eps=1 -> no absolute eps; the 2019 raw comb_p=0.014 is an audit-level chance feature (Bonferroni x10 = 0.14, shuffle p=0.40, sub-gate reach), not a candidate."
     },
     {
       "key": "crust",

@@ -2894,11 +2894,56 @@ must be \emph{imposed in a limit}. That is precisely the MMST scaling-limit shap
 \texttt{SEAM.EQUIV.01} (\vref{v336}/\vref{v449}: the rational net exists in the \emph{limit} of the
 lattice collar, not in the pre-limit algebra): WP4 is hereby \emph{retyped} from ``character as conformal
 block'' to ``character as boundary/limit shadow'', and the constructive limit question (which limit, which
-topology, convergence) passes to WP5.
-\item \textbf{WP5 (the summit) \mO:} the twistorial construction as a \emph{second continuum route} for
-\texttt{SEAM.EQUIV.01} --- a Costello--Li-grade construction of the holomorphic boundary theory from the
-twistor uplift, now carrying the WP4 constructive-boundary-limit question as its concrete entry point;
-hard, and explicitly typed as a research programme.
+topology, convergence) passes to WP5 --- where WP5a has since answered the ``which limit'' part at the
+counting level (the coefficientwise $\chi_w$ limit below), leaving the operator statements to WP5b--e.
+\item \textbf{WP5 (the summit) --- subdivided; the first milestone is landed.} The twistorial
+construction as a \emph{second continuum route} for \texttt{SEAM.EQUIV.01} (Costello--Li grade), carrying
+the WP4 constructive-boundary-limit question. Subdivision WP5a--WP5e:
+\begin{itemize}
+\item \textbf{WP5a (\emph{done}) \mE/\mC:} ``the null ideal from the limit'', executed and
+machine-verified as \texttt{CELEST.WP5A.01} \veri{v497\_celestial\_wp5a\_null\_ideal.py} (exact
+integer/Fraction arithmetic, $34$ checks). Three results make the WP4 limit reading precise.
+(i)~\emph{Stabilisation theorem}: the one-parameter family $\chi_w$ of graded Fock characters on the
+chiral jet generators (loop energy $m$, radial number $r$; $E_w=m+wr$ in quarter units $u=q^{1/4}$)
+\emph{contains} the chiral jet grading as its $w{=}2$ member (generator counts
+$64,120,128,180,192,240,256,300$ per degree), and its $u^n$ coefficient equals the quarter-moded loop
+Fock for \emph{all} $w\ge n{+}1$ --- strictly larger for every $w\le n$ (verified $n\le8$, $w\le10$):
+the WP4 ``boundary-limit shadow'' is a precise \emph{coefficientwise} limit $\varepsilon=1/w\to0$ with
+explicit stabilisation threshold $w=n{+}1$, not a slice. (ii)~\emph{The null ideal is derived, not
+cited}: Freudenthal multiplicities $+$ the Weyl dimension formula $+$ generic character peeling give
+$\operatorname{Sym}^2(248)=V(2\theta)\oplus V(\omega)\oplus V(0)=27000+3875+1$ with peeling residual
+exactly zero (independent Weyl-orbit cross-check); $27000=30^3=(h^\vee)^3$ exactly; level-1
+integrability ($\langle2\theta,\theta^\vee\rangle=4$, $\langle\omega,\theta^\vee\rangle=2$) leaves the
+vacuum as the only level-1 primary (\mC\ Kac, used only through its counting consequence); level-2
+quotient $31124-27000=4124=1+248+3875$ exactly. (iii)~\emph{Two routes, one number}: the $\mu_4$
+theta-split sector sum at $q^2=(1036,1024,1040,1024)$ gives the \emph{same} $4124$ --- the untwisted
+null-ideal quotient and the boundary/twisted lattice presentation count one space ($q^3$: $34752$).
+Negative controls: $SO(16)_1$ through the same pipeline gives \emph{four} components
+($5304+1820+135+1$), $5304\neq14^3$ (the $h^{\vee\,3}$ identity is not generic), quotient
+$2076=\Theta_{D_8}/\eta^8$ at $q^2$ (the recipe validated on a second algebra), and block weights
+$(0,\tfrac12,1,1)$ that can\emph{not} fuse into one local character; only $P=4=|\mu_4|$ periodisation
+reproduces the $248$ layer; swapped glue breaks the zero-mode anchor. \emph{Honest limit} \mO: the
+limit does \emph{not} generate the truncation (the loop Fock counts $897266\gg248$ at integer level
+$1$) --- WP5a fixes the ideal's \emph{size and location} quantitatively and gives the celestial route
+the same two-step shape as MMST (limit $+$ maximal ideal); the operator content is exactly WP5b--e.
+\item \textbf{WP5b \mO\ (the singular vector as an operator):} realise the level-2 singular vector of
+weight $2\theta$ as an \emph{operator} in the quarter-moded current Fock of the $\chi_w$ limit.
+Success: an explicit operator whose kernel/image reproduces the $27000$ count level by level; kill:
+a proof that no such operator exists in the limit variables.
+\item \textbf{WP5c \mO\ (the GNS limit state):} construct the limit state of the $\chi_w$ family
+($w\to\infty$) and its GNS representation. Success: the kernel of the limit state \emph{contains} the
+null ideal, so the quotient is automatic in the GNS space; kill: the limit state separates the ideal.
+\item \textbf{WP5d \mO\ (the local net):} local normality and Haag duality of the quotient net on the
+seam collar via the KLM route (\vref{v336}/\vref{v449}). Success: a local net whose vacuum character is
+$E_4/\eta^8$; kill: a duality or normality obstruction.
+\item \textbf{WP5e \mO\ (the twistor uplift):} the BCOV/Costello--Li construction of the holomorphic
+boundary theory from the twistor side. Success: partition function $=E_4/\eta^8$ \emph{including} the
+$q^{-1/3}$ prefactor; kill: an anomaly mismatch at the Costello--Li grade.
+\end{itemize}
+Honest status line: WP5a is counting-level \mE\ arithmetic plus \mC\ named identifications (``radial
+decoupling $=$ collar thickness $\to0$''; the Kac singular vector via its counting consequence);
+WP5b--e are the open \emph{operator} statements --- \texttt{SEAM.EQUIV.01} stays \mO\ and nothing in
+WP5a moves it.
 \end{itemize}
 
 \par\smallskip\noindent\textbf{Kill tests (pre-registered).} \textbf{(K1)} the equivariant sector could
@@ -2920,20 +2965,26 @@ evidence --- alignment survives, selectivity does not.
 only against the \emph{exact}-block reading (the character is provably not a conformal block in the jet
 grading); it does \emph{not} degrade the contract to ``$E_8$ is an admissible gauge algebra for celestial
 SDYM'', because the sector arithmetic holds exactly --- WP4 lands at the boundary-limit reading (verdict
-B(ii), the \texttt{SEAM.EQUIV.01} scaling-limit shape), with the constructive limit handed to WP5.
+B(ii), the \texttt{SEAM.EQUIV.01} scaling-limit shape), with the constructive limit handed to WP5 ---
+and made precise there by WP5a (\veri{v497\_celestial\_wp5a\_null\_ideal.py}: the coefficientwise
+$\chi_w$ limit with threshold $w=n{+}1$ and the derived ideal), leaving the operator statements to
+WP5b--e.
 
-\par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success (WP5: a
-second continuum route to \texttt{SEAM.EQUIV.01}) remains low --- it is constructive holography at the
-Costello--Li grade. The \emph{partial}-findings expectation is now \emph{realised}: WP1--WP4 are all
-executed with sharp structural results (verdicts B, B, B, B(ii)) --- the WP1 critical correction (clock
-$\neq$ deck; clock$^2=$ deck), the WP2 sharpenings (the clock \emph{is} the Picard--Lefschetz/Coxeter
-monodromy of the seam deformation; $a_0$ pure scale with the $\tau{=}i$ shape frozen), the WP3
-non-selective alignment (exact $\lambda$-arithmetic, honestly typed by the $8/8$ look-elsewhere table),
-and the WP4 boundary-limit localisation of the character mismatch (three exactly-located obstructions,
-one surviving limit structure) --- exactly the kind of sharp, falsifiable refinement the contract format
-is for. Status: \texttt{CELEST.SEAM.01} \mO\ (research contract, WP5 open); \texttt{CELEST.WP1.01}
-\mE/\mC\ (executed); \texttt{CELEST.WP2.01} \mE/\mC\ (executed); \texttt{CELEST.WP3.01} \mE/\mC\
-(executed); \texttt{CELEST.WP4.01} \mE/\mC\ (executed); \texttt{SEAM.EQUIV.01} untouched, stays \mO.
+\par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success
+(WP5b--e: a second continuum route to \texttt{SEAM.EQUIV.01}) remains low --- it is constructive
+holography at the Costello--Li grade. The \emph{partial}-findings expectation is now \emph{realised}:
+WP1--WP4 and the first WP5 milestone (WP5a) are executed with sharp structural results (verdicts B, B,
+B, B(ii); WP5a milestone passed) --- the WP1 critical correction (clock $\neq$ deck; clock$^2=$ deck),
+the WP2 sharpenings (the clock \emph{is} the Picard--Lefschetz/Coxeter monodromy of the seam
+deformation; $a_0$ pure scale with the $\tau{=}i$ shape frozen), the WP3 non-selective alignment (exact
+$\lambda$-arithmetic, honestly typed by the $8/8$ look-elsewhere table), the WP4 boundary-limit
+localisation of the character mismatch (three exactly-located obstructions, one surviving limit
+structure), and the WP5a null-ideal derivation (stabilisation threshold $w=n{+}1$; $27000=(h^\vee)^3$
+derived; quotient $=$ sector sum $=4124$; $SO(16)_1$ contrast) --- exactly the kind of sharp,
+falsifiable refinement the contract format is for. Status: \texttt{CELEST.SEAM.01} \mO\ (research
+contract, WP5b--e open); \texttt{CELEST.WP1.01} \mE/\mC\ (executed); \texttt{CELEST.WP2.01} \mE/\mC\
+(executed); \texttt{CELEST.WP3.01} \mE/\mC\ (executed); \texttt{CELEST.WP4.01} \mE/\mC\ (executed);
+\texttt{CELEST.WP5A.01} \mE/\mC\ (executed); \texttt{SEAM.EQUIV.01} untouched, stays \mO.
 
 % =====================================================================
 \section*{Certifiability and recommended order}
