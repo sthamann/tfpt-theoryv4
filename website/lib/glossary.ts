@@ -152,7 +152,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "celestial route",
     alias: ["CELEST.SEAM.01", "celestial sphere", "celestial-holographic route"],
     short:
-      "The fourth research contract: the seam's boundary 2-sphere IS the celestial sphere of null directions (Möb ≅ PSL(2,ℂ)), and the E₈ μ₄-glue is a flat ℤ₄ monodromy on the A₃ ALE space ℂ²/ℤ₄. WP1–WP5d plus the WP5e α stage executed exactly (v492–v502: clock² = deck, null ideal derived, deleting operator explicit, GNS limit state constructed, two-interval index measured, prefactor + level k = 1 pinned on the CFT side); WP5e proper (the BCOV/Costello–Li twistor inflow) and WP5d-β open [O]. A second, quantitative approach to SEAM.EQUIV.01 — which stays [O].",
+      "The fourth research contract: the seam's boundary 2-sphere IS the celestial sphere of null directions (Möb ≅ PSL(2,ℂ)), and the E₈ μ₄-glue is a flat ℤ₄ monodromy on the A₃ ALE space ℂ²/ℤ₄. WP1–WP5d (both WP5d stages) plus the WP5e α and β stages executed exactly (v492–v505: clock² = deck, null ideal derived, deleting operator explicit, GNS limit state constructed, two-interval index measured, split + strong additivity witnessed, prefactor + level k = 1 pinned on the CFT side, and the equivariant anomaly ledger exact on the twistor side with the honest a₀ refutation); WP5e proper (the global BCOV quantisation) open [O]. A second, quantitative approach to SEAM.EQUIV.01 — which stays [O].",
   },
   {
     term: "ALE space",

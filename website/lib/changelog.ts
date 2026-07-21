@@ -47,6 +47,2895 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "XVI) ("
+      },
+      {
+        "k": "c",
+        "v": "v506"
+      },
+      {
+        "k": "t",
+        "v": " — seam clock rigidity, Route B of the "
+      },
+      {
+        "k": "c",
+        "v": "v503"
+      },
+      {
+        "k": "t",
+        "v": " classification, promoted as "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.CLOCK.RIGIDITY.01"
+      },
+      {
+        "k": "t",
+        "v": ": TWO exact theorems reduce the order-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " clock input to ONE alignment bit — Theorem A (Möbius): the deck "
+      },
+      {
+        "k": "m",
+        "v": "z\\mapsto-z"
+      },
+      {
+        "k": "t",
+        "v": " has EXACTLY TWO square roots "
+      },
+      {
+        "k": "m",
+        "v": "z\\mapsto\\pm iz"
+      },
+      {
+        "k": "t",
+        "v": " in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{PGL}_2(\\mathbb C)"
+      },
+      {
+        "k": "t",
+        "v": ", both "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "automatically"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " order "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ", and a marks-preserving root exists "
+      },
+      {
+        "k": "m",
+        "v": "\\iff"
+      },
+      {
+        "k": "t",
+        "v": " the deck is the CENTRAL involution of the mark-"
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": " (counterexample "
+      },
+      {
+        "k": "m",
+        "v": "\\{\\pm1,\\pm(3{+}2\\sqrt2)\\}"
+      },
+      {
+        "k": "t",
+        "v": ": harmonic with full "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": " but deck non-central "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " roots — harmonicity alone insufficient); Theorem B (Fock, the core): the NS deck implementation is FORCED to order "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "\\tilde U^2=256\\,\\gamma_1\\cdots\\gamma_{16}"
+      },
+      {
+        "k": "t",
+        "v": ", i.e. "
+      },
+      {
+        "k": "m",
+        "v": "U^2=(-1)^F"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY, a nonsplit "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_4"
+      },
+      {
+        "k": "t",
+        "v": ", with the "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_8"
+      },
+      {
+        "k": "t",
+        "v": " tower "
+      },
+      {
+        "k": "m",
+        "v": "V^2\\propto U"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "V^4\\propto(-1)^F"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8=2|\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": " fermionically explained) and the R-sector control split ("
+      },
+      {
+        "k": "m",
+        "v": "U_R^2=+1"
+      },
+      {
+        "k": "t",
+        "v": "); the one "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "rest: “the collar deck is the central involution of the mark-"
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": "” — the fermionic "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_4"
+      },
+      {
+        "k": "t",
+        "v": " forces the ORDER, not the spatial alignment; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "434\\to438"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — "
+          },
+          {
+            "k": "c",
+            "v": "QGEO.REALIZE.01"
+          },
+          {
+            "k": "t",
+            "v": " stays "
+          },
+          {
+            "k": "s",
+            "v": "C"
+          },
+          {
+            "k": "t",
+            "v": "/"
+          },
+          {
+            "k": "s",
+            "v": "O"
+          },
+          {
+            "k": "t",
+            "v": "(text precised), "
+          },
+          {
+            "k": "c",
+            "v": "P2.TYPING.01"
+          },
+          {
+            "k": "t",
+            "v": " R1 mapped onto the same bit"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v506_seam_clock_rigidity.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.CLOCK.RIGIDITY.01"
+            },
+            {
+              "k": "t",
+              "v": ", 34 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "3.5 s; Part A sympy-exact Möbius/divisor arithmetic "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Part B exact "
+            },
+            {
+              "k": "m",
+              "v": "\\mathrm{Cl}(16)"
+            },
+            {
+              "k": "t",
+              "v": " Fractions; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": " localised the one remaining identification input (“why does the raw seam carry the order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " clock”, QGEO-R1 "
+        },
+        {
+          "k": "m",
+          "v": "\\equiv"
+        },
+        {
+          "k": "t",
+          "v": " P2-R1); "
+        },
+        {
+          "k": "c",
+          "v": "v506"
+        },
+        {
+          "k": "t",
+          "v": " reduces it. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Theorem A (Möbius side, complete)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": Cayley–Hamilton "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the complete case analysis give "
+        },
+        {
+          "k": "m",
+          "v": "g^2="
+        },
+        {
+          "k": "t",
+          "v": " deck "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}g\\neq0"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " diagonal with "
+        },
+        {
+          "k": "m",
+          "v": "(a/d)^2=-1"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}g=0"
+        },
+        {
+          "k": "t",
+          "v": " forces "
+        },
+        {
+          "k": "m",
+          "v": "\\det g=0"
+        },
+        {
+          "k": "t",
+          "v": " (impossible) — exactly two roots "
+        },
+        {
+          "k": "m",
+          "v": "z\\mapsto\\pm iz"
+        },
+        {
+          "k": "t",
+          "v": ", both projective order "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": ", mutually inverse ("
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Aut}(\\Z_4)"
+        },
+        {
+          "k": "t",
+          "v": "), conjugation-covariant; marks filter: a deck-invariant deck-free "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-set "
+        },
+        {
+          "k": "m",
+          "v": "\\{u,-u,w,-w\\}"
+        },
+        {
+          "k": "t",
+          "v": " admits a marks-preserving root "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "w=\\pm iu"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " marks "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " one "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": " orbit "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " cross-ratio class "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,\\tfrac12,-1\\}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\tau=i"
+        },
+        {
+          "k": "t",
+          "v": ", free "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": "-cycle, deck "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " clock"
+        },
+        {
+          "k": "m",
+          "v": "^2"
+        },
+        {
+          "k": "t",
+          "v": ", only the scale free; group form: "
+        },
+        {
+          "k": "m",
+          "v": "|\\mathrm{Stab}(\\mu_4)|=8=2|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " with order profile "
+        },
+        {
+          "k": "m",
+          "v": "\\{1{:}1,2{:}5,4{:}2\\}=D_4"
+        },
+        {
+          "k": "t",
+          "v": ", center "
+        },
+        {
+          "k": "m",
+          "v": "=\\{\\mathrm{id},\\text{deck}\\}"
+        },
+        {
+          "k": "t",
+          "v": ", exactly "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " elements "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the clocks — “deck central in the mark-"
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "” "
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " “clock exists”; the counterexample "
+        },
+        {
+          "k": "m",
+          "v": "\\{\\pm1,\\pm(3{+}2\\sqrt2)\\}"
+        },
+        {
+          "k": "t",
+          "v": " is deck-free AND harmonic ("
+        },
+        {
+          "k": "m",
+          "v": "j=1728"
+        },
+        {
+          "k": "t",
+          "v": ", cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac12"
+        },
+        {
+          "k": "t",
+          "v": ") with full "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": ", but the deck sits "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "non"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "-centrally (the central involution crosses the "
+        },
+        {
+          "k": "m",
+          "v": "\\pm"
+        },
+        {
+          "k": "t",
+          "v": " pairs) "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " roots; the RP filter passes BOTH roots (the "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Aut}(\\Z_4)"
+        },
+        {
+          "k": "t",
+          "v": " ambiguity is irreducible, "
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": " NC3). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "B3/B4 ("
+            },
+            {
+              "k": "m",
+              "v": "n"
+            },
+            {
+              "k": "t",
+              "v": "-arithmetic "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " controls)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": free orbit "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow n\\mid4"
+        },
+        {
+          "k": "t",
+          "v": "; transitivity "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow n=4"
+        },
+        {
+          "k": "t",
+          "v": "; faithfulness kills "
+        },
+        {
+          "k": "m",
+          "v": "n\\ge5"
+        },
+        {
+          "k": "t",
+          "v": " (kernel argument through "
+        },
+        {
+          "k": "m",
+          "v": "S_4"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "n=3"
+        },
+        {
+          "k": "t",
+          "v": " fixes a mark; "
+        },
+        {
+          "k": "m",
+          "v": "n=6"
+        },
+        {
+          "k": "t",
+          "v": " dies independently at the cusp degree "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "c",
+          "v": "v117"
+        },
+        {
+          "k": "t",
+          "v": "); the deck is modulus-blind ("
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": " B5 exact); "
+        },
+        {
+          "k": "m",
+          "v": "n=8"
+        },
+        {
+          "k": "t",
+          "v": " impossible on "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " marks; hexagonal stabiliser "
+        },
+        {
+          "k": "m",
+          "v": "A_4"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " elements, squares only orders "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,3\\}"
+        },
+        {
+          "k": "t",
+          "v": "); generic stabiliser "
+        },
+        {
+          "k": "m",
+          "v": "V_4"
+        },
+        {
+          "k": "t",
+          "v": " (exponent "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "); stabiliser trichotomy "
+        },
+        {
+          "k": "m",
+          "v": "V_4/D_4/A_4"
+        },
+        {
+          "k": "t",
+          "v": " with order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " counts "
+        },
+        {
+          "k": "m",
+          "v": "(0,2,0)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Theorem B (Fock side, the core result)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "S^2"
+        },
+        {
+          "k": "t",
+          "v": " has "
+        },
+        {
+          "k": "m",
+          "v": "b_1=0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " unique spin structure "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " NS/bounding on every circle (established P1 datum); one-particle: "
+        },
+        {
+          "k": "m",
+          "v": "D^2=-1"
+        },
+        {
+          "k": "t",
+          "v": " (charpoly "
+        },
+        {
+          "k": "m",
+          "v": "(\\lambda^2{+}1)^8"
+        },
+        {
+          "k": "t",
+          "v": "), quarter-shift "
+        },
+        {
+          "k": "m",
+          "v": "C^2=D"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "C^8=1"
+        },
+        {
+          "k": "t",
+          "v": " (charpoly "
+        },
+        {
+          "k": "m",
+          "v": "(\\lambda^4{+}1)^4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\zeta_8"
+        },
+        {
+          "k": "t",
+          "v": " spectrum); Fock (exact "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Cl}(16)"
+        },
+        {
+          "k": "t",
+          "v": "): "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde U=\\prod_j(1-\\gamma_j\\gamma_{j+8})"
+        },
+        {
+          "k": "t",
+          "v": " implements the deck on all "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " generators and "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde U^2=256\\,\\gamma_1\\cdots\\gamma_{16}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "U^2=(-1)^F"
+        },
+        {
+          "k": "t",
+          "v": " EXACTLY; "
+        },
+        {
+          "k": "m",
+          "v": "(cU)^2=c^2(-1)^F"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "never"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " (center of "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Cl}(16)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " scalars): the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " lift is FORCED, "
+        },
+        {
+          "k": "m",
+          "v": "1\\to\\Z_2^{(-1)^F}\\to\\Z_4\\to\\Z_2^{\\mathrm{deck}}\\to1"
+        },
+        {
+          "k": "t",
+          "v": " nonsplit; the quarter-shift lift "
+        },
+        {
+          "k": "m",
+          "v": "V"
+        },
+        {
+          "k": "t",
+          "v": " (unique even block implementer) has "
+        },
+        {
+          "k": "m",
+          "v": "V^2\\propto\\tilde U"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "V^4\\propto(-1)^F"
+        },
+        {
+          "k": "t",
+          "v": ", projective order "
+        },
+        {
+          "k": "m",
+          "v": "8=2|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " — the "
+        },
+        {
+          "k": "c",
+          "v": "v492"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_8"
+        },
+        {
+          "k": "t",
+          "v": " spin bridge realised on the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-Majorana Fock space; R control "
+        },
+        {
+          "k": "m",
+          "v": "U_R^2=+1"
+        },
+        {
+          "k": "t",
+          "v": " (split — the forcing rests on NS "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " established geometry); "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-fold way "
+        },
+        {
+          "k": "m",
+          "v": "\\theta_v=1"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "\\nu=16"
+        },
+        {
+          "k": "t",
+          "v": "; robustness: the forcing already holds at "
+        },
+        {
+          "k": "m",
+          "v": "8"
+        },
+        {
+          "k": "t",
+          "v": " sites ("
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the carrier count "
+        },
+        {
+          "k": "m",
+          "v": "2^{\\gcar-1}"
+        },
+        {
+          "k": "t",
+          "v": ", not a tuning). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "The one "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "rest (verbatim)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": “the collar deck is the central involution of the mark-"
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "” ("
+        },
+        {
+          "k": "m",
+          "v": "\\iff"
+        },
+        {
+          "k": "t",
+          "v": " square-root existence on the mark data) — ONE alignment bit; the fermionic "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " forces the ORDER, not the spatial alignment. No overclaim."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CLOCK.RIGIDITY.01"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "both theorems "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "the alignment bit); TEXT precisions at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unchanged"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " markers: "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REALIZE.01"
+        },
+        {
+          "k": "t",
+          "v": " (“the rest is now ONE bit: the central position of the deck in the mark-"
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": "; order/uniqueness/orbit/"
+        },
+        {
+          "k": "m",
+          "v": "\\tau{=}i"
+        },
+        {
+          "k": "t",
+          "v": " follow — v506”, stays "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "P2.TYPING.01"
+        },
+        {
+          "k": "t",
+          "v": " (R1 mapped onto the same bit, fermionic halving), "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.EMERGE.LIGHT.01"
+        },
+        {
+          "k": "t",
+          "v": " context sharpened. Papers: "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial Step 1 (fermionic "
+        },
+        {
+          "k": "m",
+          "v": "U^2=(-1)^F"
+        },
+        {
+          "k": "t",
+          "v": " sentence) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Step 2 (the one-bit reduction), contracts QGEO kill-test paragraph "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " marks paragraph "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " CELEST hypothesis note, "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " one-sentence updates at the "
+        },
+        {
+          "k": "c",
+          "v": "v499"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v503"
+        },
+        {
+          "k": "t",
+          "v": " citation sites. Wolfram: four mirrors (the complete square-root solve; "
+        },
+        {
+          "k": "m",
+          "v": "D_4"
+        },
+        {
+          "k": "t",
+          "v": " center "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " order-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " counts "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the silver counterexample; the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Cl}(16)"
+        },
+        {
+          "k": "t",
+          "v": " identity "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde U^2=256\\,\\gamma_1\\cdots\\gamma_{16}"
+        },
+        {
+          "k": "t",
+          "v": " on explicit "
+        },
+        {
+          "k": "m",
+          "v": "256{\\times}256"
+        },
+        {
+          "k": "t",
+          "v": " Jordan–Wigner matrices "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the split R control; the "
+        },
+        {
+          "k": "m",
+          "v": "n"
+        },
+        {
+          "k": "t",
+          "v": "-arithmetic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " generic kill) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "434\\to438"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "); the "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": "-triple stabiliser enumeration and the "
+        },
+        {
+          "k": "m",
+          "v": "A_4"
+        },
+        {
+          "k": "t",
+          "v": " profile stay Python-side (flagged). "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "c",
+          "v": "v506"
+        },
+        {
+          "k": "t",
+          "v": " on the P2/carrier node; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (500 modules, suite green). No gate closes, no marker moves."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
+        "v": "XV) ("
+      },
+      {
+        "k": "c",
+        "v": "v505"
+      },
+      {
+        "k": "t",
+        "v": " — WP5e-"
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " “the equivariant anomaly ledger on twistor space” promoted as "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5E.BETA.01"
+      },
+      {
+        "k": "t",
+        "v": ": the Atiyah–Bott/Lefschetz fixed-point skeleton of the one-loop twistor inflow is EXACT — denominators "
+      },
+      {
+        "k": "m",
+        "v": "(2,4,2)"
+      },
+      {
+        "k": "t",
+        "v": " with Dedekind sum "
+      },
+      {
+        "k": "m",
+        "v": "\\tfrac54=(|\\Z_4|^2{-}1)/12"
+      },
+      {
+        "k": "t",
+        "v": ", equivariant characters "
+      },
+      {
+        "k": "m",
+        "v": "(248,0,-8,0)"
+      },
+      {
+        "k": "t",
+        "v": " by two routes, invariant Okubo "
+      },
+      {
+        "k": "m",
+        "v": "36\\langle x,x\\rangle^2"
+      },
+      {
+        "k": "t",
+        "v": " with the twisted sectors NOT reducing and the AB sum leaving the RIGID residual "
+      },
+      {
+        "k": "m",
+        "v": "32\\,T_3"
+      },
+      {
+        "k": "t",
+        "v": ", the index bridge "
+      },
+      {
+        "k": "m",
+        "v": "f(m)=\\mathrm{ch}_2(T_m)"
+      },
+      {
+        "k": "t",
+        "v": " exact with glue defect "
+      },
+      {
+        "k": "m",
+        "v": "-78"
+      },
+      {
+        "k": "t",
+        "v": " both routes, the level dials "
+      },
+      {
+        "k": "m",
+        "v": "k=1"
+      },
+      {
+        "k": "t",
+        "v": " geometric (current count "
+      },
+      {
+        "k": "m",
+        "v": "240/0/0/0"
+      },
+      {
+        "k": "t",
+        "v": "), and the honest E3 REFUTATION: "
+      },
+      {
+        "k": "m",
+        "v": "a_0"
+      },
+      {
+        "k": "t",
+        "v": " fills the GRAVITON slot "
+      },
+      {
+        "k": "m",
+        "v": "O(2)"
+      },
+      {
+        "k": "t",
+        "v": ", NOT the axion slot "
+      },
+      {
+        "k": "m",
+        "v": "O(-2)"
+      },
+      {
+        "k": "t",
+        "v": " — the three sphere classes fill the three twisted axion slots instead; the preregistered kill (“inflow demands a level "
+      },
+      {
+        "k": "m",
+        "v": "\\neq1"
+      },
+      {
+        "k": "t",
+        "v": "”) does NOT fire on the equivariant skeleton; WP5e: "
+      },
+      {
+        "k": "m",
+        "v": "\\alpha"
+      },
+      {
+        "k": "t",
+        "v": " (CFT side, "
+      },
+      {
+        "k": "c",
+        "v": "v502"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": " (equivariant twistor skeleton, "
+      },
+      {
+        "k": "c",
+        "v": "v505"
+      },
+      {
+        "k": "t",
+        "v": ") executed, the global BCOV quantisation stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "429\\to434"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ", no marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v505_celestial_wp5e_beta_equivariant_ledger.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5E.BETA.01"
+            },
+            {
+              "k": "t",
+              "v": ", 47 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "1.3 s; sympy/Fraction exact, no floats; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The twistor side of WP5e pushed as far as exact arithmetic reaches: the Atiyah–Bott/Lefschetz skeleton of the one-loop box anomaly (Costello; Bittleston–Sharma–Skinner) on "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb C^2/\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " with the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-glue monodromy. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "AB ledger"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\det(1-g_j^{-1})=(2,4,2)"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\sum_j1/\\det_j=\\tfrac54=(|\\Z_4|^2{-}1)/12"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}_{g_j}(\\mathrm{Ad}\\,E_8)=(248,0,-8,0)"
+        },
+        {
+          "k": "t",
+          "v": " two routes; invariant average "
+        },
+        {
+          "k": "m",
+          "v": "60="
+        },
+        {
+          "k": "t",
+          "v": " carrier; Frobenius "
+        },
+        {
+          "k": "m",
+          "v": "61568"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}_{g_2}=-8=120-128"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Okubo per sector (honest sharpening)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": the invariant sector is exactly Okubo-quadratic ("
+        },
+        {
+          "k": "m",
+          "v": "Q^{(0)}=36\\langle x,x\\rangle^2"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "36=\\tilde\\lambda^2_{e_8}"
+        },
+        {
+          "k": "t",
+          "v": " — "
+        },
+        {
+          "k": "c",
+          "v": "v495"
+        },
+        {
+          "k": "t",
+          "v": " re-derived through the glue grading); the twisted sectors do NOT reduce ("
+        },
+        {
+          "k": "m",
+          "v": "T_5"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "(-8,32,-8)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "T_3"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "(48,-64,48)"
+        },
+        {
+          "k": "t",
+          "v": "); the AB sum cancels the "
+        },
+        {
+          "k": "m",
+          "v": "D_5"
+        },
+        {
+          "k": "t",
+          "v": " quartic exactly and leaves the rigid "
+        },
+        {
+          "k": "m",
+          "v": "32\\,T_3"
+        },
+        {
+          "k": "t",
+          "v": " (the only quartic-free weighting is the "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_4"
+        },
+        {
+          "k": "t",
+          "v": " projector; the graded GS exchange is rank-obstructed in sectors "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "–"
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": "); heterotic identities ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}_{120}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}_{128}"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Tr}_{E_8}=9(\\mathrm{tr}^2)^2"
+        },
+        {
+          "k": "t",
+          "v": ") exact. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Index bridge"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "f(m)=\\tfrac14\\sum_j(i^{jm}{-}1)/\\det_j=(0,-\\tfrac38,-\\tfrac12,-\\tfrac38)\n=\\mathrm{ch}_2(T_m)=-(C^{-1})_{mm}/2"
+        },
+        {
+          "k": "t",
+          "v": " EXACT (E1 "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " E2 arithmetic); glue "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{ch}_2"
+        },
+        {
+          "k": "t",
+          "v": " defect "
+        },
+        {
+          "k": "m",
+          "v": "-78"
+        },
+        {
+          "k": "t",
+          "v": " both routes (classes "
+        },
+        {
+          "k": "m",
+          "v": "(-24,-30,-24)"
+        },
+        {
+          "k": "t",
+          "v": "); Killing sums "
+        },
+        {
+          "k": "m",
+          "v": "(320,320,240,320)"
+        },
+        {
+          "k": "t",
+          "v": ", total "
+        },
+        {
+          "k": "m",
+          "v": "1200=2h^\\vee(h,h)"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "m",
+              "v": "k=1"
+            },
+            {
+              "k": "t",
+              "v": " geometric"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": lattice current count "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "k{=}1"
+        },
+        {
+          "k": "t",
+          "v": ", exactly "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "k=2,3,4"
+        },
+        {
+          "k": "t",
+          "v": "; embedding residual "
+        },
+        {
+          "k": "m",
+          "v": "47k^2{+}219k{-}266=(0,360,814,1362)"
+        },
+        {
+          "k": "t",
+          "v": "; integrality alone fixes nothing (honest, as "
+        },
+        {
+          "k": "c",
+          "v": "v502"
+        },
+        {
+          "k": "t",
+          "v": "); one scale "
+        },
+        {
+          "k": "m",
+          "v": "\\Rightarrow"
+        },
+        {
+          "k": "t",
+          "v": " one level ("
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": " periods). "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "E3 refutation (prominent)"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "a_0\\in O(8)"
+        },
+        {
+          "k": "t",
+          "v": " fills the GRAVITON slot "
+        },
+        {
+          "k": "m",
+          "v": "O(2)"
+        },
+        {
+          "k": "t",
+          "v": ", NOT the BSS axion slot "
+        },
+        {
+          "k": "m",
+          "v": "O(-2)"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "X=-2\\neq+2=Y"
+        },
+        {
+          "k": "t",
+          "v": "; mismatch "
+        },
+        {
+          "k": "m",
+          "v": "4=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " as a "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "coincidence) — “the theory brings its GS axion as "
+        },
+        {
+          "k": "m",
+          "v": "a_0"
+        },
+        {
+          "k": "t",
+          "v": "” is REFUTED; instead the three "
+        },
+        {
+          "k": "m",
+          "v": "H^2(\\mathrm{ALE})"
+        },
+        {
+          "k": "t",
+          "v": " classes carry exactly the Coxeter eigencharacters "
+        },
+        {
+          "k": "m",
+          "v": "\\{i,-1,-i\\}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the three twisted slots (bijection); slot count "
+        },
+        {
+          "k": "m",
+          "v": "1{+}3=4\n=|\\mu_4|"
+        },
+        {
+          "k": "t",
+          "v": " soft. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Negative controls"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{diag}(i,i)"
+        },
+        {
+          "k": "t",
+          "v": " breaks the ledger four ways ("
+        },
+        {
+          "k": "m",
+          "v": "\\sum1/\\det=\\tfrac14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\omega"
+        },
+        {
+          "k": "t",
+          "v": "-weight "
+        },
+        {
+          "k": "m",
+          "v": "-1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "5"
+        },
+        {
+          "k": "t",
+          "v": " generators); "
+        },
+        {
+          "k": "m",
+          "v": "SO(16)"
+        },
+        {
+          "k": "t",
+          "v": " glue: characters "
+        },
+        {
+          "k": "m",
+          "v": "(120,0,+120,0)"
+        },
+        {
+          "k": "t",
+          "v": ", defect "
+        },
+        {
+          "k": "m",
+          "v": "-30\\neq-78"
+        },
+        {
+          "k": "t",
+          "v": ", bulk Okubo fails (independent 4th Casimir); "
+        },
+        {
+          "k": "m",
+          "v": "k=2"
+        },
+        {
+          "k": "t",
+          "v": ": current count "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "c"
+        },
+        {
+          "k": "t",
+          "v": "-prefactor "
+        },
+        {
+          "k": "m",
+          "v": "-31/48\\neq-\\tfrac13"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "dictionaries ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{CS}(\\rho)\\bmod1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " discriminant weight; "
+        },
+        {
+          "k": "m",
+          "v": "32=(h,h){+}(h',h')"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "-30=-h^\\vee"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\Omega"
+        },
+        {
+          "k": "t",
+          "v": "-contraction). "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "the global BCOV/KS quantisation, non-fixed-point contributions, the "
+        },
+        {
+          "k": "m",
+          "v": "O(-2)"
+        },
+        {
+          "k": "t",
+          "v": " bulk axion, CPS level-from-flux, the pairing "
+        },
+        {
+          "k": "m",
+          "v": "32\\,T_3\\leftrightarrow"
+        },
+        {
+          "k": "t",
+          "v": " sphere axions. VERDICT B; the kill test does not fire on the equivariant skeleton."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " papers "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " Wolfram "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger: new row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.BETA.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " updated to “WP5e: "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " (CFT side, "
+        },
+        {
+          "k": "c",
+          "v": "v502"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " (equivariant twistor skeleton, "
+        },
+        {
+          "k": "c",
+          "v": "v505"
+        },
+        {
+          "k": "t",
+          "v": ") executed; the global BCOV quantisation stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "— with the rigid "
+        },
+        {
+          "k": "m",
+          "v": "32\\,T_3"
+        },
+        {
+          "k": "t",
+          "v": " twisted residual and the sphere-axion pairing as the named remaining targets” at "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unchanged"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Open status. Papers: contracts WP5e bullet "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " “"
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " done” with the "
+        },
+        {
+          "k": "m",
+          "v": "a_0"
+        },
+        {
+          "k": "t",
+          "v": " refutation as an honest finding (kill-test and honest-success paragraphs consistent); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " celestial section becomes the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "eleven"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "-step story (new Step 11 “the equivariant anomaly ledger on twistor space”, “what remains” "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the global BCOV quantisation with named targets). Wolfram: five mirrors (AB denominators "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " characters two routes; the index bridge "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "-78"
+        },
+        {
+          "k": "t",
+          "v": " defect; the per-sector Okubo sums over the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " glue roots with the "
+        },
+        {
+          "k": "m",
+          "v": "32\\,T_3"
+        },
+        {
+          "k": "t",
+          "v": " residual; the lattice current counts "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " embedding residuals; the axion-slot weight arithmetic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " twisted-slot bijection) verified with the active engine the same day ("
+        },
+        {
+          "k": "m",
+          "v": "429\\to434"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "ALL WOLFRAM EXTENSION CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "). "
+        },
+        {
+          "k": "c",
+          "v": "VerificationDag"
+        },
+        {
+          "k": "t",
+          "v": " qft node gains "
+        },
+        {
+          "k": "c",
+          "v": "v505"
+        },
+        {
+          "k": "t",
+          "v": "; registry "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "run_all"
+        },
+        {
+          "k": "t",
+          "v": " (499 modules at this step; 500 with "
+        },
+        {
+          "k": "c",
+          "v": "v506"
+        },
+        {
+          "k": "t",
+          "v": ", suite green). No gate closes, no marker moves — "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21",
+    "heading": [
+      {
+        "k": "t",
         "v": "XIV) ("
       },
       {

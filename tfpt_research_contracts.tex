@@ -1353,7 +1353,15 @@ full moduli space, the only critical points are the CM points ($E_2^*(i)=E_2^*(\
 at the square is Palais symmetric criticality --- while the square \emph{is} pinned sharply by the clock:
 the raw free-field DtN is mod-$4$ block-diagonal \emph{iff} $\tau=i$ (an isolated zero of the K3
 indicator as a modulus function, $8\times10^{-15}$ at $\tau=i$, strictly monotone away), and
-$\mathrm{Aut}(E_\rho)=\Z_6$ carries no order-$4$ element. The full \texttt{QGEO.REALIZE.01} stays \mO;
+$\mathrm{Aut}(E_\rho)=\Z_6$ carries no order-$4$ element. The clock input itself is now
+\emph{reduced to one bit} (\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01}):
+the deck has exactly two M\"obius square roots, both automatically of order $4$, and a
+marks-preserving root exists \emph{iff} the deck is the central involution of the mark-stabiliser
+$D_4$ --- given that alignment bit, order, uniqueness, the free $4$-cycle and $\tau=i$ are all
+theorems (harmonicity alone is insufficient, exact counterexample); on the Fock side the NS deck
+implementation is \emph{forced} to order $4$ ($U^2=(-1)^F$ exactly, nonsplit $\Z_4$; the R sector
+splits), so the fermionic $\Z_4$ explains the \emph{order} and only the spatial alignment remains
+the carrier input. The full \texttt{QGEO.REALIZE.01} stays \mO;
 no marker moves. \mE\ carrier-side (the four
 levers), \mO\ seam-side (the emergence): a kill-test, \emph{not} a closure (\texttt{QGEO.KILL.01}).
 \par\smallskip\noindent\textbf{And the mark count is now \emph{derived}, not assumed: four marks from
@@ -1375,7 +1383,9 @@ The light emergence test (\veri{v503\_qgeo\_emergence\_light.py}) sharpens this 
 $a_3=a_2=a_1=0$ with $j=1728$ identically, \vref{v493}), and the order-$4$ element on $H^1$ is the
 Coxeter element of $W(A_3)$ --- exactly the P2 cusp-class carrier datum of \vref{v499}: the QGEO
 modulus rest and the P2 typing rest R1 are \emph{one} common residual (``why does the raw seam carry
-the order-$4$ clock''), not two.
+the order-$4$ clock''), not two. And the clock-rigidity theorems (\vref{v506}) reduce that common
+residual to \emph{one alignment bit} --- ``the collar deck is the central involution of the
+mark-$D_4$'' --- with the clock's \emph{order} fermionically forced ($U^2=(-1)^F$ exact).
 \mE\ (count $+$ equality), \mO\ (the square modulus and the raw-seam realisation) --- \texttt{QGEO.MARKS.03} /
 \texttt{QGEO.EMERGE.01}.
 \par\smallskip\noindent\textbf{And the four marks are a \emph{four-interval} modular geometry
@@ -2767,7 +2777,7 @@ regime equation closed \veri{v28\_gravity\_fR.py}.}
 \addcontentsline{toc}{section}{Research Contract: CELEST.SEAM.01}
 % =====================================================================
 \noindent\emph{Reader's note.} A compact synthesis of this contract's executed work packages
-(WP1--WP5d, both WP5d stages, $+$ the WP5e $\alpha$ stage) --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- is given as
+(WP1--WP5d, both WP5d stages, $+$ the WP5e $\alpha$ and $\beta$ stages) --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- is given as
 a dedicated section in \texttt{tfpt\_3\_e8\_audit\_bootstrap} (``The celestial route: from the $\mu_4$
 clock to the $(E_8)_1$ boundary shadow''); this contract remains the full technical reference (typing
 fence, kill tests, work-package statements).
@@ -2787,7 +2797,11 @@ programme (Strominger, PRL \textbf{127}, 221601: $w_{1+\infty}$; Costello--Paque
 \textbf{403} (2023): quantizing the non-linear graviton). The gauge-algebra admissibility gate is already
 passed in the literature: Costello's one-loop axionic-consistency analysis (\texttt{arXiv:2111.08879})
 admits the exceptional algebras \emph{including} $E_8$ for SDYM on twistor space (Okubo: no independent
-quartic Casimir).
+quartic Casimir). The spin bridge in the hypothesis is no longer a bookkeeping convention: on the
+16-Majorana seam the NS deck implementation is \emph{forced} to order $4$ ($U^2=(-1)^F$ exactly,
+nonsplit $\Z_4$) and the quarter-shift lifts to a canonical $\Z_8$ tower with $V^2\propto U$ ---
+``$8=2|\mu_4|$'' fermionically explained (\veri{v506\_seam\_clock\_rigidity.py},
+\texttt{SEAM.CLOCK.RIGIDITY.01}).
 
 \begin{keybox}[WP1, executed and verified: the $E_8$ $\mu_4$-glue \emph{is} the flat $\Z_4$ monodromy of the equivariant CCA on the $A_3$ ALE space --- verdict B (\veri{v492\_celestial\_z4\_orbifold.py}, \texttt{CELEST.WP1.01})]
 Everything in this box is exact arithmetic (sympy, no floats). \textbf{Inner grading / flat monodromy
@@ -2920,10 +2934,11 @@ topology, convergence) passes to WP5 --- where WP5a has since answered the ``whi
 counting level (the coefficientwise $\chi_w$ limit below), WP5b has constructed the deleting operator,
 WP5c the limit state whose GNS kernel contains the ideal, WP5d the local-net legs (the $\alpha$-stage
 two-interval index chain and the $\beta$-stage split $+$ strong-additivity witnesses --- all three KLM
-ingredients of complete rationality on the lattice), and WP5e-$\alpha$ has anchored the CFT side of the
-twistor uplift (prefactor $+$ level pinning),
-leaving the BCOV/Costello--Li inflow itself (WP5e proper) as the remaining open piece.
-\item \textbf{WP5 (the summit) --- subdivided; WP5a--WP5d (both WP5d stages) plus the WP5e $\alpha$ stage are landed.} The twistorial
+ingredients of complete rationality on the lattice), and WP5e-$\alpha$/$\beta$ have anchored \emph{both}
+faces of the twistor uplift (the CFT-side prefactor $+$ level pinning; the equivariant twistor
+skeleton with the index bridge and the rigid $32\,T_3$ residual),
+leaving the global BCOV quantisation (WP5e proper) as the remaining open piece.
+\item \textbf{WP5 (the summit) --- subdivided; WP5a--WP5d (both WP5d stages) plus the WP5e $\alpha$ and $\beta$ stages are landed.} The twistorial
 construction as a \emph{second continuum route} for \texttt{SEAM.EQUIV.01} (Costello--Li grade), carrying
 the WP4 constructive-boundary-limit question. Subdivision WP5a--WP5e:
 \begin{itemize}
@@ -2953,7 +2968,7 @@ reproduces the $248$ layer; swapped glue breaks the zero-mode anchor. \emph{Hone
 limit does \emph{not} generate the truncation (the loop Fock counts $897266\gg248$ at integer level
 $1$) --- WP5a fixes the ideal's \emph{size and location} quantitatively and gives the celestial route
 the same two-step shape as MMST (limit $+$ maximal ideal); the operator content is exactly WP5b--e,
-of which WP5b--WP5d and the WP5e $\alpha$ stage are executed below.
+of which WP5b--WP5d and the WP5e $\alpha$ and $\beta$ stages are executed below.
 \item \textbf{WP5b (\emph{done}) \mE/\mC:} ``the singular vector as an operator'', executed and
 machine-verified as \texttt{CELEST.WP5B.01} \veri{v498\_celestial\_wp5b\_singular\_vector.py} (exact
 integer/Fraction arithmetic, $53$ checks, deterministic) --- \emph{success on the preregistered
@@ -3065,7 +3080,9 @@ cited, \emph{not} claimed; the continuum proof for the concrete seam quotient ne
 (\vref{v336}/\vref{v449}) and for the interacting condensed $(E_8)_1$ net remains WP5e /
 Costello--Li territory.
 \item \textbf{WP5e (subdivided): $\alpha$ stage (\emph{done}) \mE/\mC\ --- the CFT-side prefactor
-$+$ level pinning; the twistor inflow itself stays \mO.} The $\alpha$ stage is executed and
+$+$ level pinning; $\beta$ stage (\emph{done}) \mE/\mC\ --- the equivariant anomaly ledger on
+twistor space, including the honest $a_0$ refutation; the global BCOV quantisation stays \mO.}
+The $\alpha$ stage is executed and
 machine-verified as \texttt{CELEST.WP5E.ALPHA.01} \veri{v502\_celestial\_wp5e\_prefactor\_level.py}
 (exact sympy/Fraction arithmetic, $33$ checks). Both exactly computable consistency anchors of the
 uplift hold. (i)~\emph{The $q^{-1/3}$ prefactor is exact $\mu_4$ vacuum-energy bookkeeping}: the
@@ -3090,24 +3107,63 @@ holds for \emph{all} $k=1..8$ and fixes nothing --- the originally conjectured i
 dead; the three other dials carry. Controls: $D_8/SO(16)_1$ has the \emph{same} $q^{-1/3}$ prefactor
 but $h=(0,\tfrac12,1,1)$ (the discriminator is glue-$h$ integrality, not the prefactor); $\Z_2$ or
 $\mu_4$ \emph{rotation} twists break the common prefactor; wrong $k\in\{2,3,4\}$ fails all five
-dials coherently. \textbf{WP5e proper \mO\ (the twistor inflow):} the BCOV/Costello--Li construction
-of the holomorphic boundary theory from the twistor side. Success: partition function $=E_4/\eta^8$
-\emph{including} the $q^{-1/3}$ prefactor \emph{derived from the twistor side}; kill: an anomaly
-mismatch at the Costello--Li grade --- the CFT-side dials of v502 do not trigger it (all computable
-dials say $k=1$), but its twistor side is untested.
+dials coherently. \textbf{The $\beta$ stage (\emph{done}) \mE/\mC\ --- the equivariant anomaly
+ledger on twistor space} --- is executed and machine-verified as \texttt{CELEST.WP5E.BETA.01}
+\veri{v505\_celestial\_wp5e\_beta\_equivariant\_ledger.py} (exact sympy/Fraction arithmetic, $47$
+checks). The twistor side is pushed as far as exact arithmetic reaches: the Atiyah--Bott/Lefschetz
+fixed-point skeleton of the one-loop box anomaly on $\mathbb C^2/\Z_4$ with the $\mu_4$-glue
+monodromy. (i)~\emph{The AB ledger is exact}: denominators $\det(1-g_j^{-1})=(2,4,2)$ with Dedekind
+sum $5/4=(|\Z_4|^2{-}1)/12$; equivariant characters $\operatorname{tr}_{g_j}(\mathrm{Ad}\,E_8)
+=(248,0,-8,0)$ by two independent routes; invariant average $60=$ the carrier; Frobenius $61568$.
+(ii)~\emph{Okubo per sector, the honest sharpening}: only the \emph{invariant} sector is
+Okubo-quadratic ($Q^{(0)}=36\langle x,x\rangle^2$, $36=\tilde\lambda^2_{e_8}$ --- the \vref{v495}
+identity re-derived through the glue grading); the twisted sectors carry irreducible $T_5/T_3$
+content, and the AB-weighted sum cancels the $D_5$ quartic \emph{exactly} while leaving the
+\emph{rigid} residual $32\,T_3$ (no admissible reweighting fixes it; the graded GS exchange is
+rank-obstructed in sectors $1$--$3$) --- twisted-sector closed strings must carry the rest \mO.
+(iii)~\emph{The index bridge} (the centrepiece): $f(m)=\tfrac14\sum_j(i^{jm}{-}1)/\det_j
+=\mathrm{ch}_2(T_m)=-(C^{-1})_{mm}/2$ \emph{exactly} --- the fixed-point ledger and the
+McKay/Kronheimer intersection ledger are the same arithmetic; the glue-bundle $\mathrm{ch}_2$
+defect is the integer $-78$ by \emph{both} routes (classes $(-24,-30,-24)$). (iv)~\emph{The level
+dials say $k=1$ geometrically}: the lattice current count is $240$ at $k{=}1$ and exactly $0$ at
+$k=2,3,4$; the embedding residual $47k^2{+}219k{-}266=(0,360,814,1362)$; $h(J;k)=k$ is integer for
+\emph{all} $k$ (integrality alone fixes nothing --- honest, exactly as on the CFT side); one scale
+$\Rightarrow$ one level (\vref{v493} periods). (v)~\emph{The honest refutation}: the
+clock-invariant modulus $a_0\in O(8)$ fills the BSS \emph{graviton} slot $O(2)$, \emph{not} the
+axion slot $O(-2)$ (Hamiltonian weights $X=-2\neq+2=Y$; mismatch $4=|\mu_4|$, typed \mC\ as a
+coincidence) --- ``the theory brings its own GS axion as $a_0$'' is \emph{refuted}; what does
+match: the three $H^2(\mathrm{ALE})$ classes carry exactly the three twisted-sector Coxeter
+characters $\{i,-1,-i\}$ (bijection, no invariant class), so the bulk axion must come from the
+$O(-2)$ tower field itself (construction \mO). Controls: $\operatorname{diag}(i,i)$ breaks the
+ledger four independent ways; $SO(16)$ glue gives characters $(120,0,+120,0)$ and defect
+$-30\neq-78$ with a \emph{failing} bulk Okubo (independent quartic Casimir); $k=2$ dies on the
+closure dial ($-31/48\neq-\tfrac13$) while naive integrality dials stay integer. The preregistered
+kill does \emph{not} fire on the equivariant skeleton. \textbf{WP5e proper \mO\ (the global BCOV
+quantisation):} the BCOV/Kodaira--Spencer theory on $\mathbb{PT}/\Z_4$ itself (quantisation,
+non-fixed-point contributions, the twisted closed-string measure), the $O(-2)$ bulk-axion
+construction, the Costello--Paquette--Sharma level-from-flux mechanism, and the pairing of the
+rigid $32\,T_3$ twisted residual with the three sphere axions --- the named remaining targets.
+Success: partition function $=E_4/\eta^8$ \emph{including} the $q^{-1/3}$ prefactor \emph{derived
+from the twistor side}; kill: an anomaly mismatch at the Costello--Li grade --- neither the
+CFT-side dials of v502 nor the equivariant skeleton of v505 trigger it (all computable dials say
+$k=1$), but the global quantisation is untested.
 \end{itemize}
-Honest status line: WP5a--WP5d (both WP5d stages) and the WP5e $\alpha$ stage are exact-arithmetic
-\mE\ constructions
+Honest status line: WP5a--WP5d (both WP5d stages) and the WP5e $\alpha$ and $\beta$ stages are
+exact-arithmetic \mE\ constructions
 (plus ED-validated lattice witnesses in WP5d) with \mC\ named identifications (``radial
 decoupling $=$ collar thickness $\to0$''; Weyl complete reducibility beyond BFS depth $4$; the Kac
 mechanics beyond level $2$; the quasi-free extension; the KLM/Longo--Xu/CHMP index dictionary; Longo
 split heredity; Kac
-generation of the maximal submodule for $k\ge3$); \emph{WP5a--WP5d plus WP5e-$\alpha$ are landed ---
-all three KLM ingredients of complete rationality carry lattice witnesses}
---- WP5e proper (the BCOV/Costello--Li twistor inflow) is the single remaining open piece, with the
+generation of the maximal submodule for $k\ge3$; the WP5e-$\beta$ dictionaries ---
+$\mathrm{CS}(\rho)\bmod1=$ discriminant weight, $32=(h,h){+}(h',h')$, $-30=-h^\vee$, the
+$\Omega$-contraction); \emph{WP5a--WP5d plus WP5e-$\alpha$/$\beta$ are landed ---
+all three KLM ingredients of complete rationality carry lattice witnesses, and both faces of the
+inflow are anchored}
+--- WP5e proper (the global BCOV quantisation) is the single remaining open piece, with the
 continuum uplift of the WP5d lattice witnesses honestly fenced as Xu's theorem (cited, not claimed)
+and the rigid $32\,T_3$ twisted residual $+$ the sphere-axion pairing as the named remaining targets
 --- \texttt{SEAM.EQUIV.01} stays \mO\
-and nothing in WP5a--WP5e-$\alpha$ moves it.
+and nothing in WP5a--WP5e-$\beta$ moves it.
 \end{itemize}
 
 \par\smallskip\noindent\textbf{Kill tests (pre-registered).} \textbf{(K1)} the equivariant sector could
@@ -3139,19 +3195,24 @@ $4124$ exactly), the two-interval index chain by WP5d-$\alpha$
 (\veri{v501\_celestial\_wp5d\_two\_interval\_index.py}: $\mu$-chain $16\to4\to1$ anchored at both
 measured ends), the split $+$ strong-additivity legs by WP5d-$\beta$
 (\veri{v504\_celestial\_wp5d\_klm\_completeness.py}: all three KLM ingredients of complete
-rationality witnessed on the lattice; the continuum uplift is Xu's theorem, cited not claimed), and
+rationality witnessed on the lattice; the continuum uplift is Xu's theorem, cited not claimed),
 the CFT-side anchors of the uplift itself by WP5e-$\alpha$
 (\veri{v502\_celestial\_wp5e\_prefactor\_level.py}: the $q^{-1/3}$ prefactor as exact $\mu_4$
-vacuum-energy bookkeeping, $k=1$ forced three ways), leaving the BCOV/Costello--Li twistor inflow
+vacuum-energy bookkeeping, $k=1$ forced three ways), and the equivariant twistor skeleton by
+WP5e-$\beta$ (\veri{v505\_celestial\_wp5e\_beta\_equivariant\_ledger.py}: the index bridge
+$f(m)=\mathrm{ch}_2(T_m)$ exact, glue defect $-78$ two routes, geometric $k=1$ dials, the rigid
+$32\,T_3$ residual, and the honest $a_0$ refutation --- the kill branch does not fire on the
+skeleton), leaving the global BCOV quantisation
 (WP5e proper) as the single remaining open piece.
 
 \par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success
 (WP5e: a second continuum route to \texttt{SEAM.EQUIV.01}) remains low --- it is constructive
 holography at the Costello--Li grade. The \emph{partial}-findings expectation is now realised and
 \emph{exceeded}: WP1--WP4, all five WP5 constructive milestones (both WP5d stages) and the WP5e
-$\alpha$ stage are
+$\alpha$ and $\beta$ stages are
 executed with sharp structural results (verdicts B, B, B, B(ii); WP5a--WP5d passed;
-WP5e-$\alpha$ pins the CFT side; \emph{WP5e proper --- the twistor inflow ---
+WP5e-$\alpha$ pins the CFT side, WP5e-$\beta$ the equivariant twistor skeleton; \emph{WP5e proper
+--- the global BCOV quantisation ---
 is the single remaining open piece}) --- the WP1 critical correction (clock $\neq$ deck; clock$^2=$ deck),
 the WP2 sharpenings (the clock \emph{is} the Picard--Lefschetz/Coxeter monodromy of the seam
 deformation; $a_0$ pure scale with the $\tau{=}i$ shape frozen), the WP3 non-selective alignment (exact
@@ -3168,9 +3229,11 @@ with the shared boundary point; the bounded-vs-divergent entropic discriminator 
 $\tfrac14$-exponent approach against the diverging $U(1)$ control; the elliptic-nome split ladder
 with exact orbifold inheritance; Pimsner--Popa $\lambda=\tfrac12$ and $\lambda_{E_4}=\tfrac14=1/\mu$
 with integer attainment --- all three KLM ingredients witnessed, Xu's continuum theorem cited not
-claimed), and the WP5e-$\alpha$ prefactor/level pinning (the $q^{-1/3}$ prefactor as
+claimed), the WP5e-$\alpha$ prefactor/level pinning (the $q^{-1/3}$ prefactor as
 exact $\mu_4$ vacuum bookkeeping; $k=1$ forced three ways; the glue-integrality route honestly
-retired) --- exactly the kind of sharp,
+retired), and the WP5e-$\beta$ equivariant ledger (the index bridge $f(m)=\mathrm{ch}_2(T_m)$
+exact with the $-78$ defect; the rigid $32\,T_3$ twisted residual; the honest $a_0$ refutation
+with the three sphere classes filling the three twisted axion slots) --- exactly the kind of sharp,
 falsifiable refinement the contract format is for. Status: \texttt{CELEST.SEAM.01} \mO\ (research
 contract, WP5e proper the single remaining open milestone); \texttt{CELEST.WP1.01} \mE/\mC\ (executed);
 \texttt{CELEST.WP2.01} \mE/\mC\ (executed); \texttt{CELEST.WP3.01} \mE/\mC\ (executed);
@@ -3180,7 +3243,9 @@ contract, WP5e proper the single remaining open milestone); \texttt{CELEST.WP1.0
 \texttt{CELEST.WP5DB.01} \mE/\mC\ (executed, $\beta$ stage --- the continuum uplift stays \mO,
 Xu's theorem cited);
 \texttt{CELEST.WP5E.ALPHA.01} \mE/\mC\ (executed, $\alpha$ stage --- the CFT-side prefactor $+$
-level pinning; the BCOV/twistor inflow itself stays \mO);
+level pinning);
+\texttt{CELEST.WP5E.BETA.01} \mE/\mC\ (executed, $\beta$ stage --- the equivariant anomaly ledger;
+the global BCOV quantisation itself stays \mO);
 \texttt{SEAM.EQUIV.01} untouched, stays \mO.
 
 % =====================================================================

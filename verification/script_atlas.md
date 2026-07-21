@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`498` registered scripts · `566` ledger claims · `10` clusters.
+`500` registered scripts · `568` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (55 scripts)
+### `core` — Compiler core & the E₈ glue  (56 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -121,6 +121,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: AX.P2.01, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v23, v53, v115, v137 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 - **v499_p2_weights_deligne_bg** [E/C/O] `P2.TYPING.01` — P2.TYPING.01: the P2 weight-typing postulate HARDENED (the v491 check-9 residual) -- the anchor a = (1,1,2) typed as the Birkhoff-Grothendieck splitting exponents of the DELIGNE CA
   - deps: AX.P2.01, v491_p2_partition_corollary, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v181_clock_is_conformal_symmetry, v33, v40 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
+- **v506_seam_clock_rigidity** [E/C/O] `SEAM.CLOCK.RIGIDITY.01` — SEAM.CLOCK.RIGIDITY.01: clock rigidity, Route B of the v503 classification -- two exact theorems reducing the order-4 clock input to ONE alignment bit (Part A Moebius + Part B Fock
+  - deps: v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v117, v168, v214, v215, v216 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -328,7 +330,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (172 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (173 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -675,6 +677,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v215_seam_deck_killtest, v168_qgeo_rigidity, v499_p2_weights_deligne_bg, v492_celestial_z4_orbifold, v493_celestial_wp2_clock_deformation, v215, v216, v264 · cited: introduction, origin theory, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v504_celestial_wp5d_klm_completeness** [E/C/O] `CELEST.WP5DB.01` — CELEST.WP5DB.01: WP5d-beta of the celestial-holographic research contract CELEST.SEAM.01 -- 'split + strong additivity from the lattice', the two remaining KLM legs of complete rat
   - deps: v492_celestial_z4_orbifold, v501_celestial_wp5d_two_interval_index, v489_seam_modular_commutator, v490_seam_parity_census, v286_seam_equivalence_contract, v367, v450, v489 · cited: 3 e8 audit bootstrap, research contracts
+- **v505_celestial_wp5e_beta_equivariant_ledger** [E/C/O/X] `CELEST.WP5E.BETA.01` — CELEST.WP5E.BETA.01: WP5e-beta of the celestial-holographic research contract CELEST.SEAM.01 -- 'the equivariant anomaly ledger on twistor space', the twistor-side milestone of WP5
+  - deps: v492_celestial_z4_orbifold, v493_celestial_wp2_clock_deformation, v495_celestial_wp3_gs_alignment, v496_celestial_wp4_character_shadow, v502_celestial_wp5e_prefactor_level, v286_seam_equivalence_contract, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1061,14 +1065,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×78, `v336`×37, `QGEO.SYM.01`×33, `v216`×24, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×79, `v336`×37, `QGEO.SYM.01`×33, `v216`×25, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14, `v60`×14
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v493_celestial_wp2_clock_deformation** — `CELEST.WP2.01`
-- **v494_cosmo_running_mu_record** — `COSMO.RUNNING.01, COSMO.MUDIST.01`
 - **v495_celestial_wp3_gs_alignment** — `CELEST.WP3.01`
 - **v496_celestial_wp4_character_shadow** — `CELEST.WP4.01`
 - **v497_celestial_wp5a_null_ideal** — `CELEST.WP5A.01`
@@ -1079,4 +1081,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v502_celestial_wp5e_prefactor_level** — `CELEST.WP5E.ALPHA.01`
 - **v503_qgeo_emergence_light** — `QGEO.EMERGE.LIGHT.01`
 - **v504_celestial_wp5d_klm_completeness** — `CELEST.WP5DB.01`
+- **v505_celestial_wp5e_beta_equivariant_ledger** — `CELEST.WP5E.BETA.01`
+- **v506_seam_clock_rigidity** — `SEAM.CLOCK.RIGIDITY.01`
 

@@ -1137,9 +1137,9 @@ The previous section identified the seam's boundary $2$-sphere with the celestia
 directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
-Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent ten-step
-story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$ stage of the
-research contract
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent eleven-step
+story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$ and $\beta$
+stages of the research contract
 \texttt{CELEST.SEAM.01}, whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
 step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
@@ -1158,7 +1158,12 @@ $\chi=1{+}248q{+}4124q^2{+}34752q^3$ (\vref{v377}). The critical correction: the
 the celestial sphere only the sheet flip $z\mapsto-z$; the order-$4$ clock $z\mapsto iz$ is realised as
 the K\"ahler $U(2)$ phase $\operatorname{diag}(i,1)$, and \textbf{clock$^2=$ deck} exactly (spin bridge
 $\Z_8$, $8=2|\mu_4|$ --- the $\cthree=1/(8\pi)$ seam winding integer).
-\veri{v492\_celestial\_z4\_orbifold.py}
+\veri{v492\_celestial\_z4\_orbifold.py} That spin bookkeeping is now \emph{forced} on the seam
+fermions: the NS implementer of the deck satisfies $U^2=(-1)^F$ exactly (nonsplit $\Z_4$ extension,
+no phase choice escapes it), and the quarter-shift lifts to a canonical $\Z_8$ tower with
+$V^2\propto U$, $V^4\propto(-1)^F$ --- ``$8=2|\mu_4|$'' fermionically explained; the R-sector
+control splits ($U_R^2=+1$), so the forcing rests exactly on the established bounding spin
+structure. \veri{v506\_seam\_clock\_rigidity.py}
 
 \par\smallskip\noindent\textbf{Step 2 --- the deformation: $a_0$ is a pure scale and the clock is the
 monodromy \mE.} Clock-invariance selects from the
@@ -1174,7 +1179,13 @@ $\Z_6$ carries no order-$4$ element) --- the square is pinned by the clock's \em
 DtN is mod-$4$ block-diagonal \emph{iff} $\tau=i$), and this order-$4$ clock is the \emph{same} carrier
 datum as the P2 cusp class (\vref{v499}): one common residual, not two
 (\veri{v503\_qgeo\_emergence\_light.py}; the v215 deferred emergence test, light version --- no marker
-moves, \texttt{QGEO.REALIZE.01} stays \mC/\mO).
+moves, \texttt{QGEO.REALIZE.01} stays \mC/\mO). That common residual is now reduced to \emph{one bit}:
+the deck $z\mapsto-z$ has exactly two M\"obius square roots ($z\mapsto\pm iz$), both automatically of
+order $4$, and a marks-preserving root exists \emph{iff} the deck is the \emph{central} involution of
+the mark-stabiliser $D_4$ --- given that alignment bit, order, uniqueness up to $\operatorname{Aut}(\Z_4)$,
+the free $4$-cycle and $\tau=i$ (scale free) are all theorems; harmonicity alone is \emph{not} enough
+(exact counterexample), and the fermionic $\Z_4$ forces the \emph{order}, not the alignment
+(\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01}; markers unchanged).
 
 \par\smallskip\noindent\textbf{Step 3 --- consistency, honestly demoted \mE/\mC.}
 $E_8$ is on Costello's axionic-consistency list (no
@@ -1264,18 +1275,40 @@ ingredients now carry lattice witnesses; the continuum uplift is honestly fenced
 orbifolds of completely rational nets are completely rational'' is \emph{Xu's theorem}, cited, not
 claimed. \veri{v504\_celestial\_wp5d\_klm\_completeness.py}
 
+\par\smallskip\noindent\textbf{Step 11 --- the equivariant anomaly ledger on twistor space
+\mE/\mC.} The twistor side of the uplift is pushed as far as exact arithmetic reaches: the
+Atiyah--Bott/Lefschetz fixed-point skeleton of the one-loop box anomaly on $\mathbb C^2/\Z_4$ with
+the $\mu_4$-glue monodromy is exact --- denominators $(2,4,2)$ with Dedekind sum
+$5/4=(|\Z_4|^2{-}1)/12$, equivariant characters $(248,0,-8,0)$ by two routes, invariant average
+$60=$ the carrier. The honest sharpening: only the \emph{invariant} sector is Okubo-quadratic
+($36\langle x,x\rangle^2$, $36=\tilde\lambda^2_{e_8}$); the twisted sectors are not, and the
+AB-weighted sum cancels the $D_5$ quartic exactly while leaving the \emph{rigid} residual
+$32\,T_3$ --- twisted-sector closed strings must carry the rest. The \emph{index bridge} is the
+centrepiece: $f(m)=\mathrm{ch}_2(T_m)$ exactly (fixed-point ledger $=$ McKay/Kronheimer
+intersection ledger), with the integral glue defect $-78$ by both routes; the level dials say
+$k=1$ \emph{geometrically} (lattice current count $240/0/0/0$, embedding residual
+$(0,360,814,1362)$, one scale $\Rightarrow$ one level). And an honest \emph{refutation}: the
+clock-invariant modulus $a_0$ fills the BSS \emph{graviton} slot $O(2)$, \emph{not} the axion slot
+$O(-2)$ (weight mismatch $4=|\mu_4|$) --- ``the theory brings its own GS axion as $a_0$'' is
+false; instead the three $H^2(\mathrm{ALE})$ classes carry exactly the three twisted-sector
+Coxeter characters $\{i,-1,-i\}$ (the three twisted axion slots), and the bulk axion must come
+from the $O(-2)$ tower field itself. The preregistered kill (``inflow demands a level $\neq1$'')
+does \emph{not} fire on the equivariant skeleton.
+\veri{v505\_celestial\_wp5e\_beta\_equivariant\_ledger.py}
+
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
-The single open step is the BCOV/Costello--Li twistor uplift itself: the boundary
-partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the $q^{-1/3}$
-prefactor whose CFT side Step 9 has pinned (WP5e proper), with preregistered success/kill
-criteria in the contract --- together with the continuum uplift of the Step-10 lattice witnesses
-(Xu's theorem for the abstract orbifold statement; the concrete seam quotient net and the
-interacting condensed $(E_8)_1$ net are Costello--Li territory). The route does \emph{not} close
-\texttt{SEAM.EQUIV.01}; it gives the keystone a
-second, quantitative approach --- the same two-step shape as MMST (limit $+$ maximal ideal) with the
-ideal quantitatively fixed, the deleting operator explicit, the limit state constructed, the index
-chain measured, and the KLM triple witnessed --- while the twistor uplift stays open.
-\texttt{SEAM.EQUIV.01}
+The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:
+the boundary partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the
+$q^{-1/3}$ prefactor whose CFT side Step 9 has pinned and whose equivariant skeleton Step 11 has
+verified --- with the rigid $32\,T_3$ twisted residual and the sphere-axion pairing as the named
+remaining targets, and preregistered success/kill criteria in the contract --- together with the
+continuum uplift of the Step-10 lattice witnesses (Xu's theorem for the abstract orbifold
+statement; the concrete seam quotient net and the interacting condensed $(E_8)_1$ net are
+Costello--Li territory). The route does \emph{not} close \texttt{SEAM.EQUIV.01}; it gives the
+keystone a second, quantitative approach --- the same two-step shape as MMST (limit $+$ maximal
+ideal) with the ideal quantitatively fixed, the deleting operator explicit, the limit state
+constructed, the index chain measured, the KLM triple witnessed, and both faces of the inflow
+anchored --- while the global quantisation stays open. \texttt{SEAM.EQUIV.01}
 stays \mO\ throughout; no marker moves.
 
 % =====================================================================

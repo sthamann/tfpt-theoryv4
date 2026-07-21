@@ -60,6 +60,114 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (XVI) (\texttt{v506} --- seam clock rigidity, Route B of the \texttt{v503} classification, promoted as \texttt{SEAM.CLOCK.RIGIDITY.01}: TWO exact theorems reduce the order-$4$ clock input to ONE alignment bit --- Theorem A (M\"obius): the deck $z\mapsto-z$ has EXACTLY TWO square roots $z\mapsto\pm iz$ in $\mathrm{PGL}_2(\mathbb C)$, both \emph{automatically} order $4$, and a marks-preserving root exists $\iff$ the deck is the CENTRAL involution of the mark-$D_4$ (counterexample $\{\pm1,\pm(3{+}2\sqrt2)\}$: harmonic with full $D_4$ but deck non-central $\Rightarrow$ $0$ roots --- harmonicity alone insufficient); Theorem B (Fock, the core): the NS deck implementation is FORCED to order $4$ --- $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}$, i.e.\ $U^2=(-1)^F$ EXACTLY, a nonsplit $\Z_4$, with the $\Z_8$ tower $V^2\propto U$, $V^4\propto(-1)^F$ ($8=2|\mu_4|$ fermionically explained) and the R-sector control split ($U_R^2=+1$); the one \mC\ rest: ``the collar deck is the central involution of the mark-$D_4$'' --- the fermionic $\Z_4$ forces the ORDER, not the spatial alignment; Wolfram extension $434\to438$ (verified engine run); \emph{NO marker moves --- \texttt{QGEO.REALIZE.01} stays \mC/\mO\ (text precised), \texttt{P2.TYPING.01} R1 mapped onto the same bit})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v506\_seam\_clock\_rigidity.py} (\texttt{SEAM.CLOCK.RIGIDITY.01}, 34 checks,
+$\sim$3.5 s; Part A sympy-exact M\"obius/divisor arithmetic $+$ Part B exact $\mathrm{Cl}(16)$
+Fractions; deterministic).} \texttt{v503} localised the one remaining identification input (``why
+does the raw seam carry the order-$4$ clock'', QGEO-R1 $\equiv$ P2-R1); \texttt{v506} reduces it.
+\emph{Theorem A (M\"obius side, complete)}: Cayley--Hamilton $+$ the complete case analysis give
+$g^2=$ deck $\Rightarrow$ $\operatorname{tr}g\neq0$ forces $g$ diagonal with $(a/d)^2=-1$, and
+$\operatorname{tr}g=0$ forces $\det g=0$ (impossible) --- exactly two roots $z\mapsto\pm iz$, both
+projective order $4$, mutually inverse ($\operatorname{Aut}(\Z_4)$), conjugation-covariant;
+marks filter: a deck-invariant deck-free $4$-set $\{u,-u,w,-w\}$ admits a marks-preserving root
+$\iff$ $w=\pm iu$ $\iff$ marks $=$ one $\mu_4$ orbit $\Rightarrow$ cross-ratio class
+$\{2,\tfrac12,-1\}$, $j=1728$, $\tau=i$, free $4$-cycle, deck $=$ clock$^2$, only the scale free;
+group form: $|\mathrm{Stab}(\mu_4)|=8=2|\mu_4|$ with order profile $\{1{:}1,2{:}5,4{:}2\}=D_4$,
+center $=\{\mathrm{id},\text{deck}\}$, exactly $2$ order-$4$ elements $=$ the clocks --- ``deck
+central in the mark-$D_4$'' $\iff$ ``clock exists''; the counterexample $\{\pm1,\pm(3{+}2\sqrt2)\}$
+is deck-free AND harmonic ($j=1728$, cross-ratio $\tfrac12$) with full $D_4$, but the deck sits
+\emph{non}-centrally (the central involution crosses the $\pm$ pairs) $\Rightarrow$ $0$ roots; the
+RP filter passes BOTH roots (the $\operatorname{Aut}(\Z_4)$ ambiguity is irreducible, \texttt{v492}
+NC3). \emph{B3/B4 ($n$-arithmetic $+$ controls)}: free orbit $\Rightarrow n\mid4$; transitivity
+$\Rightarrow n=4$; faithfulness kills $n\ge5$ (kernel argument through $S_4$); $n=3$ fixes a mark;
+$n=6$ dies independently at the cusp degree $3$ (\texttt{v117}); the deck is modulus-blind
+(\texttt{v503} B5 exact); $n=8$ impossible on $4$ marks; hexagonal stabiliser $A_4$ ($0$ order-$4$
+elements, squares only orders $\{1,3\}$); generic stabiliser $V_4$ (exponent $2$); stabiliser
+trichotomy $V_4/D_4/A_4$ with order-$4$ counts $(0,2,0)$. \emph{Theorem B (Fock side, the core
+result)}: $S^2$ has $b_1=0$ $\Rightarrow$ unique spin structure $\Rightarrow$ NS/bounding on every
+circle (established P1 datum); one-particle: $D^2=-1$ (charpoly $(\lambda^2{+}1)^8$), quarter-shift
+$C^2=D$, $C^8=1$ (charpoly $(\lambda^4{+}1)^4$, $\zeta_8$ spectrum); Fock (exact
+$\mathrm{Cl}(16)$): $\tilde U=\prod_j(1-\gamma_j\gamma_{j+8})$ implements the deck on all $16$
+generators and $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}$ $\Rightarrow$ $U^2=(-1)^F$ EXACTLY;
+$(cU)^2=c^2(-1)^F$ is \emph{never} $1$ (center of $\mathrm{Cl}(16)$ $=$ scalars): the $\Z_4$ lift
+is FORCED, $1\to\Z_2^{(-1)^F}\to\Z_4\to\Z_2^{\mathrm{deck}}\to1$ nonsplit; the quarter-shift lift
+$V$ (unique even block implementer) has $V^2\propto\tilde U$, $V^4\propto(-1)^F$, projective order
+$8=2|\mu_4|$ --- the \texttt{v492} $\Z_8$ spin bridge realised on the $16$-Majorana Fock space;
+R control $U_R^2=+1$ (split --- the forcing rests on NS $=$ established geometry); $16$-fold way
+$\theta_v=1$ at $\nu=16$; robustness: the forcing already holds at $8$ sites ($16$ $=$ the carrier
+count $2^{\gcar-1}$, not a tuning). \emph{The one \mC\ rest (verbatim)}: ``the collar deck is the
+central involution of the mark-$D_4$'' ($\iff$ square-root existence on the mark data) --- ONE
+alignment bit; the fermionic $\Z_4$ forces the ORDER, not the spatial alignment. No overclaim.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{SEAM.CLOCK.RIGIDITY.01} (\mE\ both theorems $+$ \mC\ the alignment bit); TEXT precisions at
+\emph{unchanged} markers: \texttt{QGEO.REALIZE.01} (``the rest is now ONE bit: the central position
+of the deck in the mark-$D_4$; order/uniqueness/orbit/$\tau{=}i$ follow --- v506'', stays \mC/\mO),
+\texttt{P2.TYPING.01} (R1 mapped onto the same bit, fermionic halving), \texttt{QGEO.EMERGE.LIGHT.01}
+context sharpened. Papers: \texttt{tfpt\_3} celestial Step 1 (fermionic $U^2=(-1)^F$ sentence) $+$
+Step 2 (the one-bit reduction), contracts QGEO kill-test paragraph $+$ marks paragraph $+$ CELEST
+hypothesis note, \texttt{introduction}/\texttt{tfpt\_1}/\texttt{tfpt\_2}/\texttt{origin\_theory}
+one-sentence updates at the \texttt{v499}/\texttt{v503} citation sites. Wolfram: four mirrors (the
+complete square-root solve; $D_4$ center $+$ order-$4$ counts $+$ the silver counterexample; the
+$\mathrm{Cl}(16)$ identity $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}$ on explicit $256{\times}256$
+Jordan--Wigner matrices $+$ the split R control; the $n$-arithmetic $+$ generic kill) verified with
+the active engine the same day ($434\to438$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}); the
+$24$-triple stabiliser enumeration and the $A_4$ profile stay Python-side (flagged).
+\texttt{VerificationDag}: \texttt{v506} on the P2/carrier node; registry $+$ \texttt{run\_all}
+(500 modules, suite green). No gate closes, no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (XV) (\texttt{v505} --- WP5e-$\beta$ of \texttt{CELEST.SEAM.01} ``the equivariant anomaly ledger on twistor space'' promoted as \texttt{CELEST.WP5E.BETA.01}: the Atiyah--Bott/Lefschetz fixed-point skeleton of the one-loop twistor inflow is EXACT --- denominators $(2,4,2)$ with Dedekind sum $\tfrac54=(|\Z_4|^2{-}1)/12$, equivariant characters $(248,0,-8,0)$ by two routes, invariant Okubo $36\langle x,x\rangle^2$ with the twisted sectors NOT reducing and the AB sum leaving the RIGID residual $32\,T_3$, the index bridge $f(m)=\mathrm{ch}_2(T_m)$ exact with glue defect $-78$ both routes, the level dials $k=1$ geometric (current count $240/0/0/0$), and the honest E3 REFUTATION: $a_0$ fills the GRAVITON slot $O(2)$, NOT the axion slot $O(-2)$ --- the three sphere classes fill the three twisted axion slots instead; the preregistered kill (``inflow demands a level $\neq1$'') does NOT fire on the equivariant skeleton; WP5e: $\alpha$ (CFT side, \texttt{v502}) $+$ $\beta$ (equivariant twistor skeleton, \texttt{v505}) executed, the global BCOV quantisation stays \mO; Wolfram extension $429\to434$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, no marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v505\_celestial\_wp5e\_beta\_equivariant\_ledger.py} (\texttt{CELEST.WP5E.BETA.01},
+47 checks, $\sim$1.3 s; sympy/Fraction exact, no floats; deterministic).} The twistor side of WP5e
+pushed as far as exact arithmetic reaches: the Atiyah--Bott/Lefschetz skeleton of the one-loop box
+anomaly (Costello; Bittleston--Sharma--Skinner) on $\mathbb C^2/\Z_4$ with the $E_8$ $\mu_4$-glue
+monodromy. \emph{AB ledger}: $\det(1-g_j^{-1})=(2,4,2)$; $\sum_j1/\det_j=\tfrac54=(|\Z_4|^2{-}1)/12$;
+$\operatorname{tr}_{g_j}(\mathrm{Ad}\,E_8)=(248,0,-8,0)$ two routes; invariant average $60=$ carrier;
+Frobenius $61568$; $\operatorname{tr}_{g_2}=-8=120-128$. \emph{Okubo per sector (honest
+sharpening)}: the invariant sector is exactly Okubo-quadratic ($Q^{(0)}=36\langle x,x\rangle^2$,
+$36=\tilde\lambda^2_{e_8}$ --- \texttt{v495} re-derived through the glue grading); the twisted
+sectors do NOT reduce ($T_5$: $(-8,32,-8)$, $T_3$: $(48,-64,48)$); the AB sum cancels the $D_5$
+quartic exactly and leaves the rigid $32\,T_3$ (the only quartic-free weighting is the $\Z_4$
+projector; the graded GS exchange is rank-obstructed in sectors $1$--$3$); heterotic identities
+($\mathrm{Tr}_{120}$, $\mathrm{Tr}_{128}$, $\mathrm{Tr}_{E_8}=9(\mathrm{tr}^2)^2$) exact.
+\emph{Index bridge}: $f(m)=\tfrac14\sum_j(i^{jm}{-}1)/\det_j=(0,-\tfrac38,-\tfrac12,-\tfrac38)
+=\mathrm{ch}_2(T_m)=-(C^{-1})_{mm}/2$ EXACT (E1 $=$ E2 arithmetic); glue $\mathrm{ch}_2$ defect
+$-78$ both routes (classes $(-24,-30,-24)$); Killing sums $(320,320,240,320)$, total
+$1200=2h^\vee(h,h)$. \emph{$k=1$ geometric}: lattice current count $240$ at $k{=}1$, exactly $0$ at
+$k=2,3,4$; embedding residual $47k^2{+}219k{-}266=(0,360,814,1362)$; integrality alone fixes
+nothing (honest, as \texttt{v502}); one scale $\Rightarrow$ one level (\texttt{v493} periods).
+\emph{E3 refutation (prominent)}: $a_0\in O(8)$ fills the GRAVITON slot $O(2)$, NOT the BSS axion
+slot $O(-2)$ ($X=-2\neq+2=Y$; mismatch $4=|\mu_4|$ as a \mC\ coincidence) --- ``the theory brings
+its GS axion as $a_0$'' is REFUTED; instead the three $H^2(\mathrm{ALE})$ classes carry exactly the
+Coxeter eigencharacters $\{i,-1,-i\}$ $=$ the three twisted slots (bijection); slot count $1{+}3=4
+=|\mu_4|$ soft. \emph{Negative controls}: $\operatorname{diag}(i,i)$ breaks the ledger four ways
+($\sum1/\det=\tfrac14$, $\omega$-weight $-1$, $5$ generators); $SO(16)$ glue: characters
+$(120,0,+120,0)$, defect $-30\neq-78$, bulk Okubo fails (independent 4th Casimir); $k=2$: current
+count $0$, $c$-prefactor $-31/48\neq-\tfrac13$. \mC\ dictionaries ($\mathrm{CS}(\rho)\bmod1$ $=$
+discriminant weight; $32=(h,h){+}(h',h')$; $-30=-h^\vee$; $\Omega$-contraction). \mO\ the global
+BCOV/KS quantisation, non-fixed-point contributions, the $O(-2)$ bulk axion, CPS level-from-flux,
+the pairing $32\,T_3\leftrightarrow$ sphere axions. VERDICT B; the kill test does not fire on the
+equivariant skeleton.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{CELEST.WP5E.BETA.01}; \texttt{CELEST.SEAM.01} updated to ``WP5e: $\alpha$ (CFT side,
+\texttt{v502}) $+$ $\beta$ (equivariant twistor skeleton, \texttt{v505}) executed; the global BCOV
+quantisation stays \mO\ --- with the rigid $32\,T_3$ twisted residual and the sphere-axion pairing
+as the named remaining targets'' at \emph{unchanged} Open status. Papers: contracts WP5e bullet
+$\to$ ``$\alpha$ $+$ $\beta$ done'' with the $a_0$ refutation as an honest finding (kill-test and
+honest-success paragraphs consistent); \texttt{tfpt\_3} celestial section becomes the
+\emph{eleven}-step story (new Step 11 ``the equivariant anomaly ledger on twistor space'', ``what
+remains'' $=$ the global BCOV quantisation with named targets). Wolfram: five mirrors (AB
+denominators $+$ characters two routes; the index bridge $+$ $-78$ defect; the per-sector Okubo
+sums over the $240$ glue roots with the $32\,T_3$ residual; the lattice current counts $+$
+embedding residuals; the axion-slot weight arithmetic $+$ twisted-slot bijection) verified with
+the active engine the same day ($429\to434$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}).
+\texttt{VerificationDag} qft node gains \texttt{v505}; registry $+$ \texttt{run\_all} (499
+modules at this step; 500 with \texttt{v506}, suite green). No gate closes, no marker moves ---
+\texttt{SEAM.EQUIV.01} stays \mO.
+\end{itemize}
+
 \subsection*{2026-07-21 (XIV) (\texttt{v504} --- WP5d-$\beta$ of \texttt{CELEST.SEAM.01} ``split $+$ strong additivity from the lattice'' promoted as \texttt{CELEST.WP5DB.01}: the two remaining KLM legs of complete rationality witnessed for the orbifold prescription --- strong additivity ALGEBRAICALLY EXACT with the shared boundary Majorana ($\mathrm{Even}(A)\vee\mathrm{Even}(B)=\mathrm{Even}(A\cup B)$, GF2 spans full, rank $32/32$; disjoint exactly index $2$ $=$ the \texttt{v501} $\ln2$ bit), the entropic touching defect BOUNDED $<\ln2$ with the Ising $\tfrac14$-exponent approach ($p=0.2444$) while the preregistered $U(1)$/Dirac control DIVERGES (Klich--Levitov pinned, infinite index), the split property at the elliptic-nome rate $\pi K(1-x)/K(x)$ ($1.3$--$2.0\%$) with EXACT orbifold inheritance ($C\to-C$ $+$ the $\Lambda^2C$ compound --- Longo heredity), and Pimsner--Popa $E(a)-a/2=PaP/2$ identically ($\lambda=\tfrac12=1/[F{:}F_{\mathrm{even}}]$, $\lambda_{E_4}=\tfrac14=1/\mu$, $e^{\Delta_\infty}=2=1/\lambda_{\mathrm{PP}}$ --- two independent index routes); with \texttt{v501} ALL THREE KLM ingredients carry lattice witnesses; the continuum uplift stays \mO\ --- ``finite-group orbifolds of completely rational nets are completely rational'' is XU'S THEOREM, cited not claimed; Wolfram extension $424\to429$ (verified engine run); \texttt{SEAM.EQUIV.01} stays \mO, \texttt{CELEST.SEAM.01} stays Open, no marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v504\_celestial\_wp5d\_klm\_completeness.py} (\texttt{CELEST.WP5DB.01}, 37

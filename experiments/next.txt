@@ -1,3 +1,104 @@
+## 2026-07-21 (XVI) — v506 (SEAM.CLOCK.RIGIDITY.01): Uhr-Rigidität, Route B von v503 promoviert — zwei exakte Sätze reduzieren den Ordnung-4-Uhr-Input auf EIN Alignment-Bit; QGEO.REALIZE.01 bleibt [C]/[O] (nur Text-Präzisierung), P2-R1 auf dasselbe Bit kartiert
+
+Die beiden Proben seam_clock_rigidity_moebius_probe.py (19/19) und
+seam_clock_rigidity_fock_probe.py (15/15) aus experiments/tfpt-discovery/ sind
+als EIN Modul **v506_seam_clock_rigidity.py (SEAM.CLOCK.RIGIDITY.01)**
+promoviert (34 Checks, ~3.5 s; Part A sympy-exakt, Part B exakte
+Cl(16)-Fractions; Suite gruen, jetzt 500 Skripte).
+
+- **SATZ A (Möbius) [E]:** das Deck z↦−z hat in PGL₂(ℂ) GENAU ZWEI
+  Quadratwurzeln (z↦±iz), beide automatisch Ordnung 4 (vollständige
+  Fallanalyse: tr ≠ 0 ⇒ diagonal ⇒ a/d = ±i; tr = 0 unmöglich) — „Ordnung 4"
+  ist KEIN Input mehr; markenerhaltende Wurzel existiert ⟺ Deck = zentrale
+  Involution des Marken-D₄ (Zentrum = {id, Deck}, genau 2 Order-4-Elemente =
+  die Uhren) ⇒ dann Marken = μ₄-Orbit, Cross-Ratio-Klasse {2, 1/2, −1},
+  j = 1728, τ = i, freier 4-Zykel, nur Skala frei. GEGENBEISPIEL:
+  {±1, ±(3+2√2)} ist deck-frei UND harmonisch (j = 1728) mit vollem D₄, aber
+  Deck nicht-zentral (Kanten-Involution) ⇒ 0 Wurzeln — Harmonizität allein
+  reicht NICHT; RP-Filter selektiert nichts (Aut(ℤ₄)-Ambiguität irreduzibel,
+  konsistent v492).
+- **SATZ B (Fock, Kernresultat) [E]:** eindeutige S²-Spinstruktur ⇒ NS auf
+  jedem Kreis (etabliertes P1-Datum); Ein-Teilchen D² = −1 ((λ²+1)⁸),
+  Viertelshift C² = D, C⁸ = 1 ((λ⁴+1)⁴); Fock: Ũ = ∏(1 − γⱼγⱼ₊₈),
+  Ũ² = 256·γ₁⋯γ₁₆ ⇒ U² = (−1)^F EXAKT, (cU)² = c²(−1)^F ist NIE 1 (Zentrum
+  von Cl(16) = Skalare) — der ℤ₄-Lift ist ERZWUNGEN (nichtsplittende
+  Erweiterung); ℤ₈-Turm V² ∝ Ũ, V⁴ ∝ (−1)^F, projektive Ordnung 8 = 2|μ₄| —
+  fermionisch erklärt; R-Kontrolle U_R² = +1 (split); θ_v = 1 bei ν = 16;
+  Forcierung robust schon bei 8 Plätzen.
+- **B3/B4 [E]:** freier Orbit ⇒ n | 4; Marken-Transitivität ⇒ n = 4; Treue
+  tötet n ≥ 5; n = 3 fixiert eine Marke; n = 6 stirbt an Cusp-Grad 3; Deck
+  modulus-blind (v503-B5 exakt); Kontrollen: n = 8 unmöglich, hexagonal A₄
+  (0 Order-4), generisch V₄ (Exponent 2); Trichotomie V₄/D₄/A₄ mit
+  Order-4-Zählung (0, 2, 0).
+- **DER EINE [C]-REST (wörtlich):** „das Kragen-Deck ist die zentrale
+  Involution des Marken-D₄" (⟺ Quadratwurzel-Existenz auf den Markendaten) —
+  EIN Alignment-Bit; die fermionische ℤ₄ erzwingt die ORDNUNG, nicht das
+  räumliche Alignment. KEIN Overclaim.
+
+Integration: Ledger neue Zeile SEAM.CLOCK.RIGIDITY.01; TEXT-Präzisierungen bei
+UNVERÄNDERTEN Markern: QGEO.REALIZE.01 („der Rest ist jetzt EIN Bit: zentrale
+Lage des Decks im Marken-D₄; Ordnung/Eindeutigkeit/Orbit/τ = i folgen —
+v506"), P2.TYPING.01 (R1 auf dasselbe Bit kartiert, fermionische Halbierung);
+\veri{v506} in tfpt_3 (Schritt 1 + Schritt 2/QGEO-Umfeld), contracts
+(Kill-Test- + Marken-Absatz + CELEST-Hypothese), introduction/tfpt_1/tfpt_2/
+origin_theory je ein Satz. Wolfram 434→438 (vier Spiegel: Wurzel-
+Klassifikation, D₄-Zentrum + Silber-Gegenbeispiel, Cl(16)-Identität auf
+expliziten 256×256-Jordan-Wigner-Matrizen, n-Arithmetik; 24-Tripel-
+Enumeration + A₄-Profil Python-only, geflaggt). DAG: v506 am P2-Knoten.
+Nächster Hebel: das Alignment-Bit selbst — gibt es ein P1-seitiges Prinzip,
+das den Viertelshift an die MARKIERTE Dynamik (DtN/Marken) koppelt? (Die
+fermionische Ordnung ist erledigt; offen ist nur noch die räumliche Lage.)
+
+## 2026-07-21 (XV) — v505 (CELEST.WP5E.BETA.01): WP5e-beta „äquivarianter Anomalie-Ledger auf dem Twistorraum" promoviert — beide Gesichter des Inflows verankert, die globale BCOV-Quantisierung der einzige offene WP5e-Rest
+
+Die celestial_seam_wp5e_beta_equivariant_inflow_probe.py aus
+experiments/tfpt-discovery/ ist als **v505_celestial_wp5e_beta_equivariant_
+ledger.py (CELEST.WP5E.BETA.01)** promoviert (47 Checks, ~1.3 s, sympy-exakt;
+Suite gruen). Kernpunkte:
+
+- **AB-Ledger [E]:** Nenner det(1−g_j⁻¹) = (2,4,2); Σ 1/det = 5/4 =
+  (|ℤ₄|²−1)/12; Charaktere tr_{g_j}(Ad E8) = (248, 0, −8, 0) (zwei Routen);
+  invariantes Mittel 60 = Carrier; Frobenius 61568.
+- **Okubo pro Sektor (ehrliche Verschärfung) [E]:** invarianter Sektor exakt
+  Okubo-quadratisch (Q⁽⁰⁾ = 36⟨x,x⟩², 36 = λ̃²_e8 — v495 re-deriviert);
+  getwistete Sektoren reduzieren NICHT ((T5,T3)-Reste); AB-Summe löscht die
+  D5-Quartik exakt, lässt rigide 32·T3 übrig; einzige quartikfreie Gewichtung
+  = ℤ₄-Projektor; GS-Austausch in Sektoren 1–3 rangobstruiert; heterotische
+  Identitäten exakt.
+- **Index-Brücke [E]:** f(m) = (0, −3/8, −1/2, −3/8) = ch₂(T_m) =
+  −(C⁻¹)_mm/2 EXAKT (E1 = E2-Arithmetik); Glue-ch₂-Defekt −78 über beide
+  Routen (Klassen −24, −30, −24); Killing-Summen (320,320,240,320), total
+  1200 = 2h∨(h,h).
+- **k = 1 geometrisch [E]:** Gitter-Strom-Zähler 240 bei k = 1, exakt 0 bei
+  k = 2,3,4; Residuum 47k²+219k−266 = (0,360,814,1362); Integralität allein
+  fixiert nichts (ehrlich, wie v502); ein Maßstab ⇒ ein Level (v493-Perioden).
+- **E3-WIDERLEGUNG (prominent) [E]:** a₀ ∈ O(8) füllt den GRAVITON-Slot O(2),
+  NICHT den BSS-Axion-Slot O(−2) (X = −2 ≠ +2 = Y; Mismatch 4 = |μ₄| als
+  [C]-Koinzidenz) — „die Theorie bringt ihr GS-Axion als a₀ mit" ist
+  WIDERLEGT; stattdessen tragen die drei H²(ALE)-Klassen exakt die
+  Coxeter-Eigencharaktere {i, −1, −i} = die drei getwisteten Slots
+  (Bijektion); Slot-Zähler 1+3 = 4 = |μ₄| weich.
+- **Negativkontrollen [E]:** diag(i,i) vierfach gebrochen (Σ 1/det = 1/4,
+  ω-Gewicht −1, 5 Erzeuger); SO(16)-Glue: Charaktere (120,0,+120,0), Defekt
+  −30 ≠ −78, Bulk-Okubo scheitert (unabhängiger 4. Casimir); k = 2:
+  Strom-Zähler 0, c-Präfaktor −31/48 ≠ −1/3.
+- **[C]/[O]:** Wörterbücher (CS(ρ) mod 1 = Diskriminanten-Gewicht; 32 =
+  (h,h)+(h′,h′); −30 = −h∨; Ω-Kontraktion); offen bleiben globale
+  BCOV/KS-Quantisierung, Nicht-Fixpunkt-Beiträge, O(−2)-Bulk-Axion,
+  CPS-Level-from-Flux, Paarung 32·T3 ↔ Sphären-Axionen. VERDIKT B; Kill-Test
+  („Inflow verlangt Level ≠ 1") feuert auf dem äquivarianten Skelett NICHT.
+
+Integration: Ledger neue Zeile CELEST.WP5E.BETA.01; CELEST.SEAM.01 auf „WP5e:
+alpha (CFT side, v502) + beta (equivariant twistor skeleton, v505) executed;
+the global BCOV quantisation stays [O] — with the rigid 32·T3 twisted residual
+and the sphere-axion pairing as the named remaining targets" bei
+unverändertem Open-Status; Contract-WP5e-Bullet „alpha + beta done" inkl. der
+a₀-Widerlegung als ehrlichem Befund; tfpt_3-Celestial-Section jetzt die
+ELF-Schritt-Story (neuer Schritt 11). Wolfram 429→434 (fünf Spiegel).
+DAG: v505 am qft-Knoten. Nächster Hebel: die Paarung des rigiden
+32·T3-Rests mit den drei Sphären-Axionen (der benannte [O]-Rest) und der
+O(−2)-Bulk-Axion-Bau.
+
 ## 2026-07-21 (XIV) — v504 (CELEST.WP5DB.01): WP5d-beta „Split + Strong Additivity vom Gitter" promoviert — alle DREI KLM-Zutaten der vollständigen Rationalität mit Gitter-Zeugen; Contract-WP5d „both stages done", WP5e-Twistor-Inflow der einzige offene Meilenstein
 
 Die celestial_seam_wp5dbeta_klm_split_strong_additivity_probe.py aus

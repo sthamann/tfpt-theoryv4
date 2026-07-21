@@ -4242,6 +4242,307 @@ Module[{lamU, results},
     And @@ Flatten[results]];
 ];
 
+(* ==== v505 round: CELEST.WP5E.BETA.01 -- WP5e-beta "the equivariant anomaly
+   ledger on twistor space" (the Atiyah-Bott/Lefschetz skeleton of the
+   one-loop inflow on C^2/Z4 with the E8 mu4-glue monodromy; the CFT side is
+   v502).  Exact content mirrored: (i) the AB DENOMINATORS + CHARACTERS --
+   det(1 - g_j^{-1}) = (2,4,2), Dedekind sum 5/4 = (|Z4|^2-1)/12, equivariant
+   characters (248,0,-8,0) by TWO routes (graded dims / explicit root sum),
+   invariant average 60 = carrier, Frobenius 61568; (ii) the INDEX BRIDGE --
+   f(m) = (1/4) sum_j (i^{jm}-1)/det_j = ch2(T_m) = -(C^{-1})_mm/2 exactly,
+   glue defect -78 by both routes with classes (-24,-30,-24), bridge identity
+   sum_m h_A3(m) = 5/4; (iii) OKUBO PER SECTOR -- the invariant quartic sum
+   over the 240 glue roots is EXACTLY 36 <x,x>^2 (36 = lambda~^2_e8), the
+   twisted quartics are NOT proportional to squares (T5/T3 content), and the
+   AB-weighted sum leaves the rigid residual 32 T3; (iv) the LEVEL DIALS --
+   lattice current count 240/0/0/0 for k = 1..4, embedding residual
+   47k^2+219k-266 = (0,360,814,1362), det(A-1) = -4 (one scale => one
+   level); (v) the AXION-SLOT WEIGHTS -- a0 fills the graviton slot O(2)
+   (Hamiltonian weight arithmetic X = -2 != +2 = Y, mismatch 4 = |mu4|), the
+   clock weights on (a3,a2,a1,a0) are the regular mu4 representation, and
+   the Coxeter eigencharacters {i,-1,-i} = the three twisted sector
+   characters.  Mirrors v505. ==== *)
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, cls, dims, dens, recip,
+        chiD, chiR, inv, frob},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  cls = Table[Count[glue, {_, j}], {j, 0, 3}];
+  dims = {First[cls] + 8, cls[[2]], cls[[3]], cls[[4]]};
+  dens = Table[Simplify[(1 - I^(-j)) (1 - I^j)], {j, 1, 3}];
+  recip = Total[1/dens];
+  chiD = Table[Simplify[Sum[I^(j m) dims[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  chiR = Table[Simplify[8 + Total[I^(j #[[2]]) & /@ glue]], {j, 0, 3}];
+  inv = Total[chiD]/4;
+  frob = Simplify[Total[# Conjugate[#] & /@ chiD]];
+  checkExact["v505 CELEST.WP5E.BETA.01 (i): AB DENOMINATORS + EQUIVARIANT CHARACTERS -- det(1 - g_j^{-1}|_{T0}) = (1-i^{-j})(1-i^j) = (2,4,2) for j = 1,2,3 (real, positive: the deck diag(i,i^{-1}) is in SU(2)); Dedekind sum 1/2+1/4+1/2 = 5/4 = (|Z4|^2-1)/12 exactly; the 240 glue-frame roots split (52,64,60,64), graded dims (60,64,60,64), and the equivariant characters tr_{g_j}(Ad E8) = (248,0,-8,0) by TWO routes (graded dims and the explicit root sum 8 + sum_alpha i^{j class}); invariant average 60 = the D5+A3 carrier; Frobenius sum 61568 = 4(60^2+64^2+60^2+64^2); tr_{g_2} = -8 = 120 - 128 (so16 adjoint-minus-spinor)",
+    Length[glue] === 240 && cls === {52, 64, 60, 64} &&
+    dims === {60, 64, 60, 64} && dens === {2, 4, 2} &&
+    recip === 5/4 && (mu4^2 - 1)/12 === 5/4 &&
+    chiD === {248, 0, -8, 0} && chiR === chiD &&
+    inv === 60 && frob === 61568 && 120 - 128 === -8];
+];
+Module[{cartanA3, cinv, ch2T, hA3, dens, fvals, chi, defectAB, defectGeo,
+        contrib, bridge},
+  cartanA3 = {{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}};
+  cinv = Inverse[cartanA3];
+  ch2T = Table[-cinv[[m, m]]/2, {m, 1, 3}];
+  hA3 = Table[j (4 - j)/8, {j, 1, 3}];
+  dens = {2, 4, 2};
+  fvals = Table[Simplify[(1/4) Sum[(I^(j m) - 1)/dens[[j]], {j, 1, 3}]],
+    {m, 0, 3}];
+  chi = {248, 0, -8, 0};
+  defectAB = Simplify[(1/4) Sum[(chi[[j + 1]] - 248)/dens[[j]], {j, 1, 3}]];
+  contrib = {64, 60, 64} ch2T;
+  defectGeo = Total[contrib];
+  bridge = Total[hA3];
+  checkExact["v505 CELEST.WP5E.BETA.01 (ii): THE INDEX BRIDGE -- intersection form = -Cartan(A3) with det 4 = |Z4|; ch2(T_m) = -(C^{-1})_mm/2 = (-3/8, -1/2, -3/8) = MINUS the A3 discriminant weights j(4-j)/8 (the v502 sector Casimir energies); the per-character Atiyah-Bott sum f(m) = (1/4) sum_j (i^{jm}-1)/det_j = (0, -3/8, -1/2, -3/8) = ch2(T_m) EXACTLY (fixed-point ledger = McKay/Kronheimer intersection ledger); the glue-bundle ch2 defect is -78 by BOTH routes (AB route (1/4) sum_j (chi_j - 248)/det_j and intersection route 64(-3/8)+60(-1/2)+64(-3/8), per class (-24,-30,-24), the middle -30 = -h_vee); bridge identity sum_m h_A3(m) = 5/4 = sum_j 1/det_j",
+    Det[cartanA3] === 4 && ch2T === {-3/8, -1/2, -3/8} &&
+    (-ch2T) === hA3 && fvals === Join[{0}, ch2T] &&
+    defectAB === -78 && defectGeo === -78 &&
+    contrib === {-24, -30, -24} && bridge === 5/4 &&
+    bridge === Total[1/{2, 4, 2}]];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin, S5v,
+        S3v, P1v, P2v, P3v, T5v, T3v, Q, Qtw, afix},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  P1v = Expand[S5v^2]; P2v = Expand[S5v S3v]; P3v = Expand[S3v^2];
+  T5v = Total[xs^4]; T3v = Expand[Total[y4^4]];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qtw = Table[Expand[Sum[I^(j m) Q[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  afix = Expand[Qtw[[2]]/2 + Qtw[[3]]/4 + Qtw[[4]]/2];
+  checkExact["v505 CELEST.WP5E.BETA.01 (iii): OKUBO PER SECTOR + THE RIGID 32 T3 RESIDUAL -- the invariant quartic sum over the 240 glue roots is EXACTLY Q^{(0)} = 36 <x,x>^2 (36 = lambda~^2_e8: the v495 Okubo identity re-derived through the mu4-glue grading); the twisted quartics are NOT squares: Q^{(1)} = Q^{(3)} = 12P1 - 24P2 - 24P3 - 8T5 + 48T3 and Q^{(2)} = -12P1 - 24P2 + 36P3 + 32T5 - 64T3 exactly (irreducible T5/T3 content); the Atiyah-Bott-weighted sum Q^{(1)}/2 + Q^{(2)}/4 + Q^{(3)}/2 = 9P1 - 30P2 - 15P3 + 32T3 EXACTLY: the D5 quartic cancels, the rigid residual 32 T3 remains -- the fixed-point ledger is not a perfect square",
+    Expand[Qtw[[1]] - 36 (S5v + S3v)^2] === 0 &&
+    Expand[Qtw[[2]] - (12 P1v - 24 P2v - 24 P3v - 8 T5v + 48 T3v)] === 0 &&
+    Expand[Qtw[[4]] - Qtw[[2]]] === 0 &&
+    Expand[Qtw[[3]] - (-12 P1v - 24 P2v + 36 P3v + 32 T5v - 64 T3v)] === 0 &&
+    Expand[afix - (9 P1v - 30 P2v - 15 P3v + 32 T3v)] === 0];
+];
+Module[{d5norms, a3norms, pairing, counts, resid, Amat},
+  d5norms[key_] := Module[{vs},
+    vs = Which[
+      key === "0", Select[Tuples[Range[-2, 2], 5], EvenQ[Total[#]] &],
+      key === "v", Select[Tuples[Range[-2, 2], 5], OddQ[Total[#]] &],
+      key === "s", Select[Tuples[{-3/2, -1/2, 1/2, 3/2}, 5],
+        EvenQ[Total[#] - 5/2] &],
+      key === "c", Select[Tuples[{-3/2, -1/2, 1/2, 3/2}, 5],
+        OddQ[Total[#] - 5/2] &]];
+    Tally[# . # & /@ Select[vs, # . # <= 4 &]]];
+  a3norms[k_] := Module[{rng, vs},
+    rng = Range[-3, 3] - k/4;
+    vs = Select[Tuples[rng, 4], Total[#] == 0 && # . # <= 4 &];
+    Tally[# . # & /@ vs]];
+  pairing = {{"0", 0}, {"s", 1}, {"v", 2}, {"c", 3}};
+  counts = Table[Module[{tot = 0},
+    Do[Module[{t5 = d5norms[p[[1]]], t3 = a3norms[p[[2]]]},
+      Do[If[n5[[1]] + n3[[1]] == 2/k, tot += n5[[2]] n3[[2]]],
+        {n5, t5}, {n3, t3}]], {p, pairing}];
+    tot], {k, 1, 4}];
+  resid = Table[47 k^2 + 219 k - 266, {k, 1, 4}];
+  Amat = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+  checkExact["v505 CELEST.WP5E.BETA.01 (iv): LEVEL DIALS, k = 1 GEOMETRIC -- the lattice current count (norm-2/k vectors in the glue cosets under the pairing (0,s,v,c) <-> classes (0,1,2,3)) is 240 at k = 1 and EXACTLY 0 at k = 2, 3, 4 (the seam lattice realises the (E8)_1 adjoint closure at k = 1 only); the conformal-embedding residual 47k^2 + 219k - 266 = (0, 360, 814, 1362) for k = 1..4; det(Coxeter - 1) = -4 != 0: no invariant flux vector on H2 -- one scale => one level (v493 lockstep periods)",
+    counts === {240, 0, 0, 0} && resid === {0, 360, 814, 1362} &&
+    Det[Amat - IdentityMatrix[3]] === -4];
+];
+Module[{Zs, a0s, a1s, a2s, a3s, P, Pn, wts, Amat, eigs, XX, YY},
+  P = Zs^4 + a3s Zs^3 + a2s Zs^2 + a1s Zs + a0s;
+  Pn = Expand[P /. Zs -> Zs/I];
+  wts = {Simplify[Coefficient[Pn, Zs, 3]/a3s],
+    Simplify[Coefficient[Pn, Zs, 2]/a2s],
+    Simplify[Coefficient[Pn, Zs, 1]/a1s],
+    Simplify[Coefficient[Pn, Zs, 0]/a0s]};
+  Amat = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+  eigs = Sort[Eigenvalues[Amat], LessEqual[Arg[#1], Arg[#2]] &];
+  XX = (0 - 4) + 2;   (* axion: Omega-contraction V in T(x)O(-4), bracket -2 *)
+  YY = (2 + 8 - 2) - 8 + 2;   (* a0 Hamiltonian: h in O(2) *)
+  checkExact["v505 CELEST.WP5E.BETA.01 (v): AXION-SLOT WEIGHT ARITHMETIC + TWISTED SLOTS -- the mu4 clock acts on the versal moduli (a3,a2,a1,a0) with weights (i,-1,-i,1) = the regular representation (a0 the unique invariant); the volume form has weight 2+1+1 = 4 = -deg K_PT and the moduli weights are a_m in O(8-2m) (a0 in O(8) = O(2|Z4|)); the Poisson bracket O(a) x O(b) -> O(a+b-2) puts the a0 Hamiltonian in O(2) (the s = 2 GRAVITON slot: Y = +2) while the untwisted axion is iota_V Omega with V in T(x)O(-4), Hamiltonian weight X = -4+2 = -2 (the s = 0 slot O(-2)): X != Y with mismatch Y - X = 4 = |mu4| -- a0 is NOT the GS axion; the Coxeter eigenvalues on H2(ALE) are {i,-1,-i} = exactly the three twisted sector characters (bijection; det(A-1) = -4: no invariant class); slot count 1 + 3 = 4 = |mu4|",
+    wts === {I, -1, -I, 1} && 2 + 1 + 1 === 4 &&
+    Table[8 - 2 m, {m, 0, 2}] === {8, 6, 4} &&
+    YY === 2 && XX === -2 && (YY - XX) === 4 === mu4 &&
+    Sort[eigs, LessEqual[N[Arg[#1]], N[Arg[#2]]] &] ===
+      Sort[{I, -1, -I}, LessEqual[N[Arg[#1]], N[Arg[#2]]] &] &&
+    Det[Amat - IdentityMatrix[3]] === -4 && 1 + 3 === mu4];
+];
+
+(* ==== v506 round: SEAM.CLOCK.RIGIDITY.01 -- clock rigidity, Route B of the
+   v503 classification (Part A Moebius + Part B Fock).  Exact content
+   mirrored: (i) the COMPLETE SQUARE-ROOT SOLVE -- g^2 = deck in PGL2(C) has
+   exactly two solutions z -> +-iz (tr != 0 forces diagonal with (a/d)^2 =
+   -1; tr = 0 forces det = 0), both automatically of projective order 4;
+   (ii) the D4 CENTER + ORDER-4 COUNT + the COUNTEREXAMPLE -- the mu4
+   stabiliser D4 = {i^k z, i^k/z} has exactly 2 order-4 elements (the
+   clocks), both squaring to the deck, center = {id, deck}; the silver
+   harmonic set {+-1, +-(3+2 sqrt 2)} has j = 1728 and full D4 but its
+   4-cycle squares to the CROSSING involution v/z, not the deck (deck
+   non-central: 0 roots -- harmonicity alone insufficient); (iii) the
+   Cl(16) IDENTITY -- on explicit 256x256 Jordan-Wigner gamma matrices,
+   Utilde = prod_j (1 - g_j g_{j+8}) satisfies Utilde^2 = 256 g_1...g_16
+   EXACTLY (U^2 = (-1)^F, the forced nonsplit Z4), the R implementer
+   squares to +256 (split control), and the volume element anticommutes
+   with every gamma; (iv) the N-ARITHMETIC -- S4 element orders {1,2,3,4}
+   (faithfulness kills n >= 5: max cyclic image order < n for n = 5..8),
+   free orbits force n | 4, the cusp side kills n = 6 (deg(lam^5-1) = 5 !=
+   3 = deg(lam^3-1)), transfer spectrum {1, 64/729, 1/729} with gap
+   (2/3)^6, and the generic 4-set stabiliser V4 = {+-z, +-2/z} has
+   exponent 2 (not even the deck has a root).  The full 24-triple
+   stabiliser enumeration and the A4/hexagonal profile stay Python-side
+   (v506 Part A).  Mirrors v506. ==== *)
+Module[{a, b, c, d, r, offb, offc, rsol, Mt, m2, tracelessDet,
+        clock, clockinv, propQ, ord},
+  propQ[A_, B_] := Simplify[A[[1, 1]] B[[2, 2]] - A[[2, 2]] B[[1, 1]]] === 0 &&
+    Simplify[A[[1, 2]] B[[2, 1]] - A[[2, 1]] B[[1, 2]]] === 0 &&
+    Simplify[A[[1, 1]] B[[1, 2]] - A[[1, 2]] B[[1, 1]]] === 0 &&
+    Simplify[A[[1, 1]] B[[2, 1]] - A[[2, 1]] B[[1, 1]]] === 0;
+  ord[M_] := Module[{P = IdentityMatrix[2]},
+    Catch[Do[P = Simplify[P . M];
+      If[Simplify[P[[1, 2]]] === 0 && Simplify[P[[2, 1]]] === 0 &&
+        Simplify[P[[1, 1]] - P[[2, 2]]] === 0, Throw[k]], {k, 1, 9}]; 0]];
+  offb = Solve[b (a + d) == 0 && a + d != 0, b];
+  offc = Solve[c (a + d) == 0 && a + d != 0, c];
+  rsol = Solve[r^2 + 1 == 0, r];
+  Mt = {{a, b}, {c, -a}};                       (* the trace = 0 branch *)
+  m2 = Simplify[Mt . Mt];
+  tracelessDet = Simplify[Det[Mt] /. b c -> -a^2];
+  clock = DiagonalMatrix[{I, 1}]; clockinv = DiagonalMatrix[{-I, 1}];
+  checkExact["v506 SEAM.CLOCK.RIGIDITY.01 (i): COMPLETE SQUARE-ROOT SOLVE -- g^2 = deck (z -> -z) in PGL2(C): the trace != 0 branch forces b = 0 and c = 0 (diagonal) with (a/d)^2 = -1, i.e. a/d = +-i (g = z -> +iz or z -> -iz, EXACTLY TWO solutions); the trace = 0 branch is impossible: a traceless M has M^2 = (a^2 + bc) x IDENTITY (a scalar matrix, never proportional to diag(1,-1) except with factor 0), and the factor-0 case a^2 + bc = 0 forces det M = 0; both roots have projective ORDER 4 automatically, are mutually inverse (the Aut(Z4) pair), and square to the deck -- 'order 4' is NOT an input once 'square root of the deck' is given",
+    (b /. offb[[1]]) === 0 && (c /. offc[[1]]) === 0 &&
+    Sort[r /. rsol, LessEqual[N[Im[#1]], N[Im[#2]]] &] === {-I, I} &&
+    m2 === (a^2 + b c) IdentityMatrix[2] && tracelessDet === 0 &&
+    ord[clock] === 4 && ord[clockinv] === 4 &&
+    propQ[clock . clockinv, IdentityMatrix[2]] &&
+    propQ[clock . clock, DiagonalMatrix[{1, -1}]] &&
+    propQ[clockinv . clockinv, DiagonalMatrix[{1, -1}]]];
+];
+Module[{mu4set, deck, elems, presQ, ords, o4, o4sq, center, vS, silver,
+        crossr, jlam, jsilver, rmat, r2, K1, K2, silver8, presS, sqDeck,
+        o4S, o4Ssq, propQ, ord, apply, inSetQ},
+  propQ[A_, B_] := Simplify[A[[1, 1]] B[[2, 2]] - A[[2, 2]] B[[1, 1]]] === 0 &&
+    Simplify[A[[1, 2]] B[[2, 1]] - A[[2, 1]] B[[1, 2]]] === 0 &&
+    Simplify[A[[1, 1]] B[[1, 2]] - A[[1, 2]] B[[1, 1]]] === 0 &&
+    Simplify[A[[1, 1]] B[[2, 1]] - A[[2, 1]] B[[1, 1]]] === 0;
+  ord[M_] := Module[{P = IdentityMatrix[2]},
+    Catch[Do[P = Simplify[P . M];
+      If[Simplify[P[[1, 2]]] === 0 && Simplify[P[[2, 1]]] === 0 &&
+        Simplify[P[[1, 1]] - P[[2, 2]]] === 0, Throw[k]], {k, 1, 9}]; 0]];
+  apply[M_, z_] := Simplify[(M[[1, 1]] z + M[[1, 2]])/(M[[2, 1]] z +
+    M[[2, 2]])];
+  inSetQ[val_, set_] := Or @@ (Simplify[val - #] === 0 & /@ set);
+  mu4set = {1, I, -1, -I};
+  deck = DiagonalMatrix[{1, -1}];
+  elems = Join[Table[DiagonalMatrix[{I^k, 1}], {k, 0, 3}],
+    Table[{{0, I^k}, {1, 0}}, {k, 0, 3}]];
+  presQ = And @@ Table[And @@ (inSetQ[apply[g, #], mu4set] & /@ mu4set),
+    {g, elems}];
+  ords = Sort[ord /@ elems];
+  o4 = Select[elems, ord[#] === 4 &];
+  o4sq = And @@ (propQ[Simplify[# . #], deck] & /@ o4);
+  center = Select[elems, Function[g, And @@ (propQ[Simplify[g . #],
+    Simplify[# . g]] & /@ elems)]];
+  jlam[x_] := Simplify[256 (x^2 - x + 1)^3/(x^2 (x - 1)^2)];
+  vS = 3 + 2 Sqrt[2];
+  silver = {1, -1, vS, -vS};
+  crossr = Simplify[((1 - (-1)) (vS - (-vS)))/((1 - (-vS)) (vS - (-1)))];
+  jsilver = jlam[crossr];
+  (* the silver D4 four-cycle 1 -> v -> -v -> -1 (its square must be the
+     CENTRAL crossing involution z -> -v/z, not the deck) *)
+  rmat = Module[{m11, m12, m21, m22, sol},
+    sol = Solve[{m11 1 + m12 == vS (m21 1 + m22),
+      m11 vS + m12 == -vS (m21 vS + m22),
+      m11 (-vS) + m12 == -1 (m21 (-vS) + m22), m22 == 1},
+      {m11, m12, m21, m22}];
+    Simplify[{{m11, m12}, {m21, m22}} /. sol[[1]]]];
+  r2 = Simplify[rmat . rmat];
+  K1 = {{0, vS}, {1, 0}};    (* z -> v/z: edge-type, like the deck *)
+  K2 = {{0, -vS}, {1, 0}};   (* z -> -v/z: the CENTRAL crossing involution *)
+  silver8 = Join[{IdentityMatrix[2], deck, K1, K2},
+    {rmat, Simplify[rmat . rmat . rmat], Simplify[rmat . deck],
+     Simplify[deck . rmat]}];
+  presS = And @@ Table[And @@ (inSetQ[apply[g, #], silver] & /@ silver),
+    {g, silver8}];
+  sqDeck = Count[silver8, g_ /; propQ[Simplify[g . g], deck]];
+  o4S = Select[silver8, ord[#] === 4 &];
+  o4Ssq = And @@ (propQ[Simplify[# . #], K2] & /@ o4S);
+  checkExact["v506 SEAM.CLOCK.RIGIDITY.01 (ii): D4 CENTER + ORDER-4 COUNT + COUNTEREXAMPLE -- the mu4 stabiliser {i^k z, i^k/z} (8 elements, all preserving {1,i,-1,-i}) has order profile {1,2,2,2,2,2,4,4}: EXACTLY 2 order-4 elements, both squaring to the deck (the clock pair), and center = {id, deck} (deck CENTRAL <=> clock exists); the silver counterexample {+-1, +-(3+2 sqrt 2)} is harmonic (cross-ratio 1/2, j = 1728) with a full D4 of 8 exact elements preserving it, BUT its two order-4 elements square to the CENTRAL crossing involution z -> -v/z, NOT the deck (which sits edge-type/non-centrally): the number of marks-preserving square roots of the deck is EXACTLY ZERO -- harmonicity alone is insufficient, the residual datum is deck-centrality (one bit)",
+    presQ && ords === {1, 2, 2, 2, 2, 2, 4, 4} && Length[o4] === 2 && o4sq &&
+    Length[center] === 2 &&
+    (And @@ (propQ[#, deck] || propQ[#, IdentityMatrix[2]] & /@ center)) &&
+    crossr === 1/2 && jsilver === 1728 &&
+    Simplify[apply[rmat, -1] - 1] === 0 && ord[rmat] === 4 &&
+    presS && sqDeck === 0 && Length[o4S] === 2 && o4Ssq &&
+    ! propQ[K2, deck]];
+];
+Module[{gam, id, zero, Ut, Ur, GAMMA, Ut2, Ur2, anti, sqok},
+  gam = Table[Module[{kk = Quotient[j + 1, 2], op},
+    op = If[OddQ[j], PauliMatrix[1], PauliMatrix[2]];
+    SparseArray[KroneckerProduct @@ Join[
+      ConstantArray[PauliMatrix[3], kk - 1], {op},
+      ConstantArray[IdentityMatrix[2], 8 - kk]]]], {j, 1, 16}];
+  id = IdentityMatrix[256, SparseArray];
+  zero = ConstantArray[0, {256, 256}];
+  Ut = Fold[#1 . (id - gam[[#2]] . gam[[#2 + 8]]) &, id, Range[8]];
+  Ur = Fold[#1 . (gam[[#2]] - gam[[#2 + 8]]) &, id, Range[8]];
+  GAMMA = Fold[#1 . gam[[#2]] &, id, Range[16]];
+  Ut2 = Ut . Ut;
+  Ur2 = Ur . Ur;
+  sqok = And @@ Table[Normal[gam[[a]] . gam[[a]]] === Normal[id],
+    {a, 1, 16}];
+  anti = And @@ Table[Normal[gam[[a]] . GAMMA + GAMMA . gam[[a]]] === zero,
+    {a, 1, 16}];
+  checkExact["v506 SEAM.CLOCK.RIGIDITY.01 (iii): THE Cl(16) IDENTITY U^2 = (-1)^F -- on explicit 256x256 Jordan-Wigner gamma matrices (gamma_a^2 = 1, all anticommuting), the NS deck implementer Utilde = prod_j (1 - gamma_j gamma_{j+8}) satisfies Utilde^2 = 256 gamma_1...gamma_16 EXACTLY, i.e. U^2 = (-1)^F with (-1)^F = the volume element (squares to 1, NOT a scalar, anticommutes with every gamma_a): the Z4 lift of the deck is FORCED (nonsplit extension -- (cU)^2 = c^2 (-1)^F is never 1); the R-sector implementer U_R = prod_j (gamma_j - gamma_{j+8}) squares to +256 x 1 EXACTLY (split Z2 control: the forcing rests on the NS/bounding spin structure)",
+    sqok && Normal[Ut2] === Normal[256 GAMMA] &&
+    Normal[GAMMA . GAMMA] === Normal[id] &&
+    Normal[GAMMA] =!= Normal[id] && Normal[GAMMA] =!= Normal[-id] && anti &&
+    Normal[Ur2] === Normal[256 id]];
+];
+Module[{s4orders, killtab, freen, lamx, deg3, deg5, spec, gap, gen, sq},
+  s4orders = Union[PermutationOrder[PermutationCycles[#]] & /@
+    Permutations[Range[4]]];
+  killtab = Table[Max[Select[Divisors[nn], MemberQ[s4orders, #] &]],
+    {nn, 5, 8}];
+  freen = Select[Range[1, 8], Divisible[4, #] &];
+  deg3 = Exponent[lamx^3 - 1, lamx];
+  deg5 = Exponent[lamx^5 - 1, lamx];
+  spec = Reverse[Sort[(1 - #)^6 & /@ {0, 1/3, 2/3}]];
+  gap = spec[[2]];
+  gen = {DiagonalMatrix[{1, 1}], DiagonalMatrix[{1, -1}],
+    {{0, 2}, {1, 0}}, {{0, -2}, {1, 0}}};   (* V4 = {z, -z, 2/z, -2/z} *)
+  sq = And @@ (Module[{P = Simplify[# . #]},
+    P[[1, 2]] === 0 && P[[2, 1]] === 0 && P[[1, 1]] === P[[2, 2]]] & /@ gen);
+  checkExact["v506 SEAM.CLOCK.RIGIDITY.01 (iv): N-ARITHMETIC + GENERIC KILL -- S4 element orders = {1,2,3,4}, so any Moebius Z_n preserving 4 marks faithfully dies for n >= 5 (max cyclic image order = (1,3,1,4) < n for n = 5..8); a free Z_n orbit forces n | 4 (n in {1,2,4}); n = 6 is killed independently by the cusp side (deg(lam^5 - 1) = 5 != 3 = deg(lam^3 - 1) = N_fam, v117) with transfer spectrum {1, 64/729, 1/729} and gap (2/3)^6; the generic 4-set stabiliser V4 = {+-z, +-2/z} has exponent 2 (every square = id): not even the deck has a marks-preserving square root at generic modulus -- the stabiliser trichotomy V4/D4/A4 carries order-4 counts (0, 2, 0)",
+    s4orders === {1, 2, 3, 4} && killtab === {1, 3, 1, 4} &&
+    (And @@ Table[killtab[[nn - 4]] < nn, {nn, 5, 8}]) &&
+    freen === {1, 2, 4} && deg3 === 3 === Nfam && deg5 === 5 &&
+    spec === {1, 64/729, 1/729} && gap === (2/3)^6 && sq];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

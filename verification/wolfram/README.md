@@ -117,10 +117,13 @@ both verified directly with the active engine, 408 → 416; the same-day
 `v502` WP5e-alpha round adds 4 more exact mirrors and the same-day `v503`
 QGEO-emergence-light round adds 4 more, both verified directly with the
 active engine, 416 → 424; the same-day `v504` WP5d-beta round adds 5 more
-exact mirrors, verified directly with the active engine, 424 → 429):
+exact mirrors, verified directly with the active engine, 424 → 429; the
+same-day `v505` WP5e-beta round adds 5 more exact mirrors and the same-day
+`v506` clock-rigidity round adds 4 more, both verified directly with the
+active engine, 429 → 438):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504: 429 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506: 438 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -491,6 +494,46 @@ Minors[C,2] identically — the exact orbifold split-inheritance mechanism);
 exactly: infinite index). The lattice curves (deficit tables, Ising
 exponent p = 0.2444, elliptic-nome ladder, Klich–Levitov slope, ED
 validations) are numerical and stay Python-only in `v504`.
+
+The 2026-07-21 WP5e-beta round:
+`v505_celestial_wp5e_beta_equivariant_ledger.py` (CELEST.WP5E.BETA.01: "the
+equivariant anomaly ledger on twistor space" — the Atiyah–Bott/Lefschetz
+skeleton of the one-loop twistor inflow on ℂ²/ℤ₄) has its FIVE mirrors
+ADDED and VERIFIED the same day with the active engine (429 → 434): (i) the
+AB denominators + equivariant characters (det(1−g_j⁻¹) = (2,4,2), Dedekind
+sum 5/4 = (|ℤ₄|²−1)/12; characters (248,0,−8,0) by TWO routes — graded dims
+and the explicit 240-root sum; invariant average 60 = carrier, Frobenius
+61568); (ii) the index bridge (ch₂(T_m) = −(C⁻¹)_mm/2 = (−3/8,−1/2,−3/8) =
+f(m) exactly; glue defect −78 by both routes, classes (−24,−30,−24);
+Σ_m h_A3(m) = 5/4 = Σ_j 1/det_j); (iii) Okubo per sector + the rigid 32·T₃
+residual (the invariant quartic sum over the 240 glue roots = 36⟨x,x⟩²
+exactly; the twisted quartics carry T₅/T₃ content; the AB-weighted sum =
+9P₁ − 30P₂ − 15P₃ + 32T₃ exactly); (iv) the level dials (lattice current
+count 240/0/0/0 for k = 1..4; embedding residual (0,360,814,1362);
+det(A−1) = −4); (v) the axion-slot weight arithmetic (clock weights =
+regular μ₄ rep; a₀ Hamiltonian in O(2) = the graviton slot, X = −2 ≠ +2 = Y
+with mismatch 4 = |μ₄|; Coxeter eigencharacters {i,−1,−i} = the three
+twisted slots).
+
+The 2026-07-21 clock-rigidity round:
+`v506_seam_clock_rigidity.py` (SEAM.CLOCK.RIGIDITY.01: Route B of the v503
+classification — Part A Möbius + Part B Fock) has its FOUR mirrors ADDED
+and VERIFIED the same day with the active engine (434 → 438): (i) the
+complete square-root solve (g² = deck forces diagonal with (a/d)² = −1 —
+exactly two roots z → ±iz, both projective order 4, mutually inverse; the
+traceless branch is scalar with det 0); (ii) the D₄ center + order-4 count
++ the silver counterexample (the μ₄ stabiliser {iᵏz, iᵏ/z} has profile
+{1,2,2,2,2,2,4,4}, exactly 2 order-4 elements squaring to the deck, center
+= {id, deck}; the silver set {±1, ±(3+2√2)} has j = 1728 and a full D₄ of
+8 exact elements but its order-4 elements square to the CENTRAL crossing
+involution z → −v/z, not the deck: zero roots); (iii) the Cl(16) identity
+(on explicit 256×256 Jordan–Wigner gamma matrices, Ũ² = 256·γ₁⋯γ₁₆
+exactly, i.e. U² = (−1)^F, with the R implementer squaring to +256 — the
+split control); (iv) the n-arithmetic + generic kill (S₄ orders {1,2,3,4},
+kill table for n = 5..8, free orbits n | 4, cusp degree 5 ≠ 3, transfer
+spectrum {1, 64/729, 1/729}, the generic V₄ = {±z, ±2/z} with exponent 2).
+The 24-triple stabiliser enumeration, the A₄/hexagonal profile and the Z8
+block-lift nullspace construction stay Python-only in `v506` (flagged).
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
