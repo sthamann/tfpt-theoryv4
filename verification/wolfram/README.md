@@ -120,10 +120,13 @@ active engine, 416 → 424; the same-day `v504` WP5d-beta round adds 5 more
 exact mirrors, verified directly with the active engine, 424 → 429; the
 same-day `v505` WP5e-beta round adds 5 more exact mirrors and the same-day
 `v506` clock-rigidity round adds 4 more, both verified directly with the
-active engine, 429 → 438):
+active engine, 429 → 438; the same-day `v507` bit-origin round adds 6 more
+exact mirrors, verified directly with the active engine, 438 → 444; the
+same-day `v508` WP5e-gamma round adds 6 more exact mirrors, verified
+directly with the active engine, 444 → 450):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506: 438 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508: 450 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -534,6 +537,53 @@ kill table for n = 5..8, free orbits n | 4, cusp degree 5 ≠ 3, transfer
 spectrum {1, 64/729, 1/729}, the generic V₄ = {±z, ±2/z} with exponent 2).
 The 24-triple stabiliser enumeration, the A₄/hexagonal profile and the Z8
 block-lift nullspace construction stay Python-only in `v506` (flagged).
+
+The 2026-07-21 bit-origin round:
+`v507_seam_bit_origin.py` (SEAM.BIT.ORIGIN.01: the tautology attack on the
+v506 alignment bit — Part A torus origin + Part B fermion dichotomy) has
+its SIX mirrors ADDED and VERIFIED the same day with the active engine
+(438 → 444): (i) the half-period descent (fixed points of w → −w = the 4
+half-periods Λ/2Λ, the 1/3-control fails; t_c descends iff 2c ∈ Λ; the
+explicit rational descent σᵢ(x) = eᵢ + (eᵢ−eⱼ)(eᵢ−e_k)/(x−eᵢ) with the
+exact curve-lift identity ∏(σᵢ−e_l) = ψᵢ²∏(x−e_l), symbolic e₁,e₂,e₃,
+Klein-V₄ closure); (ii) the core solve (pair cross-ratio = −1 solves to
+λ = −1, 2, 1/2 — one per half-period; harmonic orbit j = 1728 vs j(3) =
+21952/9 and j(hex) = 0); (iii) the stabiliser counts (the complete
+24-triple enumeration gives (4,3,3)/(8,5,3)/(12,3,3) with the free
+involutions exactly the three σ_c in ALL types — the deck class is
+forced); (iv) the CM fixed point (mult-by-i mod 2 fixes exactly (1,1) =
+c* = (1+τ)/2, mult-by-ρ 3-cycles all three; the lemniscatic clock needs
+ψ = 2i/(x+1)², t²+1 irreducible over ℚ, and squares to the central −1/x);
+(v) the Cl(16) dichotomy (on the 256×256 Jordan–Wigner gammas the central
+implementer squares to 256·γ₁⋯γ₁₆ while the EDGE implementer implements
+the NS edge reflection and squares to the SCALAR +2⁷ — split; in the
+32-element NS dihedral lift group the central deck has exactly 2 square
+roots, the edge deck 0); (vi) the silver bijection census (all 8 mark
+bijections carry the silver deck to the edge σ₂/σ₃, never the central σ₁;
+all 8 μ₄ bijections carry the seam deck to the central σ₁ only). The v493
+circularity-audit direction and the 28/21 arrangement census stay
+Python-only in `v507` (flagged).
+
+The 2026-07-21 WP5e-gamma round:
+`v508_celestial_wp5e_gamma_pairing.py` (CELEST.WP5E.GAMMA.01: the
+sphere-axion pairing check — the exchange route killed with a certificate)
+has its SIX mirrors ADDED and VERIFIED the same day with the active engine
+(444 → 450): (i) the vertex-space dims (the W(D5)×W(A3)-invariant
+quadratics on the 8-dim glue Cartan have bidegree dims (1,0,1), total 2 =
+span{s₅, s₃}, and the quartics (2,0,1,0,2), total 5 = span{P₁,P₂,P₃,T₅,T₃}
+— exact generator-wise Weyl nullspace arithmetic); (ii) the twisted
+quadratics + the even-sector collapse (K⁽⁰⁾ = 60(s₅+s₃), K⁽¹⁾ = K⁽³⁾ =
+4s₅−12s₃, K⁽²⁾ = −4(s₅+s₃), and K⁽⁰⁾ = −15·K⁽²⁾: parallel); (iii) the
+product theorem (symbolic a,b,c,d: any two invariant quadratics multiply
+into span{P₁,P₂,P₃} — zero T₅/T₃ content); (iv) the rank-3 certificate
+(channels E₁₃ = (16,−96,144,0,0), E₂₂ = (16,32,16,0,0), E₀₀ = 225·E₂₂;
+exchange matrix rank 2, kernel 0, rank([M | A_fix]) = 3 with A_fix =
+(9,−30,−15,0,32) and (Φ_T5, Φ_T3, Φ_P)(A_fix) = (0, 32, 72); the
+naturalness images (25/4,−11/2,97/4,0,0) and (12,−40,76,0,0) both certify
+(0,0)); (v) the SO(16) AB sum (15,−18,−15,−4,40) — T₅ does not even
+cancel, odd classes empty; (vi) the D8 native quartic (28·s₈ Killing,
+16·T₈ + 12·s₈² — no T₃ structure). The selection-rule triple enumeration
+and the flipped-rule control stay Python-only in `v508` (flagged).
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

@@ -60,6 +60,124 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (XVIII) (\texttt{v508} --- WP5e-$\gamma$ of \texttt{CELEST.SEAM.01} ``the sphere-axion pairing check'' promoted as \texttt{CELEST.WP5E.GAMMA.01}, an honest rigid NEGATIVE result: the VERTEX-SPACE THEOREM --- the $W(D_5){\times}W(A_3)$-invariant quadratics on the $8$-dim glue Cartan are EXACTLY $\mathrm{span}\{s_5,s_3\}$ (dim $2$) and the quartics EXACTLY $\mathrm{span}\{P_1,P_2,P_3,T_5,T_3\}$ (dim $5$), with the PRODUCT THEOREM as the master kill (any two invariant quadratics multiply into $\mathrm{span}\{P_1,P_2,P_3\}$ --- zero $T_5/T_3$ content, so $\Phi_{T_3}$ annihilates EVERY exchange image while $\Phi_{T_3}(A_{\mathrm{fix}})=32\neq0$); the strict two-index $\Z_4$ rule COLLAPSES (the sphere axions have no invariant bilinear Cartan vertex at all), the twist-insertion channels give a rank-$2$ exchange matrix with $\operatorname{rank}([M\,|\,A_{\mathrm{fix}}])=3$ and the annihilator certificate $(\Phi_{T_5},\Phi_{T_3},\Phi_P)(A_{\mathrm{fix}})=(0,32,72)$; side discovery $K^{(0)}=-15\,K^{(2)}$; naturalness DISSOLVES (ch$_2$-natural and AB-weight couplings both certify $(0,0)$ vs required $(32,72)$ --- scale-independent); controls: $SO(16)$ has no sphere partners AND uncancelled $T_5$, $D_8$ no $T_3$ structure; the O-fence is SHARPENED: the exchange sub-branch is dead, the $32\,T_3$ residual MUST be carried by twisted BCOV contact terms ($\delta_1$ binary: coefficient exactly $(9,-30,-15,0,32)$, computed not fitted; escape $\delta_2$: the full-tensor ledger); Wolfram extension $444\to450$ (verified engine run); \emph{NO marker moves --- \texttt{CELEST.SEAM.01} stays Open, the slot bijection untouched, the preregistered level-kill still does not fire, \texttt{SEAM.EQUIV.01} stays \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v508\_celestial\_wp5e\_gamma\_pairing.py} (\texttt{CELEST.WP5E.GAMMA.01}, 27
+checks, $\sim$4 s; sympy/Fraction exact, no floats; deterministic).} Question: can the three
+twisted sphere axions $\eta_m$ (Coxeter eigencharacters $\{i,-1,-i\}$ on $H^2(\mathrm{ALE})$,
+\texttt{v505} S5.8) cancel the rigid $32\,T_3$ residual of the Atiyah--Bott ledger
+($A_{\mathrm{fix}}=Q^{(1)}/2{+}Q^{(2)}/4{+}Q^{(3)}/2=9P_1{-}30P_2{-}15P_3{+}32\,T_3$,
+\texttt{v505} S3.7) by Green--Schwarz-type EXCHANGE with sector-compatible quadratic vertices?
+\emph{No, with a certificate.} \emph{Vertex-space theorem}: exact Weyl nullspace arithmetic over
+all bidegrees gives quadratics dim $2$ (bidegrees $(1,0,1)$) and quartics dim $5$ (bidegrees
+$(2,0,1,0,2)$) --- the vertex basis is COMPLETE; \emph{product theorem} (the master kill):
+$(a s_5{+}b s_3)(c s_5{+}d s_3)=ac\,P_1{+}(ad{+}bc)P_2{+}bd\,P_3$ identically --- every exchange
+image (any axion count, any rule, any couplings) is annihilated by $\Phi_{T_3}$, and
+$\Phi_{T_3}(A_{\mathrm{fix}})=32\neq0$. \emph{Selection enumeration}: the strict two-index reading
+collapses ($C_{j,j'}\neq0$ only for $j'=-j$, forcing $m=0$: $16$ raw triples, $4$ nonzero, all
+$m=0$); twist insertion: $\eta_1{\leftrightarrow}K^{(3)}$, $\eta_2{\leftrightarrow}K^{(2)}$,
+$\eta_3{\leftrightarrow}K^{(1)}$, $\eta_0{\leftrightarrow}K^{(0)}$; channels
+$E_{13}=(16,-96,144,0,0)$, $E_{22}=(16,32,16,0,0)$, $E_{00}=225\,E_{22}$; SIDE DISCOVERY:
+$K^{(0)}=-15\,K^{(2)}$ (the even-sector quadratics are PARALLEL --- this collapse drives the
+$\Phi_P$ obstruction). \emph{Unsolvability with certificate (the core)}: $M$ is $5{\times}2$,
+rank $2$, kernel $0$; $\operatorname{rank}([M\,|\,A_{\mathrm{fix}}])=3$; annihilator certificate
+$(\Phi_{T_5},\Phi_{T_3},\Phi_P)(A_{\mathrm{fix}})=(0,32,72)$ --- two independent obstructions
+($32\,T_3$ structural, rule-independent; $\Phi_P=72$ selection-rule-driven); $\ker M=0$ forces
+the unique non-disturbing coupling $c=0$ (the sphere axions are RIGIDLY SILENT);
+$\Phi_P(Q^{(0)})=0$ (the sector-$0$ Okubo mechanism undisturbed); relaxed control: dropping
+charge conservation reaches the $P$-block ($\det=-64$) but $T_5=T_3=0$ persists.
+\emph{Naturalness resolution}: ch$_2$-natural couplings $(9/64,1/4)$ give
+$(25/4,-11/2,97/4,0,0)$ and AB-weight couplings $(1/2,1/4)$ give $(12,-40,76,0,0)$ --- BOTH with
+certificate $(0,0)$ vs required $(32,72)$: the failure is scale- and coupling-INDEPENDENT (no
+``unnatural factor''). \emph{Negative controls}: invariant-only $=$ \texttt{v505} S3.9 replicated
+$+$ sharpened; flipped rule $m{+}j{-}j'$: $\Phi_{T_3}$ kill flip-invariant, $\Phi_P$
+rule-dependent; $SO(16)$: odd classes EMPTY and AB sum $(15,-18,-15,-4,40)$ --- $T_5$ does not
+even cancel ($E_8$ doubly special); $D_8$: $16\,T_8{+}12\,s_8^2$, no $T_3$ structure --- the
+question cannot even be posed. Number fences \mC\ only: $32=(h,h){+}(h',h')=20{+}12$,
+$72=2\tilde\lambda^2_{e_8}$.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{CELEST.WP5E.GAMMA.01} (\mE\ vertex space/selection/certificate $+$ \mC\ fences $+$ \mO\
+contact terms); \texttt{CELEST.SEAM.01} stays Open with the WP5e targets UPDATED (``the exchange
+sub-branch is closed by v508; the named remaining targets are the twisted BCOV contact terms
+($\delta_1$, binary test) and the full-tensor ledger ($\delta_2$)''). Papers:
+\texttt{tfpt\_research\_contracts} WP5e section extended by the $\gamma$ block ($\gamma$ done ---
+negative result with certificate; the $\delta_1/\delta_2/\varepsilon_1/\varepsilon_2$ roadmap with
+success/kill criteria); \texttt{tfpt\_3} celestial section becomes a TWELVE-step story with Step 12
+``the exchange no-go and the contact-term criterion'' and the ``What remains'' paragraph updated.
+Wolfram: six mirrors (the vertex-space dims $2/5$ by generator-wise nullspace arithmetic; the
+twisted quadratics with $K^{(0)}=-15\,K^{(2)}$; the product theorem, symbolic; the rank-$3$
+certificate $(0,32,72)$ with channels and naturalness images; the $SO(16)$ AB sum
+$(15,-18,-15,-4,40)$; the $D_8$ quartic $16\,T_8{+}12\,s_8^2$) verified with the active engine the
+same day ($444\to450$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}). \texttt{VerificationDag}:
+\texttt{v508} on the QFT/celestial node; registry $+$ \texttt{run\_all} (502 modules, suite
+green). No gate closes, no marker moves --- the O-fence is only sharpened.
+\end{itemize}
+
+\subsection*{2026-07-21 (XVII) (\texttt{v507} --- the tautology attack on the \texttt{v506} alignment bit, executed and refuted, promoted as \texttt{SEAM.BIT.ORIGIN.01}: the ORIGIN THEOREM --- marks $=$ fixed points of the hyperelliptic involution $=$ the $4$ half-periods $\Lambda/2\Lambda$ of the seam double, and EVERY mark-free collar deck IS a half-period translation (in all three stabiliser types $(4,3,3)/(8,5,3)/(12,3,3)$ the free involutions are exactly the three $\sigma_c$: the CLASS of the deck is forced, its POSITION is not); the CORE SOLVE (symbolic $\lambda$): a marks-preserving root of $\sigma_c$ exists $\iff\lambda\in\{-1,2,\tfrac12\}$ (one per $c$; intrinsic: the deck pairs separate harmonically), union $=$ the harmonic orbit $\iff j=1728\iff\tau=i$; the EQUIVALENCE TETRAD ``Uhr existiert $\iff$ ($\tau{=}i$ AND deck $=$ CM-fixed half-period) $\iff$ (Stab $=D_4$ AND deck central) $\iff$ deck pairs harmonic $\iff$ NS Fock lift NONSPLIT''; the FERMION DICHOTOMY (the new physical face): central $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}\Rightarrow U^2=(-1)^F$ nonsplit vs edge $\tilde U_e^2=+2^7\Rightarrow U^2=+1$ SPLIT ($2$ vs $0$ roots --- the bit IS a Fidkowski--Kitaev-type extension class, distinguished but not derived); the silver set $=$ the in-family misalignment witness; Wolfram extension $438\to444$ (verified engine run); \emph{NO marker moves --- the bit stays \mC, \texttt{SEAM.CLOCK.RIGIDITY.01}/\texttt{QGEO.REALIZE.01}/\texttt{P2.TYPING.01} text precised only})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v507\_seam\_bit\_origin.py} (\texttt{SEAM.BIT.ORIGIN.01}, 26 checks, $\sim$2.6 s;
+Part A sympy-exact torus/M\"obius arithmetic $+$ Part B exact $\mathrm{Cl}(16)$ Fractions;
+deterministic).} Conjecture under attack: marks and deck both descend from the SAME torus structure
+(the seam double $T^2_\tau\to S^2$, \texttt{v214}/\texttt{v260}), so the common origin would force
+the central alignment automatically and the \texttt{v506} bit would be a tautology.
+\emph{Origin theorem (die Herkunft)}: the $4$ marks are the fixed points of $w\mapsto-w$ on
+$\mathbb C/(\mathbb Z{+}\tau\mathbb Z)$ $=$ the half-periods $\Lambda/2\Lambda$ (a
+$\tfrac13$-coefficient never qualifies); $t_c$ descends iff $2c\in\Lambda$ --- exactly the three
+half-period translations (control $c=\tfrac13$ fails); the descended maps are the EXPLICIT rational
+involutions $\sigma_i(x)=e_i+(e_i{-}e_j)(e_i{-}e_k)/(x{-}e_i)$ with the exact curve-lift identity
+$\prod(\sigma_i{-}e_l)=\psi_i^2\prod(x{-}e_l)$, $\psi_i$ RATIONAL (the $\wp$-addition formula as
+pure algebra), closing to Klein $V_4$; CONVERSELY the freely-acting involutions in ALL three
+stabiliser types (generic $V_4$ $(4,3,3)$, harmonic $D_4$ $(8,5,3)$, hexagonal $A_4$ $(12,3,3)$)
+are EXACTLY the three $\sigma_c$ $\Rightarrow$ every mark-free collar deck (\texttt{v216}) IS a
+half-period translation. \emph{Core solve (symbolic $\lambda$)}: $\sigma_c$ admits a
+marks-preserving $\mathrm{PGL}_2$ root $\iff\lambda=-1$ ($\sigma_1$), $2$ ($\sigma_2$), $\tfrac12$
+($\sigma_3$) --- per half-period exactly ONE solution, intrinsically ``the deck pairs separate
+harmonically'' (pair cross-ratio $-1$); generic modulus: $V_4$ abelian, ALL $\sigma_c$ central yet
+clockless (``central alone is empty'' --- the bit is the CONJUNCTION $D_4$ $\wedge$ central); at
+$\tau=i$ the stabiliser jumps to $D_4$ with $\sigma_1$ central ($2$ roots $=$ the clock pair),
+$\sigma_2/\sigma_3$ edge-type ($0$ roots); the \texttt{v506} seam deck lands on the central
+$\sigma_1=-1/x$ under all $8$ mark bijections; CM dictionary: mult-by-$i$ fixes exactly
+$c^*=(1{+}\tau)/2$ (mult-by-$\rho$ $3$-cycles all three), the clock lift needs the CM unit $i$
+($\psi=2i/(x{+}1)^2$, $t^2{+}1$ irreducible over $\mathbb Q$) while half-period decks lift
+rationally. \emph{Equivalence tetrad $+$ circularity audit}: clock exists $\iff$ ($\tau{=}i$ AND
+deck $=$ the CM-fixed half-period) $\iff$ (Stab $=D_4$ AND deck central) $\iff$ deck pairs harmonic
+$\iff$ NS Fock lift nonsplit; the \texttt{v493} converse independently re-verified --- two
+independently computed converses of ONE equivalence, no circle. \emph{Fermion dichotomy (Part B)}:
+central arrangement (shift by $8$): $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}\Rightarrow
+U^2=(-1)^F$, nonsplit $\Z_4$, $2$ roots in the $32$-element dihedral lift (the $\Z_8$ tower); edge
+arrangement (reflection $j\mapsto4{-}j$, fixed sites $=$ non-marks $=$ the silver $\{0,\infty\}$
+between neighbour marks): the implementer EXISTS but $\tilde U_e^2=+2^7\cdot\mathbf1\Rightarrow
+U^2=+1$, the extension SPLITS, $0$ roots, no $\Z_8$; one-particle $(\lambda^2{+}1)^8$ vs
+$(\lambda^2{-}1)^8$; census: all $28$ shift-invariant $4$-sets cross (central type), all $21$
+mark-free reflection-invariant sets do not; robust at $8$ sites; R-sector edge control splits too
+--- the bit IS a physical extension class (Fidkowski--Kitaev-type): distinguished, but not derived
+(WHICH class nature realises stays the input). \emph{Silver placement}: $\{\pm1,\pm(3{+}2\sqrt2)\}$
+$=$ ``$\tau=i$ with deck $=$ a non-CM-fixed half-period translation'' (all $8$ bijections
+$\to\sigma_2/\sigma_3$, never $\sigma_1$) --- the in-family witness: TAUTOLOGY REFUTED. \emph{The
+one \mC\ rest (verbatim)}: the alignment bit remains a carrier datum; ``no tautology --- the origin
+forces the CLASS of the deck (half-period translation), not its POSITION''. No overclaim.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{SEAM.BIT.ORIGIN.01} (\mE\ origin theorem/core solve/tetrad/fermion dichotomy/silver
+placement $+$ \mC\ the bit); TEXT precisions at \emph{unchanged} markers:
+\texttt{SEAM.CLOCK.RIGIDITY.01} (``the bit is now fully characterised as a tetrad \dots\ and
+carries a physical face: the non-split NS Fock extension class --- v507''),
+\texttt{QGEO.REALIZE.01} (``the class of the deck IS derived (half-period translation, v507); only
+its position stays the input'', stays \mC/\mO), \texttt{P2.TYPING.01} (origin cross-reference on
+the common R1 bit). Papers: \texttt{tfpt\_3} celestial Step-1/2 environment $+$ QGEO paragraph,
+contracts marks/kill-test paragraph, \texttt{introduction}/\texttt{tfpt\_1}/\texttt{tfpt\_2}/%
+\texttt{origin\_theory} one-sentence updates where \texttt{v506} is cited. Wolfram: six mirrors
+(half-period descent $2c\in\Lambda$ with the rational $\sigma_i$ lift identity; the core solve
+$\lambda\in\{-1,2,\tfrac12\}$; the stabiliser counts $(4,3,3)/(8,5,3)/(12,3,3)$ via the complete
+$24$-triple enumeration; the CM fixed point $c^*$ $+$ the lemniscatic $\psi=2i/(x{+}1)^2$; the
+$\mathrm{Cl}(16)$ dichotomy $256\,\gamma$-monomial vs scalar $2^7$ on explicit $256{\times}256$
+Jordan--Wigner matrices $+$ the $2$-vs-$0$ root census in the $32$-element dihedral lift; the
+silver bijection census) verified with the active engine the same day ($438\to444$, \texttt{ALL
+WOLFRAM EXTENSION CHECKS PASSED}); the \texttt{v493} audit direction and the $28/21$ arrangement
+census stay Python-side (flagged). \texttt{VerificationDag}: \texttt{v507} on the P2/carrier and
+QGEO nodes; registry $+$ \texttt{run\_all} (501 modules, suite green). No gate closes, no marker
+moves.
+\end{itemize}
+
 \subsection*{2026-07-21 (XVI) (\texttt{v506} --- seam clock rigidity, Route B of the \texttt{v503} classification, promoted as \texttt{SEAM.CLOCK.RIGIDITY.01}: TWO exact theorems reduce the order-$4$ clock input to ONE alignment bit --- Theorem A (M\"obius): the deck $z\mapsto-z$ has EXACTLY TWO square roots $z\mapsto\pm iz$ in $\mathrm{PGL}_2(\mathbb C)$, both \emph{automatically} order $4$, and a marks-preserving root exists $\iff$ the deck is the CENTRAL involution of the mark-$D_4$ (counterexample $\{\pm1,\pm(3{+}2\sqrt2)\}$: harmonic with full $D_4$ but deck non-central $\Rightarrow$ $0$ roots --- harmonicity alone insufficient); Theorem B (Fock, the core): the NS deck implementation is FORCED to order $4$ --- $\tilde U^2=256\,\gamma_1\cdots\gamma_{16}$, i.e.\ $U^2=(-1)^F$ EXACTLY, a nonsplit $\Z_4$, with the $\Z_8$ tower $V^2\propto U$, $V^4\propto(-1)^F$ ($8=2|\mu_4|$ fermionically explained) and the R-sector control split ($U_R^2=+1$); the one \mC\ rest: ``the collar deck is the central involution of the mark-$D_4$'' --- the fermionic $\Z_4$ forces the ORDER, not the spatial alignment; Wolfram extension $434\to438$ (verified engine run); \emph{NO marker moves --- \texttt{QGEO.REALIZE.01} stays \mC/\mO\ (text precised), \texttt{P2.TYPING.01} R1 mapped onto the same bit})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v506\_seam\_clock\_rigidity.py} (\texttt{SEAM.CLOCK.RIGIDITY.01}, 34 checks,

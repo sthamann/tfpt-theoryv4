@@ -101,11 +101,11 @@ const NODES: DagNode[] = [
     marker: "[O] axiom · [E] Lean",
     title: "P2 — the five-slot carrier",
     summary:
-      "The carrier rank g_car = 5 (3 colour + 2 weak) — a declared input, but over-determined, not a free choice. It is forced three independent ways by the E₈ closure: the bootstrap quadratic μ²−5μ+4 = 0 (v6), the Pascal condition 2^g = g²+g+2 ⇒ g = 5 (Lean-formalised, 0 sorry), and the anchor moment e₂(a) = 5. Sharper (v491): given the four marks and the weight typing (3 positive integers summing to 4), the partition {1,1,2} is unique, so g_car = e₂ = 5 and |Z₂| = e₃ = 2 are arithmetic corollaries — with negative controls on every dropped assumption; the residual is the weight-typing postulate, and P2 stays the declared axiom. That typing is itself hardened (v499): the anchor is the Birkhoff–Grothendieck splitting type of the Deligne canonical extension of the flavor connection, so given the four marks, rank 3, the cusp class and unitarity (U), integrality, positivity (h⁰ = 0 via Mehta–Seshadri stability) and the sum 4 (residue traces) are theorems — the residual shrinks to the module identification plus (U), both [C]; and that module-identification rest is now ONE residual with the QGEO modulus rest: both reduce to the same order-4 clock = Coxeter of W(A₃) = the cusp-class carrier datum (v503, QGEO.EMERGE.LIGHT.01 — the emergence-light test shows marks and square are derived while the clock is the input; markers unchanged). The clock-rigidity theorems (v506, SEAM.CLOCK.RIGIDITY.01) reduce that common residual to ONE alignment bit — 'the collar deck is the central involution of the mark-D₄' — with the clock's ORDER fermionically forced (U² = (−1)^F exactly on the NS seam, nonsplit ℤ₄; the ℤ₈ tower V² ∝ U, V⁴ ∝ (−1)^F explains 8 = 2|μ₄|); harmonicity alone is insufficient (exact counterexample), markers unchanged. The QBL chain (v108–v113) reduces it to one boundary-net premise — closing the index-4, c = 8 net closes this axiom to [E].",
+      "The carrier rank g_car = 5 (3 colour + 2 weak) — a declared input, but over-determined, not a free choice. It is forced three independent ways by the E₈ closure: the bootstrap quadratic μ²−5μ+4 = 0 (v6), the Pascal condition 2^g = g²+g+2 ⇒ g = 5 (Lean-formalised, 0 sorry), and the anchor moment e₂(a) = 5. Sharper (v491): given the four marks and the weight typing (3 positive integers summing to 4), the partition {1,1,2} is unique, so g_car = e₂ = 5 and |Z₂| = e₃ = 2 are arithmetic corollaries — with negative controls on every dropped assumption; the residual is the weight-typing postulate, and P2 stays the declared axiom. That typing is itself hardened (v499): the anchor is the Birkhoff–Grothendieck splitting type of the Deligne canonical extension of the flavor connection, so given the four marks, rank 3, the cusp class and unitarity (U), integrality, positivity (h⁰ = 0 via Mehta–Seshadri stability) and the sum 4 (residue traces) are theorems — the residual shrinks to the module identification plus (U), both [C]; and that module-identification rest is now ONE residual with the QGEO modulus rest: both reduce to the same order-4 clock = Coxeter of W(A₃) = the cusp-class carrier datum (v503, QGEO.EMERGE.LIGHT.01 — the emergence-light test shows marks and square are derived while the clock is the input; markers unchanged). The clock-rigidity theorems (v506, SEAM.CLOCK.RIGIDITY.01) reduce that common residual to ONE alignment bit — 'the collar deck is the central involution of the mark-D₄' — with the clock's ORDER fermionically forced (U² = (−1)^F exactly on the NS seam, nonsplit ℤ₄; the ℤ₈ tower V² ∝ U, V⁴ ∝ (−1)^F explains 8 = 2|μ₄|); harmonicity alone is insufficient (exact counterexample), markers unchanged. The bit-origin theorems (v507, SEAM.BIT.ORIGIN.01) then refute the tautology objection: marks and deck DO share one torus origin (marks = the four half-periods, every mark-free collar deck IS a half-period translation — the deck's CLASS is derived), yet the origin does not force the alignment (in-family silver witness); the bit is an equivalence tetrad (clock ⟺ τ = i with the CM-fixed half-period ⟺ deck central in the mark-D₄ ⟺ harmonic deck pairs ⟺ nonsplit NS Fock extension) with a physical face — the Fidkowski–Kitaev-type extension class (central U² = (−1)^F vs edge U² = +1, split) — distinguished but not derived; only the POSITION (which half-period) stays the carrier input, markers unchanged. The QBL chain (v108–v113) reduces it to one boundary-net premise — closing the index-4, c = 8 net closes this axiom to [E].",
     inputs: ["anchor a = (1,1,2) (g_car = e₂)"],
     outputs: ["g_car = 5"],
     failure: "Wrong family / charge lattice.",
-    scripts: ["v2_carrier_pascal.py", "v14_carrier_uniqueness.py", "v219_icosahedral_mckay.py", "v228_rr_index_gate.py", "v491_p2_partition_corollary.py", "v499_p2_weights_deligne_bg.py", "v506_seam_clock_rigidity.py"],
+    scripts: ["v2_carrier_pascal.py", "v14_carrier_uniqueness.py", "v219_icosahedral_mckay.py", "v228_rr_index_gate.py", "v491_p2_partition_corollary.py", "v499_p2_weights_deligne_bg.py", "v506_seam_clock_rigidity.py", "v507_seam_bit_origin.py"],
   },
   {
     id: "D5",
@@ -362,6 +362,7 @@ const NODES: DagNode[] = [
       "v216_marks_gauss_bonnet.py",
       "v217_marks_emergence_scan.py",
       "v503_qgeo_emergence_light.py",
+      "v507_seam_bit_origin.py",
       "v364_vgeo_sharpen.py",
       "v371_ftransfer_pole.py",
       "v372_ftransfer_boltzmann.py",
@@ -541,6 +542,7 @@ const NODES: DagNode[] = [
       "v502_celestial_wp5e_prefactor_level.py",
       "v504_celestial_wp5d_klm_completeness.py",
       "v505_celestial_wp5e_beta_equivariant_ledger.py",
+      "v508_celestial_wp5e_gamma_pairing.py",
     ],
   },
   {

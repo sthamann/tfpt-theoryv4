@@ -1,3 +1,139 @@
+## 2026-07-21 (XVIII) — v508 (CELEST.WP5E.GAMMA.01): WP5e-gamma „der Sphären-Axion-Paarungs-Check" promoviert — ein ehrliches, rigides NEGATIVresultat mit Zertifikat; der Austausch-Unterast ist tot, die 32·T3-Last wandert zu den getwisteten BCOV-Kontakttermen (δ1 binär, δ2 als benannter Ausweg)
+
+Die celestial_seam_wp5e_gamma_sphere_axion_pairing_probe.py aus
+experiments/tfpt-discovery/ ist als **v508_celestial_wp5e_gamma_pairing.py
+(CELEST.WP5E.GAMMA.01)** promoviert (27 Checks, ~4 s, sympy/Fraction-exakt;
+Suite gruen, jetzt 502 Skripte). Frage: können die drei getwisteten
+Sphären-Axionen η_m (Coxeter-Eigencharaktere {i, −1, −i} auf H²(ALE), v505
+S5.8) das rigide 32·T3-Residual des AB-Ledgers (A_fix = 9P1 − 30P2 − 15P3 +
+32·T3, v505 S3.7) per GS-artigem AUSTAUSCH mit sektorkompatiblen
+quadratischen Vertices löschen? NEIN, mit Zertifikat:
+
+- **VERTEX-RAUM-SATZ [E]:** die W(D5)×W(A3)-invarianten Quadratiken auf der
+  8-dim Glue-Cartan sind EXAKT span{s₅, s₃} (dim 2, Bigrade (1,0,1)), die
+  Quartiken EXAKT span{P1, P2, P3, T5, T3} (dim 5, Bigrade (2,0,1,0,2)) —
+  Weyl-Nullraum-Arithmetik über alle Bigrade, Vertex-Basis vollständig;
+  PRODUKT-THEOREM (der Master-Kill): das Produkt zweier invarianter
+  Quadratiken hat identisch null T5/T3-Gehalt ⇒ JEDES Austauschbild
+  (beliebige Axionzahl, Regel, Kopplungen) wird von Φ_T3 annihiliert,
+  Φ_T3(A_fix) = 32 ≠ 0.
+- **SELEKTIONS-ENUMERATION [E]:** Zwei-Index-Lesart kollabiert (C_{j,j′} ≠ 0
+  nur j′ = −j ⇒ Regel erzwingt m = 0 — die Sphären-Axionen haben KEINEN
+  invarianten Bilinear-Vertex auf der Cartan; 16 rohe Tripel, 4 ≠ 0, alle
+  m = 0); Twist-Insertion: η₁↔K⁽³⁾, η₂↔K⁽²⁾, η₃↔K⁽¹⁾, η₀↔K⁽⁰⁾; Kanäle
+  E13 = (16,−96,144,0,0), E22 = (16,32,16,0,0), E00 = 225·E22;
+  NEBENENTDECKUNG: K⁽⁰⁾ = −15·K⁽²⁾ (gerade Sektor-Quadratiken PARALLEL).
+- **UNLÖSBARKEIT MIT ZERTIFIKAT (Kernresultat) [E]:** Austausch-Matrix 5×2,
+  Rang 2, Kern 0; rank([M|A_fix]) = 3; Annihilator-Zertifikat
+  (Φ_T5, Φ_T3, Φ_P)(A_fix) = (0, 32, 72) mit A_fix = (9,−30,−15,0,32) —
+  zwei unabhängige Obstruktionen (32·T3 strukturell, regelunabhängig;
+  Φ_P = 72 regelgetrieben via K⁽⁰⁾ ∥ K⁽²⁾); ker M = 0 erzwingt die einzige
+  störungsfreie Kopplung c = 0 (rigide stumm); Φ_P(Q⁽⁰⁾) = 0 (Sektor-0-GS
+  ungestört); relaxierte Kontrolle: ohne Ladungserhaltung wird der P-Block
+  erreichbar (det −64), aber T5 = T3 = 0 bleibt.
+- **NATÜRLICHKEITS-AUFLÖSUNG [E]:** ch2-natürliche (9/64, 1/4) und
+  AB-Gewichts-Kopplungen (1/2, 1/4) haben Zertifikat (0,0) statt (32,72) —
+  der Fehlschlag ist skalen- und kopplungsunabhängig (kein „unnatürlicher
+  Faktor", der Ansatzraum verfehlt identisch).
+- **NEGATIVKONTROLLEN [E]:** (a) nur invariantes Axion = v505-Replikation +
+  Verschärfung; (b) gekippte Regel m+j−j′: Φ_T3-Kill flip-invariant, Φ_P
+  regelabhängig; (c) SO(16): keine ungeraden Klassen, AB-Summe
+  (15,−18,−15,−4,40) — T5 löscht sich nicht mal (E8 doppelt speziell);
+  (d) D8: 16·T8 + 12·s₈², keine T3-Struktur — Frage nicht stellbar.
+- **Zahlenzäune [C]:** 32 = (h,h)+(h′,h′) = 20+12; 72 = 2λ̃²_e8.
+- **SCHÄRFUNG DER FENCE [O]:** der Austausch-Unterast ist tot; das
+  32·T3-Residual MUSS von getwisteten BCOV-Kontakttermen getragen werden —
+  binäres Kriterium WP5e-δ1: der Einschleifen-Koeffizient auf ℂ²/ℤ₄ muss
+  exakt (9,−30,−15,0,32) ergeben, gerechnet statt gefittet; benannter
+  Ausweg WP5e-δ2: Voll-Tensor-Ledger (der Kollaps ist Cartan-restringiert);
+  dazu ε1 (O(−2)-Bulk-Axion, λ̃ = 6) und ε2 (CPS Level-from-Flux).
+  Slot-Bijektion (v505 S5.8) unberührt; der preregistrierte Level-Kill
+  feuert weiter nicht; SEAM.EQUIV.01 bleibt [O].
+
+Integration: Ledger neue Zeile CELEST.WP5E.GAMMA.01; CELEST.SEAM.01 bleibt
+Open mit aktualisierten WP5e-Restzielen („exchange sub-branch closed by
+v508; the named remaining targets are the twisted BCOV contact terms (δ1,
+binary test) and the full-tensor ledger (δ2)"); Contract-WP5e-Bullet um den
+γ-Block erweitert (γ done — Negativresultat mit Zertifikat;
+δ1/δ2/ε1/ε2-Roadmap mit Erfolgs-/Kill-Kriterien); tfpt_3-Celestial-Section
+jetzt die ZWÖLF-Schritt-Story (neuer Schritt 12 „the exchange no-go and the
+contact-term criterion", „What remains" entsprechend). Wolfram 444→450
+(sechs Spiegel: Vertex-Raum-Dims 2/5 per Weyl-Nullraum, K⁽⁰⁾ = −15·K⁽²⁾,
+Produkt-Theorem symbolisch, Rang-3-Zertifikat (0,32,72) inkl. Kanäle und
+Natürlichkeits-Bilder, SO(16)-AB-Summe, D8-Quartik; Tripel-Enumeration +
+gekippte Regel Python-only, geflaggt). DAG: v508 am qft-Knoten. Kein Marker
+bewegt — die O-Fence ist nur GESCHÄRFT. Nächster Hebel: WP5e-δ1 (die
+getwisteten BCOV-Kontaktterme auf ℂ²/ℤ₄ als binärer Test — Orbifold-
+Elliptic-Genus/Twisted-Character-Arithmetik) und danach δ2 (Voll-Tensor-
+Ledger mit Nicht-Cartan-Beinen).
+
+## 2026-07-21 (XVII) — v507 (SEAM.BIT.ORIGIN.01): der Tautologie-Angriff auf das v506-Alignment-Bit promoviert — Herkunfts-Satz + Äquivalenz-Tetrade + Fermion-Dichotomie; Tautologie widerlegt, das Bit bleibt [C] (Klasse hergeleitet, Lage nicht)
+
+Die beiden Proben seam_alignment_bit_torus_origin_probe.py (17/17) und
+seam_alignment_bit_fermion_probe.py (9/9) aus experiments/tfpt-discovery/ sind
+als EIN Modul **v507_seam_bit_origin.py (SEAM.BIT.ORIGIN.01)** promoviert
+(26 Checks, ~2.6 s; Teil A sympy-exakt, Teil B exakte Cl(16)-Fractions;
+Suite gruen, jetzt 501 Skripte). Angriff: Marken UND Deck stammen aus
+DERSELBEN Torus-Struktur (Naht-Doppel T²_τ → S², v214/v260) — erzwingt die
+gemeinsame Herkunft das zentrale Alignment automatisch (Bit = Tautologie)?
+
+- **HERKUNFTS-SATZ (Teil A) [E]:** Marken = Fixpunkte der hyperelliptischen
+  Involution w↦−w = die 4 Halbperioden Λ/2Λ (1/3-Kontrolle scheitert); t_c
+  steigt ab ⟺ 2c ∈ Λ (genau die 3 Halbperioden-Translationen); expliziter
+  rationaler Kurven-Lift σ_i(x) = e_i + (e_i−e_j)(e_i−e_k)/(x−e_i) mit
+  Identität ∏(σ_i−e_l) = ψ_i²∏(x−e_l) symbolisch (℘-Additionsformel als
+  reine Algebra), Klein-V₄-Schluss; UMGEKEHRT sind die frei wirkenden
+  Involutionen in ALLEN drei Stabilisator-Typen (generisch (4,3,3),
+  harmonisch (8,5,3), hexagonal (12,3,3)) exakt die drei σ_c ⇒ **jedes
+  markenfreie Kragen-Deck IST eine Halbperioden-Translation — die Klasse
+  ist erzwungen, die Lage nicht**.
+- **KERN-SOLVE (symbolisch in λ) [E]:** σ_c hat markenerhaltende
+  PGL₂-Wurzel ⟺ λ ∈ {−1, 2, 1/2} (je c genau eine Lösung; intrinsisch:
+  Deck-Paare trennen sich harmonisch, Paar-Doppelverhältnis −1);
+  Vereinigung = harmonische Bahn ⟺ j = 1728 ⟺ τ = i; generisch: V₄ alle
+  zentral und trotzdem uhrlos („zentral allein ist leer" — das Bit ist die
+  Konjunktion D₄ ∧ zentral); v506-Deck landet unter allen 8 Bijektionen auf
+  σ₁ = −1/x (zentral); CM-Wörterbuch: mult-by-i fixiert genau
+  c* = (1+τ)/2, Uhr-Lift braucht ℤ[i] (ψ = 2i/(x+1)², t²+1 irreduzibel
+  über ℚ), Halbperioden liften rational.
+- **ÄQUIVALENZ-TETRADE [E]:** Uhr existiert ⟺ (τ = i ∧ Deck = CM-fixierte
+  Halbperiode) ⟺ (Stab = D₄ ∧ Deck zentral) ⟺ Deck-Paare harmonisch ⟺
+  **NS-Fock-Lift nichtsplittend**. Zirkularitäts-Audit: v493-Konverse
+  unabhängig re-verifiziert — zwei Konversen EINER Äquivalenz, kein Zirkel.
+- **FERMION-DICHOTOMIE (Teil B, das neue Gesicht) [E]:** zentrale Anordnung
+  (Shift um 8): Ũ² = 256·γ₁…γ₁₆ ⇒ U² = (−1)^F, nichtsplittende
+  ℤ₄-Erweiterung, 2 Wurzeln im 32er-Diederlift (ℤ₈-Turm); Kanten-Anordnung
+  (Spiegelung j↦4−j, Fixplätze = Nicht-Marken = Silber-{0,∞}):
+  Implementierung existiert, aber Ũ_e² = +2⁷·1 ⇒ U² = +1, Erweiterung
+  SPLITTET, 0 Wurzeln, kein ℤ₈; Ein-Teilchen (λ²+1)⁸ vs. (λ²−1)⁸;
+  Anordnungs-Census: alle 28 shift-invarianten 4-Sets kreuzen (zentral),
+  alle 21 spiegelungs-invarianten nicht; robust bei 8 Sites. **Das Bit =
+  eine physikalische Erweiterungsklasse (Fidkowski–Kitaev-artig)** —
+  ausgezeichnet, aber nicht hergeleitet: welche Klasse realisiert wird,
+  bleibt der Input.
+- **SILBER-EINORDNUNG [E]:** {±1, ±(3+2√2)} = „τ = i mit Deck =
+  nicht-CM-fixierter Halbperiode" (alle 8 Bijektionen → σ₂/σ₃, nie σ₁) —
+  in-family-Zeuge gegen die Tautologie: TAUTOLOGIE WIDERLEGT.
+- **DER [C]-REST (wörtlich):** das eine Alignment-Bit bleibt Carrier-Datum;
+  „keine Tautologie — die Herkunft erzwingt die Klasse, nicht die Lage".
+
+Integration: Ledger neue Zeile SEAM.BIT.ORIGIN.01; TEXT-Präzisierungen bei
+UNVERÄNDERTEN Markern: SEAM.CLOCK.RIGIDITY.01 (Tetrade + physikalisches
+Gesicht — v507), QGEO.REALIZE.01 („die Klasse des Decks IST hergeleitet
+(Halbperioden-Translation, v507); nur die Lage bleibt der Input"),
+P2.TYPING.01 (Querverweis auf dasselbe R1-Bit); \veri{v507} in tfpt_3
+(Celestial-Umfeld + QGEO-Absatz), contracts (Marken-/Kill-Test-Absatz),
+introduction/tfpt_1/tfpt_2/origin_theory je ein Satz. Wolfram 438→444
+(sechs Spiegel: Halbperioden-Abstieg + rationaler σ_i-Lift, Kern-Solve,
+Stabilisator-Zählungen via 24-Tripel-Enumeration, CM-Fixpunkt +
+lemniskatisches ψ, Cl(16)-Dichotomie 256·γ-Monom vs. Skalar 2⁷ +
+2-vs-0-Wurzelcensus im 32er-Lift, Silber-Bijektions-Census; v493-Audit +
+28/21-Census Python-only, geflaggt). DAG: v507 an P2-/QGEO-Knoten.
+Nächster Hebel: unverändert der von v506 — ein P1-seitiges Prinzip, das den
+Viertelshift an die MARKIERTE Dynamik koppelt (die Lage, nicht mehr die
+Klasse; die Tetrade gibt jetzt vier gleichwertige Angriffsflächen, die
+physikalische — Erweiterungsklasse auf der Naht — ist die neueste).
+
 ## 2026-07-21 (XVI) — v506 (SEAM.CLOCK.RIGIDITY.01): Uhr-Rigidität, Route B von v503 promoviert — zwei exakte Sätze reduzieren den Ordnung-4-Uhr-Input auf EIN Alignment-Bit; QGEO.REALIZE.01 bleibt [C]/[O] (nur Text-Präzisierung), P2-R1 auf dasselbe Bit kartiert
 
 Die beiden Proben seam_clock_rigidity_moebius_probe.py (19/19) und

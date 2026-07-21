@@ -1137,9 +1137,9 @@ The previous section identified the seam's boundary $2$-sphere with the celestia
 directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
-Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent eleven-step
-story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$ and $\beta$
-stages of the research contract
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent twelve-step
+story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$ and
+$\gamma$ stages of the research contract
 \texttt{CELEST.SEAM.01}, whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
 step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
@@ -1185,7 +1185,22 @@ order $4$, and a marks-preserving root exists \emph{iff} the deck is the \emph{c
 the mark-stabiliser $D_4$ --- given that alignment bit, order, uniqueness up to $\operatorname{Aut}(\Z_4)$,
 the free $4$-cycle and $\tau=i$ (scale free) are all theorems; harmonicity alone is \emph{not} enough
 (exact counterexample), and the fermionic $\Z_4$ forces the \emph{order}, not the alignment
-(\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01}; markers unchanged).
+(\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01}; markers unchanged). The bit
+itself has now survived its tautology attack: marks and deck \emph{do} share one torus origin ---
+the marks are the four half-periods $\Lambda/2\Lambda$ of the seam double, and \emph{every}
+mark-free collar deck is a half-period translation (in all three stabiliser types the freely-acting
+involutions are exactly the three $\sigma_c$), so the deck's \emph{class} is derived --- yet the
+origin does not force the alignment: the marks-preserving root exists iff the deck pairs separate
+harmonically ($\lambda\in\{-1,2,\tfrac12\}$, one value per half-period), the aligned half-period is
+the CM-fixed one $c^*=(1{+}\tau)/2$ (the clock's curve lift needs the unit $i$ of $\Z[i]$, while
+half-period decks lift rationally), and the silver counterexample sits \emph{in-family} as
+``$\tau=i$ with the deck a non-CM-fixed half-period''. The bit is thereby an equivalence
+\emph{tetrad} --- clock $\iff$ ($\tau{=}i$ and deck $=$ CM-fixed half-period) $\iff$ (Stab $=D_4$
+and deck central) $\iff$ harmonic deck pairs $\iff$ \emph{nonsplit} NS Fock lift --- with a physical
+face: the central arrangement carries the nontrivial Fidkowski--Kitaev-type extension class
+($U^2=(-1)^F$), the edge arrangement splits ($U_e^2=+1$, zero roots, no $\Z_8$ tower); only the
+\emph{position} (which half-period) stays the carrier input
+(\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}; no marker moves).
 
 \par\smallskip\noindent\textbf{Step 3 --- consistency, honestly demoted \mE/\mC.}
 $E_8$ is on Costello's axionic-consistency list (no
@@ -1296,12 +1311,39 @@ from the $O(-2)$ tower field itself. The preregistered kill (``inflow demands a 
 does \emph{not} fire on the equivariant skeleton.
 \veri{v505\_celestial\_wp5e\_beta\_equivariant\_ledger.py}
 
+\par\smallskip\noindent\textbf{Step 12 --- the exchange no-go and the contact-term criterion
+\mE/\mC.} Could the three sphere axions of Step 11 cancel the rigid $32\,T_3$ residual by
+Green--Schwarz-type \emph{exchange} with sector-compatible quadratic vertices? No --- and the
+refusal is a theorem, not a fit. The $W(D_5){\times}W(A_3)$-invariant vertex space on the glue
+Cartan is computed exactly (quadratics $=\mathrm{span}\{s_5,s_3\}$, dim $2$; quartics
+$=\mathrm{span}\{P_1,P_2,P_3,T_5,T_3\}$, dim $5$ --- complete by Weyl nullspace arithmetic over
+all bidegrees), and the \emph{product theorem} kills the mechanism wholesale: the product of any
+two invariant quadratics has identically zero $T_5/T_3$ content, so \emph{every} exchange image
+--- any number of axions, any selection rule, any couplings --- is annihilated by $\Phi_{T_3}$
+while $\Phi_{T_3}(A_{\mathrm{fix}})=32\neq0$. The enumeration sharpens where it fails: the strict
+two-index $\Z_4$ rule collapses the sphere couplings entirely (only $m=0$ survives); the generous
+twist-insertion channels give a rank-$2$ exchange matrix with
+$\operatorname{rank}([M\,|\,A_{\mathrm{fix}}])=3$ and annihilator certificate
+$(\Phi_{T_5},\Phi_{T_3},\Phi_P)(A_{\mathrm{fix}})=(0,32,72)$ --- two independent obstructions,
+the second driven by the side discovery $K^{(0)}=-15\,K^{(2)}$ (the even-sector quadratics are
+parallel). Naturalness \emph{dissolves}: $\mathrm{ch}_2$-natural and Atiyah--Bott-weight couplings
+both carry certificate $(0,0)$ against the required $(32,72)$ --- the ansatz space misses the
+target identically, scale- and coupling-independently. Controls: $SO(16)$ has \emph{no} sphere
+partners and uncancelled $T_5$ ($E_8$ is doubly special); $D_8$ has no $T_3$ structure at all.
+The slot bijection of Step 11 is untouched, and the preregistered level-kill still does not fire
+--- what dies is the exchange \emph{realisation} of the pairing; the $32\,T_3$ burden moves to
+the twisted BCOV contact terms, with a \emph{binary} criterion: the one-loop coefficient on
+$\mathbb C^2/\Z_4$ must come out exactly $(9,-30,-15,0,32)$, computed, not fitted.
+\veri{v508\_celestial\_wp5e\_gamma\_pairing.py}
+
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:
 the boundary partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the
 $q^{-1/3}$ prefactor whose CFT side Step 9 has pinned and whose equivariant skeleton Step 11 has
-verified --- with the rigid $32\,T_3$ twisted residual and the sphere-axion pairing as the named
-remaining targets, and preregistered success/kill criteria in the contract --- together with the
+verified --- the exchange sub-branch is closed by Step 12, so the named remaining targets are the
+twisted BCOV contact terms (the $\delta_1$ binary test: the one-loop coefficient exactly
+$(9,-30,-15,0,32)$) and the full-tensor ledger ($\delta_2$; the Step-12 collapse is a
+Cartan-restricted statement), with preregistered success/kill criteria in the contract --- together with the
 continuum uplift of the Step-10 lattice witnesses (Xu's theorem for the abstract orbifold
 statement; the concrete seam quotient net and the interacting condensed $(E_8)_1$ net are
 Costello--Li territory). The route does \emph{not} close \texttt{SEAM.EQUIV.01}; it gives the

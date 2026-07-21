@@ -4543,6 +4543,441 @@ Module[{s4orders, killtab, freen, lamx, deg3, deg5, spec, gap, gen, sq},
     spec === {1, 64/729, 1/729} && gap === (2/3)^6 && sq];
 ];
 
+(* ==== v507 round: SEAM.BIT.ORIGIN.01 -- the tautology attack on the v506
+   alignment bit, executed and refuted (Part A torus origin + Part B fermion
+   dichotomy).  Exact content mirrored: (i) the HALF-PERIOD DESCENT -- the
+   fixed points of w -> -w on C/(Z + tau Z) are the 4 half-periods (2w in
+   Lambda <=> coefficients in {0, 1/2}; the 1/3-control fails), a
+   translation t_c descends iff 2c in Lambda (exactly the 3 nonzero
+   half-periods), and the descended map sigma_i(x) = e_i +
+   (e_i-e_j)(e_i-e_k)/(x-e_i) satisfies the exact curve-lift identity
+   prod(sigma_i - e_l) = psi_i^2 prod(x - e_l) with RATIONAL psi_i, closing
+   to Klein V4 symbolically; (ii) the CORE SOLVE -- the pair cross-ratio
+   condition CR = -1 solves to lambda = -1 (sigma_1), 2 (sigma_2), 1/2
+   (sigma_3) exactly, union = the harmonic orbit with j = 1728, against
+   j(3) = 21952/9 and j(hex) = 0; (iii) the STABILISER COUNTS -- the
+   complete 24-triple enumeration gives (|Stab|, #involutions, #free) =
+   (4,3,3) generic / (8,5,3) harmonic / (12,3,3) hexagonal, and in ALL
+   three types the free involutions are EXACTLY the three sigma_c (the
+   deck CLASS is forced); (iv) the CM FIXED POINT -- mult-by-i mod 2 fixes
+   exactly the half-period (1,1) = c* = (1+tau)/2 while mult-by-rho
+   3-cycles all three, the lemniscatic clock ghat: x -> (x-1)/(x+1) needs
+   the curve-lift factor psi = 2i/(x+1)^2 (the CM unit; t^2+1 irreducible
+   over Q) and squares to the central -1/x; (v) the Cl(16) DICHOTOMY -- on
+   explicit 256x256 Jordan-Wigner gammas the central implementer squares
+   to 256 gamma_1...gamma_16 = 256 (-1)^F (nonsplit) while the EDGE
+   implementer Utilde_e = P_3 (g1+g5)(g2+g4)(g6-g16)(g7-g15)(g8-g14)
+   (g9-g13)(g10-g12) implements the NS edge reflection and squares to the
+   SCALAR +2^7 (split), and in the 32-element NS dihedral lift group the
+   central deck has EXACTLY 2 square roots (the +-quarter shifts) vs 0 for
+   the edge deck; (vi) the SILVER BIJECTION CENSUS -- all 8 mark bijections
+   {+-1, +-(3+2 sqrt 2)} -> {0, 1, -1, inf} carry the deck z -> -z to the
+   EDGE sigma_2/sigma_3 (never the central sigma_1), while all 8 mu4
+   bijections carry it to the CENTRAL sigma_1.  The v493 circularity-audit
+   direction and the 28/21 arrangement census stay Python-side (v507).
+   Mirrors v507. ==== *)
+Module[{half, tors, nonTors, halfPeriods, hpOK, c0fails, e1, e2, e3, x,
+        phi, psi, liftOK, weierSigma, propQS, S1, S2, S3, closure, abelian},
+  half = 1/2;
+  tors = Tuples[{{0, half}, {0, half}}];
+  nonTors = Select[Tuples[{{0, half, 1/3}, {0, half}}],
+    Mod[2 #[[1]], 1] == 0 && Mod[2 #[[2]], 1] == 0 &];
+  halfPeriods = {{half, 0}, {0, half}, {half, half}};
+  hpOK = And @@ (Mod[2 #[[1]], 1] == 0 && Mod[2 #[[2]], 1] == 0 & /@
+    halfPeriods);
+  c0fails = ! (Mod[2/3, 1] == 0);
+  weierSigma[ei_, ej_, ek_] := {{ei, (ei - ej) (ei - ek) - ei^2}, {1, -ei}};
+  liftOK = And @@ (Module[{ei = #[[1]], ej = #[[2]], ek = #[[3]], p, q},
+    phi = (ei x + ((ei - ej) (ei - ek) - ei^2))/(x - ei);
+    psi = (ei - ej) (ei - ek)/(x - ei)^2;
+    p = (phi - ei) (phi - ej) (phi - ek);
+    q = psi^2 (x - ei) (x - ej) (x - ek);
+    Simplify[Together[p - q]] === 0] & /@
+    {{e1, e2, e3}, {e2, e3, e1}, {e3, e1, e2}});
+  propQS[A_, B_] := And @@ (Simplify[#] === 0 & /@ Flatten[Table[
+    A[[i, j]] B[[k, l]] - A[[k, l]] B[[i, j]],
+    {i, 2}, {j, 2}, {k, 2}, {l, 2}]]);
+  S1 = weierSigma[e1, e2, e3]; S2 = weierSigma[e2, e3, e1];
+  S3 = weierSigma[e3, e1, e2];
+  closure = propQS[Simplify[S1 . S2], S3] &&
+    propQS[Simplify[S2 . S3], S1] && propQS[Simplify[S3 . S1], S2];
+  abelian = And @@ (propQS[Simplify[#[[1]] . #[[2]]],
+    Simplify[#[[2]] . #[[1]]]] & /@ Tuples[{{S1, S2, S3}, {S1, S2, S3}}]);
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (i): HALF-PERIOD DESCENT -- the fixed points of the hyperelliptic involution w -> -w on C/(Z + tau Z) are EXACTLY the 4 half-periods Lambda/2Lambda (2w in Lambda <=> both coefficients in {0, 1/2}; on the 6-point control grid with a 1/3-coefficient exactly the 4 genuine ones survive); a translation t_c commutes with w -> -w iff 2c in Lambda: TRUE for all 3 nonzero half-periods, FALSE for the control c = 1/3; the descended map sigma_i(x) = e_i + (e_i-e_j)(e_i-e_k)/(x-e_i) satisfies the exact curve-lift identity prod(sigma_i - e_l) = psi_i^2 prod(x - e_l) with RATIONAL psi_i = (e_i-e_j)(e_i-e_k)/(x-e_i)^2 (symbolic e1, e2, e3, all three cyclic assignments -- the p-function addition formula as pure algebra, no unit i needed), and {id, sigma_1, sigma_2, sigma_3} closes to Klein V4 projectively (sigma_i sigma_j = sigma_k, all commuting) -- the deck candidates for EVERY modulus",
+    Length[tors] === 4 && nonTors === tors && hpOK && c0fails &&
+    Length[halfPeriods] === 3 && liftOK && closure && abelian];
+];
+Module[{lam, pdet, crossRatio, jlam, pairs, expected, solveOK, jOK, lamHex},
+  pdet[p_, q_] := p[[1]] q[[2]] - q[[1]] p[[2]];
+  crossRatio[A_, B_, C_, D_] := Simplify[(pdet[A, C] pdet[B, D])/
+    (pdet[A, D] pdet[B, C])];
+  jlam[l_] := Simplify[256 (l^2 - l + 1)^3/(l^2 (l - 1)^2)];
+  (* sigma_c swaps A <-> B and C <-> D on the Legendre marks {0,1,lam,inf} *)
+  pairs = {{{0, 1}, {1, 0}, {1, 1}, {lam, 1}},     (* sigma_1: {0,inf},{1,lam} *)
+           {{1, 1}, {1, 0}, {0, 1}, {lam, 1}},     (* sigma_2: {1,inf},{0,lam} *)
+           {{lam, 1}, {1, 0}, {0, 1}, {1, 1}}};    (* sigma_3: {lam,inf},{0,1} *)
+  expected = {{-1}, {2}, {1/2}};
+  solveOK = And @@ Table[Module[{cr, sols},
+    cr = crossRatio @@ pairs[[c]];
+    sols = Select[lam /. Solve[Together[cr + 1] == 0, lam],
+      # =!= 0 && # =!= 1 &];
+    Sort[sols] === Sort[expected[[c]]]], {c, 3}];
+  lamHex = 1/2 + I Sqrt[3]/2;
+  jOK = jlam[-1] === 1728 && jlam[2] === 1728 && jlam[1/2] === 1728 &&
+    jlam[3] === 21952/9 && Simplify[jlam[lamHex]] === 0;
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (ii): THE CORE SOLVE -- a marks-preserving PGL2 square root of the half-period deck sigma_c exists iff its two deck pairs separate HARMONICALLY (pair cross-ratio = -1), and the condition solves EXACTLY to lambda = -1 (sigma_1: pairs {0,inf},{1,lambda}), lambda = 2 (sigma_2: {1,inf},{0,lambda}), lambda = 1/2 (sigma_3: {lambda,inf},{0,1}) -- per half-period c exactly ONE solution; the union over c is the harmonic orbit {-1, 2, 1/2} with j(-1) = j(2) = j(1/2) = 1728 (tau = i), against the controls j(3) = 21952/9 (generic) and j(hexagonal) = 0 -- 'which sigma_c aligns' is the modulus-plus-alignment choice",
+    solveOK && jOK];
+];
+Module[{papply, peqQ, propQ, ord, map3, adj, stab, marksOf, weierSigma,
+        sigmasOf, counts, lamHex, matchOK},
+  papply[M_, p_] := {M[[1, 1]] p[[1]] + M[[1, 2]] p[[2]],
+    M[[2, 1]] p[[1]] + M[[2, 2]] p[[2]]};
+  peqQ[p_, q_] := Simplify[p[[1]] q[[2]] - p[[2]] q[[1]]] === 0;
+  propQ[A_, B_] := Module[{a = Flatten[A], b = Flatten[B]},
+    And @@ Flatten[Table[Simplify[a[[i]] b[[j]] - a[[j]] b[[i]]] === 0,
+      {i, 4}, {j, 4}]]];
+  ord[M_] := Module[{P = IdentityMatrix[2]},
+    Catch[Do[P = Simplify[P . M];
+      If[Simplify[P[[1, 2]]] === 0 && Simplify[P[[2, 1]]] === 0 &&
+        Simplify[P[[1, 1]] - P[[2, 2]]] === 0, Throw[k]], {k, 1, 9}]; 0]];
+  map3[A_, B_, C_] := Module[{al, be},
+    al = C[[1]] B[[2]] - B[[1]] C[[2]]; be = A[[1]] C[[2]] - C[[1]] A[[2]];
+    {{al A[[1]], be B[[1]]}, {al A[[2]], be B[[2]]}}];
+  adj[M_] := {{M[[2, 2]], -M[[1, 2]]}, {-M[[2, 1]], M[[1, 1]]}};
+  stab[cfg_] := Module[{S, Sinv, found = {}, T, M, ok},
+    S = map3[cfg[[1]], cfg[[2]], cfg[[3]]]; Sinv = adj[S];
+    Do[T = map3[cfg[[t[[1]]]], cfg[[t[[2]]]], cfg[[t[[3]]]]];
+      M = Simplify[T . Sinv];
+      ok = And @@ Table[Or @@ (peqQ[papply[M, p], #] & /@ cfg), {p, cfg}];
+      If[ok && ! (Or @@ (propQ[M, #] & /@ found)), AppendTo[found, M]],
+      {t, Permutations[Range[4], {3}]}];
+    found];
+  marksOf[l_] := {{0, 1}, {1, 1}, {l, 1}, {1, 0}};
+  weierSigma[ei_, ej_, ek_] := {{ei, (ei - ej) (ei - ek) - ei^2}, {1, -ei}};
+  sigmasOf[l_] := {weierSigma[0, 1, l], weierSigma[1, 0, l],
+    weierSigma[l, 0, 1]};
+  lamHex = 1/2 + I Sqrt[3]/2;
+  counts = {}; matchOK = True;
+  Do[Module[{cfg = marksOf[l], sigs = sigmasOf[l], st, inv, free, match},
+    st = stab[cfg];
+    inv = Select[st, ord[#] === 2 &];
+    free = Select[inv, Function[g,
+      And @@ (! peqQ[papply[g, #], #] & /@ cfg)]];
+    match = And @@ (Function[g, Or @@ (propQ[g, #] & /@ sigs)] /@ free);
+    AppendTo[counts, {Length[st], Length[inv], Length[free]}];
+    matchOK = matchOK && match],
+    {l, {3, -1, lamHex}}];
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (iii): STABILISER COUNTS -- the complete 24-ordered-triple enumeration of the 4-mark stabiliser gives (|Stab|, #involutions, #freely-acting involutions) = (4,3,3) at the generic modulus lambda = 3 (Klein V4), (8,5,3) at the harmonic lambda = -1 (D4: 5 involutions, only 3 free), (12,3,3) at the hexagonal point (A4), and in ALL THREE types the freely-acting involutions are EXACTLY the three half-period involutions sigma_c -- EVERY mark-free collar deck descends from a half-period translation of the seam double: the CLASS of the deck is forced by the origin, only WHICH half-period is not",
+    counts === {{4, 3, 3}, {8, 5, 3}, {12, 3, 3}} && matchOK];
+];
+Module[{Mi, Mrho, vecs, fixI, orbRho, fixRho, x, t, phig, psig, prodG,
+        prodX, liftG, ratioOK, irre, ghat, sigCen, propQ, ord, ghatSq,
+        ghatO4},
+  propQ[A_, B_] := Module[{a = Flatten[A], b = Flatten[B]},
+    And @@ Flatten[Table[Simplify[a[[i]] b[[j]] - a[[j]] b[[i]]] === 0,
+      {i, 4}, {j, 4}]]];
+  ord[M_] := Module[{P = IdentityMatrix[2]},
+    Catch[Do[P = Simplify[P . M];
+      If[Simplify[P[[1, 2]]] === 0 && Simplify[P[[2, 1]]] === 0 &&
+        Simplify[P[[1, 1]] - P[[2, 2]]] === 0, Throw[k]], {k, 1, 9}]; 0]];
+  Mi = {{0, -1}, {1, 0}};                       (* mult by i on basis (1, i) *)
+  Mrho = {{0, -1}, {1, 1}};                     (* mult by rho on (1, rho) *)
+  vecs = {{1, 0}, {0, 1}, {1, 1}};
+  fixI = Select[vecs, Mod[Mi . # - #, 2] === {0, 0} &];
+  orbRho = NestList[Mod[Mrho . #, 2] &, {1, 0}, 2];
+  fixRho = Select[vecs, Mod[Mrho . # - #, 2] === {0, 0} &];
+  phig = (x - 1)/(x + 1);
+  psig = 2 I/(x + 1)^2;
+  prodG = phig (phig - 1) (phig + 1);
+  prodX = x (x - 1) (x + 1);
+  liftG = Simplify[Together[prodG - psig^2 prodX]] === 0;
+  ratioOK = Simplify[Cancel[prodG/prodX] + 4/(x + 1)^4] === 0;
+  irre = IrreduciblePolynomialQ[t^2 + 1];
+  ghat = {{1, -1}, {1, 1}};                     (* x -> (x-1)/(x+1) *)
+  sigCen = {{0, -1}, {1, 0}};                   (* the central -1/x *)
+  ghatO4 = ord[ghat] === 4;
+  ghatSq = propQ[Simplify[ghat . ghat], sigCen];
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (iv): THE CM FIXED POINT -- on the half-periods mod 2 the CM action mult-by-i = [[0,-1],[1,0]] fixes EXACTLY ONE nonzero half-period, the vector (1,1) = c* = (1+tau)/2 (the intrinsically distinguished translation), while mult-by-rho = [[0,-1],[1,1]] 3-CYCLES all three (zero fixed -- at the hexagonal point NO half-period is distinguished, matching A4 with zero order-4 elements); on the lemniscatic curve the clock ghat: x -> (x-1)/(x+1) has projective order 4 and ghat^2 = -1/x = the CENTRAL half-period involution, and its curve lift REQUIRES psi = 2i/(x+1)^2 (exact identity prod(phi - e) = psi^2 prod(x - e) with ratio -4/(x+1)^4; t^2+1 irreducible over Q) -- half-period decks lift rationally, the clock root exists only WITH the CM unit i <=> tau = i",
+    Length[fixI] === 1 && fixI[[1]] === {1, 1} &&
+    Length[Union[orbRho]] === 3 && fixRho === {} &&
+    liftG && ratioOK && irre && ghatO4 && ghatSq];
+];
+Module[{gam, id, zero, Ut, GAMMA, Ue, Ue2, implOK, shiftM, reflM, Dns, Rns,
+        group, matPropQ, rootsD, rootsR, pairsE, imgOf},
+  gam = Table[Module[{kk = Quotient[j + 1, 2], op},
+    op = If[OddQ[j], PauliMatrix[1], PauliMatrix[2]];
+    SparseArray[KroneckerProduct @@ Join[
+      ConstantArray[PauliMatrix[3], kk - 1], {op},
+      ConstantArray[IdentityMatrix[2], 8 - kk]]]], {j, 1, 16}];
+  id = IdentityMatrix[256, SparseArray];
+  zero = ConstantArray[0, {256, 256}];
+  Ut = Fold[#1 . (id - gam[[#2]] . gam[[#2 + 8]]) &, id, Range[8]];
+  GAMMA = Fold[#1 . gam[[#2]] &, id, Range[16]];
+  (* NS edge reflection j -> 4-j (0-based; fixed sites 3, 11 1-based):
+     implementer P_3 x (g1+g5)(g2+g4)(g6-g16)(g7-g15)(g8-g14)(g9-g13)(g10-g12) *)
+  Ue = Fold[#1 . gam[[#2]] &, id, Delete[Range[16], 3]];
+  pairsE = {{1, 5, 1}, {2, 4, 1}, {6, 16, -1}, {7, 15, -1}, {8, 14, -1},
+    {9, 13, -1}, {10, 12, -1}};
+  Ue = Fold[#1 . (gam[[#2[[1]]]] + #2[[3]] gam[[#2[[2]]]]) &, Ue, pairsE];
+  Ue2 = Ue . Ue;
+  imgOf[a_] := Module[{b0 = Mod[4 - (a - 1), 32]},
+    {Mod[b0, 16] + 1, If[b0 >= 16, -1, 1]}];
+  implOK = And @@ Table[Module[{bi = imgOf[a]},
+    Normal[Ue . gam[[a]]] === Normal[bi[[2]] gam[[bi[[1]]]] . Ue]],
+    {a, 1, 16}];
+  shiftM[n_, k_] := Table[
+    If[Mod[a + k, n] == bb, If[a + k >= n, -1, 1], 0],
+    {bb, 0, n - 1}, {a, 0, n - 1}];
+  reflM[n_, k_] := Table[Module[{idx = Mod[k - a, 2 n]},
+    If[Mod[idx, n] == bb, If[idx >= n, -1, 1], 0]],
+    {bb, 0, n - 1}, {a, 0, n - 1}];
+  Dns = shiftM[16, 8]; Rns = reflM[16, 4];
+  group = Join[Table[shiftM[16, k], {k, 0, 15}],
+    Table[reflM[16, k], {k, 0, 15}]];
+  matPropQ[A_, B_] := A === B || A === -B;
+  rootsD = Flatten[Position[group, g_ /; matPropQ[g . g, Dns], {1},
+    Heads -> False]];
+  rootsR = Flatten[Position[group, g_ /; matPropQ[g . g, Rns], {1},
+    Heads -> False]];
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (v): THE Cl(16) DICHOTOMY -- on explicit 256x256 Jordan-Wigner gamma matrices the CENTRAL implementer Utilde = prod_j (1 - gamma_j gamma_{j+8}) squares to 256 gamma_1...gamma_16 = 256 (-1)^F (NONSPLIT Z4, v506 reproduced), while the EDGE implementer Utilde_e = P_3 (g1+g5)(g2+g4)(g6-g16)(g7-g15)(g8-g14)(g9-g13)(g10-g12) implements the NS edge reflection j -> 4-j on ALL 16 generators (the implementation does NOT break) and squares to the SCALAR +2^7 x 1 EXACTLY (U_e^2 = +1: the extension SPLITS -- the fermions measure the alignment); in the 32-element NS dihedral lift group the central deck has EXACTLY 2 square roots (the +-quarter shifts, lift indices 5 and 13 = shifts by 4 and 12: the clock pair) while the edge deck has 0 (no Z8 tower over the edge deck) -- the Moebius root count 2 vs 0 reappears fermionically",
+    Normal[Ut . Ut] === Normal[256 GAMMA] && implOK &&
+    Normal[Ue2] === Normal[128 id] &&
+    rootsD === {5, 13} && rootsR === {}];
+];
+Module[{papply, peqQ, propQ, map3, adj, conjSearch, deck, sig1, sig2, sig3,
+        sigs, vS, silver, mu4set, lemn, resS, resMu},
+  papply[M_, p_] := {M[[1, 1]] p[[1]] + M[[1, 2]] p[[2]],
+    M[[2, 1]] p[[1]] + M[[2, 2]] p[[2]]};
+  peqQ[p_, q_] := Simplify[p[[1]] q[[2]] - p[[2]] q[[1]]] === 0;
+  propQ[A_, B_] := Module[{a = Flatten[A], b = Flatten[B]},
+    And @@ Flatten[Table[Simplify[a[[i]] b[[j]] - a[[j]] b[[i]]] === 0,
+      {i, 4}, {j, 4}]]];
+  map3[A_, B_, C_] := Module[{al, be},
+    al = C[[1]] B[[2]] - B[[1]] C[[2]]; be = A[[1]] C[[2]] - C[[1]] A[[2]];
+    {{al A[[1]], be B[[1]]}, {al A[[2]], be B[[2]]}}];
+  adj[M_] := {{M[[2, 2]], -M[[1, 2]]}, {-M[[2, 1]], M[[1, 1]]}};
+  conjSearch[src_, deckM_, tgt_, sigList_] := Module[
+    {Sinv = adj[map3[src[[1]], src[[2]], src[[3]]]], nh = 0, hits = {},
+     T, h, hc},
+    Do[T = map3[tgt[[t[[1]]]], tgt[[t[[2]]]], tgt[[t[[3]]]]];
+      h = Simplify[T . Sinv];
+      If[Or @@ (peqQ[papply[h, src[[4]]], #] & /@ tgt),
+        nh += 1;
+        hc = Simplify[h . deckM . adj[h]];
+        Do[If[propQ[hc, sigList[[s]]], AppendTo[hits, s]], {s, 3}]],
+      {t, Permutations[Range[4], {3}]}];
+    {nh, Union[hits]}];
+  deck = DiagonalMatrix[{1, -1}];
+  (* the three half-period involutions in Legendre form at lam = -1 *)
+  sig1 = {{0, -1}, {1, 0}}; sig2 = {{1, 1}, {1, -1}};
+  sig3 = {{-1, 1}, {1, 1}};
+  sigs = {sig1, sig2, sig3};
+  vS = 3 + 2 Sqrt[2];
+  silver = {{1, 1}, {-1, 1}, {vS, 1}, {-vS, 1}};
+  mu4set = {{1, 1}, {I, 1}, {-1, 1}, {-I, 1}};
+  lemn = {{0, 1}, {1, 1}, {-1, 1}, {1, 0}};
+  resS = conjSearch[silver, deck, lemn, sigs];
+  resMu = conjSearch[mu4set, deck, lemn, sigs];
+  checkExact["v507 SEAM.BIT.ORIGIN.01 (vi): THE SILVER BIJECTION CENSUS -- among all 24 ordered mark triples exactly 8 Moebius maps carry the silver counterexample {+-1, +-(3+2 sqrt 2)} onto the Legendre marks {0, 1, -1, inf}, and EVERY one conjugates the deck z -> -z to an EDGE half-period involution sigma_2 or sigma_3, NEVER the central sigma_1 = -1/x (the silver set IS 'tau = i with deck = a non-CM-fixed half-period translation' -- the in-family witness that refutes the tautology); the control: all 8 bijections mu4 -> Legendre carry the v506 seam deck to the CENTRAL sigma_1 ONLY -- the common torus origin does NOT force the alignment, the bit is the position choice among the half-periods",
+    resS === {8, {2, 3}} && resMu === {8, {1}}];
+];
+
+(* ==== v508 round: CELEST.WP5E.GAMMA.01 -- WP5e-gamma "the sphere-axion
+   pairing check", an honest rigid NEGATIVE result (the exchange route for
+   pairing the three twisted sphere axions with the rigid 32 T3 residual of
+   the v505 Atiyah-Bott ledger is killed with a certificate).  Exact content
+   mirrored: (i) the VERTEX-SPACE DIMS -- the W(D5) x W(A3)-invariant
+   quadratics on the 8-dim glue Cartan have bidegree dims (1,0,1), total 2 =
+   span{s5, s3}, and the invariant quartics have bidegree dims (2,0,1,0,2),
+   total 5 = span{P1,P2,P3,T5,T3} (Weyl nullspace arithmetic, generator by
+   generator); (ii) the TWISTED QUADRATICS + the K^(0) = -15 K^(2) collapse
+   (the two even-sector quadratics are PARALLEL); (iii) the PRODUCT THEOREM
+   -- (a s5 + b s3)(c s5 + d s3) = ac P1 + (ad+bc) P2 + bd P3 identically
+   (zero T5/T3 content of every exchange image); (iv) the RANK-3 CERTIFICATE
+   -- channels E13 = (16,-96,144,0,0), E22 = (16,32,16,0,0), E00 = 225 E22,
+   exchange matrix rank 2 with kernel 0, rank([M | A_fix]) = 3, annihilator
+   certificate (Phi_T5, Phi_T3, Phi_P)(A_fix) = (0, 32, 72), and the
+   naturalness images (25/4,-11/2,97/4,0,0) / (12,-40,76,0,0) with
+   certificate (0,0); (v) the SO(16) AB SUM (15,-18,-15,-4,40) -- T5 does
+   not even cancel, odd classes empty; (vi) the D8 NATIVE QUARTIC
+   16 T8 + 12 s8^2 with Killing 28 s8 -- no T3 structure.  Mirrors v508. ==== *)
+Module[{xs, ys, vars, gens, comps, monTuples, invDim, dQuad, dQuart},
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  vars = Join[xs, ys];
+  gens = {
+    {xs[[1]] -> xs[[2]], xs[[2]] -> xs[[1]]},
+    {xs[[2]] -> xs[[3]], xs[[3]] -> xs[[2]]},
+    {xs[[3]] -> xs[[4]], xs[[4]] -> xs[[3]]},
+    {xs[[4]] -> xs[[5]], xs[[5]] -> xs[[4]]},
+    {xs[[4]] -> -xs[[5]], xs[[5]] -> -xs[[4]]},
+    {ys[[1]] -> ys[[2]], ys[[2]] -> ys[[1]]},
+    {ys[[2]] -> ys[[3]], ys[[3]] -> ys[[2]]},
+    {ys[[3]] -> -ys[[1]] - ys[[2]] - ys[[3]]}};
+  comps[t_, p_] := If[t == 0, {ConstantArray[0, p]},
+    Flatten[Permutations /@
+      (PadRight[#, p] & /@ IntegerPartitions[t, {1, p}]), 1]];
+  monTuples[dx_, dy_] := Flatten[Table[Join[cx, cy],
+    {cx, comps[dx, 5]}, {cy, comps[dy, 3]}], 1];
+  invDim[dx_, dy_] := Module[{mons, idx, n, blocks},
+    mons = monTuples[dx, dy];
+    n = Length[mons];
+    idx = AssociationThread[mons -> Range[n]];
+    blocks = Table[Module[{A = ConstantArray[0, {n, n}]},
+      Do[Module[{ex = Expand[(Times @@ (vars^mons[[i]])) /. g], cr},
+        cr = CoefficientRules[ex, vars];
+        Do[A[[idx[r[[1]]], i]] += r[[2]], {r, cr}]], {i, n}];
+      A - IdentityMatrix[n]], {g, gens}];
+    n - MatrixRank[Join @@ blocks]];
+  dQuad = {invDim[2, 0], invDim[1, 1], invDim[0, 2]};
+  dQuart = {invDim[4, 0], invDim[3, 1], invDim[2, 2], invDim[1, 3],
+    invDim[0, 4]};
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (i): VERTEX-SPACE DIMS -- the W(D5) x W(A3)-invariant quadratics on the 8-dim glue Cartan have bidegree dims (x^2, xy, y^2) = (1, 0, 1), total 2 = span{s5, s3} (the COMPLETE gauge-invariant quadratic vertex basis), and the invariant quartics have bidegree dims (4,0)/(3,1)/(2,2)/(1,3)/(0,4) = (2, 0, 1, 0, 2), total 5 = span{P1, P2, P3, T5, T3} (the complete anomaly bookkeeping space) -- exact Weyl nullspace arithmetic over all bidegrees, generator by generator",
+    dQuad === {1, 0, 1} && Total[dQuad] === 2 &&
+    dQuart === {2, 0, 1, 0, 2} && Total[dQuart] === 5];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin, S5v,
+        S3v, K, Ktw},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  K = Table[Expand[Total[lin[#[[1]]]^2 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Ktw = Table[Expand[Sum[I^(j m) K[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (ii): TWISTED QUADRATICS + THE EVEN-SECTOR COLLAPSE -- K^{(0)} = 60(s5+s3), K^{(1)} = K^{(3)} = 4 s5 - 12 s3, K^{(2)} = -4(s5+s3) exactly (the v505 sector quadratics recomputed), and the SIDE DISCOVERY K^{(0)} = -15 K^{(2)}: the two even-sector quadratics are PARALLEL -- this collapse reduces the charge-0 product span to 2 dims and drives the Phi_P obstruction",
+    Expand[Ktw[[1]] - 60 (S5v + S3v)] === 0 &&
+    Expand[Ktw[[2]] - (4 S5v - 12 S3v)] === 0 &&
+    Expand[Ktw[[4]] - Ktw[[2]]] === 0 &&
+    Expand[Ktw[[3]] + 4 (S5v + S3v)] === 0 &&
+    Expand[Ktw[[1]] + 15 Ktw[[3]]] === 0];
+];
+Module[{xs, ys, y4, S5v, S3v, P1v, P2v, P3v, aa, bb, cc, dd, prod},
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  P1v = Expand[S5v^2]; P2v = Expand[S5v S3v]; P3v = Expand[S3v^2];
+  prod = Expand[(aa S5v + bb S3v) (cc S5v + dd S3v) -
+    (aa cc P1v + (aa dd + bb cc) P2v + bb dd P3v)];
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (iii): THE PRODUCT THEOREM (the master kill) -- (a s5 + b s3)(c s5 + d s3) = ac P1 + (ad+bc) P2 + bd P3 IDENTICALLY (symbolic a, b, c, d): the product of ANY two invariant quadratics has identically ZERO T5- and T3-content, so every scalar-exchange image (any axion count, any selection rule, any couplings) is annihilated by Phi_T3 while Phi_T3(A_fix) = 32 != 0 -- the pairing is decided before enumeration",
+    prod === 0];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin, S5v,
+        S3v, basis, K, Ktw, Q, Qtw, vec5, e13, e22, e00, dA, M, Maug, phiP,
+        phiT5, phiT3, phiOf, imgF, imgAB},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  basis = {Expand[S5v^2], Expand[S5v S3v], Expand[S3v^2],
+    Total[xs^4], Expand[Total[y4^4]]};
+  K = Table[Expand[Total[lin[#[[1]]]^2 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Ktw = Table[Expand[Sum[I^(j m) K[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qtw = Table[Expand[Sum[I^(j m) Q[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  vec5[expr_] := Module[{cs = Array[Subscript[cv, #] &, 5], eqs, sol},
+    eqs = Thread[(CoefficientRules[Expand[expr - cs . basis],
+      Join[xs, ys]][[All, 2]]) == 0];
+    sol = Quiet[Solve[eqs, cs]];
+    If[sol === {}, $Failed, cs /. First[sol]]];
+  e13 = vec5[Expand[Ktw[[4]] Ktw[[2]]]];
+  e22 = vec5[Expand[Ktw[[3]]^2]];
+  e00 = vec5[Expand[Ktw[[1]]^2]];
+  dA = vec5[Expand[Qtw[[2]]/2 + Qtw[[3]]/4 + Qtw[[4]]/2]];
+  M = Transpose[{e13, e22}];
+  Maug = Transpose[{e13, e22, dA}];
+  phiT5 = {0, 0, 0, 1, 0}; phiT3 = {0, 0, 0, 0, 1};
+  phiP = {3, -1, -1, 0, 0};
+  phiOf[f_, v_] := f . v;
+  imgF = Expand[(-3/8) (-3/8) e13 + (-1/2)^2 e22];
+  imgAB = Expand[(1/2) e13 + (1/4) e22];
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (iv): THE RANK-3 CERTIFICATE -- exchange channels E13 = K^{(3)}K^{(1)} = (16, -96, 144, 0, 0), E22 = (K^{(2)})^2 = (16, 32, 16, 0, 0), bulk E00 = (K^{(0)})^2 = 225 E22 (parallel); the exchange matrix M (5 x 2) has rank 2 with kernel 0 and rank([M | A_fix]) = 3 > 2: UNSOLVABLE, with A_fix = (9, -30, -15, 0, 32) and annihilator certificate (Phi_T5, Phi_T3, Phi_P)(A_fix) = (0, 32, 72) (each functional annihilates E13, E22, E00); the naturalness anchors miss identically: ch2-natural couplings (9/64, 1/4) give (25/4, -11/2, 97/4, 0, 0) and AB-weight couplings (1/2, 1/4) give (12, -40, 76, 0, 0), BOTH with certificate (0, 0) vs required (32, 72) -- scale- and coupling-independent",
+    e13 === {16, -96, 144, 0, 0} && e22 === {16, 32, 16, 0, 0} &&
+    e00 === 225 e22 && dA === {9, -30, -15, 0, 32} &&
+    MatrixRank[M] === 2 && NullSpace[M] === {} &&
+    MatrixRank[Maug] === 3 &&
+    (And @@ Flatten[Table[phiOf[f, v] === 0,
+      {f, {phiT5, phiT3, phiP}}, {v, {e13, e22, e00}}]]) &&
+    {phiOf[phiT5, dA], phiOf[phiT3, dA], phiOf[phiP, dA]} === {0, 32, 72} &&
+    imgF === {25/4, -11/2, 97/4, 0, 0} && imgAB === {12, -40, 76, 0, 0} &&
+    phiOf[phiT3, imgF] === 0 && phiOf[phiP, imgF] === 0 &&
+    phiOf[phiT3, imgAB] === 0 && phiOf[phiP, imgAB] === 0];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin, S5v,
+        S3v, P1v, P2v, P3v, T5v, T3v, Q, Qso, aso},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  P1v = Expand[S5v^2]; P2v = Expand[S5v S3v]; P3v = Expand[S3v^2];
+  T5v = Total[xs^4]; T3v = Expand[Total[y4^4]];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qso = {Q[[1]], Q[[3]]};   (* classes 0 and 2 only: the so16 subalgebra *)
+  aso = Expand[Sum[(I^(j 0) Qso[[1]] + I^(j 2) Qso[[2]]) {1/2, 1/4, 1/2}[[j]],
+    {j, 1, 3}]];
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (v): THE SO(16) NEGATIVE CONTROL -- restricting to the even classes {0, 2} (the so16 glue: a mere Z2 monodromy, odd McKay nodes EMPTY -- there are NO twisted sphere-axion partners at all), the Atiyah-Bott-weighted sum is (15, -18, -15, -4, 40) in (P1, P2, P3, T5, T3): the D5 quartic does NOT even cancel (T5 = -4, unlike E8's exact T5 = 0) and 40 T3 stands with zero axions available -- the mechanism is structurally BROKEN, not merely obstructed; the E8 mu4 glue is special on both counts",
+    Expand[aso - (15 P1v - 18 P2v - 15 P3v - 4 T5v + 40 T3v)] === 0];
+];
+Module[{zs, s8, t8, quad, quart, lf},
+  zs = Array[Subscript[z, #] &, 8];
+  s8 = zs . zs; t8 = Total[zs^4];
+  quad = 0; quart = 0;
+  Do[Do[
+    lf = si zs[[p[[1]]]] + sj zs[[p[[2]]]];
+    quad += lf^2; quart += lf^4,
+    {si, {1, -1}}, {sj, {1, -1}}],
+    {p, Subsets[Range[8], {2}]}];
+  checkExact["v508 CELEST.WP5E.GAMMA.01 (vi): THE D8 NATIVE QUARTIC -- on the D8 Cartan the 112 so16 roots give sum <alpha,z>^2 = 28 s8 (2 h_vee(D8) = 28 Killing) and sum <alpha,z>^4 = 16 T8 + 12 s8^2 exactly: the independent quartic coefficient 16 != 0 (no Okubo reduction) and there is NO A3 block at all -- no T3 structure, no sphere classes, nothing to pair: the gamma question cannot even be posed for the D8 route",
+    Expand[quad - 28 s8] === 0 &&
+    Expand[quart - (16 t8 + 12 s8^2)] === 0];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506: ", $pass, " passed, ", $fail, " failed ---"];
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

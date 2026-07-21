@@ -12,7 +12,7 @@
   "date": "2026-07-02"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "94ea0651af85",
+  "hash": "33f9bcf73a3f",
   "date": "2026-07-21"
  },
  "introduction::subsection::The companion documents::1": {
@@ -304,7 +304,7 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Theorem 7 --- the $D_5\\times A_3$ lift of the $E_8$ atlas::1": {
-  "hash": "50b7857d59c9",
+  "hash": "04a3501f606e",
   "date": "2026-07-21"
  },
  "tfpt_1_architecture_e8::section::Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\\varphi_0$-ladder::1": {
@@ -424,7 +424,7 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Global computation: the anchor multiset is derived::1": {
-  "hash": "36bf815308ae",
+  "hash": "d4626931c26c",
   "date": "2026-07-21"
  },
  "tfpt_2_standard_model::subsection::Part (ii): the $\\mathbb Z_6$ structure of the residues, and the frontier::1": {
@@ -572,7 +572,7 @@
   "date": "2026-07-21"
  },
  "tfpt_3_e8_audit_bootstrap::section::The celestial route: from the $\\mu_4$ clock to the $(E_8)_1$ boundary shadow::1": {
-  "hash": "7a4643aae878",
+  "hash": "e4644df5ea91",
   "date": "2026-07-21"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
@@ -716,7 +716,7 @@
   "date": "2026-07-03"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "8766010bdca5",
+  "hash": "ed2bdcd1009b",
   "date": "2026-07-21"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
@@ -724,7 +724,7 @@
   "date": "2026-07-14"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial-holographic route)::1": {
-  "hash": "6fe99f4d610e",
+  "hash": "b7bca4a85919",
   "date": "2026-07-21"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
@@ -776,7 +776,7 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "60ca8ef10942",
+  "hash": "91ac1dcf5666",
   "date": "2026-07-21"
  },
  "origin_theory::section::Appendix: computational verification::1": {
@@ -812,7 +812,7 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Layer 6 --- two independent reproduction paths::1": {
-  "hash": "25fb2439f0b4",
+  "hash": "2016bcdfad9c",
   "date": "2026-07-21"
  },
  "tfpt_safeguards::section::Layer 7 --- the red team::1": {
