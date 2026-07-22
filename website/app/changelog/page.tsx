@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, FileText, Github } from "lucide-react";
-import { Changelog } from "@/components/Changelog";
-import { CHANGELOG, CHANGELOG_COUNT } from "@/lib/changelog";
+import {
+  ChangelogBrowser,
+  type ChangelogDayEntry,
+  type ChangelogIndexEntry,
+  type DayMeta,
+} from "@/components/ChangelogBrowser";
+import {
+  CHANGELOG,
+  CHANGELOG_COUNT,
+  CHANGELOG_MACROS,
+  type ChangelogNode,
+} from "@/lib/changelog";
 import { REPO_URL, SITE_URL } from "@/lib/utils";
 import { SITE_VERSION } from "@/lib/version";
 
@@ -12,7 +22,7 @@ const earliest = CHANGELOG[CHANGELOG.length - 1]?.date ?? "";
 export const metadata: Metadata = {
   title: "Changelog — Every Change and New Result, by Date",
   description:
-    "The canonical, dated record of every change to TFPT: new verification modules (vN), status changes, editorial passes and infrastructure. Mirrored from the repository's changelog and kept in lock-step with the theory, the verification suite and the papers.",
+    "The canonical, dated record of every change to TFPT: new verification modules (vN), status changes, editorial passes and infrastructure. Browse day by day, filter by module, claim or status. Mirrored from the repository's changelog and kept in lock-step with the theory, the verification suite and the papers.",
   keywords: [
     "TFPT changelog",
     "verification modules",
@@ -39,7 +49,149 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ChangelogPage() {
+// --------------------------------------------------------------------------
+// Server-side derivation of the browsing data. The full CHANGELOG (node trees,
+// ~2 MB) stays server-only; the client receives the tiny day list, a compact
+// searchable index and just the selected day's full entries.
+// --------------------------------------------------------------------------
+
+function nodesToText(nodes: ChangelogNode[]): string {
+  return nodes
+    .map((n) => {
+      if (n.k === "t" || n.k === "m" || n.k === "c") return n.v ?? "";
+      if (n.k === "s") return `[${n.v ?? "O"}]`;
+      if ((n.k === "b" || n.k === "i") && n.c) return nodesToText(n.c);
+      return "";
+    })
+    .join("");
+}
+
+function collectMarkers(nodes: ChangelogNode[], into: Set<string>): void {
+  for (const n of nodes) {
+    if (n.k === "s" && n.v) into.add(n.v);
+    if ((n.k === "b" || n.k === "i") && n.c) collectMarkers(n.c, into);
+  }
+}
+
+function hasModuleCode(nodes: ChangelogNode[]): boolean {
+  return nodes.some((n) => {
+    if (n.k === "c" && n.v && /^v\d+/.test(n.v)) return true;
+    if ((n.k === "b" || n.k === "i") && n.c) return hasModuleCode(n.c);
+    return false;
+  });
+}
+
+const EXPERIMENT_RE = /experiments?\s+level\s+only|experiment-level|experiments\//i;
+const EDITORIAL_RE = /\beditorial\b/i;
+
+/** Extract the enumerator (e.g. "XXIII") that make_changelog_web.py appends to
+ *  the date label as "YYYY-MM-DD · XXIII". */
+function enumOf(label: string): string {
+  const parts = label.split(" \u00b7 ");
+  return parts.length > 1 ? parts[parts.length - 1].trim() : "";
+}
+
+function clip(s: string, n: number): string {
+  const t = s.replace(/\s+/g, " ").trim();
+  return t.length > n ? t.slice(0, n).trimEnd() + "\u2026" : t;
+}
+
+interface DerivedEntry {
+  gi: number;
+  date: string;
+  label: string;
+  enumr: string;
+  heading: ChangelogNode[];
+  items: ChangelogNode[][];
+  anchor: string;
+  lead: string;
+  text: string;
+  tags: string[];
+}
+
+function deriveEntry(entry: (typeof CHANGELOG)[number], gi: number): DerivedEntry {
+  const allNodes: ChangelogNode[] = [
+    ...entry.heading,
+    ...entry.items.flat(),
+  ];
+  const fullText = [entry.heading, ...entry.items]
+    .map((nodes) => nodesToText(nodes))
+    .join(" ");
+
+  const markers = new Set<string>();
+  collectMarkers(allNodes, markers);
+
+  const tags: string[] = [];
+  if (hasModuleCode(allNodes)) tags.push("module");
+  if (EDITORIAL_RE.test(fullText)) tags.push("editorial");
+  if (EXPERIMENT_RE.test(fullText)) tags.push("experiment");
+  for (const m of markers) tags.push(m);
+
+  const leadSource =
+    entry.heading.length > 0
+      ? nodesToText(entry.heading)
+      : entry.items.length > 0
+        ? nodesToText(entry.items[0])
+        : "";
+
+  return {
+    gi,
+    date: entry.date,
+    label: entry.dateLabel,
+    enumr: enumOf(entry.dateLabel),
+    heading: entry.heading,
+    items: entry.items,
+    anchor: `cl-${gi}`,
+    lead: clip(leadSource, 220),
+    text: clip(fullText, 900).toLowerCase(),
+    tags,
+  };
+}
+
+export default async function ChangelogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ day?: string }>;
+}) {
+  const derived = CHANGELOG.map((e, i) => deriveEntry(e, i));
+
+  // Day list (newest first, CHANGELOG order preserved), with per-day counts.
+  const days: DayMeta[] = [];
+  const dayPos = new Map<string, number>();
+  for (const e of derived) {
+    const at = dayPos.get(e.date);
+    if (at === undefined) {
+      dayPos.set(e.date, days.length);
+      days.push({ date: e.date, count: 1 });
+    } else {
+      days[at].count += 1;
+    }
+  }
+
+  const sp = await searchParams;
+  const selectedDay =
+    sp.day && dayPos.has(sp.day) ? sp.day : days[0]?.date ?? "";
+
+  const dayEntries: ChangelogDayEntry[] = derived
+    .filter((e) => e.date === selectedDay)
+    .map((e) => ({
+      label: e.label,
+      enumr: e.enumr,
+      heading: e.heading,
+      items: e.items,
+      anchor: e.anchor,
+    }));
+
+  const index: ChangelogIndexEntry[] = derived.map((e) => ({
+    date: e.date,
+    label: e.label,
+    enumr: e.enumr,
+    lead: e.lead,
+    text: e.text,
+    anchor: e.anchor,
+    tags: e.tags,
+  }));
+
   return (
     <>
       <section className="relative isolate overflow-hidden pt-12 pb-8 sm:pt-16">
@@ -66,6 +218,8 @@ export default function ChangelogPage() {
             <span className="uppercase">Changelog</span>
             <span aria-hidden className="text-blue-400/60">·</span>
             <span className="font-mono">{CHANGELOG_COUNT} entries</span>
+            <span aria-hidden className="text-blue-400/60">·</span>
+            <span className="font-mono">{days.length} days</span>
           </span>
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl">
             Every change and new result,{" "}
@@ -74,9 +228,9 @@ export default function ChangelogPage() {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300">
             The canonical, dated record of the TFPT development: new
             verification modules (<code className="font-mono text-slate-200">vN</code>),
-            status changes, editorial passes and infrastructure. It is maintained
-            in the same change as the work it records — and this page is generated
-            directly from the repository&rsquo;s{" "}
+            status changes, editorial passes and infrastructure. Browse one day
+            at a time, step between days, or filter across every entry. This page
+            is generated directly from the repository&rsquo;s{" "}
             <code className="font-mono text-slate-200">changelog.tex</code>, so it
             never drifts from the source. Module numbers refer to{" "}
             <code className="font-mono text-slate-200">verification/vN_*.py</code>;
@@ -139,7 +293,13 @@ export default function ChangelogPage() {
 
       <section className="relative py-8 sm:py-12">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <Changelog />
+          <ChangelogBrowser
+            days={days}
+            index={index}
+            selectedDay={selectedDay}
+            entries={dayEntries}
+            macros={CHANGELOG_MACROS}
+          />
         </div>
       </section>
     </>
