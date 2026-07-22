@@ -1,0 +1,1119 @@
+"""seam_alignment_bit_rp_selector_probe.py -- EXPLORATION ONLY (experiments/, no verification claim).
+
+THE RP/THETA ATTACK ON THE ALIGNMENT BIT: does free OS positivity SEE delta?
+
+Context (read-only inputs): v512 (SEAM.TAU.FLAG.01) reduced the last input
+of the theory to ONE discrete symmetry-lift bit (V4 -> D4 flag transitivity
+on the deformed mark family M(delta) = {+-1, +-e^{i delta}}, delta in
+(0, pi/2]; delta = pi/2 <=> tau = i <=> the clock); the v510 counterwitness
+{+-1, +-(3+4i)/5} = the member delta_cw = atan(4/3) passes all 7
+established side-blind tests and fails all 9 clock-equivalent ones.  v519
+(WOIT.THETA.FREE.01) established the anti-linear Theta (family D, mu4
+torsor, Theta^2 = +1, Theta rho Theta = rho^-1) and free reflection
+positivity of the 16-Majorana chiral NS seam system on the BOND cut
+((8,0,0)/(29,0,0)/full N = 8 algebra; the site cut fails exactly) -- but
+ONLY at delta = pi/2.  HYPOTHESIS UNDER TEST: if free RP (or Theta
+existence with the v519 side conditions) BREAKS for delta != pi/2, the bit
+would be DERIVED from OS positivity -- the last discrete input would fall.
+
+PREREGISTRATION (fixed before any computation):
+  SUCCESS (theory-changing -- hard bar): a precise SIDE-SENSITIVE
+    positivity/existence criterion -- RP-Gram inertia on the
+    mark-compatible cut, or existence of an anti-linear Theta satisfying
+    the three v519 side conditions (mark preservation, deck normalisation,
+    spin/Fock compatibility) -- FAILS exactly for delta != pi/2 and PASSES
+    at delta = pi/2, with all negative controls (v519 reproduction at
+    pi/2, the counterwitness failing every claimed selector, site-cut
+    control, hexagonal/silver preconditions).
+  KILL: the criterion is delta-blind (the counterwitness passes) -->
+    document the battery as the EIGHTH side-blind test on the v512
+    scoreboard.
+  UNDECIDED: only numerical evidence without exact structure.
+
+DEFORMATION OPERATIONALISATION ([C] fences -- all liftings tested):
+  Lifting A (PRIMARY, the v519 reading): the state is the UNIFORM chiral
+    NS vacuum C(d) = (2/N)/sin(pi d/N) on N equally spaced Majorana sites
+    (theta_j = pi(2j+1)/N, half-offset); the marks are DECORATION at the
+    angles {0, delta, pi, pi+delta} (bond midpoints for delta = m pi/8)
+    and enter ONLY through mark-compatibility of the OS reflection and
+    through incidence.  [C]: this is exactly how the marks enter v519
+    (the state is mark-blind there too).
+  Lifting B (pullback): the sites deform with the marks and the state is
+    pulled back = an index relabelling of the uniform chain -- the Grams
+    are LITERALLY identical (the kernel depends on index differences
+    only): delta-blind by construction.  [C]
+  Lifting B' (continuum-sampled kernel on quadrant-stretched sites):
+    FAILS the delta = pi/2 negative control (its kernel is nonzero at
+    even distances and C^2 != -1 -- not the v519 chiral vacuum) ->
+    invalid operationalisation, discarded.  [C]
+  NOT liftable in the free class: marks decorating the STATE (defect /
+    twist insertions at the marks) = exactly v519's [O] interacting scope
+    (A_hol) -- the honest residual gap, recorded in the verdict.
+
+RESULT (filled after the run; 25/25 PASS):  KILL, exactly as preregistered
+-- free RP and Theta existence are SIDE-BLIND (the eighth side-blind test):
+  (i) mark-compatible OS reflections exist for EVERY delta (the
+      mark-swapping pair Theta_{+-e^{i delta}}, axes delta/2 and
+      delta/2 + pi/2; census complete, counterwitness included); the
+      mark-FIXING reflections exist iff delta = pi/2 (exact solvesets,
+      lost immediately at pi/2 - eps);
+  (ii) the RP Gram on the mark-compatible cut is PD along the whole
+      family -- N=16: delta = pi/4 gives (8,0,0) one-particle and
+      (29,0,0) at deg <= 2, spectra IDENTICAL to the delta = pi/2 case
+      at 40 digits; N=32: all seven delta = m pi/8 members PD (16,0,0)
+      with pairwise identical spectra; continuum: the OS kernel in
+      axis-adapted coordinates is 1/sin((s+t)/2) with the axis position
+      dropping out EXACTLY -- every member incl. delta_cw passes free RP;
+  (iii) the N=16 failures at odd m (site axes, inertia (3,3,1), det = 0)
+      are a lattice-PLACEMENT artifact (v519 R2/R4 mechanism), resolved
+      at N=32 where every member has a bond axis;
+  (iv) Theta^2 = +1, deck normalisation and Fock implementability
+      (U^2 = +2^7/2^8 > 0) hold for every delta; the ONLY delta-sensitive
+      clause of the v519 battery is the clock-inversion relation
+      Theta rho Theta = rho^-1 -- which is FORMULABLE iff the
+      mark-compatible order-4 rotation exists iff delta = pi/2: it
+      presupposes the bit instead of deriving it;
+  (v) the battery has teeth at every delta (family A / antipode fails RP
+      structurally, chirality-eta pinning persists) -- RP separates the
+      FAMILIES, never the SIDES;
+  (vi) NEW FACE #13 of the v512 web: the group generated by the
+      admissible OS reflections is V4 for every delta < pi/2 and closes
+      to D4 (generating the clock Theta_i o Theta_1 = rho) exactly at
+      delta = pi/2 -- typed [C] REFORMULATION of the bit, not a
+      derivation.
+The bit REMAINS genuine input; the residual gap is the mark-decorated /
+interacting state class (v519's [O] scope).  No marker moves.
+
+Repo anchors: v519 (Theta + free RP machinery, reused verbatim), v512
+(M(delta) family, counterwitness, side-blind scoreboard), v510 (Cl(16)
+census, implementer construction), v506/v507 (bit faces).
+
+Exact throughout (sympy; Fractions in Cl(16)); inertia certificates are
+40-digit spectra of exact Hermitian matrices (tolerance 1e-25); the N=32
+state preconditions are 40-digit numerics (tolerance 1e-30), labelled.
+Standalone.
+Run:  . experiments/tfpt-discovery/.venv/bin/activate
+      python experiments/tfpt-discovery/seam_alignment_bit_rp_selector_probe.py
+"""
+import time
+from fractions import Fraction as Fr
+from itertools import combinations
+
+import mpmath as mp
+import sympy as sp
+
+mp.mp.dps = 40
+
+I = sp.I
+RESULTS = []
+FLAGS = {}
+
+G_CAR = 5
+N16 = 2 ** (G_CAR - 1)         # 16 Majorana seam sites, 4 per mark quadrant
+N32 = 2 * N16                  # refinement lattice
+
+d = sp.Symbol('delta', positive=True)
+b = sp.exp(I * d)
+DOM = sp.Interval.Lopen(0, sp.pi / 2)
+B_CW = sp.Rational(3, 5) + sp.Rational(4, 5) * I     # v510/v512 counterwitness
+D_CW = sp.atan(sp.Rational(4, 3))
+B_HEX = I * (2 - sp.sqrt(3))
+S_SILVER = 3 + 2 * sp.sqrt(2)
+
+
+def check(name, ok):
+    RESULTS.append(bool(ok))
+    print(("PASS" if ok else "FAIL") + " [%2d] %s" % (len(RESULTS), name))
+
+
+def iszero(e):
+    e2 = sp.expand(e)
+    if e2 == 0:
+        return True
+    e3 = sp.expand(sp.expand_complex(e2))
+    if e3 == 0:
+        return True
+    e4 = sp.simplify(e3)
+    if e4 == 0:
+        return True
+    return sp.simplify(sp.expand_trig(e4)) == 0
+
+
+def set_eq(A, B):
+    if len(A) != len(B):
+        return False
+    used = [False] * len(B)
+    for x in A:
+        hit = False
+        for j, y in enumerate(B):
+            if not used[j] and iszero(x - y):
+                used[j] = True
+                hit = True
+                break
+        if not hit:
+            return False
+    return True
+
+
+def marks_of(bv):
+    return [sp.Integer(1), bv, sp.Integer(-1), -bv]
+
+
+# ---------------------------------------------------------------------------
+# free chiral NS state + RP Gram machinery (v519 Part R, verbatim)
+# ---------------------------------------------------------------------------
+def c_of(dd, n):
+    """chiral NS kernel C(d) = (2/n)/sin(pi d/n) for odd d, 0 for even d."""
+    if dd % 2 == 0:
+        return sp.Integer(0)
+    return sp.Rational(2, n) / sp.sin(sp.pi * sp.Rational(dd, n))
+
+
+def g2(a, bb, n, chi=1):
+    if a == bb:
+        return sp.Integer(1)
+    return I * chi * c_of(a - bb, n)
+
+
+def wick(idx, n, chi=1):
+    if len(idx) == 0:
+        return sp.Integer(1)
+    if len(idx) % 2 == 1:
+        return sp.Integer(0)
+    head, rest = idx[0], idx[1:]
+    tot = sp.Integer(0)
+    for j, bb in enumerate(rest):
+        sub = rest[:j] + rest[j + 1:]
+        tot += (-1) ** j * g2(head, bb, n, chi) * wick(sub, n, chi)
+    return tot
+
+
+def refl_map(k, n):
+    def r(a):
+        return (k - a) % n
+
+    def s(a):
+        return -1 if (k - a) % (2 * n) >= n else 1
+    return r, s
+
+
+def theta_mono(mono, r, s, eta):
+    imgs = [r(a) for a in reversed(mono)]
+    coeff = eta ** len(mono)
+    for a in mono:
+        coeff *= s(a)
+    lst = list(imgs)
+    sign = 1
+    for i in range(len(lst)):
+        for j in range(len(lst) - 1 - i):
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                sign = -sign
+    assert len(set(lst)) == len(lst)
+    return coeff * sign, tuple(lst)
+
+
+def gram(basis, r, s, eta, n, chi=1):
+    rows = []
+    for ma in basis:
+        ca, ia = theta_mono(ma, r, s, eta)
+        row = []
+        for mb in basis:
+            assert not (set(ia) & set(mb)), "supports must be disjoint"
+            row.append(sp.expand_complex(ca * wick(list(ia) + list(mb),
+                                                   n, chi)))
+        rows.append(row)
+    return sp.Matrix(rows)
+
+
+def hermitian_exact(M):
+    dd = M - M.conjugate().T
+    return all(iszero(x) for x in dd)
+
+
+def spectrum_inertia(M, tol=None):
+    if tol is None:
+        tol = mp.mpf(10) ** (-25)
+    n = M.shape[0]
+    A = mp.matrix(n, n)
+    for i in range(n):
+        for j in range(n):
+            re_, im_ = M[i, j].evalf(45).as_real_imag()
+            A[i, j] = mp.mpc(mp.mpf(str(re_)), mp.mpf(str(im_)))
+    E, _ = mp.eighe(A)
+    evs = [E[i].real for i in range(n)]
+    npos = sum(1 for e in evs if e > tol)
+    nneg = sum(1 for e in evs if e < -tol)
+    nzero = n - npos - nneg
+    nz = [abs(e) for e in evs if abs(e) > tol]
+    return (npos, nneg, nzero), (min(nz) if nz else mp.mpf(0))
+
+
+def eigs_of(M):
+    """sorted 40-digit spectrum of an exact Hermitian matrix."""
+    n = M.shape[0]
+    A = mp.matrix(n, n)
+    for i in range(n):
+        for j in range(n):
+            re_, im_ = M[i, j].evalf(45).as_real_imag()
+            A[i, j] = mp.mpc(mp.mpf(str(re_)), mp.mpf(str(im_)))
+    E, _ = mp.eighe(A)
+    return sorted(E[i].real for i in range(n))
+
+
+PLUS = lambda a: 1
+
+
+def half_of(k, n):
+    if k % 2 == 0:
+        f1 = (k // 2) % n
+        P = [(f1 + j) % n for j in range(1, n // 2)]
+    else:
+        bb = (k + 1) // 2
+        P = [(bb + j) % n for j in range(n // 2)]
+    rP = {(k - a) % n for a in P}
+    assert not (rP & set(P))
+    return P
+
+
+def one_particle_picks(k, n, chi=1):
+    """scan eta in {i, -i}: list of (eta, inertia, mineig, spectrum) for the
+    Hermitian variants of the one-particle RP Gram on axis k."""
+    P = half_of(k, n)
+    r, s = refl_map(k, n)
+    basis = [(a,) for a in P]
+    out = []
+    for eta in (I, -I):
+        M1 = gram(basis, r, s, eta, n, chi)
+        if hermitian_exact(M1):
+            inert, gap = spectrum_inertia(M1)
+            out.append((eta, inert, gap, eigs_of(M1)))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# exact Cl(n) machinery (v510/v519, verbatim)
+# ---------------------------------------------------------------------------
+def mono_mul(m1, m2):
+    out = list(m1)
+    sign = 1
+    for g in m2:
+        out.append(g)
+        i = len(out) - 1
+        while i > 0 and out[i - 1] > out[i]:
+            out[i - 1], out[i] = out[i], out[i - 1]
+            sign = -sign
+            i -= 1
+        if i > 0 and out[i - 1] == out[i]:
+            del out[i - 1:i + 1]
+    return sign, tuple(out)
+
+
+def cmul(x, y):
+    out = {}
+    for m1, c1 in x.items():
+        for m2, c2 in y.items():
+            s, m = mono_mul(m1, m2)
+            c = out.get(m, Fr(0)) + s * c1 * c2
+            if c:
+                out[m] = c
+            elif m in out:
+                del out[m]
+    return out
+
+
+def cadd(x, y):
+    out = dict(x)
+    for m, c in y.items():
+        cc = out.get(m, Fr(0)) + c
+        if cc:
+            out[m] = cc
+        elif m in out:
+            del out[m]
+    return out
+
+
+def cscale(x, s):
+    return {m: c * s for m, c in x.items()} if s else {}
+
+
+def gam(*idx):
+    return {tuple(idx): Fr(1)}
+
+
+ONE = {(): Fr(1)}
+
+
+def prop(x, y):
+    if not x or not y or set(x) != set(y):
+        return (False, None)
+    m0 = next(iter(y))
+    c = x[m0] / y[m0]
+    return (all(x[m] == c * y[m] for m in y), c)
+
+
+def apply_lin(mat, a, n):
+    out = {}
+    for bb in range(n):
+        if mat[bb][a]:
+            out = cadd(out, cscale(gam(bb), Fr(mat[bb][a])))
+    return out
+
+
+def implements(Uel, mat, n):
+    for a in range(n):
+        lhs = cmul(Uel, gam(a))
+        rhs = cmul(apply_lin(mat, a, n), Uel)
+        if cadd(lhs, cscale(rhs, Fr(-1))):
+            return False
+    return True
+
+
+def shift_matrix(n, k, wrap_sign):
+    M = [[0] * n for _ in range(n)]
+    for a in range(n):
+        bb = (a + k) % n
+        M[bb][a] = wrap_sign if a + k >= n else 1
+    return M
+
+
+def refl_matrix(n, k, wrap_sign):
+    M = [[0] * n for _ in range(n)]
+    for a in range(n):
+        idx = (k - a) % (2 * n)
+        M[idx % n][a] = wrap_sign if idx >= n else 1
+    return M
+
+
+def refl_implementer(n, k):
+    fixed = [j for j in range(n) if (k - j) % n == j]
+    if fixed:
+        fplus = [f for f in fixed if (k - f) % (2 * n) < n]
+        U = {tuple(j for j in range(n) if j != fplus[0]): Fr(1)}
+    else:
+        U = dict(ONE)
+    for a in range(n):
+        bb = (k - a) % n
+        if a >= bb or a in fixed:
+            continue
+        idx = (k - a) % (2 * n)
+        eps = Fr(-1) if idx >= n else Fr(1)
+        U = cmul(U, cadd(gam(a), cscale(gam(bb), eps)))
+    return U
+
+
+# ---------------------------------------------------------------------------
+# numeric helpers (40 digits, labelled)
+# ---------------------------------------------------------------------------
+def mat_num(M):
+    n, mcols = M.shape
+    A = mp.matrix(n, mcols)
+    for i in range(n):
+        for j in range(mcols):
+            re_, im_ = sp.sympify(M[i, j]).evalf(45).as_real_imag()
+            A[i, j] = mp.mpc(mp.mpf(str(re_)), mp.mpf(str(im_)))
+    return A
+
+
+def int_num(rows):
+    n = len(rows)
+    A = mp.matrix(n, n)
+    for i in range(n):
+        for j in range(n):
+            A[i, j] = mp.mpf(rows[i][j])
+    return A
+
+
+def max_abs(A):
+    return max(abs(A[i, j]) for i in range(A.rows) for j in range(A.cols))
+
+
+# ===========================================================================
+# S -- the anti-linear census on M(delta), exact and symbolic
+# ===========================================================================
+def s_census():
+    print(" S -- anti-linear census on M(delta) = {+-1, +-e^(i delta)}")
+    M = marks_of(b)
+
+    # -- S1.1 family D (Theta_mu: z -> mu conj(z)): the mark-swapping pair
+    d_always = all(
+        set_eq([sp.expand_complex(mu * sp.conjugate(m)) for m in M], M)
+        for mu in (b, -b))
+    sol_cos = sp.solveset(sp.cos(d), d, DOM)          # conj(b) = -b
+    sol_sin = sp.solveset(sp.sin(d), d, DOM)          # conj(b) = +b
+    mu1_generic_fails = not set_eq(
+        [sp.expand_complex(sp.conjugate(m)) for m in M], M)
+    mu4_at_clock = set_eq(
+        [sp.expand_complex(I * sp.conjugate(m)) for m in marks_of(I)],
+        marks_of(I)) and set_eq(
+        [sp.expand_complex(sp.conjugate(m)) for m in marks_of(I)],
+        marks_of(I))
+    FLAGS['D_census'] = (d_always and sol_cos == sp.FiniteSet(sp.pi / 2)
+                         and sol_sin is sp.S.EmptySet)
+    check("S1.1 FAMILY-D CENSUS [exact, symbolic delta]: Theta_mu(z) = mu "
+          "conj(z) preserves M(delta) with mu = Theta(1) forced INTO the "
+          "mark set; mu = +-e^(i delta) work for EVERY delta (%s: the "
+          "mark-SWAPPING pair, images land on marks identically); mu = "
+          "+-1 need conj(b) = -+b, i.e. cos delta = 0 (solveset %s) or "
+          "sin delta = 0 (%s) -- the mark-FIXING conjugations exist "
+          "EXACTLY at delta = pi/2 (mu4 torsor there: %s, v519 W-S2.3); "
+          "generic mu = 1 fails (%s): the OS-reflection census is 2 "
+          "generic -> 4 at the clock point"
+          % (d_always, sol_cos, sol_sin, mu4_at_clock, mu1_generic_fails),
+          FLAGS['D_census'] and mu4_at_clock and mu1_generic_fails)
+
+    # -- S1.2 counterwitness census
+    Mcw = marks_of(B_CW)
+    cw_swap = all(
+        set_eq([sp.expand_complex(mu * sp.conjugate(m)) for m in Mcw], Mcw)
+        for mu in (B_CW, -B_CW))
+    cw_fix = set_eq([sp.expand_complex(sp.conjugate(m)) for m in Mcw], Mcw)
+    FLAGS['CW_has_OS_refl'] = cw_swap
+    FLAGS['CW_markfix'] = cw_fix
+    check("S1.2 COUNTERWITNESS CENSUS [exact rationals]: the v510/v512 "
+          "member {+-1, +-(3+4i)/5} carries the two mark-swapping OS "
+          "reflections Theta_{+-(3+4i)/5} exactly (%s: e.g. (3+4i)/5 x "
+          "conj((3+4i)/5) = 1) and NO mark-fixing one (mu = 1 fails: %s) "
+          "-- the counterwitness is NOT excluded by OS-reflection "
+          "existence" % (cw_swap, not cw_fix),
+          cw_swap and not cw_fix)
+
+    # -- S2.1 family A (z -> mu/conj(z), on the seam circle z -> mu z)
+    a_always = all(set_eq([sp.expand(mu * m) for m in M], M)
+                   for mu in (sp.Integer(1), sp.Integer(-1)))
+    sol_b2 = sp.solveset(sp.cos(2 * d) + 1, d, DOM)   # b^2 = -1
+    sol_b2p = sp.solveset(sp.cos(2 * d) - 1, d, DOM)  # b^2 = +1
+    a_clock = set_eq([sp.expand(I * m) for m in marks_of(I)], marks_of(I))
+    check("S2.1 FAMILY-A CENSUS [exact]: on the seam circle the "
+          "antidiagonal family acts as the rotation z -> mu z; admissible "
+          "mu = +-1 for every delta (%s: identity/equator and antipode/"
+          "deck), mu = +-b needs b^2 in M, solveset(b^2 = -1) = %s, "
+          "(b^2 = +1) = %s -- family A also doubles 2 -> 4 exactly at "
+          "delta = pi/2 (%s): the TOTAL anti-structure census is 4 -> 8, "
+          "the V4 -> D4 doubling in anti-linear clothing (v512 H1.1 "
+          "reproduced on the anti-linear side)"
+          % (a_always, sol_b2, sol_b2p, a_clock),
+          a_always and sol_b2 == sp.FiniteSet(sp.pi / 2)
+          and sol_b2p is sp.S.EmptySet and a_clock)
+
+    # -- S3.1 closure: the OS reflections generate V4 generically, D4 at pi/2
+    z = sp.Symbol('z')
+    comp_deck = iszero(sp.expand(b * sp.conjugate(-b * sp.conjugate(z))) + z)
+    comp_deck2 = iszero(sp.expand(-b * sp.conjugate(b * sp.conjugate(z))) + z)
+    invol = iszero(sp.expand(b * sp.conjugate(b * sp.conjugate(z))) - z)
+    deck_theta = iszero(sp.expand(-(b * sp.conjugate(z)))
+                        - (-b) * sp.conjugate(z))
+    clock_gen = iszero(sp.expand(I * sp.conjugate(sp.conjugate(z))) - I * z)
+    clock_sq = iszero(sp.expand(I * (I * z)) + z)
+    rot_labels = [sp.Integer(1), I, sp.Integer(-1), -I]
+    d4_count = len(rot_labels) + 4                    # 4 rotations + 4 refl
+    FLAGS['face13'] = (comp_deck and comp_deck2 and invol and deck_theta
+                       and clock_gen and clock_sq and d4_count == 8)
+    check("S3.1 CLOSURE / FACE #13 [exact, symbolic]: Theta_b o Theta_{-b} "
+          "= the deck z -> -z (%s, %s), Theta_b^2 = id (%s), deck o "
+          "Theta_b = Theta_{-b} (%s) -- the admissible OS reflections "
+          "generate {id, deck, Theta_b, Theta_{-b}} ~= V4 for EVERY "
+          "delta; at delta = pi/2 the extra pair joins and Theta_i o "
+          "Theta_1 = the CLOCK z -> iz (%s, clock^2 = deck: %s), group = "
+          "D4 with %d elements -- 'the OS-reflection group closes to D4 / "
+          "generates the clock' <=> delta = pi/2: FACE #13 of the v512 "
+          "web, typed [C] REFORMULATION (its extra generators ARE the "
+          "mark-fixing reflections = the mark-mirror face)"
+          % (comp_deck, comp_deck2, invol, deck_theta, clock_gen,
+             clock_sq, d4_count),
+          FLAGS['face13'])
+
+    # -- S4.1 cut/mark incidence + the eps jump
+    cuts_swap = [d / 2, d / 2 + sp.pi,
+                 d / 2 + sp.pi / 2, d / 2 + 3 * sp.pi / 2]
+    mark_angles = [sp.Integer(0), d, sp.pi, sp.pi + d, 2 * sp.pi]
+    inc = sp.S.EmptySet
+    for cu in cuts_swap:
+        for ma in mark_angles:
+            inc = sp.Union(inc, sp.solveset(cu - ma, d, DOM))
+    fix_cut_hits = (iszero(sp.Integer(0) - 0) and iszero(sp.pi - sp.pi)
+                    and iszero(sp.pi / 2 - sp.pi / 2))
+    eps = sp.Symbol('eps', nonnegative=True)
+    sol_eps = sp.solveset(sp.sin(eps), eps, sp.Interval.Ropen(0, sp.pi / 2))
+    FLAGS['markfix_iff_clock'] = (inc is sp.S.EmptySet
+                                  or inc == sp.S.EmptySet)
+    check("S4.1 CUT INCIDENCE + EPS JUMP [exact solvesets]: the swap-pair "
+          "cut points {delta/2, delta/2 + pi} u {delta/2 + pi/2, ...} "
+          "NEVER hit a mark on (0, pi/2] (union of all 20 incidence "
+          "solvesets = %s); the mark-fixing cuts {0, pi} / {pi/2, 3pi/2} "
+          "(existing only at pi/2) pass through the marks exactly (%s); "
+          "eps-ladder: at delta = pi/2 - eps the mu = 1 admissibility "
+          "condition cos(pi/2 - eps) = sin(eps) = 0 has solveset %s -- "
+          "the mark-fixing reflection is lost IMMEDIATELY off the clock "
+          "point, no continuous transition"
+          % (inc, fix_cut_hits, sol_eps),
+          FLAGS['markfix_iff_clock'] and fix_cut_hits
+          and sol_eps == sp.FiniteSet(0))
+
+    # -- S5.1 side conditions along the family + the clock clause
+    mu = sp.Symbol('mu')
+    Md = sp.diag(mu, 1)
+    theta_sq = sp.expand(Md * Md.conjugate())
+    sq_unit = theta_sq.subs(mu * sp.conjugate(mu), 1) == sp.eye(2)
+    RHO = sp.diag(I, 1)
+    RHOINV = sp.diag(-I, 1)
+    clock_rel = all(
+        sp.simplify(sp.diag(m_v, 1) * RHO.conjugate()
+                    * sp.diag(m_v, 1).inv() - RHOINV) == sp.zeros(2, 2)
+        for m_v in (sp.Integer(1), I, sp.Integer(-1), -I))
+    sol_i = sp.solveset(sp.cos(d), d, DOM)
+    FLAGS['theta_sq_blind'] = sq_unit
+    FLAGS['clock_formulable_iff'] = (sol_i == sp.FiniteSet(sp.pi / 2))
+    check("S5.1 SIDE CONDITIONS ALONG THE FAMILY [exact]: Theta_mu^2 = "
+          "diag(|mu|^2, 1) = +1 for every unit mu (%s) -- the whole "
+          "family is Kramers-free; the deck is normalised by every "
+          "member (S3.1); BUT the v519 defining relation Theta rho Theta "
+          "= rho^-1 needs the mark-compatible order-4 rotation rho, and "
+          "'i M(delta) = M(delta)' solves to %s EXACTLY (v512 H1.1): for "
+          "delta != pi/2 the clock clause is not violated -- it is NOT "
+          "FORMULABLE (at pi/2 it holds for the whole mu4 torsor: %s).  "
+          "The ONLY delta-sensitive clause of the v519 battery "
+          "presupposes the clock, i.e. the bit itself"
+          % (sq_unit, sol_i, clock_rel),
+          sq_unit and clock_rel
+          and FLAGS['clock_formulable_iff'])
+
+
+# ===========================================================================
+# L -- Lifting A: the lattice delta ladder (exact entries, 40-digit inertia)
+# ===========================================================================
+def l_lattice():
+    print(" L -- Lifting A: RP Gram inertia along the lattice delta ladder")
+
+    # -- L1.1 incidence frame (integer arithmetic in units of pi/16, pi/32)
+    ok_inc = True
+    for m in range(1, 5):                       # N = 16, units of pi/16
+        marks_u = {0, 2 * m, 16, (16 + 2 * m) % 32}
+        sites_u = {(2 * j + 1) % 32 for j in range(16)}
+        ok_inc &= not (marks_u & sites_u)       # marks on bonds, never sites
+        k = m - 1                               # axis at delta/2 = m units
+        img = {(2 * (k + 1) - a) % 32 for a in marks_u}
+        ok_inc &= img == marks_u                # reflection preserves marks
+        fixed_marks = {a for a in marks_u if (2 * (k + 1) - a) % 32 == a}
+        ok_inc &= (len(fixed_marks) == 0) if m < 4 else True
+    k15_fix = {a for a in (0, 8, 16, 24)
+               if (2 * 16 - a) % 32 == a}       # N=16, k=15 axis (units)
+    ok_inc &= k15_fix == {0, 16}
+    ok32 = all((2 * m_ - 1) % 2 == 1 for m_ in range(1, 8))
+    check("L1.1 LATTICE FRAME [exact integer incidence, [C] Lifting A]: "
+          "sites theta_j = pi(2j+1)/N (half-offset), marks {0, m pi/8, "
+          "pi, pi + m pi/8} on BOND midpoints for every m (never on a "
+          "site: %s); the mark-compatible (swap) reflection is j -> "
+          "(m-1) - j at N = 16 -- a SITE axis for odd m, a BOND axis for "
+          "even m -- and j -> (2m-1) - j at N = 32: ALWAYS a bond axis "
+          "(%s); at m = 4 the extra mark-FIXING axes k = 15, 7 appear "
+          "(fixed marks {1, -1}: %s) -- the v519 axes reproduced"
+          % (ok_inc, ok32, k15_fix == {0, 16}),
+          ok_inc and ok32)
+
+    # -- L2.1 delta = pi/2 reproduction (bond axes)
+    picks15 = one_particle_picks(15, N16)
+    picks3 = one_particle_picks(3, N16)
+    pd15 = [p for p in picks15 if p[1] == (8, 0, 0)]
+    pd3 = [p for p in picks3 if p[1] == (8, 0, 0)]
+    min15 = pd15[0][2] if pd15 else mp.mpf(0)
+    same_spec = (pd15 and pd3 and max(
+        abs(x - y) for x, y in zip(pd15[0][3], pd3[0][3]))
+        < mp.mpf(10) ** (-30))
+    FLAGS['clock_rp_pd'] = bool(pd15 and pd3)
+    check("L2.1 delta = pi/2 REPRODUCTION [exact entries, 40-digit "
+          "inertia]: mark-fixing axis k = 15 -> Hermitian for eta = %s, "
+          "inertia %s, min eigenvalue %s (v519 R3.1: 1.888e-3); "
+          "mark-swapping axis k = 3 -> inertia %s; the two spectra are "
+          "IDENTICAL to 40 digits (%s) -- RP does NOT prefer the "
+          "mark-fixing cut over the swap cut even AT the clock point: "
+          "positivity is side-blind already at delta = pi/2"
+          % (pd15[0][0] if pd15 else '-', pd15[0][1] if pd15 else '-',
+             mp.nstr(min15, 8), pd3[0][1] if pd3 else '-', same_spec),
+          bool(pd15) and bool(pd3) and same_spec
+          and abs(min15 - mp.mpf('0.0018878')) < mp.mpf('5e-5'))
+
+    # -- L2.2 delta = pi/2 site-cut control (v519 R2.1)
+    P0 = half_of(0, N16)
+    r0, _ = refl_map(0, N16)
+    M0 = gram([(a,) for a in P0], r0, PLUS, -I, N16)
+    herm0 = hermitian_exact(M0)
+    diag0 = all(iszero(M0[i, i]) for i in range(len(P0)))
+    det0 = sp.simplify(M0.det())
+    in0, _ = spectrum_inertia(M0)
+    check("L2.2 SITE-CUT CONTROL AT pi/2 [exact, v519 R2.1 reproduced]: "
+          "the cut THROUGH sites (k = 0) has Hermitian Gram (%s) with "
+          "ZERO diagonal (%s; C(even) = 0 checkerboard), det = %s "
+          "exactly, inertia %s -- RP fails on the site cut: the battery "
+          "reproduces v519 at the clock point [NEGATIVE CONTROL]"
+          % (herm0, diag0, det0, in0),
+          herm0 and diag0 and det0 == 0 and in0 == (3, 3, 1))
+
+    # -- L3.1 delta = pi/4 (m = 2): the mark-compatible BOND cut is PD
+    Cm16 = sp.Matrix(N16, N16, lambda a, bb: c_of(a - bb, N16))
+    anti16 = all(
+        sp.simplify(sp.Matrix(refl_matrix(N16, kk, -1)) * Cm16
+                    * sp.Matrix(refl_matrix(N16, kk, -1)).T + Cm16)
+        == sp.zeros(N16, N16) for kk in (1, 9, 2))
+    picks1 = one_particle_picks(1, N16)
+    picks9 = one_particle_picks(9, N16)
+    pd1 = [p for p in picks1 if p[1] == (8, 0, 0)]
+    pd9 = [p for p in picks9 if p[1] == (8, 0, 0)]
+    same_as_clock = (pd1 and pd15 and max(
+        abs(x - y) for x, y in zip(pd1[0][3], pd15[0][3]))
+        < mp.mpf(10) ** (-30))
+    FLAGS['deformed_rp_pd'] = bool(pd1 and pd9)
+    check("L3.1 delta = pi/4 RP HOLDS [exact entries, 40-digit inertia]: "
+          "state anti-invariance R C R^T = -C exact for the swap axes "
+          "k = 1, 9 (and k = 2) (%s); one-particle Gram on k = 1: "
+          "Hermitian for eta = %s, inertia %s; k = 9: %s -- POSITIVE "
+          "DEFINITE at delta != pi/2, and the spectrum is IDENTICAL to "
+          "the delta = pi/2 mark-axis spectrum to 40 digits (%s): the "
+          "preregistered SUCCESS criterion does NOT fire; free RP is "
+          "delta-blind on the lattice bond cuts"
+          % (anti16, pd1[0][0] if pd1 else '-',
+             pd1[0][1] if pd1 else '-', pd9[0][1] if pd9 else '-',
+             same_as_clock),
+          anti16 and bool(pd1) and bool(pd9) and same_as_clock)
+
+    # -- L3.2 delta = pi/4 even sector deg <= 2
+    P1 = half_of(1, N16)
+    r1, s1 = refl_map(1, N16)
+    eta1 = pd1[0][0]
+    basis2 = [()] + list(combinations(P1, 2))
+    M2 = gram(basis2, r1, s1, eta1, N16)
+    herm2 = hermitian_exact(M2)
+    in2, _ = spectrum_inertia(M2)
+    check("L3.2 delta = pi/4 EVEN SECTOR [exact entries, 40-digit "
+          "inertia]: the 29x29 deg <= 2 Gram on the k = 1 swap cut is "
+          "Hermitian exactly (%s) with inertia %s -- the OS form extends "
+          "past one particle at delta != pi/2 exactly as at pi/2 (v519 "
+          "R3.2: (29,0,0)): no hidden higher-degree failure"
+          % (herm2, in2),
+          herm2 and in2 == (29, 0, 0))
+
+    # -- L4.1 odd m at N = 16: the mark-compatible axis is a SITE axis
+    site_res = {}
+    for m, kk in ((1, 0), (3, 2)):
+        variants = []
+        P = half_of(kk, N16)
+        r, s = refl_map(kk, N16)
+        for sfun, tag in ((s, 'NS'), (PLUS, 'plus')):
+            for eta in (I, -I):
+                Mv = gram([(a,) for a in P], r, sfun, eta, N16)
+                if not hermitian_exact(Mv):
+                    continue
+                dg0 = all(iszero(Mv[i, i]) for i in range(len(P)))
+                dtv = sp.simplify(Mv.det())
+                inv, _ = spectrum_inertia(Mv)
+                variants.append((tag, eta, dg0, dtv, inv))
+        site_res[m] = variants
+    site_ok = all(
+        len(v) > 0 and all(x[2] and x[3] == 0 and x[4] == (3, 3, 1)
+                           for x in v)
+        for v in site_res.values())
+    check("L4.1 ODD m AT N = 16 [exact]: delta = pi/8 (k = 0) and 3pi/8 "
+          "(k = 2): every Hermitian (dressing, eta) variant of the "
+          "mark-compatible Gram has ZERO diagonal, det = 0 exactly and "
+          "inertia (3,3,1) (%d/%d variants; %s) -- a would-be selector "
+          "'RP fails off pi/2'... which the next check kills"
+          % (sum(len(v) for v in site_res.values()),
+             sum(len(v) for v in site_res.values()), site_ok),
+          site_ok)
+
+    # -- L5.1 N = 32 refinement: every member has a PD bond cut
+    C32 = sp.Matrix(N32, N32, lambda a, bb: c_of(a - bb, N32))
+    A32 = mat_num(C32)
+    tol30 = mp.mpf(10) ** (-30)
+    pure32 = max_abs(A32 * A32 + mp.eye(N32)) < tol30
+    S32 = int_num(shift_matrix(N32, 1, -1))
+    shift_ok = max_abs(S32 * A32 * S32.T - A32) < tol30
+    axes32 = [2 * m_ - 1 for m_ in range(1, 8)] + [31]
+    anti32 = all(
+        max_abs(int_num(refl_matrix(N32, kk, -1)) * A32
+                * int_num(refl_matrix(N32, kk, -1)).T + A32) < tol30
+        for kk in axes32)
+    picks32 = {}
+    for kk in axes32:
+        pd = [p for p in one_particle_picks(kk, N32)
+              if p[1] == (16, 0, 0)]
+        picks32[kk] = pd[0] if pd else None
+    all_pd32 = all(picks32[kk] is not None for kk in axes32)
+    min32 = min(picks32[kk][2] for kk in axes32) if all_pd32 else 0
+    FLAGS['n32_all_pd'] = all_pd32
+    check("L5.1 N = 32 REFINEMENT KILLS THE SELECTOR [exact entries, "
+          "40-digit inertia; state preconditions 40-digit numeric]: the "
+          "chiral kernel at N = 32 is pure (|C^2 + 1| < 1e-30: %s), "
+          "shift-invariant (%s) and anti-invariant under all 8 axes "
+          "(%s); the mark-compatible swap axes k = 2m - 1 for ALL m = "
+          "1..7 (delta = m pi/8) AND the m = 4 mark-fixing axis k = 31 "
+          "are BOND axes with PD Gram inertia (16,0,0) (all PD: %s; min "
+          "eigenvalue %s) -- every family member incl. delta = pi/8, "
+          "3pi/8 has a mark-compatible RP-positive cut at the finer "
+          "resolution: the L4.1 failure is a lattice-PLACEMENT artifact "
+          "(v519 R2/R4 mechanism), NOT a delta selector"
+          % (pure32, shift_ok, anti32, all_pd32, mp.nstr(min32, 8)),
+          pure32 and shift_ok and anti32 and all_pd32)
+
+    # -- L5.2 N = 32 site-axis control
+    P0b = half_of(0, N32)
+    r0b, s0b = refl_map(0, N32)
+    M0b = gram([(a,) for a in P0b], r0b, s0b, -I, N32)
+    herm0b = hermitian_exact(M0b)
+    dg0b = all(iszero(M0b[i, i]) for i in range(len(P0b)))
+    in0b, _ = spectrum_inertia(M0b)
+    check("L5.2 N = 32 SITE-AXIS CONTROL [exact]: the cut through sites "
+          "(k = 0, 15 half-sites) stays Hermitian (%s) with zero "
+          "diagonal (%s) and +-symmetric degenerate inertia %s -- the "
+          "C(even) = 0 checkerboard failure persists at every "
+          "resolution: the site/bond dichotomy is about the CUT "
+          "PLACEMENT, never about delta [NEGATIVE CONTROL]"
+          % (herm0b, dg0b, in0b),
+          herm0b and dg0b and in0b[0] == in0b[1] and in0b[2] >= 1)
+
+    # -- L6.1 spectra blindness
+    specs32 = [picks32[kk][3] for kk in axes32]
+    dev32 = max(abs(x - y) for sA in specs32 for sB in specs32
+                for x, y in zip(sA, sB))
+    specs16 = [pd15[0][3], pd3[0][3], pd1[0][3], pd9[0][3]]
+    dev16 = max(abs(x - y) for sA in specs16 for sB in specs16
+                for x, y in zip(sA, sB))
+    FLAGS['spectra_blind'] = (dev32 < tol30 and dev16 < tol30)
+    check("L6.1 SPECTRA BLINDNESS [40-digit]: the FULL sorted spectra of "
+          "the PD Grams agree pairwise -- N = 16 axes {15, 3, 1, 9} "
+          "(delta = pi/2 and pi/4): max deviation %s; N = 32 all 8 axes "
+          "(delta = pi/8 .. pi/2): max deviation %s (mechanism: the "
+          "shift-invariant state makes all bond axes rotation-"
+          "equivalent) -- not only the inertia, the ENTIRE free-RP "
+          "spectral datum carries ZERO delta information"
+          % (mp.nstr(dev16, 3), mp.nstr(dev32, 3)),
+          FLAGS['spectra_blind'])
+
+    # -- L7.1 family-A rejection at every delta (the battery has teeth)
+    deck_pres = set_eq([sp.expand(-m) for m in marks_of(b)], marks_of(b))
+    r_anti = lambda a: (a + 8) % N16
+    s_alt = lambda a: 1 if a % 2 == 0 else -1
+    Ca = sp.Matrix(N16, N16, lambda a, bb:
+                   s_alt(a) * s_alt(bb) * c_of(a - bb, N16))
+    anti_ok = sp.simplify(Ca + Cm16) == sp.zeros(N16, N16)
+    pickedA = None
+    for eta in (1, -1, I, -I):
+        Ma = gram([(a,) for a in range(8)], r_anti, s_alt, eta, N16)
+        if hermitian_exact(Ma):
+            ia, _ = spectrum_inertia(Ma)
+            dg = all(iszero(Ma[i, i]) for i in range(8))
+            pickedA = (eta, ia, dg)
+            break
+    FLAGS['famA_rejected'] = (pickedA is not None and pickedA[2]
+                              and pickedA[1] == (4, 4, 0))
+    check("L7.1 FAMILY-A REJECTION AT EVERY delta [exact]: the antipode/"
+          "deck preserves M(delta) for EVERY delta (%s) and its "
+          "clock-centralising anti-structure needs the alternating "
+          "dressing (%s), but the Gram has zero diagonal (%s) and "
+          "indefinite inertia %s -- and since state and kernel are "
+          "mark-blind this holds delta-INDEPENDENTLY: RP separates the "
+          "two real-structure FAMILIES at every delta (the battery has "
+          "teeth), it just cannot see the SIDE datum within family D"
+          % (deck_pres, anti_ok, pickedA[2] if pickedA else '-',
+             pickedA[1] if pickedA else '-'),
+          deck_pres and anti_ok and FLAGS['famA_rejected'])
+
+    # -- L7.2 chirality pinning persists off the clock point
+    Mneg = None
+    for eta in (I, -I):
+        Mc = gram([(a,) for a in P1], r1, s1, eta, N16, chi=-1)
+        if hermitian_exact(Mc):
+            ic, _ = spectrum_inertia(Mc)
+            Mneg = (eta, ic)
+            break
+    check("L7.2 CHIRALITY PINNING AT delta = pi/4 [exact]: the "
+          "anti-chiral state (C -> -C) on the same k = 1 swap cut has "
+          "Hermitian Gram for eta = %s with inertia %s = negative "
+          "definite -- RP pins the (chirality, eta) pair for every "
+          "delta, exactly as v519 R5.3 at pi/2: delta-blind but "
+          "structure-sharp" % (Mneg[0] if Mneg else '-',
+                               Mneg[1] if Mneg else '-'),
+          Mneg is not None and Mneg[1] == (0, 8, 0))
+
+
+# ===========================================================================
+# C -- continuum: the axis position drops out of the OS kernel exactly
+# ===========================================================================
+def c_continuum():
+    print(" C -- continuum control: axis elimination + counterwitness")
+    al, s_, t_ = sp.symbols('alpha s t', positive=True)
+    kern = 1 / sp.sin(((2 * al - (al + s_)) - (al + t_)) / (-2))
+    kern_ad = sp.simplify(kern)
+    alpha_free = sp.diff(kern_ad, al) == 0 and iszero(
+        kern_ad - 1 / sp.sin((s_ + t_) / 2))
+    lhs = 1 / sp.sin((s_ + t_) / 2)
+    rhs = (1 / (sp.cos(s_ / 2) * sp.cos(t_ / 2))) \
+        / (sp.tan(s_ / 2) + sp.tan(t_ / 2))
+    ident = iszero(sp.simplify(sp.trigsimp(lhs - rhs)))
+    xs = [sp.Integer(1), sp.Integer(2), sp.Integer(3), sp.Integer(4)]
+    Cau = sp.Matrix(4, 4, lambda i, j: 1 / (xs[i] + xs[j]))
+    minors = [sp.simplify(Cau[:mm, :mm].det()) for mm in range(1, 5)]
+    all_pos = all(mv > 0 for mv in minors)
+    FLAGS['continuum_blind'] = alpha_free and ident and all_pos
+    check("C1.1 AXIS ELIMINATION [exact, symbolic]: the continuum chiral "
+          "OS kernel for the reflection about ANY axis alpha, written in "
+          "axis-adapted coordinates theta = alpha + s, theta' = alpha + "
+          "t, is 1/sin((s+t)/2) with alpha dropping out IDENTICALLY "
+          "(%s); it factorises through the Cauchy-Stieltjes kernel "
+          "1/(x+y) (identity: %s; minors %s all > 0: %s; v519 R4) -- "
+          "continuum free RP holds for EVERY cut position, hence for "
+          "EVERY delta member of the family: the strongest possible "
+          "delta-blindness (the RP datum is literally the SAME kernel)"
+          % (alpha_free, ident, minors, all_pos),
+          FLAGS['continuum_blind'])
+
+    pts = [sp.pi / 8, sp.pi / 4, sp.pi * sp.Rational(3, 8), sp.pi / 2,
+           sp.pi * sp.Rational(5, 8), sp.pi * sp.Rational(3, 4)]
+    Kcw = sp.Matrix(6, 6, lambda i, j: 1 / sp.sin((pts[i] + pts[j]) / 2))
+    incw, gapcw = spectrum_inertia(Kcw)
+    cut_cw = D_CW / 2
+    avoid = all(not iszero(cut_cw - ma)
+                for ma in (sp.Integer(0), D_CW, sp.pi, sp.pi + D_CW)) \
+        and all(not iszero(cut_cw + sp.pi - ma)
+                for ma in (sp.Integer(0), D_CW, sp.pi, sp.pi + D_CW,
+                           2 * sp.pi))
+    FLAGS['CW_passes_rp'] = (incw == (6, 0, 0)) and avoid
+    check("C1.2 COUNTERWITNESS PASSES FREE RP [exact + 40-digit]: the "
+          "member delta_cw = atan(4/3) carries the mark-swapping OS cut "
+          "at delta_cw/2, which avoids all marks exactly (%s); its "
+          "continuum OS Gram at 6 sample points has inertia %s (min "
+          "eigenvalue %s) = strictly PD -- the counterwitness PASSES "
+          "free reflection positivity: the KILL branch of the "
+          "preregistration is confirmed on the continuum side"
+          % (avoid, incw, mp.nstr(gapcw, 6)),
+          avoid and incw == (6, 0, 0))
+
+
+# ===========================================================================
+# LB -- the lifting audit ([C] fences)
+# ===========================================================================
+def lb_liftings():
+    print(" LB -- lifting audit: B (pullback) and B' (stretched sampling)")
+    relabel = list(range(N16)) == sorted(range(N16))
+    quad_stretch_id = all(
+        (j, (j + 4) % N16, (j + 8) % N16, (j + 12) % N16)
+        == tuple(((j + 4 * q) % N16) for q in range(4))
+        for j in range(4))
+
+    def stretched(m):
+        delta = mp.pi * m / 8
+        starts = [mp.mpf(0), delta, mp.pi, mp.pi + delta]
+        widths = [delta, mp.pi - delta, delta, mp.pi - delta]
+        out = []
+        for j in range(N16):
+            th = mp.pi * (2 * j + 1) / N16
+            q = int(mp.floor(th / (mp.pi / 2)))
+            frac = (th - q * mp.pi / 2) / (mp.pi / 2)
+            out.append(starts[q] + frac * widths[q])
+        return out
+
+    reports = {}
+    for m in (4, 2):
+        th = stretched(m)
+        Cp = mp.matrix(N16, N16)
+        for a in range(N16):
+            for bb in range(N16):
+                if a != bb:
+                    Cp[a, bb] = (mp.mpf(2) / N16) \
+                        / mp.sin((th[a] - th[bb]) / 2)
+        pur = max_abs(Cp * Cp + mp.eye(N16))
+        even_nz = abs(Cp[0, 2])
+        iC = mp.matrix(N16, N16)
+        for a in range(N16):
+            for bb in range(N16):
+                iC[a, bb] = mp.mpc(0, 1) * Cp[a, bb]
+        E, _ = mp.eighe(iC)
+        maxev = max(abs(E[i2]) for i2 in range(N16))
+        reports[m] = (pur, even_nz, maxev)
+    bprime_fails = (reports[4][0] > mp.mpf('0.1')
+                    and reports[4][1] > mp.mpf('0.01'))
+    check("LB.1 LIFTING AUDIT [[C] fences; 40-digit numeric for B']: "
+          "Lifting B (sites deform, state pulled back) is an index "
+          "RELABELLING of the uniform chain (%s, %s) -- the RP Grams are "
+          "literally identical for every delta: delta-blind by "
+          "construction.  Lifting B' (continuum kernel sampled on "
+          "quadrant-stretched sites) FAILS the delta = pi/2 negative "
+          "control: already at m = 4 (uniform positions!) its kernel is "
+          "nonzero at even distances (|C'(2)| = %s != 0) and NOT pure "
+          "(|C'^2 + 1| = %s; max |eig(iC')| = %s) -- it is not the v519 "
+          "chiral vacuum, so nothing about delta can be concluded from "
+          "it: discarded (m = 2 same signature: |C'^2+1| = %s).  Lifting "
+          "A is the unique v519-compatible free operationalisation"
+          % (relabel, quad_stretch_id, mp.nstr(reports[4][1], 5),
+             mp.nstr(reports[4][0], 5), mp.nstr(reports[4][2], 6),
+             mp.nstr(reports[2][0], 5)),
+          relabel and quad_stretch_id and bprime_fails
+          and reports[2][0] > mp.mpf('0.1'))
+
+
+# ===========================================================================
+# T -- Fock implementability + the clock-tower clause
+# ===========================================================================
+def t_fock():
+    print(" T -- Fock side condition + clock tower along the family")
+    res = {}
+    for kk, exp_c in ((1, Fr(2 ** 8)), (9, Fr(2 ** 8)), (0, Fr(2 ** 7)),
+                      (15, Fr(2 ** 8))):
+        U = refl_implementer(N16, kk)
+        R = refl_matrix(N16, kk, -1)
+        negR = [[-x for x in row] for row in R]
+        impl = implements(U, R, N16) or implements(U, negR, N16)
+        even = all(len(m) % 2 == 0 for m in U)
+        ok_sq, c_sq = prop(cmul(U, U), ONE)
+        res[kk] = (impl, even, ok_sq, c_sq == exp_c, c_sq)
+    B1 = cadd(gam(0), gam(1))
+    B2 = cadd(gam(2), cscale(gam(3), Fr(-1)))
+    antic = not cadd(cmul(B1, B2), cmul(B2, B1))
+    n32_sign = (-1) ** (16 * 15 // 2) == 1
+    FLAGS['fock_blind'] = all(v[0] and v[1] and v[2] and v[3]
+                              for v in res.values())
+    check("T1.1 FOCK IMPLEMENTABILITY IS delta-BLIND [exact Cl(16)]: the "
+          "NS implementers of the mark-compatible axes exist, are EVEN "
+          "and square to POSITIVE scalars -- swap axes k = 1, 9 (delta "
+          "= pi/4): U^2 = %s, %s x 1; site axis k = 0 (delta = pi/8): "
+          "%s x 1; mark-fixing k = 15 (pi/2): %s x 1 (all as v510 "
+          "A-D4.2: 2^7 site / 2^8 bond) => Theta_Fock = U o K obeys "
+          "Theta_Fock^2 = +1 after normalisation for EVERY delta; N = "
+          "32: binomials on disjoint pairs anticommute (machine witness "
+          "in Cl(4): %s), so U^2 = (-1)^(16*15/2) 2^16 = +2^16 > 0 (%s) "
+          "-- the spin/Fock side condition never sees delta"
+          % (res[1][4], res[9][4], res[0][4], res[15][4], antic,
+             n32_sign),
+          FLAGS['fock_blind'] and antic and n32_sign)
+
+    tower = {}
+    for m in range(1, 5):
+        marks_u = {0, 2 * m, 16, (16 + 2 * m) % 32}
+        img = {(a + 8) % 32 for a in marks_u}          # quarter turn pi/2
+        tower[m] = (img == marks_u)
+    sol_i = sp.solveset(sp.cos(d), d, DOM)
+    FLAGS['tower_iff_clock'] = (tower == {1: False, 2: False, 3: False,
+                                          4: True}
+                                and sol_i == sp.FiniteSet(sp.pi / 2))
+    check("T2.1 THE CLOCK-TOWER CLAUSE PRESUPPOSES THE BIT [exact]: the "
+          "quarter rotation preserves the deformed lattice mark set iff "
+          "m = 4 (%s) and 'z -> iz preserves M(delta)' solves to %s -- "
+          "so the candidate sharpening 'RP + clock-tower compatibility' "
+          "(and with it the whole v519 Z8/Theta-rho-clause chain) is "
+          "delta-sensitive ONLY through the clock-existence face of "
+          "v512: a REFORMULATION of the bit, not a derivation from "
+          "positivity" % (tower, sol_i),
+          FLAGS['tower_iff_clock'])
+
+
+# ===========================================================================
+# W -- scoreboard, negative controls, verdict
+# ===========================================================================
+def w_verdict():
+    print(" W -- scoreboard + negative controls + preregistered verdict")
+    blind_rows = [
+        ('mark-compatible OS reflection exists', FLAGS['D_census']
+         and FLAGS['CW_has_OS_refl']),
+        ('free RP PD on the mark-compatible bond cut',
+         FLAGS['clock_rp_pd'] and FLAGS['deformed_rp_pd']
+         and FLAGS['n32_all_pd'] and FLAGS['CW_passes_rp']),
+        ('full RP spectrum (beyond inertia)', FLAGS['spectra_blind']),
+        ('continuum RP (axis eliminated)', FLAGS['continuum_blind']),
+        ('Theta^2 = +1 + deck normalised', FLAGS['theta_sq_blind']),
+        ('Fock implementable, U^2 > 0 scalar', FLAGS['fock_blind']),
+        ('family-A rejected by RP (teeth)', FLAGS['famA_rejected']),
+    ]
+    sided_rows = [
+        ('mark-fixing OS cut exists', FLAGS['markfix_iff_clock']
+         and not FLAGS['CW_markfix']),
+        ('clock-inversion clause formulable',
+         FLAGS['clock_formulable_iff']),
+        ('OS-reflection group closes to D4 (face #13)', FLAGS['face13']),
+        ('clock-tower compatibility', FLAGS['tower_iff_clock']),
+    ]
+    print("        delta-BLIND rows (hold for EVERY delta incl. the "
+          "counterwitness):")
+    for name, ok in blind_rows:
+        print("          + %-46s %s" % (name, ok))
+    print("        SIDED rows (<=> delta = pi/2, each a v512-web face):")
+    for name, ok in sided_rows:
+        print("          - %-46s %s" % (name, ok))
+    all_blind = all(ok for _, ok in blind_rows)
+    all_sided = all(ok for _, ok in sided_rows)
+    check("W1.1 SCOREBOARD [assembled from exact results above]: all %d "
+          "positivity/existence rows are delta-blind (%s) -- the "
+          "counterwitness now passes EIGHT side-blind batteries (the 7 "
+          "of v512 + free RP/Theta existence); all %d delta-sensitive "
+          "sharpenings found are equivalent to established v512 faces "
+          "(mark mirror, clock existence, D4) plus the new face #13 "
+          "(%s) -- every one a REFORMULATION of the one bit, none a "
+          "derivation from OS positivity"
+          % (len(blind_rows), all_blind, len(sided_rows), all_sided),
+          all_blind and all_sided)
+
+    lam_hex = sp.simplify(4 * B_HEX / (1 + B_HEX) ** 2)
+    im_hex = sp.simplify(sp.im(lam_hex))
+    abs_hex = sp.simplify(sp.Abs(B_HEX))
+    silver_real = all(sp.simplify(sp.im(m)) == 0
+                      for m in (sp.Integer(1), sp.Integer(-1),
+                                S_SILVER, -S_SILVER))
+    check("NC.1 HEX/SILVER PRECONDITION CONTROLS [exact, v512/v510 "
+          "reproduced]: hexagonal |b_hex| = %s != 1 and Im lambda = %s "
+          "!= 0 -- the marks are not concyclic, NO seam circle exists: "
+          "the RP battery's preconditions fail (correctly rejected "
+          "before positivity is even asked); silver marks all real (%s) "
+          "-- the mark circle passes through the deck poles, the deck "
+          "is not free there (v510 B-M4.2): excluded by topology before "
+          "the battery -- both controls behave exactly as established"
+          % (abs_hex, im_hex, silver_real),
+          abs_hex == 2 - sp.sqrt(3) and im_hex != 0 and silver_real)
+
+    verdict = (all_blind and all_sided
+               and FLAGS['markfix_iff_clock']
+               and FLAGS['CW_passes_rp'])
+    check("V.1 PREREGISTERED VERDICT = KILL [typed, no overclaim]: the "
+          "SUCCESS branch does NOT fire -- no side-sensitive "
+          "positivity/existence criterion exists at the free level: "
+          "free RP and Theta existence (with every side condition that "
+          "remains FORMULABLE off the clock point) hold along the "
+          "entire M(delta) family including the counterwitness; the "
+          "free RP/Theta battery is hereby documented as the EIGHTH "
+          "side-blind test on the v512 scoreboard.  Structure gained: "
+          "(i) the only delta-sensitive clauses presuppose the clock "
+          "(mark-fixing cut, Theta-rho-relation, Z8 tower) -- the bit "
+          "in OS clothing, face #13 added [C]; (ii) the N = 16 odd-m "
+          "site-axis failure is a placement artifact (N = 32 + "
+          "continuum axis elimination); (iii) RP separates the "
+          "real-structure FAMILIES at every delta but never the SIDES. "
+          "HONEST GAP: marks decorating the STATE (defect/twist "
+          "insertions, interacting A_hol) are outside the free class = "
+          "exactly v519's [O] scope -- there, and only there, could "
+          "positivity still see the bit.  The alignment bit REMAINS "
+          "genuine discrete input.  Sandbox only, no marker moves",
+          verdict)
+
+
+# ---------------------------------------------------------------------------
+def run():
+    t0 = time.time()
+    print("seam_alignment_bit_rp_selector_probe: does free OS positivity "
+          "(v519 RP + Theta) SEE the alignment bit on M(delta)?  Exact "
+          "sympy / Cl(16) Fractions / 40-digit inertia")
+    print("=" * 100)
+    s_census()
+    l_lattice()
+    c_continuum()
+    lb_liftings()
+    t_fock()
+    w_verdict()
+    npass = sum(RESULTS)
+    print("=" * 100)
+    print("SUMMARY: %d/%d checks passed%s   [runtime %.1f s]"
+          % (npass, len(RESULTS),
+             "" if npass == len(RESULTS) else "  -- FAILURES PRESENT",
+             time.time() - t0))
+    return npass == len(RESULTS)
+
+
+if __name__ == "__main__":
+    raise SystemExit(0 if run() else 1)

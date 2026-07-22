@@ -1,0 +1,119 @@
+{
+  "comment": "Frozen ObsID manifest for the NICER extension scan (hypotheses/hfqpo_ext_v1.yaml). Created BEFORE photon download; sizes via HTTP HEAD only.",
+  "frozen_utc": "2026-07-22T17:08:08Z",
+  "source": "MAXI_J1820+070",
+  "anchor_hz": 55.12,
+  "tooth_hz": 82.68,
+  "integer_hz": 110.24,
+  "budget_gb": 15.0,
+  "triage_rule": "discovery obsid mandatory, then ascending size, hard stop before exceeding budget",
+  "files": [
+    {
+      "obsid": "1200120107",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120107/xti/event_cl/ni1200120107_0mpu7_cl.evt.gz",
+      "bytes": 7603238571,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120108",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120108/xti/event_cl/ni1200120108_0mpu7_cl.evt.gz",
+      "bytes": 2503957945,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120109",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120109/xti/event_cl/ni1200120109_0mpu7_cl.evt.gz",
+      "bytes": 5885420223,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120110",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120110/xti/event_cl/ni1200120110_0mpu7_cl.evt.gz",
+      "bytes": 9974344396,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120111",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120111/xti/event_cl/ni1200120111_0mpu7_cl.evt.gz",
+      "bytes": 7866884684,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120112",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120112/xti/event_cl/ni1200120112_0mpu7_cl.evt.gz",
+      "bytes": 6461076088,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120113",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120113/xti/event_cl/ni1200120113_0mpu7_cl.evt.gz",
+      "bytes": 839924111,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120114",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120114/xti/event_cl/ni1200120114_0mpu7_cl.evt.gz",
+      "bytes": 1224089330,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120115",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120115/xti/event_cl/ni1200120115_0mpu7_cl.evt.gz",
+      "bytes": 1272852300,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120116",
+      "month": "2018_03",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_03/1200120116/xti/event_cl/ni1200120116_0mpu7_cl.evt.gz",
+      "bytes": 4052576507,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120117",
+      "month": "2018_04",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_04/1200120117/xti/event_cl/ni1200120117_0mpu7_cl.evt.gz",
+      "bytes": 1100719109,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120118",
+      "month": "2018_04",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_04/1200120118/xti/event_cl/ni1200120118_0mpu7_cl.evt.gz",
+      "bytes": 3724193327,
+      "triage": "skipped_over_budget"
+    },
+    {
+      "obsid": "1200120119",
+      "month": "2018_04",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_04/1200120119/xti/event_cl/ni1200120119_0mpu7_cl.evt.gz",
+      "bytes": 1183298609,
+      "triage": "selected"
+    },
+    {
+      "obsid": "1200120120",
+      "month": "2018_04",
+      "url": "https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_04/1200120120/xti/event_cl/ni1200120120_0mpu7_cl.evt.gz",
+      "bytes": 2615510584,
+      "triage": "skipped_over_budget"
+    }
+  ],
+  "selected_obsids": [
+    "1200120107",
+    "1200120113",
+    "1200120117",
+    "1200120119",
+    "1200120114",
+    "1200120115"
+  ],
+  "selected_bytes_total": 13224122030
+}

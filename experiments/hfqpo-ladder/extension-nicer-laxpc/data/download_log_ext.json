@@ -1,0 +1,37 @@
+{
+ "files": {
+  "1200120107": {
+   "bytes": 7603238571,
+   "status": "fetched",
+   "seconds": 565.3
+  },
+  "1200120113": {
+   "bytes": 839924111,
+   "status": "fetched",
+   "seconds": 78.0
+  },
+  "1200120114": {
+   "bytes": 1224089330,
+   "status": "fetched",
+   "seconds": 109.2
+  },
+  "1200120115": {
+   "bytes": 1272852300,
+   "status": "fetched",
+   "seconds": 103.0
+  },
+  "1200120117": {
+   "bytes": 1100719109,
+   "status": "fetched",
+   "seconds": 86.7
+  },
+  "1200120119": {
+   "bytes": 1183298609,
+   "status": "fetched",
+   "seconds": 97.6
+  }
+ },
+ "errors": [],
+ "total_bytes": 13224122030,
+ "aborted_over_gate": false
+}

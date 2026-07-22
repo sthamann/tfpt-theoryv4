@@ -1,0 +1,43 @@
+{
+  "source": "MAXI_J1820+070",
+  "band": "tot",
+  "tooth_hz": 82.68,
+  "q_injected": 10.0,
+  "n_seg_used": 2013,
+  "n_seg_full_stack": 2013,
+  "mean_rate_cps": 19050.13282414307,
+  "pred_sens_rms_pct_subsample": 0.4634145485297455,
+  "pred_sens_rms_pct_full_stack": 0.4634145485297455,
+  "levels": {
+    "0.348": {
+      "injected_rms_pct": 0.34756091139730916,
+      "n_trials": 8,
+      "n_detected_3sig": 0,
+      "recovery_frac": 0.0,
+      "measured_rms_pct_mean": null
+    },
+    "0.463": {
+      "injected_rms_pct": 0.4634145485297455,
+      "n_trials": 8,
+      "n_detected_3sig": 0,
+      "recovery_frac": 0.0,
+      "measured_rms_pct_mean": null
+    },
+    "0.695": {
+      "injected_rms_pct": 0.6951218227946183,
+      "n_trials": 8,
+      "n_detected_3sig": 0,
+      "recovery_frac": 0.0,
+      "measured_rms_pct_mean": null
+    },
+    "0.927": {
+      "injected_rms_pct": 0.926829097059491,
+      "n_trials": 8,
+      "n_detected_3sig": 8,
+      "recovery_frac": 1.0,
+      "measured_rms_pct_mean": 0.8975591817018275
+    }
+  },
+  "sensitivity_rms_pct_90": 0.926829097059491,
+  "gate_90pct_at_2x": true
+}

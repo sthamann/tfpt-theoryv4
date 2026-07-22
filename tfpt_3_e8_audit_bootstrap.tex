@@ -1138,13 +1138,15 @@ The previous section identified the seam's boundary $2$-sphere with the celestia
 directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
-Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent twenty-step
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent
+twenty-three-step
 story --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- executed as
 work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$,
-$\gamma$, $\delta_1$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the three back-reaction
-milestones M1--M3 of the research contract
-\texttt{CELEST.SEAM.01}, plus the $\alpha$ stage of the OS twistor bridge
-\texttt{WOIT.OS.TWISTOR.01} (Step 20), whose
+$\gamma$, $\delta_1$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages, the three back-reaction
+milestones M1--M3 and the measure decision (Step 21) of the research contract
+\texttt{CELEST.SEAM.01}, plus the RP-blindness decision on the alignment bit (Step 22) and the
+$\alpha$ and $\beta_1$ stages of the OS twistor bridge
+\texttt{WOIT.OS.TWISTOR.01} (Steps 20 and 23), whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
 step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
 \emph{programme} \mO, not a claim, and nothing in it moves \texttt{SEAM.EQUIV.01}. The name of the
@@ -1229,10 +1231,11 @@ mark-transitivity is automatic for every $\delta$ (the pair-exchanging $V_4$; al
 per-mark data are identical, so no local jet sees the bit --- ``transitivity from
 \vref{v216}-locality'' is falsified) --- what selects $\delta=\pi/2\iff\tau=i$ is exactly
 \emph{flag} transitivity (marks \emph{and} their two sides indistinguishable, the $V_4\to D_4$
-symmetry lift), welded into a $12$-fold exact equivalence web (clock rotation, mark mirror,
+symmetry lift), welded into a $13$-fold exact equivalence web (clock rotation, mark mirror,
 odd-doublet split $(2/\pi)\ln\cot(\delta/2)$, arc-Laplacian degeneracy, the \vref{v503} mod-$4$
 indicator in closed form, $\rho$-twist existence, cusp-$4$-cycle implementability, harmonicity,
-$j=1728$); the carrier input thereby reduces from a continuous modulus to \emph{one discrete
+$j=1728$, and --- since Step 22 --- the $D_4$ closure of the OS-reflection group); the carrier
+input thereby reduces from a continuous modulus to \emph{one discrete
 symmetry-lift bit} whose negation is concretely measurable
 (\veri{v512\_seam\_tau\_flag.py}, \texttt{SEAM.TAU.FLAG.01}; markers unchanged).
 
@@ -1561,10 +1564,14 @@ $\operatorname{diag}(i,i)$ degenerates to the $\Z_2$ target; and the $\Z_2$/Eguc
 anchor \emph{passes} with the same mechanism ($9\langle x,x\rangle^2=\tfrac14\times36\langle
 x,x\rangle^2$, coupling scale $2=|\Z_2|=$ centre count). The mandatory fence: the completion
 reading (loop $=$ unphased sector trace with the same zero-mode normalisation) is
-\emph{declared}, supported by the $\delta_1$ modular-completion finding, \emph{not} derived from
-the BCOV integral --- the $\delta_1$ chain has since been decided in Step 19 (\vref{v518}: the
-\emph{derived} chiral measure fails all three testers), so the open face is the
-declared-vs-derived measure question, \mO.
+\emph{declared} within this step, supported by the $\delta_1$ modular-completion finding,
+\emph{not} derived from
+the BCOV integral here --- the $\delta_1$ chain has since been decided in Step 19 (\vref{v518}: the
+\emph{derived} chiral measure fails all three testers), and the declared-vs-derived measure
+question has since been decided in Step 21 (\vref{v520}: the completion reading is now
+\emph{derived at probe level} from two independent constructive sources --- F-independence $+$
+the Quillen pairing --- under the typed premises TP-1..TP-4); the residual \mO\ is the
+constructive BCOV derivation of the $w_m$ normalisation itself.
 \veri{v516\_celestial\_wp5e\_m2\_twisted\_ks\_measure.py}
 
 \par\smallskip\noindent\textbf{Step 18 --- the $a_0$ uplift: four coupled centre-count scales
@@ -1638,8 +1645,9 @@ twistor fibre weights forced by the Step-15 incidence ledger --- an exact match,
 complete BCOV derivation) and the kernel-family convention. TENSION, stated honestly: the
 \emph{declared} completion reading (Step 17) delivers the $\psi=64$ slice and cancels the
 $32\,T_3$; the \emph{derived} chiral measure (this step) fails all three testers --- both are
-exact; the sharp open question is which of the two is the true BCOV measure. Neither result is
-hidden behind the other.
+exact; the sharp open question was which of the two is the true BCOV measure. Neither result is
+hidden behind the other --- and Step 21 has since decided the question at probe level in favour
+of the declared reading, sharpening this kill.
 \veri{v518\_celestial\_wp5e\_delta1\_derived\_kill.py}
 
 \par\smallskip\noindent\textbf{Step 20 --- the real structure exists --- and free reflection
@@ -1678,6 +1686,100 @@ interacting algebra, gauge-fixed RP, OS reconstruction, chirality and $\mu_4$ in
 open contract work (the $\beta$/$\gamma$ milestones named in the contract). No marker moves.
 \veri{v519\_woit\_theta\_rp\_free.py}
 
+\par\smallskip\noindent\textbf{Step 21 --- the measure decision: single-valuedness is derived,
+the completion reading wins \mE/\mC.} The declared-vs-derived tension that Steps 17 and 19 left
+as the named open face is now \emph{decided at probe level} (ERFOLG-A on the preregistered
+decision layer; the $\delta_{1e}$/$\delta_{1f}$ consolidation). The centrepiece is exact linear
+algebra: the joint invariant subspace $\{v:\rho(T)v=v,\ \rho(S)v=v\}$ of the dressed
+$16$-component Weil system has $\dim_{\mathbb Q}=8=4\times2$ and \emph{every} kernel vector
+lies in the $\Q(\zeta_8)$-span of the two Lagrangian gluings $\{e_H,e_{H'}\}$ --- both with
+theta series $E_4$, both carrying the \emph{unphased} sector trace $Q^{(0)}=(36,72,36,0,0)$.
+Single-valuedness of the physical one-loop lattice factor --- Step 19's typed premise --- is
+then \emph{derived} from two independent constructive sources rather than postulated.
+\emph{Source 1 (the fundamental-domain lemma):} every strict chiral closure at physical weight
+carries a nontrivial character ($\chi_4(T)=e(1/3)$, $\chi_{10}(T)=e(5/6)$, exact; zero strict
+trivial-character solutions across all eleven dressings); the canonical column-matched member's
+total block sum obeys $G(\gamma\tau)=\chi_4(\gamma)G(\tau)$ \emph{pointwise} (certificate
+$3.9\times10^{-16}$, nonvacuous $|G|\ge59.6$), and an exact change of variables turns
+fundamental-domain independence into $\int=0$ for \emph{every} chiral integrand: the Step-19
+route was never a well-defined nonvanishing moduli integral --- the kill is \emph{sharpened},
+its unfolded values are convention bookkeeping. \emph{Source 2 (the Quillen pairing):} BCOV's
+$F_1$ pairs hol$\,\times\,$conj(hol), and the doubled transports satisfy
+$|t\bar t-1|<8.3\times10^{-40}$ on all $15$ pairs ($|\chi_4|^2=1$ exactly, while the one-sided
+square $\chi_4^2=e(2/3)\neq1$ keeps defects on $15/15$ pairs); the doubled $256$-dimensional
+system closes \emph{strictly} at trivial character and physical weight (nullspaces
+$(28,17)\ge11$), contains the unphased diagonal \emph{and} the physical columns
+$w_b\otimes\bar w_b$, and the wrong pairing hol$\,\otimes\,$hol is \emph{empty} $(0,0)$. The
+consistency circle then closes: the forced unphased numerator, inserted into the Step-19
+scaffold, reproduces the Step-17 Okubo squares \emph{levelwise} ($\sum_mV\propto\langle
+x,x\rangle^2$ exactly on every level $n\le8$; $J$-weighted spreads $\sim5\times10^{-41}$, zero
+negative cells) with $\psi(\text{skeleton})=+0.2302=-\psi(\text{contact})$ --- the $J$-weighted
+mirror image of $\psi(A_{\mathrm{fix}})=+64$/$\psi(\text{contact})=-64$. The declared reading
+also wins the two decision-layer discriminators: the physical AB column $\sum_mi^{bm}e_{(m,m)}$
+is contained \emph{exactly} in the $\chi_4$ family ($\sigma\sim1.8\times10^{-16}$, one scalar
+per orbit --- canonicalising the $(N_1,N_2)$ freedom) yet the canonical member still fails
+every tester; and at the $\Z_2$/Eguchi--Hanson anchor only the declared reading hits
+($9\langle x,x\rangle^2=\tfrac14\times36$, $\psi(A_2)=-8$, scale tooth $c=1/2=|\Z_2|h^{A_1}$
+unique) while all three derived instantiations fail. Typed premises \mC\ (the mandatory fence):
+TP-1 (F-independent moduli integral), TP-2 (nonvanishing --- it must source $\psi=64$), TP-3
+(the Step-19 kernel convention), TP-4 (the Quillen structure of BCOV $F_1$). What stays \mO:
+the constructive BCOV derivation of the $w_m$ normalisation itself. No marker moves.
+\veri{v520\_celestial\_wp5e\_measure\_decision.py}
+
+\par\smallskip\noindent\textbf{Step 22 --- free OS positivity does not see the bit: the eighth
+side-blind test \mE/\mC.} Could the Step-20 machinery \emph{derive} the Step-2 alignment bit?
+The hypothesis --- free RP or $\Theta$ existence breaks for $\delta\neq\pi/2$ on the deformed
+mark family $M(\delta)=\{\pm1,\pm e^{i\delta}\}$ --- is now decided \emph{negative}, exactly as
+preregistered (KILL branch). The census is exact and symbolic: for \emph{every} $\delta$ the two
+mark-swapping reflections $\Theta_{\pm e^{i\delta}}$ exist (all $20$ cut/mark incidence
+solvesets empty), while mark-\emph{fixing} reflections exist iff $\delta=\pi/2$ (solveset
+$\cos\delta=0$, lost immediately at $\pi/2-\varepsilon$). Free RP is $\delta$-blind in the
+strongest sense: the bond-cut Gram inertias are $(8,0,0)$ PD for all tested $\delta$ with the
+full sorted spectra \emph{identical to $40$ digits} (deviation $0.0$); the $N=16$ odd-$m$
+failure is a lattice-placement artifact (at $N=32$ all $m=1..7$ have mark-compatible bond axes
+with PD inertia $(16,0,0)$); the continuum OS kernel in axis-adapted coordinates is
+\emph{exactly} $1/\sin((s{+}t)/2)$ --- the axis position drops out identically --- and the
+\vref{v510}/\vref{v512} counterwitness passes free RP. $\Theta$ existence is $\delta$-blind too
+($\Theta^2=+1$, deck normalisation, Fock implementability $U^2=+2^7/2^8>0$ for every $\delta$);
+the \emph{only} $\delta$-sensitive clause of the Step-20 battery ($\Theta\rho\Theta=\rho^{-1}$)
+is for $\delta\neq\pi/2$ not violated but \emph{not formulable} (a mark-compatible order-$4$
+rotation exists iff $\delta=\pi/2$) --- it presupposes the bit instead of deriving it. The
+battery has teeth at every $\delta$ (family A fails RP structurally $(4,4,0)$; the
+chirality--$\eta$ pinning persists $(0,8,0)$): RP separates the real-structure \emph{families},
+never the \emph{sides}. Structure gained \mC: the group generated by the admissible OS
+reflections is $V_4$ for every $\delta<\pi/2$ and closes to $D_4$ exactly at the clock point
+($\Theta_i\circ\Theta_1=$ the clock) --- face \#13 of the Step-2 equivalence web ($12\to13$).
+The free RP/$\Theta$ battery is hereby the \emph{eighth} side-blind test on the \vref{v512}
+scoreboard ($7\to8$); the honest \mO\ gap is the mark-decorated \emph{state} class
+(defect/twist insertions, the interacting $\mathcal A_{\mathrm{hol}}$) --- the alignment bit
+remains genuine discrete input. No marker moves.
+\veri{v521\_seam\_bit\_rp\_blind.py}
+
+\par\smallskip\noindent\textbf{Step 23 --- the clock is time-like, GSO is the gauge datum
+\mE/\mC/\mO.} The $\beta_1$ stage of the OS twistor bridge is executed as a \emph{typed} result
+(verdict UNDECIDED per the frozen preregistration --- the preregistered reading was the wrong
+operationalisation, and the module documents why, including its own first frozen run at $6/13$
+and a preregistration combinatorics error $30$ vs $32$). The mechanism: the one-step clock
+insertion $T_1=\langle\theta(e_a),\alpha_S(e_b)\rangle$ violates Hermiticity \emph{exactly}
+(witness entry $-i/(8\sin(5\pi/16))$ against $+i/(8\sin(5\pi/16))$; the pairing is
+complex-symmetric --- $745$ matching, $96$ anti-matching, $0$ violations --- and
+``OS-symmetric'' is strictly weaker than Hermitian), so ``positivity after gauge fixing'' is
+not well-posed for the clock reading. The typing is a census: \emph{all} $16$ dihedral
+reflection axes of the NS seam circle invert the clock lift ($RSR^{-1}=S^{-1}$), none commutes
+--- the $\mu_4$ clock \emph{is} Woit's euclidean rotation, and the gaugeable
+($\theta$-compatible) part of its $\Z_8$ Fock tower is exactly the $2$-torsion
+$\{1,(-1)^F\}$ $=$ the GSO/fermion-parity $\Z_2$ (the free-fermion shadow of the $E_8$ glue:
+$(E_8)_1=$ even NS of $SO(16)_1$ $+$ R spinor). Under that corrected typing gauge-fixed RP
+\emph{holds exactly}: $(29,0,0)$ PD at $N=16$ ($\deg\le2$, min eigenvalue $1.78\times10^{-6}$),
+$(8,0,0)$ PD on the complete $N=8$ half algebra; the site-cut defect survives gauge fixing
+($(7,9,6)$ --- the bond placement is gauge-invariant information); family A stays indefinite
+($(17,12,0)$); the Ramond control forces the NS/$\Z_8$ tower. Kill test (2)'s free shadow does
+\emph{not} fire, kill test (1) stays discharged also gauge-invariantly; both stay live on
+$\mathcal A_{\mathrm{hol}}$, and the clock-equivariant statement is re-routed through $\beta_2$
+(OS quotient first, then the clock as reconstructed transfer operator --- contract precision
+(iii)). No marker moves; \texttt{WOIT.OS.TWISTOR.01} stays \mO.
+\veri{v522\_woit\_beta1\_gso\_gauge.py}
+
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:
 the boundary partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the
@@ -1686,15 +1788,15 @@ verified --- the exchange sub-branch is closed by Step 12, the full-tensor ledge
 Step 14, the level-from-flux dial is executed
 by Step 13, the bulk-axion slot is built by Step 15, all three back-reaction milestones it
 preregistered are executed by Steps 16--18 (the Step-15 fence M1--M3 is \emph{fully worked
-off}), and the $\delta_1$ chain is \emph{decided} by Step 19 (kill under the derived measure),
-so the named remaining target narrows to the \emph{measure question}: the declared completion
-reading (Step 17: loop $=$ unphased sector trace with the same zero-mode normalisation,
-delivering the $\psi=64$ slice) and the derived chiral measure (Step 19: solved from blockwise
-covariance, failing all three testers) are \emph{both exact and disagree} --- the global BCOV
-quantisation must decide which of the two it produces; the cubic $d$-channel stays not needed
+off}), the $\delta_1$ chain is \emph{decided} by Step 19 (kill under the derived measure),
+and the measure question is \emph{decided at probe level} by Step 21 (the declared completion
+reading wins: single-valuedness derived from F-independence $+$ the Quillen pairing under the
+typed premises TP-1..TP-4; the derived chiral measure was never a well-defined nonvanishing
+moduli integral), so the named remaining target narrows to the \emph{constructive BCOV
+derivation of the $w_m$ normalisation itself}; the cubic $d$-channel stays not needed
 and its physical-justification question ($c_d=32\times60$; the
 $1920=|W(D_5)|$ reading look-elsewhere-loaded and convention-contingent, \vref{v513}) stays
-dissolved (Step 19 does not revive it) --- together with the
+dissolved (Steps 19 and 21 do not revive it) --- together with the
 continuum uplift of the Step-10 lattice witnesses (Xu's theorem for the abstract orbifold
 statement; the concrete seam quotient net and the interacting condensed $(E_8)_1$ net are
 Costello--Li territory). The route does \emph{not} close \texttt{SEAM.EQUIV.01}; it \emph{is} the
@@ -1709,9 +1811,11 @@ theorem with its value pinned by the sector counter, the bulk-axion slot a const
 with $\tilde\lambda=6$ triply pinned, the back-reacted $\Omega_N$ closed-form with
 $(2\pi i)^2$-integral lockstep periods and the source charge $4=|\mu_4|$ forced, the twisted KS
 measure (on the declared completion reading) landing on the unique quartic-free weighting, the
-$a_0$ uplift coupled to the centre count on four scales, and the $\delta_1$ chain decided ---
-kill under the derived measure, with the declared/derived tension stated --- while the
-global quantisation stays open. \texttt{SEAM.EQUIV.01}
+$a_0$ uplift coupled to the centre count on four scales, the $\delta_1$ chain decided ---
+kill under the derived measure --- and the measure question decided at probe level for the
+declared reading (Step 21) --- while the
+global quantisation (now narrowed to the constructive $w_m$ derivation) stays open.
+\texttt{SEAM.EQUIV.01}
 stays \mO\ throughout; no marker moves.
 
 \par\medskip\noindent\textbf{The Woit bridge: chiral Wick rotation and the real structure \mO.}
@@ -1740,7 +1844,11 @@ free level} --- $\Theta$ with $\Theta^2=+1$ and $\Theta\rho\Theta=\rho^{-1}$ on 
 (sphere, $\mathbb C^4$, $\Z_8$ spin, $\mathrm{Cl}(16)$ Fock), with free RP on the seam system selecting
 the same family; Woit's two inequivalent real structures ($\rho_{\mathrm{tw}}$ and
 $\sigma_{\mathrm{std}}$) are exactly the two families of that classification, in \emph{different}
-contract slots. \emph{The interacting statement stays \mO} --- kill test 1 is discharged only at
+contract slots. The $\beta_1$-stage status (Step 23, \vref{v522}) sharpens the dictionary once
+more: the $\mu_4$ clock is \emph{Woit's euclidean rotation itself} (time-like: every seam mirror
+axis inverts it), the only gaugeable part of its tower is the GSO/fermion-parity $\Z_2$, and
+gauge-fixed RP holds under that typing --- kill test (2)'s free shadow does not fire.
+\emph{The interacting statement stays \mO} --- kill tests 1 and 2 are discharged only at
 the free level, and until $\Theta$ $+$ RP exist on $\mathcal A_{\mathrm{hol}}$, the Woit
 connection remains a strong analogy, not a mathematical integration; nothing in this paragraph is
 evidence for either programme, and no marker moves.

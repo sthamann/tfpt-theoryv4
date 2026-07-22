@@ -1,0 +1,190 @@
+# Preregistered protocol for the EXTENSION of the hfqpo-ladder third-tooth search to
+# non-RXTE archives (NICER / NuSTAR / AstroSat-LAXPC candidates).
+#
+# Frozen 2026-07-22, BEFORE any photon data was downloaded and BEFORE any PDS was
+# computed on new data. The archive-selection feasibility check below used ONLY
+# metadata (published papers/ATels, HEASARC catalog queries, HTTP HEAD file sizes,
+# ISSDC portal accessibility probes) - no timing data was touched.
+#
+# The kernel, the detection statistic, the decision rule and the sanity/injection
+# gates are taken UNCHANGED from the parent experiment (hypotheses/hfqpo_v1.yaml,
+# scripts/pds_core.py, run 2026-07-20). Nothing about the prediction is re-tuned.
+
+experiment: hfqpo-ladder / extension-nicer-laxpc
+role: search target - extend the preregistered H3 third-tooth archival scan to new
+  public archives with the SAME frozen kernel and the SAME decision rule
+version: ext_v1
+frozen_utc: "2026-07-22T17:05:00Z"
+parent: ../hypotheses/hfqpo_v1.yaml   # governs; this file only adds new data surfaces
+
+firewall: >
+  Identical to the parent experiment. TFPT's 3/2 is a relaxation-ladder step (N_fam=3),
+  NOT a two-oscillator frequency ratio; TFPT derives no HFQPO production mechanism.
+  Only the ladder discriminator (geometric tooth at (3/2) x anchor vs integer harmonic
+  lines of the same anchor) carries any weight. Even a ladder hit would be [C]-tier.
+  Nothing here is [E]; no load-bearing claim; the RXTE stage-2 well-powered null stands
+  and is NOT re-opened by this extension.
+
+frozen_kernel:                       # bit-identical to parent (guarded by parent tests/)
+  step: 3/2 exact                    # = N_fam/(N_fam-1), N_fam = 3; no fitted exponent
+  tooth_rule: nu_tooth = (3/2) * nu_anchor
+  integer_rule: anti-kernel lines at k * nu_0 with nu_0 = nu_anchor (single-QPO case)
+                or nu_0 = nu_u/3 = nu_l/2 (3:2-pair case, as in the parent scan)
+  single_qpo_extension_rule: >
+    For a source with a published SINGLE HFQPO (no 3:2 pair), the anchor is that
+    published HFQPO centroid. The frozen ladder reading predicts the next tooth at
+    (3/2) x anchor and forbids integer lines; the harmonic alternative predicts the
+    integer line at 2 x anchor. This is the same arithmetic the parent applied to
+    pairs (tooth = (3/2) nu_u; integer = 4 nu_0), fixed here BEFORE the data pass.
+    A single-QPO test is a priori WEAKER than a pair test (no 3:2 pair anchors the
+    ladder phase); it is reported as such and never pooled with the pair results.
+
+# ---------------------------------------------------------------------------------
+# Archive feasibility decision (metadata-only; done BEFORE this freeze)
+# ---------------------------------------------------------------------------------
+archive_selection:
+  selected:
+    - archive: NICER (HEASARC, public, scriptable FTP/HTTPS)
+      source: MAXI J1820+070
+      basis: >
+        Published NICER HFQPO detection - ATel #11951 (Zhang et al. 2018): 55.12 +/-
+        0.06 Hz, FWHM 2.00 +/- 0.20 Hz, fractional rms ~1%, discovered in ObsID
+        1200120107, "clearly detected until observation 1200120120", centroid stable
+        at ~55 Hz, weak second harmonic at ~110 Hz already reported. Hard state,
+        2018 March-April. Cleaned event files (ni*_0mpu7_cl.evt.gz) publicly listable
+        and sized via HTTP HEAD at heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/2018_0[34]/.
+        NICER dead time (~20 us/event, per-FPM) is negligible at these rates; no
+        co-spectrum machinery needed. This is the only candidate archive with a
+        PUBLISHED in-instrument sanity anchor in the 10-500 Hz band.
+  rejected:
+    - archive: AstroSat/LAXPC (ISSDC astrobrowse / PRADAN)
+      verdict: infrastructure_blocked
+      basis: >
+        Scientifically the strongest channel (published ~70 Hz HFQPOs of GRS 1915+105
+        in delta/kappa/gamma/omega classes: Belloni et al. 2019, Sreehari et al. 2020,
+        Majumder et al. 2022). Probed 2026-07-22: astrobrowse.issdc.gov.in serves the
+        search UI but all data endpoints sit behind a signin form
+        (apps.issdc.gov.in/apps/auth/login.jsp); the SSC FAQ states only registered,
+        logged-in users can download. No anonymous or scriptable path exists. Recorded
+        as an infrastructure verdict per the budget-gate rule instead of fighting it.
+    - archive: NICER / GRS 1915+105
+      verdict: not_selected (no anchor)
+      basis: >
+        No published NICER detection of the 67-70 Hz line exists (literature checked
+        2026-07-22); the line is hard-band dominant (rms rises above ~6 keV) while the
+        source is heavily absorbed (N_H ~ 5e22 cm^-2), suppressing NICER's soft-band
+        leverage; the published-pair (113/168 Hz) epochs are RXTE-era (1997) and
+        cannot be re-observed. A scan without a published in-band anchor line cannot
+        pass the parent's sanity-gate design, so a null would be uninterpretable.
+    - archive: NICER / MAXI J1535-571
+      verdict: not_selected (no target)
+      basis: >
+        No published HFQPO at all (NICER QPOs are type-A/B/C at <= 10 Hz). The frozen
+        kernel defines no tooth frequency for this source; scanning would be an
+        unpreregistered fishing expedition.
+    - archive: NuSTAR (any source)
+      verdict: not_selected (sensitivity)
+      basis: >
+        Dead time ~2.5 ms caps effective rates near ~400 c/s per module; Bachetti et
+        al. 2015 FPMA/FPMB co-spectra remove the dead-time features but not the rate
+        cap. For a ~1% rms line at 55-110 Hz and T ~ 30 ks: n_sigma ~ 0.5 * r * rms^2
+        * sqrt(T/dnu) ~ 5 sigma for the KNOWN line and worse for an upper limit at the
+        tooth - an order of magnitude below NICER on the same source (>= 10^4 c/s).
+
+# ---------------------------------------------------------------------------------
+# Frozen targets (single-QPO extension rule applied to the published anchor)
+# ---------------------------------------------------------------------------------
+targets:
+  MAXI_J1820+070:
+    anchor_hz: 55.12          # ATel #11951; stable ~55 Hz across ObsIDs 107-120
+    anchor_err_hz: 0.06       # centroid error in the discovery obsid
+    anchor_drift_band_hz: 2.0 # "stable at ~55 Hz" across epochs; conservative half-band
+    tooth_hz: 82.68           # (3/2) x 55.12
+    tooth_tol_hz: 3.0         # 1.5 x drift band (same scaling the parent used)
+    integer_hz: 110.24        # 2 x 55.12 (the reported "weak second harmonic" line)
+    integer_tol_hz: 4.0       # 2 x drift band
+    note: >
+      The ~110 Hz harmonic is ALREADY reported in the ATel. Under the parent decision
+      rule an integer line at >= 4 sigma (after trials) with no tooth fires
+      harmonic_hit = evidence AGAINST the ladder reading (extends the anti-kernel
+      record 92=184/2 and 34/68 from the parent census). This outcome is expected.
+
+# ---------------------------------------------------------------------------------
+# Data / manifest / budget gates
+# ---------------------------------------------------------------------------------
+data_plan:
+  archive_url: https://heasarc.gsfc.nasa.gov/FTP/nicer/data/obs/
+  files: xti/event_cl/ni{obsid}_0mpu7_cl.evt.gz   # merged-MPU cleaned events, GTIs inside
+  obsid_pool: [1200120107, 1200120108, 1200120109, 1200120110, 1200120111,
+               1200120112, 1200120113, 1200120114, 1200120115, 1200120116,
+               1200120117, 1200120118, 1200120119, 1200120120]
+  # HTTP HEAD sizes probed 2026-07-22 (GB): 107:7.60 108:2.50 109:5.89 110:9.97
+  # 111:7.87 112:6.46 113:0.84 114:1.22 115:1.27 116:4.05 117:1.10 118:3.72
+  # 119:1.18 120:2.62  -> full pool 56.3 GB >> budget
+  budget_gate_gb: 15.0
+  triage_rule: >
+    Frozen BEFORE download: the discovery ObsID 1200120107 is mandatory (sanity
+    anchor); the remaining ObsIDs are added in ascending file size until the next
+    file would push the running total over 15.0 GB. Deterministic; no peeking at
+    content. Expected subset: 1200120107, 1200120113, 1200120117, 1200120119,
+    1200120114, 1200120115, 1200120120, 1200120108 stops when the gate trips.
+  download_abort_gate: fetch script hard-stops above 15.0 GB and records the fact.
+
+# ---------------------------------------------------------------------------------
+# Method (identical machinery; NICER loader is the only new code)
+# ---------------------------------------------------------------------------------
+method:
+  pds: Leahy-normalised, 16-s segments, dt = 1/4096 s (Nyquist 2048 Hz), segments
+    fully inside GTIs, stacked per band - bit-identical constants to scripts/pds_core.py
+  bands:
+    tot:  {pi_lo: 30,  pi_hi: 1000}   # 0.3-10 keV; PRIMARY (ATel PDS band unstated ->
+                                      # total band is the conservative anchor band)
+    hard: {pi_lo: 300, pi_hi: 1200}   # 3-12 keV; SECONDARY (HFQPO rms rises with E)
+  barycentring: skipped (max modulation v/c ~ 1e-4 -> <= 0.011 Hz at 110 Hz;
+    negligible vs FWHM ~ 2 Hz and the 0.0625 Hz Fourier grid)
+  dead_time: NICER ~20 us per event per FPM, 52 FPMs -> < 1% at ~2e4 c/s; treated as
+    negligible (no co-spectrum needed); local continuum fit absorbs the small Leahy
+    noise deficit
+  line_fit: continuum + Lorentzian, free FWHM within Q in [4, 25], centroid free
+    within +/- tol; significance = norm/sigma_norm; 3-sigma rms upper limits over the
+    fixed-Q grid (5, 8, 12, 20) - same as parent fit_line, except the local fit
+    window is set explicitly per target so that the KNOWN 55 Hz line and the other
+    target line never sit inside the fitted range (the parent's geometric window
+    x/1.6 would put the strong 55 Hz anchor inside the tooth window; frozen ranges:)
+  fit_windows_hz:
+    sanity_55:   [40.0, 74.0]     # anchor fit; excludes 82.7 tooth region
+    tooth_82.7:  [64.0, 101.0]    # excludes 55.1 and 110.2
+    integer_110: [95.0, 135.0]    # excludes 82.7
+  sanity_gate: the 55 Hz anchor must be reproduced at >= 3 sigma in the stacked
+    primary band of the QPO-epoch subset, with rms within a factor 2 of the published
+    ~1% - otherwise the scan STOPS (verdict infrastructure/pipeline, not null)
+  injection_gate: mandatory before any verdict - piecewise-coherent Lorentzian QPO
+    (Q = 10) thinned into the real per-segment light curves at the tooth frequency;
+    >= 90% recovery at <= 2 x the analytic sensitivity, same as parent stage_inject
+  trials_correction: n_trials = 4 (2 frequencies x 1 source x 2 bands),
+    p_final = 1 - (1 - p_single)^4; detection threshold 4 sigma after trials
+    (parent rule with the trials count adjusted to this design)
+
+decision_rule:                    # verbatim parent semantics
+  ladder_hit:  tooth >= 4 sigma after trials AND no integer line >= 4 sigma
+  harmonic_hit: integer line >= 4 sigma after trials AND no tooth -> kernel reading
+    dead for this source (anti-kernel record extended)
+  neither: report 3-sigma % rms upper limits at both frequencies
+
+verdict_enum_extension: [recovered, null_with_sensitivity, null_without_sensitivity,
+                         infrastructure_blocked]
+verdict_mapping:
+  recovered: tooth detected per ladder_hit (would be [C]-tier at best; see firewall)
+  null_with_sensitivity: no tooth AND injection gate passed AND 90%-recovery rms <=
+    the measured rms of the 55 Hz anchor line in the same stack
+  null_without_sensitivity: no tooth but injection gate failed or sensitivity worse
+    than the anchor-line rms
+  infrastructure_blocked: archive not accessible / data unusable (LAXPC case)
+
+prereg_expected:
+  MAXI_J1820+070_tooth: null_with_sensitivity   # count rate >= 1e4 c/s, thousands of
+                                                # 16-s segments -> sub-percent limits
+  MAXI_J1820+070_integer: harmonic_hit plausible (110 Hz already reported weak)
+  AstroSat_LAXPC: infrastructure_blocked
+  overall: the RXTE null stands; this extension either extends the anti-kernel
+    record (harmonic_hit) or adds one more well-powered single-QPO null

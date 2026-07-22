@@ -1,0 +1,129 @@
+{
+  "trials_correction": {
+    "n_trials": 4,
+    "rule": "2 frequencies x 1 source x 2 bands, p_final = 1-(1-p_single)^4"
+  },
+  "MAXI_J1820+070": {
+    "primary": {
+      "band": "tot",
+      "n_seg": 2013,
+      "exposure_s": 32208.0,
+      "mean_rate_cps": 19050.13282414307,
+      "tooth": {
+        "f0_hz": 85.67999999999999,
+        "fwhm_hz": 3.3072000000155017,
+        "q": 25.907111756046923,
+        "norm_leahy": 0.09374293304499419,
+        "norm_err": 0.1363691336189998,
+        "significance_sigma": 0.6874204635405364,
+        "rms_frac": 0.0022182999264316106,
+        "rms_pct": 0.22182999264316106,
+        "rms_ul3sig_pct": 0.7532322266752632,
+        "chi2": 172.9896977241459,
+        "dof": 60,
+        "fit_window_hz": [
+          64.0,
+          101.0
+        ],
+        "mean_rate_cps": 19050.13282414307,
+        "n_seg": 2013,
+        "p_single": 0.24590890294501494,
+        "p_trials_corrected": 0.6766333303920795,
+        "significance_after_trials_sigma": -0.45830499055905916,
+        "target_hz": 82.68
+      },
+      "integer": {
+        "f0_hz": 110.56707164298504,
+        "fwhm_hz": 4.409600000000001,
+        "q": 25.074172633115253,
+        "norm_leahy": 0.6725113337082591,
+        "norm_err": 0.16190277988661705,
+        "significance_sigma": 4.1537973231789405,
+        "rms_frac": 0.005941564278440234,
+        "rms_pct": 0.5941564278440234,
+        "rms_ul3sig_pct": 1.4490753099250318,
+        "chi2": 131.4869295304568,
+        "dof": 48,
+        "fit_window_hz": [
+          95.0,
+          135.0
+        ],
+        "mean_rate_cps": 19050.13282414307,
+        "n_seg": 2013,
+        "p_single": 1.635014191216327e-05,
+        "p_trials_corrected": 6.539896370327813e-05,
+        "significance_after_trials_sigma": 3.824951322602599,
+        "target_hz": 110.24
+      }
+    },
+    "secondary": {
+      "band": "hard",
+      "n_seg": 2012,
+      "exposure_s": 32192.0,
+      "mean_rate_cps": 1401.9486518389663,
+      "tooth": {
+        "f0_hz": 85.6799999999795,
+        "fwhm_hz": 20.669999999472072,
+        "q": 4.145137881091816,
+        "norm_leahy": 1.0408301228222635e-15,
+        "norm_err": 0.2874315218573965,
+        "significance_sigma": 3.621141189026062e-15,
+        "rms_frac": 8.616360729578956e-10,
+        "rms_pct": 8.616360729578956e-08,
+        "rms_ul3sig_pct": 2.0815311003840216,
+        "chi2": 72.32461790889401,
+        "dof": 60,
+        "fit_window_hz": [
+          64.0,
+          101.0
+        ],
+        "mean_rate_cps": 1401.9486518389663,
+        "n_seg": 2012,
+        "p_single": 0.49999999999999856,
+        "p_trials_corrected": 0.9374999999999993,
+        "significance_after_trials_sigma": -1.534120544352541,
+        "target_hz": 82.68
+      },
+      "integer": {
+        "f0_hz": 110.89199689334502,
+        "fwhm_hz": 4.409603692373953,
+        "q": 25.147837454219207,
+        "norm_leahy": 0.035935077198595795,
+        "norm_err": 0.09266353278896095,
+        "significance_sigma": 0.38780171786065076,
+        "rms_frac": 0.0050628287474825335,
+        "rms_pct": 0.5062828747482534,
+        "rms_ul3sig_pct": 2.3220413895006353,
+        "chi2": 51.26486758892825,
+        "dof": 48,
+        "fit_window_hz": [
+          95.0,
+          135.0
+        ],
+        "mean_rate_cps": 1401.9486518389663,
+        "n_seg": 2012,
+        "p_single": 0.34908138707723213,
+        "p_trials_corrected": 0.8204825125291879,
+        "significance_after_trials_sigma": -0.9172054815610141,
+        "target_hz": 110.24
+      }
+    }
+  },
+  "verdict": {
+    "source": "MAXI_J1820+070",
+    "decision_rule_outcome": "neither_upper_limits",
+    "extension_enum": "null_with_sensitivity",
+    "tooth_sig_after_trials": -0.45830499055905916,
+    "integer_sig_after_trials": 3.824951322602599,
+    "tooth_rms_ul3sig_pct": 0.7532322266752632,
+    "integer_rms_ul3sig_pct": 1.4490753099250318,
+    "integer_rms_pct_if_detected": null,
+    "injection_sensitivity_rms_pct_90": 0.926829097059491,
+    "anchor_rms_pct": 0.9409680970369155
+  },
+  "laxpc": {
+    "archive": "AstroSat/LAXPC (ISSDC)",
+    "extension_enum": "infrastructure_blocked",
+    "basis": "login-gated archive, no anonymous/scriptable access (probed 2026-07-22; see hypotheses/hfqpo_ext_v1.yaml)"
+  }
+}

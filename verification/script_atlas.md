@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`513` registered scripts · `584` ledger claims · `10` clusters.
+`516` registered scripts · `587` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (59 scripts)
+### `core` — Compiler core & the E₈ glue  (60 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -129,6 +129,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v176_seam_collar_realisation, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v216, v264 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v512_seam_tau_flag** [E/C] `SEAM.TAU.FLAG.01` — SEAM.TAU.FLAG.01: the flag-transitivity equivalence web -- the tau = i attack executed on the free RP seam circle: which ESTABLISHED seam datum excludes the free-but-non-harmonic c
   - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, AX.P2.01, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v521_seam_bit_rp_blind** [E/C/O/X] `SEAM.BIT.RPBLIND.01` — SEAM.BIT.RPBLIND.01: the RP/Theta attack on the alignment bit DECIDED -- 'free OS positivity does NOT see delta', an honest, decided NEGATIVE result (v508 style; 25 checks, ~25 s):
+  - deps: v512_seam_tau_flag, v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v506, v507, v510 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -336,7 +338,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (183 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (185 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -705,6 +707,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v516_celestial_wp5e_m2_twisted_ks_measure, v517_celestial_wp5e_m3_a0_uplift, v514_celestial_wp5e_eps1_axion_slot, v508_celestial_wp5e_gamma_pairing, v511_celestial_wp5e_delta2_tensor_ledger, v513_celestial_dterm_nonderivation, v502 · cited: 3 e8 audit bootstrap, research contracts
 - **v519_woit_theta_rp_free** [E/C/O/X] `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01` — WOIT.THETA.FREE.01: the WOIT-alpha milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 -- 'the real structure exists, and free reflection positivity picks the SAME family' (Part 
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v510_seam_bit_freedom, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v507_seam_bit_origin · cited: 3 e8 audit bootstrap, research contracts
+- **v520_celestial_wp5e_measure_decision** [E/C/O/X] `CELEST.WP5E.MEASURE.01` — CELEST.WP5E.MEASURE.01: the WP5e BCOV measure question DECIDED at probe level (delta-1e + delta-1f consolidated, v518 style) -- 'single-valuedness is derived, the completion readin
+  - deps: v492_celestial_z4_orbifold, v516_celestial_wp5e_m2_twisted_ks_measure, v518_celestial_wp5e_delta1_derived_kill, v502, v505, v508, v511, v514 · cited: 3 e8 audit bootstrap, research contracts
+- **v522_woit_beta1_gso_gauge** [E/C/O/X] `WOIT.BETA1.GSO.01` — WOIT.BETA1.GSO.01: the WOIT-beta1 milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 executed -- 'the clock is time-like, GSO is the gauge datum' (typed result: verdict UNDECIDE
+  - deps: v519_woit_theta_rp_free, v521_seam_bit_rp_blind, v506_seam_clock_rigidity, v510, v519 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1091,15 +1097,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×23, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×24, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v508_celestial_wp5e_gamma_pairing** — `CELEST.WP5E.GAMMA.01`
-- **v509_celestial_wp5e_eps2_level_from_flux** — `CELEST.WP5E.EPS2.01`
-- **v510_seam_bit_freedom** — `SEAM.BIT.FREEDOM.01`
 - **v511_celestial_wp5e_delta2_tensor_ledger** — `CELEST.WP5E.DELTA2.01`
 - **v512_seam_tau_flag** — `SEAM.TAU.FLAG.01`
 - **v513_celestial_dterm_nonderivation** — `CELEST.DTERM.NONDERIV.01`
@@ -1109,4 +1112,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v517_celestial_wp5e_m3_a0_uplift** — `CELEST.WP5E.M3.01`
 - **v518_celestial_wp5e_delta1_derived_kill** — `CELEST.WP5E.DELTA1.01`
 - **v519_woit_theta_rp_free** — `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01`
+- **v520_celestial_wp5e_measure_decision** — `CELEST.WP5E.MEASURE.01`
+- **v521_seam_bit_rp_blind** — `SEAM.BIT.RPBLIND.01`
+- **v522_woit_beta1_gso_gauge** — `WOIT.BETA1.GSO.01`
 

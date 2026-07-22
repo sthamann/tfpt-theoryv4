@@ -662,6 +662,39 @@ ROWS = [
      "the preregistered archival test HAS run (null); next decider is eXTP-class sensitivity "
      "below the 0.5-3.1% rms limits: a >=4sigma third QPO at 1.5*nu_u with no integer line "
      "(ladder hit, [C]-tier) OR an integer line with no tooth (kernel reading dead)", "null"],
+    # HFQPO ladder extension (experiments/hfqpo-ladder/extension-nicer-laxpc, 2026-07-22):
+    # SAME frozen kernel + decision rule on non-RXTE archives (single-QPO extension rule,
+    # preregistered before any photon download); a priori weaker than a pair test and
+    # never pooled with the parent RXTE results -- shared independence_group with the
+    # parent row (one tooth hypothesis, two instruments: no double-counting).
+    ["X-ray", "BH HFQPO third-tooth extension on non-RXTE archives "
+     "(NICER/MAXI J1820+070 + AstroSat/LAXPC; hfqpo-ladder ext)",
+     "single-QPO extension rule: geometric tooth at (3/2) x 55.12 = 82.68 Hz, NO integer "
+     "line at 2 x 55.12 = 110.24 Hz",
+     "NICER/MAXI J1820+070 EXECUTED 2026-07-22 (prereg hypotheses/hfqpo_ext_v1.yaml frozen "
+     "BEFORE download; 6 ObsIDs / 13.22 GB / 2013 x 16 s = 32.2 ks stack at 19.05 kc/s): "
+     "sanity gate PASS (published 55.12 Hz anchor reproduced at 55.03 Hz, 0.94% rms, "
+     "3.8 sigma, Q ~ 25); injection calibration PASS (>= 90% recovery at 0.93% rms "
+     "injected at the tooth); tooth at 82.68 Hz: 0.69 sigma single-trial (-0.46 after "
+     "trials), 3-sigma UL 0.75% rms BELOW the detected anchor strength -> "
+     "null_with_sensitivity (a tooth as strong as the known QPO is excluded); integer "
+     "line ~110.6 Hz at 3.82 sigma after trials -- BELOW the preregistered 4-sigma "
+     "threshold: reported as a sub-threshold excess consistent with the weak second "
+     "harmonic of ATel #11951 (direction-wise again the integer/GR side, like the parent "
+     "anti-kernel record), NOT a detection under the frozen rule; AstroSat/LAXPC "
+     "(GRS 1915+105 ~70 Hz states, scientifically the strongest channel) "
+     "infrastructure_blocked (ISSDC archive login-gated, no scriptable path, probed "
+     "2026-07-22); RXTE + NICER nulls now cover 5 sources on 2 instruments -> tooth "
+     "channel recommended DORMANT",
+     None, "search_target", "relaxation-ladder step (single-QPO extension rule: no 3:2 "
+     "pair anchors the ladder phase -- a priori weaker than a pair test, never pooled "
+     "with the parent)",
+     "search_target", "NICER HEASARC public archive (ObsIDs 1200120107-1200120119, ATel "
+     "#11951 anchor) + ISSDC feasibility probe "
+     "(hfqpo-ladder/extension-nicer-laxpc results_ext.json)",
+     "a >=4sigma third QPO at 1.5 x nu_anchor with no integer line (ladder hit, [C]-tier) "
+     "OR an integer line at >=4sigma with no tooth (kernel reading dead); next decider: "
+     "AstroSat/LAXPC GRS 1915+105 (blocked) or eXTP-class sensitivity", "null"],
     # strange-metal comb (experiments/strange-metal-comb): first laboratory bound on the comb
     ["condensed matter", "comb ripple on the strange-metal omega/T master curve (LSCO x=0.24)",
      "log-periodic ripple at omega=2.583, eps=0.0173 decorating the Planckian sigma1(omega/T) "
@@ -1323,6 +1356,11 @@ _LONG = ("qnm", "m_betabeta", "page curve", "recovery kernel")
 # never silently double-counted).
 OVERRIDES: dict[str, dict] = {
     "achromatic dyonic intercept": {"independence_group": "c3_topform_horizon"},
+    # HFQPO tooth: parent RXTE pair scan + NICER/LAXPC single-QPO extension test ONE
+    # hypothesis (the geometric third tooth) on different instruments/sources -- one
+    # cluster, never two independent nulls/hits.
+    "BH HFQPO 3:2 pairs": {"independence_group": "hfqpo_ladder_tooth"},
+    "BH HFQPO third-tooth extension": {"independence_group": "hfqpo_ladder_tooth"},
     # frb-ontology diagnostics: standard magnetospheric physics (orthogonal modes +
     # propagation memory) / survey selection (Pleunis+2021 morphology split) predict
     # the same phenomenology -> weakly discriminating consistency typings, never hits.

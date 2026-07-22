@@ -1,3 +1,92 @@
+## 2026-07-22 (X–XIII) — v520/v521/v522 promoviert + HFQPO-NICER-Scorecard: die Maß-Entscheidung (ERFOLG-A), der RP-Selektor-Kill des Alignment-Bits (achter seitenblinder Test) und WOIT-β1 (UNENTSCHIEDEN, typisiert); die tfpt_3-Story ist jetzt DREIUNDZWANZIG Schritte; Suite 513→516, Wolfram 522→540
+
+**v520_celestial_wp5e_measure_decision.py (CELEST.WP5E.MEASURE.01, 39 Checks, ~20 s;
+delta1e 28/28 + delta1f 23/23 konsolidiert, Stil v518):** die WP5e-Maßfrage ist auf
+Proben-Niveau ENTSCHIEDEN pro (A), der deklarierten v516-Completion-Lesart —
+Single-Valuedness des physikalischen One-Loop-Gitterfaktors ist aus ZWEI unabhängigen
+konstruktiven Quellen HERGELEITET (nicht postuliert): (Quelle 1, F-Lemma) jede strikte
+chirale Familie trägt exakt einen nichttrivialen T-Charakter (χ₄/χ₁₀; punktweise
+Kovarianz des kanonisierten Spaltenmitglieds 3.9e−16, |G| ≥ 59.6; exakter
+Variablenwechsel ⇒ Fundamentalbereichs-Unabhängigkeit erzwingt ∫ = 0 für JEDEN
+chiralen Integranden — die v518-Route war nie ein wohldefiniertes nichtverschwindendes
+Moduli-Integral, Kill VERSCHÄRFT); (Quelle 2, Quillen-Paarung) |t·conj(t)−1| < 8.3e−40
+auf allen 15 Paaren, |χ₄|² = 1 exakt vs. χ₄² = e(2/3) ≠ 1 (640 ≠ 0 mod 960, 15/15),
+das gedoppelte 256-dim hol×antihol-System schließt strikt bei trivialem Charakter
+(Nullräume (28,17) ≥ 11, unphased Diagonale ~2e−15, physikalische Spalten
+4.9e−16/8.3e−16), hol⊗hol LEER (0,0); Invariantenraum dim_Q = 8 = 4×2 EXAKT in der
+Q(ζ₈)-Hülle von {e_H, e_H'} (beide = E4 = unphased Spur); Konsistenz-Schluss:
+Σ_m V ∝ (1,2,1,0,0) levelweise exakt (n ≤ 8), J-gewichtete Spreads ~5e−41,
+ψ(Skelett) = +0.2302 = −ψ(Kontakt), Linearität 4.6e−41 — der Kreis zu v516 ist
+geschlossen; D3-Anker: nur die deklarierte Lesart trifft (Spreads 1.12/0.895/0.516
+bei den drei abgeleiteten Instanziierungen, ψ-Vorzeichen falsch, Skalen-Zahn
+c = 1/2 = |Z₂|h^A1); D1: AB-Spalte EXAKT in der χ₄-Familie enthalten (1.8e−16/1.7e−16,
+kanonisiert (N₁,N₂)), Mitglied verfehlt trotzdem alle Tester. Typisierte Prämissen
+[C] TP-1..TP-4 (Pflicht-Fence); Rest-[O]: die konstruktive BCOV-Herleitung der
+w_m-Normierung selbst. Textpräzisierungen (KEINE Marker-Moves): v516-Fence +
+v518-Tension in Ledger/Contracts/tfpt_3/tfpt_4 auf „decided at probe level …
+(v520)" nachgezogen; SEAM.EQUIV.TWISTOR.01 bleibt Open.
+
+**v521_seam_bit_rp_blind.py (SEAM.BIT.RPBLIND.01, 25 Checks, ~25 s; ehrliches
+Negativresultat, Stil v508):** freie OS-Positivität sieht δ NICHT — für jedes δ
+existieren genau die zwei marken-tauschenden Reflexionen (20 Inzidenz-Solvesets
+leer; marken-fixierend ⟺ δ = π/2, solveset cos δ = 0); Bond-Gram-Trägheiten (8,0,0)
+mit 40-stellig IDENTISCHEN Spektren (Abweichung 0.0) — das gesamte freie
+RP-Spektraldatum trägt null δ-Information; N=16-odd-m ist Platzierungsartefakt
+(N=32: alle m = 1..7 Bond-Achsen (16,0,0)); Kontinuum-Kern exakt 1/sin((s+t)/2),
+achsenlage-frei; der v512-Gegenzeuge besteht freie RP; Θ-Existenz δ-blind, die
+einzige δ-sensitive v519-Klausel (ΘρΘ = ρ⁻¹) ist off-π/2 NICHT FORMULIERBAR (setzt
+das Bit voraus); Facette #13 [C]: OS-Reflexionsgruppe = V₄ ∀δ < π/2, schließt bei
+π/2 zu D₄ (Θ_i∘Θ_1 = Uhr) — Netz 12→13; RP trennt die FAMILIEN (A: (4,4,0);
+Chiralitäts-η-Pinning (0,8,0)), nie die SEITEN. VERDIKT KILL: die v519-Battery ist
+der ACHTE seitenblinde Test auf dem v512-Scoreboard (7→8); ehrliche [O]-Lücke:
+markendekorierte ZUSTÄNDE (Defekt-/Twist-Einfügungen, interagierendes A_hol). Das
+Bit bleibt echter diskreter Input.
+
+**v522_woit_beta1_gso_gauge.py (WOIT.BETA1.GSO.01, 16 Checks, ~5 s; typisiertes
+Resultat):** WOIT-β1 executed, VERDIKT UNENTSCHIEDEN nach eingefrorener Prereg —
+die [C-1]-Uhr-Lesart von „gauge" war die falsche Operationalisierung (transparent
+dokumentiert: erster Lauf 6/13, Prereg-Kombinatorikfehler 30 vs. 32):
+Hermitezitäts-Zeuge exakt (−i/(8·sin(5π/16)) vs. +i/…; 745 passend / 96 anti / 0
+Verletzungen — „OS-symmetrisch" ist strikt schwächer als hermitesch); ZEITARTIGKEIT:
+alle 16 Spiegelachsen invertieren die Uhr (RSR⁻¹ = S⁻¹), keine kommutiert — die
+μ₄-Uhr IST Woits euklidische Rotation; eichbarer Teil des Z₈-Turms exakt
+{1, (−1)^F} (α⁴ = 2π-Rotation = Fermionparität); POSITIVTEIL: GSO-fixierte RP exakt
+— N=16 deg≤2 (29,0,0) PD (min EW 1.78e−6), N=8 volle Halbalgebra (8,0,0) PD
+(3.35e−3); Site-Schnitt-Defekt überlebt (7,9,6) — Bond-Platzierung ist
+eichinvariante Information; Familie A fällt weiter durch ((17,12,0)); Ramond:
+NS/Z₈-Turm erzwungen; Kill-Test (2) feuert nicht, (1) bleibt auch eichinvariant
+entschärft — beide formal live auf A_hol. CONTRACT-PRÄZISION (iii) (Prosa, kein
+Marker): „gauge-invariant subalgebra" = die GSO/Fermionparitäts-Z₂; die
+Uhr-äquivariante Aussage wandert zu β2 (erst OS-Quotient, dann die Uhr als
+rekonstruierter Transferoperator). WOIT.OS.TWISTOR.01 bleibt Open.
+
+**HFQPO-Scorecard-Extension (kein vN-Modul):** NICER/MAXI J1820+070 (prereg
+hfqpo_ext_v1.yaml VOR Download eingefroren; 6 ObsIDs / 13.22 GB / 32.2 ks Stack):
+Anker 55.03 Hz / 0,94 % rms / 3,8σ reproduziert (Sanity PASS), Injektion PASS
+(≥90 % Recovery bei 0,93 % rms), Zahn 82.68 Hz: 0,69σ, 3σ-Limit 0,75 % rms →
+null_with_sensitivity; Integer-Linie 110,6 Hz: 3,82σ nach Trials UNTER der
+4σ-Schwelle (unterschwelliger Exzess, KEIN Hit — Richtung wieder integer/GR-Seite);
+AstroSat/LAXPC infrastructure_blocked (ISSDC-Login). Neue Scorecard-Zeile mit
+geteilter independence_group hfqpo_ladder_tooth (Anti-Double-Counting mit der
+RXTE-Zeile); 121 Zeilen, README-Stats regeneriert; predictions.txt-Zeile ergänzt
+(„Kanal ruhend"). Empfehlung: Zahn-Kanal ruhend; einzig stärkerer Rest-Probe =
+AstroSat/LAXPC (blockiert) oder eXTP.
+
+**Wolfram:** 18 neue exakte Spiegel (je 6 für v520/v521/v522) in
+tfpt_readouts_extension.wl, Engine-Lauf verifiziert: 522→540 (540/540, Wolfram
+Engine 14.3); GATE.WOLFRAM.02, Wolfram-README, tfpt_safeguards, Website-Zähler
+(verification/replication/papers.ts) und zenodo_description.html auf
+116/116+540/540 synchronisiert. **Gates:** run_all.py = ALL CHECKS PASSED (516
+Module); build.sh release/audit + make_manifest.py am Ende des Integrationslaufs.
+
+**Nächste sinnvolle Schritte:** (1) die konstruktive BCOV-Herleitung der
+w_m-Normierung (das Rest-[O] der Maßfrage — der δ1-Strang ist sonst zu); (2)
+WOIT-β2: der OS-Quotient des freien Systems explizit (die Uhr als rekonstruierter
+Transferoperator — dorthin ist die β1-Äquivarianz-Frage verschoben); (3) für das
+Alignment-Bit: nur noch markendekorierte/interagierende Zustände (v519/v521-[O])
+können Positivität δ-sensitiv machen; (4) HFQPO: LAXPC-Level-2-Events besorgen
+(ISSDC-Credentials) — die Pipeline läuft dann unverändert.
+
 ## 2026-07-22 (IX) — v519 (WOIT.THETA.FREE.01): der WOIT-α-Meilenstein promoviert — „die Realstruktur existiert, und freie Reflection Positivity wählt DIESELBE Familie"; Kill-Test 1 von WOIT.OS.TWISTOR.01 feuert auf dem freien Niveau NICHT (bleibt formal live auf der interagierenden Algebra); die tfpt_3-Story ist jetzt ZWANZIG Schritte
 
 Die zwei Proben woit_os_theta_realstructure_probe.py (21/21, ~105 s) und

@@ -150,10 +150,30 @@ Jordan-Wigner gammas incl. U_r V U_r V = 2^19 and Utilde V = V Utilde,
 and the free-RP preconditions + site-cut degeneration + Cauchy-Stieltjes
 continuum control — the 40-digit PD inertia certificates of the bond-cut
 Grams stay Python-only), verified directly with the active engine,
-516 → 522):
+516 → 522; the same-day `v520` WP5e-measure-decision round adds 6 more
+exact mirrors (the 16-component Weil data with both Lagrangian gluings,
+the invariant-subspace forcing dim 2 = span{e_H, e_H'}, the character
+arithmetic of the two constructive sources |chi_4|^2 = 1 vs chi_4^2 =
+e(2/3), the A-core + Z2/EH-anchor targets with the scale teeth, the
+level-1 Okubo identity of BOTH gluings, and the so16/shuffle/diag(i,i)
+controls — the Harvey-Moore integrals, SVD memberships and J-weighted
+closures stay Python-only), the same-day `v521` seam-bit-RP-blindness
+round adds 6 more (the anti-linear census solvesets incl. the
+counterwitness, the V4 → D4 closure / face #13, the cut incidence + the
+lattice frame, the continuum axis elimination 1/sin((s+t)/2) +
+Cauchy-Stieltjes minors, the clock-tower clause + hex/silver controls,
+and the delta-blind side conditions — the 40-digit lattice inertia
+spectra stay Python-only), and the same-day `v522` WOIT-beta1 round adds
+6 more (the Z8/NS tower + Ramond witness 1/(4 sin(5 pi/16)), the
+invariant-dimension chain 120 > 64 > 32 via exact ranks, the time-like
+reflection census, the exact Hermiticity witness -i/(8 sin(5 pi/16))
+with the full 745/96/0 census, the GSO 2-torsion census, and the
+family-A tower-normalisation failure — the GSO-fixed RP inertia
+certificates stay Python-only), all verified directly with the active
+engine, 522 → 540):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519: 522 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522: 540 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 

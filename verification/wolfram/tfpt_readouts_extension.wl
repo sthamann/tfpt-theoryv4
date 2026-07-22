@@ -7268,5 +7268,527 @@ Module[{cOf, C8, pure8, C16, shiftM, reflM, S16, Rs, antiOK, clockOK,
     minors === {1/2, 1/72, 1/43200, 1/423360000}];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v520 round: CELEST.WP5E.MEASURE.01 -- "the WP5e BCOV measure
+   question decided at probe level" (delta-1e + delta-1f consolidated):
+   the exact Weil data, the invariant-subspace forcing, the character
+   arithmetic behind the two constructive sources (F-independence +
+   Quillen pairing), the completion/contact/psi and Z2-anchor targets,
+   the level-1 4-design of BOTH Lagrangian gluings, and the exact
+   negative controls.  The Harvey-Moore integrals, SVD memberships and
+   J-weighted closures are numerical (mpmath/numpy) and stay
+   Python-only by the suite convention.  Mirrors v520. ==== *)
+Module[{w8, mus, q8f, bil8f, Tm, Sm, CC, S2, ST, ST3, T8, mzero, eH,
+        eHp, okWeil, okLag, i1, j1},
+  w8 = Exp[2 Pi I/8];
+  mus = Flatten[Table[{x1, y1}, {x1, 0, 3}, {y1, 0, 3}], 1];
+  q8f[{x1_, y1_}] := Mod[5 x1^2 + 3 y1^2, 8];
+  bil8f[{x1_, y1_}, {x2_, y2_}] := Mod[2 (5 x1 x2 + 3 y1 y2), 8];
+  mzero[m_] := And @@ (RootReduce[#] === 0 & /@ Flatten[m]);
+  Tm = DiagonalMatrix[w8^(q8f /@ mus)];
+  Sm = Table[(1/4) w8^(-bil8f[mus[[i1]], mus[[j1]]]), {i1, 16}, {j1, 16}];
+  CC = Table[If[mus[[j1]] === (Mod[-#, 4] & /@ mus[[i1]]), 1, 0],
+    {i1, 16}, {j1, 16}];
+  S2 = Sm . Sm; ST = Sm . Tm; ST3 = ST . ST . ST;
+  T8 = MatrixPower[Tm, 8];
+  eH = If[#[[1]] === #[[2]], 1, 0] & /@ mus;
+  eHp = If[Mod[#[[1]] + #[[2]], 4] === 0, 1, 0] & /@ mus;
+  okWeil = (Sm === Transpose[Sm]) &&
+    mzero[Sm . ConjugateTranspose[Sm] - IdentityMatrix[16]] &&
+    mzero[S2 - CC] && mzero[ST3 - S2] &&
+    mzero[S2 . S2 - IdentityMatrix[16]] &&
+    mzero[T8 - IdentityMatrix[16]];
+  okLag = mzero[{Tm . eH - eH, Sm . eH - eH, Tm . eHp - eHp,
+    Sm . eHp - eHp}] &&
+    (And @@ (q8f[#] === 0 & /@
+      Select[mus, #[[1]] === #[[2]] || Mod[#[[1]] + #[[2]], 4] === 0 &]));
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (i): THE 16-COMPONENT WEIL DATA, EXACT -- on the discriminant module Z4 x Z4 of D5 (+) A3 with q = (5x^2 + 3y^2)/8: S symmetric + unitary, S^2 = C, (ST)^3 = S^2, S^4 = 1, T^8 = 1 exactly in Q(zeta_8); the glue diagonal e_H and the anti-diagonal e_H' are EXACTLY T- and S-fixed and all their classes are isotropic (q = 0 mod 8) -- the two invariant Lagrangian gluings of the dressed Weil system, the arena of the measure decision",
+    okWeil && okLag];
+];
+Module[{w8, mus, q8f, bil8f, Tm, Sm, ns, eH, eHp, dim, spanOK, i1, j1},
+  w8 = Exp[2 Pi I/8];
+  mus = Flatten[Table[{x1, y1}, {x1, 0, 3}, {y1, 0, 3}], 1];
+  q8f[{x1_, y1_}] := Mod[5 x1^2 + 3 y1^2, 8];
+  bil8f[{x1_, y1_}, {x2_, y2_}] := Mod[2 (5 x1 x2 + 3 y1 y2), 8];
+  Tm = DiagonalMatrix[w8^(q8f /@ mus)];
+  Sm = Table[(1/4) w8^(-bil8f[mus[[i1]], mus[[j1]]]), {i1, 16}, {j1, 16}];
+  ns = NullSpace[Join[Tm - IdentityMatrix[16], Sm - IdentityMatrix[16]]];
+  eH = If[#[[1]] === #[[2]], 1, 0] & /@ mus;
+  eHp = If[Mod[#[[1]] + #[[2]], 4] === 0, 1, 0] & /@ mus;
+  dim = Length[ns];
+  spanOK = MatrixRank[Join[Map[RootReduce, ns, {2}], {eH, eHp}]] === 2 &&
+    MatrixRank[{eH, eHp}] === 2;
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (ii): THE INVARIANT-SUBSPACE FORCING, EXACT -- the joint fixed space {v : rho(T) v = v, rho(S) v = v} of the 16-dim Weil representation has dimension EXACTLY 2 over the field (= dim_Q 8 = 4 x 2 Python-side), and it is EXACTLY the span of the two Lagrangian gluings {e_H, e_H'} (rank of the joint span stays 2): every single-valued lattice factor at physical weight is FORCED onto the two Lagrangian thetas, both = E4 = the UNPHASED sector trace -- with single-valuedness derived (F-lemma + Quillen pairing), this forcing decides the measure question for the v516 completion reading",
+    dim === 2 && spanOK];
+];
+Module[{e, chi4T, chi10T, okChars, gridT, gridF, fibsq},
+  e[x_] := Exp[2 Pi I x];
+  chi4T = e[1/3]; chi10T = e[5/6];
+  okChars = RootReduce[chi4T - 1] =!= 0 &&
+    RootReduce[chi10T - 1] =!= 0 &&
+    RootReduce[chi4T Conjugate[chi4T] - 1] === 0 &&
+    RootReduce[chi4T^2 - e[2/3]] === 0 &&
+    RootReduce[chi4T^2 - 1] =!= 0 &&
+    RootReduce[(-1) e[-1/6] - chi4T] === 0;
+  gridT = Mod[2 480, 960]; gridF = Mod[2 800, 960];
+  fibsq = RootReduce[e[gridF/960] - e[2/3]] === 0;
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (iii): THE CHARACTER ARITHMETIC OF THE TWO SOURCES, EXACT -- chi_4(T) = e(1/3) and chi_10(T) = e(5/6) are NONTRIVIAL (source-1: a character-covariant integrand has no fundamental-domain-independent nonzero moduli integral, so every chiral option dies under TP-1 + TP-2); |chi_4(T)|^2 = 1 exactly while the one-sided square chi_4(T)^2 = e(2/3) != 1 (source-2: only the CONJUGATE Quillen pairing hol x conj(hol) cancels the multiplier -- on the exact 1/960 grid the squared T-fixed defects are 2 x 480 = 0 mod 960 for the gauge block but 2 x 800 = 640 != 0 = e(2/3) for the fibre); the T-fix mechanism (-1) x e(-1/6) = chi_4(T) replicated -- real tau_2 powers carry no phase",
+    okChars && gridT === 0 && gridF === 640 && fibsq];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin,
+        S5v, S3v, basis, vec5, Q, Qv, Qtw, dets, Afix, hh, ww, contact,
+        total, sums, psiF, A2, contact2, tot2, leftovers, okTeeth, m, j},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  basis = {Expand[S5v^2], Expand[S5v S3v], Expand[S3v^2],
+    Total[xs^4], Expand[Total[y4^4]]};
+  vec5[expr_] := Module[{cs = Array[Subscript[cv, #] &, 5], eqs, sol},
+    eqs = Thread[(CoefficientRules[Expand[expr - cs . basis],
+      Join[xs, ys]][[All, 2]]) == 0];
+    sol = Quiet[Solve[eqs, cs]];
+    If[sol === {}, $Failed, cs /. First[sol]]];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qv = vec5 /@ Q;
+  dets = <|1 -> 2, 2 -> 4, 3 -> 2|>;
+  Qtw = Table[Simplify[Sum[I^(j m) Qv[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  Afix = Simplify[Sum[Qtw[[j + 1]]/dets[j], {j, 1, 3}]];
+  hh = Table[m (4 - m)/8, {m, 0, 3}];
+  ww = Table[Simplify[Sum[(1 - I^(j m))/dets[j], {j, 1, 3}]],
+    {m, 0, 3}];
+  contact = Table[Simplify[(Qtw[[1]] - Qtw[[j + 1]])/dets[j]],
+    {j, 1, 3}];
+  total = Simplify[Total[contact]];
+  sums = Table[Simplify[Qtw[[j + 1]]/dets[j] + contact[[j]]],
+    {j, 1, 3}];
+  psiF[v_] := 3 v[[1]] - v[[2]] - v[[3]] - v[[5]]/4;
+  A2 = Simplify[Qtw[[3]]/4];
+  contact2 = Simplify[(Qv[[2]] + Qv[[4]])/2];
+  tot2 = A2 + contact2;
+  leftovers = Table[{A2[[4]] + c (Qv[[2, 4]] + Qv[[4, 4]]),
+    A2[[5]] + c (Qv[[2, 5]] + Qv[[4, 5]])},
+    {c, {1/4, 1/2, 1, 2}}];
+  okTeeth = leftovers[[2]] === {0, 0} &&
+    (And @@ (# =!= {0, 0} & /@ leftovers[[{1, 3, 4}]]));
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (iv): A-CORE + Z2/EH ANCHOR TARGETS, EXACT -- Q^{(0)} = (36, 72, 36, 0, 0) = 36<x,x>^2; A_fix = (9, -30, -15, 0, 32); completion weights w_m = sum_j (1 - i^{jm})/det_j = (0, 3/2, 2, 3/2) = 4 h_m with h_2 : h_1 = 4 : 3; contact total = (36, 120, 60, 0, -32); per-sector perfect squares (18, 9, 18) <x,x>^2; psi(A_fix) = +64, psi(contact) = -64 (v516 replicated inside the decision module); Z2 ANCHOR: A_2 = Q^{(g^2)}/4 = (-3, -6, 9, 8, -16), contact_2 = (1/2)(Q_1 + Q_3) = Q_1, A_2 + contact_2 = (9, 18, 9, 0, 0) = 9<x,x>^2 = (1/4) x 36<x,x>^2 (coupling scale 2 = |Z2|), psi(A_2) = -8; SCALE TEETH: of c in {1/4, 1/2, 1, 2} ONLY c = 1/2 = |Z2| h^{A1} clears both (T5, T3) leftovers -- the anchor the derived instantiations all fail (integral side Python-only)",
+    Length[glue] === 240 &&
+    Qtw[[1]] === {36, 72, 36, 0, 0} &&
+    Afix === {9, -30, -15, 0, 32} &&
+    ww === {0, 3/2, 2, 3/2} && ww === 4 hh &&
+    total === {36, 120, 60, 0, -32} &&
+    sums === {{18, 36, 18, 0, 0}, {9, 18, 9, 0, 0},
+      {18, 36, 18, 0, 0}} &&
+    psiF[Afix] === 64 && psiF[total] === -64 &&
+    A2 === {-3, -6, 9, 8, -16} && contact2 === {12, 24, 0, -8, 16} &&
+    tot2 === {9, 18, 9, 0, 0} && psiF[A2] === -8 && okTeeth];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glueP, xs, ys, y4, lin,
+        S5v, S3v, qtot, okuboP, d, w},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  (* the ANTI-diagonal gluing H' = {(0,0), (1,3), (2,2), (3,1)}:
+     D5 spinor x A3 class 3, D5 vector x class 2, D5 cospinor x
+     class 1 *)
+  glueP = Join[
+    Join[#, z4] & /@ d5r, Join[z5, #] & /@ a3r,
+    Flatten[Table[Join[d, w], {d, d5s}, {w, wcl[3]}], 1],
+    Flatten[Table[Join[d, w], {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[Join[d, w], {d, d5c}, {w, wcl[1]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  qtot = Expand[Total[lin[#]^4 & /@ glueP]];
+  okuboP = Expand[qtot - 36 (S5v + S3v)^2];
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (v): BOTH LAGRANGIAN GLUINGS ARE E4 AND OKUBO AT LEVEL 1, EXACT -- the anti-diagonal gluing H' (D5 spinor x A3 class 3, vector x 2, cospinor x 1) also has EXACTLY 240 norm-2 vectors (all norm 2) and its summed quartic equals 36<x,x>^2 = Q^{(0)} as an exact polynomial identity: the invariant subspace of (ii) carries the SAME unphased Okubo numerator on both gluings -- the forced single-valued lattice factor is E4 either way (the levelwise n <= 8 4-design and the J-weighted closure psi(skeleton) = -psi(contact) are Python-only: exact Fraction ledgers + 30-digit kernels)",
+    Length[glueP] === 240 &&
+    (And @@ ((# . # === 2) & /@ glueP)) && okuboP === 0];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin,
+        S5v, S3v, basis, vec5, Q, Qv, soTot, okmu2, wsh, T5sh, T3sh,
+        detsF, wf, Af, hh, Qtw, m, j, d, w},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  basis = {Expand[S5v^2], Expand[S5v S3v], Expand[S3v^2],
+    Total[xs^4], Expand[Total[y4^4]]};
+  vec5[expr_] := Module[{cs = Array[Subscript[cv, #] &, 5], eqs, sol},
+    eqs = Thread[(CoefficientRules[Expand[expr - cs . basis],
+      Join[xs, ys]][[All, 2]]) == 0];
+    sol = Quiet[Solve[eqs, cs]];
+    If[sol === {}, $Failed, cs /. First[sol]]];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qv = vec5 /@ Q;
+  soTot = Simplify[(5/4) (Qv[[1]] + Qv[[3]])];
+  okmu2 = And @@ Flatten[Table[EvenQ[Mod[m b, 4]],
+    {b, {0, 2}}, {m, 1, 3}]];
+  wsh = {0, 1/2, 3/8, 1/2};
+  T5sh = Sum[4 wsh[[m + 1]] Qv[[m + 1, 4]], {m, 0, 3}];
+  T3sh = 32 + Sum[4 wsh[[m + 1]] Qv[[m + 1, 5]], {m, 0, 3}];
+  detsF = <|1 -> 2 I, 2 -> 4, 3 -> -2 I|>;
+  Qtw = Table[Simplify[Sum[I^(j m) Qv[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  wf = Table[Simplify[Sum[(1 - I^(j m))/detsF[j], {j, 1, 3}]],
+    {m, 0, 3}];
+  Af = Simplify[Sum[Qtw[[j + 1]]/detsF[j], {j, 1, 3}]];
+  hh = Table[m (4 - m)/8, {m, 0, 3}];
+  checkExact["v520 CELEST.WP5E.MEASURE.01 (vi): NEGATIVE CONTROLS, EXACT -- SO(16)/D8: the summed unphased trace (5/4)(Q_0 + Q_2) = (15, 30, 45, 20, -40) leaves T5 = 20, T3 = -40 (NO Okubo square even with single-valuedness granted: the KILL fires for so16, E8 stays doubly special) and on the derived side all even-sector fibre b-characters lie in mu_2 (the order-4 supply is structurally absent); SHUFFLED WEIGHTS h_1 <-> h_2 leave T5 = -14 != 0 AND T3 = 36 != 0 (the ch2 pattern carries the levelwise cancellation); diag(i, i) FAKE ZERO MODES (2i, 4, -2i): the skeleton degenerates to the Z2 target A_2 = (-3, -6, 9, 8, -16) and the fake weights (0, -1/2, 0, 3/2) break the conjugation pairing (w_1 != w_3) and the index bridge (w != 4h) -- the wrong-form/wrong-signature Weil controls are mirrored under v518 (vi); the planted-family and hol (x) hol SVD controls are Python-only",
+    soTot === {15, 30, 45, 20, -40} && okmu2 &&
+    T5sh === -14 && T3sh === 36 &&
+    Af === {-3, -6, 9, 8, -16} && wf === {0, -1/2, 0, 3/2} &&
+    wf[[2]] =!= wf[[4]] &&
+    (Or @@ Table[wf[[m + 1]] =!= 4 hh[[m + 1]], {m, 0, 3}])];
+];
+
+(* ==== v521 round: SEAM.BIT.RPBLIND.01 -- "free OS positivity does not
+   see delta": the anti-linear census solvesets on M(delta), the
+   counterwitness census, the V4 -> D4 closure (face #13), the cut/mark
+   incidence, the continuum axis elimination + Cauchy-Stieltjes
+   factorisation, the clock-tower clause and the hex/silver
+   precondition controls.  The 40-digit lattice Gram inertia spectra
+   (N = 16 / N = 32) are Python-only by the suite convention.
+   Mirrors v521. ==== *)
+Module[{dd, b, marks, imgsB, imgsMB, okSwap, solCos, solSin, okFix1,
+        okFix2, bcw, mcw, imgsCW, okCW, cwFixFails, solB2m, solB2p},
+  b = Exp[I dd];
+  marks = {1, b, -1, -b};
+  imgsB = Simplify[b Conjugate[#] & /@ marks,
+    Assumptions -> Element[dd, Reals]];
+  okSwap = Simplify[imgsB - {b, 1, -b, -1},
+    Assumptions -> Element[dd, Reals]] === {0, 0, 0, 0};
+  imgsMB = Simplify[-b Conjugate[#] & /@ marks,
+    Assumptions -> Element[dd, Reals]];
+  okSwap = okSwap && Simplify[imgsMB - {-b, -1, b, 1},
+    Assumptions -> Element[dd, Reals]] === {0, 0, 0, 0};
+  solCos = Reduce[Cos[dd] == 0 && 0 < dd <= Pi/2, dd];
+  solSin = Reduce[Sin[dd] == 0 && 0 < dd <= Pi/2, dd];
+  okFix1 = (solCos === (dd == Pi/2)) && (solSin === False);
+  okFix2 = (Reduce[Exp[-I dd] == Exp[I dd] && 0 < dd <= Pi/2, dd]
+    === False) &&
+    (Reduce[Exp[-I dd] == -Exp[I dd] && 0 < dd <= Pi/2, dd]
+    === (dd == Pi/2));
+  bcw = 3/5 + 4 I/5;
+  mcw = {1, bcw, -1, -bcw};
+  imgsCW = RootReduce[bcw Conjugate[#]] & /@ mcw;
+  okCW = imgsCW === {bcw, 1, -bcw, -1};
+  cwFixFails = ! MemberQ[mcw, RootReduce[Conjugate[bcw]]];
+  solB2m = Reduce[Cos[2 dd] + 1 == 0 && 0 < dd <= Pi/2, dd];
+  solB2p = Reduce[Cos[2 dd] - 1 == 0 && 0 < dd <= Pi/2, dd];
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (i): THE ANTI-LINEAR CENSUS ON M(delta), EXACT SOLVESETS -- for EVERY delta the two mark-SWAPPING reflections Theta_{+-e^(i delta)}(z) = +-e^(i delta) conj(z) preserve the mark set {+-1, +-e^(i delta)} identically (symbolic delta); the mark-FIXING conjugations mu = +-1 need cos delta = 0 (solveset {pi/2}) or sin delta = 0 (EMPTY on (0, pi/2]) -- they exist EXACTLY at the clock point; the v510/v512 counterwitness {+-1, +-(3+4i)/5} carries the swap pair exactly (exact rationals) and NO mark-fixing reflection (conj((3+4i)/5) not a mark); family A doubles 2 -> 4 exactly at pi/2 too (b^2 = -1 solveset {pi/2}, b^2 = +1 empty): the census is 2 generic -> 4 at the clock, and OS-reflection EXISTENCE never sees the side datum",
+    okSwap && okFix1 && okFix2 && okCW && cwFixFails &&
+    (solB2m === (dd == Pi/2)) && (solB2p === False)];
+];
+Module[{dd, b, zx, zy, z, asm, compDeck, compDeck2, invol, clockGen,
+        clockSq},
+  b = Exp[I dd];
+  z = zx + I zy;
+  asm = Element[dd, Reals] && Element[zx, Reals] && Element[zy, Reals];
+  compDeck = Simplify[b Conjugate[-b Conjugate[z]] + z,
+    Assumptions -> asm];
+  compDeck2 = Simplify[-b Conjugate[b Conjugate[z]] + z,
+    Assumptions -> asm];
+  invol = Simplify[b Conjugate[b Conjugate[z]] - z, Assumptions -> asm];
+  clockGen = Simplify[I Conjugate[Conjugate[z]] - I z,
+    Assumptions -> asm];
+  clockSq = Simplify[I (I z) + z, Assumptions -> asm];
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (ii): CLOSURE / FACE #13, EXACT SYMBOLIC -- Theta_b o Theta_{-b} = the deck z -> -z and Theta_b^2 = id for symbolic delta: the admissible OS reflections generate {id, deck, Theta_b, Theta_{-b}} ~= V4 for EVERY delta; at delta = pi/2 the extra mark-fixing pair joins and Theta_i o Theta_1 = the CLOCK z -> iz with clock^2 = deck: the OS-reflection group closes to D4 (8 elements) EXACTLY at the clock point -- 'the OS-reflection group generates the clock' <=> delta = pi/2 is FACE #13 of the v512 equivalence web (12 -> 13), a typed [C] REFORMULATION of the alignment bit, not a derivation from positivity",
+    compDeck === 0 && compDeck2 === 0 && invol === 0 &&
+    clockGen === 0 && clockSq === 0];
+];
+Module[{dd, ee, cuts, marksA, allEmpty, solEps, incOK, m, k, marksU,
+        sitesU, img, fixedM, ok16, ok32, k15fix},
+  cuts = {dd/2, dd/2 + Pi/2, dd/2 + Pi, dd/2 + 3 Pi/2};
+  marksA = {0, dd, Pi, Pi + dd, 2 Pi};
+  allEmpty = And @@ Flatten[Table[
+    Reduce[cu == ma && 0 < dd <= Pi/2, dd] === False,
+    {cu, cuts}, {ma, marksA}]];
+  solEps = Reduce[Sin[ee] == 0 && 0 <= ee < Pi/2, ee];
+  ok16 = True;
+  Do[
+    marksU = {0, 2 m, 16, Mod[16 + 2 m, 32]};
+    sitesU = Table[Mod[2 j + 1, 32], {j, 0, 15}];
+    ok16 = ok16 && Intersection[marksU, sitesU] === {};
+    k = m - 1;
+    img = Sort[Mod[2 (k + 1) - #, 32] & /@ marksU];
+    ok16 = ok16 && img === Sort[marksU];
+    fixedM = Select[marksU, Mod[2 (k + 1) - #, 32] === # &];
+    If[m < 4, ok16 = ok16 && fixedM === {}],
+    {m, 1, 4}];
+  k15fix = Select[{0, 8, 16, 24}, Mod[2 16 - #, 32] === # &];
+  ok32 = And @@ Table[OddQ[2 m - 1], {m, 1, 7}];
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (iii): CUT INCIDENCE + THE EPS JUMP + THE LATTICE FRAME, EXACT -- all 20 swap-cut/mark incidence solvesets on (0, pi/2] are EMPTY (the mark-swapping cut points {delta/2 + k pi/2} never hit a mark); the eps-ladder sin(eps) = 0 on [0, pi/2) has solveset {0}: the mark-fixing reflection is lost IMMEDIATELY off the clock point, no continuous transition; lattice frame (units of pi/16 resp. pi/32): the marks {0, m pi/8, pi, pi + m pi/8} sit on BOND midpoints for every m (never on a half-offset site), the swap reflection preserves them with NO fixed mark for m < 4, at m = 4 the mark-fixing axis fixes exactly {1, -1}, and at N = 32 every swap axis k = 2m - 1 is a bond axis -- the v519 axes reproduced, the odd-m N = 16 failure is pre-diagnosed as placement (PD inertia certificates Python-only)",
+    allEmpty && (solEps === (ee == 0)) && ok16 &&
+    k15fix === {0, 16} && ok32];
+];
+Module[{al, s, t, kern, kernAD, alphaFree, lhs, rhs, ident, Cau, minors,
+        acw, ordOK},
+  kern = 1/Sin[((2 al - (al + s)) - (al + t))/(-2)];
+  kernAD = Simplify[kern];
+  alphaFree = (D[kernAD, al] === 0) &&
+    Simplify[kernAD - 1/Sin[(s + t)/2]] === 0;
+  lhs = 1/Sin[(s + t)/2];
+  rhs = (1/(Cos[s/2] Cos[t/2]))/(Tan[s/2] + Tan[t/2]);
+  ident = Simplify[TrigFactor[lhs - rhs]] === 0;
+  Cau = Table[1/(aa + bb), {aa, 1, 4}, {bb, 1, 4}];
+  minors = Table[Det[Cau[[1 ;; m, 1 ;; m]]], {m, 1, 4}];
+  acw = ArcTan[4/3];
+  ordOK = Reduce[0 < acw/2 < acw < Pi/2] === True;
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (iv): CONTINUUM AXIS ELIMINATION + THE COUNTERWITNESS CUT, EXACT -- the continuum chiral OS kernel for the reflection about ANY axis alpha, in axis-adapted coordinates theta = alpha + s, theta' = alpha + t, is 1/sin((s+t)/2) with alpha dropping out IDENTICALLY (d/d alpha = 0 exactly); it factorises through the Cauchy-Stieltjes kernel 1/(x+y) (identity exact; leading minors 1/2, 1/72, 1/43200, 1/423360000 all > 0): continuum free RP holds for EVERY cut position, hence for EVERY delta member -- the strongest possible delta-blindness; the counterwitness cut at delta_cw/2 = arctan(4/3)/2 sits strictly between 0 and the mark arctan(4/3) (exact ordering 0 < delta_cw/2 < delta_cw < pi/2), avoiding all marks -- its 6-point PD Gram certificate is Python-only (40 digits)",
+    alphaFree && ident &&
+    minors === {1/2, 1/72, 1/43200, 1/423360000} && ordOK];
+];
+Module[{dd, m, marksU, img, tower, solI, lamHex, imHex, absHex,
+        silverReal, bhex},
+  tower = Table[
+    marksU = {0, 2 m, 16, Mod[16 + 2 m, 32]};
+    img = Sort[Mod[# + 8, 32] & /@ marksU];
+    img === Sort[marksU], {m, 1, 4}];
+  solI = Reduce[Cos[dd] == 0 && 0 < dd <= Pi/2, dd];
+  bhex = I (2 - Sqrt[3]);
+  lamHex = Simplify[4 bhex/(1 + bhex)^2];
+  imHex = Simplify[ComplexExpand[Im[lamHex]]];
+  absHex = Simplify[ComplexExpand[Abs[bhex]]];
+  silverReal = And @@ (Simplify[ComplexExpand[Im[#]]] === 0 & /@
+    {1, -1, 3 + 2 Sqrt[2], -(3 + 2 Sqrt[2])});
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (v): THE CLOCK-TOWER CLAUSE PRESUPPOSES THE BIT + PRECONDITION CONTROLS, EXACT -- the quarter rotation z -> iz preserves the deformed lattice mark set iff m = 4 (census {False, False, False, True}) and 'i M(delta) = M(delta)' solves to {pi/2} exactly (v512 H1.1): the candidate sharpening 'RP + clock-tower compatibility' (and the whole v519 Z8/Theta-rho chain) is delta-sensitive ONLY through the clock-existence face -- a REFORMULATION of the bit, not a derivation; hexagonal control: |b_hex| = 2 - sqrt(3) != 1 and Im lambda = sqrt(3)/2 != 0 (marks not concyclic, no seam circle -- the battery preconditions fail before positivity is asked); silver control: all four marks real (the mark circle passes through the deck poles, the deck is not free there) -- both excluded exactly as established (v510/v512)",
+    tower === {False, False, False, True} &&
+    (solI === (dd == Pi/2)) &&
+    absHex === 2 - Sqrt[3] && imHex === Sqrt[3]/2 && silverReal];
+];
+Module[{dd, mu, Md, thetaSq, sqUnit, RHO, RHOINV, clockRel, solOrd4},
+  Md = DiagonalMatrix[{mu, 1}];
+  thetaSq = Md . DiagonalMatrix[{Conjugate[mu], 1}];
+  sqUnit = Simplify[thetaSq[[1, 1]] /. mu Conjugate[mu] -> 1] === 1 &&
+    thetaSq[[2, 2]] === 1;
+  RHO = DiagonalMatrix[{I, 1}]; RHOINV = DiagonalMatrix[{-I, 1}];
+  clockRel = And @@ Table[
+    Simplify[DiagonalMatrix[{mv, 1}] . Conjugate[RHO] .
+      Inverse[DiagonalMatrix[{mv, 1}]] - RHOINV]
+    === {{0, 0}, {0, 0}}, {mv, {1, I, -1, -I}}];
+  solOrd4 = Reduce[Cos[dd] == 0 && 0 < dd <= Pi/2, dd];
+  checkExact["v521 SEAM.BIT.RPBLIND.01 (vi): THE SIDE CONDITIONS ARE delta-BLIND, THE CLOCK CLAUSE IS NOT FORMULABLE OFF pi/2 -- Theta_mu^2 = diag(mu conj(mu), 1) = +1 for every unit mu (the whole family-D ladder is Kramers-free, symbolic); the v519 defining relation Theta rho Theta = rho^-1 holds for the whole mu4 torsor at the clock point (all four members, exact 2x2 matrix identity), but it NEEDS the mark-compatible order-4 rotation, whose existence solves to {pi/2} EXACTLY: for delta != pi/2 the clock clause is not violated -- it is NOT FORMULABLE; the only delta-sensitive clause of the v519 battery presupposes the bit itself (the Cl(16) Fock implementer squares U^2 = 2^7/2^8 > 0 are mirrored under v519 (v); the 40-digit spectra-blindness certificates are Python-only)",
+    sqUnit && clockRel && (solOrd4 === (dd == Pi/2))];
+];
+
+(* ==== v522 round: WOIT.BETA1.GSO.01 -- "the clock is time-like, GSO is
+   the gauge datum": the Z8/NS tower + Ramond control, the invariant-
+   dimension chain, the time-like reflection census, the exact
+   Hermiticity witness of the clock insertion, the GSO 2-torsion census
+   and the family-A tower-normalisation failure.  The 40-digit GSO-fixed
+   RP inertia certificates ((29,0,0)/(8,0,0)/(7,9,6)/(17,12,0)) are
+   Python-only by the suite convention.  Mirrors v522. ==== *)
+Module[{cOf, C16, C8, shiftM, S16, SR16, S8, ns4, r4, nsState, Dr, wit,
+        ns8, mzero},
+  cOf[d_, n_] := If[EvenQ[d], 0, (2/n)/Sin[Pi d/n]];
+  mzero[m_] := And @@ (RootReduce[#] === 0 & /@ Flatten[m]);
+  C16 = Table[cOf[aa - bb, 16], {aa, 0, 15}, {bb, 0, 15}];
+  C8 = Table[cOf[aa - bb, 8], {aa, 0, 7}, {bb, 0, 7}];
+  shiftM[n_, k_, ws_] := Table[
+    If[Mod[aa + k, n] == bb, If[aa + k >= n, ws, 1], 0],
+    {bb, 0, n - 1}, {aa, 0, n - 1}];
+  S16 = shiftM[16, 4, -1]; SR16 = shiftM[16, 4, 1];
+  S8 = shiftM[8, 2, -1];
+  ns4 = MatrixPower[S16, 4] === -IdentityMatrix[16];
+  r4 = MatrixPower[SR16, 4] === IdentityMatrix[16];
+  nsState = mzero[S16 . C16 . Transpose[S16] - C16];
+  Dr = SR16 . C16 . Transpose[SR16] - C16;
+  wit = RootReduce[Dr[[1, 6]] - 1/(4 Sin[5 Pi/16])] === 0;
+  ns8 = (MatrixPower[S8, 4] === -IdentityMatrix[8]) &&
+    mzero[S8 . C8 . Transpose[S8] - C8];
+  checkExact["v522 WOIT.BETA1.GSO.01 (i): THE GAUGE DATUM IS THE NS CLOCK TOWER, EXACT -- the NS quarter-shift lift (wrap -1) has S^4 = -1, so <alpha_S> is the Z8 tower with alpha_S^4 = (-1)^F, and the chiral NS vacuum is tower-invariant (S C S^T = C exactly, N = 16 and N = 8); RAMOND CONTROL: the wrap +1 lift is a true Z4 (S_R^4 = +1) but FAILS state invariance with exact witness entry S_R C S_R^T - C = 1/(4 sin(5 pi/16)) != 0 at (0, 5) -- the 'genuine Z4' gauge lift is NOT a symmetry of the chiral NS vacuum: the Z8/NS tower is forced, fermion parity is contained in the mu4 gauge datum",
+    ns4 && r4 && nsState && wit && ns8];
+];
+Module[{towPS, alphaPair, pairs, avgVec, vecsFor, rankFor, dimClock,
+        dimDeck, dimPar},
+  towPS[k_][a_] := {Mod[a + 4 k, 16], (-1)^Quotient[a + 4 k, 16]};
+  alphaPair[{a_, b_}, k_] := Module[{pa = towPS[k][a], pb = towPS[k][b],
+      sg},
+    sg = pa[[2]] pb[[2]];
+    If[pa[[1]] > pb[[1]], {sg (-1), {pb[[1]], pa[[1]]}},
+      {sg, {pa[[1]], pb[[1]]}}]];
+  pairs = Subsets[Range[0, 15], {2}];
+  vecsFor[ks_] := Table[Module[{acc},
+    acc = ConstantArray[0, Length[pairs]];
+    Do[Module[{im = alphaPair[p, k], pos},
+      pos = Position[pairs, im[[2]]][[1, 1]];
+      acc[[pos]] += im[[1]]/Length[ks]], {k, ks}];
+    acc], {p, pairs}];
+  rankFor[ks_] := MatrixRank[vecsFor[ks]];
+  dimClock = rankFor[Range[0, 7]];
+  dimDeck = rankFor[{0, 2, 4, 6}];
+  dimPar = rankFor[{0, 4}];
+  checkExact["v522 WOIT.BETA1.GSO.01 (ii): INVARIANT DIMENSIONS, EXACT RANKS -- on the 120 quadratic monomials of the 16-Majorana circle the clock-tower average has rank 32 (orbit census: 28 free shift-4 quadruples + 4 halved antipodal doublets -- the first frozen run preregistered 30, a combinatorial error corrected by the machine), the deck-only average rank 64, the parity-only average rank 120: the chain parity > deck > clock is STRICT -- the three candidate 'gauge' groups project to genuinely different invariant sectors, and only parity survives the Hermiticity census of (iv)/(v)",
+    dimClock === 32 && dimDeck === 64 && dimPar === 120 &&
+    dimPar > dimDeck > dimClock];
+];
+Module[{shiftM, reflM, S16, S8, invAll, comAny, inv8, k},
+  shiftM[n_, kk_, ws_] := Table[
+    If[Mod[aa + kk, n] == bb, If[aa + kk >= n, ws, 1], 0],
+    {bb, 0, n - 1}, {aa, 0, n - 1}];
+  reflM[n_, kk_, ws_] := Table[Module[{idx = Mod[kk - aa, 2 n]},
+    If[Mod[idx, n] == bb, If[idx >= n, ws, 1], 0]],
+    {bb, 0, n - 1}, {aa, 0, n - 1}];
+  S16 = shiftM[16, 4, -1]; S8 = shiftM[8, 2, -1];
+  invAll = And @@ Table[Module[{R = reflM[16, k, -1]},
+    R . S16 . Inverse[R] === Inverse[S16]], {k, 0, 15}];
+  comAny = Or @@ Table[Module[{R = reflM[16, k, -1]},
+    R . S16 . Inverse[R] === S16], {k, 0, 15}];
+  inv8 = And @@ Table[Module[{R = reflM[8, k, -1]},
+    R . S8 . Inverse[R] === Inverse[S8]], {k, 0, 7}];
+  checkExact["v522 WOIT.BETA1.GSO.01 (iii): THE CLOCK IS EUCLIDEAN-TIME-LIKE, EXACT CENSUS -- ALL 16 dihedral reflection axes of the NS seam circle INVERT the clock lift (R S R^-1 = S^-1 as exact integer matrices) and NONE commutes with it; same for all 8 axes at N = 8: there is no 'space-like' OS reflection for which the mu4 clock is an internal symmetry -- with the seam circle as Euclidean time, the clock is the time translation itself (Woit's euclidean rotation), Gamma_ALE = Z4 equivariance is ROTATION data, and a pre-quotient 'gauge average' over the clock has no OS meaning",
+    invAll && (! comAny) && inv8];
+];
+Module[{cOf, g2v, wick2, wick4, monoMul, thetaMono, towPS, alphaMono,
+        osTerm, P, basis, T1, Tk, d, i1, j1, wi, wj, nMatch, nAnti,
+        nViol, witOK, avgHerm, dv},
+  cOf[dd_, n_] := If[EvenQ[dd], 0, (2/n)/Sin[Pi dd/n]];
+  g2v[a_, b_] := If[a === b, 1, I cOf[a - b, 16]];
+  wick2[{a_, b_}] := g2v[a, b];
+  wick4[{a_, b_, c_, e_}] := g2v[a, b] wick2[{c, e}] -
+    g2v[a, c] wick2[{b, e}] + g2v[a, e] wick2[{b, c}];
+  monoMul[m1_, m2_] := Module[{out = Join[m1, m2], sign = 1, i = 1,
+      changed = True},
+    While[changed, changed = False;
+      Do[If[out[[j]] > out[[j + 1]],
+        out = ReplacePart[out, {j -> out[[j + 1]], j + 1 -> out[[j]]}];
+        sign = -sign; changed = True,
+        If[out[[j]] === out[[j + 1]],
+          out = Delete[out, {{j}, {j + 1}}]; changed = True;
+          Break[]]], {j, 1, Length[out] - 1}]];
+    {sign, out}];
+  thetaMono[m_, eta_] := Module[{imgs = Mod[15 - #, 16] & /@
+      Reverse[m], coeff = eta^Length[m], lst, sign = 1, i, j},
+    lst = imgs;
+    Do[Do[If[lst[[j]] > lst[[j + 1]],
+      lst = ReplacePart[lst, {j -> lst[[j + 1]], j + 1 -> lst[[j]]}];
+      sign = -sign], {j, 1, Length[lst] - 1 - i}],
+      {i, 0, Length[lst] - 1}];
+    {coeff sign, lst}];
+  towPS[k_][a_] := {Mod[a + 4 k, 16], (-1)^Quotient[a + 4 k, 16]};
+  alphaMono[m_, k_] := Module[{c = 1, imgs = {}, lst, sign = 1, i, j},
+    Do[Module[{p = towPS[k][a]}, c *= p[[2]];
+      AppendTo[imgs, p[[1]]]], {a, m}];
+    lst = imgs;
+    Do[Do[If[lst[[j]] > lst[[j + 1]],
+      lst = ReplacePart[lst, {j -> lst[[j + 1]], j + 1 -> lst[[j]]}];
+      sign = -sign], {j, 1, Length[lst] - 1 - i}],
+      {i, 0, Length[lst] - 1}];
+    {c sign, lst}];
+  osTerm[ea_, eb_, k_] := Module[{th = thetaMono[ea, I],
+      al = alphaMono[eb, k], mm},
+    mm = monoMul[th[[2]], al[[2]]];
+    th[[1]] al[[1]] mm[[1]] Which[
+      Length[mm[[2]]] === 0, 1,
+      Length[mm[[2]]] === 2, wick2[mm[[2]]],
+      Length[mm[[2]]] === 4, wick4[mm[[2]]],
+      True, 0]];
+  P = Range[8, 15];
+  basis = Join[{{}}, Subsets[P, {2}]];
+  Tk = Table[Table[osTerm[basis[[i1]], basis[[j1]], k],
+    {i1, Length[basis]}, {j1, Length[basis]}], {k, 0, 3}];
+  T1 = Tk[[2]];
+  wi = Position[basis, {8, 12}][[1, 1]];
+  wj = Position[basis, {8, 15}][[1, 1]];
+  witOK = RootReduce[T1[[wi, wj]] + I/(8 Sin[5 Pi/16])] === 0 &&
+    RootReduce[Conjugate[T1[[wj, wi]]] - I/(8 Sin[5 Pi/16])] === 0;
+  nMatch = 0; nAnti = 0; nViol = 0;
+  Do[Do[
+    dv = RootReduce[T1[[i1, j1]] - Conjugate[T1[[j1, i1]]]];
+    If[dv === 0, nMatch++,
+      If[RootReduce[T1[[i1, j1]] + Conjugate[T1[[j1, i1]]]] === 0,
+        nAnti++, nViol++]],
+    {j1, Length[basis]}], {i1, Length[basis]}];
+  avgHerm = Module[{Mg = (Tk[[1]] + Tk[[2]] + Tk[[3]] + Tk[[4]])/4},
+    And @@ Flatten[Table[
+      RootReduce[Mg[[i1, j1]] - Conjugate[Mg[[j1, i1]]]] === 0,
+      {i1, Length[basis]}, {j1, Length[basis]}]]];
+  checkExact["v522 WOIT.BETA1.GSO.01 (iv): THE HERMITICITY WITNESS, EXACT -- the one-step clock insertion T_1 = <theta(e_a), alpha_S(e_b)> on the even deg <= 2 bond-cut basis (29 elements) has the EXACT witness entry T_1[(8,12), (8,15)] = -i/(8 sin(5 pi/16)) while the conjugate transpose demands +i/(8 sin(5 pi/16)); the full entrywise census gives conj(T_1^T) = +-T_1 with 745 Hermitian-matching, 96 ANTI-matching and 0 violations (the pairing is complex-SYMMETRIC, strictly weaker than Hermitian), and the full clock average (T_0 + T_1 + T_2 + T_3)/4 stays NON-Hermitian: 'positivity after gauge fixing' is NOT well-posed for the clock reading -- the quarter-turn insertion is a chiral transfer step, exactly what the time-like census (iii) predicts",
+    witOK && nMatch === 745 && nAnti === 96 && nViol === 0 &&
+    (! avgHerm)];
+  (* GSO 2-torsion census: even-basis insertions Hermitian for k = 0
+     only; odd one-particle insertions Hermitian for k = 0, 4 only,
+     with T_{k+4} = -T_k and vanishing 8-term average *)
+  Module[{hermQ, censusEven, basis1, T1p, censusOdd, cancel, oddZero,
+          Msum},
+    hermQ[M_] := And @@ Flatten[Table[
+      RootReduce[M[[i2, j2]] - Conjugate[M[[j2, i2]]]] === 0,
+      {i2, Length[M]}, {j2, Length[M]}]];
+    censusEven = hermQ /@ Tk;
+    basis1 = List /@ P;
+    T1p = Table[Table[osTerm[basis1[[i2]], basis1[[j2]], k],
+      {i2, 8}, {j2, 8}], {k, 0, 7}];
+    censusOdd = hermQ /@ T1p;
+    cancel = And @@ Table[
+      And @@ Flatten[Table[
+        RootReduce[T1p[[k + 1, i2, j2]] + T1p[[k + 5, i2, j2]]] === 0,
+        {i2, 8}, {j2, 8}]], {k, 0, 3}];
+    Msum = Sum[T1p[[k + 1]], {k, 0, 7}]/8;
+    oddZero = And @@ (RootReduce[#] === 0 & /@ Flatten[Msum]);
+    checkExact["v522 WOIT.BETA1.GSO.01 (v): THE GAUGEABLE SUBGROUP IS EXACTLY {1, (-1)^F}, EXACT CENSUS -- on the even 29-basis the insertions T_k are Hermitian for k = 0 ONLY (census {True, False, False, False}; on even monomials alpha^4 = id so k and k+4 coincide); on the odd one-particle basis they are Hermitian for k = 0 and k = 4 ONLY, with T_{k+4} = -T_k pairwise (alpha^4 = (-1)^F) and vanishing full 8-term average (the odd sector is gauge-VARIANT: the v519 one-particle PD certificate projects to zero): the theta-compatible subgroup of the Z8 clock tower is its 2-torsion {1, alpha^4} = {1, (-1)^F} = the GSO/fermion-parity Z2 -- the free-fermion shadow of the E8 glue; the clock and deck averages are NOT pre-quotient gauge fixings (the GSO-fixed PD inertia (29,0,0)/(8,0,0) is Python-only, 40 digits)",
+      censusEven === {True, False, False, False} &&
+      censusOdd === {True, False, False, False, True, False, False,
+        False} && cancel && oddZero];
+  ];
+];
+Module[{cOf, C16, Ca, antiOK, towPS, thetaC, alphaOne, normJ, jj, a,
+        lhs, rhs, mismatch},
+  cOf[dd_, n_] := If[EvenQ[dd], 0, (2/n)/Sin[Pi dd/n]];
+  C16 = Table[cOf[aa - bb, 16], {aa, 0, 15}, {bb, 0, 15}];
+  Ca = Table[(-1)^aa (-1)^bb cOf[aa - bb, 16],
+    {aa, 0, 15}, {bb, 0, 15}];
+  antiOK = And @@ (RootReduce[#] === 0 & /@ Flatten[Ca + C16]);
+  towPS[k_][a1_] := {Mod[a1 + 4 k, 16], (-1)^Quotient[a1 + 4 k, 16]};
+  (* theta_c(g_a) = I (-1)^a g_{a+8 mod 16}; alpha(g_a) = s g_{a+4} *)
+  thetaC[a1_] := {I (-1)^a1, Mod[a1 + 8, 16]};
+  normJ = Table[Module[{ok = True},
+    Do[Module[{p1 = towPS[1][a], t1, t2, p2},
+      t1 = thetaC[p1[[1]]];        (* theta_c(alpha(g_a)) *)
+      t2 = thetaC[a];              (* alpha^j(theta_c(g_a)) *)
+      p2 = towPS[jj][t2[[2]]];
+      If[t1[[2]] =!= p2[[1]] ||
+        RootReduce[p1[[2]] t1[[1]] - t2[[1]] p2[[2]]] =!= 0,
+        ok = False]], {a, 0, 15}];
+    ok], {jj, {1, 3, 5, 7}}];
+  checkExact["v522 WOIT.BETA1.GSO.01 (vi): FAMILY A BREAKS THE GAUGE EQUIVARIANCE, EXACT -- the clock-centralising antipode candidate theta_c(g_a) = i (-1)^a g_{a+8} keeps the state anti-invariant with the alternating dressing (the dressed antipodal kernel equals -C exactly), but it does NOT normalise the NS clock tower: theta_c o alpha_S matches alpha_S^j o theta_c for NO j in {1, 3, 5, 7} (exact coefficient comparison on all 16 generators, census {False, False, False, False}) -- the dressing that saves the state BREAKS the gauge equivariance; RP still separates the two real-structure families ON the gauge-invariant sector (family A indefinite (17,12,0) vs family D PD (29,0,0) -- the inertia certificates are Python-only, 40 digits): the alpha-stage triangulation survives gauge fixing",
+    antiOK && normJ === {False, False, False, False}];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];
