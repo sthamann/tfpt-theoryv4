@@ -11,22 +11,27 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import katex from "katex";
-import { ChevronLeft, ChevronRight, Search, X as XIcon } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Search,
+  X as XIcon,
+} from "lucide-react";
 import type { ChangelogNode } from "@/lib/changelog";
 import { cn } from "@/lib/utils";
 
 /**
  * Interactive changelog browser.
  *
- * The changelog has grown to hundreds of entries, many of them very long. The
- * page therefore pages by DAY: it shows one day's updates at a time (the latest
- * day by default), lets you step between days, and offers a global filter
- * (full-text search + kind/status facets) that searches across every entry.
+ * The changelog has grown to hundreds of very long entries. The page pages by
+ * DAY (latest first), lets you step between days, filter across every entry, and
+ * — crucially — each entry is a collapsible card whose long summary is broken
+ * into a readable title + numbered points instead of one wall of text. Inline
+ * math is colour-tinted so formulas stand out from the surrounding prose.
  *
- * Only the selected day's full node trees are shipped from the server; day
- * switching is a normal `?day=` navigation so the payload stays bounded as the
- * changelog keeps growing. The lightweight `index` (short plain-text summaries)
- * powers the global filter without shipping the ~2 MB full data to the client.
+ * Only the selected day's node trees are shipped from the server; a compact
+ * index powers the global filter without shipping the full ~2 MB data.
  */
 
 export interface DayMeta {
@@ -114,7 +119,8 @@ function StatusMarker({ value }: { value: string }) {
   );
 }
 
-/** One inline formula: SSR-safe raw TeX fallback, upgraded to KaTeX on mount. */
+/** One inline formula: SSR-safe raw TeX fallback, upgraded to KaTeX on mount.
+ *  Tinted cyan so formulas are visually separable from the prose. */
 function Math({ tex, macros }: { tex: string; macros: Record<string, string> }) {
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
@@ -132,7 +138,7 @@ function Math({ tex, macros }: { tex: string; macros: Record<string, string> }) 
     }
   }, [tex, macros]);
   return (
-    <span ref={ref} role="math" aria-label={tex}>
+    <span ref={ref} role="math" aria-label={tex} className="text-cyan-300">
       {tex}
     </span>
   );
@@ -152,7 +158,7 @@ function renderNodes(
         return (
           <code
             key={i}
-            className="rounded bg-slate-800/60 px-1 py-0.5 font-mono text-[0.85em] text-blue-200 ring-1 ring-slate-700/40"
+            className="rounded bg-blue-500/10 px-1 py-0.5 font-mono text-[0.85em] font-medium text-blue-200 ring-1 ring-blue-400/20"
           >
             {nd.v}
           </code>
@@ -177,6 +183,86 @@ function renderNodes(
   });
 }
 
+// --------------------------------------------------------------------------
+// Heading structuring: split the long single-paragraph summary into a short
+// title (up to the first ": ") and a body, then split the body at the "(1) (2)
+// (3) …" enumerators into numbered points. Both are graceful no-ops when the
+// pattern is absent.
+// --------------------------------------------------------------------------
+
+function trimNodes(nodes: ChangelogNode[]): ChangelogNode[] {
+  const out = nodes.map((n) => ({ ...n }));
+  if (out.length && out[0].k === "t" && out[0].v) {
+    out[0] = { ...out[0], v: out[0].v.replace(/^[\s\u00a0]+/, "") };
+  }
+  const last = out.length - 1;
+  if (last >= 0 && out[last].k === "t" && out[last].v) {
+    out[last] = { ...out[last], v: out[last].v.replace(/[\s\u00a0]+$/, "") };
+  }
+  return out.filter((n) => !(n.k === "t" && n.v === ""));
+}
+
+function splitHeading(nodes: ChangelogNode[]): {
+  title: ChangelogNode[];
+  body: ChangelogNode[];
+} {
+  for (let i = 0; i < nodes.length; i++) {
+    const nd = nodes[i];
+    if (nd.k === "t" && nd.v) {
+      const m = /:\s/.exec(nd.v);
+      // ignore a colon that sits too early (e.g. inside "note:") — require some
+      // headline length so the title is meaningful.
+      if (m && (i > 0 || m.index > 12)) {
+        const before = nd.v.slice(0, m.index);
+        const after = nd.v.slice(m.index + m[0].length);
+        const title = nodes.slice(0, i);
+        if (before.trim()) title.push({ k: "t", v: before });
+        const body: ChangelogNode[] = [];
+        if (after.trim()) body.push({ k: "t", v: after });
+        body.push(...nodes.slice(i + 1));
+        return { title: trimNodes(title), body: trimNodes(body) };
+      }
+    }
+  }
+  return { title: trimNodes(nodes), body: [] };
+}
+
+interface Segment {
+  label?: string;
+  nodes: ChangelogNode[];
+}
+
+function splitEnumerated(nodes: ChangelogNode[]): Segment[] {
+  const segs: Segment[] = [];
+  let cur: Segment = { nodes: [] };
+  const flush = () => {
+    const trimmed = trimNodes(cur.nodes);
+    if (trimmed.length || cur.label) segs.push({ label: cur.label, nodes: trimmed });
+    cur = { nodes: [] };
+  };
+  for (const nd of nodes) {
+    if (nd.k === "t" && nd.v && /\(\d+\)/.test(nd.v)) {
+      const text = nd.v;
+      const re = /\((\d+)\)\s*/g;
+      let last = 0;
+      let m: RegExpExecArray | null;
+      while ((m = re.exec(text)) !== null) {
+        const chunk = text.slice(last, m.index);
+        if (chunk) cur.nodes.push({ k: "t", v: chunk });
+        flush();
+        cur = { label: m[1], nodes: [] };
+        last = re.lastIndex;
+      }
+      const tail = text.slice(last);
+      if (tail) cur.nodes.push({ k: "t", v: tail });
+    } else {
+      cur.nodes.push(nd);
+    }
+  }
+  flush();
+  return segs;
+}
+
 export function ChangelogBrowser({
   days,
   index,
@@ -190,6 +276,7 @@ export function ChangelogBrowser({
   const [query, setQuery] = useState("");
   const [activeKinds, setActiveKinds] = useState<Set<string>>(new Set());
   const [activeMarkers, setActiveMarkers] = useState<Set<string>>(new Set());
+  const [open, setOpen] = useState<Set<string>>(new Set());
 
   const filtering =
     query.trim() !== "" || activeKinds.size > 0 || activeMarkers.size > 0;
@@ -198,23 +285,35 @@ export function ChangelogBrowser({
   const olderDay = dayIdx >= 0 ? days[dayIdx + 1] : undefined;
   const newerDay = dayIdx > 0 ? days[dayIdx - 1] : undefined;
 
-  const results = useMemo(() => {
-    if (!filtering) return [];
-    const q = query.trim().toLowerCase();
-    return index.filter((e) => {
-      if (q && !e.text.includes(q)) return false;
-      if (activeKinds.size > 0 && ![...activeKinds].some((k) => e.tags.includes(k)))
-        return false;
-      if (
-        activeMarkers.size > 0 &&
-        ![...activeMarkers].some((m) => e.tags.includes(m))
-      )
-        return false;
-      return true;
-    });
-  }, [filtering, query, activeKinds, activeMarkers, index]);
+  // Pre-structure each entry once (title / numbered points / detail bullets).
+  const structured = useMemo(
+    () =>
+      entries.map((entry) => {
+        const { title, body } = splitHeading(entry.heading);
+        const segs = splitEnumerated(body);
+        const hasPoints = segs.filter((s) => s.label).length >= 2;
+        return {
+          ...entry,
+          title,
+          lead: hasPoints ? segs[0]?.nodes ?? [] : body,
+          points: hasPoints ? segs.filter((s) => s.label) : [],
+        };
+      }),
+    [entries],
+  );
 
-  // Scroll to a linked entry (#cl-<n>) after the day view renders.
+  // Default: the newest entry of the day open, the rest collapsed. Reset on day
+  // change; auto-open a hash-linked entry.
+  useEffect(() => {
+    const hash = window.location.hash?.slice(1);
+    const first = entries[0]?.anchor;
+    const init = new Set<string>();
+    if (first) init.add(first);
+    if (hash && entries.some((e) => e.anchor === hash)) init.add(hash);
+    setOpen(init);
+  }, [selectedDay, entries]);
+
+  // Scroll to a hash-linked entry after the day view renders.
   useEffect(() => {
     if (filtering) return;
     const hash = window.location.hash?.slice(1);
@@ -225,9 +324,22 @@ export function ChangelogBrowser({
       el.scrollIntoView({ behavior: "smooth", block: "start" });
       el.classList.add("cl-flash");
       window.setTimeout(() => el.classList.remove("cl-flash"), 1600);
-    }, 60);
+    }, 80);
     return () => window.clearTimeout(t);
   }, [filtering, selectedDay]);
+
+  const results = useMemo(() => {
+    if (!filtering) return [];
+    const q = query.trim().toLowerCase();
+    return index.filter((e) => {
+      if (q && !e.text.includes(q)) return false;
+      if (activeKinds.size > 0 && ![...activeKinds].some((k) => e.tags.includes(k)))
+        return false;
+      if (activeMarkers.size > 0 && ![...activeMarkers].some((m) => e.tags.includes(m)))
+        return false;
+      return true;
+    });
+  }, [filtering, query, activeKinds, activeMarkers, index]);
 
   function goToDay(date: string) {
     router.push(`${pathname}?day=${date}`, { scroll: true });
@@ -246,11 +358,20 @@ export function ChangelogBrowser({
     return next;
   }
 
+  function toggleOpen(anchor: string) {
+    setOpen((s) => toggle(s, anchor));
+  }
+
+  const allOpen = structured.length > 0 && structured.every((e) => open.has(e.anchor));
+
+  function setAll(o: boolean) {
+    setOpen(o ? new Set(structured.map((e) => e.anchor)) : new Set());
+  }
+
   return (
     <div>
       {/* ---- Controls: day paging + filter bar --------------------------- */}
       <div className="mb-8 space-y-4 rounded-2xl border border-slate-800/60 bg-slate-900/40 p-4 sm:p-5">
-        {/* Day pager */}
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-1.5">
             <button
@@ -296,7 +417,6 @@ export function ChangelogBrowser({
           </span>
         </div>
 
-        {/* Filter bar */}
         <div className="flex flex-col gap-3 border-t border-slate-800/60 pt-4">
           <div className="relative">
             <Search
@@ -408,57 +528,115 @@ export function ChangelogBrowser({
           )}
         </div>
       ) : (
-        /* ---- Day view (rich) ------------------------------------------- */
+        /* ---- Day view (rich, collapsible) ------------------------------ */
         <div>
-          <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-serif text-2xl font-semibold text-slate-50">
-              {formatDay(selectedDay)}
-            </h2>
-            <span className="font-mono text-xs text-slate-500">
-              {entries.length} {entries.length === 1 ? "update" : "updates"}
-            </span>
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-baseline gap-3">
+              <h2 className="font-serif text-2xl font-semibold text-slate-50">
+                {formatDay(selectedDay)}
+              </h2>
+              <span className="font-mono text-xs text-slate-500">
+                {entries.length} {entries.length === 1 ? "update" : "updates"}
+              </span>
+            </div>
+            {structured.length > 1 && (
+              <button
+                type="button"
+                onClick={() => setAll(!allOpen)}
+                className="text-xs font-medium text-slate-400 ring-1 ring-slate-700/50 rounded-full px-3 py-1 transition-colors hover:bg-white/5 hover:text-slate-200"
+              >
+                {allOpen ? "Collapse all" : "Expand all"}
+              </button>
+            )}
           </div>
 
-          <ol className="relative space-y-7 border-l border-slate-800/70 pl-5 sm:pl-7">
-            {entries.map((entry) => (
-              <li key={entry.anchor} id={entry.anchor} className="relative scroll-mt-24">
-                <span
-                  aria-hidden
-                  className="absolute -left-[1.6rem] top-1.5 h-2.5 w-2.5 rounded-full bg-gradient-to-br from-blue-400 to-violet-400 ring-4 ring-slate-950 sm:-left-[2.1rem]"
-                />
-                <article className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40 transition-shadow">
-                  {entry.enumr && (
-                    <header className="flex items-center gap-2 border-b border-slate-800/60 px-5 py-2.5 sm:px-6">
-                      <span className="rounded bg-slate-800/70 px-2 py-0.5 font-mono text-xs font-semibold tracking-wide text-slate-300">
-                        {entry.enumr}
-                      </span>
-                    </header>
-                  )}
-                  <div className="space-y-3 px-5 py-4 sm:px-6">
-                    {entry.heading.length > 0 && (
-                      <p className="text-sm leading-relaxed text-slate-200">
-                        {renderNodes(entry.heading, macros)}
-                      </p>
+          <ol className="space-y-4">
+            {structured.map((entry) => {
+              const isOpen = open.has(entry.anchor);
+              return (
+                <li
+                  key={entry.anchor}
+                  id={entry.anchor}
+                  className="scroll-mt-24"
+                >
+                  <article className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
+                    <button
+                      type="button"
+                      onClick={() => toggleOpen(entry.anchor)}
+                      aria-expanded={isOpen}
+                      className="flex w-full items-start gap-3 px-5 py-4 text-left transition-colors hover:bg-white/[0.02] sm:px-6"
+                    >
+                      {entry.enumr && (
+                        <span className="mt-0.5 shrink-0 rounded bg-slate-800/70 px-2 py-0.5 font-mono text-xs font-semibold text-slate-300">
+                          {entry.enumr}
+                        </span>
+                      )}
+                      <div
+                        className={cn(
+                          "min-w-0 flex-1 text-[0.95rem] font-medium leading-relaxed text-slate-100",
+                          !isOpen && "line-clamp-2",
+                        )}
+                      >
+                        {renderNodes(entry.title, macros)}
+                      </div>
+                      <ChevronDown
+                        size={18}
+                        aria-hidden
+                        className={cn(
+                          "mt-1 shrink-0 text-slate-500 transition-transform",
+                          isOpen && "rotate-180",
+                        )}
+                      />
+                    </button>
+
+                    {isOpen && (
+                      <div className="border-t border-slate-800/60 px-5 pb-5 pt-4 sm:px-6">
+                        {entry.lead.length > 0 && (
+                          <p className="text-sm leading-7 text-slate-300">
+                            {renderNodes(entry.lead, macros)}
+                          </p>
+                        )}
+
+                        {entry.points.length > 0 && (
+                          <ol className="mt-4 space-y-2.5">
+                            {entry.points.map((p, k) => (
+                              <li key={k} className="flex gap-3">
+                                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500/15 font-mono text-[0.7rem] font-semibold text-blue-200 ring-1 ring-blue-400/30">
+                                  {p.label}
+                                </span>
+                                <div className="min-w-0 flex-1 text-sm leading-7 text-slate-300">
+                                  {renderNodes(p.nodes, macros)}
+                                </div>
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+
+                        {entry.items.length > 0 && (
+                          <div className="mt-5 border-t border-slate-800/40 pt-4">
+                            <p className="mb-2.5 text-[0.7rem] font-semibold uppercase tracking-wider text-slate-500">
+                              Details
+                            </p>
+                            <ul className="space-y-3">
+                              {entry.items.map((item, j) => (
+                                <li
+                                  key={j}
+                                  className="relative pl-4 text-sm leading-7 text-slate-400 before:absolute before:left-0 before:top-[0.7em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600"
+                                >
+                                  {renderNodes(item, macros)}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
                     )}
-                    {entry.items.length > 0 && (
-                      <ul className="space-y-3">
-                        {entry.items.map((item, j) => (
-                          <li
-                            key={j}
-                            className="relative pl-4 text-sm leading-relaxed text-slate-300 before:absolute before:left-0 before:top-[0.55em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600"
-                          >
-                            {renderNodes(item, macros)}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </article>
-              </li>
-            ))}
+                  </article>
+                </li>
+              );
+            })}
           </ol>
 
-          {/* Bottom day pager */}
           <div className="mt-8 flex items-center justify-between gap-3">
             {olderDay ? (
               <button
