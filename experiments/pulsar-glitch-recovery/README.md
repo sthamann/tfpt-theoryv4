@@ -336,6 +336,34 @@ hit would have been universal-DSI in the NS interior, not TFPT confirmation. Dec
 the IAR-internal sub-day live TOAs (or an equivalent early-window public release) would push
 Vela past the gate where the ε sensitivity is best.
 
+## Early warning (`early-warning/`)
+
+PG.06b-FULL and PG.08 converge on one operational fact: the sharp comb search
+needs the **< 3-day early window** after the next Vela glitch (first usable archival
+obs is 3.4 d / 7 d post-glitch → reach 2.17 / 1.38 < 2.8 periods; the public radio
+ToAs start at 10 d). Vela glitches recur every ~3 yr and the last one was 2024-04-29,
+so the next trigger is the whole game. `early-warning/` keeps the chain armed:
+
+- **`glitch_monitor.py`** — checks the live Jodrell Bank glitch table for NEW Vela
+  entries (B0833-45 / J0835-4510) against a local state file (`vela_state.json`,
+  frozen 2026-07-22 at 26 known glitches, latest MJD 60429.9) and reports glitch
+  epoch + **age in days** + whether the 3-day window is still open. Robust by
+  construction: reuses the experiment's `parse_jbo_html`; on a download failure or
+  format break it reports cleanly and exits 2 **without touching the state**.
+  Exit codes: 0 = no news, 1 = **NEW GLITCH ALERT**, 2 = fetch/parse failure.
+- **`too_request_draft.txt`** — the prepared NICER ToO text (science case from the
+  preregistered ω = 2.5827 / ε = 0.0173 search + the PG.06b-FULL gap numbers;
+  request: activation < 3 d, daily 1–2 ks visits for ~14 d ≙ σ_ν ≈ 0.6 µHz per the
+  archive segment statistics). Kept ready so trigger day is submit day, not
+  writing day.
+
+**Update/trigger process:** run the monitor weekly (cron:
+`0 8 * * 1 cd <repo> && . experiments/tfpt-discovery/.venv/bin/activate && python experiments/pulsar-glitch-recovery/early-warning/glitch_monitor.py`);
+on exit 1 within the window → finalise + submit the ToO draft immediately, and
+cross-check the epoch against IAR/PuMA + ATels (JBO table updates can lag live
+detections — the monitor is the tripwire, not the only watch). **Firewall:** pure
+monitor/logistics; no scorecard, ledger or paper is touched from here.
+
 ## Reproduce
 
 ```bash
@@ -405,6 +433,8 @@ data/vela_2024/J0835-4510_long_F3.par  # committed phase-connected 2024 Vela gli
 data/vela_2024/vela2024_nudot.csv      # committed derived post-glitch nudot(tau) recovery (PG.07)
 data/vela_2024/vela_glitch_recoveries.csv  # committed Vela giant-glitch recovery params 2016-2024 (PG.07)
 data/puma_iar/                   # committed PuMA/IAR .par/.tim release (3 pulsars; provenance in fetch script)
+early-warning/glitch_monitor.py  # Vela early-warning tripwire vs live JBO table (state: vela_state.json)
+early-warning/too_request_draft.txt  # prepared NICER ToO text (submit on a < 3 d Vela trigger)
 hypotheses/pulsar_pg07_v1.yaml   # preregistered PG.07 hypothesis (frozen kernel, nulls, kill/data-limited)
 hypotheses/pulsar_pg08_v1.yaml   # preregistered PG.08 hypothesis (residual product, end-to-end injection)
 results/results.json             # committed summary (+ pg01/pg05/pg06 png, gitignored)

@@ -1,0 +1,41 @@
+{
+  "last_run": "2026-07-22T08:05:15Z",
+  "channels": {
+    "sin2_theta12": {
+      "status": "PASS",
+      "pull": -0.282
+    },
+    "beta_birefringence_deg": {
+      "status": "PASS",
+      "pull": 0.371
+    },
+    "w_dark_energy": {
+      "status": "WATCH",
+      "pull": 3.8
+    },
+    "br_kplus_pinunu": {
+      "status": "PASS",
+      "pull": -0.083
+    },
+    "alpha_s_running": {
+      "status": "WATCH",
+      "pull": -1.338
+    },
+    "sin2_theta13": {
+      "status": "WATCH",
+      "pull": 1.997
+    },
+    "delta_pmns_deg": {
+      "status": "PASS",
+      "pull": 1.077
+    },
+    "n_s": {
+      "status": "PASS",
+      "pull": 0.0
+    },
+    "r_tensor": {
+      "status": "PASS",
+      "pull": null
+    }
+  }
+}

@@ -1,3 +1,228 @@
+## 2026-07-22 (V) — v515 (CELEST.WP5E.M1.01): Rückreaktions-Meilenstein M1 „das A₃-Ω_N" ausgeführt — ERFOLG nach dem präregistrierten v514-S8.1-Kriterium; Ω_N in geschlossener Form, alle S³/ℤ₄-Perioden (2πi)²-ganzzahlig, Linsen-Geometrie ERZWINGT Quellladung 4 = |μ₄|; M2/M3 bleiben [O]
+
+Die Probe celestial_seam_wp5e_m1_a3_omega_n_backreaction_probe.py (30/30) ist als
+**v515_celestial_wp5e_m1_omega_n.py (CELEST.WP5E.M1.01)** promoviert (30 Checks,
+~1 s, exakt sympy; Cluster frontier, Stil v509/v514; Suite grün, jetzt 509
+Skripte, ALL CHECKS PASSED):
+
+- **RESIDUENFORM HERGELEITET [E]:** auf F = XY − P(Z) erfüllen alle drei
+  ambienten Darstellungen exakt dF∧ω₂ = −dX∧dY∧dZ, Patch-Rückzug ω₂ = dX∧dZ/X
+  (Poincaré-Residuum, hergeleitet, nicht angenommen); Cover-Pullback bei a₀ = 0:
+  ω₂ = 4·dz₁∧dz₂ = |μ₄| × Flachform — die Residuen-Normierung TRÄGT die
+  Quellladung 4; Uhr: ω₂ → i·ω₂ (v492 S5 repliziert); Gewichts-Ledger
+  4+4+2−8 = 2, Ω ∈ O(4) = −deg K_PT; EH-Anker 2 = |ℤ₂|.
+- **TWISTOR-FAMILIE GESCHLOSSEN [E]:** aus den vier O(2)-Zentrumsschnitten
+  q_p(λ) = iᵖt₀ − i⁻ᵖt₀λ² exakt XY = Z⁴ + 4t₀²λ²Z² − t₀⁴(1−λ⁴)² (e₁ = e₃ = 0
+  identisch; λ = 0 gibt exakt die v493-Familie; a₂ ∈ O(4) öffnet nur off-seam);
+  CY-kompatibler Uhr-Lift γ: (Z,λ) → (iZ,−iλ), γ⁴ = 1, Ω → +Ω.
+- **Ω_N GESCHLOSSEN + PERIODEN [E]:** Ω_N = Ω₀ + Σ N_p K_p mit
+  CPS/Bochner–Martinelli-Kerneln auf den Zentrums-Twistorlinien; dK = 0
+  abseits der Quelle; PERIODEN-TABELLE: Rand-S³/ℤ₄ am Orbifold-Punkt
+  (2πi)² × 1 (minimale invariante Ladung 4 = |μ₄| — der Linsen-Fundamentalbereich
+  erzwingt N ∈ 4ℤ!), deformierte Phase (2πi)² × 4, Linking-S³ uniform
+  (2πi)² × N, Sphärenklassen (2πi)² × N·(1,1,1) (uniform ERZWUNGEN: Uhr-Orbit +
+  K₄-Konnektivität der vier Linien), Faser-Phasenvektor 2πi·t₀(i−1)(1, i, i²);
+  Ω₀ trägt null 3-Fluss (aller Fluss gesourct); (2πi)² = Faser-Residuum ×
+  Transversal-Residuum (Dichte −sin 2θ).
+- **UHR-KOVARIANZ [E]:** Π_{j+1}(−iλ) = i·Π_j(λ) für ALLE λ; die 12
+  Kollisionsknoten liegen exakt auf den 8 achten Einheitswurzeln (8 = 2|μ₄|,
+  ℤ₈-Brücke), Uhr-Orbits 4+4+4, Conifold-Punkte (Hessian-Det 512t₀⁶,
+  Quadrik-Rang 4).
+- **KILL-PRÜFUNG (ehrlich) [E]:** verbotene Familie Z⁴−Z: 0/24 Lockstep
+  (vs. 8/24), λ-Träger 12 zwölfte Wurzeln ≠ ℤ₈, keine Antipodenpaarung —
+  ABER die (2πi)²-Quantisierung gilt dort AUCH: Ganzzahligkeit allein ist
+  NICHT der Diskriminator; der Diskriminator ist die Lockstep-Phasenstruktur
+  + Uhr-Zwang. Der v509-Dial überlebt, der KILL feuert nicht.
+- **ANKER + KONTROLLEN [E]:** EH/ℤ₂ (2 Knoten, Ladung 2 erzwungen);
+  CPS-Original (volles S³: jedes ganzzahlige N erlaubt); diag(i,i):
+  Ω₀ → −Ω₀ (Kollaps bei Schritt null); fraktionale Ladungen N = 1, 2, 3
+  ausgeschlossen.
+- **ZÄUNE:** [C] globale Kernel-Verklebung, Hitchin-Kleinauflösung,
+  CPS-Brane-Dictionary; [O] M2 (getwistetes KS-Maß), M3 (a₀-Uplift),
+  quantisierter BCOV-Koeffizient. KEINE Marker-Bewegung — M2/M3 und BCOV
+  bleiben [O], SEAM.EQUIV.TWISTOR.01 bleibt Open (v515 ist Vorbereitung,
+  keine Konstruktion), SEAM.EQUIV.01 unberührt.
+- **Sync:** Ledger CELEST.WP5E.M1.01 (neu, ERFOLG) + CELEST.SEAM.01 („M1
+  executed via v515 …; honest fence: integrality alone does not
+  discriminate; M2/M3 stay [O]") + SEAM.EQUIV.TWISTOR.01-Dependencies um
+  v515 ergänzt; \veri in tfpt_research_contracts (M1-Bullet → done mit
+  Kernzahlen; Objektdiagramm-Zeile ℂ²/ℤ₄ → PT/Γ um v515 ergänzt) + tfpt_3
+  (neuer Step 16 „the back-reacted Ω_N: closed form, integral periods,
+  forced charge 4", Story jetzt sechzehn Schritte, „What remains"
+  angepasst) + tfpt_4_frontier (Stage-Liste); Wolfram 8 exakte Spiegel
+  (490 → 498, Engine-Lauf verifiziert); Website (papers.ts „16 steps",
+  DAG qft-Knoten + v515, glossary, Zähler 116/116 + 498/498); Changelog
+  2026-07-22 (V). Nächste Meilensteine: M2 (getwistetes KS-Maß pro Sektor)
+  und M3 (a₀/(4,±4)-Kähler-log-Uplift) — Erfolg/Kill-Kriterien stehen
+  wörtlich in v514 S8.2/S8.3.
+
+## 2026-07-22 (IV) — PROGRAMM-NOTIZ (Anti-Zahlenjagd, aus dem externen Review des Celestial-/Twistor-Zweigs; Arbeitsdisziplin, keine Physik-Änderung)
+
+Das externe Review bestätigt die Substanz des Zweigs und verlangt Präzisierung der
+SEMANTIK — umgesetzt heute als reine Struktur-/Text-Integration (Umbenennung „The
+celestial and twistor continuum route", Objektdiagramm, exakte
+Gruppenerweiterungs-Definition Γ_ALE vs. ⟨ρ⟩, SEAM.EQUIV-Routen-Split
+MMST/TWISTOR ohne Sach-Statusänderung, A₃-Rollentabelle, neuer zentraler Contract
+WOIT.OS.TWISTOR.01). Die hier festgehaltene ARBEITSDISZIPLIN für die nächsten
+Runden:
+
+**Der nächste Erkenntnisgewinn liegt bei POSITIVITÄT, INZIDENZ, LOKALITÄT und der
+Θ-REALSTRUKTUR — NICHT bei weiteren Faktorzerlegungen.** Konkret: (1) die
+anti-lineare Abbildung Θ: A(PT/Γ) → A(PT/Γ) mit Θ² = 1, ΘρΘ = ρ⁻¹ auf der
+interagierenden Algebra; (2) Reflection Positivity des interagierenden
+BCOV+SDYM-Funktionals (nach Gauge-Fixing); (3) die inzidenzverträgliche
+Fortsetzung der vier μ₄-Marken über die Raumzeit; (4) Lokalität/Netz-Äquivalenz
+(richtige OPE, nicht nur richtiger Charakter). Weitere Zahlenzerlegungen im Stil
+„1920 = |W(D₅)|" sind nach v513 (look-elsewhere-loaded, konventionskontingent)
+als Erkenntnisquelle erschöpft — neue Zahlenfences nur noch als [C]-typisierte
+Nebenprodukte einer der vier obigen Strukturfragen, nie als eigenes Ziel. Die
+sieben Kill-Tests von WOIT.OS.TWISTOR.01 sind die Messlatte; „until Θ + RP exist,
+the Woit connection is a strong analogy, not a mathematical integration".
+
+## 2026-07-22 (III) — v514 (CELEST.WP5E.EPS1.01): WP5e-ε1 „der O(−2)-Bulk-Axion-Slot" ausgeführt (Verdikt B) — der Slot ist eine KONSTRUKTION, λ̃ = 6 dreifach gepinnt, erster ehrlicher Rückreaktionsschritt in Gibbons-Hawking-Form; M1–M3 präregistriert
+
+Die zwei Proben celestial_seam_wp5e_eps1_o2_bulk_axion_probe.py (20/20) und
+celestial_seam_wp5e_eps1_gh_a3_backreaction_probe.py (14/14) sind als EIN Modul
+**v514_celestial_wp5e_eps1_axion_slot.py (CELEST.WP5E.EPS1.01)** promoviert
+(34 Checks, ~4 s, exakt sympy/Fraction; Cluster frontier, Stil v505/v509,
+Verdikt B; Suite grün, jetzt 508 Skripte, ALL CHECKS PASSED):
+
+- **ÄQUIVARIANTER O(−2)-SLOT [E]:** Pushforward-Ledger π₊O(−2) auf
+  PT′ = Tot(O(1)⊕O(1)→P¹): pro Grad d exakt (d+1)² = Wellenoperator-Nullräume
+  (1, 4, 9, 16, 25, 36 für d = 0..5); v492-Wirkung auf den Faserkoordinaten
+  (μ₁,μ₂) ↦ (iμ₁,i⁻¹μ₂), Inzidenz erzwingt Spaltengewichte (+1,+1,−1,−1);
+  äquivariante Buchhaltung schließt BLOCK FÜR BLOCK (alle d ≤ 6, alle 4
+  Charaktere); Charakterreihen P₀ = 1+3t²+15t⁴+21t⁶+45t⁸, P₁ = P₃ =
+  2t+8t³+18t⁵, P₂ = 6t²+10t⁴+28t⁶; d = 0-Slot hat Multiplizität (1,0,0,0) —
+  DAS BULK-AXION ÜBERLEBT DIE PROJEKTION; Molien-Invariantenring =
+  (1−t⁸)/((1−t⁴)²(1−t²)) — Z ∈ O(2), X,Y ∈ O(4), Relation Grad 8 =
+  a₀-Gewicht (v492/v493-Brücke); E3-Bijektion geschärft (getwistet 2t, 6t²,
+  2t = Coxeter-Eigenwerte, det(A−1) = −4); Graviton-Kontrolle: O(+2)
+  invariant erst ab Fasergrad 4 mit Multiplizität 3 = {X, Z², Y}.
+- **λ̃ = 6 DREIFACH GEPINNT [E]:** (1) Okubo Tr_adj X⁴ = 36⟨x,x⟩² =
+  (6⟨x,x⟩)² auf den 240 Glue-Wurzeln (36 = h∨+6, λ̃ = 6 = |ℤ₂|·N_fam);
+  (2) Maß-Kürzung: μ = 1/4 tritt dreifach auf (Vertex² μ², Propagator 1/μ,
+  Anomalie μ) und kürzt sich EXAKT — λ̃_eff² = 36 für beliebiges μ;
+  Falschbuchungen quantifiziert und ausgeschlossen (nur-Anomalie ⇒ λ̃ = 3,
+  fehlende Propagator-Renormierung ⇒ λ̃ = 12); (3) Fluss: minimales
+  CPS-Quantum N = 1, Einzelkanal genau bei k = 1, (κ/c3)² = 12 exakt.
+- **GH/A₃-RÜCKREAKTIONSSCHRITT [E]:** invariante 4er-Zentren = genau 2
+  Zweige (Achse⁴ = reine Auflösung oder EIN freier μ₄-Orbit = reine
+  Deformation); freier Orbit ⇒ Π(Z−iᵖz₀) = Z⁴−z₀⁴ ⇒ XY = Z⁴+a₀ mit
+  a₀ = −z₀⁴ (v493-Familie aus der GEOMETRIE re-deriviert); Monodromie =
+  ein Uhr-Schritt; GH-Punkt Ladung k = exakt ℝ⁴/ℤ_k (k = 4 ⇒ Seam-Rand
+  S³/ℤ₄); Perioden Π_j = 4πt₀(i−1)(1, i, i²) LOCKSTEP (v509-Gegenprobe);
+  Coxeter-Uhr aus der Geometrie (Π·A = iΠ); Quellladung 4 = |μ₄|;
+  EHRLICHE SCHÄRFUNG: asymptotischer log-Koeffizient der Ricci-flachen ALE
+  exakt 0 (EH: uK′ = √(u²+a⁴), det g = 1) — der log lebt am exzeptionellen
+  Ort; Burns-Kontrast det g ≠ 1; Multipol-Auswahlregel m ≡ 0 mod 4,
+  (4,±4) trägt −a₀ mit Amplitude (35/16)sin⁴θ.
+- **NEGATIVKONTROLLEN [E]:** so8 (λ̃² = 12 irrational; perfekte Quadrate
+  der Deligne-Serie nur {9,36} = {sl3,e8}); diag(i,i) (Veronese, 5
+  Generatoren, keine Hyperfläche); k = 2 (drei Kanäle; ehrlich: 36 ist
+  k-unabhängig, der Kill ist der Closure-Dial).
+- **ZÄUNE:** [C] konditional auf Costellos Flach-PT-Matching; [O] der
+  quantisierte BCOV-Einschleifen-Koeffizient auf PT/ℤ₄ + die getwisteten
+  Kanäle (32·T3) — M1–M3 präregistriert (A₃-Ω_N / getwistetes KS-Maß /
+  a₀-Uplift, je mit Erfolg + Kill). KEINE Marker-Bewegung, WP5e bleibt [O],
+  SEAM.EQUIV.01 unberührt.
+- **Sync:** Ledger CELEST.WP5E.EPS1.01 (neu, Verdikt B) + CELEST.SEAM.01
+  („epsilon-1 executed via v514 …, M1–M3 preregistered"); \veri in
+  tfpt_research_contracts (ε1-Stage-Block done + Roadmap M1–M3 wörtlich)
+  + tfpt_3 (neuer Step 15, Story jetzt fünfzehn Schritte, „What remains"
+  angepasst); Wolfram 8 exakte Spiegel (482 → 490, Engine-Lauf
+  verifiziert); Website (papers.ts „15 steps", DAG qft-Knoten + v514,
+  Zähler 116/116 + 490/490); Changelog 2026-07-22 (III).
+
+## 2026-07-22 (II) — v513 (CELEST.DTERM.NONDERIV.01): das c_d-Negativ-Zertifikat promoviert — „1920 = |W(D5)|" ist als Ableitungsanspruch NUMEROLOGIE; der v511-[C]-Zaun bleibt Zaun, jetzt look-elsewhere-belastet typisiert
+
+Die Probe celestial_seam_wp5e_dterm_coefficient_derivation_probe.py (24/24, 1,8 s)
+ist als **v513_celestial_dterm_nonderivation.py (CELEST.DTERM.NONDERIV.01)**
+promoviert (24 Checks, ~2 s, exakt sympy/Fraction; Cluster frontier, Stil v508 —
+ein Anti-Numerologie-Zertifikat; Suite grün, jetzt 507 Skripte, ALL CHECKS PASSED):
+
+- **KONVENTIONSTABELLE [E]:** c_d ∈ {1920, 120, 256, 32, 69120} je nach
+  Normierung (Probe tr-fund/e8-Killing; Gell-Mann; su(4)-Killing; reine Spur;
+  ch3-normiert d/6) — nur 1 von 5 trifft |W(D5)|; konventionsstabil ist NUR
+  die Faktorisierung c_d = Φ_T3(A_fix)·2h∨(E8) = 32·60 (beide Faktoren [E]:
+  Killing-Propagator 60 aus Σ⟨α,e⟩² = 120; T3-Slot-Fixierung via
+  det(P-Block) = −64 ≠ 0).
+- **K1 TOT [E]:** ladungslegale Flussprodukte (1,3)/(2,2) geben 2048/1800 —
+  klammern 1920 ein und verfehlen; der 64·60/2-Treffer ist die verbotene
+  (1,2)-Paarung (Innerness). LOOK-ELSEWHERE-LEDGER: 924 Ausdrücke aus 21
+  [E]-Zahlen, 11 Treffer auf 1920; Kontrollen 1800 → 8, 2048 → 5, 2016 → 0.
+- **K2 [E]:** Quantisierung liefert nur Gitter (60ℤ; 1920 = 32. Vielfaches,
+  keine Minimalität; strikte ch3-Einheiten 2160ℤ schließen 1920 sogar aus);
+  kubisches Quantum gitterabhängig (6 auf Kowurzeln, 3/8 auf Gewichten);
+  die 32 hat 12 Faktorisierungen — nichts erzwingt sie.
+- **K3 PROVENIENZ-CLASH [E] (der Todesstoß):** kubische Indizes
+  A_m = (0, 16, 0, −16), Σ iᵐA_m = 32i numerisch = Φ_T3(A_fix) — ABER die
+  quartische Klassenzerlegung (10, −4, 30, −4) kommt aus Klassen 0/2, die
+  kubische 32 aus 16+16 der Klassen 1/3: gleiche Zahl, disjunkter
+  Mechanismus = Koinzidenz; Weyl-Seite falsch (d-Kanal ist A3,
+  |W(A3)| = 24; D5 hat keine Kubik; |W(E8)|/|W(A8)| = 1920 als zweites
+  akzidentelles 1920).
+- **K4-Kontrollen [E]:** SO(16) fällt konsistent durch, k = 2 skaliert die
+  Flussformel ×4 (7680), falsches g₀ hat SECHS symmetrische Kubiken,
+  so(10)-Sanity (Tr X³ = 0).
+- **VERDIKT:** NUMEROLOGIE als Ableitungsanspruch — der v511-[C]-Zaun bleibt
+  Zaun, jetzt look-elsewhere-belastet typisiert; der ehrliche [E]-Kern ist
+  c_d = 32·60; die physikalische Erzeugung der 32 bleibt [O]. KEINE
+  Marker-Bewegung.
+- **Sync:** Ledger CELEST.DTERM.NONDERIV.01 (neu) + v511-/CELEST.SEAM.01-
+  Fence nachgeschärft („look-elsewhere-loaded (11/924 vs. 8/924 für 1800)
+  und konventionskontingent — v513"); \veri in tfpt_research_contracts
+  (δ2-Fence-Umfeld) + tfpt_3 (Step 14) + tfpt_4 (Klausel); Wolfram 6
+  exakte Spiegel (476 → 482, Engine-Lauf verifiziert); Website (papers.ts,
+  DAG qft-Knoten, Zähler 116/116 + 482/482); Changelog 2026-07-22 (II).
+
+## 2026-07-22 (I) — v512 (SEAM.TAU.FLAG.01): das Flag-Transitivitäts-Äquivalenznetz promoviert — nackte Transitivität FALSIFIZIERT als Selektor, der scharfe Selektor ist FLAG-Transitivität ⟺ τ = i; Reduktionslage neu: „vier Marken + EIN diskretes Symmetrie-Lift-Bit + π"
+
+Die Probe seam_tau_i_established_selector_probe.py (29/29, sympy-exakt +
+mpmath 30 Stellen) ist als **v512_seam_tau_flag.py (SEAM.TAU.FLAG.01)**
+promoviert (29 Checks, ~6 s; Cluster core, Stil v510; Suite grün):
+
+- **FALSIFIKATION [E]:** auf dem freien RP-Kreis ist M(δ) = {±1, ±e^{iδ}}
+  für JEDES δ V₄-einfach-transitiv (paar-tauschende Inversionen z ↦ ±b/z;
+  vollständiger Zensus: deck-kommutierende Möbius = diagonal/antidiagonal) —
+  „Transitivität ⟸ v216-Lokalgleichheit selektiert τ = i" ist widerlegt;
+  Härtetest: alle ungerichteten Per-Marken-Daten sind für jedes δ identisch
+  — kein lokaler Jet sieht das Bit.
+- **DER SCHARFE SELEKTOR [E]:** FLAG-Transitivität (Marken UND Seiten)
+  ⟺ δ = π/2 ⟺ τ = i ⟺ Uhr — Stabilisator-Sprung 1→2, Flag-/Bogen-Bahnen
+  2→1, Ordnung-4-Rotation (b² = −1 solveset {π/2}), Marken-Spiegel
+  z ↦ 1/z ⟺ cos δ = 0.
+- **12-FACHES ÄQUIVALENZNETZ [E]:** Uhr-Rotation, D₄, Marken-Spiegel,
+  Flag-Transitivität, drei Spektral-Entartungen (Odd-Doublett-Split
+  (2/π)ln cot(δ/2), Null nur bei π/2 — Gegenzeuge exakt (2/π)ln 2;
+  Bogen-Laplacian 4/π; v215-K3-Indikator geschlossen (2√2/π)|ln tan(δ/2)| —
+  die v503-Gitterkurve analytisch), ρ-Twist-Existenz ((m²−n²)(t−1/t) = 0
+  ⟺ t = 1; Atiyah–Bott-Rationalität δ-BLIND, j_cw = 148176/25 rational
+  nicht-CM), 4-Zyklus-Implementierbarkeit (H4-Rigidität: Zentralisator
+  skalar, U² nichtskalar ⇒ projektive Ordnung exakt 4, ℤ₈-Schatten
+  konsistent v510), harmonisch, j = 1728.
+- **NEGATIVKONTROLLEN [E]:** hexagonal (nicht konzyklisch, fällt an
+  Präkonditionen); Silber (harmonisch aber topologisch tot); 3 Marken
+  (auf freiem Kreis unmöglich: 0 vs. 28 invariante Teilmengen; nackt
+  erzwingt n = 3 schon Transitivität die Gleichabständigkeit — „4 zählt").
+- **DER REST [C] (wörtlich):** das Bit selbst — das letzte Input reduziert
+  von einem kontinuierlichen Modulus auf EIN diskretes Symmetrie-Lift-Bit
+  (V₄ → D₄: Seiten-Ununterscheidbarkeit der vier gleich-dekorierten
+  Marken); v216-Lokalgleichheit liefert es NICHT; seine Negation ist jetzt
+  konkret messbar (Odd-Split ≠ 0). Scoreboard: Gegenzeuge besteht alle 7
+  etablierten ungerichteten Tests, fällt in allen 9 uhr-äquivalenten durch.
+  KEINE Marker-Bewegung (das Bit bleibt [C]).
+- **Sync:** Ledger SEAM.TAU.FLAG.01 (neu) + TEXT-Präzisierungen in
+  QGEO.REALIZE.01 (Flag-Transitivitäts-Postulat; Suchraum auf RP-Positivität
+  des ungeraden Sektors verengt), AX.P2.01/P2.TYPING.01 (Reduktionslage
+  „vier Marken + ein diskretes Symmetrie-Lift-Bit (Flag-Transitivität
+  ⟺ τ = i) + π"), SEAM.BIT.FREEDOM.01 (Querverweis); \veri in tfpt_1
+  (Reduktions-Keybox), introduction, tfpt_3 (Step 2 + Honest-Status),
+  tfpt_research_contracts; Sekundärspiegel tfpt_2/origin_theory; Wolfram 6
+  exakte Spiegel (470 → 476, Engine-Lauf verifiziert; mpmath/numpy-Teile
+  Python-only, geflaggt); Website (papers.ts, DAG P2-/masses-Knoten,
+  StatusMatrix); Changelog 2026-07-22 (I).
+
 ## 2026-07-21 (XXIII) — v511 (CELEST.WP5E.DELTA2.01): WP5e-δ2 „der Voll-Tensor-Ledger" promoviert (Zwischenausgang, exakt) — der Kollaps ist ECHT (Innerness), und EINE kubische Tür öffnet sich; δ1 bleibt UNENTSCHIEDEN auf Explorations-Ebene (Fence-Text)
 
 Die Probe celestial_seam_wp5e_delta2_full_tensor_ledger_probe.py (41/41) ist als

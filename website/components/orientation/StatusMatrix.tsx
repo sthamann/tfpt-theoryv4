@@ -13,7 +13,7 @@ interface Row {
 const ROWS: Row[] = [
   {
     layer: "Two axioms {c₃, g_car}",
-    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised; reduction state: four marks + one square-modulus datum (τ = i) + π (v491/v499/v510)",
+    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised; reduction state: four marks + one discrete symmetry-lift bit (flag transitivity ⟺ τ = i) + π (v491/v499/v510/v512)",
     paper: "Doc 1",
     tone: "downstream",
   },
@@ -49,7 +49,7 @@ const ROWS: Row[] = [
   },
   {
     layer: "Residual interfaces v_geo [O], G_net [C], F_transfer [C]",
-    status: "Numbered research contracts — the scale anchor (open), the metric inclusion and the transfer functor (closed modulo cited theorems; extension leg on peer-reviewed crossed-product theorems, v469)",
+    status: "Numbered research contracts — the scale anchor (open), the metric inclusion (route split: MMST route SEAM.EQUIV.MMST.01 closed modulo cited theorems, twistor route SEAM.EQUIV.TWISTOR.01 open, parent SEAM.EQUIV.01 [O] as an unconditional claim; extension leg on peer-reviewed crossed-product theorems, v469) and the transfer functor [C]",
     paper: "Doc 8",
     tone: "downstream",
   },

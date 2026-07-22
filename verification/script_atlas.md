@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`505` registered scripts · `573` ledger claims · `10` clusters.
+`509` registered scripts · `580` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (58 scripts)
+### `core` — Compiler core & the E₈ glue  (59 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -77,7 +77,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v153, v358, v359, v361, v60, v68, v78 · cited: research contracts
 - **v365_qg_oneloop_saddle** [E/C/O] `QGAMB.SADDLE.01` — Direction 3: the QG measure (gate C7/QG.AMB.01) as one-loop GAUSSIAN fluctuations around the PARAMETER-FREE saddle (v358/v359). [E] the fluctuation stiffness is 1/c3=8pi (no free d
   - deps: QG.AMB.01, v358, v359, v76, v337, v330, v334, v364 · cited: research contracts
-- **v366_mmst_seam_collar** [E/C/O] `SEAM.MMST.INCLASS.01` — Direction 7: the seam collar is IN MMST's free-lattice-fermion scaling-limit class, so the chiral scaling limit is a chiral CFT of central charge 8 pinned to (E8)_1 -- reducing SEA
+- **v366_mmst_seam_collar** [E/C/O] `SEAM.MMST.INCLASS.01, SEAM.EQUIV.MMST.01` — Direction 7: the seam collar is IN MMST's free-lattice-fermion scaling-limit class, so the chiral scaling limit is a chiral CFT of central charge 8 pinned to (E8)_1 -- reducing SEA
   - deps: v286_seam_equivalence_contract, v336, v356, v351, v302, v155, v160, v297 · cited: research contracts
 - **v367_seam_s3_lattice** [E/C/O] `SEAM.S3.LATTICE.01` — Track 1: the EXPLICIT lattice realisation of the S3 input -- a concrete gapped chiral-Majorana (p+ip) lattice model whose edge is the 16-Majorana SO(16)_1 carrier, mu4-condensed to
   - deps: v286_seam_equivalence_contract, v356, v366, v351, v369, v301, v302, v154 · cited: research contracts
@@ -127,6 +127,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v117, v168, v214, v215 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v510_seam_bit_freedom** [E/C] `SEAM.BIT.FREEDOM.01` — SEAM.BIT.FREEDOM.01: the freedom attack on the v506/v507 alignment bit -- the POSITION half of the bit is topology (Part A dihedral/Fock + Part B Moebius/RP in one module; NO marke
   - deps: v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v176_seam_collar_realisation, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v216, v264 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+- **v512_seam_tau_flag** [E/C] `SEAM.TAU.FLAG.01` — SEAM.TAU.FLAG.01: the flag-transitivity equivalence web -- the tau = i attack executed on the free RP seam circle: which ESTABLISHED seam datum excludes the free-but-non-harmonic c
+  - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, AX.P2.01, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -334,7 +336,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (176 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (179 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -421,8 +423,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v268_theta13_carrier_trace, v270_pmns_jarlskog_assembly, v272_nu_mass_scale, v266_ps_threshold_proton, v3_em_alpha · cited: 4 frontier
 - **v285_route_ii_seam_condensation** [E/O] `QGAMB.ROUTEII.01` — Route (ii) (seam-net condensation) decomposed into a 4-lemma chain, with the key result that its open lemma COINCIDES with Route (i)'s (the v282 unification at the lemma level). [E
   - deps: v181_clock_is_conformal_symmetry, v234_seam_holomorphy_selection, v235_seam_chern_simons, v277_seam_calderon_e8_match, v281_holomorphy_modular_data, v282_e8_tau_i_unification, v284_route_i_rp_uniqueness · cited: research contracts
-- **v286_seam_equivalence_contract** [E/O] `SEAM.EQUIV.01` — the Seam Equivalence contract: concentrates the whole open structure on ONE named arrow (does NOT prove it). Theorem: the raw RP seam state reconstructs canonically the holomorphic
-  - deps: v181_clock_is_conformal_symmetry, v279_qgeo_obligation_lemma, v282_e8_tau_i_unification, v284_route_i_rp_uniqueness, v285_route_ii_seam_condensation · cited: research contracts
+- **v286_seam_equivalence_contract** [E/C/O] `SEAM.EQUIV.01` — the Seam Equivalence contract: concentrates the whole open structure on ONE named arrow (does NOT prove it). Theorem: the raw RP seam state reconstructs canonically the holomorphic
+  - deps: v181_clock_is_conformal_symmetry, v279_qgeo_obligation_lemma, v282_e8_tau_i_unification, v284_route_i_rp_uniqueness, v285_route_ii_seam_condensation, v366_mmst_seam_collar, v492_celestial_z4_orbifold · cited: research contracts
 - **v287_free_rp_bulk_to_holomorphic_boundary** [E/O] `SEAM.EQUIV.A01` — Route A (AQFT) theorem-dependency checker for the open Gral arrow 'free Gaussian RP bulk ⇒ holomorphic single-sector boundary net': types the 5-lemma chain and isolates the ONE mis
   - deps: v286_seam_equivalence_contract, v175_net_existence_full_cone, v234_seam_holomorphy_selection, v277_seam_calderon_e8_match, v285_route_ii_seam_condensation · cited: research contracts
 - **v288_full_l2_subprincipal_z4** [E/O] `SEAM.EQUIV.B01` — Route B (DtN): the full-L² lift of the sub-principal Z4 block-diagonality, proving (numerically, on the full Toeplitz operator) the 'probably provable' step and lifting v201/v284 f
@@ -659,7 +661,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v476_entropic_compression_toy, v477_entropic_scaleflow, v323, v358, v450, v473, v476, v477 · cited: research contracts
 - **v480_multilocal_four_interval** [E/C/O] `QGEO.MULTILOCAL.01` — QGEO.MULTILOCAL.01: the four mu4 marks make the seam circle a FOUR-INTERVAL free-fermion geometry -- the class whose multi-interval modular theory is exactly known (Casini-Huerta m
   - deps: v181_clock_is_conformal_symmetry, v286_seam_equivalence_contract, v398_seam_state_rigidity, v476_entropic_compression_toy, v478_entropic_continuum_legs, v216, v323, v358 · cited: research contracts
-- **v492_celestial_z4_orbifold** [E/C/O/X] `CELEST.WP1.01, CELEST.SEAM.01` — CELEST.WP1.01: WP1 of the celestial-holographic research contract CELEST.SEAM.01 -- the E8 mu4-glue grading (v128) IS the flat Z4 monodromy of the glue-equivariant celestial chiral
+- **v492_celestial_z4_orbifold** [E/C/O/X] `CELEST.WP1.01, CELEST.SEAM.01, SEAM.EQUIV.TWISTOR.01` — CELEST.WP1.01: WP1 of the celestial-holographic research contract CELEST.SEAM.01 -- the E8 mu4-glue grading (v128) IS the flat Z4 monodromy of the glue-equivariant celestial chiral
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v1_e8_glue, v92, v125, v128, v168, v179 · cited: 3 e8 audit bootstrap, research contracts
 - **v493_celestial_wp2_clock_deformation** [E/C/O] `CELEST.WP2.01` — CELEST.WP2.01: WP2 of the celestial-holographic research contract CELEST.SEAM.01 -- the clock-invariant deformation XY = Z^4 + a0 of the A3 seam orbifold (geometry, periods/monodro
   - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v92, v125, v128, v168, v179, v180 · cited: 3 e8 audit bootstrap, research contracts
@@ -689,6 +691,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v502_celestial_wp5e_prefactor_level, v505_celestial_wp5e_beta_equivariant_ledger, v508_celestial_wp5e_gamma_pairing, v286_seam_equivalence_contract, v492, v493, v502 · cited: 3 e8 audit bootstrap, research contracts
 - **v511_celestial_wp5e_delta2_tensor_ledger** [E/C/O/X] `CELEST.WP5E.DELTA2.01` — CELEST.WP5E.DELTA2.01: WP5e-delta-2 of the celestial-holographic research contract CELEST.SEAM.01 -- 'the full-tensor ledger', the named escape route of the v508 exchange no-go, ex
   - deps: v492_celestial_z4_orbifold, v502_celestial_wp5e_prefactor_level, v505_celestial_wp5e_beta_equivariant_ledger, v508_celestial_wp5e_gamma_pairing, v509_celestial_wp5e_eps2_level_from_flux, v286_seam_equivalence_contract, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
+- **v513_celestial_dterm_nonderivation** [E/C/O] `CELEST.DTERM.NONDERIV.01` — CELEST.DTERM.NONDERIV.01: the c_d negative certificate -- can geometry derive c_d = 1920? An anti-numerology certificate in the v508 style (honest rigid NEGATIVE result): the v511 
+  - deps: v492_celestial_z4_orbifold, v508_celestial_wp5e_gamma_pairing, v509_celestial_wp5e_eps2_level_from_flux, v511_celestial_wp5e_delta2_tensor_ledger, v505, v508, v509, v511 · cited: 3 e8 audit bootstrap, research contracts
+- **v514_celestial_wp5e_eps1_axion_slot** [E/C/O/X] `CELEST.WP5E.EPS1.01` — CELEST.WP5E.EPS1.01: WP5e-epsilon-1 of the celestial-holographic research contract CELEST.SEAM.01 -- 'the O(-2) bulk-axion slot', executed (verdict B): build the s = 0 tower field 
+  - deps: v492_celestial_z4_orbifold, v505_celestial_wp5e_beta_equivariant_ledger, v508_celestial_wp5e_gamma_pairing, v509_celestial_wp5e_eps2_level_from_flux, v511_celestial_wp5e_delta2_tensor_ledger, v286_seam_equivalence_contract, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
+- **v515_celestial_wp5e_m1_omega_n** [E/C/O/X] `CELEST.WP5E.M1.01` — CELEST.WP5E.M1.01: milestone M1 of the celestial-holographic research contract CELEST.SEAM.01 (WP5e back-reaction programme) -- 'the A3 Omega_N', executed (SUCCESS on the preregist
+  - deps: v492_celestial_z4_orbifold, v514_celestial_wp5e_eps1_axion_slot, v509_celestial_wp5e_eps2_level_from_flux, v505_celestial_wp5e_beta_equivariant_ledger, v492, v493, v505, v509 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1075,16 +1083,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×82, `v336`×37, `QGEO.SYM.01`×33, `v216`×27, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `E8.GLU.01`×17, `v312`×16, `v492`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15, `FLAV.KQ.01`×14
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v76`×19, `CELEST.SEAM.01`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v500_celestial_wp5c_gns_limit_state** — `CELEST.WP5C.01`
-- **v501_celestial_wp5d_two_interval_index** — `CELEST.WP5D.01`
-- **v502_celestial_wp5e_prefactor_level** — `CELEST.WP5E.ALPHA.01`
-- **v503_qgeo_emergence_light** — `QGEO.EMERGE.LIGHT.01`
 - **v504_celestial_wp5d_klm_completeness** — `CELEST.WP5DB.01`
 - **v505_celestial_wp5e_beta_equivariant_ledger** — `CELEST.WP5E.BETA.01`
 - **v506_seam_clock_rigidity** — `SEAM.CLOCK.RIGIDITY.01`
@@ -1093,4 +1097,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v509_celestial_wp5e_eps2_level_from_flux** — `CELEST.WP5E.EPS2.01`
 - **v510_seam_bit_freedom** — `SEAM.BIT.FREEDOM.01`
 - **v511_celestial_wp5e_delta2_tensor_ledger** — `CELEST.WP5E.DELTA2.01`
+- **v512_seam_tau_flag** — `SEAM.TAU.FLAG.01`
+- **v513_celestial_dterm_nonderivation** — `CELEST.DTERM.NONDERIV.01`
+- **v514_celestial_wp5e_eps1_axion_slot** — `CELEST.WP5E.EPS1.01`
+- **v515_celestial_wp5e_m1_omega_n** — `CELEST.WP5E.M1.01`
 

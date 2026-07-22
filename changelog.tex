@@ -60,6 +60,228 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-22 (V) (\texttt{v515} --- WP5e back-reaction milestone M1 ``the $A_3$ $\Omega_N$'' executed (SUCCESS on the preregistered \texttt{v514} S8.1 criterion), promoted as the ledger row \texttt{CELEST.WP5E.M1.01}: the back-reacted holomorphic $3$-form $\Omega_N$ is CLOSED FORM on the $A_3$ twistor family, every $S^3/\Z_4$ period is $(2\pi i)^2$-integral with the lockstep flux vector, and the lens geometry FORCES the source charge $4=|\mu_4|$ --- (1) the RESIDUE FORM DERIVED: on $F=XY-P(Z)$ all three ambient representatives satisfy $dF\wedge\omega_2=-dX{\wedge}dY{\wedge}dZ$ exactly and pull back to $\omega_2=dX{\wedge}dZ/X$ (Poincar\'e residue, derived not assumed); orbifold-cover pullback at $a_0=0$: $\omega_2=4\,dz_1{\wedge}dz_2=|\mu_4|\times$(flat form) --- the residue normalisation CARRIES the source charge $4$; clock $\omega_2\to i\,\omega_2$ (\texttt{v492} S5 replicated); weight ledger $4{+}4{+}2{-}8=2$, $\Omega\in O(4)=-\deg K_{\mathbb{PT}}$; (2) the TWISTOR FAMILY CLOSED: from the four $O(2)$ centre sections $q_p(\lambda)=i^pt_0-i^{-p}t_0\lambda^2$ exactly $XY=Z^4+4t_0^2\lambda^2Z^2-t_0^4(1-\lambda^4)^2$ ($e_1=e_3=0$ identically; $\lambda=0$ gives exactly the \texttt{v493} family; $a_2\in O(4)$ opens only off-seam), CY-compatible clock lift $\gamma:(Z,\lambda)\mapsto(iZ,-i\lambda)$, $\gamma^4=1$, $\Omega\to+\Omega$; (3) $\Omega_N$ CLOSED $+$ PERIOD TABLE: $\Omega_N=\Omega_0+\sum_pN_pK_p$ with CPS/Bochner--Martinelli kernels on the centre twistor lines, $dK=0$ off-source; boundary $S^3/\Z_4$ at the orbifold point $(2\pi i)^2\times1$ (minimal invariant charge $4=|\mu_4|$ --- the lens fundamental domain FORCES $N\in4\Z$), deformed phase $(2\pi i)^2\times4$, linking $S^3$ uniformly $(2\pi i)^2\times N$, per-sphere flux vector $(2\pi i)^2\times N(1,1,1)$ (forced uniform: clock orbit $+$ $K_4$ connectivity), seam-fibre phase vector $2\pi i\,t_0(i-1)(1,i,i^2)$; $\Omega_0$ carries ZERO $3$-flux (all flux sourced); $(2\pi i)^2=$ fibre residue $\times$ transversal residue (density $-\sin2\theta$); (4) CLOCK COVARIANCE: $\Pi_{j+1}(-i\lambda)=i\,\Pi_j(\lambda)$ for ALL $\lambda$; the $12$ collision nodes sit exactly on the $8$ eighth roots of unity ($8=2|\mu_4|$, the $\Z_8$ bridge), clock orbits $4{+}4{+}4$, honest conifold points (Hessian det $512t_0^6$, quadric rank $4$); (5) the HONEST KILL PROBE: forbidden family $Z^4-Z$: $0/24$ lockstep (vs $8/24$), $\lambda$-support $12$ twelfth roots $\neq\Z_8$, no antipodal pairing --- BUT the $(2\pi i)^2$ quantisation holds there TOO: integrality alone is NOT the discriminator, the discriminator is the lockstep phase structure $+$ the clock forcing; the \texttt{v509} dial survives; (6) ANCHORS $+$ CONTROLS: EH/$\Z_2$ (charge $2=|\Z_2|$ forced), CPS original (every integer $N$ allowed), $\operatorname{diag}(i,i)$ ($\Omega_0\to-\Omega_0$, collapse at step zero), fractional charges $N=1,2,3$ excluded; \mC\ global kernel patching / Hitchin small resolution / CPS brane dictionary; \mO\ M2 (twisted KS measure), M3 ($a_0$ uplift), the quantised BCOV coefficient; Wolfram extension $490\to498$ (verified engine run); \emph{NO marker moves --- M2/M3 and BCOV stay \mO, \texttt{SEAM.EQUIV.TWISTOR.01} stays Open (\texttt{v515} is preparation, not construction), \texttt{SEAM.EQUIV.01} untouched})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v515\_celestial\_wp5e\_m1\_omega\_n.py} (\texttt{CELEST.WP5E.M1.01},
+30 checks, $\sim$1 s; exact sympy, no floats; deterministic).} S1 the residue form (three routes,
+cover factor $4$, weight ledger, EH anchor, wrong-weight control); S2 the twistor family
+(closed form, $O(2)$ reality, clock lift, section-level dichotomy); S3 periods (generic reduction,
+lockstep, covariance, collision ledger on $\Z_8$); S4 $\Omega_N$ (BM anchor, lens descent, source
+curve, conifold nodes, M1 criterion); S5 the KILL probe (honest); S6 negative controls; S7 fences
+$+$ verdict. Registered in \texttt{run\_all.py} (suite $509$ modules, green),
+\texttt{script\_registry.csv} (cluster \emph{frontier}), ledger row \texttt{CELEST.WP5E.M1.01}
+(new, SUCCESS).
+\item \textbf{Contract updated (markers unchanged).} \texttt{CELEST.SEAM.01} now reads: M1
+executed via \texttt{v515} --- the back-reacted $\Omega_N$ is closed-form on the $A_3$ twistor
+family, all $S^3/\Z_4$ periods are $(2\pi i)^2$-integral with the lockstep flux vector and clock
+covariance, and the lens geometry FORCES the source charge $4=|\mu_4|$; honest fence: integrality
+alone does not discriminate --- the discriminator is the lockstep phase structure ($0/24$ on the
+forbidden family); M2/M3 stay \mO. \texttt{SEAM.EQUIV.TWISTOR.01} dependencies extended by
+\texttt{v515} (preparation; the route stays Open).
+\item \textbf{Paper integration.} \texttt{tfpt\_research\_contracts} (the M1 bullet moved to
+\emph{done} with the core numbers; the object-diagram row $\mathbb C^2/\Z_4\to\mathbb{PT}/\Gamma$
+extended by \texttt{v515} with the M1 kill retired to $\delta_1$/M2--M3; WP4 handover, WP5
+narrative, honest status line and status inventory synced); \texttt{tfpt\_3} (new Step 16 ``the
+back-reacted $\Omega_N$: closed form, integral periods, forced charge $4$'' --- the celestial
+story is now sixteen steps; ``what remains'' updated: M2/M3 are the remaining preregistered
+milestones); \texttt{tfpt\_4\_frontier} stage list synced.
+\texttt{v515\_celestial\_wp5e\_m1\_omega\_n.py} is cited via \texttt{veri} in both.
+\item \textbf{Wolfram.} Eight exact mirrors (residue-form identities; twistor family closed;
+period reduction $+$ lockstep $+$ covariance; collision ledger on $\Z_8$; BM anchor $+$ lens
+forcing $N\in4\Z$; source curve $K_4$; conifold nodes; KILL probe $+$ EH/$\operatorname{diag}(i,i)$
+controls) added to \texttt{tfpt\_readouts\_extension.wl} and verified with the active engine,
+$490\to498$; \texttt{GATE.WOLFRAM.02}, Wolfram README and the website counters synced
+($116/116+498/498$).
+\item \textbf{Provenance.} Discovery probe
+\texttt{celestial\_seam\_}\allowbreak\texttt{wp5e\_m1\_}\allowbreak\texttt{a3\_omega\_n\_}\allowbreak\texttt{backreaction\_probe.py}
+($30/30$) in \texttt{experiments/tfpt-discovery/} (2026-07-22); website mirrors regenerated
+(\texttt{ScriptIndex}, DAG \emph{qft} node $+$ \texttt{v515}, \texttt{papers.ts} ``16 steps'',
+changelog mirror); \texttt{next.txt} round notes.
+\end{itemize}
+
+\subsection*{2026-07-22 (IV) (external review integrated: route renamed, object diagram, group-extension definition, SEAM.EQUIV route split (MMST/TWISTOR ids, no status change), $A_3$ role table, \texttt{WOIT.OS.TWISTOR.01} contract --- a pure structure/text integration, NO new physics claims, NO marker moves, suite unchanged at $508$)}
+An external expert review of the celestial/twistor branch confirmed the substance and asked for
+\emph{semantic} precision --- role separation, status clarity, and the exact naming of what is
+missing. Six changes plus one new central research contract, all editorial/structural:
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{(\"A1) Route renamed $+$ the Woit bridge.} The \texttt{tfpt\_3} celestial section and the
+contract heading are now \textbf{``The celestial and twistor continuum route''} (the old ``from the
+$\mu_4$ clock to the $(E_8)_1$ boundary shadow'' survives as the narrative-arc subtitle). A new
+paragraph block in \texttt{tfpt\_3}, \emph{``The Woit bridge: chiral Wick rotation and the real
+structure''} \mO, introduces Woit's Euclidean Twistor Unification (\texttt{arXiv:2104.05099}) as a
+\emph{named external programme} (chiral Wick rotation problematic for purely chiral theories;
+Euclidean-holomorphic theory on $\mathbb{PT}$, Lorentzian theory via conjugation
+structure/boundary values), lists TFPT's existing ingredients (RP \texttt{v379}, OS reconstruction,
+$\rho=$ clock \texttt{v492}, $\sigma=$ deck/seam reflection \texttt{v510}), and names exactly what
+is missing: a global anti-linear $\Theta:\mathcal A(\mathbb{PT}/\Gamma)\to\mathcal
+A(\mathbb{PT}/\Gamma)$ with $\Theta^2=1$, $\Theta\rho\Theta=\rho^{-1}$, plus RP of the interacting
+BCOV$+$SDYM functional --- ``until that exists, the Woit connection is a strong analogy, not a
+mathematical integration''. No namedropping as confirmation.
+\item \textbf{(\"A2) The object diagram.} \texttt{tfpt\_research\_contracts} (CELEST section, up
+front) now opens with the chain $(\Sigma,\mu_4,\rho,\Theta)\to\mathbb
+P^1{\setminus}\mu_4\to\mathbb C^2/\Z_4\to\mathbb{PT}/\Gamma\to\mathcal
+A_{\mathrm{hol}}\to_{\mathrm{OS}}\mathcal A_{\mathrm{Mink}}$ as a table with one row per arrow
+(claim id, status, load-bearing modules \texttt{v492}/\texttt{v493}/\texttt{v497}--\texttt{v514},
+kill test); the last two arrows are honestly \mO\ with \texttt{WOIT.OS.TWISTOR.01} as the target ---
+where mathematics ends and physics begins is visible at a glance.
+\item \textbf{(\"A3) The group extension, exactly.} A definition block:
+$\Gamma_{\mathrm{ALE}}=\langle\text{Deck}\rangle\cong\Z_4\subset SU(2)$ (triholomorphic, preserves
+$\Omega$; the quotiented $\Z_4$); $\rho=$ Clock $=\operatorname{diag}(i,1)\in U(2)$ (K\"ahler,
+\emph{not} triholomorphic, $\det=i$ rotates $\Omega$ by $i$ --- \texttt{v492} S5; normalises, is not
+quotiented); the global object is cyclic $\langle\rho\rangle$ with $\rho^2=$ Deck (projectively
+$\Z_4$, spin lift $\Z_8$; \texttt{v492}/\texttt{v506}/\texttt{v507}), plus the action table on
+$K_{\mathbb{PT}}$, $\Omega$, BCOV fields, open-string fields and boundary states, each entry \mE\
+(arithmetic) or \mO\ (quantisation question); ``$\mathbb{PT}/\Z_4$'' is defined once for the whole
+contract (quotient by $\Gamma_{\mathrm{ALE}}$, normalised by $\langle\rho\rangle$) with a
+cross-reference sentence in \texttt{tfpt\_3}.
+\item \textbf{(\"A4) SEAM.EQUIV route split (ledger restructuring, no status change in substance).}
+New ledger rows \texttt{SEAM.EQUIV.MMST.01} (the conditional scaling-limit route --- closed modulo
+cited theorems, typing taken verbatim from the pre-split rows/prose; residual \mO\ $=$ the cited
+continuum existence, \texttt{v336}) and \texttt{SEAM.EQUIV.TWISTOR.01} (the open Costello--Li
+construction, \mO; dependencies on \texttt{CELEST.SEAM.01}/WP modules and
+\texttt{WOIT.OS.TWISTOR.01}). \texttt{SEAM.EQUIV.01} \emph{remains} as the parent target with the OR
+logic as claim text: \emph{closed if MMST.01 OR TWISTOR.01 closes; currently: MMST
+conditional-closed modulo cited theorems, TWISTOR open $\Rightarrow$ parent stays \mO\ as an
+unconditional claim}. Every surface that said ``\texttt{SEAM.EQUIV.01} closed modulo cited
+theorem'' (status cards in \texttt{introduction}, \texttt{tfpt\_1}/\texttt{3}/\texttt{4}, the
+central status card, README, \texttt{origin\_theory}, \texttt{tfpt\_2}, \texttt{tfpt\_5}, website
+StatusPyramid/OpenGates/StatusMatrix/\texttt{papers.ts}/glossary/VerificationDag) now attaches the
+statement to the MMST route id --- the assertions are unchanged, only the ids are clean.
+\item \textbf{(\"A5) The $A_3$ role table.} In the contract: $A_3^{\mathrm{family}}$ (lattice family
+factor, $\mathfrak{su}(4)$ flavour), $A_3^{\mathrm{ALE}}$ (ADE type of $\mathbb C^2/\Z_4$), the
+three exceptional spheres (Coxeter/PL structure), $D_5^{\mathrm{carrier}}$, and --- as external
+reference rows --- Woit's $SU(3)_{\mathrm{color}}$ and $SU(2)_{\mathrm{weak}}$: per pair either the
+connecting functor with its \texttt{vN} witness (McKay type-level; Kronheimer--Nakajima quiver
+\texttt{v479}) or an explicit \emph{``not identical --- no identification claimed''}; in particular
+$A_3^{\mathrm{family}}\not\simeq SU(3)_{\mathrm{color}}$, and the Woit rows are pure programme
+references.
+\item \textbf{(\"A6) Anti-number-hunting programme note.} \texttt{experiments/next.txt} (dated
+2026-07-22 (IV)): the next real gain lies at positivity, incidence, locality and the $\Theta$ real
+structure --- \emph{not} at further factorisations; recorded as working discipline per the review.
+\item \textbf{New central contract \texttt{WOIT.OS.TWISTOR.01} (Open, research contract; new ledger
+row).} In \texttt{tfpt\_research\_contracts} after \texttt{CELEST.SEAM.01}: input $X_+ =
+(\mathbb{PT}/\Gamma)_+$, $\mathcal A_{\mathrm{hol}}$ (interacting open$+$closed twistorial algebra),
+$\rho$ (order-$4$ clock), $\Theta$ (seam-reflection-induced anti-linear real structure),
+$\mu_{\mathrm{BCOV+SDYM}}$; target theorem $\Theta^2=1$, $\Theta\rho\Theta=\rho^{-1}$, RP of the
+gauge-invariant algebra, OS quotient $\Rightarrow(\mathcal H,\Omega,U(\mathcal
+P^\uparrow_+),\mathcal A_{\mathrm{Mink}})$ with positive Hilbert metric, positive energy, local
+causality, \emph{one chiral generation without mirror doubling}, the TFPT charge lattice, internal
+$SU(3){\times}SU(2){\times}U(1)$ action, and the $(E_8)_1$ seam net as an \emph{actual} boundary
+net; \emph{seven} preregistered kill tests ($\Theta$--clock incompatibility; RP failure after gauge
+fixing; vector-like mirror generation; Penrose transform only free/self-dual; right character but
+wrong OPE/net equivalence; $SU(2)$ stays a spacetime factor; the four $\mu_4$ marks not
+incidence-compatibly extendable); typing ``this is the actual bridge from compiler to physics ---
+everything in \texttt{CELEST.SEAM.01} is preparation for it''; honest scope fence (self-dual $\neq$
+full 4D physics: both helicities, generic amplitudes, local matter, full Einstein dynamics, EWSB,
+confinement are explicit non-claims of the celestial branch). Mirrored on the website
+(\texttt{papers.ts} section, glossary entries ``Woit bridge'' and ``Real structure $\Theta$'').
+\item \textbf{No marker moves; no new \texttt{vN} modules; suite unchanged ($508$ modules, green).}
+\end{itemize}
+
+\subsection*{2026-07-22 (III) (\texttt{v514} --- WP5e-$\varepsilon_1$ ``the $O(-2)$ bulk-axion slot'' executed (verdict B), promoted as the ledger row \texttt{CELEST.WP5E.EPS1.01}: the $s=0$ tower field of the celestial route is now a CONSTRUCTION, $\tilde\lambda=6$ is pinned three ways, and the first honest back-reaction step is taken in Gibbons--Hawking form --- (1) the EQUIVARIANT $O(-2)$ SLOT: the pushforward ledger $\pi_*O(-2)$ on $\mathbb{PT}'=\mathrm{Tot}(O(1){\oplus}O(1)\to\mathbb P^1)$ gives per degree $d$ exactly $(d{+}1)^2$ classes $=$ the exact wave-operator nullspaces ($1,4,9,16,25,36$ for $d=0..5$), the \texttt{v492} action on the fibre coordinates $(\mu_1,\mu_2)\mapsto(i\mu_1,i^{-1}\mu_2)$ with incidence-forced column weights $(+1,+1,-1,-1)$ closes the equivariant bookkeeping BLOCK BY BLOCK (all $d\le6$, all $4$ characters); character series $P_0=1+3t^2+15t^4+21t^6+45t^8+\dots$, $P_1=P_3=2t+8t^3+18t^5+\dots$, $P_2=6t^2+10t^4+28t^6+\dots$; the $d=0$ slot has multiplicity $(1,0,0,0)$ --- THE BULK AXION SURVIVES THE PROJECTION; Molien invariant ring $=(1-t^8)/((1-t^4)^2(1-t^2))$ --- $Z\in O(2)$, $X,Y\in O(4)$, relation degree $8=$ the $a_0$ weight (\texttt{v492}/\texttt{v493} bridge); E3 bijection sharpened (twisted minimal content $(2t,6t^2,2t)$ $=$ the Coxeter eigenvalues, $\det(A-1)=-4$); graviton control: $O(+2)$ invariant only from fibre degree $4$ with multiplicity $3=\{X,Z^2,Y\}$; (2) $\tilde\lambda=6$ TRIPLY PINNED: Okubo $\operatorname{Tr}_{\mathrm{adj}}X^4=36\langle x,x\rangle^2=(6\langle x,x\rangle)^2$ on the $240$ glue roots ($36=h^\vee+6$, $\tilde\lambda=6=|\Z_2|N_{\mathrm{fam}}$); the measure chain cancels $\mu=1/4$ EXACTLY (vertex$^2$ $\mu^2$, propagator $1/\mu$, anomaly $\mu$; $\tilde\lambda_{\mathrm{eff}}^2=36$ for arbitrary $\mu$; wrong bookings EXCLUDED: anomaly-only $\Rightarrow3$, missing propagator renormalisation $\Rightarrow12$); flux (minimal CPS quantum $N=1$, single channel iff $k=1$, $(\kappa/c_3)^2=12$ exact); (3) the GH/$A_3$ BACK-REACTION STEP: invariant $4$-centre configurations $=$ exactly $2$ branches, the free orbit re-derives the \texttt{v493} family ($\prod_p(Z-i^pz_0)=Z^4-z_0^4$, $a_0=-z_0^4$, monodromy $=$ one clock step), the charge-$k$ GH point is exactly $\mathbb R^4/\Z_k$ ($k=4$: seam boundary $S^3/\Z_4$), periods $\Pi_j=4\pi t_0(i-1)(1,i,i^2)$ LOCKSTEP (\texttt{v509} counter-check), Coxeter clock from geometry ($\Pi\cdot A=i\Pi$), source charge $4=|\mu_4|$, EH asymptotic log coefficient EXACTLY $0$ (the CPS log is an exceptional-locus statement; Burns contrast $\det g\neq1$), multipole rule $m\equiv0\bmod4$ with $(4,\pm4)$ carrying $-a_0$; controls $\mathfrak{so}_8$ ($\tilde\lambda^2=12$ irrational, squares only $\{9,36\}$), $\operatorname{diag}(i,i)$ (Veronese), $k=2$ (three channels); \mC\ conditional on Costello's flat-$\mathbb{PT}$ matching; \mO\ the quantised BCOV coefficient and the twisted channels ($32\,T_3$) --- M1--M3 preregistered (the $A_3$ $\Omega_N$ / the twisted KS measure / the $a_0$ uplift, each with success $+$ kill); Wolfram extension $482\to490$ (verified engine run); \emph{NO marker moves --- WP5e stays \mO, \texttt{SEAM.EQUIV.01} untouched, \texttt{CELEST.SEAM.01} stays Open})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v514\_celestial\_wp5e\_eps1\_axion\_slot.py} (\texttt{CELEST.WP5E.EPS1.01},
+34 checks, $\sim$4 s; exact sympy/Fraction, no floats; deterministic).} S1 Penrose accounting; S2
+equivariant ledger $+$ character series $+$ Molien $+$ E3 sharpening $+$ graviton control; S3 the
+$\tilde\lambda=6$ residue (Okubo / measure / flux) with honest gaps; S4--S5 GH centre dichotomy,
+periods, Coxeter clock; S6 the CPS ``$N\log$'' ledger (kernel charge, multipoles, EH log); S7
+negative controls; S8 the M1--M3 roadmap; S9 verdict. Registered in \texttt{run\_all.py} (suite
+$508$ modules, green), \texttt{script\_registry.csv} (cluster \emph{frontier}), ledger row
+\texttt{CELEST.WP5E.EPS1.01} (new, verdict B).
+\item \textbf{Contract updated (markers unchanged).} \texttt{CELEST.SEAM.01} now reads:
+$\varepsilon_1$ executed via \texttt{v514} --- the slot is a construction, $\tilde\lambda=6$
+pinned by three exact ledgers, the GH/$A_3$ step re-derives the \texttt{v493} family and the
+Coxeter clock from geometry; the quantised BCOV coefficient and the twisted channels stay \mO\
+(M1--M3 preregistered).
+\item \textbf{Paper integration.} \texttt{tfpt\_research\_contracts} (the $\varepsilon_1$ stage
+moved to \emph{done} with its own stage block; the named remaining targets now carry the M1--M3
+milestones verbatim; WP4 handover and honest status line synced); \texttt{tfpt\_3} (new Step 15
+``the bulk axion is a construction; $\tilde\lambda=6$ is pinned three ways'' --- the celestial
+story is now fifteen steps; ``what remains'' updated).
+\texttt{v514\_celestial\_wp5e\_eps1\_axion\_slot.py} is cited via \texttt{veri} in both.
+\item \textbf{Wolfram.} Eight exact mirrors (equivariant Penrose ledger; character series $+$
+bulk-axion survival; Molien hypersurface $+$ Veronese control; Okubo perfect square $+$
+$\mathfrak{so}_8$ control; measure cancellation excluding $3$ and $12$ $+$ flux dial; GH centre
+dichotomy; period lockstep $+$ Coxeter clock; multipole rule $+$ EH log ledger) added to
+\texttt{tfpt\_readouts\_extension.wl} and verified with the active engine, $482\to490$;
+\texttt{GATE.WOLFRAM.02}, Wolfram README and the website counters synced ($116/116+490/490$).
+\item \textbf{Provenance.} Discovery probes
+\texttt{celestial\_seam\_}\allowbreak\texttt{wp5e\_eps1\_}\allowbreak\texttt{o2\_bulk\_}\allowbreak\texttt{axion\_probe.py}
+($20/20$) and
+\texttt{celestial\_seam\_}\allowbreak\texttt{wp5e\_eps1\_}\allowbreak\texttt{gh\_a3\_}\allowbreak\texttt{backreaction\_probe.py}
+($14/14$) in \texttt{experiments/tfpt-discovery/} (2026-07-22); website mirrors regenerated
+(\texttt{ScriptIndex}, DAG \emph{qft} node, \texttt{papers.ts} ``15 steps'', changelog mirror);
+\texttt{next.txt} round notes.
+\end{itemize}
+
+\subsection*{2026-07-22 (II) (\texttt{v513} --- the $c_d$ negative certificate, promoted as the ledger row \texttt{CELEST.DTERM.NONDERIV.01} (anti-numerology certificate in the \texttt{v508} style, honest rigid NEGATIVE result): can geometry derive $c_d=1920$? NO --- the \texttt{v511} \mC\ fence ``$1920=|W(D_5)|$'' does NOT survive the honest four-route battery with its PRE-DECLARED look-elsewhere ledger: (1) the CONVENTION TABLE gives $c_d\in\{1920,120,256,32,69120\}$ across five normalisations (probe tr-fund/$e_8$-Killing; Gell-Mann; $\mathfrak{su}(4)$-Killing; plain trace; ch$_3$-normalised $d/6$) --- only $1$ of $5$ hits $|W(D_5)|$, while the convention-STABLE content is the factorisation $c_d=\Phi_{T_3}(A_{\mathrm{fix}})\times2h^\vee(E_8)=32\times60$, both factors \mE\ (Killing propagator $60$ from $\sum_\alpha\langle\alpha,e\rangle^2=120$ over the actual roots; $T_3$-slot fixing via $\det(\text{P-block})=-64\neq0$); (2) K1 DEAD: the charge-legal flux pairings $(1,3)/(2,2)$ give $2048/1800$ --- they BRACKET $1920$ and both MISS; the only flux hit $64\cdot60/2$ is the FORBIDDEN $(1,2)$ pairing (charge $3\bmod4$, \texttt{v511} innerness); look-elsewhere: $924$ expressions from $21$ \mE\ numbers, $11$ hits on $1920$, controls $1800\to8$, $2048\to5$, $2016\to0$; (3) K2: quantisation delivers only lattices ($60\,\Z$ with $1920$ the $32$nd multiple, no minimality; strict ch$_3$ units $2160\,\Z$ EXCLUDE $1920$); the cubic quantum is lattice-dependent ($6$ on coroots, $3/8$ on weights), the integer $32$ has $12$ factorisations; (4) K3 PROVENANCE CLASH (the death blow): cubic indices $A_m=(0,16,0,-16)$ with $\sum_m i^mA_m=32i$ numerically $=\Phi_{T_3}(A_{\mathrm{fix}})$ --- but the quartic class decomposition $(10,-4,30,-4)$ comes from classes $0/2$ vs the cubic $16{+}16$ from classes $1/3$: same number, disjoint mechanism $=$ coincidence; the Weyl side is WRONG ($d$-channel is $A_3$, $|W(A_3)|=24$; $D_5$ has no cubic; $|W(E_8)|/|W(A_8)|=1920$ a second accidental $1920$); (5) K4 controls ($SO(16)$, $k=2$ doubling $7680$, false $\mathfrak g_0$ with six cubics, $\mathfrak{so}(10)$) separate consistently; VERDICT: NUMEROLOGY as a derivation claim --- the \texttt{v511} \mC\ fence stays a fence, now typed look-elsewhere-loaded; the honest \mE\ core is $c_d=32\times60$; Wolfram extension $476\to482$ (verified engine run); \emph{NO marker moves --- the fence stays \mC, the physical generation of the $32$ stays \mO, \texttt{CELEST.SEAM.01} stays Open})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v513\_celestial\_dterm\_nonderivation.py} (\texttt{CELEST.DTERM.NONDERIV.01},
+24 checks, $\sim$2 s; exact sympy/Fraction, no floats; deterministic).} N0 baseline ($240$ roots
+$(52,64,60,64)$, $A_{\mathrm{fix}}=(9,-30,-15,0,32)$, $Q_{dd}$ two routes, $c_d$ pinned by the
+$T_3$ slot alone); N1 convention table $+$ the stable factorisation $32\times60$; K1 flux products
+$+$ look-elsewhere ledger; K2 quantisation lattices; K3 cubic/quartic provenance clash $+$ Weyl
+data; K4 negative controls. Registered in \texttt{run\_all.py} (suite $507$ modules, green),
+\texttt{script\_registry.csv} (cluster \emph{frontier}), ledger row
+\texttt{CELEST.DTERM.NONDERIV.01} (new).
+\item \textbf{Fence sharpened (text only, marker unchanged).} \texttt{CELEST.WP5E.DELTA2.01} and
+the \texttt{CELEST.SEAM.01} contract prose now carry: ``the $1920=|W(D_5)|$ reading is
+look-elsewhere-loaded ($11/924$ vs.\ $8/924$ for the control target $1800$) and
+convention-contingent --- \texttt{v513}''; the honest remaining target of the cubic-GS item is the
+physical generation of the factor $32$, not the Weyl fingerprint.
+\item \textbf{Paper integration.} \texttt{tfpt\_research\_contracts} ($\delta_2$ fence environment,
+named remaining targets, status list --- new \texttt{CELEST.DTERM.NONDERIV.01} status line);
+\texttt{tfpt\_3} (Step-14 paragraph $+$ the ``what remains'' sentence); \texttt{tfpt\_4\_frontier}
+(celestial-route clause). \texttt{v513\_celestial\_dterm\_nonderivation.py} is cited via
+\texttt{veri} in the $\delta_2$/fence environments.
+\item \textbf{Wolfram.} Six exact mirrors (propagator anchor $+$ $T_3$-slot pinning; five-way
+convention table; flux enumeration $+$ look-elsewhere counts; K2 lattices; K3 provenance clash $+$
+Weyl data; K4 controls) added to \texttt{tfpt\_readouts\_extension.wl} and verified with the
+active engine, $476\to482$; \texttt{GATE.WOLFRAM.02}, Wolfram README and the website counters
+synced ($116/116+482/482$).
+\item \textbf{Provenance.} Discovery probe
+\texttt{celestial\_seam\_}\allowbreak\texttt{wp5e\_dterm\_}\allowbreak\texttt{coefficient\_}\allowbreak\texttt{derivation\_probe.py}
+in \texttt{experiments/tfpt-discovery/}
+(2026-07-22, $24/24$); website mirrors regenerated (\texttt{ScriptIndex}, DAG \emph{qft} node,
+\texttt{papers.ts}, changelog mirror); \texttt{next.txt} round notes.
+\end{itemize}
+
+\subsection*{2026-07-22 (I) (\texttt{v512} --- the flag-transitivity equivalence web promoted as \texttt{SEAM.TAU.FLAG.01}: the $\tau=i$ attack executed on the free RP seam circle --- BARE MARK-TRANSITIVITY IS FALSIFIED as a selector (on the test family $M(\delta)=\{\pm1,\pm e^{i\delta}\}$, $\delta\in(0,\pi/2]$, the symmetry group is the pair-exchanging $V_4=\{z,-z,b/z,-b/z\}$ for EVERY $\delta$, simply transitive on the four marks; complete census: deck-commuting M\"obius maps are diagonal/antidiagonal; hardening: ALL undirected per-mark data are identical for every $\delta$ --- no local jet sees the bit), and THE SHARP SELECTOR is FLAG transitivity (marks AND their two sides indistinguishable) $\iff\delta=\pi/2\iff\tau=i\iff$ the clock --- stabiliser jump $1\to2$, flag/arc orbits $2\to1$, order-$4$ rotation ($b^2=-1$ solveset $\{\pi/2\}$), mark mirror $z\mapsto1/z\iff\cos\delta=0$; welded into a $12$-FOLD EQUIVALENCE WEB (every link exact): clock rotation, $D_4$, mark mirror, flag transitivity, three spectral degeneracies (odd-doublet split $=(2/\pi)\ln\cot(\delta/2)$, zero only at $\pi/2$ --- counterwitness exactly $(2/\pi)\ln2$; arc-Laplacian degeneracy $4/\pi$; the \texttt{v215}-K3 indicator in CLOSED FORM $(2\sqrt2/\pi)|\ln\tan(\delta/2)|$ --- the \texttt{v503} lattice curve analytically), $\rho$-twist existence ($(m^2-n^2)(t-1/t)=0\iff t=1$; Atiyah--Bott rationality $\delta$-BLIND --- $\operatorname{Tr}(\sigma e^{t\Delta})=1$ for all $\delta$, $j_{\mathrm{cw}}=148176/25$ rational non-CM: rationality selects NOTHING), cusp-$4$-cycle implementability (H4 rigidity: $V_4$ with orders $\{1,2,2,2\}$ cannot induce it; centraliser scalar, $U^2$ nonscalar $\Rightarrow$ no projective involution --- projective order exactly $4$, $\Z_8$-shadow consistent \texttt{v510}), harmonic, $j=1728$; NEGATIVE CONTROLS: hexagonal (not concyclic, fails preconditions), silver (harmonic but topologically dead), $3$ marks (impossible on the free circle: $0$ vs $28$ invariant subsets; bare $n=3$ transitivity already forces equal spacing --- ``$4$ counts''); \mC\ THE REST: the last input reduces from a continuous modulus to ONE discrete symmetry-lift bit ($V_4\to D_4$: side-indistinguishability of the four equally-decorated marks), \texttt{v216} local equality does NOT deliver it, its negation is now concretely measurable; scoreboard: the counterwitness passes all $7$ established unsided tests, fails all $9$ clock-equivalent ones; Wolfram extension $470\to476$ (verified engine run); \emph{NO marker moves --- the bit stays \mC, \texttt{QGEO.REALIZE.01} and \texttt{P2.TYPING.01}/\texttt{AX.P2.01} text-precised only, \texttt{SEAM.BIT.FREEDOM.01} cross-referenced})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v512\_seam\_tau\_flag.py} (\texttt{SEAM.TAU.FLAG.01}, 29 checks, $\sim$6 s;
+sympy-exact $+$ mpmath 30 digits $+$ one numpy lattice commutator; deterministic).} S0 family
+frame (counterwitness inside the family: $\lambda=5/4$, $j=148176/25$, cross-ratio $-1/4$); H1
+complete symmetry census (census basis, rotation solvesets, stabiliser jump, flag/arc orbits,
+\texttt{v216} separation, five-member table); H2 spectral criteria in closed form; H3 heat-trace
+rationality ($\delta$-blind) $+$ twist existence; H4 monodromy rigidity (Schur); NC negative
+controls; SYN the $12$-fold web $+$ counterwitness scoreboard $+$ the typed sentence. Registered
+in \texttt{run\_all.py}, \texttt{script\_registry.csv} (cluster \emph{core}), ledger row
+\texttt{SEAM.TAU.FLAG.01} (new).
+\item \textbf{Reduction state re-stated (text only, markers unchanged).} \texttt{AX.P2.01} and
+\texttt{P2.TYPING.01} synthesis notes now read: ``four marks $+$ one discrete symmetry-lift bit
+(flag transitivity $\iff\tau=i$) $+$ $\pi$''; \texttt{QGEO.REALIZE.01} precision: ``the remaining
+input can equivalently be stated as the flag-transitivity postulate --- \texttt{v512}; the search
+space for a future \mE\ closure is narrowed to the RP positivity of the odd sector'';
+\texttt{SEAM.BIT.FREEDOM.01} cross-referenced (the modulus half gains the discrete form).
+\item \textbf{Paper integration.} \texttt{tfpt\_1} (the P2 reduction keybox re-dated 2026-07-22
+$+$ Theorem-7 skeleton keybox), \texttt{introduction} (narrative chain, consolidated reduction
+state, status-card addendum), \texttt{tfpt\_3} (celestial Step 2 $+$ the honest-status reduction
+bullet), \texttt{tfpt\_research\_contracts} (QGEO kill-test and marks-derived blocks, WP2 note);
+secondary mirrors \texttt{tfpt\_2}/\texttt{origin\_theory} aligned.
+\texttt{v512\_seam\_tau\_flag.py} is cited via \texttt{veri} in all four primary documents.
+\item \textbf{Wolfram.} Six exact mirrors ($V_4/D_4$ census table incl.\ flag/arc orbit counts;
+solveset equivalences $+$ family identities; spectral faces in closed form; twist mode identity
+$+$ AB $\delta$-blindness $+$ $j$-rationality control; H4 Schur rigidity; negative controls) added
+to \texttt{tfpt\_readouts\_extension.wl} and verified with the active engine, $470\to476$; the
+mpmath heat-trace numerics and the numpy lattice commutator stay Python-only (flagged).
+\item \textbf{Provenance.} \begingroup\raggedright Discovery probe
+\texttt{seam\_tau\_i\_established\_selector\_probe.py}
+in \texttt{experiments/tfpt-discovery/} (2026-07-22,
+$29/29$); website mirrors regenerated (\texttt{ScriptIndex}, DAG \emph{P2}/\emph{masses} nodes,
+\texttt{papers.ts} reduction-state mirrors, \texttt{StatusMatrix}); \texttt{next.txt} round
+notes.\par\endgroup
+\end{itemize}
+
 \subsection*{2026-07-21 (XXIII) (\texttt{v511} --- WP5e-$\delta_2$ of \texttt{CELEST.SEAM.01} ``the full-tensor ledger'' promoted as \texttt{CELEST.WP5E.DELTA2.01} (intermediate verdict, exact): the named escape route of the \texttt{v508} exchange no-go executed on the FULL adjoint tensor structure of $\mathfrak e_8$ --- the COLLAPSE IS CONFIRMED full-tensorially AND arity-crossing (the INNERNESS THEOREM: $\mathfrak g_0=\mathfrak d_5{\oplus}\mathfrak a_3$ semisimple with NO $\mathfrak u(1)$ (class-$0$ roots $40{+}12$, root span rank $8$), $h$ in the Cartan OF $\mathfrak g_0$ $\Rightarrow$ every invariant tensor carries total charge $0\bmod4$: the bilinear Hom table is nonzero ONLY at $j'=-j$ (dims $2/1/1/1$) and ALL $15$ non-neutral trilinear sector triples have $\mathrm{Hom}=0$), BUT ONE CUBIC DOOR OPENS: of the neutral trilinears ($\{0,0,0\}\!:3=1$ sym $+\,2$ antisym, $\{0,1,3\}\!:2$, $\{0,2,2\}\!:2$, $\{1,1,2\}\!:1$, $\{2,3,3\}\!:1$; all cross-sector ones pure brackets) the UNIQUE totally symmetric survivor is the $\mathfrak{su}(4)$ $d$-symbol ($\mathfrak{so}(10)$ has no cubic Casimir, $\mathrm{Inv}(S^3\,45)=0$ protects $T_5$), whose exchange quartic $Q_{dd}=(0,0,-\tfrac1{240},0,\tfrac1{60})=\tfrac1{60}(T_3-P_3/4)$ (TWO independent routes, Killing propagator $2h^\vee=60$ from the roots) has $\Phi_{T_3}(Q_{dd})=\tfrac1{60}\neq0$ --- the \texttt{v508} master kill (product theorem) does NOT extend to cubic vertices; the pairing stays OBSTRUCTED in the charge reading with the genuinely WEAKER certificate $\{\Phi_{T_5},\psi=\Phi_P-\Phi_{T_3}/4\}$, $\psi(A_{\mathrm{fix}})=72-8=64$ ($M=[E_{13},E_{22},E_{00},Q_{dd}]$ rank $3$, augmented $4$), and becomes EXACTLY solvable relaxed: $A_{\mathrm{fix}}=-u+8v+2w+1920\,Q_{dd}$ (residual $0$); \mC\ fences $64=\dim\mathfrak g_1=2^6$, $1920=|W(D_5)|=8\cdot240$; controls: $SO(16)/D_8$ has NO symmetric cubic and no $A_3$ block ($E_8/\mu_4$ doubly special), false $\mathfrak g_0$/sector assignments separate; the $\delta_1$ burden SHARPENED to the $\psi=64$ slice or the selection-rule relaxation --- and the $\delta_1$ exploration run itself stands UNDECIDED at exploration level (strict holomorphic $q^0$ reading REFUTED at the $\Z_2$/Eguchi--Hanson anchor $=$ method boundary, not a kill; contact term $=$ the MODULAR COMPLETION of the AB data, a Harvey--Moore $\tau$-integral with forced leading $(T_5,T_3)$ ratio $4{:}3$; massive coset levels $n\ge2$ mandatory); Wolfram extension $463\to470$ (verified engine run); \emph{NO marker moves --- WP5e proper stays \mO, \texttt{SEAM.EQUIV.01} stays \mO})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v511\_celestial\_wp5e\_delta2\_tensor\_ledger.py} (\texttt{CELEST.WP5E.DELTA2.01},

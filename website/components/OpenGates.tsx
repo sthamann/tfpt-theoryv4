@@ -52,7 +52,7 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   {
     label: "G_net",
     marker: "[E] target · [C] seam",
-    blurb: "Metric inclusion: the (E₈)₁ target is closed and pinned at every computable level (lattice v367/v368 + S3 stack v376–v379, ground-state witnesses v489/v490); the seam coupling SEAM.EQUIV.01 is closed modulo cited theorems (Lean FORM.SEAM.MMST.01), residual [O] = the cited MMST continuum existence only (v336; extension leg crossed-product certified, v469; stays [O]).",
+    blurb: "Metric inclusion: the (E₈)₁ target is closed and pinned at every computable level (lattice v367/v368 + S3 stack v376–v379, ground-state witnesses v489/v490); the seam coupling SEAM.EQUIV.01 now carries two named routes (route split 2026-07-22, no status change in substance): the MMST route SEAM.EQUIV.MMST.01 is closed modulo cited theorems (Lean FORM.SEAM.MMST.01), residual [O] = the cited MMST continuum existence only (v336; extension leg crossed-product certified, v469); the twistor route SEAM.EQUIV.TWISTOR.01 (Costello–Li construction, prepared by CELEST.SEAM.01) is [O]; the parent closes if either route closes and stays [O] as an unconditional claim.",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {

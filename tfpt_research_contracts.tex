@@ -687,8 +687,9 @@ order-4 CM point (\texttt{QGEO.SYM.01}, flat geometry) \emph{and} the $(E_8)_1$ 
 (\texttt{QG.AMB.01}, holomorphy) --- the two open premises are two faces of one object, ``the raw seam is
 $(E_8)_1$ at $\tau{=}i$'', dropping the obligation count $2\to1$ (\texttt{QGAMB.UNIFY.01}).
 \par\smallskip\noindent\textbf{The two proof routes, decomposed (\veri{v284\_route\_i\_rp\_uniqueness.py},
-\veri{v285\_route\_ii\_seam\_condensation.py}).} The keystone --- now \emph{closed modulo a cited theorem} via the
-lattice/$S_3$ stack (below) --- can be attacked from two sides, and
+\veri{v285\_route\_ii\_seam\_condensation.py}).} The keystone --- now \emph{closed modulo cited theorems on its
+MMST route} \texttt{SEAM.EQUIV.MMST.01} via the
+lattice/$S_3$ stack (below; the parent stays \mO) --- can be attacked from two sides, and
 both are now lemma chains with the dischargeable steps discharged. \emph{Route (i)} (RP-state uniqueness) is a
 six-lemma chain --- \mE\ five are already \mE/\mO\ (RP$\to$DtN \vref{v194}; marks$\to$pillowcase
 \vref{v195}/\vref{v216}; the flat Steklov operator $=\sqrt{-\Delta_{\mathrm{flat}}}$, principal symbol $|\xi|$
@@ -719,6 +720,17 @@ boundary'' (4/5 lemmas discharged); and \mE\ Route B (DtN, \veri{v288\_full\_l2\
 has Fourier support only on $m\equiv0\ (\mathrm{mod}\ 4)$, so $[\rho,\Lambda]{=}0$ on all of $L^2$), shrinking the
 residual to the single sharper question ``why is the raw seam sub-principal term mark-local?''
 (\texttt{SEAM.EQUIV.A01}/\texttt{SEAM.EQUIV.B01}).
+\par\smallskip\noindent\textbf{The route split (2026-07-22; ID restructuring, no status change in
+substance).} The target statement now carries \emph{two named routes} as ledger rows of their own:
+\texttt{SEAM.EQUIV.MMST.01}, the conditional scaling-limit route (the lattice/$S_3$/Lean stack
+documented in this section --- \emph{closed modulo cited theorems}, its only \mO\ residual the
+abstract continuum existence \vref{v336}), and \texttt{SEAM.EQUIV.TWISTOR.01}, the open
+Costello--Li construction (prepared by \texttt{CELEST.SEAM.01}, bridged to physics only by
+\texttt{WOIT.OS.TWISTOR.01}; \mO). The parent claim \texttt{SEAM.EQUIV.01} remains, with exactly this
+logic as its claim text: \emph{closed if \texttt{MMST.01} or \texttt{TWISTOR.01} closes; currently:
+MMST conditional-closed modulo cited theorems, TWISTOR open $\Rightarrow$ the parent stays \mO\ as an
+unconditional claim.} Every ``closed modulo a cited theorem'' statement in the papers and on the
+website is henceforth attached to the MMST route ID; the assertions themselves are unchanged.
 \par\smallskip\noindent\textbf{Route B sharpened to one analytic lemma; both routes precisely scoped.}
 That last question is decomposed (\veri{v289\_marklocal\_raw.py}, \texttt{MARKLOCAL.RAW.01}) into a five-lemma
 chain whose only open link is \mO\ \emph{Flat-Away} --- RP $+$ gap $+$ the four branch marks force the seam
@@ -777,7 +789,7 @@ Kawahigashi--Longo--M\"uger) $\to$ LIT-C (Conway--Sloane; Dong--Xu) compose into
 $\Rightarrow(E_8)_1$'', all three legs established, the one shared hypothesis (seam-bulk invertibility)
 coinciding with Route B's Flat-Away --- so both routes are reduced to citable/established machinery plus the
 \emph{one} shared geometric input, which the lattice/$S_3$ stack (below) now pins at every computable level,
-making the keystone \emph{closed modulo a cited theorem}.
+making the keystone's MMST route (\texttt{SEAM.EQUIV.MMST.01}) \emph{closed modulo cited theorems}.
 \par\smallskip\noindent\textbf{Flat-Away hardened, and the pin derived from $(E_8)_1$
 (\veri{v300\_flataway\_rigid.py}, \texttt{FLATAWAY.RIGID.01}).} The spectral route was a \emph{soft} minimum
 (``the mismatch grows with $\varepsilon$''); it is now a \emph{discrete} obstruction. \mE\ the flat fingerprint
@@ -864,8 +876,9 @@ an edge-localised in-gap chiral branch (absent in the trivial phase) -- so by an
 \emph{exists} as a consequence of the invertible bulk (the S4 leg), discharging the ``does the edge exist?''
 question on the lattice. \mE\ the gapped Chern model, the $c_-{=}8$ counting and the edge existence; \mC\ the
 $\mu_4$ condensation to $(E_8)_1$; \mO\ only the genuine \emph{continuum scaling limit} (MMST, \vref{v336}) stays
-open --- S3 is a runnable lattice model that pins the target at every computable level, so the keystone is
-\emph{closed modulo a cited theorem}.
+open --- S3 is a runnable lattice model that pins the target at every computable level, so the keystone's MMST
+route (\texttt{SEAM.EQUIV.MMST.01}) is
+\emph{closed modulo cited theorems}.
 \par\smallskip\noindent\textbf{The S3 closure stack: $c=8$, the $(E_8)_1$ character, the torus count and
 reflection positivity --- all computed on the lattice (\veri{v376\_seam\_s3\_centralcharge.py},
 \veri{v377\_seam\_s3\_e8character.py}, \veri{v378\_seam\_s3\_modular.py}, \veri{v379\_seam\_s3\_rp.py}).}
@@ -953,7 +966,8 @@ Bisognano--Wichmann intrinsicality of the raw collar state; \mE\ the model, \mO\
 exponentially at rate $(2/3)^6$ (correlation length $1/\Delta$, finite susceptibility $729/665$) and the \vref{v76}
 margin $\Delta-31/(4\pi^2)>0$ decouples it from the ambient, so the physical sector is a convergent object
 while \texttt{QG.AMB.01} is a \mC\ redundancy (\vref{v369}). Each pins the residual to a single named step; with the
-lattice/$S_3$ stack the keystone is now \emph{closed modulo a cited theorem}.
+lattice/$S_3$ stack the keystone's MMST route (\texttt{SEAM.EQUIV.MMST.01}) is now \emph{closed modulo cited
+theorems}.
 \emph{(iv) The intrinsic-BW residual as a cited reduction} (\veri{v424\_seam\_lto\_rp\_reduction.py}): the open
 bedrock lemma of (ii) --- the raw collar's intrinsic Bisognano--Wichmann property --- is reduced to the recent
 commuting-projector theorem of Naaijkens--Penneys--Wallick (\texttt{arXiv:2605.10693}), whose reflection-positivity
@@ -1379,7 +1393,15 @@ is a \emph{covering} deck, hence free on the seam circle; the unique free involu
 involutions in exact $\mathrm{Cl}(16)$, and the edge/silver class --- whose mark circle passes
 through the deck poles, the restriction of the \emph{branched} pillowcase involution --- is
 excluded; harmonic $+$ free solves exactly to $b=\pm i$, so the bit reduces to the square-modulus
-datum $\tau=i$ alone. The full \texttt{QGEO.REALIZE.01} stays \mO;
+datum $\tau=i$ alone. That datum now carries an equivalent \emph{discrete} form
+(\veri{v512\_seam\_tau\_flag.py}, \texttt{SEAM.TAU.FLAG.01}): on the free seam circle bare
+mark-transitivity is automatic for every deck-invariant configuration $M(\delta)=\{\pm1,\pm
+e^{i\delta}\}$ (the pair-exchanging $V_4$; no local jet sees the side bit), and what selects
+$\delta=\pi/2\iff\tau=i$ is exactly \emph{flag} transitivity ($V_4\to D_4$ symmetry lift), welded
+into a $12$-fold exact equivalence web --- the remaining input is \emph{one discrete symmetry-lift
+bit}, its negation concretely measurable (odd-doublet split $(2/\pi)\ln\cot(\delta/2)\neq0$), and
+the search space for a future \mE\ closure is narrowed to the RP positivity of the odd sector.
+The full \texttt{QGEO.REALIZE.01} stays \mO;
 no marker moves. \mE\ carrier-side (the four
 levers), \mO\ seam-side (the emergence): a kill-test, \emph{not} a closure (\texttt{QGEO.KILL.01}).
 \par\smallskip\noindent\textbf{And the mark count is now \emph{derived}, not assumed: four marks from
@@ -1409,7 +1431,8 @@ is a half-period translation of the seam double) and characterise the bit as an 
 with a physical extension-class face, so only its \emph{position} --- which half-period --- stays
 the input; the freedom theorems (\vref{v510}) finally type that position half as \emph{topology}
 (the collar deck is a covering deck, hence free; the edge class is excluded), so the residual is the
-square-modulus datum $\tau=i$ alone.
+square-modulus datum $\tau=i$ alone --- restated by the flag-transitivity web (\vref{v512}) as one
+discrete symmetry-lift bit ($V_4\to D_4$: flag transitivity $\iff\tau=i$).
 \mE\ (count $+$ equality), \mO\ (the square modulus and the raw-seam realisation) --- \texttt{QGEO.MARKS.03} /
 \texttt{QGEO.EMERGE.01}.
 \par\smallskip\noindent\textbf{And the four marks are a \emph{four-interval} modular geometry
@@ -1439,8 +1462,9 @@ in one established, exactly solvable frame; it does not close them.
 \caption{The emergent-QFT skeleton on the seam (\vref{v238}--\vref{v246}): time as the modular flow, the
 arrow as the recovery generator, particles as DHR sectors, the S-matrix as the braiding, and the 4d matter
 content as the carrier's $SO(10)$ \textbf{16}. Each step is machine-checked; the one residual ---
-\texttt{SEAM.EQUIV.01}, closed modulo cited theorems (\vref{v367}--\vref{v379}) with the cited
-continuum scaling-limit existence (\vref{v336}) as its \mO\ leg --- is in red, the frozen 4D fork and
+\texttt{SEAM.EQUIV.01}, whose MMST route \texttt{SEAM.EQUIV.MMST.01} is closed modulo cited theorems
+(\vref{v367}--\vref{v379}) with the cited
+continuum scaling-limit existence (\vref{v336}) as its \mO\ leg (parent \mO) --- is in red, the frozen 4D fork and
 the QG certification layer in gold. The whole skeleton is \emph{conditional} on that keystone and is
 neither solved nor experimentally confirmed.}
 \label{fig:qft-skeleton}
@@ -1503,8 +1527,10 @@ $(E_8)_1$ follows through the verified chain \vref{v175}--\vref{v181}'' --- \emp
 \emph{derives} the seam geometry''. The premise stays \mO; everything downstream of it is \mE. Per
 \vref{v323} (Bisognano--Wichmann) \texttt{QGEO.SYM.01} is itself the \emph{downstream} conformal-deck face
 of the single named keystone \texttt{SEAM.EQUIV.01} (the raw RP seam $=$ the holomorphic $(E_8)_1$ net at
-$\tau{=}i$), which is now \emph{closed modulo a cited theorem} (the lattice/$S_3$ stack pins it at every computable
-level, Lean \texttt{FORM.SEAM.MMST.01}; only the cited continuum existence stays \mO).
+$\tau{=}i$), which is now \emph{closed modulo cited theorems on its MMST route} \texttt{SEAM.EQUIV.MMST.01}
+(the lattice/$S_3$ stack pins it at every computable
+level, Lean \texttt{FORM.SEAM.MMST.01}; only the cited continuum existence stays \mO; the twistor route
+\texttt{SEAM.EQUIV.TWISTOR.01} and the unconditional parent stay \mO).
 \par\smallskip\noindent\textbf{This is not a gap to apologise for --- it is TFPT's one fundamental
 postulate.} Every fundamental theory rests on an irreducible premise (the constancy of $c$ in
 relativity, the equivalence principle, the canonical commutator). \texttt{QGEO.SYM.01} is that premise
@@ -1545,7 +1571,8 @@ The free-bulk premise is already a fixed-point theorem (\vref{v160}--\vref{v165}
 supplies the genus-$0$ of the uniformisation chain for free. \textbf{The single remaining analytic step is
 ``free Gaussian RP bulk $\Rightarrow$ holomorphic (single-sector) boundary net''} --- the bulk--boundary
 statement that an invertible (Gaussian) bulk has a holomorphic chiral boundary. That step is now \emph{closed
-modulo a cited theorem}: the lattice/$S_3$ stack pins it at every computable level (\vref{v367}/\vref{v368},
+modulo cited theorems} (the MMST route \texttt{SEAM.EQUIV.MMST.01}): the lattice/$S_3$ stack pins it at every
+computable level (\vref{v367}/\vref{v368},
 \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}), only the cited continuum existence staying \mO\
 (\vref{v336}); $v_{\mathrm{geo}}$ stays the No-Unit metrology primitive and
 $F_{\mathrm{transfer}}$ stays external physics. This box certifies that the three faces coincide and
@@ -1572,8 +1599,9 @@ already has a unique vacuum on the plane (RP $+$ gap $+$ cluster $+$ OS); the pl
 non-contractible cycles), the torus can. So the one analytic step is the sharp, falsifiable physical
 statement \emph{``the free RP gapped seam bulk is short-range-entangled (no topological order)''}
 ($=\det K=1=$ the Kitaev $E_8$ phase, \texttt{GATE.HOLO.03}, \mE/\mC) --- and the lattice/$S_3$ stack now answers
-it at every computable level (torus $\det K{=}1$, \vref{v378}), so the keystone is \emph{closed modulo a cited
-theorem}, only the cited continuum existence (\vref{v336}) staying \mO.
+it at every computable level (torus $\det K{=}1$, \vref{v378}), so the keystone's MMST route
+(\texttt{SEAM.EQUIV.MMST.01}) is \emph{closed modulo cited
+theorems}, only the cited continuum existence (\vref{v336}) staying \mO\ (the parent stays \mO).
 \end{keybox}
 
 \begin{lemma}[U1 --- wall landscape, \emph{corrected}]
@@ -2797,14 +2825,133 @@ regime equation closed \veri{v28\_gravity\_fR.py}.}
 \end{keybox}
 
 % =====================================================================
-\section*{Research Contract --- \texttt{CELEST.SEAM.01} (the celestial-holographic route)}
+\section*{Research Contract --- \texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)}
 \addcontentsline{toc}{section}{Research Contract: CELEST.SEAM.01}
 % =====================================================================
 \noindent\emph{Reader's note.} A compact synthesis of this contract's executed work packages
-(WP1--WP5d, both WP5d stages, $+$ the WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$ and $\varepsilon_2$ stages) --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- is given as
-a dedicated section in \texttt{tfpt\_3\_e8\_audit\_bootstrap} (``The celestial route: from the $\mu_4$
-clock to the $(E_8)_1$ boundary shadow''); this contract remains the full technical reference (typing
-fence, kill tests, work-package statements).
+(WP1--WP5d, both WP5d stages, $+$ the WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$,
+$\varepsilon_2$ and $\varepsilon_1$ stages $+$ the first back-reaction milestone M1) --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- is given as
+a dedicated section in \texttt{tfpt\_3\_e8\_audit\_bootstrap} (``The celestial and twistor continuum
+route''); this contract remains the full technical reference (typing
+fence, kill tests, work-package statements). The bridge from this contract's compiler-side
+constructions to reconstructed Minkowski physics is \emph{not} part of this contract: it is the
+separate central contract \texttt{WOIT.OS.TWISTOR.01} below --- everything in \texttt{CELEST.SEAM.01}
+is preparation for it.
+
+\par\smallskip\noindent\textbf{The object diagram (read this first).} The route is one chain of
+objects; each arrow is a separately typed claim. Where mathematics ends and physics begins is
+visible at a glance: the last two arrows are \mO.
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.85\hsize\raggedright\arraybackslash}Xc>{\hsize=1.3\hsize\raggedright\arraybackslash}X>{\hsize=0.85\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Arrow} & \textbf{Status} & \textbf{Claim / modules} & \textbf{Kill test} \\
+\midrule
+$(\Sigma,\mu_4,\rho,\Theta)\to\mathbb P^1{\setminus}\mu_4$ & \mE &
+\texttt{SEAM.MARKS} chain: four marks, clock, cross-ratio $2$, $\tau{=}i$ pillowcase
+(\vref{v168}/\vref{v214}/\vref{v216}/\vref{v180}; bit reduction \vref{v506}/\vref{v507}/\vref{v510}/\vref{v512}) &
+a fifth mark, a non-order-$4$ clock, or a marks-preserving root without flag transitivity \\
+$\mathbb P^1{\setminus}\mu_4\to\mathbb C^2/\Z_4$ & \mE &
+\texttt{CELEST.WP1.01}/\texttt{CELEST.WP2.01}: the glue is the flat $\Z_4$ monodromy on the $A_3$
+ALE, clock $=$ K\"ahler $U(2)$ phase, clock$^2=$ deck (\vref{v492}/\vref{v493}) &
+equivariant-sector closure failure ($3112/6720$ control) or a surviving shape modulus \\
+$\mathbb C^2/\Z_4\to\mathbb{PT}/\Gamma$ & \mE/\mC &
+\texttt{CELEST.WP5E.*}: equivariant twistor uplift --- anomaly ledger, level-from-flux, axion slot,
+back-reacted $\Omega_N$
+(\vref{v505}/\vref{v509}/\vref{v511}/\vref{v513}/\vref{v514}/\vref{v515}) &
+the preregistered level kill (``inflow demands $k\neq1$''); the $\delta_1$/M2--M3 kills (the M1
+kill was evaluated by \vref{v515} and did not fire) \\
+$\mathbb{PT}/\Gamma\to\mathcal A_{\mathrm{hol}}$ & \mO &
+the \emph{interacting} holomorphic algebra (global BCOV$+$SDYM quantisation; WP5e proper;
+target of \texttt{WOIT.OS.TWISTOR.01}; CFT-side anchors \vref{v497}--\vref{v504}) &
+anomaly mismatch at the Costello--Li grade \\
+$\mathcal A_{\mathrm{hol}}\xrightarrow{\ \mathrm{OS}\ }\mathcal A_{\mathrm{Mink}}$ & \mO &
+OS reconstruction with the real structure $\Theta$ --- the \texttt{WOIT.OS.TWISTOR.01} target
+(the free-collar RP/OS witnesses \vref{v379}/\texttt{FORM.SEAM.MMST.01} are the \emph{free} anchor
+only) &
+the seven kill tests of \texttt{WOIT.OS.TWISTOR.01} below \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\par\smallskip\noindent\textbf{Definition (the group extension, exactly).} The shorthand
+``$\mathbb{PT}/\Z_4$'' used in this contract is precise but deserves unpacking, because \emph{two
+different} order-$4$ structures are in play and only one of them is quotiented:
+\begin{itemize}
+\item $\Gamma_{\mathrm{ALE}}=\langle\text{Deck}\rangle\cong\Z_4\subset SU(2)$, the deck group
+  $(z_1,z_2)\mapsto(iz_1,i^{-1}z_2)$: \emph{triholomorphic}, preserves the holomorphic symplectic
+  form $\Omega$; this is the $\Z_4$ that is \emph{quotiented} ($\mathbb C^2/\Gamma_{\mathrm{ALE}}$
+  is the $A_3$ singularity $XY=Z^4$, and $\mathbb{PT}/\Gamma$ means the quotient by
+  $\Gamma_{\mathrm{ALE}}$ acting on the twistor space of the ALE) \mE\
+  (\veri{v492\_celestial\_z4\_orbifold.py}).
+\item $\rho=\text{Clock}=\operatorname{diag}(i,1)\in U(2)$: a K\"ahler, \emph{not} triholomorphic
+  isometry ($\det\rho=i$ rotates $\Omega$ by the $\mu_4$ generator --- the WP1 S5 computation); it
+  is \emph{not} in $\Gamma_{\mathrm{ALE}}$ and is \emph{not} quotiented --- it \emph{normalises}
+  $\Gamma_{\mathrm{ALE}}$ and survives the quotient as the residual clock symmetry \mE\ (\vref{v492}).
+\item The global object is the extension generated by both: since $\rho^2=$ Deck exactly
+  (\vref{v492}/\vref{v506}), $\langle\Gamma_{\mathrm{ALE}},\rho\rangle=\langle\rho\rangle$ is
+  \emph{cyclic} --- projectively $\Z_4$ (the clock on the sphere) with $\rho^2$ generating the deck
+  $\Z_2$ there, and on the spin/fermionic level the canonical $\Z_8$ tower ($V^2\propto U$,
+  $V^4\propto(-1)^F$, nonsplit; $8=2|\mu_4|$) \mE\ (\vref{v506}/\vref{v507}).
+\end{itemize}
+The action table, entry by entry (\mE\ $=$ arithmetically established at the current stratum, \mO\ $=$
+a quantisation question):
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.9\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=0.9\hsize\raggedright\arraybackslash}X>{\hsize=1.4\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Object} & $\Gamma_{\mathrm{ALE}}$ (Deck) & $\rho$ (Clock) & \textbf{Status / witness} \\
+\midrule
+$K_{\mathbb{PT}}$ (canonical class) & trivial & weight via $\det\rho=i$ & \mE\ (incidence-forced
+column weights $(+1,+1,-1,-1)$, \vref{v514}) \\
+$\Omega$ (hol.\ symplectic) & preserved & rotated by $i$ & \mE\ (\vref{v492} S5; back-reacted
+$\Omega_N$ closed-form with $(2\pi i)^2$-integral periods and forced charge $4$, \vref{v515}) \\
+BCOV fields ($O(-2)$ tower) & orbifold sectors & character series $P_0..P_3$ & \mE\ ledger /
+\mO\ quantisation (\vref{v514}) \\
+open-string fields (SDYM $E_8$) & glue-equivariant sector & sector rotation $j\mapsto j{+}1$ &
+\mE\ ($D[d]=60(d{+}1)/64(d{+}1)$, \vref{v492}) / \mO\ interacting \\
+boundary states ($(E_8)_1$ shadow) & $\mu_4$ sector split & clock phase on $|s\rangle$ etc. &
+\mE\ character/GNS level (\vref{v497}--\vref{v500}) / \mO\ as an actual net \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\par\smallskip\noindent\textbf{The $A_3$ role table (no silent identifications).} Several rank-$3$
+$A_3$'s and external gauge factors circulate near this contract; the following table states, for
+each pair, either the connecting functor (with its witness) or an explicit \emph{not identical}:
+\begin{center}\footnotesize
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}lY@{}}
+\toprule
+\textbf{Object} & \textbf{Role and relations} \\
+\midrule
+$A_3^{\mathrm{family}}$ & the family factor in the lattice $D_5{\oplus}A_3$
+($\mathfrak{su}(4)$-flavour; three families from its exponents, \vref{v128}/\vref{v137}). Related
+to $A_3^{\mathrm{ALE}}$ by the McKay correspondence \emph{of types} only (both are type $A_3$);
+\textbf{not identical} as realisations --- one is a sublattice of $E_8$, the other the singularity
+type of $\mathbb C^2/\Z_4$. The bridge that \emph{does} connect them is the Kronheimer--Nakajima
+quiver (\vref{v479}: same ADE datum, different functors). \\
+$A_3^{\mathrm{ALE}}$ & the ADE type of $\mathbb C^2/\Z_4$ ($XY=Z^4$); its resolution carries the
+three exceptional spheres (\vref{v492}/\vref{v493}). \\
+three exceptional spheres & the Coxeter/Picard--Lefschetz structure of the resolved $A_3^{\mathrm{ALE}}$:
+the clock acts as a Coxeter element of $W(A_3)$ on $H_2$ (eigenvalues $\{i,-1,-i\}$, \vref{v493});
+they carry the three twisted axion slots (\vref{v505}) and the lockstep fluxes (\vref{v509}). \\
+$D_5^{\mathrm{carrier}}$ & the carrier factor ($g_{\mathrm{car}}=5$); glued to $A_3^{\mathrm{family}}$
+by the $\mu_4$ Lagrangian glue into $E_8$ (\vref{v92}/\vref{v125}); \textbf{no} role on the ALE side
+beyond the zero-mode algebra $\mathfrak g_0=D_5{\oplus}A_3$ (\vref{v492}). \\
+Woit's $SU(3)_{\mathrm{color}}$ & \emph{external programme reference only} (Euclidean Twistor
+Unification: colour as the rank-three quotient bundle on $\mathbb{PT}$).
+\textbf{Not identical --- no identification claimed}; in particular
+$A_3^{\mathrm{family}}\not\simeq SU(3)_{\mathrm{color}}$ (an $\mathfrak{su}(4)$ flavour factor is
+not a colour gauge bundle), and TFPT's colour lives in the SM readout of the carrier, not on
+$\mathbb{PT}$. \\
+Woit's $SU(2)_{\mathrm{weak}}$ & \emph{external programme reference only} (the internal spin factor
+of the Euclidean twistor construction). \textbf{Not identical --- no identification claimed}; whether
+an internal $SU(2)$ of that kind can be realised on $\mathbb{PT}/\Gamma$ is exactly kill test (6)
+of \texttt{WOIT.OS.TWISTOR.01}. \\
+\bottomrule
+\end{tabularx}
+\end{center}
 
 \par\smallskip\noindent\textbf{Hypothesis (as corrected by WP1).} \emph{The seam is the glue-equivariant
 $\Z_4$-orbifold sector of the celestial chiral algebra on the $A_3$ ALE space $\mathbb C^2/\Z_4$; the
@@ -2918,7 +3065,9 @@ difference; the seam-scale reading via clock$^2=$deck); the full deformed twiste
 $W(\mu)$-type scaling limit for $k{=}4$ stay \mO. The \vref{v216} $[$O$]$-residual is \emph{typed}, not
 moved: given the order-$4$ clock, the deformation freezes the $(2,2,2,2)$ modulus to the square
 automatically --- a relocation of the same order-$4$ carrier input, not a new derivation (since
-\vref{v510} that input reads: the square-modulus datum $\tau=i$; its position half is topology).
+\vref{v510} that input reads: the square-modulus datum $\tau=i$; its position half is topology;
+since \vref{v512} it reads equivalently: one discrete symmetry-lift bit, flag transitivity
+$\iff\tau=i$).
 \item \textbf{WP3 (\emph{done}, verdict B) \mE/\mC:} the Green--Schwarz alignment test, executed and
 machine-verified as \texttt{CELEST.WP3.01} \veri{v495\_celestial\_wp3\_gs\_alignment.py} (exact
 Fraction/sympy, $25$ checks). The arithmetic side is sharp: the Okubo coefficient
@@ -2964,18 +3113,26 @@ topology, convergence) passes to WP5 --- where WP5a has since answered the ``whi
 counting level (the coefficientwise $\chi_w$ limit below), WP5b has constructed the deleting operator,
 WP5c the limit state whose GNS kernel contains the ideal, WP5d the local-net legs (the $\alpha$-stage
 two-interval index chain and the $\beta$-stage split $+$ strong-additivity witnesses --- all three KLM
-ingredients of complete rationality on the lattice), and WP5e-$\alpha$/$\beta$/$\gamma$/$\delta_2$/$\varepsilon_2$ have anchored \emph{both}
-faces of the twistor uplift, closed its exchange sub-branch, executed the full-tensor ledger and
-executed the level-from-flux dial
+ingredients of complete rationality on the lattice), and WP5e-$\alpha$/$\beta$/$\gamma$/$\delta_2$/$\varepsilon_2$/$\varepsilon_1$ have anchored \emph{both}
+faces of the twistor uplift, closed its exchange sub-branch, executed the full-tensor ledger,
+executed the level-from-flux dial and built the bulk-axion slot
 (the CFT-side prefactor $+$ level pinning; the equivariant twistor skeleton with the index bridge
 and the rigid $32\,T_3$ residual; the exchange no-go with certificate; the full-tensor confirmation
 of the collapse with the one cubic $d$-symbol channel that opens; the lockstep theorem making
-``one level'' a theorem of clock invariance, with the sector-counter dial pinning $k=1$),
+``one level'' a theorem of clock invariance, with the sector-counter dial pinning $k=1$; the
+equivariant $O(-2)$ slot construction with $\tilde\lambda=6$ triply pinned and the first GH/$A_3$
+back-reaction step), and the first quantised back-reaction milestone M1 has since been executed
+(the closed-form $\Omega_N$ with $(2\pi i)^2$-integral lockstep periods and forced source charge
+$4=|\mu_4|$, \vref{v515}),
 leaving the global BCOV quantisation (WP5e proper) as the remaining open piece --- narrowed to the
 $\delta_1$ $\tau$-integral (twisted contact terms, \emph{undecided} at exploration level), the
-physical justification of the cubic GS term, the $O(-2)$ bulk-axion
-construction ($\varepsilon_1$) and the $\mathbb{PT}/\Z_4$ back-reaction.
-\item \textbf{WP5 (the summit) --- subdivided; WP5a--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$ and $\varepsilon_2$ stages are landed.} The twistorial
+physical justification of the cubic GS term and the remaining $\mathbb{PT}/\Z_4$ back-reaction
+milestones (throughout,
+$\mathbb{PT}/\Z_4$ is the quotient by $\Gamma_{\mathrm{ALE}}$, normalised by the clock
+$\langle\rho\rangle$ --- the definition block above; the
+$\varepsilon_1$ slot itself is executed; of the quantised milestones M1--M3 preregistered in
+\vref{v514}, M1 is executed via \vref{v515}, M2--M3 stay preregistered \mO).
+\item \textbf{WP5 (the summit) --- subdivided; WP5a--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the back-reaction milestone M1 are landed.} The twistorial
 construction as a \emph{second continuum route} for \texttt{SEAM.EQUIV.01} (Costello--Li grade), carrying
 the WP4 constructive-boundary-limit question. Subdivision WP5a--WP5e:
 \begin{itemize}
@@ -3255,7 +3412,8 @@ glue leaves spheres $1/3$ flux-dark with condensation stuck at $4$; the $A_2$ fo
 (no Lagrangian subgroup exists at all) and Coxeter order $3\neq4$. Typed honestly: the CPS
 dictionary itself on $\mathbb{PT}/\Z_4$ stays \mC\ (their geometry is the $\mathbb C^2$ blow-up
 with one $(-1)$-sphere and $\mathfrak{so}(8)$ at negative level --- not the $A_3$ ALE); the
-type-I B-model back-reaction on $\mathbb{PT}/\Z_4$ stays \mO.
+type-I B-model back-reaction on $\mathbb{PT}/\Z_4$ stays \mO\ (its first milestone M1 has since
+been executed, \vref{v515}; M2--M3 remain).
 \textbf{The $\delta_2$ stage (\emph{done}, intermediate verdict, exact) \mE/\mC\ --- the
 full-tensor ledger: the collapse is real, and one cubic door opens} --- is executed and
 machine-verified as \texttt{CELEST.WP5E.DELTA2.01}
@@ -3291,17 +3449,31 @@ bilinear $P$-block) becomes \emph{exactly solvable}:
 $A_{\mathrm{fix}}=-u+8v+2w+1920\,Q_{dd}$ (residual $0$) --- where the $\gamma$ stage found
 $T_5=T_3=0$ persisting even relaxed, the $d$-channel closes the $T_3$ gap with small integer
 coefficients. Number fences typed \mC\ only: $64=\dim\mathfrak g_1=2^6$;
-$1920=|W(D_5)|=8\cdot240$. Controls: the Killing control replicates the $\gamma$-stage channels
+$1920=|W(D_5)|=8\cdot240$ --- and the $1920$ fence has now been stress-tested and \emph{fails as a
+derivation claim} (\veri{v513\_celestial\_dterm\_nonderivation.py},
+\texttt{CELEST.DTERM.NONDERIV.01}): the $1920=|W(D_5)|$ reading is look-elsewhere-loaded ($11/924$
+pre-declared catalog expressions hit $1920$, vs.\ $8/924$ for the control target $1800$) and
+convention-contingent (only $1$ of $5$ normalisations produces $1920$: Gell-Mann gives $120$,
+$\mathfrak{su}(4)$-Killing $256$, plain trace $32$, ch$_3$-normalised $69120$); the charge-legal
+flux pairings give $2048/1800$ --- they bracket and miss --- while the only flux hit is the
+charge-forbidden $(1,2)$ pairing; quantisation delivers only lattices ($60\,\Z$, with $1920$ the
+$32$nd multiple; strict ch$_3$ units exclude it); and the twisted cubic index $32i$ clashes in
+class provenance with the true quartic $32$ (classes $1/3$ vs.\ $0/2$: same number, disjoint
+mechanism). The convention-stable \mE\ core is the factorisation
+$c_d=\Phi_{T_3}(A_{\mathrm{fix}})\times2h^\vee(E_8)=32\times60$; the fence stays \mC, the physical
+generation of the $32$ stays \mO\ --- no marker moves.
+Controls: the Killing control replicates the $\gamma$-stage channels
 and $A_{\mathrm{fix}}$ exactly; $SO(16)/D_8$ has \emph{no} symmetric cubic
 ($\mathrm{Inv}(S^3\,\mathrm{adj}_{D_8})=0$), no odd sectors and no $A_3$ block --- the $\delta_2$
 channel cannot even be posed ($E_8/\mu_4$ doubly special); the false
 $\mathfrak g_0=\mathfrak d_5{\oplus}\mathfrak a_2{\oplus}\mathfrak u(1)$ inflates every Hom
 dimension ($(5,2,2)\neq(2,1,1)$, $\mathrm{Inv}(S^3\mathfrak g_0)=6\neq1$) and the false sector
 content $(16_s,\bar4)$ kills every pairing. What stays open after $\delta_2$ \mO: the arity
-$\ge4$ ledger, the \emph{physical} justification of the cubic GS term ($c_d=1920$ under the
-$e_8$-Killing propagator; ch$_2$-naturalness for cubic vertices \emph{undecided} --- no canonical
-geometric datum exists for a cubic vertex), and the burden on $\delta_1$ is \emph{sharpened}: it
-must supply either the $\psi=64$ slice or the selection-rule relaxation.
+$\ge4$ ledger, the \emph{physical} justification of the cubic GS term ($c_d=32\times60$, the
+convention-stable core; the $1920=|W(D_5)|$ reading is look-elsewhere-loaded and
+convention-contingent, \vref{v513}; ch$_2$-naturalness for cubic vertices \emph{undecided} --- no
+canonical geometric datum exists for a cubic vertex), and the burden on $\delta_1$ is
+\emph{sharpened}: it must supply either the $\psi=64$ slice or the selection-rule relaxation.
 \textbf{The $\delta_1$ stage --- executed at exploration level, \emph{undecided}: a method
 boundary proven at the $\Z_2$ anchor.} The twisted BCOV contact-term ledger on $\mathbb C^2/\Z_4$
 (the binary test of the $\gamma$ stage) has been run as a preregistered exploration probe
@@ -3316,32 +3488,109 @@ contact term is the \emph{modular completion} of the Atiyah--Bott data (a Harvey
 $\tau$-integral), not a free number; (iv)~massive coset levels $n\ge2$ are mandatory. The
 remaining $\delta_1$ target is therefore the $\tau$-integral itself, evaluated against the
 $\delta_2$-sharpened criterion ($\psi=64$ slice or selection-rule relaxation).
+\textbf{The $\varepsilon_1$ stage (\emph{done}) \mE/\mC\ --- the $O(-2)$ bulk-axion slot} --- is
+executed and machine-verified as \texttt{CELEST.WP5E.EPS1.01}
+\veri{v514\_celestial\_wp5e\_eps1\_axion\_slot.py} (exact sympy/Fraction arithmetic, $34$ checks,
+verdict B). Three results, each exact. (i)~\emph{The slot is a construction}: on
+$\mathbb{PT}'=\mathrm{Tot}(O(1){\oplus}O(1)\to\mathbb P^1)$ the pushforward ledger
+$\pi_*O(-2)$ gives per spacetime degree $d$ exactly $(d{+}1)^2$ classes $=$ the exact
+wave-operator nullspaces, and the \emph{equivariant} bookkeeping under the \vref{v492} action
+$(\mu_1,\mu_2)\mapsto(i\mu_1,i^{-1}\mu_2)$ (incidence-forced column weights $(+1,+1,-1,-1)$)
+closes \emph{block by block} for all $d\le6$ and all four characters; the character series are
+$P_0=1+3t^2+15t^4+21t^6+45t^8+\dots$, $P_1=P_3=2t+8t^3+18t^5+\dots$,
+$P_2=6t^2+10t^4+28t^6+\dots$, the $d=0$ slot has multiplicity $(1,0,0,0)$ --- \emph{the bulk
+axion survives the projection} --- and the Molien invariant ring is
+$(1-t^8)/((1-t^4)^2(1-t^2))$: $Z\in O(2)$, $X,Y\in O(4)$, one relation in degree $8=$ the $a_0$
+weight (the \vref{v492}/\vref{v493} bridge); the E3 bijection is sharpened per character (twisted
+minimal content $(2t,6t^2,2t)$, no degree-$0$ mode, $=$ the Coxeter eigenvalues,
+$\det(A-1)=-4$), and the graviton control separates $a_0$ (the $O(+2)$ slot starts invariant only
+at fibre degree $4$ with multiplicity $3=\{X,Z^2,Y\}$). (ii)~\emph{$\tilde\lambda=6$ is triply
+pinned}: Okubo $\operatorname{Tr}_{\mathrm{adj}}X^4=36\langle x,x\rangle^2
+=(6\langle x,x\rangle)^2$ on the $240$ glue roots ($36=h^\vee+6$,
+$\tilde\lambda=6=|\Z_2|N_{\mathrm{fam}}$); the measure chain on $\mathbb{PT}/\Z_4$ cancels the
+quotient factor $\mu=1/4$ \emph{exactly} (vertex$^2$ $\mu^2$, propagator $1/\mu$, anomaly $\mu$:
+$\tilde\lambda_{\mathrm{eff}}^2=36$ for arbitrary $\mu$), with the wrong bookings quantified and
+\emph{excluded} (anomaly-only $\Rightarrow\tilde\lambda=3$, missing propagator renormalisation
+$\Rightarrow\tilde\lambda=12$); and the flux side (minimal CPS quantum $N=1$, a single exchange
+channel exactly at $k=1$, $(\kappa/\cthree)^2=12$ exact). (iii)~\emph{The first honest
+back-reaction step (Gibbons--Hawking $A_3$)}: clock-invariant four-centre configurations form
+exactly two branches (axis$^4$ $=$ pure resolution or \emph{one} free $\mu_4$ orbit $=$ pure
+deformation); the free orbit gives $\prod_p(Z-i^pz_0)=Z^4-z_0^4$, i.e.\ $XY=Z^4+a_0$ with
+$a_0=-z_0^4$ --- the \vref{v493} family \emph{re-derived from the geometry}, with the $a_0$
+monodromy $=$ one clock step; the charge-$k$ GH point is exactly $\mathbb R^4/\Z_k$ ($k=4$: the
+seam boundary $S^3/\Z_4$); the periods are $\Pi_j=4\pi t_0(i-1)(1,i,i^2)$ with equal moduli
+(lockstep, the \vref{v509} counter-check from geometry) and the Coxeter clock re-derived
+($A^4=1$, $\det(A-1)=-4$, $\Pi\cdot A=i\Pi$); the CPS ``$N\log$'' analogue carries source charge
+$4=|\mu_4|$, with the honest sharpening that the Ricci-flat ALE has asymptotic log coefficient
+exactly $0$ (the CPS log is an exceptional-locus statement; Burns contrast $\det g\neq1$), and
+the multipole selection rule $m\equiv0\bmod4$ stores $-a_0$ in the first symmetry-breaking
+$(4,\pm4)$ harmonic. Controls: $\mathfrak{so}_8$ ($\tilde\lambda^2=12$ irrational; perfect
+squares in the Deligne series only $\{9,36\}$), $\operatorname{diag}(i,i)$ (Veronese cone, no
+hypersurface), $k=2$ (three channels). \mC: conditional on Costello's flat-$\mathbb{PT}$
+matching $\lambda_g^2E=A$ (the measure chain is classical bookkeeping). \mO\ (the honest fence):
+the \emph{quantised} BCOV one-loop coefficient on $\mathbb{PT}/\Z_4$ and the twisted channels
+($32\,T_3$) --- preregistered as M1--M3 below; M1 has since been executed (\vref{v515}).
 \textbf{WP5e proper \mO\ (the global BCOV
 quantisation):} the BCOV/Kodaira--Spencer theory on $\mathbb{PT}/\Z_4$ itself (quantisation,
 non-fixed-point contributions, the twisted closed-string measure). The exchange sub-branch is
-\emph{closed} by the $\gamma$ stage, the full-tensor ledger ($\delta_2$) and the level-from-flux
-dial ($\varepsilon_2$) are \emph{executed}, and $\delta_1$ stands \emph{undecided} at exploration
+\emph{closed} by the $\gamma$ stage, the full-tensor ledger ($\delta_2$), the level-from-flux
+dial ($\varepsilon_2$) and the bulk-axion slot ($\varepsilon_1$) are \emph{executed}, and
+$\delta_1$ stands \emph{undecided} at exploration
 level; the named remaining targets, with preregistered success/kill criteria:
 \textbf{($\delta_1$, sharpened)} the Harvey--Moore $\tau$-integral behind the twisted contact
 terms --- success $=$ the one-loop coefficient comes out exactly $(9,-30,-15,0,32)$, computed,
 not fitted (equivalently: it supplies the $\psi=64$ slice or the selection-rule relaxation),
 carrying the forced $4{:}3$ leading ratio; kill $=$ any other exact value; \textbf{(the cubic GS
-term)} the physical justification of the $d$-symbol vertex with $c_d=1920=|W(D_5)|$ (a
+term)} the physical justification of the $d$-symbol vertex with $c_d=32\times60$ (the honest
+target after \vref{v513}: derive the factor $32=\Phi_{T_3}(A_{\mathrm{fix}})$ physically --- the
+$1920=|W(D_5)|$ fingerprint is look-elsewhere-loaded and convention-contingent, not a target; a
 ch$_2$-type naturalness datum for \emph{cubic} vertices does not yet exist);
-\textbf{($\varepsilon_1$)} the $O(-2)$
-bulk-axion construction ($\tilde\lambda=6$); plus the type-I B-model \emph{back-reaction} on
-$\mathbb{PT}/\Z_4$ (the $A_3$ analogue of CPS eq.~3.5), which would upgrade the $\varepsilon_2$
-CPS dictionary from \mC\ to derived. Success (unchanged): partition function $=E_4/\eta^8$
+\textbf{(the back-reaction milestones, preregistered as M1--M3 in \vref{v514}; M1 executed)} the
+type-I B-model
+\emph{back-reaction} on $\mathbb{PT}/\Z_4$, which would upgrade the $\varepsilon_2$ CPS
+dictionary from \mC\ to derived: \textbf{M1 (\emph{done}, SUCCESS) \mE/\mC} the $A_3$ $\Omega_N$
+(the Beltrami/Kodaira--Spencer
+deformation sourced by the glue currents on the three lockstep spheres; preregistered success $=$ a
+closed-form $\Omega$-deformation whose $S^3/\Z_4$ periods are $(2\pi i)^2\times$ an integer flux
+vector with the lockstep phases $(i-1)(1,i,i^2)$; kill $=$ unequal sphere fluxes or a
+non-integer period --- then the CPS transplant \emph{and} the $\varepsilon_2$ level dial die) ---
+executed and machine-verified as \texttt{CELEST.WP5E.M1.01}
+\veri{v515\_celestial\_wp5e\_m1\_omega\_n.py} (exact sympy, $30$ checks): the residue form
+$\omega_2=dX{\wedge}dZ/X$ is \emph{derived} (three ambient routes; orbifold-cover factor
+$4=|\mu_4|$; clock phase $i$), the twistor family closes as
+$XY=Z^4+4t_0^2\lambda^2Z^2-t_0^4(1-\lambda^4)^2$ ($e_1=e_3=0$ identically; seam fibre $\lambda=0$
+$=$ the \vref{v493} family) with the CY-compatible clock lift
+$(Z,\lambda)\mapsto(iZ,-i\lambda)$, $\Omega\to+\Omega$, and
+$\Omega_N=\Omega_0+\sum_pN_pK_p$ is \emph{closed form} (CPS/Bochner--Martinelli kernels on the
+four centre twistor lines) with every $S^3/\Z_4$ period $(2\pi i)^2$-integral, the seam-fibre
+phase vector $2\pi i\,t_0(i-1)(1,i,i^2)$ with clock covariance $\Pi\to i\Pi$, the flux vector
+$N(1,1,1,1)$ forced uniform (clock orbit $+$ $K_4$ connectivity) and the lens geometry
+\emph{forcing} the source charge $4=|\mu_4|$ ($N\in4\Z$); the $12$ conifold nodes sit exactly on
+the $8$ eighth roots of unity ($8=2|\mu_4|$); honest fence: on the clock-forbidden $Z^4-Z$
+family the $(2\pi i)^2$ quantisation \emph{also} holds --- integrality alone is \emph{not} the
+discriminator, the discriminator is the lockstep phase structure ($0/24$ vs $8/24$) plus the
+clock forcing of equal fluxes; neither kill fired;
+\textbf{M2} the twisted KS measure (quantise the $O(-2)$ tower on $\mathbb{PT}/\Z_4$ with the
+$\varepsilon_1$ mode ledger and compute the one-loop box coefficient per sector; success $=$ the
+bulk sector reproduces $\tilde\lambda^2=36$ \emph{and} the twisted sectors pair with the three
+sphere axions cancelling the rigid $32\,T_3$ residual; kill $=$ a leftover independent
+$T_3$-type quartic in any sector); \textbf{M3} the $a_0$ uplift (lift the $(4,\pm4)$ GH
+multipole to the Beltrami differential and compute the induced K\"ahler-potential correction;
+success $=$ a log-type correction with coefficient tied to the source charge $4=|\mu_4|$; kill
+$=$ decoupling from the centre count). Success (unchanged): partition function $=E_4/\eta^8$
 \emph{including} the
 $q^{-1/3}$ prefactor \emph{derived from the twistor side}; kill: an anomaly mismatch at the
 Costello--Li grade --- neither the CFT-side dials of v502, nor the equivariant skeleton of v505,
 nor the exchange no-go of v508, nor the flux/sector dials of v509, nor the full-tensor ledger of
-v511 trigger it (all computable
-dials say $k=1$, and ``one level'' is now a theorem), but the global
+v511, nor the axion-slot construction of v514, nor the M1 back-reaction of v515 trigger it (all
+computable
+dials say $k=1$, ``one level'' is now a theorem, the bulk axion survives the projection, and the
+back-reacted $\Omega_N$ carries the forced integral lockstep flux),
+but the global
 quantisation is untested.
 \end{itemize}
-Honest status line: WP5a--WP5d (both WP5d stages) and the WP5e $\alpha$, $\beta$, $\gamma$,
-$\delta_2$ and $\varepsilon_2$ stages are
+Honest status line: WP5a--WP5d (both WP5d stages), the WP5e $\alpha$, $\beta$, $\gamma$,
+$\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the M1 back-reaction milestone are
 exact-arithmetic \mE\ constructions
 (plus ED-validated lattice witnesses in WP5d) with \mC\ named identifications (``radial
 decoupling $=$ collar thickness $\to0$''; Weyl complete reducibility beyond BFS depth $4$; the Kac
@@ -3351,23 +3600,32 @@ generation of the maximal submodule for $k\ge3$; the WP5e-$\beta$ dictionaries -
 $\mathrm{CS}(\rho)\bmod1=$ discriminant weight, $32=(h,h){+}(h',h')$, $-30=-h^\vee$, the
 $\Omega$-contraction; the WP5e-$\gamma$ number fences $32=20{+}12$,
 $72=2\tilde\lambda^2_{e_8}$; the WP5e-$\delta_2$ number fences $64=\dim\mathfrak g_1$,
-$1920=|W(D_5)|$; the WP5e-$\varepsilon_2$ CPS dictionary on $\mathbb{PT}/\Z_4$);
-\emph{WP5a--WP5d plus WP5e-$\alpha$/$\beta$/$\gamma$/$\delta_2$/$\varepsilon_2$ are landed ---
+$1920=|W(D_5)|$ --- the latter typed look-elsewhere-loaded and convention-contingent by
+\vref{v513}; the WP5e-$\varepsilon_2$ CPS dictionary on $\mathbb{PT}/\Z_4$; the
+WP5e-$\varepsilon_1$ conditionality on Costello's flat-$\mathbb{PT}$ matching; the M1 global
+kernel patching, Hitchin small resolution and CPS brane dictionary, \vref{v515});
+\emph{WP5a--WP5d plus WP5e-$\alpha$/$\beta$/$\gamma$/$\delta_2$/$\varepsilon_2$/$\varepsilon_1$ plus M1 are landed ---
 all three KLM ingredients of complete rationality carry lattice witnesses, both faces of the
 inflow are anchored, the exchange sub-branch is closed with a certificate, the collapse is
-confirmed full-tensorially with one cubic door open, and ``one level'' is
-now a theorem of clock invariance with the sector-counter dial pinning $k=1$}
+confirmed full-tensorially with one cubic door open, ``one level'' is
+now a theorem of clock invariance with the sector-counter dial pinning $k=1$, the bulk-axion
+slot is a construction with $\tilde\lambda=6$ triply pinned, and the back-reacted $\Omega_N$ is
+closed-form with $(2\pi i)^2$-integral lockstep periods and the source charge $4=|\mu_4|$
+forced}
 --- WP5e proper (the global BCOV quantisation) is the single remaining open piece, with the
 continuum uplift of the WP5d lattice witnesses honestly fenced as Xu's theorem (cited, not claimed);
 the exchange sub-branch is closed by v508, the full-tensor ledger executed by v511, the
-level-from-flux dial executed by v509, $\delta_1$ \emph{undecided} at exploration level (method
+level-from-flux dial executed by v509, the axion slot executed by v514, the M1 back-reaction
+milestone executed by v515, $\delta_1$
+\emph{undecided} at exploration level (method
 boundary proven at the $\Z_2$ anchor), and the named
 remaining targets are the $\delta_1$ Harvey--Moore $\tau$-integral (sharpened to the $\psi=64$
 slice or the selection-rule relaxation), the physical justification of the cubic GS term
-($c_d=1920=|W(D_5)|$), the $\varepsilon_1$
-bulk-axion construction and the $\mathbb{PT}/\Z_4$ back-reaction
+($c_d=32\times60$; the $1920=|W(D_5)|$ reading look-elsewhere-loaded and convention-contingent,
+\vref{v513}) and the remaining $\mathbb{PT}/\Z_4$ back-reaction milestones M2--M3 (preregistered
+in \vref{v514}; M1 executed via \vref{v515})
 --- \texttt{SEAM.EQUIV.01} stays \mO\
-and nothing in WP5a--WP5e-$\varepsilon_2$ moves it.
+and nothing in WP5a--WP5e-$\varepsilon_1$/M1 moves it.
 \end{itemize}
 
 \par\smallskip\noindent\textbf{Kill tests (pre-registered).} \textbf{(K1)} the equivariant sector could
@@ -3412,23 +3670,32 @@ exchange refuted with the three-functional certificate $(0,32,72)$ --- the $32\,
 to the twisted contact terms, $\delta_1$ binary), the full-tensor ledger by WP5e-$\delta_2$
 (\veri{v511\_celestial\_wp5e\_delta2\_tensor\_ledger.py}: the collapse confirmed full-tensorially
 by the innerness theorem, the cubic $d$-symbol channel opening $T_3$ with the weaker certificate
-$\psi(A_{\mathrm{fix}})=64$ and the relaxed solution $c_d=1920=|W(D_5)|$), and the
+$\psi(A_{\mathrm{fix}})=64$ and the relaxed solution $c_d=1920\,Q_{dd}$-coefficient --- typed by
+the \vref{v513} negative certificate as $c_d=32\times60$ with the $|W(D_5)|$ reading
+look-elsewhere-loaded), and the
 level-from-flux dial by
 WP5e-$\varepsilon_2$ (\veri{v509\_celestial\_wp5e\_eps2\_level\_from\_flux.py}: the lockstep
 theorem --- ``one level'' as a theorem of clock invariance, falsifier $Z^4{-}Z$ at $0/24$ ---
-plus the sector-counter dial $\#\mathrm{prim}((E_8)_k)=1\Leftrightarrow k=1$), leaving the global
+plus the sector-counter dial $\#\mathrm{prim}((E_8)_k)=1\Leftrightarrow k=1$), the bulk-axion
+slot by WP5e-$\varepsilon_1$ (\vref{v514}: the equivariant $O(-2)$ slot construction,
+$\tilde\lambda=6$ triply pinned, the first GH/$A_3$ back-reaction step), and the back-reacted
+$\Omega_N$ by the M1 milestone (\vref{v515}: closed form, $(2\pi i)^2$-integral lockstep
+periods, forced source charge $4=|\mu_4|$), leaving the global
 BCOV quantisation (WP5e proper) as the single remaining open piece.
 
 \par\smallskip\noindent\textbf{Honest success estimate.} The probability of \emph{full} success
 (WP5e: a second continuum route to \texttt{SEAM.EQUIV.01}) remains low --- it is constructive
 holography at the Costello--Li grade. The \emph{partial}-findings expectation is now realised and
-\emph{exceeded}: WP1--WP4, all five WP5 constructive milestones (both WP5d stages) and the WP5e
-$\alpha$, $\beta$, $\gamma$, $\delta_2$ and $\varepsilon_2$ stages are
+\emph{exceeded}: WP1--WP4, all five WP5 constructive milestones (both WP5d stages), the WP5e
+$\alpha$, $\beta$, $\gamma$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the M1
+back-reaction milestone are
 executed with sharp structural results (verdicts B, B, B, B(ii); WP5a--WP5d passed;
 WP5e-$\alpha$ pins the CFT side, WP5e-$\beta$ the equivariant twistor skeleton, WP5e-$\gamma$
 closes the exchange sub-branch with a certificate, WP5e-$\delta_2$ confirms the collapse
 full-tensorially and opens the one cubic door, WP5e-$\varepsilon_2$ makes ``one level'' a
-theorem and pins its value by the sector counter; \emph{WP5e proper
+theorem and pins its value by the sector counter, WP5e-$\varepsilon_1$ builds the bulk-axion
+slot with $\tilde\lambda=6$ triply pinned, and M1 delivers the closed-form back-reacted
+$\Omega_N$ with forced charge $4=|\mu_4|$; \emph{WP5e proper
 --- the global BCOV quantisation ---
 is the single remaining open piece}) --- the WP1 critical correction (clock $\neq$ deck; clock$^2=$ deck),
 the WP2 sharpenings (the clock \emph{is} the Picard--Lefschetz/Coxeter monodromy of the seam
@@ -3458,11 +3725,19 @@ WP5e-$\delta_2$ full-tensor ledger (the innerness theorem confirming the collaps
 the unique symmetric survivor $=$ the $\mathfrak{su}(4)$ $d$-symbol with
 $Q_{dd}=\tfrac1{60}(T_3-P_3/4)$ opening the $T_3$ channel; the weaker certificate
 $\psi(A_{\mathrm{fix}})=64$ and the exactly solvable relaxed reading with
-$c_d=1920=|W(D_5)|$), and the
+$c_d=32\times60$, the $1920=|W(D_5)|$ fingerprint honestly retired as look-elsewhere-loaded by
+the \vref{v513} negative certificate), and the
 WP5e-$\varepsilon_2$ level-from-flux dial (the CPS skeleton exact; the pairing matrix pinned by
 complete enumeration with fluxes $(64,60,64)$ and one quantum per current; the naive ``level $=$
 total flux'' killed by the lockstep test itself; the lockstep theorem with its $Z^4{-}Z$
-falsifier; the sector counter $\#\mathrm{prim}((E_8)_k)=1\Leftrightarrow k=1$) --- exactly the kind of sharp,
+falsifier; the sector counter $\#\mathrm{prim}((E_8)_k)=1\Leftrightarrow k=1$), the
+WP5e-$\varepsilon_1$ axion slot (the equivariant Penrose ledger closing block by block; the
+$d=0$ slot surviving the projection; $\tilde\lambda=6$ triply pinned with the wrong bookings $3$
+and $12$ excluded; the GH/$A_3$ step re-deriving the \vref{v493} family and the Coxeter clock
+from geometry) and the M1 back-reacted $\Omega_N$ (the residue form derived with cover factor
+$4=|\mu_4|$; the closed twistor family with its CY-compatible clock lift; every $S^3/\Z_4$
+period $(2\pi i)^2$-integral with the forced uniform flux vector and the lens-forced charge
+$4=|\mu_4|$; the honest integrality-is-not-the-discriminator fence) --- exactly the kind of sharp,
 falsifiable refinement the contract format is for. Status: \texttt{CELEST.SEAM.01} \mO\ (research
 contract, WP5e proper the single remaining open milestone); \texttt{CELEST.WP1.01} \mE/\mC\ (executed);
 \texttt{CELEST.WP2.01} \mE/\mC\ (executed); \texttt{CELEST.WP3.01} \mE/\mC\ (executed);
@@ -3482,10 +3757,76 @@ stay \mO);
 intermediate verdict: collapse confirmed by innerness, the cubic $d$-symbol channel opens $T_3$
 with the weaker certificate $\psi=64$; the arity $\ge4$ ledger, the cubic GS term and $\delta_1$
 stay \mO);
+\texttt{CELEST.DTERM.NONDERIV.01} \mE\ (executed, the $c_d$ negative certificate --- the
+$1920=|W(D_5)|$ fence typed look-elsewhere-loaded and convention-contingent, the convention-stable
+core $c_d=32\times60$; the fence stays \mC, the generation of the $32$ stays \mO);
 \texttt{CELEST.WP5E.EPS2.01} \mE/\mC\ (executed, $\varepsilon_2$ stage --- the level-from-flux
 dial, verdict B: ``one level'' a theorem, the sector counter pins $k=1$; the CPS dictionary on
-$\mathbb{PT}/\Z_4$ typed \mC, the type-I B-model back-reaction stays \mO);
+$\mathbb{PT}/\Z_4$ typed \mC, of the type-I B-model back-reaction milestones M1 is since
+executed via v515, M2--M3 stay \mO);
+\texttt{CELEST.WP5E.EPS1.01} \mE/\mC\ (executed, $\varepsilon_1$ stage --- the $O(-2)$
+bulk-axion slot construction with $\tilde\lambda=6$ triply pinned and the first GH/$A_3$
+back-reaction step; the quantised BCOV coefficient and the twisted channels stay \mO);
+\texttt{CELEST.WP5E.M1.01} \mE/\mC\ (executed, back-reaction milestone M1, SUCCESS on the
+preregistered criterion --- the closed-form $\Omega_N$ with $(2\pi i)^2$-integral lockstep
+periods and the lens-forced source charge $4=|\mu_4|$; honest fence: integrality alone is not
+the discriminator; M2--M3 and the quantised BCOV coefficient stay \mO);
 \texttt{SEAM.EQUIV.01} untouched, stays \mO.
+
+% =====================================================================
+\section*{Research Contract --- \texttt{WOIT.OS.TWISTOR.01} (the Osterwalder--Schrader twistor bridge)}
+\addcontentsline{toc}{section}{Research Contract: WOIT.OS.TWISTOR.01}
+% =====================================================================
+\noindent\emph{Typing.} \textbf{This is the actual bridge from compiler to physics --- everything in
+\texttt{CELEST.SEAM.01} is preparation for it.} It is a research contract \mO\ (ledger row
+\texttt{WOIT.OS.TWISTOR.01}: Open, research contract), \emph{not} a claim; nothing below asserts
+that the construction exists. The external programme it engages --- Woit's Euclidean Twistor
+Unification (\texttt{arXiv:2104.05099}) --- is a \emph{named reference frame} for the shape of the
+target, never a confirmation in either direction (the Woit-bridge paragraph in \texttt{tfpt\_3}
+states exactly what is missing).
+
+\par\smallskip\noindent\textbf{Input.} $X_+=(\mathbb{PT}/\Gamma)_+$ (the positive-time half of the
+quotiented projective twistor space; $\Gamma=\Gamma_{\mathrm{ALE}}\cong\Z_4$, normalised by the
+clock --- the definition block of \texttt{CELEST.SEAM.01}); $\mathcal A_{\mathrm{hol}}$, the
+\emph{interacting} open$+$closed twistorial algebra (SDYM$(E_8)$ open strings $+$ BCOV closed
+strings --- the WP5e-proper object, whose free/equivariant skeleton is pinned by
+\vref{v492}--\vref{v515}); $\rho$, the order-$4$ clock $\operatorname{diag}(i,1)$; $\Theta$, the
+anti-linear real structure induced by the seam reflection (the deck/covering involution, whose
+free-ness is topology, \vref{v510}); and $\mu_{\mathrm{BCOV+SDYM}}$, the interacting functional
+(the global BCOV$+$SDYM quantisation on $\mathbb{PT}/\Gamma$).
+
+\par\smallskip\noindent\textbf{Target theorem.} $\Theta^2=1$ and $\Theta\rho\Theta=\rho^{-1}$; the
+gauge-invariant algebra is reflection-positive; and the Osterwalder--Schrader quotient produces
+$(\mathcal H,\Omega,U(\mathcal P^\uparrow_+),\mathcal A_{\mathrm{Mink}})$ with: a positive Hilbert
+metric, positive energy, local causality, \emph{one chiral fermion generation without mirror
+doubling}, the TFPT charge lattice, an internal $SU(3){\times}SU(2){\times}U(1)$ action, and the
+$(E_8)_1$ seam net as an \emph{actual} boundary net (not only as a character).
+
+\par\smallskip\noindent\textbf{Kill tests (pre-registered, all seven live).}
+\textbf{(1)} $\Theta$ is incompatible with the clock (no anti-linear $\Theta$ with $\Theta^2=1$ and
+$\Theta\rho\Theta=\rho^{-1}$ exists on $\mathcal A_{\mathrm{hol}}$).
+\textbf{(2)} Reflection positivity fails after gauge fixing (the gauge-invariant subalgebra of
+$\mu_{\mathrm{BCOV+SDYM}}$ is not RP).
+\textbf{(3)} The reconstruction produces a vector-like mirror generation (chirality is lost in the
+OS quotient).
+\textbf{(4)} The Penrose transform reaches only free / self-dual states (the interacting extension
+does not exist at the Costello--Li grade).
+\textbf{(5)} The reconstructed net has the right character but the wrong OPE / fails net equivalence
+(character-level agreement without operator-algebraic agreement).
+\textbf{(6)} The internal $SU(2)$ remains a spacetime factor (no genuine internal weak factor
+separates from the Euclidean rotation group).
+\textbf{(7)} The four $\mu_4$ marks are not incidence-compatibly extendable over spacetime (the
+mark data of the seam cannot be propagated through the incidence relation).
+
+\par\smallskip\noindent\textbf{Scope fence (explicit non-claims of the celestial/twistor branch).}
+Self-dual is \emph{not} full 4D physics. Until and unless this contract closes, the celestial/twistor
+branch claims \emph{none} of the following: both helicities (the anti-self-dual completion), generic
+scattering amplitudes, local matter fields, full Einstein dynamics (beyond the self-dual sector),
+electroweak symmetry breaking, confinement. The classical field-equation route (entanglement
+equilibrium, \vref{v358}/\vref{v359}) is a separate, non-competing statement about the full equation;
+\texttt{SEAM.EQUIV.01} and its route split (\texttt{SEAM.EQUIV.MMST.01}/\texttt{SEAM.EQUIV.TWISTOR.01})
+are stated in their own rows and are not moved by anything here. Status:
+\texttt{WOIT.OS.TWISTOR.01} \mO\ (research contract).
 
 % =====================================================================
 \section*{Certifiability and recommended order}

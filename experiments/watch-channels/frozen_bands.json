@@ -1,0 +1,123 @@
+{
+  "comment": "FROZEN TFPT targets + kill windows for the live watch channels. Every value is extracted verbatim from verification/predictions_frozen.json (freeze 2026-06-09) or from the corresponding experiments/evidence_scorecard.json row (provenance per channel). This file is the frozen side of the monitor -- it NEVER changes with new data; only measurements.json does.",
+  "frozen_from": {
+    "registry": "verification/predictions_frozen.json (freeze_date 2026-06-09)",
+    "scorecard": "experiments/evidence_scorecard.json (built by experiments/build_evidence_scorecard.py)"
+  },
+  "channels": [
+    {
+      "id": "sin2_theta12",
+      "rank": "primary",
+      "observable": "solar mixing angle sin^2(theta_12) -- PREDICTION OF RECORD",
+      "type": "gaussian",
+      "tfpt_value": 0.3067473572449106,
+      "formula": "1/3 - phi0/2",
+      "kill_sigma": 3.0,
+      "kill_criterion": "JUNO value away from 0.306747 beyond 3 sigma kills the seam-misalignment reading",
+      "experiment": "JUNO",
+      "provenance": "predictions_frozen.json id SIN2_THETA12_SEED (role prediction_of_record); scorecard row 'sin^2 theta12'"
+    },
+    {
+      "id": "beta_birefringence_deg",
+      "rank": "primary",
+      "observable": "cosmic birefringence angle beta (degrees)",
+      "type": "gaussian",
+      "tfpt_value": 0.2424350309009295,
+      "formula": "(phi0/(4*pi)) * (180/pi)",
+      "kill_sigma": 3.0,
+      "kill_criterion": "systematics-controlled exclusion of 0.2424 deg at > 3 sigma (incl. precise zero or wrong sign)",
+      "experiment": "ACT / Simons Observatory / LiteBIRD",
+      "provenance": "predictions_frozen.json id BETA_BIREFRINGENCE_DEG; scorecard row 'cosmic birefringence beta'"
+    },
+    {
+      "id": "w_dark_energy",
+      "rank": "primary",
+      "observable": "dark-energy equation of state w",
+      "type": "exclusion",
+      "tfpt_value": -1.0,
+      "formula": "minimal Lambda branch => w = -1 exactly (w0 = -1, wa = 0)",
+      "watch_sigma": 3.0,
+      "kill_sigma": 5.0,
+      "kill_criterion": "w != -1 at >= 5 sigma in a single systematics-controlled overlap-aware combination",
+      "experiment": "DESI / Euclid / Rubin / Roman",
+      "provenance": "predictions_frozen.json id RHOL_OVER_MBAR4 (kill: 'robust w != -1'); scorecard row 'dark-energy equation of state w' (watch_level high); experiments/dark-energy-w-watchdog"
+    },
+    {
+      "id": "br_kplus_pinunu",
+      "rank": "primary",
+      "observable": "rare kaon BR(K+ -> pi+ nu nubar)",
+      "type": "gaussian",
+      "tfpt_value": 9.45e-11,
+      "formula": "TFPT-CKM point + external short-distance functions (F_transfer bridge, NOT a primitive compiler output)",
+      "kill_sigma": 3.0,
+      "kill_window": [7.0e-11, 1.2e-10],
+      "kill_criterion": "BR(K+) outside [7,12]e-11 (scorecard kill window for the downstream bridge)",
+      "experiment": "NA62 final / KOTO II",
+      "provenance": "scorecard row 'rare kaon BR(K+ -> pi+ nu nu)' (stage downstream_bridge); experiments/rare-kaon-bridge"
+    },
+    {
+      "id": "alpha_s_running",
+      "rank": "primary",
+      "observable": "inflation running alpha_s = d n_s / d ln k",
+      "type": "gaussian",
+      "tfpt_value": -7.57e-4,
+      "band": [-8.0e-4, -5.6e-4],
+      "formula": "-2/N_star^2 at N_star = 51.4 (LO; band over N_star in [50,60])",
+      "kill_sigma": 5.0,
+      "kill_window": [-5.0e-3, 3.0e-3],
+      "kill_criterion": "robust alpha_s < -5e-3 or > +3e-3 at >= 5 sigma; any robust POSITIVE running (>= 5 sigma) kills the plateau branch",
+      "experiment": "CMB-S4 / LiteBIRD (current: Planck / P-ACT-LB combos)",
+      "provenance": "scorecard row 'inflation alpha_s (running of n_s)'; experiments/tfpt-discovery/alpha_s_running_probe.py"
+    },
+    {
+      "id": "sin2_theta13",
+      "rank": "secondary",
+      "observable": "reactor mixing angle sin^2(theta_13)",
+      "type": "gaussian",
+      "tfpt_value": 0.0231084351588811,
+      "formula": "phi0 * exp(-5/6)",
+      "kill_sigma": 3.0,
+      "watch_sigma": 1.9,
+      "watch_sigma_note": "scorecard types this row 'tension' at the current ~2.0 sigma pull; threshold set just below so the channel mirrors the scorecard status instead of flapping around the generic 2.0 cut",
+      "kill_criterion": "persistent deviation beyond 3 sigma after global fit (currently ~2 sigma, the largest frozen core pull)",
+      "experiment": "JUNO / global fits",
+      "provenance": "predictions_frozen.json id SIN2_THETA13; scorecard row 'sin^2 theta13' (status tension)"
+    },
+    {
+      "id": "delta_pmns_deg",
+      "rank": "secondary",
+      "observable": "neutrino Dirac CP phase delta_PMNS (degrees)",
+      "type": "gaussian",
+      "tfpt_value": 240.0,
+      "formula": "arg(rho^4) = 4*pi/3 (phase-lattice assignment, layer 'assigned')",
+      "kill_sigma": 3.0,
+      "kill_criterion": "delta_PMNS excludes 240 deg at >= 3 sigma",
+      "experiment": "DUNE / Hyper-K (current: NuFIT global fit)",
+      "provenance": "predictions_frozen.json id DELTA_CP_NU_DEG (assigned_texture_values); scorecard row 'delta_nu_CP'"
+    },
+    {
+      "id": "n_s",
+      "rank": "secondary",
+      "observable": "spectral tilt n_s",
+      "type": "band",
+      "band": [0.96, 0.9666666666666667],
+      "branch_value": 0.9611,
+      "formula": "1 - 2/N_star, N_star in [50,60] (external reheating input); slow-reheating branch N_star = 51.4",
+      "kill_sigma": 3.0,
+      "kill_criterion": "value robustly outside the Starobinsky window at fixed reheating (scorecard: n_s >= 0.967 robustly)",
+      "experiment": "Simons Observatory / SPT-3G / LiteBIRD (current: Planck / DESI combos)",
+      "provenance": "predictions_frozen.json conditional_bands id N_S; scorecard row 'inflation n_s (Starobinsky/scalaron)'"
+    },
+    {
+      "id": "r_tensor",
+      "rank": "secondary",
+      "observable": "tensor-to-scalar ratio r",
+      "type": "upper_limit",
+      "band": [0.0033333333333333335, 0.0048],
+      "formula": "12/N_star^2, N_star in [50,60] (external reheating input)",
+      "kill_criterion": "r > 0.01 robustly kills the R^2 branch; band excluded at CMB-S4 (> 5 sigma)",
+      "experiment": "CMB-S4 / LiteBIRD (current: BICEP/Keck BK18)",
+      "provenance": "predictions_frozen.json conditional_bands id R_TENSOR; scorecard row 'inflation r (tensor ratio)'"
+    }
+  ]
+}

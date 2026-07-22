@@ -1,0 +1,73 @@
+NICER Target-of-Opportunity request (DRAFT -- prepared in advance, submit on trigger)
+======================================================================================
+
+Title:     Daily-cadence timing of the next Vela glitch recovery inside the
+           first 3 days: closing the early-window gap of a preregistered
+           log-periodic comb search
+Target:    PSR B0833-45 / J0835-4510 (Vela pulsar), RA 08h35m20.6s, Dec -45d10m34s
+Trigger:   a new Vela glitch reported by the live radio monitoring programmes
+           (Jodrell Bank glitch table; IAR/PuMA southern monitoring, which
+           detected the 2021 and 2024 glitches within hours), with glitch age
+           < 3 days at ToO activation. Vela glitches recur every ~3 years; the
+           last giant glitch was 2024 April 29 (MJD 60429.9, dnu/nu = 2.4e-6).
+
+Scientific case
+---------------
+We run a preregistered, frozen-parameter search for a log-periodic modulation
+("comb") in post-glitch spin recoveries: residuals to the standard multi-
+exponential recovery model are tested for a component cos(omega * ln tau) at
+the fixed angular log-frequency omega = 2pi / ln((3/2)^6) = 2.5827, with a
+predicted fractional amplitude epsilon = exp(-pi^2 / ln((3/2)^6)) ~ 0.0173.
+Both numbers are frozen in preregistration files before any data contact
+(hypotheses/pulsar_pg07_v1.yaml, pulsar_pg08_v1.yaml of the analysis
+repository); no parameter is fitted to the data. A null result is a valid,
+published outcome of this programme; a detection would establish discrete
+scale invariance in neutron-star interior relaxation.
+
+Machine-checked injection studies on real sampling and real noise show the
+comb periodogram localises omega only when the recovery spans more than ~2.8
+comb periods in ln(tau), i.e. about three decades in post-glitch time tau.
+Our complete reduction of the full NICER Vela archive (665 observations,
+~762 ks, 2017-2025; 491 usable, 119 piecewise-coherent frequency segments,
+median sigma_nu ~ 0.6 microHz; the published 2019 and 2021 glitch steps are
+reproduced at 96% and 101% as a sanity gate) quantifies the gap precisely:
+the first usable observation sits at tau = 3.4 d (2019 glitch) and 7 d (2021),
+so the achieved reach is 2.17 and 1.38 comb periods -- BELOW the 2.8-period
+gate. The archive is missing exactly the early window; stacking more late-time
+data buys amplitude, not ln(tau) range. Radio data releases hit the same wall
+(the public post-2021 Vela ToAs start at tau = 10 d). A trigger inside 3 days
+-- ideally with the first exposure at tau ~ 0.5-1 d -- followed by daily
+cadence is therefore the ONLY route to a sharp test: first exposure at
+tau ~ 0.5 d plus the ongoing long-baseline monitoring out to tau ~ 350-900 d
+yields ln(tau) reach of 2.9-3.3 periods, clearing the gate for the first time.
+
+Observation request
+-------------------
+1. Activation:    within 3 days of a reported Vela glitch (goal: < 1 day).
+2. Cadence:       daily visits for the first ~14 days post-glitch (the fast
+                  recovery terms have tau_d ~ 0.4-17 d; daily sampling resolves
+                  the decades ln(tau) = -0.3 ... 1.2 that no archive covers),
+                  then hand-over to the regular monitoring cadence.
+3. Exposure:      1-2 ks per visit. In our full-archive reduction, segments
+                  built from 1-2 ks of NICER data reach a median frequency
+                  uncertainty sigma_nu ~ 0.6 microHz -- sufficient, since the
+                  early-recovery transient signal is at the 10-100 microHz
+                  level for a giant (dnu/nu ~ 2e-6) Vela glitch.
+4. Total new time: ~14-28 ks (14 visits x 1-2 ks) -- comparable to two weeks
+                  of the existing Vela monitoring load, but time-critical.
+5. Configuration: standard timing mode; soft band 0.2-1.2 keV carries the
+                  pulsed signal (band choice validated on the archive).
+
+Analysis plan and references
+----------------------------
+The reduction and detection pipeline is already built and validated end-to-end
+on the full NICER Vela archive (barycentring validated against PINT to 3.4
+microseconds RMS; Z^2 segment fits; frozen comb battery with off-kernel
+look-elsewhere control; surrogate-calibrated injections). Preregistration:
+hypotheses/pulsar_pg07_v1.yaml and pulsar_pg08_v1.yaml (frozen kernel, null
+batteries, kill / data-limited criteria). Archive quantification:
+results/pg06b_full_vela.json in the analysis repository. External data
+context: Basu et al. 2022 (JBO glitch catalogue); Zubieta et al. 2024, A&A
+(IAR/PuMA daily monitoring and glitch data release); LVK 2024 Vela glitch
+data release, Zenodo doi:10.5281/zenodo.17735648 (phase-connected 2024
+ephemeris used to validate our recovery reconstruction).

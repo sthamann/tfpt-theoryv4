@@ -741,8 +741,9 @@ gate now carries one module that states its obligations precisely: \textbf{Tier 
 $\Delta_{\mathrm{eff}}=6\log\tfrac32-2{\cdot}248\,\cthree^2=1.648>0$) makes every low-energy readout independent of
 the ambient measure (not a blocker); \textbf{Tier B} reduces the ambient bulk measure to identifying the
 seam-Calder\'on boundary with the holomorphic $(E_8)_1$ net ($c{=}248/31{=}8$, \vref{v77}), now \emph{closed modulo
-a cited theorem} (lattice \vref{v367}/\vref{v368} $+$ the $S_3$ stack \vref{v376}--\vref{v379}, Lean
-\texttt{FORM.SEAM.MMST.01});
+cited theorems} on the MMST route \texttt{SEAM.EQUIV.MMST.01} (lattice \vref{v367}/\vref{v368} $+$ the $S_3$ stack
+\vref{v376}--\vref{v379}, Lean
+\texttt{FORM.SEAM.MMST.01}; the parent \texttt{SEAM.EQUIV.01} stays \mO);
 the \emph{perturbative} 4d layer is now in hand (\vref{v269}/\vref{v271}/\vref{v273}). \mC\ what remains is then a
 \emph{redundancy}, not missing dynamics --- the nonperturbative interacting ambient measure is the Euclidean-QG
 conformal-factor problem (Gibbons--Hawking--Perry 1978), \emph{inherited not TFPT-specific}; by Tier~A it is
@@ -776,7 +777,8 @@ weight-1 currents. \mE\ the discriminator is \emph{holomorphy}: the $c{=}8$ coun
 $(D_8){=}SO(16)_1$ has $\det\mathrm{Cartan}{=}4$ (four primaries, non-holomorphic) --- same $c$, different
 $\det$, so the one discriminating condition is $|\det K|{=}1$. \mC\ the seam side matches via the flat
 $\tau{=}i$ pillowcase (\vref{v276}) and the Kummer/K3 (\vref{v260}). \mC\ the residual is exactly that single
-holomorphy bit --- now \emph{closed modulo a cited theorem} (lattice \vref{v367}/\vref{v368} $+$ the $S_3$ stack
+holomorphy bit --- now \emph{closed modulo cited theorems} on the MMST route \texttt{SEAM.EQUIV.MMST.01}
+(lattice \vref{v367}/\vref{v368} $+$ the $S_3$ stack
 \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}; cited continuum existence \mO, \vref{v336})
 (\texttt{QGAMB.TIERB.01}).
 \smallskip\\
@@ -821,10 +823,11 @@ order-$4\Leftrightarrow\zeta{=}\pm i$) and the conditional implication mark-loca
 \rho=\omega$ are machine-proved in the carrier-rigidity Lean project (\textsc{audit: pass}, only the three
 standard kernel axioms; mirrors \veri{v177\_seam\_marking\_kernel.py} and \veri{v210\_mark\_local\_dtn.py}).
 So everything \emph{downstream} of the postulate is \mE; \texttt{QGEO.SYM.01} \emph{itself} is the downstream
-face of the keystone \texttt{SEAM.EQUIV.01}, which is now \emph{closed modulo a cited theorem} (lattice $+$ $S_3$
+face of the keystone \texttt{SEAM.EQUIV.01}, which is now \emph{closed modulo cited theorems on its MMST route}
+\texttt{SEAM.EQUIV.MMST.01} (lattice $+$ $S_3$
 stack, Lean \texttt{FORM.SEAM.MMST.01}; only the cited continuum existence stays \mO\ --- its extension leg since
 re-founded on peer-reviewed crossed-product theorems, the realisation input reduced to invariant level R1$'$,
-\vref{v469}).
+\vref{v469}; the twistor route \texttt{SEAM.EQUIV.TWISTOR.01} and the unconditional parent stay \mO).
 \smallskip\\
 \noindent\emph{A second, independent route (\veri{v207\_asymptotic\_safety.py}, \mO).} Beside the seam-net
 programme, the boundary data also support a \textbf{continuum} attack: an FRG truncation with an independent
@@ -834,9 +837,11 @@ $2+\eta_R=0$ has a root $g_\star>0$ (intermediate value), with the scale-invaria
 small, $y^2=16\cthree^2=1/(4\pi^2)=0.0253$. This is recorded as a \emph{plausibility cross-check} that the
 QG gap is reachable from a second direction --- it is \textbf{not} load-bearing and does \emph{not} close
 $G_{\mathrm{metric}}$; the primary, machine-checked route stays the seam-net. A third, quantitative
-approach to the keystone --- the celestial route (contract \texttt{CELEST.SEAM.01}, WP1--WP5d, both
+approach to the keystone --- the celestial and twistor continuum route, now named
+\texttt{SEAM.EQUIV.TWISTOR.01} (contract \texttt{CELEST.SEAM.01}, WP1--WP5d, both
 WP5d stages, plus the
-WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$ and $\varepsilon_2$ stages executed:
+WP5e $\alpha$, $\beta$, $\gamma$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the
+M1 back-reaction milestone executed:
 the level-2 null ideal derived, its deleting operator explicit, the GNS limit state constructed, the
 two-interval index chain measured, split $+$ strong additivity witnessed on the lattice (all three
 KLM ingredients of complete rationality; the continuum uplift is Xu's theorem, cited not claimed),
@@ -844,8 +849,13 @@ the $q^{-1/3}$ prefactor $+$ level $k{=}1$ pinned on the CFT
 side, the equivariant anomaly ledger exact on the twistor side (index bridge, $-78$ defect,
 rigid $32\,T_3$ residual, the honest $a_0$ refutation), the sphere-axion exchange sub-branch closed
 with a certificate, the collapse confirmed full-tensorially with the one cubic $d$-symbol door
-open, and ``one level'' lifted to a theorem of clock invariance with the sector
-counter pinning $k=1$ (\vref{v508}/\vref{v509}/\vref{v511}); WP5e proper \mO, the global BCOV
+open (its $c_d=1920=|W(D_5)|$ fingerprint honestly typed look-elsewhere-loaded and
+convention-contingent, the stable core $c_d=32\times60$, \vref{v513}), ``one level'' lifted to
+a theorem of clock invariance with the sector
+counter pinning $k=1$ (\vref{v508}/\vref{v509}/\vref{v511}/\vref{v513}), the $O(-2)$ bulk-axion
+slot built with $\tilde\lambda=6$ triply pinned (\vref{v514}), and the back-reacted $\Omega_N$
+closed-form with $(2\pi i)^2$-integral lockstep periods and the lens-forced source charge
+$4=|\mu_4|$ (\vref{v515}; M2--M3 stay \mO); WP5e proper \mO, the global BCOV
 quantisation, the single remaining milestone) --- is
 synthesised as a
 dedicated section in \texttt{tfpt\_3\_e8\_audit\_bootstrap}; it does not close \texttt{SEAM.EQUIV.01}

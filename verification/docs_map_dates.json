@@ -8,12 +8,12 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::In plain words::1": {
-  "hash": "4a1aba8db496",
-  "date": "2026-07-02"
+  "hash": "5df81b3808e2",
+  "date": "2026-07-22"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "db9682144b17",
-  "date": "2026-07-21"
+  "hash": "67f81a6d7b8f",
+  "date": "2026-07-22"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -28,12 +28,12 @@
   "date": "2026-06-12"
  },
  "introduction::subsection::The compact status formula: three honest layers::1": {
-  "hash": "48df7d31261a",
-  "date": "2026-06-23"
+  "hash": "2d4a24585ce5",
+  "date": "2026-07-22"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "7f91964fa54c",
-  "date": "2026-07-21"
+  "hash": "fc48f62bb0ea",
+  "date": "2026-07-22"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "d7ace62c85ab",
@@ -60,12 +60,12 @@
   "date": "2026-06-12"
  },
  "introduction::section::What this means for the theory-of-everything question::1": {
-  "hash": "5a492ffa6c68",
-  "date": "2026-07-13"
+  "hash": "42711c7b80a6",
+  "date": "2026-07-22"
  },
  "introduction::subsection::The closure ledger: what is done, and what genuinely remains::1": {
-  "hash": "7ada34a895c9",
-  "date": "2026-07-14"
+  "hash": "108c638d38e3",
+  "date": "2026-07-22"
  },
  "introduction::section::TFPT in the light of algorithmic physics: Zuse--Schmidhuber--Wolfram::1": {
   "hash": "ba6ca0b2afb6",
@@ -100,8 +100,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "7fa02418dda7",
-  "date": "2026-07-21"
+  "hash": "e997c72a494c",
+  "date": "2026-07-22"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
   "hash": "32b8525a612e",
@@ -120,8 +120,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::The $D_5\\times A_3$ compiler: $E_8$ as a closure, not an input::1": {
-  "hash": "684746e038da",
-  "date": "2026-07-20"
+  "hash": "59e213d384aa",
+  "date": "2026-07-22"
  },
  "tfpt_1_architecture_e8::subsection::Carrier $=D_5=\\mathfrak{so}_{10}$ (proved)::1": {
   "hash": "291366279c88",
@@ -304,8 +304,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Theorem 7 --- the $D_5\\times A_3$ lift of the $E_8$ atlas::1": {
-  "hash": "e6f6be45744b",
-  "date": "2026-07-21"
+  "hash": "139264e6aedc",
+  "date": "2026-07-22"
  },
  "tfpt_1_architecture_e8::section::Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\\varphi_0$-ladder::1": {
   "hash": "8bd4d14e4c33",
@@ -392,8 +392,8 @@
   "date": "2026-06-13"
  },
  "tfpt_2_standard_model::subsection::(4) Constructive QFT closure of the admissible physical sector \\mE/\\mC::1": {
-  "hash": "444508a6dca8",
-  "date": "2026-06-23"
+  "hash": "28a91283e41b",
+  "date": "2026-07-22"
  },
  "tfpt_2_standard_model::subsection::(5) Axioms P1/P2 --- P2 machine-verified, P1 as an interface \\mE/\\mO::1": {
   "hash": "c0a53aa411be",
@@ -404,8 +404,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Conclusion::1": {
-  "hash": "1e20fec4b73a",
-  "date": "2026-06-24"
+  "hash": "2073ff72903b",
+  "date": "2026-07-22"
  },
  "tfpt_2_standard_model::section::The setup: parabolic data on the family curve::1": {
   "hash": "da2a8b23c886",
@@ -424,8 +424,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Global computation: the anchor multiset is derived::1": {
-  "hash": "9236233ee31e",
-  "date": "2026-07-21"
+  "hash": "f4c99985896d",
+  "date": "2026-07-22"
  },
  "tfpt_2_standard_model::subsection::Part (ii): the $\\mathbb Z_6$ structure of the residues, and the frontier::1": {
   "hash": "460dabfecef9",
@@ -568,16 +568,16 @@
   "date": "2026-06-12"
  },
  "tfpt_3_e8_audit_bootstrap::section::The M\u00f6bius origin of the irreducible $\\pi$::1": {
-  "hash": "1391b4c9f24c",
-  "date": "2026-07-21"
+  "hash": "ed3b2686a287",
+  "date": "2026-07-22"
  },
- "tfpt_3_e8_audit_bootstrap::section::The celestial route: from the $\\mu_4$ clock to the $(E_8)_1$ boundary shadow::1": {
-  "hash": "461fe7044a60",
-  "date": "2026-07-21"
+ "tfpt_3_e8_audit_bootstrap::section::The celestial and twistor continuum route::1": {
+  "hash": "9e0ace10b60a",
+  "date": "2026-07-22"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
-  "hash": "543b709ca88d",
-  "date": "2026-07-21"
+  "hash": "8a9d20e27d27",
+  "date": "2026-07-22"
  },
  "tfpt_3_e8_audit_bootstrap::section::The honest open-items list::1": {
   "hash": "954950bd8ee0",
@@ -624,8 +624,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "228647c3391d",
-  "date": "2026-07-21"
+  "hash": "008d27a6937c",
+  "date": "2026-07-22"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "c0bc3591e81c",
@@ -636,8 +636,8 @@
   "date": "2026-06-25"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "ded62f1ada27",
-  "date": "2026-07-02"
+  "hash": "aef4220c9a9f",
+  "date": "2026-07-22"
  },
  "tfpt_5_redteam::section::Method::1": {
   "hash": "610fddcc2990",
@@ -668,8 +668,8 @@
   "date": "2026-07-14"
  },
  "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "d574550d4f38",
-  "date": "2026-07-02"
+  "hash": "a78ce472cb03",
+  "date": "2026-07-22"
  },
  "tfpt_horizon_readouts::front::(front matter)::1": {
   "hash": "091987bff9bb",
@@ -716,16 +716,20 @@
   "date": "2026-07-03"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "562d3887585f",
-  "date": "2026-07-21"
+  "hash": "5f2bdc622fc5",
+  "date": "2026-07-22"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "3cd69e059ee5",
   "date": "2026-07-14"
  },
- "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial-holographic route)::1": {
-  "hash": "1df39d455fd4",
-  "date": "2026-07-21"
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
+  "hash": "cd9da1b08e51",
+  "date": "2026-07-22"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{WOIT.OS.TWISTOR.01} (the Osterwalder--Schrader twistor bridge)::1": {
+  "hash": "e496e8a344e3",
+  "date": "2026-07-22"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
   "hash": "0e935206f060",
@@ -736,8 +740,8 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "9dc9e97c557b",
-  "date": "2026-07-21"
+  "hash": "292ee0fa4de4",
+  "date": "2026-07-22"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
   "hash": "649048863210",
@@ -748,8 +752,8 @@
   "date": "2026-06-12"
  },
  "origin_theory::section::The unique attractor: a gapped transport selects ONE fixed point::1": {
-  "hash": "c467f45440fc",
-  "date": "2026-07-14"
+  "hash": "33ed86187ee7",
+  "date": "2026-07-22"
  },
  "origin_theory::section::One $\\ainv$ for electromagnetism, the cosmic horizon and $\\Lambda$::1": {
   "hash": "915ef1e6f23a",
@@ -776,8 +780,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "ea955077eb1f",
-  "date": "2026-07-21"
+  "hash": "8eaaf44269fd",
+  "date": "2026-07-22"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",
@@ -812,8 +816,8 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Layer 6 --- two independent reproduction paths::1": {
-  "hash": "f017c19b077b",
-  "date": "2026-07-21"
+  "hash": "c3915d3cfa35",
+  "date": "2026-07-22"
  },
  "tfpt_safeguards::section::Layer 7 --- the red team::1": {
   "hash": "0a2585467b1c",

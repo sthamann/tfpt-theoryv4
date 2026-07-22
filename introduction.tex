@@ -168,11 +168,15 @@ with a \emph{unique} fixed point (\vref{v6}/\vref{v56}) and \emph{zero} free adj
 Even $\pi$ is not a free dial: it is the fixed geometric constant of the boundary $2$-sphere
 ($\oint_{S^2}K=4\pi$), the one transcendental the continuous boundary contains. ``Which is the axiom?'' is the
 wrong question for a loop --- every part is fixed by the whole; the one remaining structural question, whether the loop
-also closes in the \emph{continuum} (the keystone \texttt{SEAM.EQUIV.01}), is now \emph{closed modulo a cited
-theorem} --- the lattice model and $S_3$ stack pin it at every computable level and it is Lean-formalised
+also closes in the \emph{continuum} (the keystone \texttt{SEAM.EQUIV.01}), now carries two named routes (route
+split 2026-07-22, an ID restructuring with \emph{no} status change in substance): its MMST route
+\texttt{SEAM.EQUIV.MMST.01} is \emph{closed modulo cited
+theorems} --- the lattice model and $S_3$ stack pin it at every computable level and it is Lean-formalised
 (\texttt{FORM.SEAM.MMST.01}); only the cited continuum-existence theorems stay \mO\ (\vref{v367}/\vref{v368},
 \vref{v376}--\vref{v379}, \vref{v336}), their extension leg since re-founded on peer-reviewed crossed-product
-theorems with the realisation input reduced to invariant level (\vref{v469}).
+theorems with the realisation input reduced to invariant level (\vref{v469}) --- while its twistor route
+\texttt{SEAM.EQUIV.TWISTOR.01} (the open Costello--Li construction, prepared by \texttt{CELEST.SEAM.01}) stays
+\mO; the parent \texttt{SEAM.EQUIV.01} is closed if either route closes and, as an unconditional claim, stays \mO.
 
 \subsection*{Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \texorpdfstring{(\mE)}{}}
 
@@ -213,18 +217,20 @@ half-period translation of the seam double), only its \emph{position} stays the 
 (\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}, markers unchanged); and that
 position half is now \emph{topology} --- the covering deck is free on the seam circle, the
 edge class is excluded, and the bit reduces to the square-modulus datum $\tau=i$ alone
-(\veri{v510\_seam\_bit\_freedom.py}, \texttt{SEAM.BIT.FREEDOM.01}, markers unchanged).
+(\veri{v510\_seam\_bit\_freedom.py}, \texttt{SEAM.BIT.FREEDOM.01}, markers unchanged); and that
+modulus datum now carries an equivalent \emph{discrete} form --- flag transitivity of the four marks
+(marks \emph{and} their two sides indistinguishable, $V_4\to D_4$) $\iff\tau=i$, a $12$-fold exact
+equivalence web in which bare mark-transitivity is automatic for every configuration and no local
+jet sees the side bit (\veri{v512\_seam\_tau\_flag.py}, \texttt{SEAM.TAU.FLAG.01}, markers
+unchanged).
 The genuine remaining axiom is therefore not ``why $a=(1,1,2)$'' but ``why the carrier
 $\gcar=5$ / $(|\mu_4|,\Nfam)=(4,3)$'' --- that interface (with $\cthree$), i.e.\ the weight-\emph{typing}
 postulate itself, is the \mO\ input layer (\texttt{AX.P2.01} stays a declared axiom). The consolidated
-reduction state (2026-07-21): the compiler's dimensionless inputs reduce to \emph{four marks} (derived
-from P1-side topology), \emph{one square-modulus datum} ($\tau=i$; equivalently the clock, the
-CM-fixed half-period, or the non-split extension class on the free seam circle) and $\pi$ --- a
-reduction state, not an abolition of the axiom.
-Consolidated (2026-07-21, text only): the compiler's dimensionless inputs reduce to \emph{four marks}
-(derived from P1-side topology), \emph{one square-modulus datum} $\tau=i$ (equivalently: the clock /
-the CM-fixed half-period / the non-split extension class on the free seam circle), and $\pi$ --- a
-reduction \emph{state}, not an abolition: \texttt{AX.P2.01} remains declared, and the \mC\
+reduction state (2026-07-22): the compiler's dimensionless inputs reduce to \emph{four marks} (derived
+from P1-side topology), \emph{one discrete symmetry-lift bit} (flag transitivity $\iff\tau=i$;
+equivalently the clock, the CM-fixed half-period, or the non-split extension class on the free seam
+circle) and $\pi$ --- a reduction state, not an abolition of the axiom:
+\texttt{AX.P2.01} remains declared, and the \mC\
 identifications R1/R2 of \vref{v499} remain conditional.
 \par\smallskip
 \noindent\emph{Two readings, one source (no contradiction).} P1 and P2 are the \emph{operational compiler
@@ -474,8 +480,10 @@ the ambient metric measure is \emph{holographically reduced} to a finite seam-\e
 tier B, \vref{v76}) --- which is in turn the rigorously-constructed $(E_8)_1$ lattice net (\vref{v77}), so $G_{\mathrm{metric}}$
 is imported into existing RCFT rigor rather than built anew. So the only genuine residuals are \emph{one}
 dimensionful scale $v_{\mathrm{geo}}$ --- the \emph{dimensional-analysis floor} that no theory escapes (\vref{v78}),
-shared by flavor and gravity --- the boundary net identification (now \emph{closed modulo a cited theorem},
-\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}), and the named QFT/cosmology transfer
+shared by flavor and gravity --- the boundary net identification (now \emph{closed modulo cited theorems} on its
+MMST route \texttt{SEAM.EQUIV.MMST.01},
+\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}; the parent
+\texttt{SEAM.EQUIV.01} stays \mO), and the named QFT/cosmology transfer
 interfaces ($F_{\mathrm{frontier}}$).
 \par\smallskip\noindent\textbf{Two points that are \emph{not} in the residual (closed, but easy to mis-list as open).}
 \emph{(i) Parameter-freeness is a theorem under the named hypotheses:} the boundary transport is gapped
@@ -524,7 +532,9 @@ existence and full-cone reflection positivity are discharged to \mE\ (\vref{v175
 three dimensions). The flavor selector and Q-geometry residues are \emph{derived} (no discrete freedom
 left). The \emph{one} seam-side identification, packaged as the single named
 theorem \texttt{SEAM.EQUIV.01} --- \emph{the raw reflection-positive seam state is the holomorphic
-$(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo a cited theorem}: the explicit lattice model
+$(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo cited theorems on its MMST route}
+(\texttt{SEAM.EQUIV.MMST.01}; the twistor route \texttt{SEAM.EQUIV.TWISTOR.01} and the unconditional parent stay
+\mO): the explicit lattice model
 (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP;
 \vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01}, with only
 the cited MMST/OS continuum-existence theorems left \mO\ (\vref{v336}); its conformal-deck premise
@@ -546,7 +556,7 @@ flavor absolute scale & \mE/\mO & ratios \emph{closed} (\vref{v49}/\vref{v71}); 
 $R+R^2$ gravity & \mE/\mC & covariant $f(R)$ field equation closed in regime; heat-kernel grounded (G2) \\
 Einstein eq.\ (covariant, local) & \mE/\mC & fixed-volume entanglement equilibrium $\Rightarrow$ \emph{full} $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$ with BOTH coefficients parameter-free: $8\pi{=}1/\cthree$ (\vref{v358}, thermo$=$geo via $|\mu_4|{=}|\Z_2|\chi{=}4$) and $\Lambda$ from $\alpha$ (\vref{v60}); Einstein tensor via Lovelock, conservation an output (\vref{v359}); residual $=$ equation-of-state status $+$ $v_{\mathrm{geo}}$, global measure (C7) now a \mC\ redundancy (\vref{v369}) \\
 physical QG sector & \mE/\mC & gap-decoupled admissible measure ($\Delta_{\mathrm{eff}}{=}1.648{>}0$) \\
-ambient QG measure & \mC\ (redundancy) & \textbf{certification object, not missing dynamics} (\vref{v369}; conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann): holographically reduced to a finite seam-\emph{boundary} measure (\vref{v76}); IR tier closed (decoupling); strict-TOE cert.\ $=$ the simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ (\vref{v154}); the free-bulk premise (A) is itself a fixed-point theorem with the cone eliminated (cone gap $=$ one-particle gap $(2/3)^6$) and factors into the $A_2$ net-existence $+$ the keystone \texttt{SEAM.EQUIV.01}, closed modulo a cited theorem --- zero new gates (\vref{v160}--\vref{v165}) \\
+ambient QG measure & \mC\ (redundancy) & \textbf{certification object, not missing dynamics} (\vref{v369}; conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann): holographically reduced to a finite seam-\emph{boundary} measure (\vref{v76}); IR tier closed (decoupling); strict-TOE cert.\ $=$ the simple-current extension $(D_5)_1{\otimes}(A_3)_1{\rtimes}\langle(1,1)\rangle\cong(E_8)_1$ (\vref{v154}); the free-bulk premise (A) is itself a fixed-point theorem with the cone eliminated (cone gap $=$ one-particle gap $(2/3)^6$) and factors into the $A_2$ net-existence $+$ the keystone \texttt{SEAM.EQUIV.01} (MMST route closed mod.\ cited; parent \mO) --- zero new gates (\vref{v160}--\vref{v165}) \\
 $v_{\mathrm{geo}}$ metrology unit & \mO (primitive) & No-Unit Theorem (\vref{v153}): a dimensionless compiler makes no absolute scale; $U_{\mathrm{point}}\sim v_{\mathrm{geo}}$, $1/G\sim v_{\mathrm{geo}}^2$, $m/\mu$ a ratio --- one unit, irreducible \\
 Koide & \mC & $Q_{\mathrm{src}}+\varphi_0/24$ source$\to$pole: typed runnable solver with kill test (QED-excluded, \vref{v371}) \\
 axion DM & \mC & $f_a=M_{\mathrm{scal}}/128$: finite-$T$ spine-branch typed runnable solver (\vref{v373}) \\
@@ -563,13 +573,17 @@ $E_8$ Lean & \mE & hardening, not a blocker (script-certified) \\
 \end{tabularx}
 \end{center}
 \markerkey
-\noindent Card addendum (2026-07-21): the $a=(1,1,2)$ residual now carries the consolidated P2
-reduction state --- the position half of the alignment bit is topology (\vref{v510}), so the
-dimensionless compiler inputs read \emph{four marks $+$ one square-modulus datum $\tau=i$ $+$ $\pi$}
+\noindent Card addendum (2026-07-22): the $a=(1,1,2)$ residual now carries the consolidated P2
+reduction state --- the position half of the alignment bit is topology (\vref{v510}) and the modulus
+half is one discrete symmetry-lift bit (flag transitivity $\iff\tau=i$, \vref{v512}), so the
+dimensionless compiler inputs read \emph{four marks $+$ one discrete symmetry-lift bit (flag
+transitivity $\iff\tau=i$) $+$ $\pi$}
 (\texttt{AX.P2.01} stays a declared axiom).
 \par\smallskip
 \noindent The former structural open core, the \emph{single} named keystone \texttt{SEAM.EQUIV.01} (the
-$G_{\mathrm{net}}$ inclusion: the raw RP seam $=(E_8)_1$ at $\tau{=}i$), is now \emph{closed modulo a cited theorem}:
+$G_{\mathrm{net}}$ inclusion: the raw RP seam $=(E_8)_1$ at $\tau{=}i$), is now \emph{closed modulo cited theorems
+on its MMST route} (\texttt{SEAM.EQUIV.MMST.01}; the twistor route \texttt{SEAM.EQUIV.TWISTOR.01} and the
+unconditional parent stay \mO):
 the explicit lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus
 $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, it is Lean-formalised as
 \texttt{FORM.SEAM.MMST.01}, and only the cited MMST/OS continuum-existence theorems stay \mO\ (\vref{v336}); its
@@ -595,9 +609,10 @@ rank-$8$ lattice). In abelian Chern--Simons language this is the single integer 
 $\Leftrightarrow\det K=1$, the extension tower $D_5{\oplus}A_3(16)\to D_8(4)\to E_8(1)$ being anyon
 condensation (the Kitaev $E_8$ state); the one analytic step ``the free RP seam condenses the
 order-$|\mu_4|$ Lagrangian glue'' $=$ the single named keystone \texttt{SEAM.EQUIV.01} (with
-\texttt{QGEO.SYM.01} its downstream conformal-deck face) is now \emph{closed modulo a cited theorem}
+\texttt{QGEO.SYM.01} its downstream conformal-deck face) is now \emph{closed modulo cited theorems} on its MMST
+route \texttt{SEAM.EQUIV.MMST.01}
 (\vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}, Lean \texttt{FORM.SEAM.MMST.01}; cited continuum existence \mO,
-\vref{v336}). So beneath the gate \emph{labels} there is,
+\vref{v336}; the parent \texttt{SEAM.EQUIV.01} stays \mO). So beneath the gate \emph{labels} there is,
 structurally, a single fundamental postulate. And the entire \emph{emergent-QFT layer} collapses onto the
 \emph{same} postulate (the \emph{Modular Spectral Closure}, \vref{v261}): the finite Dirac is a
 covariance induction of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS
@@ -884,8 +899,10 @@ numerological. (Audit level; all identities machine-verified.)
       S_{\mathrm{rel}})$ --- the \emph{Modular Spectral Closure}: the finite Dirac is a covariance induction
       of the seam KMS state (\vref{v258}), the spectral-action cutoff \emph{is} that KMS weight (\vref{v259}),
       the seam/carrier/$E_8$ live on one Kummer/K3 (\vref{v260}), all certified together (\vref{v261}) ---
-      closed modulo the single keystone \texttt{SEAM.EQUIV.01}, itself now \emph{closed modulo a cited theorem}
-      (lattice $+$ $S_3$ stack, Lean \texttt{FORM.SEAM.MMST.01}; \vref{v367}/\vref{v368}, \vref{v376}--\vref{v379}).
+      closed modulo the single keystone \texttt{SEAM.EQUIV.01}, whose MMST route \texttt{SEAM.EQUIV.MMST.01} is
+      \emph{closed modulo cited theorems}
+      (lattice $+$ $S_3$ stack, Lean \texttt{FORM.SEAM.MMST.01}; \vref{v367}/\vref{v368}, \vref{v376}--\vref{v379};
+      the unconditional parent stays \mO).
       \emph{What this does \emph{not} fully close:} the full
       measured pole masses (the absolute scale $v_{\mathrm{geo}}$ $+$ standard RG), the absolute QCD scales
       ($m_p/m_e$, now a typed \mC\ transfer, \vref{v374}), the complete PMNS dynamics (the angles are typed; the full
@@ -922,7 +939,7 @@ flavour matrix / H2 & \mE & dictionary \emph{exact} (hexagon $=$ twisted family 
 seam quantum clock (R1) & \mE/\mC & typed closed: reduced edge-sector clock (\vref{v124}--\vref{v133}); external VW edge $=2\times$ reduced budget, full 4d det $=$ firewall (\vref{v138}); det-ratio cancellation derived in-family (\vref{v144}) \\
 inflation $A_s,n_s,r$, scalaron $M$ & \mC & scalaron $M{=}\cthree^{7/2}\Mbar$ exact; $n_s,r$ are bands over $N_\star\in[50,60]$ (reheating point $51.4$, \vref{v86}) \\
 \midrule
-boundary QFT (Modular Spectral Closure) & \mE/\mC & \textbf{one relative object} $\mathsf{TFPT}_{\mathrm{QFT}}$: $D_F=$ covariance induction (\vref{v258}), cutoff $=$ KMS weight $f_2/f_0{=}1$ (\vref{v259}), seam/carrier/$E_8$ on one K3 (\vref{v260}), certified (\vref{v261}) --- closed modulo \texttt{SEAM.EQUIV.01}, itself closed modulo a cited theorem (\vref{v376}--\vref{v379}) \\
+boundary QFT (Modular Spectral Closure) & \mE/\mC & \textbf{one relative object} $\mathsf{TFPT}_{\mathrm{QFT}}$: $D_F=$ covariance induction (\vref{v258}), cutoff $=$ KMS weight $f_2/f_0{=}1$ (\vref{v259}), seam/carrier/$E_8$ on one K3 (\vref{v260}), certified (\vref{v261}) --- closed modulo \texttt{SEAM.EQUIV.01}, whose MMST route \texttt{SEAM.EQUIV.MMST.01} is closed modulo cited theorems (\vref{v376}--\vref{v379}; parent \mO) \\
 perturbative $4$D S-matrix ($S_{\mathrm{pert}}$) & \mE/\mC & \textbf{Epstein--Glaser-constructible} (\vref{v269}): one-loop quartic (\vref{v271}) $+$ gauge $\beta=(41/10,-19/6,-7)$ (\vref{v273}), $S_{\mathrm{pert}}\!\xrightarrow{\mathrm{LSZ}}\!S_{\mathrm{phys}}$ with one-loop unitarity (optical theorem, \vref{v278}); the spin-$2$ graviton sector is perturbatively unitary too --- the Stelle ghost is a Seeley--DeWitt truncation artefact (\vref{v304}/\vref{v370}/\vref{v380}) \\
 \midrule
 \multicolumn{3}{@{}l}{\textit{the actual TOE remainder --- dimensionful units, typed transfers, and the cited-theorem ceiling on the seam}}\\
@@ -930,7 +947,7 @@ QFT measure (admissible sector) & \mE & \textbf{closed: RP from cusp spectrum, O
 full measured pole masses & \mC & ladder $\times\,v_{\mathrm{geo}}$, dressed by standard RG (no new physics); $v_{\mathrm{geo}}$ over-determined (\vref{v274}) \\
 absolute QCD scales ($m_p/m_e$, $\Lambda_{\mathrm{QCD}}$) & \mC & typed runnable transfer with uncertainty budget (\vref{v374}, contract \texttt{FR.MPME.01}); not a compiler number \\
 full PMNS dynamics (mass scale, CP) & \mC/\mO & angles typed; CP strength $J_{\mathrm{PMNS}}{=}{-}0.0297$ derived (\vref{v270}); absolute $\nu$-scale $=$ one seesaw ratio (\vref{v272}); three named post-hoc \mO\ candidates: third-gen ladder-base (\vref{v467}), $\Delta m^2$ ratio $=|J|$ (\vref{v468}), carrier-normalised one-parameter seesaw (\vref{v481}) --- record unchanged \\
-\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mC & \textbf{closed modulo a cited theorem}: the explicit lattice model (\vref{v367}/\vref{v368}) and the $S_3$ stack ($c{=}8$, $248$ currents/$1$ primary, torus $\mathrm{GSD}{=}1$, RP; \vref{v376}--\vref{v379}) pin it at every computable level, Lean-formalised as \texttt{FORM.SEAM.MMST.01} (collar hypotheses kernel-proved, MMST/OS as named cited axioms, clean \texttt{\#print axioms}); the \emph{only} residual that stays \mO\ is the abstract continuum existence of the scaling limit (\vref{v336}); extension leg crossed-product-certified, realisation at invariant level (\vref{v469}) \\
+\textbf{(1)} \texttt{SEAM.EQUIV.01} --- one named theorem (\emph{raw seam $=(E_8)_1$ at $\tau{=}i$}) & \mO/\mC & \textbf{route split 2026-07-22: closed if MMST or TWISTOR route closes. MMST route \texttt{SEAM.EQUIV.MMST.01} closed modulo cited theorems}: lattice model (\vref{v367}/\vref{v368}) $+$ $S_3$ stack (\vref{v376}--\vref{v379}) pin it at every computable level, Lean \texttt{FORM.SEAM.MMST.01}; only residual \mO\ $=$ the cited continuum existence (\vref{v336}); extension leg certified (\vref{v469}). Twistor route \texttt{SEAM.EQUIV.TWISTOR.01} (Costello--Li, via \texttt{CELEST.SEAM.01}) \mO\ $\Rightarrow$ parent stays \mO\ as an unconditional claim \\
 \textbf{(2)} \texttt{QG.AMB.01} --- ambient measure (\emph{redundancy, not missing dynamics}) & \mC & \textbf{discharged as a redundancy} (\vref{v369}; \vref{v379} RP$\to$OS), conditional on \texttt{SEAM.EQUIV.01}${+}$Bisognano--Wichmann: a certification object, gap-decoupled (margin $1.648{>}0$, \vref{v330}/\vref{v335}) so no readout depends on it; obstruction characterised (\vref{v332}) $+$ conditionally resolved by GHP$+$IDG (\vref{v334}); Tier-B's holomorphy bit ($\det K{=}1$, \vref{v277}) is absorbed into \texttt{SEAM.EQUIV.01} \\
 analytic boundary origin of $\pi$ ($c_3{=}\tfrac1{8\pi}$) & \mC & \textbf{hardened: $c_3{=}1/(|\Z_2|\oint_{S^2}K)=1/(8\pi)$ (Gauss--Bonnet)}; ``$8$''${=}\operatorname{rank}E_8$; $\pi$ stays the one primitive \\
 $\eta_B$, $m_p/m_e$, Koide, dark matter & \mC & typed runnable transfer solvers with kill tests (\vref{v371}--\vref{v374}, observatory CI \vref{v375}; see document~4) \\
@@ -962,7 +979,9 @@ and the Barnes--Rivers decomposition (\vref{v370}) with the truncation tower dec
 bedrock reduces to one geometric postulate, \emph{the raw seam is the flat $\tau{=}i$ pillowcase} (\vref{v276}), with
 Tier-B's holomorphy bit $\det K{=}1$ (\vref{v277}) absorbed into \texttt{SEAM.EQUIV.01}.
 The former single open lemma, the named theorem \texttt{SEAM.EQUIV.01} --- \emph{the raw reflection-positive
-seam state is the holomorphic $(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo a cited theorem}. (The
+seam state is the holomorphic $(E_8)_1$ net at $\tau{=}i$} --- is now \emph{closed modulo cited theorems on its
+MMST route} \texttt{SEAM.EQUIV.MMST.01} (the twistor route \texttt{SEAM.EQUIV.TWISTOR.01} and the unconditional
+parent stay \mO). (The
 flat $\tau{=}i$ geometry and the $E_8$ holomorphy are \emph{two faces of one object}: the $(E_8)_1$ character is
 $\chi_{E_8}{=}j^{1/3}$, so $\chi_{E_8}(i){=}1728^{1/3}{=}12$ and $\tau{=}i$ is at once the order-$4$ CM point and the
 $(E_8)_1$ partition-function modulus, \vref{v282}.) The explicit lattice model (\vref{v367}/\vref{v368}) and the

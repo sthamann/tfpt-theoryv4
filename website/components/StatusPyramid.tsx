@@ -69,7 +69,7 @@ const LAYERS: Layer[] = [
     level: 6,
     label: "[C]/[O] Conditional & open",
     short: "Conditional / open",
-    examples: "masses · A_s, n_s, r · η_B · Koide · S_pert (EG, 1-loop unitary) · v_geo scale [O] · G_net [C] (SEAM.EQUIV.01, closed modulo cited; 128-spinor leg crossed-product certified, v469) · QG.AMB.01 [C] (redundancy)",
+    examples: "masses · A_s, n_s, r · η_B · Koide · S_pert (EG, 1-loop unitary) · v_geo scale [O] · G_net [C] (MMST route SEAM.EQUIV.MMST.01 closed modulo cited theorems, parent SEAM.EQUIV.01 [O], twistor route SEAM.EQUIV.TWISTOR.01 [O]; 128-spinor leg crossed-product certified, v469) · QG.AMB.01 [C] (redundancy)",
     tone: "from-amber-500 to-orange-600",
     ring: "ring-amber-400/40",
     text: "text-amber-50",

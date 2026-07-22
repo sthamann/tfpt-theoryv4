@@ -1,0 +1,57 @@
+{
+  "comment": "LIVE side of the watch. Update BY HAND when a new result appears (new JUNO release, SO/LiteBIRD beta, DESI DR3, NA62 final, CMB-S4 running...): add a new entry with source/date and set 'record': true on the entry that should drive the channel status (leave the old ones for history). Initial fill 2026-07-22 from the scorecard data_values / experiment measurement files. Convention: sigma_plus/sigma_minus for asymmetric errors; 'exclusion_sigma' for exclusion-type channels (w = -1); 'upper_limit' for limits.",
+  "channels": {
+    "sin2_theta12": [
+      {"record": true, "experiment": "JUNO first run (59.1 d)", "value": 0.3092, "sigma": 0.0087,
+       "source": "JUNO 2025 first oscillation result; mirrored in experiments/neutrino-mixing/data/measurements.json",
+       "date": "2025", "entered": "2026-07-22"},
+      {"record": false, "experiment": "NuFIT 6.0 (NO, 2024)", "value": 0.307, "sigma": 0.012,
+       "source": "arXiv:2410.05380 / www.nu-fit.org", "date": "2024-10", "entered": "2026-07-22"}
+    ],
+    "beta_birefringence_deg": [
+      {"record": true, "experiment": "ACT DR6", "value": 0.215, "sigma": 0.074,
+       "source": "ACT DR6 EB birefringence, arXiv:2509.13654 (systematics-limited: instrument-polarisation-angle calibration)",
+       "date": "2025-09", "entered": "2026-07-22"}
+    ],
+    "w_dark_energy": [
+      {"record": true, "experiment": "DESI DR2 + CMB + Union3 (frequentist)", "exclusion_sigma": 3.8,
+       "source": "DESI DR2 arXiv:2503.14738; strongest SURVIVING overlap-aware frequentist exclusion of w=-1 (Union3 not recalibrated; Bayesian only 2.23 sigma, arXiv:2603.05472)",
+       "date": "2025-03", "entered": "2026-07-22"},
+      {"record": false, "experiment": "DES-Dovekie + CMB + DESI DR2", "exclusion_sigma": 3.2,
+       "source": "arXiv:2511.07517 (DES-SN5YR calibration error found; 4.2 -> 3.2 sigma); details in experiments/dark-energy-w-watchdog/data/measurements.json",
+       "date": "2026", "entered": "2026-07-22"},
+      {"record": false, "experiment": "DESI DR2 + CMB only (Bayesian)", "exclusion_sigma": 0.0,
+       "source": "arXiv:2603.05472: ln B = -0.57 +- 0.26 favouring LCDM -- the CMB-only preference is ELIMINATED",
+       "date": "2026", "entered": "2026-07-22"}
+    ],
+    "br_kplus_pinunu": [
+      {"record": true, "experiment": "NA62 2016-2024", "value": 9.6e-11, "sigma_plus": 1.9e-11, "sigma_minus": 1.8e-11,
+       "source": "NA62 arXiv:2604.12649 (scorecard row 'rare kaon BR(K+ -> pi+ nu nu)')",
+       "date": "2026", "entered": "2026-07-22"}
+    ],
+    "alpha_s_running": [
+      {"record": true, "experiment": "P-ACT-LB (Planck+ACT+DESI-BAO combo)", "value": 0.0062, "sigma": 0.0052,
+       "source": "Calabrese+ 2025 JCAP (record leg per scorecard row 'inflation alpha_s')",
+       "date": "2025", "entered": "2026-07-22"},
+      {"record": false, "experiment": "Planck 2018 (TT,TE,EE+lowE+lensing)", "value": -0.0045, "sigma": 0.0067,
+       "source": "Planck 2018 X", "date": "2018", "entered": "2026-07-22"}
+    ],
+    "sin2_theta13": [
+      {"record": true, "experiment": "NuFIT 6.0 (NO, 2024; Daya Bay-dominated)", "value": 0.02195, "sigma": 0.00058,
+       "source": "arXiv:2410.05380 / www.nu-fit.org", "date": "2024-10", "entered": "2026-07-22"}
+    ],
+    "delta_pmns_deg": [
+      {"record": true, "experiment": "NuFIT 6.0 (NO best fit, w/ SK)", "value": 212.0, "sigma_plus": 26.0, "sigma_minus": 41.0,
+       "source": "arXiv:2410.05380; 3sigma range 124-364 deg", "date": "2024-10", "entered": "2026-07-22"}
+    ],
+    "n_s": [
+      {"record": true, "experiment": "Planck 2018", "value": 0.9649, "sigma": 0.0042,
+       "source": "Planck 2018 VI (scorecard row 'inflation n_s'); DESI-combined values run higher -- watch DR3",
+       "date": "2018", "entered": "2026-07-22"}
+    ],
+    "r_tensor": [
+      {"record": true, "experiment": "BICEP/Keck BK18", "upper_limit": 0.036,
+       "source": "BK18 r_0.05 < 0.036 (95% CL); CMB-S4 forecast sigma(r) ~ 5e-4", "date": "2021", "entered": "2026-07-22"}
+    ]
+  }
+}

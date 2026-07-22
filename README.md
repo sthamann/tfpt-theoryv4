@@ -95,8 +95,13 @@ problems**, not a diffuse list:
 | Interface | Question | Status |
 |---|---|---|
 | `v_geo` | the one metrology unit (`= 1/√G`); No-Unit Thm: a scale-invariant seam has no compiler scale | primitive `[O]` |
-| `SEAM.EQUIV.01` | the raw seam *is* the holomorphic `(E8)₁` net | `[C]` — closed modulo a cited theorem |
+| `SEAM.EQUIV.01` | the raw seam *is* the holomorphic `(E8)₁` net (parent target; closed if either route closes) | `[O]` as an unconditional claim |
+| `SEAM.EQUIV.MMST.01` | the MMST route: lattice + S3 stack + Lean, scaling limit cited | `[C]` — closed modulo cited theorems |
+| `SEAM.EQUIV.TWISTOR.01` | the twistor route: the open Costello–Li construction (prepared by `CELEST.SEAM.01`) | `[O]` |
 | `F_transfer` | one functor, four typed interfaces (Koide, `η_B`, axion, `m_p/m_e`) | `[C]` |
+
+(Route split 2026-07-22 — an ID restructuring, no status change in substance: the statements
+previously attached to "`SEAM.EQUIV.01` closed modulo a cited theorem" now live on the MMST route ID.)
 
 TFPT does **not** claim a certified Theory of Everything — the full treatment (parameter-free
 gravity, the all-orders perturbative leg, the `SEAM.EQUIV.01` status) is in
@@ -147,7 +152,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 505 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 509 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── website/               # the public mirror (fixpoint-theory.com), kept byte-identical by the audit
