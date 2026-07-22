@@ -24,11 +24,12 @@ import { cn } from "@/lib/utils";
 /**
  * Interactive changelog browser.
  *
- * The changelog has grown to hundreds of very long entries. The page pages by
- * DAY (latest first), lets you step between days, filter across every entry, and
- * — crucially — each entry is a collapsible card whose long summary is broken
- * into a readable title + numbered points instead of one wall of text. Inline
- * math is colour-tinted so formulas stand out from the surrounding prose.
+ * The changelog has hundreds of very long entries. The page pages by DAY
+ * (latest first), lets you step between days, and filter across every entry.
+ * Each entry is a collapsible card: a theory-area badge + a capitalised title +
+ * a plain quick summary up front, then the numbered key points and the detail
+ * log on expand. Inline formulas are KaTeX-rendered in a cyan tint so they
+ * stand out from the prose.
  *
  * Only the selected day's node trees are shipped from the server; a compact
  * index powers the global filter without shipping the full ~2 MB data.
@@ -47,6 +48,7 @@ export interface ChangelogIndexEntry {
   text: string;
   anchor: string;
   tags: string[];
+  area: string;
 }
 
 export interface ChangelogDayEntry {
@@ -55,6 +57,7 @@ export interface ChangelogDayEntry {
   heading: ChangelogNode[];
   items: ChangelogNode[][];
   anchor: string;
+  area: string;
 }
 
 interface Props {
@@ -96,13 +99,26 @@ const MARKER: Record<string, { cls: string; title: string }> = {
   },
 };
 
-const KINDS: { id: string; label: string }[] = [
-  { id: "module", label: "Modules (vN)" },
-  { id: "editorial", label: "Editorial" },
-  { id: "experiment", label: "Experiments" },
-];
-
 const MARKER_ORDER = ["E", "C", "O", "X"];
+
+/** Theory areas (navigational aid). Keys match classifyArea() in page.tsx. */
+const AREA_META: Record<string, { label: string; cls: string; dot: string }> = {
+  celestial: { label: "Celestial route", cls: "bg-violet-500/10 text-violet-200 ring-violet-400/30", dot: "bg-violet-400" },
+  seam: { label: "Seam & QGEO", cls: "bg-blue-500/10 text-blue-200 ring-blue-400/30", dot: "bg-blue-400" },
+  p2: { label: "P2 & carrier", cls: "bg-cyan-500/10 text-cyan-200 ring-cyan-400/30", dot: "bg-cyan-400" },
+  em: { label: "EM fixed point", cls: "bg-amber-500/10 text-amber-200 ring-amber-400/30", dot: "bg-amber-400" },
+  flavor: { label: "Flavor & masses", cls: "bg-emerald-500/10 text-emerald-200 ring-emerald-400/30", dot: "bg-emerald-400" },
+  gravity: { label: "Gravity & cosmology", cls: "bg-sky-500/10 text-sky-200 ring-sky-400/30", dot: "bg-sky-400" },
+  horizon: { label: "Horizon & BH", cls: "bg-indigo-500/10 text-indigo-200 ring-indigo-400/30", dot: "bg-indigo-400" },
+  experiment: { label: "Experiments", cls: "bg-rose-500/10 text-rose-200 ring-rose-400/30", dot: "bg-rose-400" },
+  infra: { label: "Infrastructure", cls: "bg-slate-500/10 text-slate-300 ring-slate-400/30", dot: "bg-slate-400" },
+  core: { label: "Compiler core", cls: "bg-fuchsia-500/10 text-fuchsia-200 ring-fuchsia-400/30", dot: "bg-fuchsia-400" },
+};
+
+const AREA_ORDER = [
+  "celestial", "seam", "p2", "em", "flavor",
+  "gravity", "horizon", "experiment", "infra", "core",
+];
 
 function StatusMarker({ value }: { value: string }) {
   const m = MARKER[value] ?? MARKER.O;
@@ -115,6 +131,21 @@ function StatusMarker({ value }: { value: string }) {
       )}
     >
       [{value}]
+    </span>
+  );
+}
+
+function AreaBadge({ area }: { area: string }) {
+  const m = AREA_META[area] ?? AREA_META.core;
+  return (
+    <span
+      className={cn(
+        "inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[0.7rem] font-medium ring-1",
+        m.cls,
+      )}
+    >
+      <span aria-hidden className={cn("h-1.5 w-1.5 rounded-full", m.dot)} />
+      {m.label}
     </span>
   );
 }
@@ -184,10 +215,7 @@ function renderNodes(
 }
 
 // --------------------------------------------------------------------------
-// Heading structuring: split the long single-paragraph summary into a short
-// title (up to the first ": ") and a body, then split the body at the "(1) (2)
-// (3) …" enumerators into numbered points. Both are graceful no-ops when the
-// pattern is absent.
+// Heading structuring helpers
 // --------------------------------------------------------------------------
 
 function trimNodes(nodes: ChangelogNode[]): ChangelogNode[] {
@@ -202,6 +230,24 @@ function trimNodes(nodes: ChangelogNode[]): ChangelogNode[] {
   return out.filter((n) => !(n.k === "t" && n.v === ""));
 }
 
+/** Upper-case the first alphabetic character of the first leading text node. */
+function capitalizeNodes(nodes: ChangelogNode[]): ChangelogNode[] {
+  const out = nodes.map((n) => ({ ...n }));
+  for (const n of out) {
+    if (n.k === "t" && n.v) {
+      if (/[A-Za-z]/.test(n.v)) {
+        n.v = n.v.replace(/^([^A-Za-z]*)([a-z])/, (_, pre, ch) => pre + ch.toUpperCase());
+        break;
+      }
+      // leading text without letters (punctuation) -> keep scanning
+      continue;
+    }
+    // starts with code / math / bold -> already fine, leave as is
+    break;
+  }
+  return out;
+}
+
 function splitHeading(nodes: ChangelogNode[]): {
   title: ChangelogNode[];
   body: ChangelogNode[];
@@ -210,8 +256,6 @@ function splitHeading(nodes: ChangelogNode[]): {
     const nd = nodes[i];
     if (nd.k === "t" && nd.v) {
       const m = /:\s/.exec(nd.v);
-      // ignore a colon that sits too early (e.g. inside "note:") — require some
-      // headline length so the title is meaningful.
       if (m && (i > 0 || m.index > 12)) {
         const before = nd.v.slice(0, m.index);
         const after = nd.v.slice(m.index + m[0].length);
@@ -232,6 +276,7 @@ interface Segment {
   nodes: ChangelogNode[];
 }
 
+/** Split at "(1) (2) (3) …" or "(Ä1) (Ä2) …" enumerators into numbered points. */
 function splitEnumerated(nodes: ChangelogNode[]): Segment[] {
   const segs: Segment[] = [];
   let cur: Segment = { nodes: [] };
@@ -240,18 +285,19 @@ function splitEnumerated(nodes: ChangelogNode[]): Segment[] {
     if (trimmed.length || cur.label) segs.push({ label: cur.label, nodes: trimmed });
     cur = { nodes: [] };
   };
+  const RE = /\((?:Ä|Ae)?(\d+)\)\s*/g;
   for (const nd of nodes) {
-    if (nd.k === "t" && nd.v && /\(\d+\)/.test(nd.v)) {
+    if (nd.k === "t" && nd.v && RE.test(nd.v)) {
+      RE.lastIndex = 0;
       const text = nd.v;
-      const re = /\((\d+)\)\s*/g;
       let last = 0;
       let m: RegExpExecArray | null;
-      while ((m = re.exec(text)) !== null) {
+      while ((m = RE.exec(text)) !== null) {
         const chunk = text.slice(last, m.index);
         if (chunk) cur.nodes.push({ k: "t", v: chunk });
         flush();
         cur = { label: m[1], nodes: [] };
-        last = re.lastIndex;
+        last = RE.lastIndex;
       }
       const tail = text.slice(last);
       if (tail) cur.nodes.push({ k: "t", v: tail });
@@ -261,6 +307,19 @@ function splitEnumerated(nodes: ChangelogNode[]): Segment[] {
   }
   flush();
   return segs;
+}
+
+/** Peel a leading "(Ä1)" / "(1)" style label off a detail bullet. */
+function peelLabel(nodes: ChangelogNode[]): { label?: string; nodes: ChangelogNode[] } {
+  if (nodes.length && nodes[0].k === "t" && nodes[0].v) {
+    const m = /^\((?:Ä|Ae)?(\d+)\)\s*/.exec(nodes[0].v);
+    if (m) {
+      const rest = nodes.map((n) => ({ ...n }));
+      rest[0] = { ...rest[0], v: nodes[0].v!.slice(m[0].length) };
+      return { label: m[1], nodes: trimNodes(rest) };
+    }
+  }
+  return { nodes };
 }
 
 export function ChangelogBrowser({
@@ -274,18 +333,24 @@ export function ChangelogBrowser({
   const pathname = usePathname();
 
   const [query, setQuery] = useState("");
-  const [activeKinds, setActiveKinds] = useState<Set<string>>(new Set());
+  const [activeAreas, setActiveAreas] = useState<Set<string>>(new Set());
   const [activeMarkers, setActiveMarkers] = useState<Set<string>>(new Set());
   const [open, setOpen] = useState<Set<string>>(new Set());
 
   const filtering =
-    query.trim() !== "" || activeKinds.size > 0 || activeMarkers.size > 0;
+    query.trim() !== "" || activeAreas.size > 0 || activeMarkers.size > 0;
 
   const dayIdx = days.findIndex((d) => d.date === selectedDay);
   const olderDay = dayIdx >= 0 ? days[dayIdx + 1] : undefined;
   const newerDay = dayIdx > 0 ? days[dayIdx - 1] : undefined;
 
-  // Pre-structure each entry once (title / numbered points / detail bullets).
+  // Areas that actually occur (for the filter row).
+  const presentAreas = useMemo(() => {
+    const set = new Set(index.map((e) => e.area));
+    return AREA_ORDER.filter((a) => set.has(a));
+  }, [index]);
+
+  // Pre-structure each entry once (title / summary / numbered points).
   const structured = useMemo(
     () =>
       entries.map((entry) => {
@@ -294,16 +359,18 @@ export function ChangelogBrowser({
         const hasPoints = segs.filter((s) => s.label).length >= 2;
         return {
           ...entry,
-          title,
-          lead: hasPoints ? segs[0]?.nodes ?? [] : body,
-          points: hasPoints ? segs.filter((s) => s.label) : [],
+          title: capitalizeNodes(title),
+          summary: capitalizeNodes(hasPoints ? segs[0]?.nodes ?? [] : body),
+          points: hasPoints
+            ? segs
+                .filter((s) => s.label)
+                .map((s) => ({ label: s.label, nodes: capitalizeNodes(s.nodes) }))
+            : [],
         };
       }),
     [entries],
   );
 
-  // Default: the newest entry of the day open, the rest collapsed. Reset on day
-  // change; auto-open a hash-linked entry.
   useEffect(() => {
     const hash = window.location.hash?.slice(1);
     const first = entries[0]?.anchor;
@@ -313,7 +380,6 @@ export function ChangelogBrowser({
     setOpen(init);
   }, [selectedDay, entries]);
 
-  // Scroll to a hash-linked entry after the day view renders.
   useEffect(() => {
     if (filtering) return;
     const hash = window.location.hash?.slice(1);
@@ -333,13 +399,12 @@ export function ChangelogBrowser({
     const q = query.trim().toLowerCase();
     return index.filter((e) => {
       if (q && !e.text.includes(q)) return false;
-      if (activeKinds.size > 0 && ![...activeKinds].some((k) => e.tags.includes(k)))
-        return false;
+      if (activeAreas.size > 0 && !activeAreas.has(e.area)) return false;
       if (activeMarkers.size > 0 && ![...activeMarkers].some((m) => e.tags.includes(m)))
         return false;
       return true;
     });
-  }, [filtering, query, activeKinds, activeMarkers, index]);
+  }, [filtering, query, activeAreas, activeMarkers, index]);
 
   function goToDay(date: string) {
     router.push(`${pathname}?day=${date}`, { scroll: true });
@@ -347,7 +412,7 @@ export function ChangelogBrowser({
 
   function clearFilters() {
     setQuery("");
-    setActiveKinds(new Set());
+    setActiveAreas(new Set());
     setActiveMarkers(new Set());
   }
 
@@ -443,22 +508,23 @@ export function ChangelogBrowser({
             )}
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {KINDS.map((k) => {
-              const on = activeKinds.has(k.id);
+          <div className="flex flex-wrap items-center gap-1.5">
+            {presentAreas.map((a) => {
+              const meta = AREA_META[a];
+              const on = activeAreas.has(a);
               return (
                 <button
-                  key={k.id}
+                  key={a}
                   type="button"
-                  onClick={() => setActiveKinds((s) => toggle(s, k.id))}
+                  onClick={() => setActiveAreas((s) => toggle(s, a))}
                   className={cn(
-                    "rounded-full px-3 py-1 text-xs font-medium ring-1 transition-colors",
-                    on
-                      ? "bg-blue-500/15 text-blue-200 ring-blue-400/40"
-                      : "text-slate-400 ring-slate-700/50 hover:bg-white/5 hover:text-slate-200",
+                    "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ring-1 transition-opacity",
+                    meta.cls,
+                    on ? "opacity-100" : "opacity-45 hover:opacity-80",
                   )}
                 >
-                  {k.label}
+                  <span aria-hidden className={cn("h-1.5 w-1.5 rounded-full", meta.dot)} />
+                  {meta.label}
                 </button>
               );
             })}
@@ -512,11 +578,7 @@ export function ChangelogBrowser({
                       >
                         {formatDay(r.date)}
                       </time>
-                      {r.enumr && (
-                        <span className="rounded bg-slate-800/70 px-1.5 py-0.5 font-mono text-[0.65rem] text-slate-400">
-                          {r.enumr}
-                        </span>
-                      )}
+                      <AreaBadge area={r.area} />
                     </div>
                     <p className="text-sm leading-relaxed text-slate-300 group-hover:text-slate-200">
                       {r.lead}
@@ -543,7 +605,7 @@ export function ChangelogBrowser({
               <button
                 type="button"
                 onClick={() => setAll(!allOpen)}
-                className="text-xs font-medium text-slate-400 ring-1 ring-slate-700/50 rounded-full px-3 py-1 transition-colors hover:bg-white/5 hover:text-slate-200"
+                className="rounded-full px-3 py-1 text-xs font-medium text-slate-400 ring-1 ring-slate-700/50 transition-colors hover:bg-white/5 hover:text-slate-200"
               >
                 {allOpen ? "Collapse all" : "Expand all"}
               </button>
@@ -554,62 +616,76 @@ export function ChangelogBrowser({
             {structured.map((entry) => {
               const isOpen = open.has(entry.anchor);
               return (
-                <li
-                  key={entry.anchor}
-                  id={entry.anchor}
-                  className="scroll-mt-24"
-                >
+                <li key={entry.anchor} id={entry.anchor} className="scroll-mt-24">
                   <article className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
                     <button
                       type="button"
                       onClick={() => toggleOpen(entry.anchor)}
                       aria-expanded={isOpen}
-                      className="flex w-full items-start gap-3 px-5 py-4 text-left transition-colors hover:bg-white/[0.02] sm:px-6"
+                      className="flex w-full flex-col gap-2 px-5 py-4 text-left transition-colors hover:bg-white/[0.02] sm:px-6"
                     >
-                      {entry.enumr && (
-                        <span className="mt-0.5 shrink-0 rounded bg-slate-800/70 px-2 py-0.5 font-mono text-xs font-semibold text-slate-300">
-                          {entry.enumr}
-                        </span>
-                      )}
+                      <div className="flex items-center gap-2">
+                        <AreaBadge area={entry.area} />
+                        {entry.enumr && (
+                          <span className="rounded bg-slate-800/70 px-1.5 py-0.5 font-mono text-[0.65rem] font-semibold text-slate-400">
+                            {entry.enumr}
+                          </span>
+                        )}
+                        <ChevronDown
+                          size={18}
+                          aria-hidden
+                          className={cn(
+                            "ml-auto shrink-0 text-slate-500 transition-transform",
+                            isOpen && "rotate-180",
+                          )}
+                        />
+                      </div>
                       <div
                         className={cn(
-                          "min-w-0 flex-1 text-[0.95rem] font-medium leading-relaxed text-slate-100",
+                          "text-[0.98rem] font-semibold leading-snug text-slate-100",
                           !isOpen && "line-clamp-2",
                         )}
                       >
                         {renderNodes(entry.title, macros)}
                       </div>
-                      <ChevronDown
-                        size={18}
-                        aria-hidden
-                        className={cn(
-                          "mt-1 shrink-0 text-slate-500 transition-transform",
-                          isOpen && "rotate-180",
-                        )}
-                      />
+                      {!isOpen && entry.summary.length > 0 && (
+                        <div className="line-clamp-2 text-sm leading-relaxed text-slate-400">
+                          {renderNodes(entry.summary, macros)}
+                        </div>
+                      )}
                     </button>
 
                     {isOpen && (
                       <div className="border-t border-slate-800/60 px-5 pb-5 pt-4 sm:px-6">
-                        {entry.lead.length > 0 && (
-                          <p className="text-sm leading-7 text-slate-300">
-                            {renderNodes(entry.lead, macros)}
-                          </p>
+                        {entry.summary.length > 0 && (
+                          <div className="rounded-xl border border-slate-800/50 bg-slate-900/40 px-4 py-3">
+                            <p className="mb-1.5 text-[0.7rem] font-semibold uppercase tracking-wider text-slate-500">
+                              Summary
+                            </p>
+                            <p className="text-sm leading-7 text-slate-200">
+                              {renderNodes(entry.summary, macros)}
+                            </p>
+                          </div>
                         )}
 
                         {entry.points.length > 0 && (
-                          <ol className="mt-4 space-y-2.5">
-                            {entry.points.map((p, k) => (
-                              <li key={k} className="flex gap-3">
-                                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500/15 font-mono text-[0.7rem] font-semibold text-blue-200 ring-1 ring-blue-400/30">
-                                  {p.label}
-                                </span>
-                                <div className="min-w-0 flex-1 text-sm leading-7 text-slate-300">
-                                  {renderNodes(p.nodes, macros)}
-                                </div>
-                              </li>
-                            ))}
-                          </ol>
+                          <div className="mt-4">
+                            <p className="mb-2.5 text-[0.7rem] font-semibold uppercase tracking-wider text-slate-500">
+                              Key points
+                            </p>
+                            <ol className="space-y-2.5">
+                              {entry.points.map((p, k) => (
+                                <li key={k} className="flex gap-3">
+                                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-500/15 font-mono text-[0.7rem] font-semibold text-blue-200 ring-1 ring-blue-400/30">
+                                    {p.label}
+                                  </span>
+                                  <div className="min-w-0 flex-1 text-sm leading-7 text-slate-300">
+                                    {renderNodes(p.nodes, macros)}
+                                  </div>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
                         )}
 
                         {entry.items.length > 0 && (
@@ -618,14 +694,29 @@ export function ChangelogBrowser({
                               Details
                             </p>
                             <ul className="space-y-3">
-                              {entry.items.map((item, j) => (
-                                <li
-                                  key={j}
-                                  className="relative pl-4 text-sm leading-7 text-slate-400 before:absolute before:left-0 before:top-[0.7em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600"
-                                >
-                                  {renderNodes(item, macros)}
-                                </li>
-                              ))}
+                              {entry.items.map((item, j) => {
+                                const { label, nodes } = peelLabel(item);
+                                return (
+                                  <li
+                                    key={j}
+                                    className={cn(
+                                      "text-sm leading-7 text-slate-400",
+                                      label
+                                        ? "flex gap-2.5"
+                                        : "relative pl-4 before:absolute before:left-0 before:top-[0.7em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600",
+                                    )}
+                                  >
+                                    {label && (
+                                      <span className="mt-0.5 shrink-0 rounded bg-slate-800/70 px-1.5 py-0.5 font-mono text-[0.65rem] font-semibold text-slate-400">
+                                        {label}
+                                      </span>
+                                    )}
+                                    <div className={label ? "min-w-0 flex-1" : undefined}>
+                                      {renderNodes(nodes, macros)}
+                                    </div>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </div>
                         )}

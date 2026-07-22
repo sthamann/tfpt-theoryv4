@@ -84,6 +84,31 @@ function hasModuleCode(nodes: ChangelogNode[]): boolean {
 const EXPERIMENT_RE = /experiments?\s+level\s+only|experiment-level|experiments\//i;
 const EDITORIAL_RE = /\beditorial\b/i;
 
+/** Assign an entry to a theory area from its claim ids / keywords. Heuristic
+ *  navigational aid (not a load-bearing claim); first match wins. `text` is the
+ *  already-lowercased search blob. */
+function classifyArea(text: string, tags: string[]): string {
+  if (/celest\.|celestial|twistor|\bwp5|bcov|\bwoit\b|costello|burns holograph/.test(text))
+    return "celestial";
+  if (/seam\.|seam\b|qgeo|pillowcase|\bclock\b|m(?:ö|oe)bius|\bfock\b|orbifold|\bdeck\b|kronheimer|steklov|\bmarks?\b/.test(text))
+    return "seam";
+  if (/\bp2\.|ax\.p2|\bcarrier\b|g_car|g_\{|partition corollary|deligne|weight[- ]typing/.test(text))
+    return "p2";
+  if (/alpha\.quillen|em\.ward|fine-structure|quillen|determinant line/.test(text))
+    return "em";
+  if (/flav\.|fr\.rarekaon|\bckm\b|koide|yukawa|\bpmns\b|lepton|quark|neutrino|\bkaon\b|jarlskog|cabibbo|seesaw|clebsch/.test(text))
+    return "flavor";
+  if (/cosmo\.|gravit|einstein|\blambda\b|inflation|leptogenesis|axion|n_s|scalaron|entropic|hubble|\bh_?0\b|reheating|running/.test(text))
+    return "gravity";
+  if (/\bhor\.|horizon|nariai|black[- ]hole|\bbh\b|\beht\b/.test(text))
+    return "horizon";
+  if (tags.includes("experiment") || /\bfrb\b|pulsar|\brxte\b|\bnicer\b|hfqpo|glitch|\bvela\b|recovery-comb|e8-ladder|efimov|burst/.test(text))
+    return "experiment";
+  if (tags.includes("editorial") || /registry|manifest|wolfram|website|currency sweep|cross-reference|gitignore|consolidation/.test(text))
+    return "infra";
+  return "core";
+}
+
 /** Extract the enumerator (e.g. "XXIII") that make_changelog_web.py appends to
  *  the date label as "YYYY-MM-DD · XXIII". */
 function enumOf(label: string): string {
@@ -107,6 +132,7 @@ interface DerivedEntry {
   lead: string;
   text: string;
   tags: string[];
+  area: string;
 }
 
 function deriveEntry(entry: (typeof CHANGELOG)[number], gi: number): DerivedEntry {
@@ -134,6 +160,8 @@ function deriveEntry(entry: (typeof CHANGELOG)[number], gi: number): DerivedEntr
         ? nodesToText(entry.items[0])
         : "";
 
+  const text = clip(fullText, 900).toLowerCase();
+
   return {
     gi,
     date: entry.date,
@@ -143,8 +171,9 @@ function deriveEntry(entry: (typeof CHANGELOG)[number], gi: number): DerivedEntr
     items: entry.items,
     anchor: `cl-${gi}`,
     lead: clip(leadSource, 220),
-    text: clip(fullText, 900).toLowerCase(),
+    text,
     tags,
+    area: classifyArea(text, tags),
   };
 }
 
@@ -180,6 +209,7 @@ export default async function ChangelogPage({
       heading: e.heading,
       items: e.items,
       anchor: e.anchor,
+      area: e.area,
     }));
 
   const index: ChangelogIndexEntry[] = derived.map((e) => ({
@@ -190,6 +220,7 @@ export default async function ChangelogPage({
     text: e.text,
     anchor: e.anchor,
     tags: e.tags,
+    area: e.area,
   }));
 
   return (
