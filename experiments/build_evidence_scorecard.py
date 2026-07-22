@@ -1270,7 +1270,10 @@ ROWS = [
      "rungs, chi2/dof=0.52, p=0.0038 (m7/m8 outside the 0.6-THz window; the 0.43-THz "
      "(m1+m2)-onset correctly left unassigned); control battery all rejected: scramble "
      "0.5%/1.5%, offset 0/8, jitter <=5% at destructive 30%, harmonic/A3-PF/D8-PF/Airy "
-     "wrong ladders beaten, synthetic Airy bed 0 rungs; Cartan-PF self-test 1.5e-15",
+     "wrong ladders beaten, synthetic Airy bed 0 rungs; Cartan-PF self-test 1.5e-15; "
+     "2026-07-21 v2: CoNb2O6 6/8 unchanged; 2DCS extension killed at detector level "
+     "(scramble 27%, jitter 18% @30%); KA 8/8 incl. m7/m8 via F3, p=2e-4; no "
+     "experimental 2DCS data exists (arXiv:2512.16829 theory-only)",
      None, "search_target",
      "analog only (ladder-detector validation on published spectra; validates the "
      "ladder-detector pipeline for TFPT searches, e.g. hfqpo-ladder)",
@@ -1431,7 +1434,9 @@ OVERRIDES: dict[str, dict] = {
     # positive control of the Cartan-PF ladder detector on published Zamolodchikov-E8
     # spectra -- validates the ladder-detector pipeline; confirms Zamolodchikov E8, not
     # TFPT axioms -- no [E], no veri. Same basket as qc-recovery-kernel / qgeo-eit-soff
-    # (never nature evidence).
+    # (never nature evidence). 2026-07-21: 2DCS extension (amendment v2/v2.1) killed at
+    # detector level (kill_2d, results2d.json); v1 verdict and this row's status/stage
+    # unchanged.
     "E8 mass-ladder blind recovery bed":
         {"validation_tier": "analog_positive_control",
          "signature_code": "detector-control",
@@ -1440,7 +1445,9 @@ OVERRIDES: dict[str, dict] = {
          "transduction_B": "published INS/THz spectra; detector reads peak positions only",
          "projection_nonzero": "not_a_tfpt_projection",
          "status_note": "validates the ladder-detector pipeline; confirms Zamolodchikov "
-                        "E8, not TFPT axioms -- no [E], no veri"},
+                        "E8, not TFPT axioms -- no [E], no veri; amendment v2/v2.1 "
+                        "preregistered+disclosed; real-data leg blocked; v3 would need "
+                        "coincidence-based coverage, preregistered before data"},
     "muon g-2 Delta a_mu (WP2020 dispersive)": {"alternative_group": "HVP_baseline"},
     "muon g-2 Delta a_mu (WP2025 lattice)": {"alternative_group": "HVP_baseline"},
     "axion haloscope marker": {"alternative_group": "axion_branch"},

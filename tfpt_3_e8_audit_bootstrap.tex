@@ -1137,9 +1137,9 @@ The previous section identified the seam's boundary $2$-sphere with the celestia
 directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
-Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent twelve-step
-story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$ and
-$\gamma$ stages of the research contract
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent fourteen-step
+story --- executed as work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$,
+$\gamma$, $\delta_2$ and $\varepsilon_2$ stages of the research contract
 \texttt{CELEST.SEAM.01}, whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
 step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
@@ -1184,7 +1184,8 @@ the deck $z\mapsto-z$ has exactly two M\"obius square roots ($z\mapsto\pm iz$), 
 order $4$, and a marks-preserving root exists \emph{iff} the deck is the \emph{central} involution of
 the mark-stabiliser $D_4$ --- given that alignment bit, order, uniqueness up to $\operatorname{Aut}(\Z_4)$,
 the free $4$-cycle and $\tau=i$ (scale free) are all theorems; harmonicity alone is \emph{not} enough
-(exact counterexample), and the fermionic $\Z_4$ forces the \emph{order}, not the alignment
+on bare mark data (exact counterexample --- though on free-deck circles it becomes sufficient, see
+below), and the fermionic $\Z_4$ forces the \emph{order}, not the alignment
 (\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01}; markers unchanged). The bit
 itself has now survived its tautology attack: marks and deck \emph{do} share one torus origin ---
 the marks are the four half-periods $\Lambda/2\Lambda$ of the seam double, and \emph{every}
@@ -1200,7 +1201,19 @@ and deck central) $\iff$ harmonic deck pairs $\iff$ \emph{nonsplit} NS Fock lift
 face: the central arrangement carries the nontrivial Fidkowski--Kitaev-type extension class
 ($U^2=(-1)^F$), the edge arrangement splits ($U_e^2=+1$, zero roots, no $\Z_8$ tower); only the
 \emph{position} (which half-period) stays the carrier input
-(\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}; no marker moves).
+(\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}; no marker moves). And that position
+half is now \emph{topology}: the collar deck is the deck transformation of a \emph{covering} (the
+$\Z_2$ seam of the M\"obius double), and covering decks act freely --- on the seam circle the unique
+free involution is the antipode ($\operatorname{Aut}(C_{16})=D_{16}$, complete census; every
+reflection has two circle fixed points, and its quotient is an \emph{interval}, breaking the
+closed-circle $6\pi$ budget), the NS Fock lift is nonsplit \emph{iff} the deck is free (all $17$
+involutions in exact $\mathrm{Cl}(16)$), and the edge/silver arrangement --- whose mark-fixing real
+structure has its fix circle \emph{through} the deck poles --- is the restriction of the
+\emph{branched} pillowcase involution, not a covering deck: excluded. On free-deck circles
+``harmonic'' already solves to $b=\pm i$, so the alignment bit reduces from ``harmonic \emph{and}
+central'' to the square-modulus datum $\tau=i$ alone --- the position half is topology, the modulus
+half stays the one carrier input
+(\veri{v510\_seam\_bit\_freedom.py}, \texttt{SEAM.BIT.FREEDOM.01}; markers unchanged).
 
 \par\smallskip\noindent\textbf{Step 3 --- consistency, honestly demoted \mE/\mC.}
 $E_8$ is on Costello's axionic-consistency list (no
@@ -1302,7 +1315,8 @@ $32\,T_3$ --- twisted-sector closed strings must carry the rest. The \emph{index
 centrepiece: $f(m)=\mathrm{ch}_2(T_m)$ exactly (fixed-point ledger $=$ McKay/Kronheimer
 intersection ledger), with the integral glue defect $-78$ by both routes; the level dials say
 $k=1$ \emph{geometrically} (lattice current count $240/0/0/0$, embedding residual
-$(0,360,814,1362)$, one scale $\Rightarrow$ one level). And an honest \emph{refutation}: the
+$(0,360,814,1362)$, one scale $\Rightarrow$ one level --- since Step 13 a \emph{theorem}, no
+longer a heuristic). And an honest \emph{refutation}: the
 clock-invariant modulus $a_0$ fills the BSS \emph{graviton} slot $O(2)$, \emph{not} the axion slot
 $O(-2)$ (weight mismatch $4=|\mu_4|$) --- ``the theory brings its own GS axion as $a_0$'' is
 false; instead the three $H^2(\mathrm{ALE})$ classes carry exactly the three twisted-sector
@@ -1336,21 +1350,90 @@ the twisted BCOV contact terms, with a \emph{binary} criterion: the one-loop coe
 $\mathbb C^2/\Z_4$ must come out exactly $(9,-30,-15,0,32)$, computed, not fitted.
 \veri{v508\_celestial\_wp5e\_gamma\_pairing.py}
 
+\par\smallskip\noindent\textbf{Step 13 --- one level is a theorem; the sector counter pins $k=1$
+\mE/\mC.} The Costello--Paquette--Sharma level-from-flux mechanism (Burns holography: ``level $=$
+flux quantum $\times$ Dynkin index of the boundary matter'') is executed on the lockstep spheres.
+The CPS skeleton is replicated exactly ($S^3$ period $(2\pi i)^2N$; exceptional-sphere K\"ahler
+flux $2\pi N$; boundary level magnitude $2N$ by the symplectic-boson contraction, $T(\text{vector})=1$),
+and the geometric side is \emph{pinned, not postulated}: the Step-11 $\mathrm{ch}_2$ ledger $+$
+integrality $+$ unimodularity $+$ effectivity force the pairing matrix
+$c_1(T_m).[\Sigma_i]=\delta_{mi}$ by complete enumeration ($48$ unimodular solutions, exactly $2$
+effective: identity $+$ diagram flip), so the glue fluxes are $F_i=(64,60,64)=\dim\mathfrak g_i$
+with \emph{exactly one} quantum per charged root current. The consistency test then does real
+work: ``level $=$ total open-string flux'' is \emph{killed by the lockstep test itself} (three
+unequal numbers --- $F_i$ is the flavour multiplicity), while ``level $=$ flux per adjoint
+current'' gives $(1,1,1)$, anchored by the lattice current count $(240,0,0,0)$ and the embedding
+index $1$. The ord-$4$-vs-level-$1$ tension resolves --- the clock order counts \emph{fractional
+flux sectors} ($\mu=16=\mathrm{ord}^2$, Lagrangian $\mu_4$ glue, KLM $16\to1$) --- and a new dial
+pins the value: $\#\mathrm{primaries}((E_8)_k)=(1,3,5,10,15,27)$ for $k=1..6$, exactly \emph{one}
+sector iff $k=1$. The centrepiece is the \emph{lockstep theorem}, lifting Step 11's ``one scale
+$\Rightarrow$ one level'' from heuristic to theorem: clock invariance forces the four branch
+points into one $\mu_4$ orbit, the period moduli $|\Pi_j|=\sqrt2\,t$ are equal on all three
+spheres, and $\det(A-1)=-4$ leaves no invariant flux vector --- $k_1=k_2=k_3$ \emph{is a theorem}
+of clock invariance, with a new falsifier (the clock-forbidden family $Z^4{-}Z$: zero lockstep
+chains over all $24$ orderings) and an honest limit (uniform doubling keeps the lockstep: the
+theorem proves \emph{equality}, the value $1$ comes from the counters). Controls: $k=2$ dies on
+the closure dials while the lockstep dial honestly does not fire; $SO(16)$ leaves two spheres
+flux-dark; $A_2$ admits no Lagrangian glue at all ($\mu=12$ not a square). The CPS dictionary on
+$\mathbb{PT}/\Z_4$ itself stays \mC\ (their geometry is the $\mathbb C^2$ blow-up, not the $A_3$
+ALE); the type-I B-model back-reaction stays \mO.
+\veri{v509\_celestial\_wp5e\_eps2\_level\_from\_flux.py}
+
+\par\smallskip\noindent\textbf{Step 14 --- the full-tensor ledger: the collapse is real, and one
+cubic door opens \mE/\mC.} Step 12's collapse was a \emph{Cartan-restricted} statement --- the
+named escape route ($\delta_2$) asks whether the full adjoint tensor structure of $\mathfrak e_8$
+(non-Cartan external legs, higher-arity vertices) reopens the pairing. The answer has two halves,
+both exact. \emph{The collapse is confirmed}: $\mathfrak g_0=\mathfrak d_5\oplus\mathfrak a_3$ is
+semisimple with no $\mathfrak u(1)$ factor (class-$0$ roots $40{+}12$, root span rank $8$), the
+sectors factorise into minuscule Weyl orbits $\mathfrak g_1=(16_s,4)$, $\mathfrak g_2=(10,6)$,
+$\mathfrak g_3=(\mathfrak g_1)^*$, and the \emph{innerness theorem} decides everything wholesale:
+the grading element $h$ lies in the Cartan \emph{of} $\mathfrak g_0$, so every
+$\mathfrak g_0$-invariant tensor carries total sector charge $0\bmod4$ --- bilinear invariants
+exist only at $j'=-j$ (dims $2/1/1/1$) and \emph{all} $15$ non-neutral trilinear sector triples
+have $\mathrm{Hom}=0$: the sphere axions have no invariant partner operator at any arity $\le3$,
+full-tensorially. \emph{And one cubic door opens}: of the nine neutral trilinear structures
+(dims $(3,2,2,1,1)$) all cross-sector ones are pure brackets, but the \emph{unique} totally
+symmetric survivor --- the $\mathfrak{su}(4)$ $d$-symbol ($\mathfrak{so}(10)$ has no cubic
+Casimir, so $T_5$ stays protected) --- carries an exchange quartic
+$Q_{dd}=\tfrac1{60}(T_3-P_3/4)$ (two independent routes, Killing propagator $2h^\vee=60$ from the
+roots) with $\Phi_{T_3}(Q_{dd})=\tfrac1{60}\neq0$: Step 12's master kill covers \emph{quadratic}
+vertices only and does not extend to cubic ones. The pairing nevertheless remains obstructed in
+the charge reading --- $M=[E_{13},E_{22},E_{00},Q_{dd}]$ has rank $3$ against augmented rank $4$
+--- but with the genuinely \emph{weaker} certificate $\{\Phi_{T_5},\psi=\Phi_P-\Phi_{T_3}/4\}$,
+$\psi(A_{\mathrm{fix}})=72-8=64$; relaxed, it becomes \emph{exactly solvable}:
+$A_{\mathrm{fix}}=-u+8v+2w+1920\,Q_{dd}$. Number fences typed \mC\ only:
+$64=\dim\mathfrak g_1=2^6$, $1920=|W(D_5)|=8\cdot240$. Controls: $SO(16)/D_8$ has no symmetric
+cubic, no odd sectors and no $A_3$ block ($E_8/\mu_4$ doubly special); false
+$\mathfrak g_0$/sector assignments inflate or kill the tables. The burden on the $\delta_1$
+contact terms is thereby \emph{sharpened}: they must supply either the $\psi=64$ slice or the
+selection-rule relaxation --- and the $\delta_1$ exploration run itself stands \emph{undecided}
+(the strict holomorphic reading is refuted at the $\Z_2$/Eguchi--Hanson anchor --- a method
+boundary, not a kill; the contact term is the \emph{modular completion} of the Atiyah--Bott data,
+a Harvey--Moore-type $\tau$-integral with the forced leading $(T_5,T_3)$ ratio $4{:}3$).
+\veri{v511\_celestial\_wp5e\_delta2\_tensor\_ledger.py}
+
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:
 the boundary partition function $E_4/\eta^8$ \emph{derived from the twistor side}, including the
 $q^{-1/3}$ prefactor whose CFT side Step 9 has pinned and whose equivariant skeleton Step 11 has
-verified --- the exchange sub-branch is closed by Step 12, so the named remaining targets are the
-twisted BCOV contact terms (the $\delta_1$ binary test: the one-loop coefficient exactly
-$(9,-30,-15,0,32)$) and the full-tensor ledger ($\delta_2$; the Step-12 collapse is a
-Cartan-restricted statement), with preregistered success/kill criteria in the contract --- together with the
+verified --- the exchange sub-branch is closed by Step 12, the full-tensor ledger is executed by
+Step 14 and the level-from-flux dial is executed
+by Step 13, so the named remaining targets are the
+$\delta_1$ Harvey--Moore $\tau$-integral behind the twisted contact terms (undecided at
+exploration level; sharpened by Step 14 to the $\psi=64$ slice or the selection-rule relaxation,
+carrying the forced $4{:}3$ leading ratio), the physical justification of the cubic GS term
+($c_d=1920=|W(D_5)|$), the $\varepsilon_1$ $O(-2)$ bulk-axion construction, and the type-I
+B-model back-reaction on $\mathbb{PT}/\Z_4$ (which would upgrade the Step-13 CPS dictionary from
+\mC\ to derived), with preregistered success/kill criteria in the contract --- together with the
 continuum uplift of the Step-10 lattice witnesses (Xu's theorem for the abstract orbifold
 statement; the concrete seam quotient net and the interacting condensed $(E_8)_1$ net are
 Costello--Li territory). The route does \emph{not} close \texttt{SEAM.EQUIV.01}; it gives the
 keystone a second, quantitative approach --- the same two-step shape as MMST (limit $+$ maximal
 ideal) with the ideal quantitatively fixed, the deleting operator explicit, the limit state
-constructed, the index chain measured, the KLM triple witnessed, and both faces of the inflow
-anchored --- while the global quantisation stays open. \texttt{SEAM.EQUIV.01}
+constructed, the index chain measured, the KLM triple witnessed, both faces of the inflow
+anchored, the collapse confirmed full-tensorially with one cubic door open, and one level a
+theorem with its value pinned by the sector counter --- while the global
+quantisation stays open. \texttt{SEAM.EQUIV.01}
 stays \mO\ throughout; no marker moves.
 
 % =====================================================================
@@ -1378,6 +1461,14 @@ stays \mO\ throughout; no marker moves.
 \item \textbf{Conceptual gain:} the theory's foundation tightens from ``two free axioms'' to ``\emph{the}
   $E_8$-closure fixed point $+$ the geometric $\pi$.'' That is the Möbius self-consistency you intuited:
   the seed is the start of the cascade, and the cascade returns the seed's discrete content.
+\item \textbf{The current reduction state (2026-07-21; text consolidation, markers unchanged):} the
+  compiler's dimensionless inputs reduce to \emph{four marks} (derived from P1-side topology,
+  \vref{v216}), \emph{one square-modulus datum} $\tau=i$ (equivalently: the clock / the CM-fixed
+  half-period / the non-split extension class on the free seam circle;
+  \vref{v499}/\vref{v506}/\vref{v507}/\vref{v510}), and $\pi$ --- with the \mC\ identifications R1/R2
+  of \vref{v499} as the remaining conditional layer. \texttt{AX.P2.01} stays a declared axiom and
+  \texttt{QGEO.REALIZE.01} stays \mC/\mO: this line describes the \emph{reduction state}, not an
+  abolition.
 \end{itemize}
 
 \clearpage

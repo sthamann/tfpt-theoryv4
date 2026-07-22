@@ -60,6 +60,241 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-07-21 (XXIII) (\texttt{v511} --- WP5e-$\delta_2$ of \texttt{CELEST.SEAM.01} ``the full-tensor ledger'' promoted as \texttt{CELEST.WP5E.DELTA2.01} (intermediate verdict, exact): the named escape route of the \texttt{v508} exchange no-go executed on the FULL adjoint tensor structure of $\mathfrak e_8$ --- the COLLAPSE IS CONFIRMED full-tensorially AND arity-crossing (the INNERNESS THEOREM: $\mathfrak g_0=\mathfrak d_5{\oplus}\mathfrak a_3$ semisimple with NO $\mathfrak u(1)$ (class-$0$ roots $40{+}12$, root span rank $8$), $h$ in the Cartan OF $\mathfrak g_0$ $\Rightarrow$ every invariant tensor carries total charge $0\bmod4$: the bilinear Hom table is nonzero ONLY at $j'=-j$ (dims $2/1/1/1$) and ALL $15$ non-neutral trilinear sector triples have $\mathrm{Hom}=0$), BUT ONE CUBIC DOOR OPENS: of the neutral trilinears ($\{0,0,0\}\!:3=1$ sym $+\,2$ antisym, $\{0,1,3\}\!:2$, $\{0,2,2\}\!:2$, $\{1,1,2\}\!:1$, $\{2,3,3\}\!:1$; all cross-sector ones pure brackets) the UNIQUE totally symmetric survivor is the $\mathfrak{su}(4)$ $d$-symbol ($\mathfrak{so}(10)$ has no cubic Casimir, $\mathrm{Inv}(S^3\,45)=0$ protects $T_5$), whose exchange quartic $Q_{dd}=(0,0,-\tfrac1{240},0,\tfrac1{60})=\tfrac1{60}(T_3-P_3/4)$ (TWO independent routes, Killing propagator $2h^\vee=60$ from the roots) has $\Phi_{T_3}(Q_{dd})=\tfrac1{60}\neq0$ --- the \texttt{v508} master kill (product theorem) does NOT extend to cubic vertices; the pairing stays OBSTRUCTED in the charge reading with the genuinely WEAKER certificate $\{\Phi_{T_5},\psi=\Phi_P-\Phi_{T_3}/4\}$, $\psi(A_{\mathrm{fix}})=72-8=64$ ($M=[E_{13},E_{22},E_{00},Q_{dd}]$ rank $3$, augmented $4$), and becomes EXACTLY solvable relaxed: $A_{\mathrm{fix}}=-u+8v+2w+1920\,Q_{dd}$ (residual $0$); \mC\ fences $64=\dim\mathfrak g_1=2^6$, $1920=|W(D_5)|=8\cdot240$; controls: $SO(16)/D_8$ has NO symmetric cubic and no $A_3$ block ($E_8/\mu_4$ doubly special), false $\mathfrak g_0$/sector assignments separate; the $\delta_1$ burden SHARPENED to the $\psi=64$ slice or the selection-rule relaxation --- and the $\delta_1$ exploration run itself stands UNDECIDED at exploration level (strict holomorphic $q^0$ reading REFUTED at the $\Z_2$/Eguchi--Hanson anchor $=$ method boundary, not a kill; contact term $=$ the MODULAR COMPLETION of the AB data, a Harvey--Moore $\tau$-integral with forced leading $(T_5,T_3)$ ratio $4{:}3$; massive coset levels $n\ge2$ mandatory); Wolfram extension $463\to470$ (verified engine run); \emph{NO marker moves --- WP5e proper stays \mO, \texttt{SEAM.EQUIV.01} stays \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v511\_celestial\_wp5e\_delta2\_tensor\_ledger.py} (\texttt{CELEST.WP5E.DELTA2.01},
+41 checks, $\sim$4 s; integer-scaled weight multisets $+$ Kostant/Weyl alternating sums $+$
+sympy/Fraction, no floats; deterministic).} D0/D1 structure: $240$ roots, class split
+$(52,64,60,64)$; $\mathfrak g_0=\mathfrak d_5\oplus\mathfrak a_3$ SEMISIMPLE without
+$\mathfrak u(1)$ ($40{+}12$ class-$0$ roots, no mixed root, root span rank $8$); sectors
+$\mathfrak g_1=(16_s,4)$, $\mathfrak g_2=(10,6)$, $\mathfrak g_3=(\mathfrak g_1)^*$ as
+multiplicity-free minuscule Weyl-orbit products, each irreducible ($64/60/64$); the grading is
+INNER ($h=(2,2,2,2,2;0^4)$ in the $\mathfrak g_0$ Cartan). D3/D4 Hom tables: bilinear nonzero
+ONLY at $j'=-j$ (dims $2/1/1/1$; all $12$ charged pairs zero --- the inner-torus theorem at
+arity $2$); trilinear: ALL $15$ non-neutral triples $\mathrm{Hom}=0$ (arity $3$), neutral dims
+$(3,2,2,1,1)$ with all cross-sector trilinears ANTISYMMETRIC in their repeated legs --- the
+unique symmetric survivor is the $\mathfrak{su}(4)$ $d$-symbol ($\mathrm{Inv}(S^3\,45)=0$,
+$\mathrm{Inv}(S^3\mathfrak a_3)=1$). D5 the new channel: $Q_{dd}=\tfrac1{60}(T_3-P_3/4)$ by
+Killing-propagator contraction AND the hand route $|x^2-(\operatorname{tr}x^2/4)\mathbf 1|^2/60$;
+$\Phi_{T_3}(Q_{dd})=\tfrac1{60}\neq0$; brackets/tadpoles/$d{\times}f$ die exactly; no $T_5$
+analogue. D6 decision: strict reading unreachable (rank $2$ vs $3$); generous reading STILL
+unsolvable (rank $3$ vs $4$) with the weaker certificate $\psi(A_{\mathrm{fix}})=64$; relaxed
+reading EXACTLY solvable with $c_d=1920=32\times60$. D7 controls: Killing control $=$
+\texttt{v508} replication ($A_{\mathrm{fix}}$, $E_{13}$, $E_{22}$, $E_{00}=225E_{22}$);
+$SO(16)/D_8$ bilinears $(1,0,1)$, trilinears $(1,0,1,0)$, $\mathrm{Inv}(S^3\mathrm{adj}_{D_8})=0$;
+false $\mathfrak g_0=\mathfrak d_5{+}\mathfrak a_2{+}\mathfrak u(1)$: $(5,2,2)\neq(2,1,1)$,
+$\mathrm{Inv}(S^3\mathfrak g_0)=6\neq1$; false sector content $(16_s,\bar4)$ kills every pairing.
+Discovery provenance:
+\texttt{experiments/tfpt-discovery/celestial\_seam\_wp5e\_delta2\_full\_tensor\_ledger\_probe.py}
+($41/41$), same day.
+\item \textbf{The $\delta_1$ fence (exploration-level, NOT promoted --- verdict UNDECIDED).} The
+twisted BCOV contact-term probe
+(\texttt{celestial\_seam\_wp5e\_delta1\_bcov\_contact\_probe.py}, $27/27$, stays sandbox;
+v-numbered on demand) contributes its four exact sharpenings as fence text: (i) the strict
+holomorphic $q^0$ reading is REFUTED at the $\Z_2$/Eguchi--Hanson anchor (method boundary, not a
+kill); (ii) the forced leading $(T_5,T_3)$ ratio is $4{:}3$ (sector $2$ : sectors $1{+}3$);
+(iii) the $SL(2,\Z)$ orbit decomposition $15=12+3$ identifies the contact term as the MODULAR
+COMPLETION of the AB data (a Harvey--Moore-type $\tau$-integral), not a free number; (iv) massive
+coset levels $n\ge2$ are mandatory. The remaining $\delta_1$ target is the $\tau$-integral,
+evaluated against the $\delta_2$-sharpened criterion ($\psi=64$ slice or selection-rule
+relaxation).
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{CELEST.WP5E.DELTA2.01} (\mE\ Hom tables/innerness/$Q_{dd}$/certificate; \mC\ the number
+fences; \mO\ arity $\ge4$, cubic GS term, $\delta_1$); \texttt{CELEST.SEAM.01} updated (delta-2
+executed via v511 --- the full-tensor collapse is confirmed (innerness), but the cubic $d$-symbol
+channel opens $T_3$ with the weaker certificate $\psi=64$; delta-1 stands UNDECIDED at
+exploration level). Papers: \texttt{tfpt\_research\_contracts} WP5e bullet gains the executed
+$\delta_2$ stage $+$ the $\delta_1$ exploration fence, WP5e-proper targets renamed
+($\tau$-integral, cubic GS term, $\varepsilon_1$, back-reaction); \texttt{tfpt\_3} celestial
+section extended to the FOURTEEN-step story (new Step 14 ``the full-tensor ledger: the collapse
+is real, and one cubic door opens'') with the ``What remains'' block updated. Wolfram: seven
+mirrors (innerness count $+$ $\mathfrak g_0$ structure; the bilinear and trilinear Hom tables by
+exact Kostant alternating sums; the unique symmetric survivor; the $SO(16)$/false-$\mathfrak g_0$/
+false-sector controls; $Q_{dd}$ by two routes; the $\psi$ certificate $+$ the relaxed solution
+$(-1,8,2;1920)$) verified with the active engine the same day ($463\to470$,
+\texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}). Registry $+$ \texttt{run\_all} (505 modules, suite
+green: \texttt{ALL CHECKS PASSED}). No gate closes, no marker moves --- WP5e proper stays \mO.
+\end{itemize}
+
+\subsection*{2026-07-21 (XXII) (P2 consolidation --- the axiomatics reduction state written as ONE coherent statement across the papers (editorial, NO new claims, NO marker moves): the compiler's dimensionless inputs reduce to \emph{four marks} (derived from P1-side topology, \texttt{v216}), \emph{ONE square-modulus datum} ($\tau=i$ --- equivalently: the clock / the CM-fixed half-period / the non-split extension class on the free seam circle; \texttt{v491}/\texttt{v499}/\texttt{v506}/\texttt{v507}/\texttt{v510}) and $\pi$, plus the \mC\ identifications R1/R2 of \texttt{v499}; \texttt{AX.P2.01} stays a DECLARED axiom and \texttt{QGEO.REALIZE.01} stays \mC/\mO\ --- the consolidation describes the \emph{reduction state}, not an abolition)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{What is consolidated (and why now).} The P2 state of affairs was spread over five module rounds:
+the partition corollary (\texttt{v491}: $4=2{+}1{+}1$ unique $\Rightarrow\gcar=e_2=5$), the weight
+typing (\texttt{v499}: Deligne $+$ Birkhoff--Grothendieck $+$ Mehta--Seshadri force
+$E=\mathcal O(-2){\oplus}\mathcal O(-1)^2$, residuals R1/R2 \mC), the residual convergence
+(\texttt{v503}: QGEO-R1 $\equiv$ P2-R1), the clock rigidity and bit origin (\texttt{v506}/\texttt{v507}:
+one alignment bit, order fermionically forced, deck class derived) and the freedom theorems
+(\texttt{v510}: the position half is topology, the edge class excluded). The honest consolidated
+statement, now in one place: \emph{the compiler's dimensionless inputs reduce to four marks (derived
+from P1-side topology), one square-modulus datum ($\tau=i$, equivalently: the clock / the CM-fixed
+half-period / the non-split extension class on the free seam circle), and $\pi$} --- plus the \mC\
+identifications R1/R2 of \texttt{v499}. No new claims; conservative wording; no ``axiom abolished''
+language anywhere.
+\item \textbf{Papers $+$ ledger $+$ website.} \texttt{tfpt\_1\_architecture\_e8}: new keybox ``The
+current reduction state of P2'' next to the foundational-postulates keybox, with
+\texttt{v491}/\texttt{v499}/\texttt{v506}/\texttt{v507}/\texttt{v510} citations.
+\texttt{tfpt\_3}: mirror bullet ``The current reduction state'' in the honest-status section.
+\texttt{introduction}: the anchor paragraph gains the consolidated one-sentence state and the status
+card row $a=(1,1,2)$ now names the reduction state. Ledger: SYNTHESIS NOTE appended to
+\texttt{AX.P2.01} (``reduction state 2026-07-21: four marks $+$ one square-modulus datum ($\tau=i$)
+$+$ $\pi$''), marker \emph{Axiom unchanged}. Website: \texttt{papers.ts} mirrors of the changed
+sections. No gate closes, no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (XXI) (\texttt{v510} --- the freedom attack on the \texttt{v506}/\texttt{v507} alignment bit promoted as \texttt{SEAM.BIT.FREEDOM.01}: the POSITION half of the bit is TOPOLOGY --- the collar deck is a covering deck (the $\Z_2$ seam of the M\"obius double), and covering decks act FREELY; the DIHEDRAL THEOREM (on the seam circle the free involution is UNIQUE $=$ the antipode: $17$ involutions in $D_{16}$, exactly $1$ free; $\Aut(C_{16})=D_{16}$ complete census, brute force $8!$ at $N{=}8$; quotient topology circle/antipode $=$ CIRCLE $\chi{=}0$ vs circle/reflection $=$ INTERVAL $\chi{=}1$ --- the $6\pi$ Gauss--Bonnet budget needs closed circles, so freeness IS the established P1 datum); NONSPLIT $\iff$ FREE over the complete $17$-involution census in exact $\mathrm{Cl}(16)$ (free $\Rightarrow\tilde U^2=256\,\gamma_1\cdots\gamma_{16}=(-1)^F$ nonsplit with $2$ roots $=$ the $\Z_8$ tower; ALL $16$ reflections $\Rightarrow U^2=$ scalar $\{2^7,2^8\}$, split, $0$ roots); the REAL-STRUCTURE classification (deck-commuting families $=$ exactly two; $\mu_4\to$ equatorial, deck FREE; silver $\to$ real axis THROUGH the deck poles, NOT free --- the edge class is the restriction of the BRANCHED pillowcase involution; hexagonal $\to$ NO mark-fixing real structure, RP-incompatible); HARMONIC $+$ FREE $\Rightarrow\mu_4$ exactly ($b=\pm i$); honest counterwitnesses (``nonsplit $\Rightarrow$ clock'' is FALSE: $\{0,1,8,9\}$ and $\{\pm1,\pm(3{+}4i)/5\}$ with $j=148176/25\neq1728$); the alignment bit REDUCES from ``harmonic AND central'' to the square-modulus datum $\tau=i$ alone; Wolfram extension $457\to463$ (verified engine run); \emph{NO marker moves --- \texttt{QGEO.REALIZE.01} stays \mC/\mO, \texttt{AX.P2.01} stays an axiom, P2-R1 halved})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v510\_seam\_bit\_freedom.py} (\texttt{SEAM.BIT.FREEDOM.01}, 30 checks, $<5$ s;
+sympy $+$ exact $\mathrm{Cl}(16)$ Fractions, no floats; deterministic).} Part A (dihedral/fermionic):
+the involution census in $D_N$ on the refined $2N$-point seam circle ($N=16$: $17$ involutions,
+EXACTLY ONE free $=$ the antipodal shift by $8$; all $16$ reflections have exactly $2$ circle fixed
+points --- sites for even axis, edge midpoints for odd; robustness $N=8,12$; odd control $N=9$: ZERO
+free --- an even carrier count is needed, consistent with $16=2^{\gcar-1}$); the census is COMPLETE
+because $\Aut(C_{16})=D_{16}$ exactly (brute force over all $8!=40320$ permutations at $N=8$,
+propagation at $N=16$); quotient topology: circle/antipode $=$ CIRCLE ($\chi=0$, closed),
+circle/reflection $=$ INTERVAL ($\chi=1$, two boundary corners) --- a fixed-point deck would break
+the $6\pi=3\times2\pi$ closed-circle count, so ``deck free on the seam circle'' is exactly the
+established ``the seam is a closed circle'', not a new premise; the complete Fock census: ALL $17$
+involutions implemented in exact $\mathrm{Cl}(16)$ --- NONSPLIT $\iff$ FREE with no exception, root
+dichotomy $2$ vs $0$; the chain: free $\Rightarrow$ shift $8$ $\Rightarrow$ crossing (all $28$
+invariant $4$-sets) $\Rightarrow U^2=(-1)^F\Rightarrow$ central class $\Rightarrow$ the edge/silver
+arrangement is EXCLUDED; Klein control (covering decks are free regardless of the gluing); branch
+control (the pillowcase involution has exactly $4$ fixed points $=$ the marks and restricts to a
+REFLECTION: the silver arrangement mistakes the mark-creating branch $\Z_2$ for the seam deck).
+Part B (M\"obius/RP): the cylinder-double-cover deck is free on all $120$ model points and restricts
+to the antipode on the $\Z_2$ seam fibre; one-sidedness TYPES the $\Z_2$ as the free antipode
+(quotient $\mathbb{RP}^2$ $=$ the $|\Z_2|$ of $\cthree=1/(|\Z_2|2\pi\chi)$); the deck-commuting real
+structures are EXACTLY two families ($\mu\bar z$: fix line through the poles, NOT free; $\mu/\bar z$,
+$\mu>0$: fix circle $|z|=\sqrt\mu$, FREE; $\mu<0$: empty); the per-configuration table ($\mu_4$
+equatorial/free, silver real-axis/not free, generic-unit free without harmonicity, hexagonal
+RP-incompatible); harmonic $+$ free solves EXACTLY to $b=\pm i$ (on free circles the silver family
+``harmonic AND edge'' is EMPTY --- harmonicity becomes sufficient); honest counterwitnesses: the
+discrete $\{0,1,8,9\}$ and the continuous $\{\pm1,\pm(3{+}4i)/5\}$ (free, central, $j=148176/25$, no
+clock) --- the Fock dichotomy measures the CLASS, not the modulus. Premise typing: (P-i) deck $=$
+M\"obius covering deck $\Rightarrow$ free [standard topology; the one-sidedness strand
+\texttt{origin\_theory}/\texttt{v456}]; (P-ii) marks on the $\Theta$-fix seam circle $=$ existing
+REALIZE \mC\ content (\texttt{QGEO.REALIZE.02} hypotheses, \texttt{v264}) --- NO new input. Audit
+finding documented: ``circle-freeness'' was nowhere typed before (only mark-freeness, \texttt{v216});
+\texttt{v507} F1.1 explicitly admitted the reflection reading of the edge class --- \texttt{v510}
+closes that door (a reflection is not a covering deck). The \mC\ rest, verbatim: \emph{the alignment
+bit reduces from ``harmonic AND central'' to the square-modulus datum $\tau=i$ alone; the position
+half is topology (edge class excluded), the modulus half stays the one carrier input.}
+Discovery provenance: \texttt{experiments/tfpt-discovery/qgeo\_realize\_deck\_freedom\_dihedral\_probe.py}
+($14/14$) and \texttt{qgeo\_realize\_rp\_fixcircle\_moebius\_probe.py} ($16/16$), same day.
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{SEAM.BIT.FREEDOM.01} (\mE\ dihedral theorem $+$ complete Fock census $+$ real-structure
+classification $+$ harmonic-free collapse $+$ counterwitnesses; \mC\ the square-modulus datum);
+TEXT precisions (markers unchanged) in \texttt{SEAM.CLOCK.RIGIDITY.01}, \texttt{SEAM.BIT.ORIGIN.01},
+\texttt{QGEO.REALIZE.01} (bit $\to$ square-modulus datum; edge class topologically excluded) and
+\texttt{P2.TYPING.01} (R1 halved). Papers: \texttt{tfpt\_3} celestial/QGEO passage extended
+(``the position half is topology''), \texttt{tfpt\_research\_contracts} QGEO kill-test $+$
+QGEO.MARKS.03 $+$ celestial-contract passages extended, one-sentence precisions in
+\texttt{introduction}, \texttt{tfpt\_1}, \texttt{tfpt\_2}, \texttt{origin\_theory} where
+\texttt{v506}/\texttt{v507} are cited. Wolfram: six mirrors (dihedral census $+$ quotient topology;
+Aut completeness incl.\ the $8!$ brute force; the $\mathrm{Cl}(16)$ dichotomy census over all $17$
+involutions on $256\times256$ Jordan--Wigner gammas; the real-structure table; harmonic $+$ free
+$\Rightarrow\pm i$; the counterwitnesses) verified with the active engine the same day
+($457\to463$, \texttt{ALL WOLFRAM EXTENSION CHECKS PASSED}; base file re-verified $116/116$).
+Registry $+$ \texttt{run\_all} (504 modules, suite green: \texttt{ALL CHECKS PASSED}).
+No gate closes, no marker moves.
+\end{itemize}
+
+\subsection*{2026-07-21 (XX) (\texttt{v509} --- WP5e-$\varepsilon_2$ of \texttt{CELEST.SEAM.01} ``the CPS level-from-flux dial'' promoted as \texttt{CELEST.WP5E.EPS2.01}, verdict B: the Costello--Paquette--Sharma Burns-holography mechanism (``level $=$ flux quantum $\times$ Dynkin index'') executed on the lockstep spheres --- the CPS SKELETON exact ($S^3$ period $(2\pi i)^2N$ with pullback density $-\sin2\theta$, exceptional-sphere K\"ahler flux $2\pi N$, boundary level magnitude $2N$ by the symplectic-boson contraction, $T(\text{vector})=1$); the PAIRING MATRIX pinned, not postulated ($\mathrm{ch}_2$ ledger $+$ integrality $+$ unimodularity $+$ effectivity $\Rightarrow$ $P_{mi}=\delta_{mi}$ by complete enumeration: rows $8/6/8$, $48$ unimodular, exactly $2$ effective $=$ identity $+$ diagram flip), fluxes $F_i=(64,60,64)=\dim\mathfrak g_i$ with uniformly ONE quantum per charged current; ``level $=$ total flux'' KILLED by the lockstep test itself ($F_i$ unequal $=$ flavour multiplicity), the per-current reading $(1,1,1)$ anchored by the lattice current count $(240,0,0,0)$ and embedding index $1$; ord-$4$-vs-level-$1$ RESOLVED (the clock order counts fractional flux sectors: $\mu=16=\mathrm{ord}^2$, Lagrangian $\mu_4$ glue, KLM $16\to1$) with the NEW sector-counter dial $\#\mathrm{prim}((E_8)_k)=(1,3,5,10,15,27)$ for $k=1..6$ --- exactly ONE sector iff $k=1$; the LOCKSTEP THEOREM lifts the \texttt{v505} ``one scale $\Rightarrow$ one level'' to a THEOREM of clock invariance ($|\Pi_j|=\sqrt2\,t$ equal, monodromy $=$ pure phase $i$, $\det(A{-}1)=-4$: no invariant flux vector; NEW falsifier $Z^4{-}Z$: $0/24$ orderings lockstep); honest limit: uniform doubling keeps the lockstep (equality, not the value); controls $k{=}2$/$SO(16)$/$A_2$ separate honestly; Wolfram extension $450\to457$ (verified engine run); \emph{NO marker moves --- WP5e stays \mO\ (the CPS dictionary on $\mathbb{PT}/\Z_4$ typed \mC, the type-I B-model back-reaction \mO), \texttt{SEAM.EQUIV.01} stays \mO})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{v509\_celestial\_wp5e\_eps2\_level\_from\_flux.py} (\texttt{CELEST.WP5E.EPS2.01},
+28 checks, $<1$ s; sympy/Fraction exact, no floats; deterministic).} Target: derive the boundary
+level $k=1$ from flux quantisation on the lockstep spheres, following the
+Costello--Paquette--Sharma Burns-holography mechanism (PRL \textbf{130}, 061602;
+\texttt{arXiv:2306.00940}). \emph{CPS skeleton replicated exactly}: the $S^3$ period of the brane
+back-reaction $3$-form is $(2\pi i)^2N$ (their eq.~3.33; large-gauge invariance quantises $N$),
+the exceptional-sphere K\"ahler flux is $2\pi N$ exactly ($K=|u|^2{+}N\log|u|^2$, the flat part
+dies at $t\to0$), and the boundary level magnitude is $2N$ via the symplectic-boson double
+contraction ($N=1,2,3$; their eq.~9.4), Dynkin normalisation $T(\text{so}_8\ \text{vector})=1$,
+$T(\text{adj})=6$. \emph{Pairing matrix pinned}: the \texttt{v505} $\mathrm{ch}_2$ ledger
+($f(m)=-(C^{-1})_{mm}/2=(-\tfrac38,-\tfrac12,-\tfrac38)$) $+$ integrality $+$ unimodularity $+$
+effectivity force $P_{mi}=c_1(T_m).[\Sigma_i]=\delta_{mi}$ by COMPLETE enumeration (row candidates
+$8/6/8$; $48$ unimodular solutions of $PC^{-1}P^T=C^{-1}$; with $P\ge0$ exactly $2$: identity $+$
+$A_3$ diagram flip); fluxes $F_i=(64,60,64)=\dim\mathfrak g_i$, total $188=248-60$,
+flip-invariant; flux per charged root current uniformly ONE quantum through exactly one sphere.
+\emph{The level formula, honest}: ``level $=$ total open-string flux'' is KILLED by the lockstep
+test itself ($k_i=(64,60,64)$ unequal --- $F_i$ is the FLAVOUR multiplicity, the brane matter
+content); what works: $k=$ flux per adjoint current $=F_i/\dim\mathfrak g_i=(1,1,1)$, anchored
+non-circularly by the lattice current count $(240,0,0,0)$ for $k=1..4$ (\texttt{v505} S4.8) and
+the embedding index $j(D_5{\subset}E_8)=j(A_3{\subset}E_8)=1$ ($60=2h^\vee$).
+\emph{Ord-$4$-vs-level-$1$ resolved}: the clock order counts FRACTIONAL flux sectors, not the
+level ($\mu=\det(D_5)\det(A_3)=16=\mathrm{ord}^2$; the $\mu_4$ glue diagonal isotropic $+$
+Lagrangian; KLM $16\to16/4^2=1$, zero residual fractional flux); NEW DIAL:
+$\#\mathrm{primaries}((E_8)_k)=(1,3,5,10,15,27)$ for $k=1..6$ from the affine marks --- exactly
+ONE sector iff $k=1$ (independent of the CPS transplantation). \emph{The lockstep theorem} (the
+lifting of \texttt{v505} S4.10): clock invariance $P(iZ)=P(Z)$ forces $a_3=a_2=a_1=0$ sharply,
+the four branch points are ONE $\mu_4$ orbit, $|\Pi_j|=\sqrt2\,t$ EQUAL on all three spheres,
+the monodromy is the pure phase $i$ and $\det(A{-}1)=-4\neq0$ (no invariant flux vector) ---
+$k_1=k_2=k_3$ IS A THEOREM of clock invariance; NEGATIVE PROBE (new falsifier): the
+clock-forbidden family $Z^4{-}Z$ (smooth, disc $-27$, branch points $\{0,1,\omega,\omega^2\}$
+not a $\mu_4$ orbit): over ALL $24$ orderings ZERO chains with three equal period moduli ($1$ vs
+$\sqrt3$); HONEST LIMIT: uniform flux doubling keeps the lockstep --- the theorem proves
+EQUALITY, not the value ($1$ from the counters and the CPS minimal quantum $N=1$).
+\emph{Negative controls}: $k=2$ (current count $0$, residual $360$, prefactor $-31/48$,
+$\#$prim $3$ --- while the lockstep dial honestly does NOT fire); $SO(16)$ (fluxes $(0,60,0)$:
+spheres $1/3$ FLUX-DARK, defect $-30\neq-78$, condensation stuck at $4=\det\mathrm{Cartan}(D_8)$);
+$A_2$ (det $3\neq4$, glue diagonal $23/24\notin\Z$, $\mu=12$ no perfect square: NO Lagrangian
+subgroup, Coxeter $3\neq4$). Typed honestly: the CPS dictionary itself on $\mathbb{PT}/\Z_4$
+stays \mC\ (their geometry is the $\mathbb C^2$ blow-up with one $(-1)$-sphere and
+$\mathfrak{so}(8)$ at negative level --- not the $A_3$ ALE); the type-I B-model back-reaction
+stays \mO\ (the same fence as \texttt{v502}/\texttt{v505}).
+\item \textbf{Ledger $+$ papers $+$ Wolfram $+$ website.} Ledger: new row
+\texttt{CELEST.WP5E.EPS2.01} (\mE\ CPS skeleton/pairing/lockstep/sector arithmetic $+$ \mC\ CPS
+dictionary $+$ \mO\ back-reaction); \texttt{CELEST.SEAM.01} updated (``$\varepsilon_2$ executed
+via v509: the one-level statement is now a THEOREM (lockstep from clock invariance, falsifier
+$Z^4{-}Z$), level $=1$ carries the new sector-counter dial $\#\mathrm{prim}((E_8)_k)=1
+\Leftrightarrow k=1$; the $\mathbb{PT}/\Z_4$ back-reaction stays \mO''); the \texttt{v505} ``one
+scale $\Rightarrow$ one level'' sentence LIFTED to theorem status in ledger and prose (text move,
+no marker move). Papers: \texttt{tfpt\_research\_contracts} WP5e section extended by the
+$\varepsilon_2$ block (done, verdict B; roadmap now $\delta_1/\delta_2/\varepsilon_1$ $+$
+back-reaction); \texttt{tfpt\_3} celestial section becomes a THIRTEEN-step story with Step 13
+``one level is a theorem; the sector counter pins $k=1$'' and the ``What remains'' paragraph
+updated. Wolfram: seven mirrors (the CPS period integrals; the $2N$ contraction $+$ Dynkin
+normalisation; the pairing enumeration $48\to2$; the fluxes $(64,60,64)$; the $\#$prim table
+$(1,3,5,10,15,27)$; the lockstep periods $+$ the $0/24$ negative probe; the $SO(16)$/$A_2$
+controls) verified with the active engine the same day ($450\to457$, \texttt{ALL WOLFRAM
+EXTENSION CHECKS PASSED}). \texttt{VerificationDag}: \texttt{v509} on the QFT/celestial node;
+registry $+$ \texttt{run\_all} (503 modules, suite green). No gate closes, no marker moves ---
+WP5e proper stays \mO.
+\end{itemize}
+
+\subsection*{2026-07-21 (XIX) (\texttt{e8-ladder-bed} v2 --- the 2DCS extension executed with an honest preregistered \texttt{kill\_2d} verdict at the DETECTOR level: the known-answer map recovers $8/8$ rungs incl.\ $m_7/m_8$ via F3 difference coordinates (MC $p=2\times10^{-4}$), but the 2D control battery breaks (scramble $27\%$, jitter $18\%$ at the destructive $30\%$ level) --- the v1 1D results (BCVO $8/8$, CoNb$_2$O$_6$ $6/8$) are untouched; scorecard row updated, status/stage unchanged; \emph{experiments level only --- no verification module, no gate closes, no marker moves})}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{\texttt{experiments/e8-ladder-bed} v2 (2DCS): amendment preregistered, run, and killed
+by its own controls.} Trigger: arXiv:2512.16829 (Watanabe, Trebst, Hickey) --- a THEORY-only paper
+(four-kink/ED localized-limit spectra at $B_y=0$--$3$\,T, not the E8 point; no measurements); as of
+2026-07-21 \emph{no experimental 2DCS measurement of CoNb$_2$O$_6$ exists anywhere} (web-checked).
+\texttt{amendment\_v2} was frozen in \texttt{hypotheses/e8\_ladder\_bed\_v1.yaml} BEFORE any 2D
+recovery run (detector, catalog F1/F2/F3, gates, null model, verdict criteria);
+\texttt{amendment\_v2\_1} discloses a null-region correction (add \texttt{n\_matched} to the
+false-alarm region) found on synthetic diagnostics, timing disclosed. Runs
+(\texttt{results/results2d.json}, deterministic): known-answer KA2D $8/8$ rungs with $m_7/m_8$
+recovered ONLY via F3 difference coordinates ($\chi^2/\mathrm{dof}=1.30$, MC $p=2.0\times10^{-4}$,
+$0/5000$) --- the mechanism that pulls $m_7/m_8$ inside a low-pass window works; the NEG2D
+localized-limit map (the paper's own non-E8 closed forms) is correctly rejected ($p=0.029$); offset
+and wrong-ladder controls rejected. BUT \texttt{scramble2d} fires at $54/200=27\%$ and
+\texttt{jitter2d} shows no dose-response decay ($29/21/17/18\%$; $18\%$ at the destructive $30\%$
+level) $\Rightarrow$ preregistered verdict \texttt{kill\_2d}: permuting the detection axis preserves
+the pump-axis marginal (which carries the full 1D ladder) and the 120-entry catalog is dense enough
+that rung coverage follows from the marginal alone --- the v2 detector does not test the 2D
+\emph{pairing}; failure kills the detector, not TFPT. The CoNb$_2$O$_6$ leg stays $6/8$
+($p=0.0038$) per the preregistered \texttt{m7\_m8\_upgrade\_rule}; a future v3 would need
+coincidence-based coverage and a sparser catalog, preregistered BEFORE real data exists.
+\item \textbf{Surfaces synced (scorecard row updated; counters unchanged, 120 rows).} Scorecard row
+``E8 mass-ladder blind recovery bed'': \texttt{data\_value} extended (``CoNb2O6 6/8 unchanged; 2DCS
+extension killed at detector level (scramble 27\%, jitter 18\% @30\%); KA 8/8 incl.\ m7/m8 via F3,
+p=2e-4; no experimental 2DCS data exists (arXiv:2512.16829 theory-only)'') and
+\texttt{status\_note} extended (amendment v2/v2.1 preregistered$+$disclosed; real-data leg blocked;
+v3 criteria) via \texttt{build\_evidence\_scorecard.py}; status/stage UNCHANGED
+(\texttt{consistent}/\texttt{not\_applicable}, \texttt{analog\_positive\_control} basket --- the v1
+detector validation stands). Experiment README v2 section, hypotheses YAML amendments,
+\texttt{experiments/next.txt} note; data-request plan on record (Armitage lab/JHU, Wang lab/Ames;
+2D peak table at $B\parallel b$, $4.7$--$5.5$\,T, sub-Kelvin). No claim; firewall intact.
+\end{itemize}
+
 \subsection*{2026-07-21 (XVIII) (\texttt{v508} --- WP5e-$\gamma$ of \texttt{CELEST.SEAM.01} ``the sphere-axion pairing check'' promoted as \texttt{CELEST.WP5E.GAMMA.01}, an honest rigid NEGATIVE result: the VERTEX-SPACE THEOREM --- the $W(D_5){\times}W(A_3)$-invariant quadratics on the $8$-dim glue Cartan are EXACTLY $\mathrm{span}\{s_5,s_3\}$ (dim $2$) and the quartics EXACTLY $\mathrm{span}\{P_1,P_2,P_3,T_5,T_3\}$ (dim $5$), with the PRODUCT THEOREM as the master kill (any two invariant quadratics multiply into $\mathrm{span}\{P_1,P_2,P_3\}$ --- zero $T_5/T_3$ content, so $\Phi_{T_3}$ annihilates EVERY exchange image while $\Phi_{T_3}(A_{\mathrm{fix}})=32\neq0$); the strict two-index $\Z_4$ rule COLLAPSES (the sphere axions have no invariant bilinear Cartan vertex at all), the twist-insertion channels give a rank-$2$ exchange matrix with $\operatorname{rank}([M\,|\,A_{\mathrm{fix}}])=3$ and the annihilator certificate $(\Phi_{T_5},\Phi_{T_3},\Phi_P)(A_{\mathrm{fix}})=(0,32,72)$; side discovery $K^{(0)}=-15\,K^{(2)}$; naturalness DISSOLVES (ch$_2$-natural and AB-weight couplings both certify $(0,0)$ vs required $(32,72)$ --- scale-independent); controls: $SO(16)$ has no sphere partners AND uncancelled $T_5$, $D_8$ no $T_3$ structure; the O-fence is SHARPENED: the exchange sub-branch is dead, the $32\,T_3$ residual MUST be carried by twisted BCOV contact terms ($\delta_1$ binary: coefficient exactly $(9,-30,-15,0,32)$, computed not fitted; escape $\delta_2$: the full-tensor ledger); Wolfram extension $444\to450$ (verified engine run); \emph{NO marker moves --- \texttt{CELEST.SEAM.01} stays Open, the slot bijection untouched, the preregistered level-kill still does not fire, \texttt{SEAM.EQUIV.01} stays \mO})}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{\texttt{v508\_celestial\_wp5e\_gamma\_pairing.py} (\texttt{CELEST.WP5E.GAMMA.01}, 27

@@ -13,7 +13,7 @@ interface Row {
 const ROWS: Row[] = [
   {
     layer: "Two axioms {c₃, g_car}",
-    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised",
+    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised; reduction state: four marks + one square-modulus datum (τ = i) + π (v491/v499/v510)",
     paper: "Doc 1",
     tone: "downstream",
   },

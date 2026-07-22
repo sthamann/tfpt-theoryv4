@@ -34,99 +34,99 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 2802489,
+    bytes: 2865146,
     sha256:
-      "5fb85b7801b55b5d0723d4e67770cde0eec4b17e35c0f11a4ecf2258cb3ec52c",
+      "966c67549839c20720736e1cb323ac7d352c9f96f2429bc25156465ad9ac82a4",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
   "/papers/tfpt_1_architecture_e8.pdf": {
     href: "/papers/tfpt_1_architecture_e8.pdf",
     ...COMMON,
-    bytes: 1129104,
+    bytes: 1132276,
     sha256:
-      "98aa6e49e2eb5620ae275f31f46a97f660cd9aa8275a5f066ad52639bf98965a",
+      "3414849574d5a6762b2db8a5f4d8946ab5684f2cc2028ee3577ad0bc7a96a063",
     changelog:
       "Architecture: the two axioms, the D₅ × A₃ → E₈ construction, and the EM fixed point with existence + uniqueness.",
   },
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1207931,
+    bytes: 1208155,
     sha256:
-      "6bf00524bd6b6bd0386cd3fd3cf27769a41fd0cd9275b60dc174db3bdb1f9350",
+      "99db30f9407e61d12e7e579a295308d8ddc9b05e972bc94a00113902d29c38f7",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
   "/papers/tfpt_3_e8_audit_bootstrap.pdf": {
     href: "/papers/tfpt_3_e8_audit_bootstrap.pdf",
     ...COMMON,
-    bytes: 955026,
+    bytes: 968433,
     sha256:
-      "f9511e54b4318b7b7d4bcd10f605a449ca7524a70cb53091c989601d46f013e0",
+      "39f7b57b626bed88f3fb0c6ded86fad254e9479cfe28b513029d465b92844946",
     changelog:
       "The seven E₈ slices as an audit raster, the cascade bridge, and the Möbius bootstrap.",
   },
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 814287,
+    bytes: 814914,
     sha256:
-      "55b18a757b04bc85f18170f0b3ea5ad842aefc90014916c34a6ccbc88c56d640",
+      "768656caaf15e1863d0ce81dc5fd18b397087b155e8f1c041367697c2b733597",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
   "/papers/tfpt_horizon_readouts.pdf": {
     href: "/papers/tfpt_horizon_readouts.pdf",
     ...COMMON,
-    bytes: 906446,
+    bytes: 906420,
     sha256:
-      "dd954e4f90ab54b8829a0c966dc4feb434a5277d6d2d096d03c4fe07529d9aa3",
+      "c290c52a60c0134650275a76e3cc819a6130a1ec95e738f32edc37c12cc170a2",
     changelog:
       "Appendix H — the horizon unit system: c₃ = 1/(8π) as the universal horizon thermal code.",
   },
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 1129148,
+    bytes: 1130049,
     sha256:
-      "9d8ab36bcbefe0468cbfc2088ce3286456e0757f40961e2acac39b56ddd2bad8",
+      "cb79bc388894e0d649bc56d61f804845d15b697b7f4dbae61f0a0417022c3ee3",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 1531760,
+    bytes: 1554099,
     sha256:
-      "791be6ece4abc18b56e7b9741a65a36e31b05ba8ba8ac6a1ef31e62863e8ade1",
+      "854871e3aefd55ebef7bcd9596862a37176e8b6627d09a9a2dae585bb5bd92a6",
     changelog:
       "Research contracts for the remaining interfaces: v_geo (scale anchor, [O]), G_net (metric inclusion, [C] closed modulo cited theorems), F_transfer (downstream transport, typed runnable solvers [C]).",
   },
   "/papers/tfpt_safeguards.pdf": {
     href: "/papers/tfpt_safeguards.pdf",
     ...COMMON,
-    bytes: 616973,
+    bytes: 617158,
     sha256:
-      "f872f9bb25710bc89b0d1009a3c6233004f56747485f15170e60e5b7b0c86b11",
+      "993f420233999e0f137d51172f12b5760b50926fa2cf3f927f1c9fdb492c6555",
     changelog:
       "Safeguards: the verification discipline — the status calculus, no-free-pattern + reverse audit (and v431: the 5/8 'overhead' degrees are the forced two-family ladder 6·spine ⊔ det-ladder, not diffuse slack), the over-determination map (v427) with its honest self-correction (v428: the seven arithmetic witnesses compress one (2,3,5)/E₈ object; the genuine multiplication is the input forced four ways + the foreign α⁻¹) and its unconditional floor (v432: ~10⁻¹⁰ from disjoint pieces only, ~20 orders above the v100 conditional; hardened by v436 to an assumption-minimal 1/94,500 ≈ 4.40σ counting floor with a monotone concession ladder), the firewall + No-Unit theorem, frozen predictions + null model, the independent Wolfram and Lean paths, and the red team.",
   },
   "/papers/tfpt_5_redteam.pdf": {
     href: "/papers/tfpt_5_redteam.pdf",
     ...COMMON,
-    bytes: 837724,
+    bytes: 838129,
     sha256:
-      "6799f5610dc27238137b7775ed4ae43654711f10a7ffe37d765e79be9a2dd72d",
+      "a32d419c48cadecad87e0712eb0a4e065ef16fbc3ee4a6c7a3240dc4fbce41bd",
     changelog:
       "The adversarial audit: Targets A–E, what survives, what each target reduces to, and the kill tests.",
   },
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 1478458,
+    bytes: 1522534,
     sha256:
-      "e4c8d2e566ecfd9053ee36a2ca25fd25f83dee078ccf549c713801854bfc452f",
+      "1179e6a59f8a287bae696432db685cbdecc9a80d5cc08ba013fd7bda79f226ae",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

@@ -166,3 +166,189 @@ verdict_criteria:
     missing rungs must be listed per material with the published reason
     (e.g. m7/m8 above the CoNb2O6 low-pass window; BCVO m7 blended with
     multi-particle peaks at the 0.1 meV resolution).
+
+# ---------------------------------------------------------------------------
+# AMENDMENT v2 -- 2D coherent spectroscopy (2DCS) extension.
+# ---------------------------------------------------------------------------
+amendment_v2:
+  recorded: 2026-07-21
+  status: prepared_awaiting_data
+  timing_disclosure: >
+    Recorded BEFORE any 2D peak map (theoretical or experimental) is fed to a
+    recovery run, and BEFORE the 2D detector code below existed. Trigger:
+    arXiv:2512.16829 (Watanabe, Trebst, Hickey, "Two-dimensional coherent
+    spectroscopy of CoNb2O6", Dec 2025). Disclosure: that paper was READ to
+    design this amendment (peak-family taxonomy, Lehmann pathway structure of
+    chi^(3;2)_yyyy, localized-limit closed forms used for the negative
+    control). It is a THEORY paper: four-kink/ED model spectra at B_y = 0-3 T
+    (localized-limit regime, NOT the 1D E8 quantum critical point at
+    B_c ~ 5.3 T || b), with no E8 assignments and no experimental data. As of
+    2026-07-21 NO experimental 2DCS measurement on CoNb2O6 is published
+    (web-checked). Therefore no blind E8-target data exists yet; everything
+    below is frozen now so that, when experimental 2DCS peak tables at/near
+    the E8 field appear, none of the criteria can be tuned post hoc. No
+    recovery run of any kind preceded this freeze.
+  data_situation: >
+    (i) arXiv:2512.16829 predicts, for CoNb2O6 in the LOW-field localized
+    regime (B_y ~ 2-3 T), a discrete 2DCS peak set built from the two-kink
+    bound states eps_pm = J +/- sqrt(2)*h_plus and four-kink ("tetraquark")
+    states 2J +/- sqrt(3)*h_plus, 2J +/- h_plus, 2J, with J = 2.48 meV,
+    alpha_yz = 0.226, localized limit h_y = J*alpha_yz (h_plus = J*alpha_yz =
+    0.5605 meV). These closed forms give an ANALYTIC non-E8 2D peak map --
+    preregistered here as a material-specific NEGATIVE control (expectation:
+    the E8 2D detector must REJECT it). Numerical model maps: Zenodo
+    10.5281/zenodo.17879513 (data.zip, model output, not measurements).
+    (ii) The E8-target observable (future experiment): 2DCS map
+    Im[chi^(3;2)_yyyy(omega_t, omega_tau)] of CoNb2O6 at/near the 1D QCP,
+    B ~ 4.7-5.5 T || b, sub-Kelvin (the 1D E8 window; cf. Amelin+ at 0.25 K);
+    extractable peak coordinates with per-number provenance (text/table
+    preferred; figure digitization with documented read-off sigma as
+    fallback, conservative).
+  observable_v2: >
+    Input = list of N 2D peak coordinates (omega_tau, omega_t) with one
+    isotropic 1-sigma uncertainty per peak, folded to the positive quadrant
+    (|omega_tau|, |omega_t|); no pathway labels, no single/multi-particle
+    labels, no knowledge of which frequency is m1. Axis convention:
+    omega_tau = pump/coherence axis, omega_t = detection axis (paper figures
+    quote (omega_t, omega_tau); fold makes the detector symmetric to that
+    choice within families F1/F2; F3 differences live on the detection axis).
+  catalog_families:   # predicted 2D positions for scale s (= m1_hat), rungs r_a
+    F1_diagonal: "(s*r_a, s*r_a), a = 1..8 -- NR/R echo family (folded)"
+    F2_cross: "(s*r_a, s*r_b), a != b -- third-term cross peaks (omega_P, omega_R)"
+    F3_difference: >
+      (s*r_a, s*|r_a - r_b|), a != b -- Q-coherence pathways sin(omega_P*tau +
+      (omega_P - omega_Q)*t); THE channel by which rungs above a low-pass
+      window (m7, m8 in a 0.6 THz window at m1 = 0.16 THz) can appear inside
+      the window via difference frequencies.
+    F4_two_particle_sums: >
+      NOT scored in v2 (combinatorial explosion would inflate chance matches);
+      matched peaks are never assigned to F4; reported qualitatively only.
+  detector_v2:
+    scale_hypotheses: >
+      every folded axis value of every peak, tried as s*r_k for every rung k
+      (<= 16*N hypotheses, deduplicated at 1e-9 relative) -- blind analog of
+      the v1 anchor scan; no preferred rung.
+    matching: >
+      injective assignment peaks -> catalog entries (F1 u F2 u F3, 120
+      entries), per-peak two-axis gate |pull_axis| <= 3 on BOTH axes,
+      chi2_peak = pull_tau^2 + pull_t^2; objective lexicographic
+      (max n_matched, then min chi2) via a padded linear-sum assignment
+      (deterministic); two scale-refinement iterations (weighted LS over both
+      axes of matched pairs, re-match), as in v1.
+    physical_gates:
+      - rung 1 must be covered by at least one matched peak (v1 anchor gate)
+      - >
+        every peak with BOTH folded coordinates below 2*s - 2*sigma (pure
+        one-particle square: no continua below the two-particle threshold on
+        either axis) must be matched, else the scale hypothesis is rejected;
+        peaks with any coordinate >= 2*s may stay unmatched (multi-particle,
+        higher-order pathways).
+    coverage: >
+      n_rungs = |union of rungs referenced by matched entries| (F1 (a,a) -> {a};
+      F2 (a,b) -> {a,b}; F3 (a,|a-b|) -> {a,b}); PRIMARY score. Secondary:
+      n_matched peaks; chi2/dof with dof = 2*n_matched - 1 (scale fitted).
+      Selection over scale hypotheses: lexicographic (n_rungs, n_matched,
+      -chi2).
+    null_model: >
+      K = 5000 random 8-rung ladders (identical generator to v1: r1 = 1,
+      7 i.i.d. uniform-log ratios on [1, 4.7834], sorted, seed 0), identical
+      catalog construction, gates and scoring;
+      p = P[(n_rungs >= n_obs) AND (chi2/dof <= chi2dof_obs)], add-one
+      estimator. Control-battery rate scans use 500 null ladders
+      (documented, conservative direction; same convention as v1).
+  runs_v2:
+    - id: KA2D_synthetic_e8
+      desc: >
+        known-answer synthetic E8 2D map, m1 = 0.16 THz (CoNb2O6 scale), all
+        coordinates inside the 0.6 THz instrument window on BOTH axes, with
+        rungs 7/8 present ONLY via F3 difference coordinates, plus 2
+        off-ladder contaminant peaks. Must recover 8/8 rung coverage with
+        chi2/dof <= 2 and MC p < 0.01. This is the machine test of the claim
+        that 2DCS can unlock m7/m8 inside the 1D-inaccessible window.
+    - id: NEG2D_localized_limit
+      desc: >
+        analytic TFIM+YZ localized-limit 2DCS peak map (closed forms above,
+        J = 2.48 meV, alpha_yz = 0.226; the actual published prediction for
+        CoNb2O6 at B_y ~ 2-3 T from arXiv:2512.16829) -> E8 2D detector.
+        Preregistered expectation: REJECTED (no validated-level recovery).
+    - id: REAL2D_conb2o6_e8point
+      desc: >
+        BLOCKED until experimental 2DCS peak tables at/near B_c exist. Blind
+        discipline: if the future paper prints E8 assignments, our recovery
+        runs FIRST on the unlabeled coordinate list, comparison after.
+    - id: C2D_control_battery
+      desc: scramble2d / offset2d / jitter2d / wrong-ladder2d (below).
+  controls_v2:   # every class must be REJECTED
+    - id: CTRL2D.scramble
+      desc: >
+        permute the detection-axis values among peaks (keeps both marginal
+        frequency distributions, destroys the 2D pairing structure), 200
+        seeds; v1.1 near-duplicate convention carries over (trials landing
+        within 2 sigma of the original map on every coordinate are counted
+        separately); rejection: non-near-duplicate rate at observed strength
+        <= 5%.
+    - id: CTRL2D.offset
+      desc: additive shift +/- {0.3, 0.5} * m1_hat on both axes; must fail.
+    - id: CTRL2D.jitter
+      desc: >
+        multiplicative per-coordinate jitter, dose-response 5/10/20/30%
+        (100 trials per level; binomial resolution documented), monotone decay
+        required, rate <= 5% at the destructive 30% level (v1.1 convention).
+    - id: CTRL2D.wrong_ladder
+      desc: >
+        harmonic 1..8, D8 Cartan-PF and Airy/confined-spinon ladders run
+        through the identical 2D catalog machinery on the same peak list;
+        gate-then-compare as in v1.1 (competitor must pass chi2/dof <= 2);
+        E8 must strictly win on (n_rungs, n_matched, then chi2).
+  verdict_criteria_v2:
+    validated_2d: >
+      real E8-point data only: n_rungs >= 6 with chi2/dof <= 2 and MC
+      p < 0.01, AND every control class rejected on the same map.
+    m7_m8_upgrade_rule: >
+      the CoNb2O6 leg moves from 6/8 to n/8 (n in {7,8}) ONLY if rung 7
+      and/or rung 8 is covered by >= 1 matched peak with both-axis pulls
+      <= 3 sigma AND the combined recovery has MC p < 0.01. Until real 2DCS
+      data exists the leg stays 6/8.
+    prepared_awaiting_data: >
+      the state after this amendment if KA2D passes, NEG2D and all synthetic
+      control classes are rejected, and no real data exists: the 2D detector
+      is validated and frozen, the CoNb2O6 verdict is UNCHANGED (6/8,
+      p = 0.0038).
+    kill_2d: >
+      detector fails KA2D (n_rungs < 8 or p >= 0.01), OR fires at validated
+      level on NEG2D_localized_limit, OR scramble2d/jitter2d leak > 5% at the
+      preregistered levels -> the 2D extension is killed (v1 1D results
+      untouched); failure kills the detector, not TFPT.
+  no_retroactive_changes: >
+    v1/v1.1 criteria, runs and numbers are untouched by this amendment. The
+    v2 detector is additive; it shares only ladder.py (frozen by tests) and
+    the null-ladder generator with v1.
+
+amendment_v2_1: >
+  TIMING DISCLOSURE: recorded AFTER the first KA2D synthetic diagnostic runs
+  (2026-07-21; 200-null scan p = 0.0149, 500-null scan p = 0.0200) and BEFORE
+  the headline 5000-null run and the control battery. No real data is
+  involved anywhere (KA2D is the preregistered synthetic known-answer map).
+  Issue found, independent of any target outcome: the v2 null-model region
+  "p = P[(n_rungs >= n_obs) AND (chi2/dof <= obs)]" omits n_matched, the
+  second component of the detector's own preregistered lexicographic
+  objective (n_rungs, n_matched, -chi2). Null recoveries that leave 3 of the
+  11 peaks unmatched (n_matched = 8 vs observed 11) were counted as "as good
+  as" the observed recovery. This is the same miscalibration class as
+  amendment v1.1 item (2): the false-alarm region must be "as good or better
+  than the observed recovery" in EVERY score component the detector
+  maximizes (the v1 1D detector needed only (n, chi2) because peak count and
+  rung coverage coincide in 1D; in 2D they split into n_matched and
+  n_rungs). CORRECTED REGION (v2.1, used for all headline numbers and the
+  control battery): p = P[(n_rungs >= n_obs) AND (n_matched >= n_matched_obs)
+  AND (chi2/dof <= obs)]. Both counts are reported side by side in
+  results2d.json (n_as_good_coverage_only preserves the v2 region). The
+  detector, gates, catalog, KA/NEG maps and all other criteria are untouched.
+  Efficiency notes (no criteria change): (i) null-ladder scans prune scale
+  hypotheses whose 2x-loose-gate rung-coverage upper bound is below the
+  observed n_rungs (exact for the p-value: such hypotheses can never enter
+  the success region; machine-checked pruned-vs-unpruned on 60 null ladders
+  in tests/test_recover2d.py); (ii) control-battery detection decisions stop
+  a null scan early once the p < 0.01 threshold can no longer be reached
+  (n_good >= 5 of 500 or >= 10 of 1000) -- binary-decision equivalent to the
+  full scan.

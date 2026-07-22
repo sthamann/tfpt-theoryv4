@@ -4978,6 +4978,700 @@ Module[{zs, s8, t8, quad, quart, lf},
     Expand[quart - (16 t8 + 12 s8^2)] === 0];
 ];
 
+(* ==== v509 round: CELEST.WP5E.EPS2.01 -- WP5e-epsilon-2 "the CPS
+   level-from-flux dial" (verdict B; k = 1 from flux quantisation on the
+   lockstep spheres, Costello-Paquette-Sharma Burns holography).  Exact
+   content mirrored: (i) the CPS PERIOD INTEGRALS -- the S^3 period of the
+   brane backreaction 3-form = (2 pi i)^2 (pullback density -sin 2 theta)
+   and the exceptional-sphere Kahler flux = 2 pi N exactly (flat part dies
+   at t -> 0); (ii) the LEVEL ~ FLUX contraction 2N (symplectic bosons,
+   N = 1, 2, 3) with the Dynkin normalisation T(so8 vector) = 1, T(adj) =
+   6; (iii) the PAIRING-MATRIX ENUMERATION -- row candidates (8, 6, 8),
+   48 unimodular solutions of P C^-1 P^T = C^-1, with effectivity P >= 0
+   exactly 2 = {identity, A3 diagram flip}; (iv) the FLUXES (64, 60, 64) =
+   dim g_i with total 188 = 248 - 60, flip-invariant, one quantum per
+   charged current; (v) the SECTOR-COUNTER dial #primaries((E8)_k) =
+   (1, 3, 5, 10, 15, 27) for k = 1..6 from the affine marks -- exactly one
+   sector iff k = 1; (vi) the LOCKSTEP THEOREM -- clock invariance forces
+   a3 = a2 = a1 = 0, periods t(i-1)(1, i, i^2) with squared moduli 2t^2
+   equal on all three spheres, monodromy = pure phase i, det(A-1) = -4,
+   and the negative probe Z^4 - Z (disc -27): 0/24 orderings lockstep;
+   (vii) the NEGATIVE CONTROLS -- SO(16) fluxes (0, 60, 0) with ch2 defect
+   -30 and condensation stuck at 4, A2 form det 3, glue diagonal 23/24
+   not integer, mu = 12 not a perfect square, Coxeter order 3 != 4.
+   Mirrors v509. ==== *)
+Module[{th, ph, ps, v1, v2, v1b, v2b, dv, eta, dens, per, nn, zz, zb, rr,
+        tt, gLog, flux, gFlat},
+  v1 = Cos[th] Exp[I ph]; v2 = Sin[th] Exp[I ps];
+  v1b = Cos[th] Exp[-I ph]; v2b = Sin[th] Exp[-I ps];
+  dv[f_] := {D[f, th], D[f, ph], D[f, ps]};
+  eta = Expand[v1b dv[v2b] - v2b dv[v1b]];
+  dens = Simplify[Det[{dv[v1], dv[v2], eta}]];
+  per = Integrate[dens, {th, 0, Pi/2}] (2 Pi) (2 Pi);
+  gLog = Simplify[D[nn Log[1 + zz zb], zz, zb]];
+  flux = Integrate[2 nn rr/(1 + rr^2)^2, {rr, 0, Infinity}] 2 Pi;
+  gFlat = D[tt^2 (1 + zz zb), zz, zb];
+  checkExact["v509 CELEST.WP5E.EPS2.01 (i): CPS PERIOD INTEGRALS -- the S^3 period of the brane backreaction 3-form int d^2v ^ [vbar dvbar] on |v| = 1 has pullback density -sin(2 theta) exactly (phases cancel) and integral (2 pi)^2 x (-1) = -4 pi^2 = (2 pi i)^2 (CPS eq. 3.33: ONE quantum per brane, large-gauge invariance quantises N); the exceptional-sphere Kahler flux from K = |u|^2 + N log|u|^2 is int i ddbar N log(1+|z|^2) = 2 pi N EXACTLY with density N/(1+|z|^2)^2, while the flat part i ddbar t^2|zeta|^2 = t^2 -> 0 at t -> 0 -- level = flux quantum (CPS secs. 2, 3.3)",
+    Simplify[dens + Sin[2 th]] === 0 &&
+    Simplify[per + 4 Pi^2] === 0 &&
+    Simplify[gLog - nn/(1 + zz zb)^2] === 0 &&
+    Simplify[flux - 2 Pi nn] === 0 &&
+    Limit[gFlat, tt -> 0] === 0];
+];
+Module[{om, pinv, sdir, scrs, okc, x4, s4, vec, adj},
+  okc = True;
+  Do[
+    om = KroneckerProduct[IdentityMatrix[n], {{0, 1}, {-1, 0}}];
+    pinv = Inverse[om];
+    sdir = Sum[om[[i, j]] om[[k, l]] pinv[[i, k]] pinv[[j, l]],
+      {i, 2 n}, {j, 2 n}, {k, 2 n}, {l, 2 n}];
+    scrs = Sum[om[[i, j]] om[[k, l]] pinv[[i, l]] pinv[[j, k]],
+      {i, 2 n}, {j, 2 n}, {k, 2 n}, {l, 2 n}];
+    okc = okc && sdir === 2 n && scrs === -2 n,
+    {n, 1, 3}];
+  x4 = Array[Subscript[x, #] &, 4];
+  s4 = x4 . x4;
+  vec = Expand[Sum[(s x4[[i]])^2, {i, 4}, {s, {1, -1}}]];
+  adj = Expand[Total[Flatten[Table[(si x4[[p[[1]]]] + sj x4[[p[[2]]]])^2,
+    {p, Subsets[Range[4], {2}]}, {si, {1, -1}}, {sj, {1, -1}}]]]];
+  checkExact["v509 CELEST.WP5E.EPS2.01 (ii): LEVEL ~ FLUX, EXACT CONTRACTION + DYNKIN NORMALISATION -- the Sp(N) symplectic-boson double contraction Om_ij Om_kl P^ik P^jl = +2N with crossed term -2N for N = 1, 2, 3 (the so(k) current-algebra level magnitude is LINEAR in the brane/flux number, CPS eq. 9.4: level -2N); so(8) vector sum_weights <l,x>^2 = 2<x,x> => T(vector) = 1 and adjoint sum_roots = 12<x,x> = 2 h_vee(so8) => T(adj) = 6 -- 'level = flux quantum x Dynkin index of the boundary matter'",
+    okc && Expand[vec - 2 s4] === 0 && Expand[adj - 12 s4] === 0];
+];
+Module[{ca3, ci, rows, nsols, solsPos, pm, flip, d5r, d5v, d5s, d5c, a3r,
+        wcl, z5, z4, glue, counts, dims, fl, flFlip},
+  ca3 = {{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}};
+  ci = Inverse[ca3];
+  rows = Table[Select[Tuples[Range[-2, 2], 3],
+    (# . ci . #) == ci[[m, m]] &], {m, 1, 3}];
+  nsols = 0; solsPos = {};
+  Do[Do[Do[
+    pm = {r1, r2, r3};
+    If[Abs[Det[pm]] == 1 && pm . ci . Transpose[pm] == ci,
+      nsols++;
+      If[Min[pm] >= 0, AppendTo[solsPos, pm]]],
+    {r3, rows[[3]]}], {r2, rows[[2]]}], {r1, rows[[1]]}];
+  flip = {{0, 0, 1}, {0, 1, 0}, {1, 0, 0}};
+  checkExact["v509 CELEST.WP5E.EPS2.01 (iii): PAIRING-MATRIX ENUMERATION 48 -> 2 -- the v505 ch2 ledger targets (C^-1)_mm give integer row candidates (8, 6, 8) per sphere; the FULL form condition P C^-1 P^T = C^-1 with |det P| = 1 has exactly 48 unimodular solutions, and effectivity P >= 0 cuts them to EXACTLY 2 = {identity, A3 diagram flip}: P_mi = c1(T_m).[Sigma_i] = delta_mi up to the sphere relabeling -- the McKay/Kronheimer normalisation is DERIVED from ch2 + integrality + unimodularity + effectivity, not postulated",
+    (Length /@ rows) === {8, 6, 8} && nsols === 48 &&
+    Length[solsPos] === 2 &&
+    MemberQ[solsPos, IdentityMatrix[3]] && MemberQ[solsPos, flip]];
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  counts = Table[Count[glue[[All, 2]], m], {m, 0, 3}];
+  dims = Prepend[counts[[2 ;;]], counts[[1]] + 8];
+  fl = Table[Sum[dims[[m + 1]] KroneckerDelta[m, i], {m, 1, 3}], {i, 1, 3}];
+  flFlip = Table[Sum[dims[[m + 1]] flip[[m, i]], {m, 1, 3}], {i, 1, 3}];
+  checkExact["v509 CELEST.WP5E.EPS2.01 (iv): THE THREE FLUXES -- 240 roots split (52, 64, 60, 64), graded dims (60, 64, 60, 64); glue fluxes F_i = sum_m dim(g_m) c1(T_m).[Sigma_i] = (64, 60, 64) = dim g_i with total 188 = 248 - 60 (all non-carrier currents), INVARIANT under the diagram flip; every charged root current carries deg(L_alpha|Sigma_i) = delta_mi: exactly ONE flux quantum through exactly one sphere -- and the three UNEQUAL numbers (64, 60, 64) kill the naive reading 'level = total open-string flux' by the lockstep consistency test itself (F_i = flavour multiplicity), while flux per adjoint current = F_i/dim g_i = (1, 1, 1)",
+    Length[glue] === 240 && counts === {52, 64, 60, 64} &&
+    dims === {60, 64, 60, 64} && fl === {64, 60, 64} &&
+    Total[fl] === 188 && flFlip === {64, 60, 64} &&
+    (fl/dims[[2 ;;]]) === {1, 1, 1}];
+];
+Module[{marks, nprim},
+  marks = {2, 3, 4, 6, 5, 4, 3, 2};
+  nprim = Table[Count[Tuples[Range[0, Floor[k/#]] & /@ marks],
+    a_ /; a . marks <= k], {k, 1, 6}];
+  checkExact["v509 CELEST.WP5E.EPS2.01 (v): THE SECTOR-COUNTER DIAL -- #primaries((E8)_k) from the affine marks (2, 3, 4, 6, 5, 4, 3, 2) is (1, 3, 5, 10, 15, 27) for k = 1..6: EXACTLY ONE sector iff k = 1 (quantum dims >= 1, so the condensed two-interval index mu = sum d_i^2 = 1 iff #prim = 1) -- the KLM-condensed flux-sector count 1 (mu = 16 = ord^2 -> 16/4^2 = 1 through the Lagrangian mu4 glue) PINS the level k = 1 among all levels, independent of the CPS transplantation",
+    nprim === {1, 3, 5, 10, 15, 27} &&
+    Flatten[Position[nprim, 1]] === {1} &&
+    16/4^2 === 1];
+];
+Module[{zz, a0, a1, a2, a3, sol, tt, roots4, per, perTar, mods2, rot,
+        am, om, rset, orbitEq, perms, nLock, disc},
+  sol = Solve[Thread[CoefficientList[
+    Expand[(zz^4 + a3 zz^3 + a2 zz^2 + a1 zz + a0 /. zz -> I zz) -
+           (zz^4 + a3 zz^3 + a2 zz^2 + a1 zz + a0)], zz] == 0],
+    {a3, a2, a1}];
+  roots4 = {tt, I tt, -tt, -I tt};
+  per = Table[roots4[[j + 1]] - roots4[[j]], {j, 1, 3}];
+  perTar = Table[tt (I - 1) I^(j - 1), {j, 1, 3}];
+  mods2 = Table[ComplexExpand[per[[j]] Conjugate[per[[j]]]], {j, 1, 3}];
+  rot = Table[Expand[(perTar[[j]] /. tt -> I tt) - I perTar[[j]]],
+    {j, 1, 3}];
+  am = {{0, 0, -1}, {1, 0, -1}, {0, 1, -1}};
+  disc = Discriminant[zz^4 - zz, zz];
+  om = (-1 + Sqrt[3] I)/2;
+  rset = {0, 1, om, RootReduce[om^2]};
+  orbitEq[rv_] := Union[RootReduce /@ Table[I^k rv, {k, 0, 3}]] ===
+    Union[RootReduce /@ rset];
+  perms = Permutations[rset];
+  nLock = Count[perms, p_ /; Module[{d1, d2, d3, m1, m2, m3},
+    {d1, d2, d3} = {p[[2]] - p[[1]], p[[3]] - p[[2]], p[[4]] - p[[3]]};
+    {m1, m2, m3} = RootReduce[ComplexExpand[# Conjugate[#]]] & /@
+      {d1, d2, d3};
+    m1 === m2 && m2 === m3]];
+  checkExact["v509 CELEST.WP5E.EPS2.01 (vi): THE LOCKSTEP THEOREM + THE 0/24 NEGATIVE PROBE -- clock invariance P(iZ) = P(Z) forces a3 = a2 = a1 = 0 (unique solution: the clock-invariant family is XY = Z^4 + a0 alone); the branch points are ONE mu4 orbit {i^k t} with periods Pi_j = t(i-1)(1, i, i^2) and squared moduli 2t^2 EQUAL on all three spheres; the monodromy t -> it multiplies the period vector by the pure phase i, and the Coxeter clock A has A^4 = 1 with det(A - 1) = -4 != 0 (NO invariant flux vector) -- k1 = k2 = k3 IS A THEOREM of clock invariance; NEGATIVE PROBE: the clock-forbidden family Z^4 - Z (disc = -27, smooth) has branch points {0, 1, w, w^2} that are NOT a mu4 orbit, and over ALL 24 orderings ZERO chains give three equal period moduli (1 vs sqrt 3): non-lockstep => unequal k_i => no single (E8)_k boundary",
+    sol === {{a3 -> 0, a2 -> 0, a1 -> 0}} &&
+    (And @@ Table[Expand[per[[j]] - perTar[[j]]] === 0, {j, 1, 3}]) &&
+    Union[mods2] === {2 tt^2} &&
+    (And @@ (# === 0 & /@ rot)) &&
+    MatrixPower[am, 4] === IdentityMatrix[3] &&
+    Det[am - IdentityMatrix[3]] === -4 &&
+    disc === -27 &&
+    NoneTrue[rset, orbitEq] &&
+    nLock === 0];
+];
+Module[{ci, so16dims, flso, defect, d8cart, detD8, ca2, c2i, ch2a2, ded,
+        glueDiag, sqs, a2cox},
+  ci = Inverse[{{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}}];
+  so16dims = {60, 0, 60, 0};
+  flso = Table[Sum[so16dims[[m + 1]] KroneckerDelta[m, i], {m, 1, 3}],
+    {i, 1, 3}];
+  defect = Sum[so16dims[[m + 1]] (-ci[[m, m]]/2), {m, 1, 3}];
+  d8cart = 2 IdentityMatrix[8] - Table[If[
+    (Abs[i - j] == 1 && Max[i, j] < 8) || MemberQ[{{6, 8}, {8, 6}}, {i, j}],
+    1, 0], {i, 8}, {j, 8}];
+  detD8 = Det[d8cart];
+  ca2 = {{2, -1}, {-1, 2}};
+  c2i = Inverse[ca2];
+  ch2a2 = Table[-c2i[[m, m]]/2, {m, 1, 2}];
+  ded = (3^2 - 1)/12;
+  glueDiag = 5/8 + 1/3;
+  sqs = Select[Range[12], #^2 == 12 &];
+  a2cox = {{0, -1}, {1, -1}};
+  checkExact["v509 CELEST.WP5E.EPS2.01 (vii): NEGATIVE CONTROLS -- SO(16) glue (Z4 classes (60, 0, 60, 0), a mere Z2 monodromy): fluxes (0, 60, 0) leave spheres 1 and 3 FLUX-DARK, the ch2 defect is -30 != -78, and the condensation stops at 16/2^2 = 4 = det Cartan(D8) (four sectors survive, no holomorphic single-sector net); the WRONG intersection form A2: det = 3 != 4 = |Z4| (McKay bijection broken), ch2 = (-1/3, -1/3) (wrong denominators), Dedekind sum 2/3 != 5/4, glue diagonal 5/8 + 1/3 = 23/24 NOT integer (non-isotropic), mu = 12 is not a perfect square (NO Lagrangian subgroup exists at all), and the A2 Coxeter has order 3 != 4 = |mu4| -- the clock cannot even act",
+    flso === {0, 60, 0} && defect === -30 && 16/2^2 === 4 &&
+    detD8 === 4 && Det[ca2] === 3 &&
+    ch2a2 === {-1/3, -1/3} && ded === 2/3 && ded =!= 5/4 &&
+    glueDiag === 23/24 && !IntegerQ[glueDiag] && sqs === {} &&
+    4 detD8 === 16 && 4 Det[ca2] === 12 &&
+    MatrixPower[a2cox, 3] === IdentityMatrix[2] &&
+    a2cox =!= IdentityMatrix[2] &&
+    MatrixPower[a2cox, 4] =!= IdentityMatrix[2]];
+];
+
 (* ---- summary ---- *)
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v510 round: SEAM.BIT.FREEDOM.01 -- the freedom attack on the
+   v506/v507 alignment bit: the POSITION half of the bit is topology.
+   Exact content mirrored: (i) the DIHEDRAL CENSUS -- on the refined
+   2N-point seam circle D_16 has 17 involutions with EXACTLY ONE free (the
+   antipodal shift by 8) and all 16 reflections have exactly 2 circle fixed
+   points (8 site-axis + 8 edge-axis; robustness N = 8, 12; odd control
+   N = 9: zero free), plus the quotient topology chi(C/antipode) = 0
+   (circle) vs chi(C/reflection) = 1 (interval, 2 boundary corners);
+   (ii) the AUT COMPLETENESS -- Aut(C_8) = D_8 by brute force over all
+   8! = 40320 permutations and Aut(C_16) = D_16 by degree-2 propagation
+   (all 32 candidates), so the census covers ALL circle symmetries;
+   (iii) the Cl(16) DICHOTOMY CENSUS -- on explicit 256x256 Jordan-Wigner
+   gammas the free deck's NS implementer squares to 256 gamma_1...gamma_16
+   = 256 (-1)^F (nonsplit) while the implementers of ALL 16 reflections
+   exist (one of the two spin lifts +-R) and square to SCALARS {2^7
+   (site-axis), 2^8 (edge-axis)} (split): NONSPLIT <=> FREE over the
+   complete census; root dichotomy 2 (the +-quarter shifts) vs 0 total
+   over all 16 reflections; (iv) the REAL-STRUCTURE TABLE -- the
+   deck-commuting antiholomorphic involutions solve symbolically to
+   exactly two families (M diagonal: mu conj z, fix line through the
+   poles; M antidiagonal: mu/conj z, fix circle |z| = sqrt mu), and the
+   unique mark-fixing real structure per configuration is equatorial/FREE
+   for mu4 and generic-unit, real-axis/NOT-free for silver and
+   generic-real, and NONEXISTENT for the hexagonal frame; (v) HARMONIC +
+   FREE => mu4 -- the deck-pair cross-ratio (1-b)^2/(1+b)^2 = -1 solves
+   exactly to b = +-i, with the lambda table (2, 1/2, 3/4, 5/4) real and
+   the hexagonal lambda complex; (vi) the HONEST COUNTERWITNESSES --
+   the discrete witness {0,1,8,9} (shift-invariant, crossing, but not
+   quarter-shift-invariant) and the continuous witness {+-1, +-(3+4i)/5}
+   (pair cross-ratio -1/4, j = 148176/25 != 1728, clock does not
+   preserve): the Fock dichotomy measures the CLASS, not the modulus.
+   The Moebius/Klein covering models and the pillowcase branch control
+   stay Python-side (v510).  Mirrors v510. ==== *)
+Module[{applyEl, fixedPos, census, quot, r16, r8, r12, r9, qF, qR, qO},
+  applyEl[{0, k_}, p_, NN_] := Mod[p + 2 k, 2 NN];
+  applyEl[{1, m_}, p_, NN_] := Mod[2 m - p, 2 NN];
+  fixedPos[el_, NN_] :=
+    Select[Range[0, 2 NN - 1], applyEl[el, #, NN] == # &];
+  census[NN_] := Module[{els, invols, nFree = 0, site = 0, edge = 0, fx},
+    els = Join[Table[{0, k}, {k, 1, NN - 1}], Table[{1, m}, {m, 0, NN - 1}]];
+    invols = Select[els, #[[1]] == 1 || Mod[2 #[[2]], NN] == 0 &];
+    Do[fx = fixedPos[el, NN];
+      Which[fx === {}, nFree++,
+        el[[1]] == 1 && (And @@ (EvenQ /@ fx)), site++,
+        el[[1]] == 1 && (And @@ (OddQ /@ fx)), edge++],
+      {el, invols}];
+    {Length[invols], nFree, site, edge}];
+  quot[el_, NN_] := Module[{orb, verts, edges, fx},
+    orb = Table[Min[p, applyEl[el, p, NN]], {p, 0, 2 NN - 1}];
+    verts = Union[orb];
+    edges = Union[Table[Sort[{orb[[p + 1]], orb[[Mod[p + 1, 2 NN] + 1]]}],
+      {p, 0, 2 NN - 1}]];
+    fx = fixedPos[el, NN];
+    {Length[verts] - Length[edges], Length[fx]}];
+  r16 = census[16]; r8 = census[8]; r12 = census[12]; r9 = census[9];
+  qF = quot[{0, 8}, 16]; qR = quot[{1, 4}, 16]; qO = quot[{1, 3}, 16];
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (i): DIHEDRAL CENSUS + QUOTIENT TOPOLOGY -- on the refined 2N-point seam circle D_16 has EXACTLY 17 involutions with exactly ONE free (the antipodal shift by 8) and all 16 reflections have exactly 2 circle fixed points (8 site-axis + 8 edge-axis: a reflection is NEVER free); robustness (9,1,4,4) at N = 8 and (13,1,6,6) at N = 12; odd control N = 9: (9,0,...) -- ZERO free involutions (no antipode at odd N, even carrier count needed); quotient topology: chi(circle/antipode) = 0 with 0 boundary points (a CLOSED circle) vs chi(circle/reflection) = 1 with 2 fixed corners (an INTERVAL, both axis types) -- the 6pi = 3 x 2pi Gauss-Bonnet budget counts closed circles, so deck freeness IS the established 'seam = closed circle' datum",
+    r16 === {17, 1, 8, 8} && r8 === {9, 1, 4, 4} && r12 === {13, 1, 6, 6} &&
+    r9[[1]] === 9 && r9[[2]] === 0 &&
+    qF === {0, 0} && qR === {1, 2} && qO === {1, 2}];
+];
+Module[{NN, adjOf, autos, dihedral, deg2, valid, dihedral16, adj16},
+  NN = 8;
+  adjOf[j_, n_] := {Mod[j - 1, n], Mod[j + 1, n]};
+  autos = Select[Permutations[Range[0, NN - 1]],
+    Function[pm, And @@ Table[
+      Sort[pm[[# + 1]] & /@ adjOf[j, NN]] ===
+        Sort[adjOf[pm[[j + 1]], NN]], {j, 0, NN - 1}]]];
+  dihedral = Union[Flatten[Table[Table[Mod[i0 + d j, NN], {j, 0, NN - 1}],
+    {i0, 0, NN - 1}, {d, {1, -1}}], 1]];
+  adj16[j_] := adjOf[j, 16];
+  deg2 = And @@ Table[Length[adj16[j]] == 2, {j, 0, 15}];
+  valid = {};
+  Do[Module[{phi, ok, nxt},
+    phi = {i0, i1}; ok = True;
+    Do[nxt = Complement[adj16[phi[[-1]]], {phi[[-2]]}];
+      If[Length[nxt] != 1, ok = False; Break[]];
+      AppendTo[phi, nxt[[1]]], {j, 3, 16}];
+    If[ok && Length[Union[phi]] == 16 &&
+      (And @@ Table[MemberQ[adj16[phi[[j]]], phi[[Mod[j, 16] + 1]]],
+        {j, 16}]), AppendTo[valid, phi]]],
+    {i0, 0, 15}, {i1, adj16[i0]}];
+  dihedral16 = Union[Flatten[Table[Table[Mod[i0 + d j, 16], {j, 0, 15}],
+    {i0, 0, 15}, {d, {1, -1}}], 1]];
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (ii): AUT COMPLETENESS -- Aut(C_8) computed by BRUTE FORCE over all 8! = 40320 permutations has exactly 16 elements and equals D_8 (no exotic circle automorphism exists); Aut(C_16) by degree-2 propagation: an adjacency-preserving map is DETERMINED by (image of 0, image of 1), all 32 = 16 x 2 candidates propagate consistently and equal D_16 exactly -- the dihedral census of mirror (i) covers ALL circle symmetries: the unique free involution of the seam circle IS the antipode, with no loophole",
+    Length[autos] === 16 && Sort[autos] === Sort[dihedral] &&
+    deg2 && Length[valid] === 32 && Sort[valid] === Sort[dihedral16]];
+];
+Module[{gam, id, Ut, GAMMA, shiftM, reflM, Dns, group, refImpl, implQ,
+        results, allImpl, allSplit, coefs, rootsD, rootsRtot, matPropQ},
+  gam = Table[Module[{kk = Quotient[j + 1, 2], op},
+    op = If[OddQ[j], PauliMatrix[1], PauliMatrix[2]];
+    SparseArray[KroneckerProduct @@ Join[
+      ConstantArray[PauliMatrix[3], kk - 1], {op},
+      ConstantArray[IdentityMatrix[2], 8 - kk]]]], {j, 1, 16}];
+  id = IdentityMatrix[256, SparseArray];
+  Ut = Fold[#1 . (id - gam[[#2]] . gam[[#2 + 8]]) &, id, Range[8]];
+  GAMMA = Fold[#1 . gam[[#2]] &, id, Range[16]];
+  refImpl[k_] := Module[{fixed, fplus, U},
+    fixed = Select[Range[0, 15], Mod[k - #, 16] == # &];
+    If[fixed =!= {},
+      fplus = Select[fixed, Mod[k - #, 32] < 16 &][[1]];
+      U = Fold[#1 . gam[[#2]] &, id,
+        Select[Range[16], # != fplus + 1 &]],
+      U = id];
+    Do[Module[{b = Mod[k - a, 16], idx, eps},
+      If[a < b && ! MemberQ[fixed, a],
+        idx = Mod[k - a, 32]; eps = If[idx >= 16, -1, 1];
+        U = U . (gam[[a + 1]] + eps gam[[b + 1]])]], {a, 0, 15}];
+    U];
+  implQ[U_, k_, s_] := And @@ Table[Module[{b0 = Mod[k - a, 32], b, sg},
+    b = Mod[b0, 16]; sg = If[b0 >= 16, -1, 1];
+    Normal[U . gam[[a + 1]]] === Normal[s sg gam[[b + 1]] . U]],
+    {a, 0, 15}];
+  results = Table[Module[{U = refImpl[k], U2, sc},
+    U2 = Normal[U . U];
+    sc = Which[U2 === Normal[128 id], 128, U2 === Normal[256 id], 256,
+      True, 0];
+    {implQ[U, k, 1] || implQ[U, k, -1], sc}], {k, 0, 15}];
+  allImpl = And @@ (#[[1]] & /@ results);
+  coefs = Union[#[[2]] & /@ results];
+  allSplit = ! MemberQ[coefs, 0];
+  shiftM[n_, k_] := Table[
+    If[Mod[a + k, n] == bb, If[a + k >= n, -1, 1], 0],
+    {bb, 0, n - 1}, {a, 0, n - 1}];
+  reflM[n_, k_] := Table[Module[{idx = Mod[k - a, 2 n]},
+    If[Mod[idx, n] == bb, If[idx >= n, -1, 1], 0]],
+    {bb, 0, n - 1}, {a, 0, n - 1}];
+  Dns = shiftM[16, 8];
+  group = Join[Table[shiftM[16, k], {k, 0, 15}],
+    Table[reflM[16, k], {k, 0, 15}]];
+  matPropQ[A_, B_] := A === B || A === -B;
+  rootsD = Count[group, g_ /; matPropQ[g . g, Dns]];
+  rootsRtot = Sum[Count[group, g_ /; matPropQ[g . g, reflM[16, k]]],
+    {k, 0, 15}];
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (iii): THE Cl(16) DICHOTOMY CENSUS -- on explicit 256x256 Jordan-Wigner gammas the free deck's NS implementer Utilde = prod_j (1 - gamma_j gamma_{j+8}) squares to 256 gamma_1...gamma_16 = 256 (-1)^F (NONSPLIT, v507 reproduced), while for EVERY reflection axis k = 0..15 the NS implementer exists (implements one of the two spin lifts +-R on all 16 generators -- the v507 F2.2 lift ambiguity) and squares to a SCALAR in {2^7 (site-axis), 2^8 (edge-axis)}: the extension SPLITS for every non-free involution -- NONSPLIT <=> FREE over the COMPLETE 17-involution census, no exception; root dichotomy in the 32-element dihedral lift group: the free deck has EXACTLY 2 square roots (the +-quarter shifts = the Z8 clock tower) while ALL 16 reflections together have 0 -- no clock tower over any non-free arrangement",
+    Normal[Ut . Ut] === Normal[256 GAMMA] && allImpl && allSplit &&
+    coefs === {128, 256} && rootsD === 2 && rootsRtot === 0];
+];
+Module[{a, b, c, d, M, DECK, MD, DM, br1, br2, mu, Mdiag, Manti, invDiag,
+        invAnti, conjM, map3, adjM, papply, peqQ, propQ, cfgOf, mfrs,
+        EQUATOR, REALAXIS, bhex, cases, table, expect},
+  DECK = DiagonalMatrix[{1, -1}];
+  M = {{a, b}, {c, d}};
+  MD = M . DECK; DM = DECK . M;
+  br1 = Solve[{MD[[1, 2]] == DM[[1, 2]], MD[[2, 1]] == DM[[2, 1]]}, {b, c}];
+  br2 = Solve[{MD[[1, 1]] == -DM[[1, 1]], MD[[2, 2]] == -DM[[2, 2]]},
+    {a, d}];
+  Mdiag = {{mu, 0}, {0, 1}};
+  invDiag = Mdiag . ({{Conjugate[mu], 0}, {0, 1}});
+  Manti = {{0, mu}, {1, 0}};
+  invAnti = Manti . ({{0, Conjugate[mu]}, {1, 0}});
+  conjM[Mx_] := Map[ComplexExpand[Conjugate[#]] &, Mx, {2}];
+  map3[A_, B_, C_] := Module[{al, be},
+    al = C[[1]] B[[2]] - B[[1]] C[[2]]; be = A[[1]] C[[2]] - C[[1]] A[[2]];
+    {{al A[[1]], be B[[1]]}, {al A[[2]], be B[[2]]}}];
+  adjM[Mx_] := {{Mx[[2, 2]], -Mx[[1, 2]]}, {-Mx[[2, 1]], Mx[[1, 1]]}};
+  papply[Mx_, p_] := {Mx[[1, 1]] p[[1]] + Mx[[1, 2]] p[[2]],
+    Mx[[2, 1]] p[[1]] + Mx[[2, 2]] p[[2]]};
+  peqQ[p_, q_] := Simplify[p[[1]] q[[2]] - p[[2]] q[[1]]] === 0;
+  propQ[A_, B_] := Module[{av = Flatten[A], bv = Flatten[B]},
+    And @@ Flatten[Table[Simplify[av[[i]] bv[[j]] - av[[j]] bv[[i]]] === 0,
+      {i, 4}, {j, 4}]]];
+  cfgOf[bb_] := {{1, 1}, {-1, 1}, {bb, 1}, {-bb, 1}};
+  mfrs[cfg_] := Module[{M3, Msig, fixesAll},
+    M3 = map3[cfg[[1]], cfg[[2]], cfg[[3]]];
+    Msig = Simplify[M3 . adjM[conjM[M3]]];
+    fixesAll = And @@ (peqQ[papply[Msig,
+      {ComplexExpand[Conjugate[#[[1]]]],
+       ComplexExpand[Conjugate[#[[2]]]]}], #] & /@ cfg);
+    {Msig, fixesAll}];
+  EQUATOR = {{0, 1}, {1, 0}}; REALAXIS = IdentityMatrix[2];
+  bhex = I (2 - Sqrt[3]);
+  cases = {I, 3 + 2 Sqrt[2], 3, 3/5 + 4 I/5, bhex};
+  table = Table[Module[{r = mfrs[cfgOf[bb]], fam},
+    fam = Which[propQ[r[[1]], EQUATOR], 1, propQ[r[[1]], REALAXIS], 2,
+      True, 0];
+    {r[[2]], fam}], {bb, cases}];
+  expect = {{True, 1}, {True, 2}, {True, 2}, {True, 1}, {False, 0}};
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (iv): THE REAL-STRUCTURE TABLE -- the deck-commuting condition M D = lam D M solves symbolically to exactly TWO families (lam = +1: M diagonal, sigma = mu conj z with |mu| = 1, fix locus = a LINE through the deck poles {0, inf} -- deck NOT free on it; lam = -1: M antidiagonal, sigma = mu/conj z with mu real, mu > 0 giving the fix circle |z| = sqrt mu that avoids the poles -- deck FREE on it); the unique mark-fixing antiholomorphic involution per deck-invariant configuration {+-1, +-b}: mu4 (b = i) -> the EQUATORIAL 1/conj z, deck FREE (v506 A-S2.9 reproduced); silver (b = 3+2 sqrt 2) -> the REAL AXIS through the poles, deck NOT free; generic-real (b = 3) -> real axis, NOT free; generic-unit (b = (3+4i)/5) -> equatorial, FREE without harmonicity; hexagonal (b = i(2 - sqrt 3), the j = 0 frame) -> NO mark-fixing real structure at all (marks not concyclic: RP-INCOMPATIBLE) -- the edge class exists only on circles through the deck poles",
+    br1 === {{b -> 0, c -> 0}} && br2 === {{a -> 0, d -> 0}} &&
+    Simplify[invDiag[[1, 1]] - mu Conjugate[mu]] === 0 &&
+    invDiag[[2, 2]] === 1 &&
+    Simplify[invAnti[[1, 1]] - mu] === 0 &&
+    Simplify[invAnti[[2, 2]] - Conjugate[mu]] === 0 &&
+    table === expect];
+];
+Module[{b, sols, lam, lams, jlam, bhex, lamHexIm},
+  sols = Sort[b /. Solve[(1 - b)^2 + (1 + b)^2 == 0, b]];
+  lam[bb_] := Simplify[4 bb/(1 + bb)^2];
+  jlam[l_] := Simplify[256 (l^2 - l + 1)^3/(l^2 (l - 1)^2)];
+  lams = lam /@ {I, 3 + 2 Sqrt[2], 3, 3/5 + 4 I/5};
+  bhex = I (2 - Sqrt[3]);
+  lamHexIm = Simplify[ComplexExpand[Im[lam[bhex]]]];
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (v): HARMONIC + FREE => mu4 EXACTLY -- the deck-pair cross-ratio condition (1-b)^2/(1+b)^2 = -1 solves EXACTLY to b = +-i: on a free-deck seam circle 'deck pairs harmonically separated' (the v507 tetrad face) forces the marks to be the mu4 orbit {+-1, +-i}, so GIVEN freeness harmonicity becomes SUFFICIENT (the silver family 'harmonic AND edge' is EMPTY on free circles); the lambda table 4b/(1+b)^2: mu4 -> 2 (the v168 value), silver -> 1/2 (harmonic!), generic-real -> 3/4, generic-unit -> 5/4 -- all real (concyclic), while the hexagonal frame has Im lambda = sqrt(3)/2 != 0 (not concyclic: no seam circle at all)",
+    sols === {-I, I} && lams === {2, 1/2, 3/4, 5/4} &&
+    lamHexIm === Sqrt[3]/2];
+];
+Module[{wit, marks, invOK, quarterWit, quarterMarks, posOf, pairsOf,
+        crossQ, bu, cfgU, lamU, jlam, jU, pairCR, CLOCK, papply, peqQ,
+        clockPres},
+  wit = {0, 1, 8, 9}; marks = {0, 4, 8, 12};
+  invOK = Sort[Mod[# + 8, 16] & /@ wit] === Sort[wit];
+  quarterWit = Sort[Mod[# + 4, 16] & /@ wit] === Sort[wit];
+  quarterMarks = Sort[Mod[# + 4, 16] & /@ marks] === Sort[marks];
+  posOf = AssociationThread[Sort[wit] -> Range[0, 3]];
+  pairsOf = Union[Sort[{posOf[#], posOf[Mod[# + 8, 16]]}] & /@ wit];
+  crossQ = MemberQ[pairsOf, {0, 2}];
+  bu = 3/5 + 4 I/5;
+  cfgU = {{1, 1}, {-1, 1}, {bu, 1}, {-bu, 1}};
+  lamU = Simplify[4 bu/(1 + bu)^2];
+  jlam[l_] := Simplify[256 (l^2 - l + 1)^3/(l^2 (l - 1)^2)];
+  jU = jlam[lamU];
+  pairCR = Simplify[(1 - bu)^2/(1 + bu)^2];
+  CLOCK = DiagonalMatrix[{I, 1}];
+  papply[Mx_, p_] := {Mx[[1, 1]] p[[1]] + Mx[[1, 2]] p[[2]],
+    Mx[[2, 1]] p[[1]] + Mx[[2, 2]] p[[2]]};
+  peqQ[p_, q_] := Simplify[p[[1]] q[[2]] - p[[2]] q[[1]]] === 0;
+  clockPres = And @@ (Function[p, Or @@ (peqQ[papply[CLOCK, p], #] & /@
+    cfgU)] /@ cfgU);
+  checkExact["v510 SEAM.BIT.FREEDOM.01 (vi): THE HONEST COUNTERWITNESSES -- 'nonsplit => clock' is FALSE: the discrete witness {0,1,8,9} is shift-8-invariant with CROSSING deck pairing (the same nonsplit Fock lift applies, mark-independent), yet the quarter shift does NOT preserve it (while it does preserve the equally-spaced marks {0,4,8,12}); the continuous witness {+-1, +-(3+4i)/5} sits on a free-deck equatorial circle in the central class, yet its pair cross-ratio is -1/4 != -1, lambda = 5/4, j = 148176/25 != 1728, and the clock z -> iz does NOT preserve it -- freeness forces the CLASS (crossing/central, nonsplit), NOT the square modulus: 'tau = i' survives as the one continuous carrier datum",
+    invOK && crossQ && ! quarterWit && quarterMarks &&
+    pairCR === -1/4 && lamU === 5/4 && jU === 148176/25 && ! clockPres];
+];
+
+(* ==== v511 round: CELEST.WP5E.DELTA2.01 -- WP5e-delta-2 "the full-tensor
+   ledger" (the named escape route of the v508 exchange no-go, executed:
+   the collapse is CONFIRMED full-tensorially, and one cubic door opens).
+   Exact content mirrored: (i) the INNERNESS COUNT -- 240 glue roots with
+   class split (52, 64, 60, 64), h = (2,2,2,2,2;0^4) and h' = (0^5;1,1,1,-3)
+   reading the class mod 4 on ALL 240 roots, the class-0 roots splitting
+   40 pure D5 + 12 pure A3 with NO mixed root (g0 = d5 (+) a3 semisimple,
+   NO u(1); root span rank 8), and class(-alpha) = -class(alpha);
+   (ii) the BILINEAR HOM TABLE -- dim Hom_{g0}(g_j (x) g_j') by exact
+   Kostant alternating sums on integer-scaled minuscule weight orbits:
+   nonzero ONLY at j' = -j with dims (2, 1, 1, 1), all 12 charged pairs
+   ZERO (the inner-torus theorem at arity 2); (iii) the TRILINEAR HOM
+   TABLE -- all 15 non-neutral sector triples have Hom = 0 (arity 3) and
+   the five neutral multisets carry dims (3, 2, 2, 1, 1); (iv) the UNIQUE
+   SYMMETRIC SURVIVOR -- Inv(S^3 adj) = (0, 1) for (d5, a3) (so(10) has
+   NO cubic Casimir, su(4) has exactly one), Inv(L^3 adj) = (1, 1),
+   Inv(S^2 adj) = (1, 1), and on g0: Inv(S^3 g0) = 1, Inv(L^3 g0) = 2
+   (of the three g0-trilinears exactly ONE is totally symmetric: the
+   su(4) d-symbol), with the dual machinery guard 4 x 4 = 0 vs
+   4 x 4bar = 1; (v) Q_dd BY TWO ROUTES -- explicit su(4) matrices:
+   bracket vertices f(x,x,B) = 0, root-direction contractions
+   d(x,x,E_ij) = 0, tadpole sum G^{-1}_ab d(x,B_a,B_b) = 0, and the
+   exchange quartic Q_dd = sum d(x,x,B_a)(60 G)^{-1}_ab d(x,x,B_b) =
+   (0, 0, -1/240, 0, 1/60) = (1/60)(T3 - P3/4) agreeing exactly with the
+   hand route |x^2 - (tr x^2/4) 1|^2/60, so Phi_T3(Q_dd) = 1/60 != 0;
+   plus Tr X^3 = 0 for antisymmetric X (no T5 analogue); (vi) the PSI
+   CERTIFICATE + THE RELAXED SOLUTION -- E13 = (16, -96, 144, 0, 0),
+   E22 = (16, 32, 16, 0, 0), E00 = 225 E22, A_fix = (9, -30, -15, 0, 32);
+   M = [E13, E22, E00, Q_dd] has rank 3 with rank([M | A_fix]) = 4 (still
+   unsolvable), psi = Phi_P - Phi_T3/4 annihilates all four channels with
+   psi(A_fix) = 72 - 8 = 64, and the relaxed system {u, v, w, Q_dd}
+   solves EXACTLY: A_fix = -u + 8v + 2w + 1920 Q_dd (rank 4, c_d = 1920 =
+   |W(D5)| = 8 x 240); (vii) the CONTROLS -- SO(16)/D8: bilinears
+   (adj adj, adj spin, spin spin) = (1, 0, 1), trilinears (1, 0, 1, 0),
+   Inv(S^3 adj_d8) = 0 and Inv(L^3 adj_d8) = 1 (NO symmetric cubic, no
+   odd sectors, no A3 block -- the delta-2 channel cannot even be posed);
+   false g0 = d5+a2+u(1): bilinear entries (5, 2, 2) != (2, 1, 1) and
+   Inv(S^3 g0_false) = 6 != 1; false sector content (16_s, 4bar): both
+   pairings die (0, 0) vs the true value 1.  Mirrors v511. ==== *)
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, counts, normOK, hv,
+        hpv, okH, okHp, c0, d5part, a3part, mixed, rk, dualOK},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  counts = Table[Count[glue, {_, m}], {m, 0, 3}];
+  normOK = And @@ (#[[1]] . #[[1]] == 2 & /@ glue);
+  hv = Join[ConstantArray[2, 5], z4];
+  hpv = Join[z5, {1, 1, 1, -3}];
+  okH = And @@ (Mod[#[[1]] . hv, 4] == #[[2]] & /@ glue);
+  okHp = And @@ (Mod[#[[1]] . hpv, 4] == #[[2]] & /@ glue);
+  c0 = Select[glue, #[[2]] == 0 &][[All, 1]];
+  d5part = Select[c0, #[[6 ;; 9]] === z4 &];
+  a3part = Select[c0, #[[1 ;; 5]] === z5 &];
+  mixed = Length[c0] - Length[d5part] - Length[a3part];
+  rk = MatrixRank[c0];
+  dualOK = And @@ Table[
+    Module[{neg = {-r[[1]], Mod[4 - r[[2]], 4]}},
+      MemberQ[glue, neg]], {r, glue}];
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (i): INNERNESS COUNT + g0 STRUCTURE -- 240 glue roots of norm 2 with class split (52, 64, 60, 64); h = (2,2,2,2,2;0^4) AND h' = (0^5;1,1,1,-3) read <alpha,.> = class mod 4 on ALL 240 roots (the Z4 charge is inner, h in the Cartan of g0 -- the engine of the charge theorem); the 52 class-0 roots split 40 pure D5 + 12 pure A3 with NO mixed root and root span rank 8 = rank E8 (g0 = d5 (+) a3 SEMISIMPLE, no u(1)); class(-alpha) = -class(alpha) (the Killing pairing is charge-0)",
+    Length[glue] === 240 && normOK && counts === {52, 64, 60, 64} &&
+    okH && okHp && Length[d5part] === 40 && Length[a3part] === 12 &&
+    mixed === 0 && rk === 8 && dualOK];
+];
+Module[{conv, scaledC, timesC, mergeC, sym2C, alt2C, sym3C, alt3C, invD,
+        invA, rhoD5, rhoA3, rhoD8, rhoA2, orbD, orbA, spin16, cospin16,
+        vec10, adj45, fund4, six6, bar4, adj15, triv5, triv3, invDim,
+        G0, G1, G2, G3, bil, expected, charged12, tri, chargedTri,
+        neutral, s3d5, l3d5, s3a3, l3a3, k2d5, k2a3, s3g0, l3g0, guard44,
+        guard44b, adj8, spin8, bil8, tri8, s3adj8, l3adj8, sliceA2,
+        invA2u1, b00f, b13f, b22f, s3g0f, fake1, f13, f11, true13},
+  conv[c1_, c2_] := Merge[Flatten[KeyValueMap[Function[{w1, m1},
+    KeyValueMap[Function[{w2, m2}, (w1 + w2) -> m1 m2], c2]], c1]], Total];
+  scaledC[c_, k_] := KeyMap[(k #) &, c];
+  timesC[c_, k_] := (k #) & /@ c;
+  mergeC[cs__] := Merge[{cs}, Total];
+  sym2C[c_] := (#/2 &) /@ mergeC[conv[c, c], scaledC[c, 2]];
+  alt2C[c_] := (#/2 &) /@ mergeC[conv[c, c], timesC[scaledC[c, 2], -1]];
+  sym3C[c_] := (#/6 &) /@ mergeC[conv[conv[c, c], c],
+    timesC[conv[c, scaledC[c, 2]], 3], timesC[scaledC[c, 3], 2]];
+  alt3C[c_] := (#/6 &) /@ mergeC[conv[conv[c, c], c],
+    timesC[conv[c, scaledC[c, 2]], -3], timesC[scaledC[c, 3], 2]];
+  invD[c_, rho_] := Module[{key = ReverseSort[rho], pos, tot = 0},
+    pos = AssociationThread[key -> Range[Length[rho]]];
+    KeyValueMap[Function[{mu, m}, Module[{u = mu + rho, a},
+      a = Abs[u];
+      If[ReverseSort[a] === key, tot += Signature[pos /@ a] m]]], c];
+    tot];
+  invA[c_, rho_] := Module[{key = ReverseSort[rho], pos, tot = 0},
+    pos = AssociationThread[key -> Range[Length[rho]]];
+    KeyValueMap[Function[{mu, m}, Module[{u = mu + rho},
+      If[ReverseSort[u] === key, tot += Signature[pos /@ u] m]]], c];
+    tot];
+  rhoD5 = {8, 6, 4, 2, 0}; rhoA3 = {6, 2, -2, -6};
+  rhoD8 = 2 Range[7, 0, -1]; rhoA2 = {4, 0, -4};
+  orbD[w_] := Association[(# -> 1) & /@ Union[Flatten[Table[
+    Module[{b = Permute[w, p]},
+      Table[If[EvenQ[Count[s, -1]], s b, Nothing],
+        {s, Tuples[{1, -1}, Length[w]]}]],
+    {p, Permutations[Range[Length[w]]]}], 1]]];
+  orbA[w_] := Association[(# -> 1) & /@ Permutations[w]];
+  spin16 = orbD[{1, 1, 1, 1, 1}]; cospin16 = orbD[{1, 1, 1, 1, -1}];
+  vec10 = orbD[{2, 0, 0, 0, 0}];
+  fund4 = orbA[{3, -1, -1, -1}]; six6 = orbA[{2, 2, -2, -2}];
+  bar4 = orbA[{1, 1, 1, -3}];
+  adj45 = mergeC[orbD[{2, 2, 0, 0, 0}],
+    Association[{ConstantArray[0, 5] -> 5}]];
+  adj15 = mergeC[orbA[{4, -4, 0, 0}],
+    Association[{ConstantArray[0, 4] -> 3}]];
+  triv5 = Association[{ConstantArray[0, 5] -> 1}];
+  triv3 = Association[{ConstantArray[0, 4] -> 1}];
+  G0 = {{adj45, triv3}, {triv5, adj15}};
+  G1 = {{spin16, fund4}}; G2 = {{vec10, six6}}; G3 = {{cospin16, bar4}};
+  invDim[reps_, invd_, inva_] := Total[Module[{cd = #[[1, 1]],
+      ca = #[[1, 2]]},
+    Do[cd = conv[cd, #[[k, 1]]]; ca = conv[ca, #[[k, 2]]],
+      {k, 2, Length[#]}];
+    invd[cd] inva[ca]] & /@ Tuples[reps]];
+  bil = Table[invDim[{{G0, G1, G2, G3}[[j + 1]],
+    {G0, G1, G2, G3}[[jp + 1]]}, invD[#, rhoD5] &, invA[#, rhoA3] &],
+    {j, 0, 3}, {jp, 0, 3}];
+  expected = {{2, 0, 0, 0}, {0, 0, 0, 1}, {0, 0, 1, 0}, {0, 1, 0, 0}};
+  charged12 = And @@ Flatten[Table[If[Mod[j + jp, 4] != 0,
+    bil[[j + 1, jp + 1]] === 0, True], {j, 0, 3}, {jp, 0, 3}]];
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (ii): THE BILINEAR HOM TABLE (full tensor, exact Kostant) -- dim Hom_{g0}(g_j (x) g_j') over all 16 sector pairs is nonzero ONLY at j' = -j: (0,0) = 2 (K_d5, K_a3), (1,3) = (3,1) = (2,2) = 1 (Killing blocks), ALL 12 pairs with j + j' != 0 mod 4 vanish -- the inner-torus theorem at arity 2: the sphere axions (m = 1, 2, 3) have NO invariant bilinear vertex on the FULL algebra, the v508 Cartan collapse is a full-tensor statement",
+    bil === expected && charged12];
+  tri = Association[Flatten[Table[If[a <= b && b <= c,
+    {a, b, c} -> invDim[{{G0, G1, G2, G3}[[a + 1]],
+      {G0, G1, G2, G3}[[b + 1]], {G0, G1, G2, G3}[[c + 1]]},
+      invD[#, rhoD5] &, invA[#, rhoA3] &], Nothing],
+    {a, 0, 3}, {b, 0, 3}, {c, 0, 3}]]];
+  chargedTri = Select[Normal[tri], Mod[Total[#[[1]]], 4] != 0 &];
+  neutral = {tri[{0, 0, 0}], tri[{0, 1, 3}], tri[{0, 2, 2}],
+    tri[{1, 1, 2}], tri[{2, 3, 3}]};
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (iii): THE TRILINEAR HOM TABLE -- ALL 15 sector triples with a+b+c != 0 mod 4 have Hom = 0 (the inner-torus theorem holds at arity 3: eta_m has no invariant trilinear vertex on the full algebra either) and the five neutral multisets carry dims {0,0,0}: 3, {0,1,3}: 2, {0,2,2}: 2, {1,1,2}: 1, {2,3,3}: 1 -- 9 independent trilinear structures: brackets/Killing composites plus exactly ONE more",
+    Length[chargedTri] === 15 &&
+    (And @@ (#[[2]] === 0 & /@ chargedTri)) &&
+    neutral === {3, 2, 2, 1, 1}];
+  s3d5 = invD[sym3C[adj45], rhoD5]; l3d5 = invD[alt3C[adj45], rhoD5];
+  s3a3 = invA[sym3C[adj15], rhoA3]; l3a3 = invA[alt3C[adj15], rhoA3];
+  k2d5 = invD[sym2C[adj45], rhoD5]; k2a3 = invA[sym2C[adj15], rhoA3];
+  s3g0 = s3d5 + k2d5 invA[adj15, rhoA3] +
+    invD[adj45, rhoD5] k2a3 + s3a3;
+  l3g0 = l3d5 + invD[alt2C[adj45], rhoD5] invA[adj15, rhoA3] +
+    invD[adj45, rhoD5] invA[alt2C[adj15], rhoA3] + l3a3;
+  guard44 = invA[conv[fund4, fund4], rhoA3];
+  guard44b = invA[conv[fund4, bar4], rhoA3];
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (iv): THE UNIQUE SYMMETRIC SURVIVOR -- Inv(S^3 adj) = (0, 1) for (d5, a3): so(10) has NO symmetric cubic invariant (Casimir degrees 2,4,5,6,8 -- protects T5), su(4) HAS exactly one (the d-symbol); Inv(L^3 adj) = (1, 1) (the structure constants), Inv(S^2 adj) = (1, 1) (Killing); on g0 = d5 (+) a3: Inv(S^3 g0) = 1 and Inv(L^3 g0) = 2 -- of the three g0-trilinears exactly ONE is totally symmetric, the su(4) d-symbol (the full-tensor object the Cartan-quadratic ansatz of v508 could not see); machinery guard: 4 x 4 = 0 vs 4 x 4bar = 1",
+    {s3d5, s3a3} === {0, 1} && {l3d5, l3a3} === {1, 1} &&
+    {k2d5, k2a3} === {1, 1} && s3g0 === 1 && l3g0 === 2 &&
+    guard44 === 0 && guard44b === 1];
+  adj8 = mergeC[Association[(# -> 1) & /@ Union[Flatten[Table[
+    Module[{w = ConstantArray[0, 8]},
+      w[[p[[1]]]] = 2 si; w[[p[[2]]]] = 2 sj; w],
+    {p, Subsets[Range[8], {2}]}, {si, {1, -1}}, {sj, {1, -1}}], 2]]],
+    Association[{ConstantArray[0, 8] -> 8}]];
+  spin8 = Association[(# -> 1) & /@
+    Select[Tuples[{1, -1}, 8], EvenQ[Count[#, -1]] &]];
+  bil8 = {invD[conv[adj8, adj8], rhoD8], invD[conv[adj8, spin8], rhoD8],
+    invD[conv[spin8, spin8], rhoD8]};
+  tri8 = {invD[conv[conv[adj8, adj8], adj8], rhoD8],
+    invD[conv[conv[adj8, adj8], spin8], rhoD8],
+    invD[conv[conv[adj8, spin8], spin8], rhoD8],
+    invD[conv[conv[spin8, spin8], spin8], rhoD8]};
+  s3adj8 = invD[sym3C[adj8], rhoD8]; l3adj8 = invD[alt3C[adj8], rhoD8];
+  sliceA2[c_] := Merge[Flatten[KeyValueMap[Function[{w, m},
+    If[w[[4]] == 0, {w[[1 ;; 3]] -> m}, {}]], c]], Total];
+  invA2u1 = invA[sliceA2[#], rhoA2] &;
+  b00f = invDim[{G0, G0}, invD[#, rhoD5] &, invA2u1];
+  b13f = invDim[{G1, G3}, invD[#, rhoD5] &, invA2u1];
+  b22f = invDim[{G2, G2}, invD[#, rhoD5] &, invA2u1];
+  s3g0f = s3d5 + k2d5 invA2u1[adj15] +
+    invD[adj45, rhoD5] invA2u1[sym2C[adj15]] + invA2u1[sym3C[adj15]];
+  fake1 = {{spin16, bar4}};
+  f13 = invDim[{fake1, G3}, invD[#, rhoD5] &, invA[#, rhoA3] &];
+  f11 = invDim[{fake1, fake1}, invD[#, rhoD5] &, invA[#, rhoA3] &];
+  true13 = invDim[{G1, G3}, invD[#, rhoD5] &, invA[#, rhoA3] &];
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (v): THE CONTROLS -- SO(16)/D8 glue: bilinears (adj adj, adj spin, spin spin) = (1, 0, 1) (Killing + the real spinor pairing, nothing off-diagonal), trilinears (adj^3, adj^2 spin, adj spin^2, spin^3) = (1, 0, 1, 0), Inv(S^3 adj_d8) = 0 and Inv(L^3 adj_d8) = 1: D8 has NO symmetric cubic (no cubic Casimir) and no A3 block -- the delta-2 channel cannot even be posed (E8/mu4 doubly special); FALSE g0 = d5+a2+u(1): bilinear entries (0,0)/(1,3)/(2,2) = (5, 2, 2) != (2, 1, 1) and Inv(S^3 g0_false) = 6 != 1 (breaking a3 inflates every Hom dimension); FALSE sector content (16_s, 4bar): fake-g1 x g3 = 0 and fake-g1 x fake-g1 = 0 vs the true g1-g3 value 1 -- the (16_s, 4)/(16_c, 4bar) content is forced",
+    bil8 === {1, 0, 1} && tri8 === {1, 0, 1, 0} &&
+    s3adj8 === 0 && l3adj8 === 1 &&
+    {b00f, b13f, b22f} === {5, 2, 2} && s3g0f === 6 &&
+    f13 === 0 && f11 === 0 && true13 === 1];
+];
+Module[{ys, y4, xM, basis, i, j, m, nb, Gm, Ginv, dsym, fsym, vvec, fDead,
+        offDead, tad, S3v, Qdd, hand, P1v, P2v, P3v, T5v, T3v, xs, cs,
+        qv, eqs, sol, a1, a2, a3, Mso, cub},
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  basis = {};
+  Do[m = ConstantArray[0, {4, 4}]; m[[i, i]] = 1; m[[i + 1, i + 1]] = -1;
+    AppendTo[basis, m], {i, 3}];
+  Do[If[i != j, m = ConstantArray[0, {4, 4}]; m[[i, j]] = 1;
+    AppendTo[basis, m]], {i, 4}, {j, 4}];
+  nb = Length[basis];
+  Gm = Table[Tr[basis[[a]] . basis[[b]]], {a, nb}, {b, nb}];
+  Ginv = Inverse[Gm];
+  xM = DiagonalMatrix[y4];
+  dsym[u_, v_, w_] := Tr[u . (v . w + w . v)]/2;
+  fsym[u_, v_, w_] := Tr[(u . v - v . u) . w];
+  vvec = Table[Expand[dsym[xM, xM, basis[[a]]]], {a, nb}];
+  fDead = And @@ Table[Expand[fsym[xM, xM, basis[[a]]]] === 0, {a, nb}];
+  offDead = And @@ Table[Expand[vvec[[a]]] === 0, {a, 4, nb}];
+  tad = Expand[Sum[Ginv[[a, b]] dsym[xM, basis[[a]], basis[[b]]],
+    {a, nb}, {b, nb}]];
+  S3v = Expand[y4 . y4];
+  Qdd = Expand[(vvec . Ginv . vvec)/60];
+  hand = Expand[Tr[(xM . xM - (S3v/4) IdentityMatrix[4]) .
+    (xM . xM - (S3v/4) IdentityMatrix[4])]/60];
+  P1v = Expand[(xs . xs)^2]; P2v = Expand[(xs . xs) S3v];
+  P3v = Expand[S3v^2]; T5v = Total[xs^4]; T3v = Expand[Total[y4^4]];
+  cs = Array[Subscript[cq, #] &, 5];
+  eqs = Thread[(CoefficientRules[Expand[Qdd -
+    cs . {P1v, P2v, P3v, T5v, T3v}], Join[xs, ys]][[All, 2]]) == 0];
+  sol = Quiet[Solve[eqs, cs]];
+  qv = cs /. First[sol];
+  Mso = ConstantArray[0, {4, 4}];
+  Mso[[1, 2]] = a1; Mso[[2, 1]] = -a1;
+  Mso[[1, 3]] = a2; Mso[[3, 1]] = -a2;
+  Mso[[2, 3]] = a3; Mso[[3, 2]] = -a3;
+  cub = Expand[Tr[Mso . Mso . Mso]];
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (vi): Q_dd BY TWO ROUTES -- explicit su(4) matrices (3 Cartan + 12 root vectors, exact trace Gram): bracket vertices f(x, x, B_a) = 0 for all 15 basis elements (antisymmetry kills every bracket-type vertex with two identical legs), root-direction contractions d(x, x, E_ij) = 0 (zero-weight matching), the tadpole sum G^{-1}_ab d(x, B_a, B_b) = 0 (the d-symbol is trace-free), and the exchange quartic Q_dd = sum_ab d(x,x,B_a)(60 G)^{-1}_ab d(x,x,B_b) = (0, 0, -1/240, 0, 1/60) = (1/60)(T3 - P3/4) in (P1, P2, P3, T5, T3), agreeing EXACTLY with the independent hand route |x^2 - (tr x^2/4) 1|^2/60 -- Phi_T3(Q_dd) = 1/60 != 0: the v508 master kill does NOT extend to cubic vertices; and Tr X^3 = 0 for antisymmetric X (no T5 analogue, Phi_T5 stays a universal annihilator)",
+    fDead && offDead && tad === 0 &&
+    qv === {0, 0, -1/240, 0, 1/60} && Expand[Qdd - hand] === 0 &&
+    qv[[5]] === 1/60 && cub === 0];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin, S5v,
+        S3v, basis, K, Ktw, Q, Qtw, vec5, e13, e22, e00, dA, qdd, M4,
+        Maug, phiP, phiT5, phiT3, psi, annOK, uu, vv, ww, Mr, solRel,
+        resid},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  basis = {Expand[S5v^2], Expand[S5v S3v], Expand[S3v^2],
+    Total[xs^4], Expand[Total[y4^4]]};
+  K = Table[Expand[Total[lin[#[[1]]]^2 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Ktw = Table[Expand[Sum[I^(j m) K[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qtw = Table[Expand[Sum[I^(j m) Q[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  vec5[expr_] := Module[{cs = Array[Subscript[cw, #] &, 5], eqs, sol},
+    eqs = Thread[(CoefficientRules[Expand[expr - cs . basis],
+      Join[xs, ys]][[All, 2]]) == 0];
+    sol = Quiet[Solve[eqs, cs]];
+    If[sol === {}, $Failed, cs /. First[sol]]];
+  e13 = vec5[Expand[Ktw[[4]] Ktw[[2]]]];
+  e22 = vec5[Expand[Ktw[[3]]^2]];
+  e00 = vec5[Expand[Ktw[[1]]^2]];
+  dA = vec5[Expand[Qtw[[2]]/2 + Qtw[[3]]/4 + Qtw[[4]]/2]];
+  qdd = {0, 0, -1/240, 0, 1/60};
+  M4 = Transpose[{e13, e22, e00, qdd}];
+  Maug = Transpose[{e13, e22, e00, qdd, dA}];
+  phiT5 = {0, 0, 0, 1, 0}; phiT3 = {0, 0, 0, 0, 1};
+  phiP = {3, -1, -1, 0, 0};
+  psi = phiP - phiT3/4;
+  annOK = And @@ (psi . # === 0 & /@ {e13, e22, e00, qdd});
+  uu = {1, 2, 1, 0, 0}; vv = {1, -2, -3, 0, 0}; ww = {1, -6, 9, 0, 0};
+  Mr = Transpose[{uu, vv, ww, qdd}];
+  solRel = LinearSolve[Mr, dA];
+  resid = dA - Mr . solRel;
+  checkExact["v511 CELEST.WP5E.DELTA2.01 (vii): THE PSI CERTIFICATE + THE RELAXED SOLUTION -- v508 replication E13 = (16, -96, 144, 0, 0), E22 = (16, 32, 16, 0, 0), E00 = 225 E22, A_fix = (9, -30, -15, 0, 32); the enlarged exchange matrix M = [E13, E22, E00, Q_dd] has rank 3 with rank([M | A_fix]) = 4: STILL UNSOLVABLE, but Phi_T3 is no longer an annihilator (Phi_T3(Q_dd) = 1/60) -- the surviving certificate is {Phi_T5, psi = Phi_P - Phi_T3/4} with psi annihilating ALL FOUR channels and psi(A_fix) = 72 - 8 = 64 (= dim g1, [C] fence); the RELAXED system {u, v, w, Q_dd} (charge bookkeeping dropped on the bilinear P-block) has rank 4 and solves EXACTLY: A_fix = -1 u + 8 v + 2 w + 1920 Q_dd with residual 0 -- c_d = 1920 = 32 x 60 = |W(D5)| = 8 x 240 ([C] fence)",
+    e13 === {16, -96, 144, 0, 0} && e22 === {16, 32, 16, 0, 0} &&
+    e00 === 225 e22 && dA === {9, -30, -15, 0, 32} &&
+    MatrixRank[M4] === 3 && MatrixRank[Maug] === 4 &&
+    annOK && psi . dA === 64 && phiP . dA === 72 &&
+    (phiT3 . dA)/4 === 8 &&
+    MatrixRank[Mr] === 4 && solRel === {-1, 8, 2, 1920} &&
+    resid === {0, 0, 0, 0, 0} &&
+    32/(1/60) === 1920 && 1920 === 2^7 3 5 && 1920 === 8 240];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

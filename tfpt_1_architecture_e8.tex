@@ -194,6 +194,24 @@ $\dim E_8=240+(p_4{-}p_3)=248$ and the binary ladder $p_{n+1}{-}p_n=2^n$. So the
 $\{a=(1,1,2),\,\pi\}$. \veri{v23\_anchor\_generator.py}
 \end{keybox}
 
+\begin{keybox}[The current reduction state of P2 (2026-07-21) --- text consolidation, markers unchanged]
+The axiom P2 stays \emph{declared} (\texttt{AX.P2.01}); what has changed is how much of it is now
+carried by theorems. The honest ledger state: P1 ($\cthree=1/(8\pi)$) and the \emph{four marks} are
+\mE-anchored (Gauss--Bonnet $n=2\chi=4$, \veri{v216\_marks\_gauss\_bonnet.py}); given the four marks,
+$\gcar=5$ follows from the partition $4=2{+}1{+}1$ plus the Deligne/Birkhoff--Grothendieck/stability
+typing (\veri{v491\_p2\_partition\_corollary.py}, \veri{v499\_p2\_weights\_deligne\_bg.py}; residual
+R1, the module identification, \mC); and the clock's \emph{order}, the $\Z_8$ tower, the deck's
+\emph{class} (a half-period translation) and the \emph{position} half of the alignment bit are
+theorems (\veri{v506\_seam\_clock\_rigidity.py}, \veri{v507\_seam\_bit\_origin.py},
+\veri{v510\_seam\_bit\_freedom.py}). What remains as carrier input is the \emph{square-modulus datum}
+$\tau=i$ (equivalently: the clock / the CM-fixed half-period / the non-split extension class on the
+free seam circle), plus the \mC\ identifications R1/R2 of \vref{v499}. In one sentence: \textbf{the
+compiler's dimensionless inputs reduce to four marks (derived from P1-side topology), one
+square-modulus datum ($\tau=i$), and $\pi$.} This is a reduction \emph{state}, not an abolition of
+the axiom: \texttt{AX.P2.01} remains the declared interface input, and its dynamical realisation
+(\texttt{QGEO.REALIZE.01}) stays \mC/\mO.
+\end{keybox}
+
 \begin{keybox}[Seed normal form, the factorial spine, and the degree-$2$ pattern \mE/\mC\ (\veri{v106\_review\_validation.py})]
 Three review-validated sharpenings of the anchor picture. \textbf{(1) Seed normal form \mE.} The seed
 formula is exactly
@@ -2487,7 +2505,10 @@ theorems then reduce that common residual to one alignment bit, with the clock's
 forced, $U^2=(-1)^F$ exactly (\veri{v506\_seam\_clock\_rigidity.py}, \texttt{SEAM.CLOCK.RIGIDITY.01});
 and the bit-origin theorems derive the deck's \emph{class} (a half-period translation of the seam
 double) --- only its position stays the \mC\ carrier input
-(\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}).
+(\veri{v507\_seam\_bit\_origin.py}, \texttt{SEAM.BIT.ORIGIN.01}); the freedom theorems then type
+that position half as \emph{topology} (the covering deck is free on the seam circle, the edge class
+is excluded), so the residual is the square-modulus datum $\tau=i$ alone
+(\veri{v510\_seam\_bit\_freedom.py}, \texttt{SEAM.BIT.FREEDOM.01}).
 So the theory's only transcendental is $\pi$ (through
 $\cthree=\tfrac1{8\pi}$, $8=\operatorname{rank}E_8$, and the seed $\tfrac1{6\pi}$, $6=|R^+(A_3)|$);
 everything else is this $(5,3)$-generated integer skeleton.

@@ -1,0 +1,621 @@
+{
+  "experiment": "e8-ladder-bed",
+  "version": "v2_amendment_2dcs",
+  "firewall": "detector validation, synthetic/analytic maps only; confirms nothing about TFPT; no experimental 2DCS data on CoNb2O6 exists as of 2026-07-21 (arXiv:2512.16829 is a theory paper)",
+  "pf_selftest": {
+    "pf_ladder": [
+      1.0,
+      1.6180339887498971,
+      1.9890437907365457,
+      2.404867172372069,
+      2.9562952014676127,
+      3.218340458523667,
+      3.891156823326855,
+      4.783386116752818
+    ],
+    "max_rel_dev_vs_zamolodchikov": 1.4773014159015882e-15,
+    "lowest_cartan_eigenvalue": 0.010956209263452922,
+    "target_2_minus_2cos_pi_30": 0.01095620926345342,
+    "rel_dev_eigenvalue": 4.544141368913716e-14,
+    "m2_over_m1": 1.6180339887498971,
+    "golden_ratio_dev": 2.220446049250313e-15,
+    "pass": true
+  },
+  "KA2D_synthetic_e8": {
+    "provenance": "synthetic known-answer map; E8 ratios exact (ladder.py, bit-frozen), m1 = 0.16 THz per Amelin+ PRB 102, 104431; 0.5-sigma deterministic jitter seed 0",
+    "n_peaks_input": 11,
+    "m1_true": 0.16,
+    "window": 0.6,
+    "unit": "THz",
+    "recovery": {
+      "ok": true,
+      "n_rungs": 8,
+      "rungs_covered": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "missing_rungs": [],
+      "n_matched": 11,
+      "chi2": 27.3505,
+      "chi2_dof": 1.3024,
+      "scale_m1_hat": 0.156782,
+      "matches": {
+        "F1(1,1)": {
+          "peak": [
+            0.16062865110546698,
+            0.1593394756835435
+          ],
+          "predicted": [
+            0.1568,
+            0.1568
+          ],
+          "pull_sigma": [
+            0.38,
+            0.26
+          ],
+          "label_reporting_only": "F1(1,1)"
+        },
+        "F1(2,2)": {
+          "peak": [
+            0.2620875514521996,
+            0.25940993878574836
+          ],
+          "predicted": [
+            0.2537,
+            0.2537
+          ],
+          "pull_sigma": [
+            0.84,
+            0.57
+          ],
+          "label_reporting_only": "F1(2,2)"
+        },
+        "F1(3,3)": {
+          "peak": [
+            0.31556865965204195,
+            0.3200549817923949
+          ],
+          "predicted": [
+            0.3118,
+            0.3118
+          ],
+          "pull_sigma": [
+            0.37,
+            0.82
+          ],
+          "label_reporting_only": "F1(3,3)"
+        },
+        "F1(4,4)": {
+          "peak": [
+            0.39129874780518115,
+            0.38951415239517667
+          ],
+          "predicted": [
+            0.377,
+            0.377
+          ],
+          "pull_sigma": [
+            1.43,
+            1.25
+          ],
+          "label_reporting_only": "F1(4,4)"
+        },
+        "F1(5,5)": {
+          "peak": [
+            0.4694885560557829,
+            0.46668012487958754
+          ],
+          "predicted": [
+            0.4635,
+            0.4635
+          ],
+          "pull_sigma": [
+            0.6,
+            0.32
+          ],
+          "label_reporting_only": "F1(5,5)"
+        },
+        "F1(6,6)": {
+          "peak": [
+            0.5118181010510997,
+            0.5151411032605228
+          ],
+          "predicted": [
+            0.5046,
+            0.5046
+          ],
+          "pull_sigma": [
+            0.72,
+            1.06
+          ],
+          "label_reporting_only": "F1(6,6)"
+        },
+        "F2(2,1)": {
+          "peak": [
+            0.24726028432678898,
+            0.15890604168033728
+          ],
+          "predicted": [
+            0.2537,
+            0.1568
+          ],
+          "pull_sigma": [
+            -0.64,
+            0.21
+          ],
+          "label_reporting_only": "F2(2,1)"
+        },
+        "F3(6,|6-7|)": {
+          "peak": [
+            0.5087049186275212,
+            0.10398928159499282
+          ],
+          "predicted": [
+            0.5046,
+            0.1055
+          ],
+          "pull_sigma": [
+            0.41,
+            -0.15
+          ],
+          "label_reporting_only": "F3(6,|6-7|)"
+        },
+        "F3(5,|5-8|)": {
+          "peak": [
+            0.47028593732053126,
+            0.29075304566378646
+          ],
+          "predicted": [
+            0.4635,
+            0.2865
+          ],
+          "pull_sigma": [
+            0.68,
+            0.43
+          ],
+          "label_reporting_only": "F3(5,|5-8|)"
+        },
+        "F2(4,7)": {
+          "peak": [
+            0.352,
+            0.585
+          ],
+          "predicted": [
+            0.377,
+            0.6101
+          ],
+          "pull_sigma": [
+            -2.5,
+            -2.51
+          ],
+          "label_reporting_only": "contaminant_1"
+        },
+        "F3(5,|5-2|)": {
+          "peak": [
+            0.44,
+            0.205
+          ],
+          "predicted": [
+            0.4635,
+            0.2098
+          ],
+          "pull_sigma": [
+            -2.35,
+            -0.48
+          ],
+          "label_reporting_only": "contaminant_2"
+        }
+      },
+      "unmatched_peaks": []
+    },
+    "mc_null": {
+      "p_value": 0.0001999600079984003,
+      "n_null": 5000,
+      "n_as_good": 0,
+      "n_as_good_coverage_only": 136,
+      "early_stopped": false
+    },
+    "m7_m8_via_F3": {
+      "rung_7_covered": true,
+      "rung_8_covered": true
+    }
+  },
+  "NEG2D_localized_limit": {
+    "provenance": "analytic localized-limit closed forms, arXiv:2512.16829 Sec. IV.3: eps_pm = J +/- sqrt(2)h+, tetraquarks 2J +/- sqrt(3)h+, 2J +/- h+, 2J; J = 2.48 meV, alpha_yz = 0.226, h+ = J*alpha_yz",
+    "n_peaks_input": 18,
+    "unit": "meV",
+    "eps_minus_mev": 1.6874,
+    "eps_plus_mev": 3.2726,
+    "q_states_mev": {
+      "GS": 0.0,
+      "omega_sym_J": 2.48,
+      "2eps_minus": 3.3747,
+      "eps_minus_plus_eps_plus": 4.96,
+      "2eps_plus": 6.5453,
+      "lambda_1": 3.9892,
+      "lambda_3": 4.96,
+      "lambda_5": 5.9308
+    },
+    "recovery": {
+      "ok": true,
+      "n_rungs": 6,
+      "rungs_covered": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "missing_rungs": [
+        2,
+        4
+      ],
+      "n_matched": 12,
+      "chi2": 13.9128,
+      "chi2_dof": 0.6049,
+      "scale_m1_hat": 0.837168,
+      "matches": {
+        "F1(3,3)": {
+          "peak": [
+            1.6873615825611277,
+            1.6873615825611277
+          ],
+          "predicted": [
+            1.6652,
+            1.6652
+          ],
+          "pull_sigma": [
+            0.44,
+            0.44
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=GS"
+        },
+        "F3(3,|3-1|)": {
+          "peak": [
+            1.6873615825611277,
+            0.7926384174388723
+          ],
+          "predicted": [
+            1.6652,
+            0.828
+          ],
+          "pull_sigma": [
+            0.44,
+            -0.71
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=omega_sym_J"
+        },
+        "F2(3,7)": {
+          "peak": [
+            1.6873615825611277,
+            3.2726384174388725
+          ],
+          "predicted": [
+            1.6652,
+            3.2576
+          ],
+          "pull_sigma": [
+            0.44,
+            0.3
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=eps_minus_plus_eps_plus"
+        },
+        "F3(3,|3-8|)": {
+          "peak": [
+            1.6873615825611277,
+            2.3018585808126684
+          ],
+          "predicted": [
+            1.6652,
+            2.3393
+          ],
+          "pull_sigma": [
+            0.44,
+            -0.75
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=lambda_1"
+        },
+        "F2(7,3)": {
+          "peak": [
+            3.2726384174388725,
+            1.6873615825611277
+          ],
+          "predicted": [
+            3.2576,
+            1.6652
+          ],
+          "pull_sigma": [
+            0.3,
+            0.44
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=GS"
+        },
+        "F3(7,|7-5|)": {
+          "peak": [
+            3.2726384174388725,
+            0.7926384174388723
+          ],
+          "predicted": [
+            3.2576,
+            0.7826
+          ],
+          "pull_sigma": [
+            0.3,
+            0.2
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=omega_sym_J"
+        },
+        "F1(7,7)": {
+          "peak": [
+            3.2726384174388725,
+            3.2726384174388725
+          ],
+          "predicted": [
+            3.2576,
+            3.2576
+          ],
+          "pull_sigma": [
+            0.3,
+            0.3
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=eps_minus_plus_eps_plus"
+        },
+        "F3(7,|7-1|)": {
+          "peak": [
+            3.2726384174388725,
+            2.3018585808126684
+          ],
+          "predicted": [
+            3.2576,
+            2.4204
+          ],
+          "pull_sigma": [
+            0.3,
+            -2.37
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=lambda_1"
+        },
+        "F3(7,|7-8|)": {
+          "peak": [
+            3.2726384174388725,
+            0.7165817459349233
+          ],
+          "predicted": [
+            3.2576,
+            0.7469
+          ],
+          "pull_sigma": [
+            0.3,
+            -0.61
+          ],
+          "label_reporting_only": "t1 P=3.273 Q=lambda_1"
+        },
+        "F3(3,|3-5|)": {
+          "peak": [
+            1.6873615825611277,
+            0.7165817459349233
+          ],
+          "predicted": [
+            1.6652,
+            0.8098
+          ],
+          "pull_sigma": [
+            0.44,
+            -1.86
+          ],
+          "label_reporting_only": "t2 R=1.687 Q=lambda_1"
+        },
+        "F2(7,6)": {
+          "peak": [
+            3.2726384174388725,
+            2.6581414191873316
+          ],
+          "predicted": [
+            3.2576,
+            2.6943
+          ],
+          "pull_sigma": [
+            0.3,
+            -0.72
+          ],
+          "label_reporting_only": "t1 P=3.273 Q=lambda_5"
+        },
+        "F2(3,6)": {
+          "peak": [
+            1.6873615825611277,
+            2.6581414191873316
+          ],
+          "predicted": [
+            1.6652,
+            2.6943
+          ],
+          "pull_sigma": [
+            0.44,
+            -0.72
+          ],
+          "label_reporting_only": "t2 R=1.687 Q=lambda_5"
+        }
+      },
+      "unmatched_peaks": [
+        {
+          "peak": [
+            1.6873615825611277,
+            4.857915252316618
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=2eps_plus"
+        },
+        {
+          "peak": [
+            1.6873615825611277,
+            4.243418254065077
+          ],
+          "label_reporting_only": "t1 P=1.687 Q=lambda_5"
+        },
+        {
+          "peak": [
+            3.2726384174388725,
+            4.857915252316618
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=2eps_plus"
+        },
+        {
+          "peak": [
+            3.2726384174388725,
+            4.243418254065077
+          ],
+          "label_reporting_only": "t2 R=3.273 Q=lambda_5"
+        },
+        {
+          "peak": [
+            3.2726384174388725,
+            0.10208474768338283
+          ],
+          "label_reporting_only": "t1 P=3.273 Q=2eps_minus"
+        },
+        {
+          "peak": [
+            1.6873615825611277,
+            0.10208474768338283
+          ],
+          "label_reporting_only": "t2 R=1.687 Q=2eps_minus"
+        }
+      ]
+    },
+    "mc_null_1000": {
+      "p_value": 0.028971028971028972,
+      "n_null": 1000,
+      "n_as_good": 28,
+      "n_as_good_coverage_only": 88,
+      "early_stopped": false
+    },
+    "detected_at_validated_level": false,
+    "rejected": true
+  },
+  "C2D_control_battery": {
+    "note": "detection = n_rungs>=6 & chi2/dof<=2 & MC p<0.01 (500 null)",
+    "scramble2d": {
+      "n_trials": 200,
+      "n_detected_at_validation_bar": 54,
+      "rate_at_validation_bar": 0.27,
+      "n_detected_at_observed_strength": 54,
+      "n_near_duplicates": 0,
+      "n_detected_obs_non_near_dup": 54,
+      "rate_obs_non_near_dup": 0.27,
+      "rejected": false
+    },
+    "offset2d": {
+      "cases": {
+        "offset_+0.3m1": {
+          "detected": false,
+          "n_rungs": 8,
+          "n_matched": 9,
+          "chi2_dof": 2.698073767577829
+        },
+        "offset_+0.5m1": {
+          "detected": false,
+          "n_rungs": 8,
+          "n_matched": 8,
+          "chi2_dof": 4.148798018415298
+        },
+        "offset_-0.3m1": {
+          "detected": false,
+          "n_rungs": 8,
+          "n_matched": 11,
+          "chi2_dof": 2.5475410315060496
+        },
+        "offset_-0.5m1": {
+          "detected": false,
+          "n_rungs": 8,
+          "n_matched": 9,
+          "chi2_dof": 1.9930133561056156
+        }
+      },
+      "rejected": true
+    },
+    "jitter2d": {
+      "jitter_5pct": {
+        "n_trials": 100,
+        "n_detected": 29,
+        "detection_rate": 0.29
+      },
+      "jitter_10pct": {
+        "n_trials": 100,
+        "n_detected": 21,
+        "detection_rate": 0.21
+      },
+      "jitter_20pct": {
+        "n_trials": 100,
+        "n_detected": 17,
+        "detection_rate": 0.17
+      },
+      "jitter_30pct": {
+        "n_trials": 100,
+        "n_detected": 18,
+        "detection_rate": 0.18
+      },
+      "_dose_response_rates": [
+        0.29,
+        0.21,
+        0.17,
+        0.18
+      ],
+      "_rejected_at_destructive_level": false
+    },
+    "wrong_ladder2d": {
+      "harmonic_1_to_8": {
+        "n_rungs_ladder": 8,
+        "ok": true,
+        "passes_chi2_gate": false,
+        "n_rungs_covered": 8,
+        "n_matched": 10,
+        "chi2_dof": 2.9751920997415993,
+        "mc_p": 0.00998003992015968,
+        "e8_wins": true
+      },
+      "A3_cartan_pf": {
+        "n_rungs_ladder": 3,
+        "ok": false,
+        "passes_chi2_gate": false,
+        "n_rungs_covered": 0,
+        "n_matched": 0,
+        "chi2_dof": null,
+        "e8_wins": true
+      },
+      "D8_cartan_pf": {
+        "n_rungs_ladder": 8,
+        "ok": true,
+        "passes_chi2_gate": false,
+        "n_rungs_covered": 7,
+        "n_matched": 11,
+        "chi2_dof": 3.2194827801090122,
+        "mc_p": 0.007984031936127744,
+        "e8_wins": true
+      },
+      "airy_confined_spinon": {
+        "n_rungs_ladder": 8,
+        "ok": true,
+        "passes_chi2_gate": true,
+        "n_rungs_covered": 8,
+        "n_matched": 11,
+        "chi2_dof": 1.8289267369726183,
+        "mc_p": 0.003992015968063872,
+        "e8_wins": true
+      },
+      "_all_beaten_by_e8": true
+    }
+  },
+  "REAL2D_conb2o6_e8point": {
+    "status": "blocked_no_experimental_data",
+    "note": "no published experimental 2DCS measurement of CoNb2O6 exists (web-checked 2026-07-21); arXiv:2512.16829 is theory-only (four-kink/ED model, B_y = 0-3 T localized regime, not the E8 point B ~ 4.7-5.5 T). CoNb2O6 leg stays 6/8 (p = 0.0038) per the m7_m8_upgrade_rule."
+  },
+  "verdict_v2": "kill_2d",
+  "v1_verdict_untouched": "validated (results.json)",
+  "runtime_s": 1710.1
+}

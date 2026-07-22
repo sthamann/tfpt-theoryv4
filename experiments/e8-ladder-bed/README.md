@@ -117,6 +117,68 @@ the published Zamolodchikov E8 spectrum blindly on both materials and rejects al
 control classes. This validates the detector for TFPT ladder searches — **it is
 not evidence for TFPT**.
 
+## v2 amendment: 2D coherent spectroscopy (2DCS) extension — `kill_2d`
+
+Trigger: **arXiv:2512.16829** (Watanabe, Trebst, Hickey, "Two-dimensional
+coherent spectroscopy of CoNb2O6", Dec 2025). **Data situation (checked
+2026-07-21):** that paper is *theory only* — four-kink/ED model spectra of
+`Im[chi^(3;2)_yyyy(omega_t, omega_tau)]` at B_y = 0–3 T (the *localized-limit*
+regime, not the 1D E8 QCP at ~5 T ∥ b), no E8 assignments, no measurements; no
+experimental 2DCS measurement of CoNb2O6 is published anywhere yet. So there is
+**no real 2D target data**; the run `REAL2D_conb2o6_e8point` is typed
+`blocked_no_experimental_data` and the **CoNb2O6 leg stays 6/8 (p = 0.0038)**
+per the preregistered `m7_m8_upgrade_rule`.
+
+What was done (all frozen in `hypotheses/e8_ladder_bed_v1.yaml`
+`amendment_v2` **before** any 2D recovery run; `amendment_v2_1` discloses a
+null-region correction found on synthetic diagnostics):
+
+* **Observable:** list of 2D peak coordinates (ω_τ, ω_t) + σ, folded to the
+  positive quadrant, no labels. Catalog per scale s: F1 diagonal (s·r_a, s·r_a),
+  F2 cross (s·r_a, s·r_b), F3 difference (s·r_a, s·|r_a − r_b|) — 120 entries;
+  F3 is the channel that can pull m7/m8 *inside* a low-pass window.
+* **Detector** (`src/tfpt_e8lb/recover2d.py`): blind scale scan (every axis value
+  as every rung), injective two-axis-gated (|pull| ≤ 3σ both axes) linear-sum
+  matching, two scale refinements; primary score = rung coverage; MC null =
+  5000 random 8-rung ladders through the identical machinery,
+  p = P[(n_rungs ≥ obs) ∧ (n_matched ≥ obs) ∧ (χ²/dof ≤ obs)] (v2.1 region).
+* **Runs** (`results/results2d.json`, deterministic, `cli2d analyze2d`, ~29 min):
+
+| Run | Result | Note |
+|---|---|---|
+| KA2D synthetic E8 map (m1 = 0.16 THz, 9 catalog peaks with m7/m8 **only** via F3 + 2 contaminants, 0.5σ jitter) | **8/8 rungs**, n_matched 11, χ²/dof 1.30, **MC p = 2.0×10⁻⁴** (0/5000) | m7 and m8 recovered via F3(6,\|6−7\|) / F3(5,\|5−8\|) — the difference-coordinate mechanism works |
+| NEG2D localized-limit map (analytic closed forms of arXiv:2512.16829: ε± = J ± √2·Jα_yz, tetraquarks 2J ± √3·Jα_yz; J = 2.48 meV, α_yz = 0.226) | n_rungs 6, χ²/dof 0.60, **p = 0.029 → rejected** | the published non-E8 prediction is correctly not detected |
+| offset2d ± {0.3, 0.5}·m1 | 0/4 detected | rejected |
+| wrong-ladder2d (harmonic/A3/D8/Airy) | harmonic 2.98, D8 3.22 fail the χ² gate; Airy passes (1.83) but loses to E8 (1.30) | rejected (E8 wins strictly) |
+| **scramble2d** (permute detection-axis values, 200 seeds) | **54/200 = 27 % detected** | **NOT rejected** |
+| **jitter2d** dose-response 5/10/20/30 % | **29 / 21 / 17 / 18 %** | **NOT rejected** (no decay; 18 % at destructive level) |
+
+**VERDICT (preregistered logic): `kill_2d`.** The v2 2D detector fails its own
+control battery. Post-hoc diagnosis (documented, criteria *not* rewritten):
+permuting the detection axis preserves the pump-axis marginal — which still
+carries the full E8 ladder — and the 120-entry F1∪F2∪F3 catalog is dense enough
+that rung coverage follows from the 1D marginal alone (42/200 scrambles keep
+≥ 9/11 peaks on catalog entries at the true scale; pure-random maps of the same
+density false-alarm at ~15 %). I.e. the v2 detector does not actually test the
+2D *pairing* structure. Failure kills the detector, not TFPT — the v1 1D
+results above are untouched.
+
+**Path to a future v3 (would need a new preregistered amendment BEFORE real
+data exists):** coincidence-based coverage (a rung counts only with an F1 match
+or ≥ 2 independent cross/difference matches), a sparser scored catalog, and a
+correspondingly richer known-answer map (real 2DCS produces several pathway
+copies per bound state, so the coincidence requirement is physical).
+
+**Data-request plan for the real-data leg:** (i) the Zenodo record
+10.5281/zenodo.17879513 holds the *model* spectra of arXiv:2512.16829 (data.zip,
+~99 MB) — usable for a v3 known-answer map, not as a measurement; (ii) the
+experimental groups positioned for THz 2DCS on CoNb2O6 are the Armitage lab
+(JHU; Morris+ PRL 112, 137403 and Nature Physics 17, 832 THz work on CoNb2O6)
+and the Wang lab (Ames); a polite data request should ask for the 2D peak
+coordinate table (ω_τ, ω_t ± σ) at B ∥ b near 4.7–5.5 T, sub-Kelvin, fourth
+quadrant (rephasing) included — the paper's own Sec. VI notes that quadrant is
+least contaminated.
+
 ## Reproduce
 
 ```bash
@@ -124,12 +186,14 @@ source ../tfpt-discovery/.venv/bin/activate      # numpy/scipy/matplotlib (share
 python scripts/extract_zou_fig3.py               # arXiv e-print -> data/baco2v2o8_ins_peaks.csv (+ QA png)
 PYTHONPATH=src python tests/test_ladder_exact.py # frozen ladder + PF identity + detector sanity (6 tests)
 PYTHONPATH=src python -m tfpt_e8lb.cli analyze   # runs A1/A2/B + control battery -> results/ (~80 s)
+PYTHONPATH=src python tests/test_recover2d.py    # v2 2D detector known-answer + pruning tests (8 tests)
+PYTHONPATH=src python -m tfpt_e8lb.cli2d analyze2d  # v2 KA2D/NEG2D + 2D control battery -> results/ (~29 min)
 ```
 
 ## Layout
 
 ```
-hypotheses/e8_ladder_bed_v1.yaml   # preregistered detector/criteria + disclosed v1.1 amendment
+hypotheses/e8_ladder_bed_v1.yaml   # preregistered detector/criteria + disclosed v1.1/v2/v2.1 amendments
 data/arxiv_2005.13302v3_eprint.tar.gz  # committed primary source (Zou+ figure PDFs)
 data/baco2v2o8_ins_peaks.csv       # digitized BCVO peaks (provenance header)
 data/conb2o6_thz_peaks.csv         # verbatim CoNb2O6 peaks (provenance header)
@@ -138,6 +202,11 @@ src/tfpt_e8lb/ladder.py            # exact E8 ladder, Cartan-PF ladders (A3/D8/E
 src/tfpt_e8lb/recover.py           # blind DP assignment search + scale fit + MC null
 src/tfpt_e8lb/controls.py          # scramble / offset / jitter / wrong-ladder / Airy-bed batteries
 src/tfpt_e8lb/cli.py               # analyze -> results/results.json, assignments.csv, ladder_fit.png
+src/tfpt_e8lb/recover2d.py         # v2: blind 2D (2DCS) catalog matching + MC null (killed by battery)
+src/tfpt_e8lb/synth2d.py           # v2: KA2D known-answer map + NEG2D localized-limit map (arXiv:2512.16829)
+src/tfpt_e8lb/controls2d.py        # v2: scramble2d / offset2d / jitter2d / wrong-ladder2d batteries
+src/tfpt_e8lb/cli2d.py             # v2: analyze2d -> results/results2d.json, assignments2d.csv, map2d_fit.png
 tests/test_ladder_exact.py         # bit-frozen ladder values + PF identity + known-answer detector tests
-results/                           # deterministic outputs (results.json, CSV, PNGs)
+tests/test_recover2d.py            # v2: 2D catalog/KA/folding/pruning-consistency tests
+results/                           # deterministic outputs (results.json, results2d.json, CSVs, PNGs)
 ```

@@ -1,3 +1,236 @@
+## 2026-07-21 (XXIII) — v511 (CELEST.WP5E.DELTA2.01): WP5e-δ2 „der Voll-Tensor-Ledger" promoviert (Zwischenausgang, exakt) — der Kollaps ist ECHT (Innerness), und EINE kubische Tür öffnet sich; δ1 bleibt UNENTSCHIEDEN auf Explorations-Ebene (Fence-Text)
+
+Die Probe celestial_seam_wp5e_delta2_full_tensor_ledger_probe.py (41/41) ist als
+**v511_celestial_wp5e_delta2_tensor_ledger.py (CELEST.WP5E.DELTA2.01)**
+promoviert (41 Checks, ~4 s, Kostant/Weyl-Gewichtsarithmetik + sympy/Fraction;
+Suite grün, jetzt 505 Skripte, ALL CHECKS PASSED):
+
+- **STRUKTUR [E]:** g₀ = d5 ⊕ a3 SEMISIMPEL ohne u(1) (Klasse-0-Wurzeln
+  40 + 12, Wurzelspan Rang 8); Sektoren g₁ = (16_s,4), g₂ = (10,6),
+  g₃ = g₁*, alle irreduzibel (64/60/64). INNERNESS-THEOREM: h liegt in der
+  g₀-Cartan ⇒ jeder g₀-invariante Tensor trägt Gesamtladung 0 mod 4 — der
+  v508-Kollaps ist voll-tensoriell UND aritäts-übergreifend (alle 15
+  nicht-neutralen Tripel: Hom = 0; bilinear nur j′ = −j, Dims 2/1/1/1).
+- **DER NEUE KANAL [E]:** neutrale Trilineare (3, 2, 2, 1, 1); alle
+  Cross-Sektor-Trilineare reine Brackets; EINZIGER symmetrischer
+  Überlebender = das su(4)-d-Symbol (so(10) ohne kubischen Casimir,
+  Inv(S³·45) = 0 schützt T5). Quartik-Projektion Q_dd = (0, 0, −1/240, 0,
+  1/60) = (1/60)(T3 − P3/4), zwei unabhängige Rechenwege (Killing-
+  Propagator 2h∨ = 60 aus den Wurzeln; Hand-Route |x² − (tr x²/4)·1|²/60);
+  Φ_T3(Q_dd) = 1/60 ≠ 0 — v508s Master-Kill gilt nur für quadratische
+  Vertizes.
+- **NEUES ZERTIFIKAT [E]:** M = [E13, E22, E00, Q_dd] Rang 3, augmentiert
+  4 — Paarung in der Ladungs-Lesart weiter obstruiert, aber mit dem
+  SCHWÄCHEREN Zertifikat {Φ_T5, ψ = Φ_P − Φ_T3/4}, ψ(A_fix) = 72 − 8 = 64;
+  relaxed EXAKT lösbar: A_fix = −u + 8v + 2w + 1920·Q_dd (Residuum 0).
+  [C]-Zäune: 64 = dim g₁ = 2⁶; 1920 = |W(D5)| = 8·240. [O]: Arität ≥ 4;
+  physikalische Begründung des kubischen GS-Terms; ch₂-Natürlichkeit für
+  kubische Vertizes UNENTSCHIEDEN.
+- **NEGATIVKONTROLLEN [E]:** Killing-Kontrolle = v508-Replikation;
+  SO(16)/D8: Inv(S³ adj) = 0, keine ungeraden Sektoren, kein A3-Block —
+  der δ2-Kanal ist nicht einmal stellbar (E8/μ4 doppelt speziell);
+  falsches g₀ = d5⊕a2⊕u(1): (5,2,2) ≠ (2,1,1), Inv(S³g₀) = 6 ≠ 1;
+  falscher Sektor (16_s,4̄) killt jede Paarung.
+- **δ1-FENCE (Exploration, NICHT promoviert — UNENTSCHIEDEN):** die Probe
+  celestial_seam_wp5e_delta1_bcov_contact_probe.py (27/27, bleibt Sandbox,
+  v-Nummer bei Bedarf) liefert vier exakte Schärfungen als Fence-Text:
+  (i) die strikte holomorphe q⁰-Lesart ist am ℤ₂/EH-Anker WIDERLEGT
+  (Methodengrenze, kein Kill); (ii) erzwungenes führendes (T5,T3)-
+  Verhältnis 4:3 (Sektor 2 : Sektoren 1+3); (iii) SL(2,ℤ)-Orbit-Zerlegung
+  15 = 12+3 — der Kontaktterm ist die MODULARE VERVOLLSTÄNDIGUNG der
+  AB-Daten (Harvey–Moore-τ-Integral), keine freie Zahl; (iv) massive
+  Koset-Level n ≥ 2 zwingend. δ1-Restziel: das τ-Integral, gemessen am
+  δ2-geschärften Kriterium (ψ = 64-Slice oder Auswahlregel-Relaxation).
+
+Umsetzung: Ledger CELEST.WP5E.DELTA2.01 (neu) + CELEST.SEAM.01-Update;
+tfpt_research_contracts (δ2-Bullet done + δ1-Fence, WP5e-proper-Ziele
+umbenannt: τ-Integral, kubischer GS-Term, ε1, Rückreaktion); tfpt_3
+Celestial-Sektion jetzt VIERZEHN Schritte (Step 14 „the full-tensor ledger:
+the collapse is real, and one cubic door opens") + „What remains"
+aktualisiert; Wolfram-Extension 463→470 (7 Spiegel, Engine-Lauf verifiziert,
+ALL WOLFRAM EXTENSION CHECKS PASSED); Website (papers.ts 14-Schritt-Story +
+Contract-Spiegel, Zähler 470, VerificationDag + ScriptIndex via build).
+Changelog 2026-07-21 (XXIII). KEINE Marker-Bewegung — WP5e proper bleibt [O].
+
+## 2026-07-21 (XXII) — P2-NEUFASSUNG (redaktionelle Konsolidierung, KEINE neuen Behauptungen, KEINE Marker-Bewegung): die Reduktionslage der Axiomatik als EINE kohärente Darstellung — „vier Marken + ein Quadrat-Modulus-Datum (τ = i) + π"
+
+Die über v491/v499/v503/v506/v507/v510 verstreute Axiomatik-Lage ist jetzt an
+einem Ort konsolidiert. Der ehrliche Stand: P1 (c3 = 1/(8π)) + die vier Marken
+sind [E]-verankert (v216); g_car = 5 folgt via Partition 4 = 2+1+1 +
+Deligne/BG/Stabilität (v491/v499, Residual R1 [C]); Uhr-Ordnung, ℤ₈-Turm,
+Deck-Klasse und die Positions-Hälfte des Bits sind Theoreme (v506/v507/v510);
+übrig als Carrier-Input: DAS QUADRAT-MODULUS-DATUM τ = i (äquivalent: die Uhr /
+die CM-fixierte Halbperiode / die nichtsplittende Erweiterungsklasse auf dem
+freien Seam-Kreis) + die [C]-Identifikationen R1/R2 aus v499. Formulierung
+(wörtlich, überall konservativ): "the compiler's dimensionless inputs reduce
+to: four marks (derived from P1-side topology), ONE square-modulus datum
+(tau = i), and pi" — als TEXT, ohne AX.P2.01 abzuschaffen (das Axiom bleibt
+deklariert; die Neufassung beschreibt die REDUKTIONSLAGE).
+
+Umsetzung: (a) tfpt_1 neue Keybox „The current reduction state of P2" neben der
+Foundational-Postulates-Keybox (mit \veri v491/v499/v506/v507/v510); (b) tfpt_3
+Spiegel-Bullet „The current reduction state" in der Honest-status-Sektion;
+(c) introduction: Anker-Absatz + Status-Karten-Zeile a=(1,1,2) auf den neuen
+Stand; (d) Ledger: SYNTHESIS NOTE in AX.P2.01 („reduction state 2026-07-21:
+four marks + one square-modulus datum (tau = i) + pi"), Marker Axiom
+UNVERÄNDERT; (e) Website: papers.ts-Spiegel der geänderten Abschnitte.
+QGEO.REALIZE.01 bleibt [C]/[O]. Changelog 2026-07-21 (XXII).
+
+## 2026-07-21 (XXI) — v510 (SEAM.BIT.FREEDOM.01): der Freiheits-Angriff auf das v506/v507-Alignment-Bit promoviert — die POSITIONS-Hälfte des Bits ist TOPOLOGIE (Covering-Deck ⇒ frei ⇒ Kanten-Klasse ausgeschlossen); der Rest ist das Quadrat-Modulus-Datum τ = i allein
+
+Die beiden Proben qgeo_realize_deck_freedom_dihedral_probe.py (14/14) und
+qgeo_realize_rp_fixcircle_moebius_probe.py (16/16) aus
+experiments/tfpt-discovery/ sind als EIN Modul **v510_seam_bit_freedom.py
+(SEAM.BIT.FREEDOM.01)** promoviert (30 Checks, <5 s, sympy + exakte
+Cl(16)-Fractions; Suite grün, jetzt 504 Skripte, ALL CHECKS PASSED):
+
+- **DIEDER-SATZ [E]:** auf dem N-Platz-Seam-Kreis ist die freie Involution
+  EINDEUTIG = die Antipode (N = 16: 17 Involutionen in D₁₆, genau 1 frei =
+  Shift 8; alle 16 Spiegelungen haben exakt 2 Kreis-Fixpunkte, 8 site- + 8
+  edge-axis; Robustheit N = 8, 12; N = 9: 0 freie). Zensus VOLLSTÄNDIG:
+  Aut(C₁₆) = D₁₆ exakt (Brute-Force über alle 8! = 40320 Permutationen bei
+  N = 8, Propagation bei N = 16). Quotienten-Topologie: Kreis/Antipode =
+  KREIS (χ = 0), Kreis/Spiegelung = INTERVALL (χ = 1, 2 Ecken) — der
+  6π-Haushalt braucht geschlossene Kreise: „Deck frei auf dem Seam-Kreis"
+  IST das etablierte P1-Datum „die Naht ist ein geschlossener Kreis".
+- **NONSPLIT ⟺ FREI [E] (kompletter Zensus):** alle 17 Involutionen in
+  exaktem Cl(16) implementiert — frei ⇒ Ũ² = 256·γ₁…γ₁₆ = (−1)^F
+  (nichtsplittend, 2 Wurzeln = ℤ₈-Turm); ALLE 16 Spiegelungen ⇒ U² = Skalar
+  (2⁷ site-, 2⁸ edge-axis; splittend, 0 Wurzeln). Kette: frei ⇒ Shift 8 ⇒
+  crossing (alle 28 invarianten 4-Mengen) ⇒ zentrale Klasse ⇒ Kanten-/
+  Silber-Anordnung AUSGESCHLOSSEN. Klein-Kontrolle (Covering-Decks frei
+  unabhängig von der Verklebung); Branch-Kontrolle (die Pillowcase-
+  Involution hat exakt 4 Fixpunkte = die Marken und restringiert zu einer
+  SPIEGELUNG: Silber verwechselt die marken-erzeugende Branch-ℤ₂ mit dem
+  Seam-Deck).
+- **REALSTRUKTUR-KLASSIFIKATION [E]:** deck-kommutierende Realstrukturen =
+  genau 2 Familien (μz̄, |μ| = 1: Fixgerade DURCH die Pole {0,∞}, nicht
+  frei; μ/z̄, μ > 0: Fixkreis |z| = √μ, frei; μ < 0: leer); pro
+  Konfiguration eindeutige markenfixierende Realstruktur; Tabelle: μ₄ →
+  äquatorial, frei ✓ (v506 A-S2.9); SILBER → reelle Achse durch die
+  Deck-Pole — NICHT frei; generic-unit → frei ohne Harmonizität;
+  hexagonal → KEINE markenfixierende Realstruktur (RP-inkompatibel, v503-
+  konsistent).
+- **HARMONISCH + FREI ⇒ μ₄ exakt [E]:** (1−b)²/(1+b)² = −1 löst exakt zu
+  b = ±i — auf freien Kreisen ist die Silber-Familie leer, Harmonizität
+  wird hinreichend.
+- **EHRLICHE GEGENZEUGEN [E]:** „nichtsplittend ⇒ Uhr" ist FALSCH —
+  diskret {0,1,8,9} und kontinuierlich {±1,±(3+4i)/5} (frei, zentral,
+  j = 148176/25 ≠ 1728, keine Uhr): die Fock-Dichotomie misst die KLASSE,
+  nicht den Modulus.
+- **PRÄMISSEN-TYPUNG [E]/[C]:** (P-i) Deck = Möbius-Überlagerungs-Deck ⇒
+  frei (Standard-Topologie; Einseitigkeits-Strang origin_theory/v456);
+  (P-ii) Marken ⊂ Θ-Fixkreis = bestehender REALIZE-[C]-Inhalt
+  (QGEO.REALIZE.02-Hypothesen, v264) — KEIN neuer Input. AUDIT-Befund:
+  „Kreis-Freiheit" war bislang nirgends typisiert (nur Marken-Freiheit,
+  v216); v507 F1.1 ließ die Spiegelungs-Lesart explizit zu — v510 schließt
+  diese Tür (eine Spiegelung ist kein Covering-Deck).
+- **[C]-Rest (wörtlich):** "the alignment bit reduces from 'harmonic AND
+  central' to the square-modulus datum tau = i alone; the position half is
+  topology (edge class excluded), the modulus half stays the one carrier
+  input."
+
+Integration: Ledger SEAM.BIT.FREEDOM.01 (neu) + TEXT-Präzisierungen (Marker
+unverändert) in SEAM.CLOCK.RIGIDITY.01, SEAM.BIT.ORIGIN.01, QGEO.REALIZE.01
+(Bit → Quadrat-Modulus-Datum; Kanten-Klasse topologisch ausgeschlossen),
+P2.TYPING.01 (R1 halbiert); \veri{v510} in tfpt_3 (Celestial-/QGEO-Passage),
+tfpt_research_contracts (QGEO-Kill-Test + MARKS.03 + Celestial-Contract),
+je ein Satz in introduction/tfpt_1/tfpt_2/origin_theory; Wolfram: 6 exakte
+Spiegel (Dieder-Zensus + Quotienten-Topologie, Aut-Vollständigkeit inkl.
+8!-Brute-Force, Cl(16)-Dichotomie-Zensus über alle 17 Involutionen auf
+256×256-Jordan-Wigner-Gammas, Realstruktur-Tabelle, harmonisch+frei ⇒ ±i,
+Gegenzeugen), Engine-Lauf verifiziert 457→463 (ALL WOLFRAM EXTENSION CHECKS
+PASSED; Basis 116/116 re-verifiziert). KEINE Marker-Bewegung: QGEO.REALIZE.01
+bleibt [C]/[O], AX.P2.01 bleibt Axiom. Changelog 2026-07-21 (XXI).
+
+## 2026-07-21 (XX) — v509 (CELEST.WP5E.EPS2.01): WP5e-ε2 „der CPS-Level-from-Flux-Dial" promoviert (Verdikt B) — „ein Level" ist jetzt ein THEOREM der Uhr-Invarianz, der Sektorzähler pinnt k = 1; die PT/Z4-Rückreaktion bleibt [O]
+
+Die celestial_seam_wp5e_eps2_level_from_flux_probe.py aus
+experiments/tfpt-discovery/ ist als **v509_celestial_wp5e_eps2_level_from_flux.py
+(CELEST.WP5E.EPS2.01)** promoviert (28 Checks, <1 s, sympy/Fraction-exakt;
+Suite grün, jetzt 503 Skripte). Ziel: k = 1 aus Flussquantisierung auf den
+Lockstep-Sphären, nach dem Costello-Paquette-Sharma-Mechanismus (Burns-
+Holographie, PRL 130, 061602 + arXiv:2306.00940):
+
+- **CPS-SKELETT EXAKT [E]:** S³-Periode ∫Ω_N = (2πi)²N (Pullback-Dichte
+  −sin 2θ, Phasen kürzen exakt; deren Gl. 3.33), Blow-up-Fluss ∫_{P¹}ω = 2πN
+  exakt (Flachteil stirbt bei t → 0), Rand-Level-Betrag 2N via
+  symplektische-Boson-Doppelkontraktion (N = 1, 2, 3), Normierung
+  T(so8-Vektor) = 1, T(adj) = 6 — „Level = Flussquantum × Dynkin-Index",
+  linear im Fluss.
+- **PAARUNGSMATRIX GEPINNT [E]:** v505-ch₂-Ledger + Ganzzahligkeit +
+  Unimodularität + Effektivität ⇒ P_mi = δ_mi per vollständiger Enumeration
+  (Zeilenkandidaten 8/6/8, 48 unimodulare Lösungen, mit P ≥ 0 genau 2:
+  Identität + Diagramm-Flip); Flüsse F_i = (64, 60, 64) = dim g_i, Summe
+  188 = 248 − 60, flip-invariant; Fluss pro geladenem Wurzelstrom
+  einheitlich EIN Quant durch genau eine Sphäre.
+- **LEVEL-FORMEL EHRLICH [E]:** „Level = Gesamtfluss" wird vom Lockstep-Test
+  SELBST getötet (k_i = (64,60,64) ungleich — F_i ist die
+  Flavour-Multiplizität); es funktioniert k = Fluss pro adjungiertem Strom =
+  (1,1,1), verankert am Gitter-Stromzähler (240,0,0,0) für k = 1..4 und am
+  Einbettungsindex j(D5⊂E8) = j(A3⊂E8) = 1 (60 = 2h∨).
+- **ORD-4 vs LEVEL-1 AUFGELÖST [E]:** die Uhr-Ordnung zählt FRAKTIONALE
+  Flusssektoren (μ = 16 = ord², Glue-Diagonale isotrop + Lagrange, KLM
+  16 → 16/4² = 1); NEUER DIAL: #Primärfelder((E8)_k) = (1,3,5,10,15,27) für
+  k = 1..6 aus den affinen Marken — genau EIN Sektor ⟺ k = 1 (unabhängig
+  von der CPS-Transplantation).
+- **LOCKSTEP-THEOREM [E] (die Hebung von v505 S4.10):** Uhr-Invarianz
+  erzwingt a3 = a2 = a1 = 0, eine μ4-Bahn der Verzweigungspunkte, |Π_j| =
+  √2·t gleich auf allen drei Sphären, Monodromie = reine Phase i,
+  det(A−1) = −4 ⇒ kein invarianter Flussvektor — **k₁ = k₂ = k₃ ist ein
+  THEOREM der Uhr-Invarianz**; NEGATIVPROBE (neuer Falsifikator): die
+  uhr-verbotene Familie Z⁴ − Z (disc −27, Verzweigung {0,1,ω,ω²} keine
+  μ4-Bahn): 0/24 Anordnungen Lockstep. Ehrliche Grenze: gleichmäßige
+  Verdopplung hält den Lockstep — das Theorem beweist GLEICHHEIT, der Wert
+  1 kommt aus den Zählern (und CPS-treu aus dem minimalen Quantum N = 1).
+- **NEGATIVKONTROLLEN [E]:** k = 2 (Zähler 0, Residuum 360, Präfaktor
+  −31/48, #prim 3 — der Lockstep-Dial feuert ehrlich NICHT); SO(16)
+  (Flüsse (0,60,0): Sphären 1/3 flussdunkel, Defekt −30 ≠ −78, Kondensation
+  stoppt bei 4 = det Cartan(D8)); A₂ (det 3 ≠ 4, Glue-Diagonale 23/24 ∉ ℤ,
+  μ = 12 kein Quadrat: KEINE Lagrange-Untergruppe, Coxeter 3 ≠ 4).
+- **[C]/[O]-Zaun:** das CPS-Wörterbuch auf PT/ℤ₄ selbst bleibt [C] (deren
+  Geometrie ist der ℂ²-Blow-up mit einer (−1)-Sphäre und so(8) bei negativem
+  Level — nicht die A₃-ALE); die Typ-I-B-Modell-Rückreaktion auf PT/ℤ₄
+  bleibt [O] (derselbe Zaun wie v502 S5.7/v505).
+
+Integration: Ledger CELEST.WP5E.EPS2.01 (neu) + CELEST.SEAM.01 ergänzt
+(ε2 executed, Roadmap-Rest δ1/δ2 + ε1 + Rückreaktion), der v505-Satz
+„one scale ⇒ one level" auf Theorem-Status gehoben (Text, kein Marker);
+Contracts-WP5e-Sektion ε2-Block; tfpt_3 Celestial-Sektion jetzt
+DREIZEHN-Schritt-Story (Step 13 „one level is a theorem; the sector counter
+pins k = 1"); Wolfram-Extension 450→457 (Engine-Lauf verifiziert, ALL
+WOLFRAM EXTENSION CHECKS PASSED); Website (papers.ts, VerificationDag
+qft-Knoten, Zähler 457). KEINE Marker-Bewegung: WP5e bleibt [O],
+SEAM.EQUIV.01 bleibt [O]. Changelog 2026-07-21 (XX).
+
+## 2026-07-21 (XIX) — e8-ladder-bed v2 (2DCS-Erweiterung): ehrliches Verdikt kill_2d (Detektor-Ebene) — v1-Ergebnisse unberührt, Scorecard-Zeile aktualisiert
+
+Das E8-Leiter-Bett hat heute seine 2DCS-Erweiterung abgeschlossen (amendment_v2
+preregistriert VOR jedem 2D-Lauf, amendment_v2_1 mit Timing-Offenlegung;
+hypotheses/e8_ladder_bed_v1.yaml). Auslöser: arXiv:2512.16829
+(Watanabe/Trebst/Hickey) — REINE Theorie (Localized-Limit B_y = 0–3 T, nicht
+der E8-Punkt); weltweit existiert KEINE experimentelle 2DCS-Messung an
+CoNb2O6 (web-checked 2026-07-21). Ergebnisse (results/results2d.json,
+deterministisch, ~29 min):
+- Known-Answer KA2D: 8/8 Sprossen inkl. m7/m8 via F3-Differenzkoordinaten
+  (F3(6,|6-7|)/F3(5,|5-8|)), chi2/dof 1.30, MC p = 2.0e-4 (0/5000) — der
+  Mechanismus, m7/m8 ins 0.6-THz-Fenster zu ziehen, funktioniert.
+- NEG2D (Localized-Limit-Closed-Forms des Papers): korrekt rejected (p=0.029).
+- ABER Kontroll-Batterie gerissen: scramble2d 54/200 = 27 % detektiert,
+  jitter2d 29/21/17/18 % (18 % @30 %, kein Abfall). Ursache (post hoc
+  dokumentiert, Kriterien NICHT umgeschrieben): Scramble der Detektionsachse
+  erhält die Pump-Marginale (trägt die volle 1D-Leiter) + 120er-Katalogdichte
+  ⇒ der v2-Detektor testet die 2D-PAARUNG nicht wirklich.
+⇒ preregistriertes Verdikt kill_2d (Detektor-Ebene; tötet den Detektor, nicht
+TFPT). v1 bleibt validated: BCVO 8/8 (p=0.0056), CoNb2O6 6/8 (p=0.0038,
+m7_m8_upgrade_rule: Leg bleibt 6/8 bis echte 2DCS-Daten existieren).
+Scorecard-Zeile „E8 mass-ladder blind recovery bed" aktualisiert (data_value +
+status_note; status/stage UNVERÄNDERT consistent/not_applicable,
+analog_positive_control). Ein v3 bräuchte Koinzidenz-basierte Coverage +
+dünneren Katalog, preregistriert BEVOR Daten existieren. Datenanforderung:
+Armitage-Lab (JHU) / Wang-Lab (Ames), 2D-Peak-Tabelle (ω_τ, ω_t ± σ) bei
+B ∥ b 4.7–5.5 T, sub-Kelvin. Changelog 2026-07-21 (XIX).
+
 ## 2026-07-21 (XVIII) — v508 (CELEST.WP5E.GAMMA.01): WP5e-gamma „der Sphären-Axion-Paarungs-Check" promoviert — ein ehrliches, rigides NEGATIVresultat mit Zertifikat; der Austausch-Unterast ist tot, die 32·T3-Last wandert zu den getwisteten BCOV-Kontakttermen (δ1 binär, δ2 als benannter Ausweg)
 
 Die celestial_seam_wp5e_gamma_sphere_axion_pairing_probe.py aus

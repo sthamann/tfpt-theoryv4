@@ -123,10 +123,15 @@ same-day `v505` WP5e-beta round adds 5 more exact mirrors and the same-day
 active engine, 429 → 438; the same-day `v507` bit-origin round adds 6 more
 exact mirrors, verified directly with the active engine, 438 → 444; the
 same-day `v508` WP5e-gamma round adds 6 more exact mirrors, verified
-directly with the active engine, 444 → 450):
+directly with the active engine, 444 → 450; the same-day `v509`
+WP5e-epsilon-2 round adds 7 more exact mirrors, verified directly with the
+active engine, 450 → 457; the same-day `v510` seam-bit-freedom round adds
+6 more exact mirrors, verified directly with the active engine, 457 → 463;
+the same-day `v511` WP5e-delta-2 full-tensor-ledger round adds 7 more
+exact mirrors, verified directly with the active engine, 463 → 470):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508: 450 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511: 470 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -584,6 +589,87 @@ naturalness images (25/4,−11/2,97/4,0,0) and (12,−40,76,0,0) both certify
 cancel, odd classes empty; (vi) the D8 native quartic (28·s₈ Killing,
 16·T₈ + 12·s₈² — no T₃ structure). The selection-rule triple enumeration
 and the flipped-rule control stay Python-only in `v508` (flagged).
+
+The 2026-07-21 WP5e-epsilon-2 round:
+`v509_celestial_wp5e_eps2_level_from_flux.py` (CELEST.WP5E.EPS2.01: the
+CPS level-from-flux dial, verdict B — k = 1 from flux quantisation on the
+lockstep spheres) has its SEVEN mirrors ADDED and VERIFIED the same day
+with the active engine (450 → 457): (i) the CPS period integrals (the S³
+period of the brane back-reaction 3-form = (2πi)² exactly, pullback
+density −sin 2θ; the exceptional-sphere Kähler flux = 2πN exactly with the
+flat part dying at t → 0); (ii) the level~flux contraction (symplectic
+bosons: +2N direct / −2N crossed for N = 1, 2, 3) with the Dynkin
+normalisation T(so8 vector) = 1, T(adj) = 6; (iii) the pairing-matrix
+enumeration 48 → 2 (row candidates (8, 6, 8); 48 unimodular solutions of
+P·C⁻¹·Pᵀ = C⁻¹; with effectivity P ≥ 0 exactly 2 = {identity, A₃ diagram
+flip}); (iv) the three fluxes (64, 60, 64) = dim g_i with total 188 =
+248 − 60, flip-invariant, flux per adjoint current (1, 1, 1); (v) the
+sector-counter dial (#primaries((E₈)_k) = (1, 3, 5, 10, 15, 27) for
+k = 1..6 from the affine marks — one sector iff k = 1, KLM 16/4² = 1);
+(vi) the lockstep theorem + the 0/24 negative probe (clock invariance
+forces a₃ = a₂ = a₁ = 0; squared period moduli 2t² equal on all three
+spheres; monodromy = pure phase i; det(A−1) = −4; Z⁴ − Z with disc −27:
+zero lockstep orderings of the non-μ₄-orbit branch points {0, 1, ω, ω²});
+(vii) the negative controls (SO(16) fluxes (0, 60, 0) with ch₂ defect −30
+and condensation stuck at 4 = det Cartan(D8); A₂: det 3, glue diagonal
+23/24 ∉ ℤ, μ = 12 no perfect square, Coxeter order 3 ≠ 4). The lattice
+current-count table (240, 0, 0, 0) is already mirrored in the `v505`
+round; the k = 2 residual/prefactor controls are mirrored there too — the
+`v509`-specific Python-only parts (none beyond bookkeeping) are flagged.
+
+The 2026-07-21 seam-bit-freedom round:
+`v510_seam_bit_freedom.py` (SEAM.BIT.FREEDOM.01: the freedom attack on the
+v506/v507 alignment bit — the POSITION half of the bit is topology) has
+its SIX mirrors ADDED and VERIFIED the same day with the active engine
+(457 → 463): (i) the dihedral census + quotient topology (D₁₆ has 17
+involutions with exactly ONE free = the antipodal shift by 8; all 16
+reflections have exactly 2 circle fixed points, 8 site-axis + 8 edge-axis;
+robustness N = 8, 12; odd control N = 9: zero free; χ(circle/antipode) = 0
+closed vs χ(circle/reflection) = 1 interval); (ii) the Aut completeness
+(Aut(C₈) = D₈ by brute force over all 8! = 40320 permutations; Aut(C₁₆) =
+D₁₆ by degree-2 propagation, all 32 candidates); (iii) the Cl(16)
+dichotomy census (on the 256×256 Jordan–Wigner gammas the free deck's NS
+implementer squares to 256·γ₁⋯γ₁₆ = 256·(−1)^F nonsplit, while the
+implementers of ALL 16 reflections exist and square to SCALARS {2⁷
+site-axis, 2⁸ edge-axis} — NONSPLIT ⟺ FREE over the complete census; root
+dichotomy 2 vs 0 total); (iv) the real-structure table (M·D = ±D·M solves
+symbolically to the two families diagonal/antidiagonal; per configuration:
+μ₄ → equatorial/FREE, silver → real-axis/NOT free, generic-real →
+real-axis, generic-unit → equatorial/free, hexagonal → NO mark-fixing real
+structure); (v) harmonic + free ⇒ μ₄ ((1−b)²/(1+b)² = −1 solves exactly
+to b = ±i; λ table (2, 1/2, 3/4, 5/4) real, hexagonal Im λ = √3/2);
+(vi) the honest counterwitnesses ({0,1,8,9} shift-invariant + crossing but
+not quarter-shift-invariant; {±1, ±(3+4i)/5} with pair cross-ratio −1/4,
+j = 148176/25 ≠ 1728, clock not preserving). The Möbius/Klein covering
+models and the pillowcase branch control stay Python-only in `v510`
+(flagged).
+
+The 2026-07-21 WP5e-delta-2 round:
+`v511_celestial_wp5e_delta2_tensor_ledger.py` (CELEST.WP5E.DELTA2.01: the
+full-tensor ledger — the v508 collapse is confirmed full-tensorially, and
+one cubic door opens) has its SEVEN mirrors ADDED and VERIFIED the same
+day with the active engine (463 → 470): (i) the innerness count + g₀
+structure (240 glue roots, class split (52, 64, 60, 64); h and h′ read
+the class mod 4 on all 240 roots; the 52 class-0 roots split 40 pure D₅ +
+12 pure A₃ with no mixed root, root span rank 8 — g₀ = d₅ ⊕ a₃
+semisimple, no u(1); class(−α) = −class(α)); (ii) the bilinear Hom table
+by exact Kostant alternating sums on the minuscule weight orbits (nonzero
+ONLY at j′ = −j with dims (2, 1, 1, 1), all 12 charged pairs zero);
+(iii) the trilinear Hom table (all 15 non-neutral triples zero, neutral
+dims (3, 2, 2, 1, 1)); (iv) the unique symmetric survivor (Inv(S³ adj) =
+(0, 1) for (d₅, a₃), Inv(L³ adj) = (1, 1), Inv(S² adj) = (1, 1);
+Inv(S³ g₀) = 1, Inv(L³ g₀) = 2 — the su(4) d-symbol; dual guard 4×4 = 0
+vs 4×4̄ = 1); (v) the controls (SO(16)/D₈ bilinears (1, 0, 1), trilinears
+(1, 0, 1, 0), Inv(S³ adj_D8) = 0, Inv(L³ adj_D8) = 1; false g₀ =
+d₅+a₂+u(1): (5, 2, 2) ≠ (2, 1, 1), Inv(S³ g₀) = 6 ≠ 1; false sector
+(16_s, 4̄): both pairings 0 vs true value 1); (vi) Q_dd by two routes
+(explicit su(4) matrices: brackets/root-contractions/tadpoles all 0;
+Q_dd = (0, 0, −1/240, 0, 1/60) = (1/60)(T₃ − P₃/4) agreeing with the
+hand route; Tr X³ = 0 antisymmetric); (vii) the ψ certificate + the
+relaxed solution (E₁₃/E₂₂/E₀₀/A_fix replicated; rank 3 vs augmented 4;
+ψ = Φ_P − Φ_T3/4 annihilates all four channels, ψ(A_fix) = 72 − 8 = 64;
+relaxed A_fix = −u + 8v + 2w + 1920·Q_dd exactly, 1920 = |W(D₅)| =
+8·240).
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the
