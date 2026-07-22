@@ -1138,12 +1138,13 @@ The previous section identified the seam's boundary $2$-sphere with the celestia
 directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\cong\mathrm{SO}^+(3,1)$,
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
-Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent sixteen-step
+Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent twenty-step
 story --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- executed as
 work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$,
-$\gamma$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the first back-reaction
-milestone M1 of the research contract
-\texttt{CELEST.SEAM.01}, whose
+$\gamma$, $\delta_1$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages and the three back-reaction
+milestones M1--M3 of the research contract
+\texttt{CELEST.SEAM.01}, plus the $\alpha$ stage of the OS twistor bridge
+\texttt{WOIT.OS.TWISTOR.01} (Step 20), whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
 step below is exact machine arithmetic \mE\ plus explicitly named identifications \mC; the route is a
 \emph{programme} \mO, not a claim, and nothing in it moves \texttt{SEAM.EQUIV.01}. The name of the
@@ -1426,10 +1427,13 @@ $64=\dim\mathfrak g_1=2^6$, $1920=|W(D_5)|=8\cdot240$. Controls: $SO(16)/D_8$ ha
 cubic, no odd sectors and no $A_3$ block ($E_8/\mu_4$ doubly special); false
 $\mathfrak g_0$/sector assignments inflate or kill the tables. The burden on the $\delta_1$
 contact terms is thereby \emph{sharpened}: they must supply either the $\psi=64$ slice or the
-selection-rule relaxation --- and the $\delta_1$ exploration run itself stands \emph{undecided}
+selection-rule relaxation --- a burden since \emph{discharged} by Step 17 (the declared KS
+measure supplies the $\psi=64$ slice exactly, so the cubic $d$-channel is not needed) --- and
+the $\delta_1$ run, undecided at exploration level at the time
 (the strict holomorphic reading is refuted at the $\Z_2$/Eguchi--Hanson anchor --- a method
 boundary, not a kill; the contact term is the \emph{modular completion} of the Atiyah--Bott data,
-a Harvey--Moore-type $\tau$-integral with the forced leading $(T_5,T_3)$ ratio $4{:}3$).
+a Harvey--Moore-type $\tau$-integral with the forced leading $(T_5,T_3)$ ratio $4{:}3$), has
+since been \emph{decided} in Step 19 (kill under the derived measure, \vref{v518}).
 \veri{v511\_celestial\_wp5e\_delta2\_tensor\_ledger.py}
 The $1920$ fence itself has since been stress-tested and \emph{fails as a derivation claim}: the
 $1920=|W(D_5)|$ reading is look-elsewhere-loaded ($11/924$ catalog expressions hit $1920$, vs
@@ -1480,7 +1484,7 @@ collapses), $k=2$ (three exchange channels). What stays honest: the chain is con
 Costello's flat-$\mathbb{PT}$ matching \mC, and the \emph{quantised} BCOV coefficient on
 $\mathbb{PT}/\Z_4$ plus the twisted channels ($32\,T_3$) stay \mO\ --- preregistered as the
 M1--M3 back-reaction milestones (the $A_3$ $\Omega_N$, the twisted KS measure, the $a_0$
-uplift), each with success and kill criteria; the first of them is executed in Step 16.
+uplift), each with success and kill criteria; all three are executed in Steps 16--18.
 \veri{v514\_celestial\_wp5e\_eps1\_axion\_slot.py}
 
 \par\smallskip\noindent\textbf{Step 16 --- the back-reacted $\Omega_N$: closed form, integral
@@ -1516,9 +1520,163 @@ $\Z_8$) together with the clock forcing of equal fluxes. Anchors and controls: E
 charge $2=|\Z_2|$ from the same machinery, the CPS flat patch allows every integer $N$ (the
 unconstrained anchor), $\operatorname{diag}(i,i)$ collapses at step zero
 ($\Omega_0\to-\Omega_0$), and fractional charges $N=1,2,3$ are excluded. Global kernel
-patching, the Hitchin small resolution and the CPS brane dictionary stay \mC; M2--M3 and the
-quantised BCOV coefficient stay \mO.
+patching, the Hitchin small resolution and the CPS brane dictionary stay \mC; M2--M3 are
+executed in Steps 17--18, and the quantised BCOV coefficient stays \mO\ only in its measure
+question (the $\delta_1$ chain itself is decided in Step 19).
 \veri{v515\_celestial\_wp5e\_m1\_omega\_n.py}
+
+\par\smallskip\noindent\textbf{Step 17 --- the twisted KS measure: every sector the same Okubo
+square \mE/\mC.} The M2 milestone preregistered in Step 15 is now \emph{executed}, with the
+preregistered SUCCESS wording met \emph{on the declared completion measure} and the KILL (a
+leftover independent quartic in \emph{any} sector) not fired. The measure ansatz is declared
+before computing, and honestly typed: Step 12 killed every \emph{exchange} realisation, and the
+$\delta_1$ exploration identified the twisted contact term as the \emph{modular completion} of
+the very Atiyah--Bott data that produced $A_{\mathrm{fix}}$; M2 declares the completion contact
+term per twisted box channel, $\mathrm{contact}_j=(Q^{(0)}-Q^{(j)})/\det_j$ --- in the channel
+with the $g^j$ zero-mode normalisation $1/\det_j$, the twisted-sector \emph{loop} contributes
+the \emph{unphased} sector trace, of which the Atiyah--Bott skeleton kept only the
+phase-weighted insertion part. Everything downstream of the declaration is exact arithmetic,
+and it locks in place with no dial to turn: per glue class the contact weights obey the
+\emph{completion-weight identity}
+$w_m=\sum_j(1-i^{jm})/\det_j=(0,\tfrac32,2,\tfrac32)=4h_m=|\mu_4|h_m=-4\,\mathrm{ch}_2(T_m)$
+($h_m=m(4-m)/8$ the Step-9 sector Casimir energies, $\mathrm{ch}_2(T_m)$ the McKay/Kronheimer
+charges of the Step-11 index bridge): the three sphere axions pair through their \emph{own}
+ch$_2$ charges --- an exact identity, \emph{no free scale, no fit}. The locks are
+parameter-free: $T_5=0$ for \emph{any} scale $c$ (the ch$_2$ pattern alone), the ratio
+$h_2{:}h_1=4{:}3$ \emph{reproduces} the $\delta_1$-forced leading ratio, and the $T_3$ budget
+fixes $c=4=|\mu_4|$ uniquely (leading system det $256$). The success table is then uniform:
+$\mathrm{skeleton}_j+\mathrm{contact}_j=Q^{(0)}/\det_j=36\langle x,x\rangle^2/\det_j$ --- a
+\emph{perfect Okubo square} ($T_5=T_3=0$, $\tilde\lambda^2=36$) in \emph{every} twisted channel;
+the total $A_{\mathrm{fix}}+\mathrm{contact}=45\langle x,x\rangle^2=\tfrac54\times36\langle
+x,x\rangle^2=$ Dedekind $\times$ Okubo is exactly the \emph{unique} quartic-free weighting of
+the Step-11 rigidity theorem. Both Step-12 certificates are killed ($\Phi_{T_3}\!:32\to0$,
+$\Phi_P\!:72\to0$), and the Step-14 slice $\psi=64$ is \emph{supplied exactly} --- the cubic
+$d$-channel is \emph{not needed} ($c_d$ free $=0$). The remainder sits inside the exchange span
+(the bulk axion cancels every channel with the \emph{same} $\tilde\lambda^2=36$, the twisted
+propagator carrying the zero-mode factor $1/\det_j$), and the Step-15 measure chain stays
+$\mu$-blind. Controls with teeth: wrong scale $c\in\{1,2,3,5\}$ leaves $T_3=(24,16,8,-8)$; the
+$h_1{\leftrightarrow}h_2$ shuffle breaks $T_5$ \emph{and} $T_3$; $SO(16)$ keeps
+$T_5=20$/$T_3=-40$ --- the KILL \emph{fires} there ($E_8$ doubly special);
+$\operatorname{diag}(i,i)$ degenerates to the $\Z_2$ target; and the $\Z_2$/Eguchi--Hanson
+anchor \emph{passes} with the same mechanism ($9\langle x,x\rangle^2=\tfrac14\times36\langle
+x,x\rangle^2$, coupling scale $2=|\Z_2|=$ centre count). The mandatory fence: the completion
+reading (loop $=$ unphased sector trace with the same zero-mode normalisation) is
+\emph{declared}, supported by the $\delta_1$ modular-completion finding, \emph{not} derived from
+the BCOV integral --- the $\delta_1$ chain has since been decided in Step 19 (\vref{v518}: the
+\emph{derived} chiral measure fails all three testers), so the open face is the
+declared-vs-derived measure question, \mO.
+\veri{v516\_celestial\_wp5e\_m2\_twisted\_ks\_measure.py}
+
+\par\smallskip\noindent\textbf{Step 18 --- the $a_0$ uplift: four coupled centre-count scales
+\mE/\mC.} The M3 milestone preregistered in Step 15 is now \emph{executed}, with the
+preregistered SUCCESS wording (``a log-type correction whose coefficient is tied to the source
+charge $4=|\mu_4|$'') met and the KILL (decoupling from the centre count) not fired. The uplift
+object is the generalized-Legendre-transform kernel per centre, $G(\eta_p)=\eta_p\log\eta_p$
+(the Lindstr\"om--Ro\v{c}ek / Ivanov--Ro\v{c}ek dictionary, typed \mC); its derivative kernel
+$\chi=\sum_p\log\eta_p=\log P_4$ is the \emph{log of the Step-16 family polynomial}. The bridge
+is well-typed and exact: the $O(2)$ section is a \emph{null} coordinate ($\Delta_{3d}G(\eta_p)=0$
+identically for an \emph{arbitrary} kernel), and the residue identity
+$\partial_x[\mathrm{transform}(\log\eta_p)]=1/r_p$ holds exactly --- the Gibbons--Hawking
+potential $V=\sum_p1/r_p$ \emph{is} the $x$-derivative of the contour transform of $\chi$ (flux
+$-4\pi$ per centre, source charge $4=|\mu_4|$). The $a_0$ correction then arrives on \emph{four
+coupled centre-count scales}: (i) the asymptotic kernel log
+$\chi=4\log\eta+a_2/\eta^2+(a_0-a_2^2/2)/\eta^4+\dots$ carries the log coefficient $4=|\mu_4|=$
+centre count (the CPS ``$N\log$'' analogue at kernel level); at the clock-fixed seam fibre the
+$a_2$ slot closes and the first correction is \emph{exactly} $a_0/\eta^4=$ the $(4,\pm4)$
+multipole in kernel clothes, with exact $m$-grading (the $m=\pm4$ pieces are \emph{pure} $a_0$,
+the $m=0$ piece is $\varphi_0$-free) and \emph{no} $\log\times$power terms --- the Step-15
+honest zero is preserved; (ii) the once-integrated GLT tower $\sum_p\eta_p\log\eta_p=
+4\eta\log\eta+p_4/(12\eta^3)+\dots$ obeys the selection rule $p_n=0$ unless $n\equiv0\bmod4$
+with $p_{4k}=4(-a_0)^k$ --- every correction carries the prefactor $4$; (iii) the
+exceptional-locus log $\chi(0)=\log a_0=4\log t_0+i(4\varphi_0+\pi)$ ($t_0$-coefficient
+$4=|\mu_4|$, clock phase $4i$; the modulus response equals $1$ \emph{at} the locus and falls off
+as a power law at infinity --- the log lives where Step 15 said it must); (iv) the period
+response is $d\log\Pi_j/d\log a_0=1/4=1/|\mu_4|$ \emph{uniformly} (the periods are linear in
+$t_0$: lockstep and the phase ratios $(1,i,i^2)$ are preserved exactly at first order), and
+integrating the shift around the $a_0$ circle gives the monodromy $e^{2\pi i/4}=i=$ \emph{one
+Coxeter clock step} --- the Step-2 monodromy reproduced from perturbation theory; the $\Z_8$
+node support is $a_0$-rigid, and the $(2\pi i)^2$ fluxes are topological (they cannot move).
+Controls: the $(4,0)$ multipole is clock-invariant and breaks nothing; the $\Z_2$/Eguchi--Hanson
+analogue reads $2=|\Z_2|$ on \emph{every} dial (amplitude, kernel log, exceptional log, period
+response $1/2$, monodromy $-1$); wrong centre counts $k=3,5$ move the coefficient to $k$ with
+modulus slots $O(6)/O(10)\neq O(8)$ --- the observable \emph{moves with the centre count}; the
+clock-forbidden family fails both dials ($p_3=3\neq0$ breaks the selection rule, $e_4=0$ kills
+the $a_0$-log). What stays \mO: the full nonlinear K\"ahler potential of the resolved $A_3$ ALE
+(no closed form exists).
+\veri{v517\_celestial\_wp5e\_m3\_a0\_uplift.py}
+
+\par\smallskip\noindent\textbf{Step 19 --- the derived measure decides --- and disagrees with the
+declared one \mE/\mC.} The $\delta_1$ question that Step 17 left open (\emph{derive} the
+completion reading from the Harvey--Moore/BCOV $\tau$-integral) has now been executed as a
+three-stage probe chain and consolidated: instead of declaring or scanning a measure, the
+measure is \emph{solved for} from blockwise $SL(2,\Z)$ covariance of the dressed
+$16$-component Weil system. Four exact results. (i)~\emph{The completion closes}: the
+discriminant module of $D_5{\oplus}A_3$ is $\Z_4{\times}\Z_4$ with $q=(5x^2{+}3y^2)/8$; the
+Gauss sums are $2\zeta_8^5\times2\zeta_8^3=4=\sqrt{16}$ (signature $0\bmod8=$ rank $E_8$), the
+Weil relations hold exactly in $\Q(\zeta_8)$, the diagonal and anti-diagonal Lagrangians are
+the two $E_8$ gluings, and the $16$-vector theta $S$-covariance drops the naive
+$4$-character-rule residual from $2.91=O(1)$ to $\sim10^{-39}$. (ii)~\emph{The obstruction is
+a finite $\mu_4$ character, identified}: the dressed gauge blocks carry a multiplier system
+whose $SL(2,\Z)$ relation defects are $(1,1,1)$ exactly on all $15$ sector pairs --- a
+\emph{character} of the orbit stabilisers $\Gamma_1(4)$/$\Gamma_0(2)^\pm$, not a genuine
+2-cocycle --- and on $\Gamma_1(4)$ it is $\lambda(\gamma)=i^{2B+C/4}$. (iii)~\emph{The
+cancellation exists and is the twisted fibre block}: $G[a,b]=f_1f_3$ is an exact identity (the
+twisted $\mathbb C^2$ gauge block \emph{is} the weight-$(1,3)$ axion pair), the T-fix
+mechanism is one line of exact phase arithmetic ($(-1)\times e(-1/6)=e(1/3)=\chi_4(T)$), and
+the exact cancellation table reads: bare${}\to$ order $4$, the three sphere axions
+$f_1f_2f_3\to4$, $f_2\to6$, $f_1f_3\to1$ --- \emph{only} the twistor-fibre content cancels the
+$\mu_4$ system, with the strict solutions exactly $\chi_4$ (dims $(3,3)$) and $\chi_{10}$
+(dims $(1,1)$), certified on the dressed functions. (iv)~\emph{All three preregistered testers
+fail}: under both derived solutions the integral misses $T_5=0$ (fractions $0.5$/$0.83$),
+misses the forced $4{:}3$ leading ratio ($W_{13}=0$) and misses $-A_{\mathrm{fix}}$/the
+$\psi=-64N$ slice (spreads $1.05$/$1.47$), and the honest $(N_1,N_2)$ orbit rebalance rescues
+nothing in the positive cone --- a genuine KILL on the derived surface. Controls: the
+$\Z_2$/Eguchi--Hanson anchor (residual order $2$, cancelled to $1$ by the same mechanism),
+$SO(16)$ (the order-$4$ supply structurally absent), wrong form/wrong signature (break
+exactly). Fences \mC: the $f_1f_3=$~KS-weight identification (the deck weights $(1,3)$ are the
+twistor fibre weights forced by the Step-15 incidence ledger --- an exact match, \emph{not} a
+complete BCOV derivation) and the kernel-family convention. TENSION, stated honestly: the
+\emph{declared} completion reading (Step 17) delivers the $\psi=64$ slice and cancels the
+$32\,T_3$; the \emph{derived} chiral measure (this step) fails all three testers --- both are
+exact; the sharp open question is which of the two is the true BCOV measure. Neither result is
+hidden behind the other.
+\veri{v518\_celestial\_wp5e\_delta1\_derived\_kill.py}
+
+\par\smallskip\noindent\textbf{Step 20 --- the real structure exists --- and free reflection
+positivity picks the same family \mE/\mO.} The $\alpha$ stage of the OS twistor bridge
+\texttt{WOIT.OS.TWISTOR.01} is executed (\texttt{WOIT.THETA.FREE.01}). The classification is
+complete: exactly \emph{two} families of anti-linear structures on $\mathbb C^2$ normalise the clock
+$\rho=\operatorname{diag}(i,1)$ --- family D ($z\mapsto\mu\bar z$, $|\mu|=1$) satisfies
+$\Theta\rho\Theta=\rho^{-1}$ \emph{exactly} with $\Theta^2=+1$ ($-1$ is \emph{impossible}:
+$M\bar M=\operatorname{diag}(|\mu|^2,1)$ --- the clock-inverting family is Kramers-free), inverts
+the deck, and reflects the seam circle with two cut points; family A ($z\mapsto\mu/\bar z$)
+centralises the clock projectively and \emph{never} inverts it, with $\Theta^2=\pm1$ per $\mu$.
+The role separation is sharp: family A \emph{defines} the euclidean section --- Woit's
+$\rho_{\mathrm{tw}}$ ($\rho_{\mathrm{tw}}^2=-1$, no real points) is replicated exactly on $\mathbb C^4$
+and is family A globally --- while family D \emph{reflects} it (the OS conjugation;
+$\sigma_{\mathrm{std}}$ with real points $\mathbb{RP}^3$). Mark compatibility pins
+$\mu\in\mu_4$ (a $4$-element torsor with $\rho\,\Theta_\mu\,\rho^{-1}=\Theta_{-\mu}$: two clock
+orbits); the $\Z_8$ spin plane has no phase leaks ($\overline{\zeta_8^k}=\zeta_8^{-k}$); and in
+exact $\mathrm{Cl}(16)$ the Fock implementer $\Theta_{\mathrm{Fock}}=U_r\circ K$ has
+$\Theta_{\mathrm{Fock}}^2=2^7>0$ (normalised $+1$), inverts the Fock clock tower
+($V\mapsto4096\,V^{-1}$, exact scalar) and normalises the deck --- while the \emph{deck}-induced
+candidate has $\Theta_t^2=256\,\gamma_1\cdots\gamma_{16}=(-1)^F$: the Step-2/v510 split/nonsplit
+dichotomy \emph{is} the $\Theta^2=+1$ vs $(-1)^F$ dichotomy, so the deck does \emph{not} furnish
+the OS $\Theta$ --- the seam-circle \emph{reflection} does. Free reflection positivity then holds
+for exactly that pinned $\Theta$: on the bond cut (marks at the bond midpoints of the
+$16$-Majorana circle) the one-particle Gram is positive definite ($(8,0,0)$, min eigenvalue
+$1.888\times10^{-3}$ at $40$ digits), the even $\deg\le2$ sector is $(29,0,0)$, and at $N=8$ the
+\emph{complete} half-sided algebra is RP with no degree truncation; the twist $\eta=+i$ is forced
+($\eta=1$ non-Hermitian); the cut \emph{through} the sites fails exactly ($\det=0$, inertia
+$(3,3,1)$ --- a lattice-placement artifact, the continuum Cauchy--Stieltjes control is strictly
+positive), and the clock-centralising family-A structure fails RP \emph{structurally}
+($(4,4,0)$): RP and $\Theta\rho\Theta=\rho^{-1}$ select the \emph{same} family. Bonus: the
+anti-chiral state flips the odd sector to negative definite --- an exact free-level shadow of
+kill test 3, living entirely in the fermionic sector. \textbf{Kill test 1 of the contract does
+\emph{not} fire at the free/equivariant level and stays live on the interacting algebra}; the
+interacting algebra, gauge-fixed RP, OS reconstruction, chirality and $\mu_4$ incidence remain
+open contract work (the $\beta$/$\gamma$ milestones named in the contract). No marker moves.
+\veri{v519\_woit\_theta\_rp\_free.py}
 
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:
@@ -1526,20 +1684,17 @@ the boundary partition function $E_4/\eta^8$ \emph{derived from the twistor side
 $q^{-1/3}$ prefactor whose CFT side Step 9 has pinned and whose equivariant skeleton Step 11 has
 verified --- the exchange sub-branch is closed by Step 12, the full-tensor ledger is executed by
 Step 14, the level-from-flux dial is executed
-by Step 13, the bulk-axion slot is built by Step 15 and its first back-reaction milestone is
-executed by Step 16, so the named remaining targets are the
-$\delta_1$ Harvey--Moore $\tau$-integral behind the twisted contact terms (undecided at
-exploration level; sharpened by Step 14 to the $\psi=64$ slice or the selection-rule relaxation,
-carrying the forced $4{:}3$ leading ratio), the physical justification of the cubic GS term
-($c_d=32\times60$; the $1920=|W(D_5)|$ reading is look-elsewhere-loaded and
-convention-contingent, \vref{v513}), and the \emph{remaining} type-I
-B-model back-reaction on $\mathbb{PT}/\Z_4$ (which would upgrade the Step-13 CPS dictionary from
-\mC\ to derived): of the three milestones preregistered by Step 15, M1 (the $A_3$ $\Omega_N$
-with the lockstep-phase success criterion) is executed by Step 16, while M2 (the twisted KS
-measure pairing the sphere axions
-against the $32\,T_3$ residual) and M3 (the $a_0$ uplift of the $(4,\pm4)$ multipole) stay
-preregistered \mO\ with their
-success/kill criteria in the contract --- together with the
+by Step 13, the bulk-axion slot is built by Step 15, all three back-reaction milestones it
+preregistered are executed by Steps 16--18 (the Step-15 fence M1--M3 is \emph{fully worked
+off}), and the $\delta_1$ chain is \emph{decided} by Step 19 (kill under the derived measure),
+so the named remaining target narrows to the \emph{measure question}: the declared completion
+reading (Step 17: loop $=$ unphased sector trace with the same zero-mode normalisation,
+delivering the $\psi=64$ slice) and the derived chiral measure (Step 19: solved from blockwise
+covariance, failing all three testers) are \emph{both exact and disagree} --- the global BCOV
+quantisation must decide which of the two it produces; the cubic $d$-channel stays not needed
+and its physical-justification question ($c_d=32\times60$; the
+$1920=|W(D_5)|$ reading look-elsewhere-loaded and convention-contingent, \vref{v513}) stays
+dissolved (Step 19 does not revive it) --- together with the
 continuum uplift of the Step-10 lattice witnesses (Xu's theorem for the abstract orbifold
 statement; the concrete seam quotient net and the interacting condensed $(E_8)_1$ net are
 Costello--Li territory). The route does \emph{not} close \texttt{SEAM.EQUIV.01}; it \emph{is} the
@@ -1551,8 +1706,11 @@ ideal) with the ideal quantitatively fixed, the deleting operator explicit, the 
 constructed, the index chain measured, the KLM triple witnessed, both faces of the inflow
 anchored, the collapse confirmed full-tensorially with one cubic door open, one level a
 theorem with its value pinned by the sector counter, the bulk-axion slot a construction
-with $\tilde\lambda=6$ triply pinned, and the back-reacted $\Omega_N$ closed-form with
-$(2\pi i)^2$-integral lockstep periods and the source charge $4=|\mu_4|$ forced --- while the
+with $\tilde\lambda=6$ triply pinned, the back-reacted $\Omega_N$ closed-form with
+$(2\pi i)^2$-integral lockstep periods and the source charge $4=|\mu_4|$ forced, the twisted KS
+measure (on the declared completion reading) landing on the unique quartic-free weighting, the
+$a_0$ uplift coupled to the centre count on four scales, and the $\delta_1$ chain decided ---
+kill under the derived measure, with the declared/derived tension stated --- while the
 global quantisation stays open. \texttt{SEAM.EQUIV.01}
 stays \mO\ throughout; no marker moves.
 
@@ -1569,14 +1727,23 @@ independently, assembled the very ingredients such a reconstruction needs: refle
 the seam collar (\vref{v379}; the Osterwalder--Schrader axiom, machine-witnessed), the OS
 reconstruction step itself (the cited AMT/OS selector in \texttt{FORM.SEAM.MMST.01}), the order-$4$
 clock $\rho=\operatorname{diag}(i,1)$ acting on the twistor sphere (\vref{v492}), and the seam
-reflection $\sigma$ ($=$ the deck/covering involution whose freeness is topology, \vref{v510}).
+reflection (Step 20 makes the referent precise: the seam-circle \emph{reflection}, not the
+deck/covering involution --- the deck, whose freeness is topology \vref{v510}, carries the
+$(-1)^F$ Kramers class instead).
 What is \emph{missing} is stated exactly: a \emph{global anti-linear map}
 $\Theta:\mathcal A(\mathbb{PT}/\Gamma)\to\mathcal A(\mathbb{PT}/\Gamma)$ with $\Theta^2=1$ and
 $\Theta\rho\Theta=\rho^{-1}$ on the \emph{interacting} open$+$closed twistorial algebra, together
 with reflection positivity of the interacting BCOV$+$SDYM functional --- the two inputs of the new
-central contract \texttt{WOIT.OS.TWISTOR.01} in \texttt{tfpt\_research\_contracts}. Until that
-object exists, the Woit connection is a strong analogy, not a mathematical integration; nothing in
-this paragraph is evidence for either programme, and no marker moves.
+central contract \texttt{WOIT.OS.TWISTOR.01} in \texttt{tfpt\_research\_contracts}. The
+$\alpha$-stage status (Step 20, \vref{v519}): \emph{the missing global object now exists at the
+free level} --- $\Theta$ with $\Theta^2=+1$ and $\Theta\rho\Theta=\rho^{-1}$ on all four levels
+(sphere, $\mathbb C^4$, $\Z_8$ spin, $\mathrm{Cl}(16)$ Fock), with free RP on the seam system selecting
+the same family; Woit's two inequivalent real structures ($\rho_{\mathrm{tw}}$ and
+$\sigma_{\mathrm{std}}$) are exactly the two families of that classification, in \emph{different}
+contract slots. \emph{The interacting statement stays \mO} --- kill test 1 is discharged only at
+the free level, and until $\Theta$ $+$ RP exist on $\mathcal A_{\mathrm{hol}}$, the Woit
+connection remains a strong analogy, not a mathematical integration; nothing in this paragraph is
+evidence for either programme, and no marker moves.
 
 % =====================================================================
 \section{Honest status: bootstrap, not creation from nothing}

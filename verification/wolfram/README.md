@@ -135,10 +135,25 @@ directly with the active engine, 470 → 482; the same-day `v514`
 WP5e-epsilon-1 bulk-axion-slot round adds 8 more exact mirrors, verified
 directly with the active engine, 482 → 490; the same-day `v515`
 WP5e-M1 back-reacted-Omega_N round adds 8 more exact mirrors, verified
-directly with the active engine, 490 → 498):
+directly with the active engine, 490 → 498; the same-day `v516`
+WP5e-M2 twisted-KS-measure round adds 6 more exact mirrors and the
+same-day `v517` WP5e-M3 a0-uplift round adds 6 more, both verified
+directly with the active engine, 498 → 510; the same-day `v518`
+delta-1-derived-kill round adds 6 more exact mirrors (the 16-component
+Weil system, the two Lagrangians, the koboundary test, the Gamma_1(4)
+character formula, the T-fix mechanism, the misassignment controls),
+verified directly with the active engine, 510 → 516; the same-day `v519`
+WOIT-alpha round adds 6 more exact mirrors (the two-family Theta
+classification, mark pinning + the mu4 torsor, the C^4 rho_tw-vs-sigma_std
+level, the Z8 tower conjugation, the Cl(16) dichotomy 2^7 vs (-1)^F on
+Jordan-Wigner gammas incl. U_r V U_r V = 2^19 and Utilde V = V Utilde,
+and the free-RP preconditions + site-cut degeneration + Cauchy-Stieltjes
+continuum control — the 40-digit PD inertia certificates of the bond-cut
+Grams stay Python-only), verified directly with the active engine,
+516 → 522):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515: 498 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519: 522 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
@@ -770,6 +785,80 @@ alone is NOT the discriminator; EH charge 2 forced; diag(i,i) collapse
 i·i = −1). The dict-based exterior-algebra identities dK = 0 and the
 generic-profile sphere parametrisation stay Python-side in `v515`,
 flagged in the `.wl` comment.
+
+The 2026-07-22 WP5e-M2+M3 back-reaction rounds:
+`v516_celestial_wp5e_m2_twisted_ks_measure.py` (CELEST.WP5E.M2.01: the
+twisted Kodaira–Spencer measure — milestone M2 executed, SUCCESS on the
+preregistered v514 S8.2 criterion on the DECLARED completion measure)
+has its SIX mirrors ADDED and VERIFIED the same day with the active
+engine (498 → 504): (i) the completion-weight identity w_m =
+Σ_j(1 − i^{jm})/det_j = (0, 3/2, 2, 3/2) = 4h_m = |μ₄|h_m = −4 ch₂(T_m)
+with the index bridge f(m) = −h_m = ch₂ (no free scale, ratio 4:3);
+(ii) the root/quartic replication (240 roots split (52, 64, 60, 64),
+class quartics Q_m, A_fix = (9, −30, −15, 0, 32) two routes, bulk Okubo
+36⟨x,x⟩² = (K⁽⁰⁾)²/100); (iii) the parameter-free locks (T₅ = 0 for
+symbolic scale, T₃ budget forces c = 4 = |μ₄|, leading system det 256
+with unique weights (3/2, 2)); (iv) the contact term two forms +
+the success table (per-sector perfect Okubo squares 36⟨x,x⟩²/det_j,
+total 45⟨x,x⟩² = (5/4)·36 = Dedekind × Okubo, certificates 32/72/ψ = 64
+all killed, exchange-span remainder, μ-blind measure chain); (v) the
+negative controls (wrong scale 32 − 8c, shuffled weights T₅ = −14 /
+T₃ = 36, SO(16) keeps T₅ = 20 / T₃ = −40 — the KILL fires there,
+diag(i,i) degeneration, ℤ₂/EH anchor 9⟨x,x⟩² at scale 2 = |ℤ₂|);
+(vi) the multiplier note (discriminant T-phase orders (1, 8, 2, 8)
+squaring to (1, 4, 1, 4), Gauss sums 2e(3/8) / 2e(5/8) / 4). The
+completion reading itself is the declared [C] fence (not mirrorable —
+it is a typing, not an identity).
+`v517_celestial_wp5e_m3_a0_uplift.py` (CELEST.WP5E.M3.01: the a₀
+uplift — milestone M3 executed, SUCCESS on the preregistered v514 S8.3
+criterion) has its SIX mirrors ADDED and VERIFIED the same day with
+the active engine (504 → 510): (i) the GH multipole ledger (dipole/
+octupole 0, quadrupole m = 0, (4, ±4) amplitude (35/16) sin⁴θ,
+selection rule m ≡ 0 mod 4) + the family at general orbit phase (e₁ =
+e₃ = 0, a₂ = 4z₀z̄₀ζ², a₀(ζ) = −(z₀² − z̄₀²ζ⁴)², v515 slice); (ii) the
+kernel bridge (null coordinate: Δ₃d G(η_p) = 0 for arbitrary G;
+residue V-ledger identity 1/(2r); flux −4π per centre); (iii) the
+asymptotic kernel log (coefficient 4 = |μ₄|, seam-fibre first
+correction a₀/η⁴, exact m-grading with the m = 0 piece −6t₀⁴ φ₀-free,
+GLT tower p_{4k} = 4(−a₀)^k, no log×power terms); (iv) the
+exceptional-locus log (χ(0) = log a₀ = 4 log t₀ + i(4φ₀ + π), modulus
+response 1 at the locus vs power-law a₀/η⁴ at infinity); (v) the
+period response (Π_j linear in t₀, d log Π/d log a₀ = 1/4 = 1/|μ₄|,
+integrated monodromy i = one Coxeter clock step, centre permutation,
+a₀-rigid node support, K₄ discriminants ∼ t₀²); (vi) the negative
+controls ((4,0) φ₀-free, ℤ₂/EH reads 2 on every dial, k = 3/5 orbits
+move the coefficient with slots O(6)/O(10), forbidden family p₃ = 3 /
+e₄ = 0). The GLT contour-transform typing is the declared [C]
+dictionary; the BM kernel anchor is already mirrored in the v515
+round.
+
+The 2026-07-22 delta-1 decision round
+`v518_celestial_wp5e_delta1_derived_kill.py` (CELEST.WP5E.DELTA1.01:
+the delta-1 chain delta-1b + delta-1c + delta-1d decided — kill under
+the DERIVED chiral measure, with the v516 declared-measure tension
+stated honestly) has its SIX mirrors ADDED and VERIFIED the same day
+with the active engine (510 → 516): (i) the 16-component Weil system
+of the D5 ⊕ A3 discriminant module ℤ₄ × ℤ₄ with q = (5x² + 3y²)/8
+(Gauss sums 2ζ₈⁵ × 2ζ₈³ = 4 = √16, signature 0 mod 8 = rank E8; S
+symmetric + unitary, S² = C, (ST)³ = S², S⁴ = 1, T⁸ = 1; tensor split
+S = S_D5 ⊗ S_A3); (ii) the two invariant Lagrangians (diagonal H and
+anti-diagonal H′, both S- and T-fixed = two E8 gluings; 6 isotropic
+classes; P_H S P_H = (1/4)J with 3/4 of every S-image weight on the
+12 shifted classes — why the naive 4-character rule fails); (iii) the
+koboundary test on the recorded exact transport phases (the SL(2,ℤ)
+relation defects c_{S⁴}, c_{(ST)³S⁻²}, c_{[S²,T]} are (1, 1, 1) on
+all 15 sector pairs: the μ₄ multiplier system is a CHARACTER of the
+orbit stabilisers, not a genuine 2-cocycle); (iv) the Γ₁(4) character
+formula λ(γ) = i^{2B + C/4} on the recorded loop matrices (all in
+Γ₁(4), all four equivalent monomial solutions agreeing); (v) the T-fix
+mechanism ((−1)·e(−1/6) = e(1/3) = χ₄(T) uniformly for f₁f₃, while
+f₁f₂f₃ demands {χ₃, χ₄} and f₂ demands {χ₅, χ₆} — inconsistent at the
+T-fixed nodes alone); (vi) the misassignment controls (wrong form
+(x² + y²)/4: |Gauss|² = 64 ≠ 16 and S² ≠ C exactly; wrong signature
+σ = e(−1/4): S² = e(−1/2)C exactly). The Harvey–Moore integrals, the
+SVD contraction solves, the theta covariance certificates and the
+block transport measurements are numerical (mpmath 30+ digits /
+numpy) and stay Python-only, flagged in the `.wl` comment.
 
 (ledger `GATE.WOLFRAM.02`). The scipy-only parts of the round (the `v86`
 pivot ODE solve, the `v88` data pulls, the `v99` mpmath ODE probe of the

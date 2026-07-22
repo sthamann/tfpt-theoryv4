@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`509` registered scripts · `580` ledger claims · `10` clusters.
+`513` registered scripts · `584` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -336,7 +336,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (179 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (183 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -697,6 +697,14 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v505_celestial_wp5e_beta_equivariant_ledger, v508_celestial_wp5e_gamma_pairing, v509_celestial_wp5e_eps2_level_from_flux, v511_celestial_wp5e_delta2_tensor_ledger, v286_seam_equivalence_contract, v492, v493 · cited: 3 e8 audit bootstrap, research contracts
 - **v515_celestial_wp5e_m1_omega_n** [E/C/O/X] `CELEST.WP5E.M1.01` — CELEST.WP5E.M1.01: milestone M1 of the celestial-holographic research contract CELEST.SEAM.01 (WP5e back-reaction programme) -- 'the A3 Omega_N', executed (SUCCESS on the preregist
   - deps: v492_celestial_z4_orbifold, v514_celestial_wp5e_eps1_axion_slot, v509_celestial_wp5e_eps2_level_from_flux, v505_celestial_wp5e_beta_equivariant_ledger, v492, v493, v505, v509 · cited: 3 e8 audit bootstrap, research contracts
+- **v516_celestial_wp5e_m2_twisted_ks_measure** [E/C/O/X] `CELEST.WP5E.M2.01` — CELEST.WP5E.M2.01: milestone M2 of the celestial-holographic research contract CELEST.SEAM.01 (WP5e back-reaction programme) -- 'the twisted Kodaira-Spencer measure', executed (SUC
+  - deps: v492_celestial_z4_orbifold, v505_celestial_wp5e_beta_equivariant_ledger, v508_celestial_wp5e_gamma_pairing, v511_celestial_wp5e_delta2_tensor_ledger, v514_celestial_wp5e_eps1_axion_slot, v515_celestial_wp5e_m1_omega_n, v495, v502 · cited: 3 e8 audit bootstrap, research contracts
+- **v517_celestial_wp5e_m3_a0_uplift** [E/C/O/X] `CELEST.WP5E.M3.01` — CELEST.WP5E.M3.01: milestone M3 of the celestial-holographic research contract CELEST.SEAM.01 (WP5e back-reaction programme) -- 'the a0 uplift', executed (SUCCESS on the preregiste
+  - deps: v492_celestial_z4_orbifold, v514_celestial_wp5e_eps1_axion_slot, v515_celestial_wp5e_m1_omega_n, v516_celestial_wp5e_m2_twisted_ks_measure, v493, v505, v509, v514 · cited: 3 e8 audit bootstrap, research contracts
+- **v518_celestial_wp5e_delta1_derived_kill** [E/C/O/X] `CELEST.WP5E.DELTA1.01` — CELEST.WP5E.DELTA1.01: the delta-1 chain (delta-1b + delta-1c + delta-1d) of the celestial-holographic research contract CELEST.SEAM.01 DECIDED -- 'the derived chiral measure kills
+  - deps: v492_celestial_z4_orbifold, v516_celestial_wp5e_m2_twisted_ks_measure, v517_celestial_wp5e_m3_a0_uplift, v514_celestial_wp5e_eps1_axion_slot, v508_celestial_wp5e_gamma_pairing, v511_celestial_wp5e_delta2_tensor_ledger, v513_celestial_dterm_nonderivation, v502 · cited: 3 e8 audit bootstrap, research contracts
+- **v519_woit_theta_rp_free** [E/C/O/X] `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01` — WOIT.THETA.FREE.01: the WOIT-alpha milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 -- 'the real structure exists, and free reflection positivity picks the SAME family' (Part 
+  - deps: v492_celestial_z4_orbifold, v286_seam_equivalence_contract, v510_seam_bit_freedom, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v507_seam_bit_origin · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1083,16 +1091,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `v76`×19, `CELEST.SEAM.01`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×23, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v504_celestial_wp5d_klm_completeness** — `CELEST.WP5DB.01`
-- **v505_celestial_wp5e_beta_equivariant_ledger** — `CELEST.WP5E.BETA.01`
-- **v506_seam_clock_rigidity** — `SEAM.CLOCK.RIGIDITY.01`
-- **v507_seam_bit_origin** — `SEAM.BIT.ORIGIN.01`
 - **v508_celestial_wp5e_gamma_pairing** — `CELEST.WP5E.GAMMA.01`
 - **v509_celestial_wp5e_eps2_level_from_flux** — `CELEST.WP5E.EPS2.01`
 - **v510_seam_bit_freedom** — `SEAM.BIT.FREEDOM.01`
@@ -1101,4 +1105,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v513_celestial_dterm_nonderivation** — `CELEST.DTERM.NONDERIV.01`
 - **v514_celestial_wp5e_eps1_axion_slot** — `CELEST.WP5E.EPS1.01`
 - **v515_celestial_wp5e_m1_omega_n** — `CELEST.WP5E.M1.01`
+- **v516_celestial_wp5e_m2_twisted_ks_measure** — `CELEST.WP5E.M2.01`
+- **v517_celestial_wp5e_m3_a0_uplift** — `CELEST.WP5E.M3.01`
+- **v518_celestial_wp5e_delta1_derived_kill** — `CELEST.WP5E.DELTA1.01`
+- **v519_woit_theta_rp_free** — `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01`
 

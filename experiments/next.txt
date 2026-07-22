@@ -1,3 +1,140 @@
+## 2026-07-22 (IX) — v519 (WOIT.THETA.FREE.01): der WOIT-α-Meilenstein promoviert — „die Realstruktur existiert, und freie Reflection Positivity wählt DIESELBE Familie"; Kill-Test 1 von WOIT.OS.TWISTOR.01 feuert auf dem freien Niveau NICHT (bleibt formal live auf der interagierenden Algebra); die tfpt_3-Story ist jetzt ZWANZIG Schritte
+
+Die zwei Proben woit_os_theta_realstructure_probe.py (21/21, ~105 s) und
+woit_os_theta_rp_freelevel_probe.py (13/13, ~5 s) sind als EIN Modul
+**v519_woit_theta_rp_free.py (WOIT.THETA.FREE.01)** promoviert (34 Checks,
+~20 s — Fock-Uhr-Inversion konsolidiert über die Implementer/Zentrum-Route
+statt der V-Potenz-Arithmetik, gleiche Claims, gleiche Toleranzen; Cluster
+frontier, Stil v510/v512; Suite grün, jetzt 513 Skripte, ALL CHECKS PASSED):
+
+- **Θ-KLASSIFIKATION VOLLSTÄNDIG [E]:** genau ZWEI Familien anti-linearer
+  Strukturen auf ℂ², die die Uhr normalisieren — Familie D (z ↦ μz̄,
+  |μ| = 1): ΘρΘ = ρ⁻¹ exakt, Θ² = +1 (−1 UNMÖGLICH: M·M̄ = diag(|μ|²,1) —
+  Kramers-frei), invertiert das Deck, Fixmenge = Großkreis durch die
+  Deck-Pole; Familie A (z ↦ μ/z̄): zentralisiert projektiv (invertiert
+  NIE), Θ² = ±1 je μ, Fixmenge |z| = 1 bzw. leer. ROLLENTRENNUNG: Familie
+  A definiert den euklidischen Schnitt (Woits ρ_tw-Seite: ρ_tw² = −1,
+  keine reellen Punkte — auf ℂ⁴ exakt repliziert), Familie D reflektiert
+  ihn (OS-Konjugation, σ_std = Konjugation mit reellen Punkten ℝP³).
+- **MARKENPINNING [E]:** z ↦ μz̄ erhält die μ₄-Marken ⟺ μ ∈ μ₄ — ein
+  4-elementiger μ₄-Torsor (2 Marken-Achsen, 2 Silber-Mittelpunkt-Achsen),
+  Uhr-Konjugation ρΘ_μρ⁻¹ = Θ_{−μ} ⇒ 2 Uhr-Orbits.
+- **SPIN/FOCK [E]:** ℤ₈-Ebene ohne Phasenlecks (conj(ζ₈ᵏ) = ζ₈⁻ᵏ);
+  Cl(16): Θ_Fock = U_r∘K mit Θ_Fock² = 2⁷ > 0 (normiert +1), invertiert
+  den Uhrturm (V ↦ 4096·V⁻¹) und normalisiert das Deck;
+  KRAMERS-DICHOTOMIE: der Deck-induzierte Kandidat Θ_t = Ũ∘K hat
+  Θ_t² = (−1)^F — die v510-Split/Nonsplit-Dichotomie IST die Θ² = +1 vs.
+  (−1)^F-Dichotomie; das Deck liefert Θ NICHT, die
+  Seam-Kreis-REFLEXION tut es.
+- **KILL-TEST 1 (freies Niveau) [E]:** feuert NICHT — Θ existiert mit
+  Θ² = +1 UND ΘρΘ = ρ⁻¹ und erfüllt alle drei Zusatzanforderungen
+  gleichzeitig (Marken, Deck-Normalisierung, Spin/Fock).
+- **FREIE RP [E]:** NS-Vakuum C(d) = (2/N)/sin(πd/N), C² = −1 exakt;
+  Präkonditionen exakt (RCRᵀ = −C, SCSᵀ = C, RSR⁻¹ = S⁻¹; das Deck
+  verletzt die Anti-Invarianz); BOND-SCHNITT: Ein-Teilchen-Gram (8,0,0)
+  PD (min EW 1.888e-3, 40-stellig), gerader Sektor deg ≤ 2 (29,0,0) PD,
+  N = 8 volle Halbseiten-Algebra PD (gerade + ungerade je (8,0,0)) — RP
+  ohne Grad-Trunkierung; Twist η = +i erzwungen (η = 1 nicht-hermitesch);
+  KONTROLLEN: Site-Schnitt scheitert exakt (det = 0, Trägheit (3,3,1);
+  Kontinuums-Kontrolle Cauchy–Stieltjes positiv — Gitter-Platzierungs-
+  Artefakt, RP wählt die Site-Platzierung relativ zu den Marken); die
+  uhr-zentralisierende Familie-A-Struktur scheitert strukturell ((4,4,0))
+  — RP und ΘρΘ = ρ⁻¹ selektieren DIESELBE Familie; Bonus: antichiraler
+  Zustand → ungerader Sektor (0,8,0) ND (freier Schatten von Kill-Test 3).
+- **[C]/[O] — NICHT gezeigt:** interagierende Algebra (Kill-Test 1 bleibt
+  dort live), Gauge-Fixing-RP (KT 2), OS-Rekonstruktion, Chiralität ohne
+  Spiegel (KT 3/6 — nur der freie Schatten), μ₄-Inzidenz (KT 7);
+  WOIT-β/γ-Roadmap benannt (β1 Θ auf gauge-invarianter Subalgebra +
+  Gauge-Fixing-RP am äquivarianten SDYM(E8)-Sektor; β2 OS-Quotient des
+  freien Systems explizit; β3 PT↔PT*-Dualität vs. σ_std typen;
+  γ Chiralitätssatz + Marken-Inzidenz).
+- **ZWEI CONTRACT-PRÄZISIERUNGEN (Prosa, kein Marker):** (i) „Θ induced
+  by the seam reflection" heißt die Seam-Kreis-REFLEXION, nicht das Deck
+  (das Deck liefert die (−1)^F-Kramers-Klasse — v510-Brücke); (ii) die
+  Marken sitzen RP-seitig auf den Bindungs-Mittelpunkten des
+  16-Majorana-Kreises.
+- **Sync:** Ledger WOIT.THETA.FREE.01 (neu) + WOIT.OS.TWISTOR.01-Text
+  („alpha stage executed via v519 … kill test 1 does NOT fire at the free
+  level and stays live on the interacting algebra; beta/gamma milestones
+  named"); \veri in tfpt_research_contracts (α-Block → done mit
+  Kernzahlen, zwei Präzisierungen, β/γ-Roadmap mit Erfolg/Kill) + tfpt_3
+  (neuer Step 20 „the real structure exists — and free reflection
+  positivity picks the same family", Story jetzt zwanzig Schritte,
+  Woit-Bridge-Absatz um den α-Status ergänzt); Wolfram 6 exakte Spiegel
+  (516 → 522, Engine-Lauf verifiziert; 40-stellige PD-Zertifikate
+  Python-only geflaggt); Website (papers.ts „20 steps" + WOIT-Contract-
+  Spiegel + Glossar, DAG qft-Knoten + v519, Zähler 116/116 + 522/522);
+  Changelog 2026-07-22 (IX). KEINE Marker-Bewegung — WOIT.OS.TWISTOR.01
+  bleibt [O]. Nächste Meilensteine: β1/β2/β3/γ (Erfolg/Kill-Kriterien
+  stehen wörtlich im Contract).
+
+## 2026-07-22 (VI)/(VII) — v516 + v517 (CELEST.WP5E.M2.01 + M3.01): Rückreaktions-Meilensteine M2 „das getwistete KS-Maß" und M3 „der a₀-Uplift" ausgeführt — beide ERFOLG nach den präregistrierten v514-S8.2/S8.3-Kriterien; der v514-Zaun M1–M3 ist damit VOLLSTÄNDIG abgearbeitet; offen bleibt die BCOV-Integral-HERLEITUNG der deklarierten Completion-Lesart (δ1d) + SEAM.EQUIV.TWISTOR.01
+
+Die Proben celestial_seam_wp5e_m2m3_twisted_ks_measure_probe.py (23/23) und
+celestial_seam_wp5e_m2m3_a0_uplift_probe.py (23/23) sind als
+**v516_celestial_wp5e_m2_twisted_ks_measure.py (CELEST.WP5E.M2.01)** und
+**v517_celestial_wp5e_m3_a0_uplift.py (CELEST.WP5E.M3.01)** promoviert
+(je 23 Checks, ~1 s / ~7 s, exakt sympy/Fraction; Cluster frontier, Stil
+v514/v515; Suite grün, jetzt 511 Skripte, ALL CHECKS PASSED):
+
+- **M2 — DIE COMPLETION-GEWICHTSIDENTITÄT [E]:** contact_j =
+  (Q⁽⁰⁾ − Q⁽ʲ⁾)/det_j (deklariertes Maß: die getwistete Schleife trägt die
+  UNGEPHASTE Sektorspur mit derselben Nullmoden-Normierung); Klassengewichte
+  w_m = Σ_j (1−i^{jm})/det_j = (0, 3/2, 2, 3/2) = 4·h_m = |μ₄|·h_m =
+  −4·ch₂(T_m) — exakte Identität, KEIN freier Maßstab (die Sphären-Axione
+  koppeln über ihre eigenen McKay-ch₂-Ladungen, v505-Indexbrücke).
+- **M2 — PARAMETERFREIE LOCKS + ERFOLGS-TABELLE [E]:** T₅ = 0 für JEDEN
+  Maßstab c; h₂:h₁ = 4:3 = das δ1-erzwungene Verhältnis (REPRODUZIERT);
+  T₃-Budget fixiert c = 4 = |μ₄|; jeder Kanal wird das perfekte
+  Okubo-Quadrat 36⟨x,x⟩²/det_j (λ̃² = 36 in jedem Sektor!); Total =
+  45⟨x,x⟩² = (5/4)·36 = Dedekind × Okubo (v505-S3.8-Rigidität); beide
+  v508-Zertifikate getilgt (Φ_T3: 32→0, Φ_P: 72→0); **v511-Scheibe ψ = 64
+  exakt geliefert — kein kubischer d-Kanal nötig (c_d frei = 0)**; Rest im
+  Austausch-Spann, Bulk-Axion löscht mit λ̃² = 36; v514-Maßkette μ-blind.
+- **M2 — NEGATIVKONTROLLEN [E]:** c ∈ {1,2,3,5} lässt T₃-Reste
+  (24,16,8,−8); h₁↔h₂ bricht T₅ UND T₃; SO(16): T₅ = 20/T₃ = −40 bleiben —
+  KILL feuert dort; diag(i,i) bricht Konjugationspaarung + Indexbrücke;
+  ℤ₂/EH-Anker besteht (9⟨x,x⟩² = (1/4)·36, Skala 2 = |ℤ₂|).
+- **M2 — PFLICHT-ZAUN [C]/[O]:** die Completion-Lesart ist DEKLARIERT
+  (gestützt durch den δ1-Modular-Completion-Befund), NICHT aus dem
+  BCOV-Integral hergeleitet — die Herleitung bleibt [O] (δ1b/c/d-Gebiet).
+  Multiplikator-Notiz für δ1d: Kontaktgewichte reelle Rationale ohne
+  eigenes Multiplikator-System; δ1c-Restphasen = Quadrate der
+  A₃-Diskriminanten-T-Phasen, Ordnungen (1,4,1,4).
+- **M3 — VIER GEKOPPELTE ZENTRENZAHL-SKALEN [E]:** (1) asymptotischer
+  Kern-Log χ = 4·log η + a₂/η² + (a₀ − a₂²/2)/η⁴ + … (Koeffizient
+  4 = |μ₄|; an ζ = 0 erste Korrektur exakt a₀/η⁴ = das (4,±4)-Multipol;
+  m-Graduierung exakt; keine log·Potenz-Terme — v514-Null bleibt);
+  (2) GLT-Turm Σ η_p log η_p = 4η log η + p₄/(12η³) + … mit p_{4k} =
+  4(−a₀)^k (Auswahlregel n ≡ 0 mod 4); (3) exzeptioneller Ort χ(0) =
+  log a₀ = 4·log t₀ + i(4φ₀+π); (4) Perioden: d log Π_j/d log a₀ = 1/4 =
+  1/|μ₄| uniform, Monodromie über den a₀-Kreis = e^{2πi/4} = i = ein
+  Coxeter-Uhrschritt (v493 aus Störungsrechnung reproduziert); Knoten-ℤ₈
+  a₀-rigid, Flussvektor bleibt erzwungen, BM-Kern modulus-frei.
+- **M3 — KERNBRÜCKE + KONTROLLEN [E]:** Residuenidentität ∂_x[Transform] =
+  1/r_p exakt (V-Ledger: Quellladung 4, Fluss −4π pro Zentrum); η
+  harmonisch für JEDEN Kern (Null-Koordinate); (4,0) uhr-invariant;
+  ℤ₂/EH: jede Skala liest 2; k = 3,5: Koeffizient 3/5, Slot O(6)/O(10) ≠
+  O(8) — die Observable wandert mit der Zentrenzahl; verbotene Familie:
+  p₃ = 3 ≠ 0, e₄ = 0. Zaun: GLT-Wörterbuch [C] (Lindström–Roček /
+  Ivanov–Roček); volles nichtlineares Kähler-Potential der aufgelösten
+  A₃-ALE [O].
+- **Sync:** Ledger CELEST.WP5E.M2.01 + M3.01 (neu, je ERFOLG) +
+  CELEST.SEAM.01 („M2+M3 executed via v516/v517 — the v514 fence M1–M3 is
+  fully worked off; what stays [O]: the BCOV-integral derivation of the
+  completion reading (delta-1d) and SEAM.EQUIV.TWISTOR.01") +
+  SEAM.EQUIV.TWISTOR.01-Dependencies um v516/v517; \veri in
+  tfpt_research_contracts (M2/M3-Bullets → done, δ1-Target auf δ1d
+  verengt, v511-Fence-Absatz: ψ = 64 geliefert, d-Kanal-Frage löst sich
+  auf sofern δ1d ihn nicht wiederbelebt) + tfpt_3 (Steps 17+18, Story
+  jetzt ACHTZEHN Schritte, „What remains" verengt) + tfpt_4_frontier;
+  Wolfram 6+6 exakte Spiegel (498 → 510, Engine-Lauf verifiziert,
+  ALL WOLFRAM EXTENSION CHECKS PASSED); Website (papers.ts „18 steps",
+  DAG qft-Knoten + v516/v517, glossary, Zähler 116/116 + 510/510);
+  Changelog 2026-07-22 (VI)/(VII). Nächstes Ziel: δ1d — die
+  BCOV-Integral-Herleitung der deklarierten Completion-Lesart (der
+  parallele δ1d-Sandbox-Strang läuft; seine Dateien bleiben unberührt).
+
 ## 2026-07-22 (V) — v515 (CELEST.WP5E.M1.01): Rückreaktions-Meilenstein M1 „das A₃-Ω_N" ausgeführt — ERFOLG nach dem präregistrierten v514-S8.1-Kriterium; Ω_N in geschlossener Form, alle S³/ℤ₄-Perioden (2πi)²-ganzzahlig, Linsen-Geometrie ERZWINGT Quellladung 4 = |μ₄|; M2/M3 bleiben [O]
 
 Die Probe celestial_seam_wp5e_m1_a3_omega_n_backreaction_probe.py (30/30) ist als
@@ -4911,3 +5048,39 @@ Update-Notes auf .02/.03), origin_theory- + tfpt_2-Absaetze, changelog (II)+(III
 counts 482/v488, Wolfram-README-Flags (Engine unaktiviert, Mirrors deferred),
 papers.ts/predictions.ts-Spiegel, theory-contracts-README (lazy01/clebsch01/adhm01),
 Scorecard-Erweiterung frb-parity-comb um das NICER-Bein.
+
+=== 2026-07-22 (VIII): v518 -- die delta1-Kette ENTSCHIEDEN (Kill unterm
+abgeleiteten Mass) ===
+Die drei Proben delta1b (30/30) / delta1c (31/31) / delta1d (36/36) sind als EIN
+Modul v518_celestial_wp5e_delta1_derived_kill.py promoviert (30 Checks, ~20 s;
+Ledger CELEST.WP5E.DELTA1.01 "DECIDED: kill under the derived measure, tension
+with v516 stated"). Kernaussagen: (1) die 16-Komponenten-Weil-Vervollstaendigung
+schliesst exakt (E1.5-Residuum 2.91 -> ~1e-39; Gauss-Summen 2z8^5 x 2z8^3 = 4,
+Signatur 0 mod 8; zwei invariante Lagrange-Bloecke = zwei E8-Klebungen);
+(2) die Obstruktion ist ein ENDLICHER mu4-CHARAKTER der Orbit-Stabilisatoren
+(Koboundary-Defekte (1,1,1) auf allen 15 Paaren; auf Gamma_1(4):
+lambda(gamma) = i^(2B + C/4)); (3) die Kuerzung existiert und ist der
+Twistor-Fibre-Block f1f3 = G (exakte Identitaet; T-Fix (-1)*e(-1/6) = e(1/3)
+= chi_4(T); Tabelle: none/f1f2f3 -> 4, f2 -> 6, f1f3 -> 1); (4) BEIDE
+abgeleiteten Loesungen (chi_4 dims (3,3), chi_10 dims (1,1)) verfehlen ALLE
+drei Pruefsteine (T5-Fraktionen 0.5/0.83; W13 = 0 statt 4:3; Spreads 1.05/1.47;
+keine (N1,N2)-Rettung im positiven Kegel) -- echter KILL auf der abgeleiteten
+Flaeche. SPANNUNG (Pflicht-Fence): das DEKLARIERTE v516-Mass liefert psi = 64
+und kuerzt 32 T3; das ABGELEITETE Mass (v518) verfehlt alles -- beide exakt;
+welches das wahre BCOV-Mass ist, ist das benannte [O]. [C]-Fences: f1f3 =
+KS-Gewichts-Identifikation (Gewichte = v514-Inzidenz, exakt passend, keine
+volle BCOV-Ableitung), Kernel-Familien-Konvention, diskrete chi_k-Wahl.
+KEINE Marker bewegt; CELEST.SEAM.01 bleibt Open, die cubic-GS-Frage bleibt
+aufgeloest (v518 belebt den d-Kanal nicht).
+SYNC: v518 in run_all/Registry/Ledger (DELTA1.01 neu; SEAM.01 delta1-Passagen
+auf DECIDED; TWISTOR.01-Deps v492-v518; M2-Querverweis), contracts (delta1-Stage
+done+Fence, WP5e-proper = Mass-Frage, Objekt-Diagramm, Status-Liste),
+tfpt_3 (Step 19 "the derived measure decides -- and disagrees with the declared
+one", Neunzehn-Schritt-Story), tfpt_4-Keybox, changelog (VIII), Wolfram +6
+Spiegel 510 -> 516 (Engine-Lauf verifiziert; HM-Integrale/SVD/Theta-Zertifikate
+Python-only geflaggt), papers.ts/DAG/README/suite-Spiegel.
+NAECHSTER SCHRITT (der delta1-Nachfolger): die BCOV-Ableitung auf PT/Z4, die
+zwischen deklariertem und abgeleitetem Mass entscheidet -- Erfolg = die
+Ableitung landet auf der v516-Lesart (traegt 4:3); Kill = sie landet auf dem
+v518-Mass (dann ist die Twisted-Contact-Route tot und die 32-T3-Kuerzung muss
+anderswo herkommen).
