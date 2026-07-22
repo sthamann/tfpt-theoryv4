@@ -116,29 +116,36 @@ export function Changelog() {
             className="absolute -left-[1.6rem] top-1.5 h-2.5 w-2.5 rounded-full bg-gradient-to-br from-blue-400 to-violet-400 ring-4 ring-slate-950 sm:-left-[2.1rem]"
           />
           <article className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
-            <header className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-slate-800/60 px-5 py-3.5 sm:px-6">
+            <header className="border-b border-slate-800/60 px-5 py-3.5 sm:px-6">
               <time
                 dateTime={entry.date}
                 className="font-mono text-xs font-semibold tracking-wide text-blue-300"
               >
                 {entry.dateLabel}
               </time>
+            </header>
+            <div className="space-y-3 px-5 py-4 sm:px-6">
               {entry.heading.length > 0 && (
-                <h2 className="font-serif text-[0.98rem] font-semibold leading-snug text-slate-100">
+                // The heading carries the whole entry summary (often several
+                // hundred words). Render it as a readable lead paragraph, not as
+                // a large serif heading, so long entries do not become a wall.
+                <h2 className="text-sm leading-relaxed text-slate-200">
                   {renderNodes(entry.heading)}
                 </h2>
               )}
-            </header>
-            <ul className="space-y-3 px-5 py-4 sm:px-6">
-              {entry.items.map((item, j) => (
-                <li
-                  key={j}
-                  className="relative pl-4 text-sm leading-relaxed text-slate-300 before:absolute before:left-0 before:top-[0.55em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600"
-                >
-                  {renderNodes(item)}
-                </li>
-              ))}
-            </ul>
+              {entry.items.length > 0 && (
+                <ul className="space-y-3">
+                  {entry.items.map((item, j) => (
+                    <li
+                      key={j}
+                      className="relative pl-4 text-sm leading-relaxed text-slate-300 before:absolute before:left-0 before:top-[0.55em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-slate-600"
+                    >
+                      {renderNodes(item)}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </article>
         </li>
       ))}

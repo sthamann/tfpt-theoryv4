@@ -42,13 +42,3373 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
-    "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "date": "2026-07-22",
+    "dateLabel": "2026-07-22 · III",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v514"
+      },
+      {
+        "k": "t",
+        "v": " — WP5e-"
+      },
+      {
+        "k": "m",
+        "v": "\\varepsilon_1"
+      },
+      {
+        "k": "t",
+        "v": " “the "
+      },
+      {
+        "k": "m",
+        "v": "O(-2)"
+      },
+      {
+        "k": "t",
+        "v": " bulk-axion slot” executed (verdict B), promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5E.EPS1.01"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "s=0"
+      },
+      {
+        "k": "t",
+        "v": " tower field of the celestial route is now a CONSTRUCTION, "
+      },
+      {
+        "k": "m",
+        "v": "\\tilde\\lambda=6"
+      },
+      {
+        "k": "t",
+        "v": " is pinned three ways, and the first honest back-reaction step is taken in Gibbons–Hawking form — (1) the EQUIVARIANT "
+      },
+      {
+        "k": "m",
+        "v": "O(-2)"
+      },
+      {
+        "k": "t",
+        "v": " SLOT: the pushforward ledger "
+      },
+      {
+        "k": "m",
+        "v": "\\pi_*O(-2)"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{PT}'=\\mathrm{Tot}(O(1){\\oplus}O(1)\\to\\mathbb P^1)"
+      },
+      {
+        "k": "t",
+        "v": " gives per degree "
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": " exactly "
+      },
+      {
+        "k": "m",
+        "v": "(d{+}1)^2"
+      },
+      {
+        "k": "t",
+        "v": " classes "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the exact wave-operator nullspaces ("
+      },
+      {
+        "k": "m",
+        "v": "1,4,9,16,25,36"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "d=0..5"
+      },
+      {
+        "k": "t",
+        "v": "), the "
+      },
+      {
+        "k": "c",
+        "v": "v492"
+      },
+      {
+        "k": "t",
+        "v": " action on the fibre coordinates "
+      },
+      {
+        "k": "m",
+        "v": "(\\mu_1,\\mu_2)\\mapsto(i\\mu_1,i^{-1}\\mu_2)"
+      },
+      {
+        "k": "t",
+        "v": " with incidence-forced column weights "
+      },
+      {
+        "k": "m",
+        "v": "(+1,+1,-1,-1)"
+      },
+      {
+        "k": "t",
+        "v": " closes the equivariant bookkeeping BLOCK BY BLOCK (all "
+      },
+      {
+        "k": "m",
+        "v": "d\\le6"
+      },
+      {
+        "k": "t",
+        "v": ", all "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " characters); character series "
+      },
+      {
+        "k": "m",
+        "v": "P_0=1+3t^2+15t^4+21t^6+45t^8+\\dots"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "P_1=P_3=2t+8t^3+18t^5+\\dots"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "P_2=6t^2+10t^4+28t^6+\\dots"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "d=0"
+      },
+      {
+        "k": "t",
+        "v": " slot has multiplicity "
+      },
+      {
+        "k": "m",
+        "v": "(1,0,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " — THE BULK AXION SURVIVES THE PROJECTION; Molien invariant ring "
+      },
+      {
+        "k": "m",
+        "v": "=(1-t^8)/((1-t^4)^2(1-t^2))"
+      },
+      {
+        "k": "t",
+        "v": " — "
+      },
+      {
+        "k": "m",
+        "v": "Z\\in O(2)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "X,Y\\in O(4)"
+      },
+      {
+        "k": "t",
+        "v": ", relation degree "
+      },
+      {
+        "k": "m",
+        "v": "8="
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "a_0"
+      },
+      {
+        "k": "t",
+        "v": " weight ("
+      },
+      {
+        "k": "c",
+        "v": "v492"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v493"
+      },
+      {
+        "k": "t",
+        "v": " bridge); E3 bijection sharpened (twisted minimal content "
+      },
+      {
+        "k": "m",
+        "v": "(2t,6t^2,2t)"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the Coxeter eigenvalues, "
+      },
+      {
+        "k": "m",
+        "v": "\\det(A-1)=-4"
+      },
+      {
+        "k": "t",
+        "v": "); graviton control: "
+      },
+      {
+        "k": "m",
+        "v": "O(+2)"
+      },
+      {
+        "k": "t",
+        "v": " invariant only from fibre degree "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " with multiplicity "
+      },
+      {
+        "k": "m",
+        "v": "3=\\{X,Z^2,Y\\}"
+      },
+      {
+        "k": "t",
+        "v": "; (2) "
+      },
+      {
+        "k": "m",
+        "v": "\\tilde\\lambda=6"
+      },
+      {
+        "k": "t",
+        "v": " TRIPLY PINNED: Okubo "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{Tr}_{\\mathrm{adj}}X^4=36\\langle x,x\\rangle^2=(6\\langle x,x\\rangle)^2"
+      },
+      {
+        "k": "t",
+        "v": " on the "
+      },
+      {
+        "k": "m",
+        "v": "240"
+      },
+      {
+        "k": "t",
+        "v": " glue roots ("
+      },
+      {
+        "k": "m",
+        "v": "36=h^\\vee+6"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\tilde\\lambda=6=|\\Z_2|N_{\\mathrm{fam}}"
+      },
+      {
+        "k": "t",
+        "v": "); the measure chain cancels "
+      },
+      {
+        "k": "m",
+        "v": "\\mu=1/4"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY (vertex"
+      },
+      {
+        "k": "m",
+        "v": "^2"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\mu^2"
+      },
+      {
+        "k": "t",
+        "v": ", propagator "
+      },
+      {
+        "k": "m",
+        "v": "1/\\mu"
+      },
+      {
+        "k": "t",
+        "v": ", anomaly "
+      },
+      {
+        "k": "m",
+        "v": "\\mu"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\tilde\\lambda_{\\mathrm{eff}}^2=36"
+      },
+      {
+        "k": "t",
+        "v": " for arbitrary "
+      },
+      {
+        "k": "m",
+        "v": "\\mu"
+      },
+      {
+        "k": "t",
+        "v": "; wrong bookings EXCLUDED: anomaly-only "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow3"
+      },
+      {
+        "k": "t",
+        "v": ", missing propagator renormalisation "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow12"
+      },
+      {
+        "k": "t",
+        "v": "); flux (minimal CPS quantum "
+      },
+      {
+        "k": "m",
+        "v": "N=1"
+      },
+      {
+        "k": "t",
+        "v": ", single channel iff "
+      },
+      {
+        "k": "m",
+        "v": "k=1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "(\\kappa/c_3)^2=12"
+      },
+      {
+        "k": "t",
+        "v": " exact); (3) the GH/"
+      },
+      {
+        "k": "m",
+        "v": "A_3"
+      },
+      {
+        "k": "t",
+        "v": " BACK-REACTION STEP: invariant "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "-centre configurations "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " exactly "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " branches, the free orbit re-derives the "
+      },
+      {
+        "k": "c",
+        "v": "v493"
+      },
+      {
+        "k": "t",
+        "v": " family ("
+      },
+      {
+        "k": "m",
+        "v": "\\prod_p(Z-i^pz_0)=Z^4-z_0^4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "a_0=-z_0^4"
+      },
+      {
+        "k": "t",
+        "v": ", monodromy "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " one clock step), the charge-"
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " GH point is exactly "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb R^4/\\Z_k"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "k=4"
+      },
+      {
+        "k": "t",
+        "v": ": seam boundary "
+      },
+      {
+        "k": "m",
+        "v": "S^3/\\Z_4"
+      },
+      {
+        "k": "t",
+        "v": "), periods "
+      },
+      {
+        "k": "m",
+        "v": "\\Pi_j=4\\pi t_0(i-1)(1,i,i^2)"
+      },
+      {
+        "k": "t",
+        "v": " LOCKSTEP ("
+      },
+      {
+        "k": "c",
+        "v": "v509"
+      },
+      {
+        "k": "t",
+        "v": " counter-check), Coxeter clock from geometry ("
+      },
+      {
+        "k": "m",
+        "v": "\\Pi\\cdot A=i\\Pi"
+      },
+      {
+        "k": "t",
+        "v": "), source charge "
+      },
+      {
+        "k": "m",
+        "v": "4=|\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": ", EH asymptotic log coefficient EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " (the CPS log is an exceptional-locus statement; Burns contrast "
+      },
+      {
+        "k": "m",
+        "v": "\\det g\\neq1"
+      },
+      {
+        "k": "t",
+        "v": "), multipole rule "
+      },
+      {
+        "k": "m",
+        "v": "m\\equiv0\\bmod4"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "(4,\\pm4)"
+      },
+      {
+        "k": "t",
+        "v": " carrying "
+      },
+      {
+        "k": "m",
+        "v": "-a_0"
+      },
+      {
+        "k": "t",
+        "v": "; controls "
+      },
+      {
+        "k": "m",
+        "v": "\\mathfrak{so}_8"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\tilde\\lambda^2=12"
+      },
+      {
+        "k": "t",
+        "v": " irrational, squares only "
+      },
+      {
+        "k": "m",
+        "v": "\\{9,36\\}"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{diag}(i,i)"
+      },
+      {
+        "k": "t",
+        "v": " (Veronese), "
+      },
+      {
+        "k": "m",
+        "v": "k=2"
+      },
+      {
+        "k": "t",
+        "v": " (three channels); "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "conditional on Costello's flat-"
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{PT}"
+      },
+      {
+        "k": "t",
+        "v": " matching; "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "the quantised BCOV coefficient and the twisted channels ("
+      },
+      {
+        "k": "m",
+        "v": "32\\,T_3"
+      },
+      {
+        "k": "t",
+        "v": ") — M1–M3 preregistered (the "
+      },
+      {
+        "k": "m",
+        "v": "A_3"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Omega_N"
+      },
+      {
+        "k": "t",
+        "v": " / the twisted KS measure / the "
+      },
+      {
+        "k": "m",
+        "v": "a_0"
+      },
+      {
+        "k": "t",
+        "v": " uplift, each with success "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " kill); Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "482\\to490"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — WP5e stays "
+          },
+          {
+            "k": "s",
+            "v": "O"
+          },
+          {
+            "k": "t",
+            "v": ", "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.EQUIV.01"
+          },
+          {
+            "k": "t",
+            "v": " untouched, "
+          },
+          {
+            "k": "c",
+            "v": "CELEST.SEAM.01"
+          },
+          {
+            "k": "t",
+            "v": " stays Open"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v514_celestial_wp5e_eps1_axion_slot.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.WP5E.EPS1.01"
+            },
+            {
+              "k": "t",
+              "v": ", 34 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "4 s; exact sympy/Fraction, no floats; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " S1 Penrose accounting; S2 equivariant ledger "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " character series "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Molien "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " E3 sharpening "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " graviton control; S3 the "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda=6"
+        },
+        {
+          "k": "t",
+          "v": " residue (Okubo / measure / flux) with honest gaps; S4–S5 GH centre dichotomy, periods, Coxeter clock; S6 the CPS “"
+        },
+        {
+          "k": "m",
+          "v": "N\\log"
+        },
+        {
+          "k": "t",
+          "v": "” ledger (kernel charge, multipoles, EH log); S7 negative controls; S8 the M1–M3 roadmap; S9 verdict. Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (suite "
+        },
+        {
+          "k": "m",
+          "v": "508"
+        },
+        {
+          "k": "t",
+          "v": " modules, green), "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "frontier"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "), ledger row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.EPS1.01"
+        },
+        {
+          "k": "t",
+          "v": " (new, verdict B)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Contract updated (markers unchanged)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " now reads: "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_1"
+        },
+        {
+          "k": "t",
+          "v": " executed via "
+        },
+        {
+          "k": "c",
+          "v": "v514"
+        },
+        {
+          "k": "t",
+          "v": " — the slot is a construction, "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda=6"
+        },
+        {
+          "k": "t",
+          "v": " pinned by three exact ledgers, the GH/"
+        },
+        {
+          "k": "m",
+          "v": "A_3"
+        },
+        {
+          "k": "t",
+          "v": " step re-derives the "
+        },
+        {
+          "k": "c",
+          "v": "v493"
+        },
+        {
+          "k": "t",
+          "v": " family and the Coxeter clock from geometry; the quantised BCOV coefficient and the twisted channels stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " (M1–M3 preregistered)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_1"
+        },
+        {
+          "k": "t",
+          "v": " stage moved to "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "done"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with its own stage block; the named remaining targets now carry the M1–M3 milestones verbatim; WP4 handover and honest status line synced); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (new Step 15 “the bulk axion is a construction; "
+        },
+        {
+          "k": "m",
+          "v": "\\tilde\\lambda=6"
+        },
+        {
+          "k": "t",
+          "v": " is pinned three ways” — the celestial story is now fifteen steps; “what remains” updated). "
+        },
+        {
+          "k": "c",
+          "v": "v514_celestial_wp5e_eps1_axion_slot.py"
+        },
+        {
+          "k": "t",
+          "v": " is cited via "
+        },
+        {
+          "k": "c",
+          "v": "veri"
+        },
+        {
+          "k": "t",
+          "v": " in both."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Eight exact mirrors (equivariant Penrose ledger; character series "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " bulk-axion survival; Molien hypersurface "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Veronese control; Okubo perfect square "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\mathfrak{so}_8"
+        },
+        {
+          "k": "t",
+          "v": " control; measure cancellation excluding "
+        },
+        {
+          "k": "m",
+          "v": "3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " flux dial; GH centre dichotomy; period lockstep "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter clock; multipole rule "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " EH log ledger) added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " and verified with the active engine, "
+        },
+        {
+          "k": "m",
+          "v": "482\\to490"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ", Wolfram README and the website counters synced ("
+        },
+        {
+          "k": "m",
+          "v": "116/116+490/490"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Provenance."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Discovery probes "
+        },
+        {
+          "k": "c",
+          "v": "celestial_seam_"
+        },
+        {
+          "k": "c",
+          "v": "wp5e_eps1_"
+        },
+        {
+          "k": "c",
+          "v": "o2_bulk_"
+        },
+        {
+          "k": "c",
+          "v": "axion_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20/20"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "celestial_seam_"
+        },
+        {
+          "k": "c",
+          "v": "wp5e_eps1_"
+        },
+        {
+          "k": "c",
+          "v": "gh_a3_"
+        },
+        {
+          "k": "c",
+          "v": "backreaction_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "14/14"
+        },
+        {
+          "k": "t",
+          "v": ") in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/"
+        },
+        {
+          "k": "t",
+          "v": " (2026-07-22); website mirrors regenerated ("
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": ", DAG "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "qft"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " node, "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " “15 steps”, changelog mirror); "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " round notes."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "dateLabel": "2026-07-22 · II",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v513"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "m",
+        "v": "c_d"
+      },
+      {
+        "k": "t",
+        "v": " negative certificate, promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.DTERM.NONDERIV.01"
+      },
+      {
+        "k": "t",
+        "v": " (anti-numerology certificate in the "
+      },
+      {
+        "k": "c",
+        "v": "v508"
+      },
+      {
+        "k": "t",
+        "v": " style, honest rigid NEGATIVE result): can geometry derive "
+      },
+      {
+        "k": "m",
+        "v": "c_d=1920"
+      },
+      {
+        "k": "t",
+        "v": "? NO — the "
+      },
+      {
+        "k": "c",
+        "v": "v511"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "fence “"
+      },
+      {
+        "k": "m",
+        "v": "1920=|W(D_5)|"
+      },
+      {
+        "k": "t",
+        "v": "” does NOT survive the honest four-route battery with its PRE-DECLARED look-elsewhere ledger: (1) the CONVENTION TABLE gives "
+      },
+      {
+        "k": "m",
+        "v": "c_d\\in\\{1920,120,256,32,69120\\}"
+      },
+      {
+        "k": "t",
+        "v": " across five normalisations (probe tr-fund/"
+      },
+      {
+        "k": "m",
+        "v": "e_8"
+      },
+      {
+        "k": "t",
+        "v": "-Killing; Gell-Mann; "
+      },
+      {
+        "k": "m",
+        "v": "\\mathfrak{su}(4)"
+      },
+      {
+        "k": "t",
+        "v": "-Killing; plain trace; ch"
+      },
+      {
+        "k": "m",
+        "v": "_3"
+      },
+      {
+        "k": "t",
+        "v": "-normalised "
+      },
+      {
+        "k": "m",
+        "v": "d/6"
+      },
+      {
+        "k": "t",
+        "v": ") — only "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "5"
+      },
+      {
+        "k": "t",
+        "v": " hits "
+      },
+      {
+        "k": "m",
+        "v": "|W(D_5)|"
+      },
+      {
+        "k": "t",
+        "v": ", while the convention-STABLE content is the factorisation "
+      },
+      {
+        "k": "m",
+        "v": "c_d=\\Phi_{T_3}(A_{\\mathrm{fix}})\\times2h^\\vee(E_8)=32\\times60"
+      },
+      {
+        "k": "t",
+        "v": ", both factors "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "(Killing propagator "
+      },
+      {
+        "k": "m",
+        "v": "60"
+      },
+      {
+        "k": "t",
+        "v": " from "
+      },
+      {
+        "k": "m",
+        "v": "\\sum_\\alpha\\langle\\alpha,e\\rangle^2=120"
+      },
+      {
+        "k": "t",
+        "v": " over the actual roots; "
+      },
+      {
+        "k": "m",
+        "v": "T_3"
+      },
+      {
+        "k": "t",
+        "v": "-slot fixing via "
+      },
+      {
+        "k": "m",
+        "v": "\\det(\\text{P-block})=-64\\neq0"
+      },
+      {
+        "k": "t",
+        "v": "); (2) K1 DEAD: the charge-legal flux pairings "
+      },
+      {
+        "k": "m",
+        "v": "(1,3)/(2,2)"
+      },
+      {
+        "k": "t",
+        "v": " give "
+      },
+      {
+        "k": "m",
+        "v": "2048/1800"
+      },
+      {
+        "k": "t",
+        "v": " — they BRACKET "
+      },
+      {
+        "k": "m",
+        "v": "1920"
+      },
+      {
+        "k": "t",
+        "v": " and both MISS; the only flux hit "
+      },
+      {
+        "k": "m",
+        "v": "64\\cdot60/2"
+      },
+      {
+        "k": "t",
+        "v": " is the FORBIDDEN "
+      },
+      {
+        "k": "m",
+        "v": "(1,2)"
+      },
+      {
+        "k": "t",
+        "v": " pairing (charge "
+      },
+      {
+        "k": "m",
+        "v": "3\\bmod4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v511"
+      },
+      {
+        "k": "t",
+        "v": " innerness); look-elsewhere: "
+      },
+      {
+        "k": "m",
+        "v": "924"
+      },
+      {
+        "k": "t",
+        "v": " expressions from "
+      },
+      {
+        "k": "m",
+        "v": "21"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "numbers, "
+      },
+      {
+        "k": "m",
+        "v": "11"
+      },
+      {
+        "k": "t",
+        "v": " hits on "
+      },
+      {
+        "k": "m",
+        "v": "1920"
+      },
+      {
+        "k": "t",
+        "v": ", controls "
+      },
+      {
+        "k": "m",
+        "v": "1800\\to8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "2048\\to5"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "2016\\to0"
+      },
+      {
+        "k": "t",
+        "v": "; (3) K2: quantisation delivers only lattices ("
+      },
+      {
+        "k": "m",
+        "v": "60\\,\\Z"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "1920"
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "m",
+        "v": "32"
+      },
+      {
+        "k": "t",
+        "v": "nd multiple, no minimality; strict ch"
+      },
+      {
+        "k": "m",
+        "v": "_3"
+      },
+      {
+        "k": "t",
+        "v": " units "
+      },
+      {
+        "k": "m",
+        "v": "2160\\,\\Z"
+      },
+      {
+        "k": "t",
+        "v": " EXCLUDE "
+      },
+      {
+        "k": "m",
+        "v": "1920"
+      },
+      {
+        "k": "t",
+        "v": "); the cubic quantum is lattice-dependent ("
+      },
+      {
+        "k": "m",
+        "v": "6"
+      },
+      {
+        "k": "t",
+        "v": " on coroots, "
+      },
+      {
+        "k": "m",
+        "v": "3/8"
+      },
+      {
+        "k": "t",
+        "v": " on weights), the integer "
+      },
+      {
+        "k": "m",
+        "v": "32"
+      },
+      {
+        "k": "t",
+        "v": " has "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " factorisations; (4) K3 PROVENANCE CLASH (the death blow): cubic indices "
+      },
+      {
+        "k": "m",
+        "v": "A_m=(0,16,0,-16)"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "\\sum_m i^mA_m=32i"
+      },
+      {
+        "k": "t",
+        "v": " numerically "
+      },
+      {
+        "k": "m",
+        "v": "=\\Phi_{T_3}(A_{\\mathrm{fix}})"
+      },
+      {
+        "k": "t",
+        "v": " — but the quartic class decomposition "
+      },
+      {
+        "k": "m",
+        "v": "(10,-4,30,-4)"
+      },
+      {
+        "k": "t",
+        "v": " comes from classes "
+      },
+      {
+        "k": "m",
+        "v": "0/2"
+      },
+      {
+        "k": "t",
+        "v": " vs the cubic "
+      },
+      {
+        "k": "m",
+        "v": "16{+}16"
+      },
+      {
+        "k": "t",
+        "v": " from classes "
+      },
+      {
+        "k": "m",
+        "v": "1/3"
+      },
+      {
+        "k": "t",
+        "v": ": same number, disjoint mechanism "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " coincidence; the Weyl side is WRONG ("
+      },
+      {
+        "k": "m",
+        "v": "d"
+      },
+      {
+        "k": "t",
+        "v": "-channel is "
+      },
+      {
+        "k": "m",
+        "v": "A_3"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "|W(A_3)|=24"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "D_5"
+      },
+      {
+        "k": "t",
+        "v": " has no cubic; "
+      },
+      {
+        "k": "m",
+        "v": "|W(E_8)|/|W(A_8)|=1920"
+      },
+      {
+        "k": "t",
+        "v": " a second accidental "
+      },
+      {
+        "k": "m",
+        "v": "1920"
+      },
+      {
+        "k": "t",
+        "v": "); (5) K4 controls ("
+      },
+      {
+        "k": "m",
+        "v": "SO(16)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "k=2"
+      },
+      {
+        "k": "t",
+        "v": " doubling "
+      },
+      {
+        "k": "m",
+        "v": "7680"
+      },
+      {
+        "k": "t",
+        "v": ", false "
+      },
+      {
+        "k": "m",
+        "v": "\\mathfrak g_0"
+      },
+      {
+        "k": "t",
+        "v": " with six cubics, "
+      },
+      {
+        "k": "m",
+        "v": "\\mathfrak{so}(10)"
+      },
+      {
+        "k": "t",
+        "v": ") separate consistently; VERDICT: NUMEROLOGY as a derivation claim — the "
+      },
+      {
+        "k": "c",
+        "v": "v511"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "fence stays a fence, now typed look-elsewhere-loaded; the honest "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "core is "
+      },
+      {
+        "k": "m",
+        "v": "c_d=32\\times60"
+      },
+      {
+        "k": "t",
+        "v": "; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "476\\to482"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — the fence stays "
+          },
+          {
+            "k": "s",
+            "v": "C"
+          },
+          {
+            "k": "t",
+            "v": ", the physical generation of the "
+          },
+          {
+            "k": "m",
+            "v": "32"
+          },
+          {
+            "k": "t",
+            "v": " stays "
+          },
+          {
+            "k": "s",
+            "v": "O"
+          },
+          {
+            "k": "t",
+            "v": ", "
+          },
+          {
+            "k": "c",
+            "v": "CELEST.SEAM.01"
+          },
+          {
+            "k": "t",
+            "v": " stays Open"
+          }
+        ]
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v513_celestial_dterm_nonderivation.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "CELEST.DTERM.NONDERIV.01"
+            },
+            {
+              "k": "t",
+              "v": ", 24 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "2 s; exact sympy/Fraction, no floats; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " N0 baseline ("
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots "
+        },
+        {
+          "k": "m",
+          "v": "(52,64,60,64)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "A_{\\mathrm{fix}}=(9,-30,-15,0,32)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Q_{dd}"
+        },
+        {
+          "k": "t",
+          "v": " two routes, "
+        },
+        {
+          "k": "m",
+          "v": "c_d"
+        },
+        {
+          "k": "t",
+          "v": " pinned by the "
+        },
+        {
+          "k": "m",
+          "v": "T_3"
+        },
+        {
+          "k": "t",
+          "v": " slot alone); N1 convention table "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the stable factorisation "
+        },
+        {
+          "k": "m",
+          "v": "32\\times60"
+        },
+        {
+          "k": "t",
+          "v": "; K1 flux products "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " look-elsewhere ledger; K2 quantisation lattices; K3 cubic/quartic provenance clash "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Weyl data; K4 negative controls. Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " (suite "
+        },
+        {
+          "k": "m",
+          "v": "507"
+        },
+        {
+          "k": "t",
+          "v": " modules, green), "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "frontier"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "), ledger row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.DTERM.NONDERIV.01"
+        },
+        {
+          "k": "t",
+          "v": " (new)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fence sharpened (text only, marker unchanged)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.DELTA2.01"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.SEAM.01"
+        },
+        {
+          "k": "t",
+          "v": " contract prose now carry: “the "
+        },
+        {
+          "k": "m",
+          "v": "1920=|W(D_5)|"
+        },
+        {
+          "k": "t",
+          "v": " reading is look-elsewhere-loaded ("
+        },
+        {
+          "k": "m",
+          "v": "11/924"
+        },
+        {
+          "k": "t",
+          "v": " vs. "
+        },
+        {
+          "k": "m",
+          "v": "8/924"
+        },
+        {
+          "k": "t",
+          "v": " for the control target "
+        },
+        {
+          "k": "m",
+          "v": "1800"
+        },
+        {
+          "k": "t",
+          "v": ") and convention-contingent — "
+        },
+        {
+          "k": "c",
+          "v": "v513"
+        },
+        {
+          "k": "t",
+          "v": "”; the honest remaining target of the cubic-GS item is the physical generation of the factor "
+        },
+        {
+          "k": "m",
+          "v": "32"
+        },
+        {
+          "k": "t",
+          "v": ", not the Weyl fingerprint."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta_2"
+        },
+        {
+          "k": "t",
+          "v": " fence environment, named remaining targets, status list — new "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.DTERM.NONDERIV.01"
+        },
+        {
+          "k": "t",
+          "v": " status line); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (Step-14 paragraph "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the “what remains” sentence); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_4_frontier"
+        },
+        {
+          "k": "t",
+          "v": " (celestial-route clause). "
+        },
+        {
+          "k": "c",
+          "v": "v513_celestial_dterm_nonderivation.py"
+        },
+        {
+          "k": "t",
+          "v": " is cited via "
+        },
+        {
+          "k": "c",
+          "v": "veri"
+        },
+        {
+          "k": "t",
+          "v": " in the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta_2"
+        },
+        {
+          "k": "t",
+          "v": "/fence environments."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Six exact mirrors (propagator anchor "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "T_3"
+        },
+        {
+          "k": "t",
+          "v": "-slot pinning; five-way convention table; flux enumeration "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " look-elsewhere counts; K2 lattices; K3 provenance clash "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Weyl data; K4 controls) added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " and verified with the active engine, "
+        },
+        {
+          "k": "m",
+          "v": "476\\to482"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "GATE.WOLFRAM.02"
+        },
+        {
+          "k": "t",
+          "v": ", Wolfram README and the website counters synced ("
+        },
+        {
+          "k": "m",
+          "v": "116/116+482/482"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Provenance."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Discovery probe "
+        },
+        {
+          "k": "c",
+          "v": "celestial_seam_"
+        },
+        {
+          "k": "c",
+          "v": "wp5e_dterm_"
+        },
+        {
+          "k": "c",
+          "v": "coefficient_"
+        },
+        {
+          "k": "c",
+          "v": "derivation_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/"
+        },
+        {
+          "k": "t",
+          "v": " (2026-07-22, "
+        },
+        {
+          "k": "m",
+          "v": "24/24"
+        },
+        {
+          "k": "t",
+          "v": "); website mirrors regenerated ("
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": ", DAG "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "qft"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " node, "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": ", changelog mirror); "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " round notes."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "dateLabel": "2026-07-22 · I",
     "heading": [
       {
         "k": "t",
-        "v": "XXIII) ("
+        "v": "("
       },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": " — the flag-transitivity equivalence web promoted as "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.TAU.FLAG.01"
+      },
+      {
+        "k": "t",
+        "v": ": the "
+      },
+      {
+        "k": "m",
+        "v": "\\tau=i"
+      },
+      {
+        "k": "t",
+        "v": " attack executed on the free RP seam circle — BARE MARK-TRANSITIVITY IS FALSIFIED as a selector (on the test family "
+      },
+      {
+        "k": "m",
+        "v": "M(\\delta)=\\{\\pm1,\\pm e^{i\\delta}\\}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\delta\\in(0,\\pi/2]"
+      },
+      {
+        "k": "t",
+        "v": ", the symmetry group is the pair-exchanging "
+      },
+      {
+        "k": "m",
+        "v": "V_4=\\{z,-z,b/z,-b/z\\}"
+      },
+      {
+        "k": "t",
+        "v": " for EVERY "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": ", simply transitive on the four marks; complete census: deck-commuting Möbius maps are diagonal/antidiagonal; hardening: ALL undirected per-mark data are identical for every "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": " — no local jet sees the bit), and THE SHARP SELECTOR is FLAG transitivity (marks AND their two sides indistinguishable) "
+      },
+      {
+        "k": "m",
+        "v": "\\iff\\delta=\\pi/2\\iff\\tau=i\\iff"
+      },
+      {
+        "k": "t",
+        "v": " the clock — stabiliser jump "
+      },
+      {
+        "k": "m",
+        "v": "1\\to2"
+      },
+      {
+        "k": "t",
+        "v": ", flag/arc orbits "
+      },
+      {
+        "k": "m",
+        "v": "2\\to1"
+      },
+      {
+        "k": "t",
+        "v": ", order-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " rotation ("
+      },
+      {
+        "k": "m",
+        "v": "b^2=-1"
+      },
+      {
+        "k": "t",
+        "v": " solveset "
+      },
+      {
+        "k": "m",
+        "v": "\\{\\pi/2\\}"
+      },
+      {
+        "k": "t",
+        "v": "), mark mirror "
+      },
+      {
+        "k": "m",
+        "v": "z\\mapsto1/z\\iff\\cos\\delta=0"
+      },
+      {
+        "k": "t",
+        "v": "; welded into a "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": "-FOLD EQUIVALENCE WEB (every link exact): clock rotation, "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": ", mark mirror, flag transitivity, three spectral degeneracies (odd-doublet split "
+      },
+      {
+        "k": "m",
+        "v": "=(2/\\pi)\\ln\\cot(\\delta/2)"
+      },
+      {
+        "k": "t",
+        "v": ", zero only at "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": " — counterwitness exactly "
+      },
+      {
+        "k": "m",
+        "v": "(2/\\pi)\\ln2"
+      },
+      {
+        "k": "t",
+        "v": "; arc-Laplacian degeneracy "
+      },
+      {
+        "k": "m",
+        "v": "4/\\pi"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "c",
+        "v": "v215"
+      },
+      {
+        "k": "t",
+        "v": "-K3 indicator in CLOSED FORM "
+      },
+      {
+        "k": "m",
+        "v": "(2\\sqrt2/\\pi)|\\ln\\tan(\\delta/2)|"
+      },
+      {
+        "k": "t",
+        "v": " — the "
+      },
+      {
+        "k": "c",
+        "v": "v503"
+      },
+      {
+        "k": "t",
+        "v": " lattice curve analytically), "
+      },
+      {
+        "k": "m",
+        "v": "\\rho"
+      },
+      {
+        "k": "t",
+        "v": "-twist existence ("
+      },
+      {
+        "k": "m",
+        "v": "(m^2-n^2)(t-1/t)=0\\iff t=1"
+      },
+      {
+        "k": "t",
+        "v": "; Atiyah–Bott rationality "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-BLIND — "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{Tr}(\\sigma e^{t\\Delta})=1"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "j_{\\mathrm{cw}}=148176/25"
+      },
+      {
+        "k": "t",
+        "v": " rational non-CM: rationality selects NOTHING), cusp-"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "-cycle implementability (H4 rigidity: "
+      },
+      {
+        "k": "m",
+        "v": "V_4"
+      },
+      {
+        "k": "t",
+        "v": " with orders "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,2,2,2\\}"
+      },
+      {
+        "k": "t",
+        "v": " cannot induce it; centraliser scalar, "
+      },
+      {
+        "k": "m",
+        "v": "U^2"
+      },
+      {
+        "k": "t",
+        "v": " nonscalar "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " no projective involution — projective order exactly "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_8"
+      },
+      {
+        "k": "t",
+        "v": "-shadow consistent "
+      },
+      {
+        "k": "c",
+        "v": "v510"
+      },
+      {
+        "k": "t",
+        "v": "), harmonic, "
+      },
+      {
+        "k": "m",
+        "v": "j=1728"
+      },
+      {
+        "k": "t",
+        "v": "; NEGATIVE CONTROLS: hexagonal (not concyclic, fails preconditions), silver (harmonic but topologically dead), "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": " marks (impossible on the free circle: "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "28"
+      },
+      {
+        "k": "t",
+        "v": " invariant subsets; bare "
+      },
+      {
+        "k": "m",
+        "v": "n=3"
+      },
+      {
+        "k": "t",
+        "v": " transitivity already forces equal spacing — “"
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " counts”); "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "THE REST: the last input reduces from a continuous modulus to ONE discrete symmetry-lift bit ("
+      },
+      {
+        "k": "m",
+        "v": "V_4\\to D_4"
+      },
+      {
+        "k": "t",
+        "v": ": side-indistinguishability of the four equally-decorated marks), "
+      },
+      {
+        "k": "c",
+        "v": "v216"
+      },
+      {
+        "k": "t",
+        "v": " local equality does NOT deliver it, its negation is now concretely measurable; scoreboard: the counterwitness passes all "
+      },
+      {
+        "k": "m",
+        "v": "7"
+      },
+      {
+        "k": "t",
+        "v": " established unsided tests, fails all "
+      },
+      {
+        "k": "m",
+        "v": "9"
+      },
+      {
+        "k": "t",
+        "v": " clock-equivalent ones; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "470\\to476"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — the bit stays "
+          },
+          {
+            "k": "s",
+            "v": "C"
+          },
+          {
+            "k": "t",
+            "v": ", "
+          },
+          {
+            "k": "c",
+            "v": "QGEO.REALIZE.01"
+          },
+          {
+            "k": "t",
+            "v": " and "
+          },
+          {
+            "k": "c",
+            "v": "P2.TYPING.01"
+          },
+          {
+            "k": "t",
+            "v": "/"
+          },
+          {
+            "k": "c",
+            "v": "AX.P2.01"
+          },
+          {
+            "k": "t",
+            "v": " text-precised only, "
+          },
+          {
+            "k": "c",
+            "v": "SEAM.BIT.FREEDOM.01"
+          },
+          {
+            "k": "t",
+            "v": " cross-referenced"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "c",
+              "v": "v512_seam_tau_flag.py"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.TAU.FLAG.01"
+            },
+            {
+              "k": "t",
+              "v": ", 29 checks, "
+            },
+            {
+              "k": "m",
+              "v": "\\sim"
+            },
+            {
+              "k": "t",
+              "v": "6 s; sympy-exact "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " mpmath 30 digits "
+            },
+            {
+              "k": "m",
+              "v": "+"
+            },
+            {
+              "k": "t",
+              "v": " one numpy lattice commutator; deterministic)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " S0 family frame (counterwitness inside the family: "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=5/4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "j=148176/25"
+        },
+        {
+          "k": "t",
+          "v": ", cross-ratio "
+        },
+        {
+          "k": "m",
+          "v": "-1/4"
+        },
+        {
+          "k": "t",
+          "v": "); H1 complete symmetry census (census basis, rotation solvesets, stabiliser jump, flag/arc orbits, "
+        },
+        {
+          "k": "c",
+          "v": "v216"
+        },
+        {
+          "k": "t",
+          "v": " separation, five-member table); H2 spectral criteria in closed form; H3 heat-trace rationality ("
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": "-blind) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " twist existence; H4 monodromy rigidity (Schur); NC negative controls; SYN the "
+        },
+        {
+          "k": "m",
+          "v": "12"
+        },
+        {
+          "k": "t",
+          "v": "-fold web "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " counterwitness scoreboard "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the typed sentence. Registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": " (cluster "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "core"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "), ledger row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.TAU.FLAG.01"
+        },
+        {
+          "k": "t",
+          "v": " (new)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Reduction state re-stated (text only, markers unchanged)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "AX.P2.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "P2.TYPING.01"
+        },
+        {
+          "k": "t",
+          "v": " synthesis notes now read: “four marks "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " one discrete symmetry-lift bit (flag transitivity "
+        },
+        {
+          "k": "m",
+          "v": "\\iff\\tau=i"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\pi"
+        },
+        {
+          "k": "t",
+          "v": "”; "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REALIZE.01"
+        },
+        {
+          "k": "t",
+          "v": " precision: “the remaining input can equivalently be stated as the flag-transitivity postulate — "
+        },
+        {
+          "k": "c",
+          "v": "v512"
+        },
+        {
+          "k": "t",
+          "v": "; the search space for a future "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "closure is narrowed to the RP positivity of the odd sector”; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.BIT.FREEDOM.01"
+        },
+        {
+          "k": "t",
+          "v": " cross-referenced (the modulus half gains the discrete form)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Paper integration."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " (the P2 reduction keybox re-dated 2026-07-22 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Theorem-7 skeleton keybox), "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (narrative chain, consolidated reduction state, status-card addendum), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (celestial Step 2 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the honest-status reduction bullet), "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (QGEO kill-test and marks-derived blocks, WP2 note); secondary mirrors "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " aligned. "
+        },
+        {
+          "k": "c",
+          "v": "v512_seam_tau_flag.py"
+        },
+        {
+          "k": "t",
+          "v": " is cited via "
+        },
+        {
+          "k": "c",
+          "v": "veri"
+        },
+        {
+          "k": "t",
+          "v": " in all four primary documents."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Six exact mirrors ("
+        },
+        {
+          "k": "m",
+          "v": "V_4/D_4"
+        },
+        {
+          "k": "t",
+          "v": " census table incl. flag/arc orbit counts; solveset equivalences "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " family identities; spectral faces in closed form; twist mode identity "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " AB "
+        },
+        {
+          "k": "m",
+          "v": "\\delta"
+        },
+        {
+          "k": "t",
+          "v": "-blindness "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "j"
+        },
+        {
+          "k": "t",
+          "v": "-rationality control; H4 Schur rigidity; negative controls) added to "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " and verified with the active engine, "
+        },
+        {
+          "k": "m",
+          "v": "470\\to476"
+        },
+        {
+          "k": "t",
+          "v": "; the mpmath heat-trace numerics and the numpy lattice commutator stay Python-only (flagged)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Provenance."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Discovery probe "
+        },
+        {
+          "k": "c",
+          "v": "seam_tau_i_established_selector_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/"
+        },
+        {
+          "k": "t",
+          "v": " (2026-07-22, "
+        },
+        {
+          "k": "m",
+          "v": "29/29"
+        },
+        {
+          "k": "t",
+          "v": "); website mirrors regenerated ("
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex"
+        },
+        {
+          "k": "t",
+          "v": ", DAG "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "P2"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "masses"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " nodes, "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " reduction-state mirrors, "
+        },
+        {
+          "k": "c",
+          "v": "StatusMatrix"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " round notes."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-21",
+    "dateLabel": "2026-07-21 · XXIII",
+    "heading": [
       {
         "k": "c",
         "v": "v511"
@@ -1477,11 +4837,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XXII",
     "heading": [
       {
         "k": "t",
-        "v": "XXII) (P2 consolidation — the axiomatics reduction state written as ONE coherent statement across the papers (editorial, NO new claims, NO marker moves): the compiler's dimensionless inputs reduce to "
+        "v": "P2 consolidation — the axiomatics reduction state written as ONE coherent statement across the papers (editorial, NO new claims, NO marker moves): the compiler's dimensionless inputs reduce to "
       },
       {
         "k": "i",
@@ -1964,12 +5324,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XXI",
     "heading": [
-      {
-        "k": "t",
-        "v": "XXI) ("
-      },
       {
         "k": "c",
         "v": "v510"
@@ -3296,12 +6652,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XX",
     "heading": [
-      {
-        "k": "t",
-        "v": "XX) ("
-      },
       {
         "k": "c",
         "v": "v509"
@@ -4950,12 +8302,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XIX",
     "heading": [
-      {
-        "k": "t",
-        "v": "XIX) ("
-      },
       {
         "k": "c",
         "v": "e8-ladder-bed"
@@ -5447,12 +8795,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XVIII",
     "heading": [
-      {
-        "k": "t",
-        "v": "XVIII) ("
-      },
       {
         "k": "c",
         "v": "v508"
@@ -6661,12 +10005,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XVII",
     "heading": [
-      {
-        "k": "t",
-        "v": "XVII) ("
-      },
       {
         "k": "c",
         "v": "v507"
@@ -8199,12 +11539,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XVI",
     "heading": [
-      {
-        "k": "t",
-        "v": "XVI) ("
-      },
       {
         "k": "c",
         "v": "v506"
@@ -9862,12 +13198,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XV",
     "heading": [
-      {
-        "k": "t",
-        "v": "XV) ("
-      },
       {
         "k": "c",
         "v": "v505"
@@ -11088,12 +14420,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XIV",
     "heading": [
-      {
-        "k": "t",
-        "v": "XIV) ("
-      },
       {
         "k": "c",
         "v": "v504"
@@ -12514,12 +15842,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XIII",
     "heading": [
-      {
-        "k": "t",
-        "v": "XIII) ("
-      },
       {
         "k": "c",
         "v": "v503"
@@ -13751,12 +17075,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XII",
     "heading": [
-      {
-        "k": "t",
-        "v": "XII) ("
-      },
       {
         "k": "c",
         "v": "v502"
@@ -14980,12 +18300,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · XI",
     "heading": [
-      {
-        "k": "t",
-        "v": "XI) ("
-      },
       {
         "k": "c",
         "v": "v501"
@@ -15972,12 +19288,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · X",
     "heading": [
-      {
-        "k": "t",
-        "v": "X) ("
-      },
       {
         "k": "c",
         "v": "v500"
@@ -17090,12 +20402,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · IX",
     "heading": [
-      {
-        "k": "t",
-        "v": "IX) ("
-      },
       {
         "k": "c",
         "v": "v499"
@@ -18246,11 +21554,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · VIII",
     "heading": [
       {
         "k": "t",
-        "v": "VIII) (Editorial: dedicated celestial-route section in Paper 3 "
+        "v": "Editorial: dedicated celestial-route section in Paper 3 "
       },
       {
         "k": "m",
@@ -18770,11 +22078,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · VII",
     "heading": [
       {
         "k": "t",
-        "v": "VII) (CELEST.SEAM.01 WP5b executed and promoted: "
+        "v": "CELEST.SEAM.01 WP5b executed and promoted: "
       },
       {
         "k": "c",
@@ -20122,11 +23430,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · VI",
     "heading": [
       {
         "k": "t",
-        "v": "VI) (CELEST.SEAM.01 WP5a executed and promoted: "
+        "v": "CELEST.SEAM.01 WP5a executed and promoted: "
       },
       {
         "k": "c",
@@ -21010,12 +24318,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · V",
     "heading": [
-      {
-        "k": "t",
-        "v": "V) ("
-      },
       {
         "k": "c",
         "v": "comb-meta-limit"
@@ -21427,11 +24731,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · IV",
     "heading": [
       {
         "k": "t",
-        "v": "IV) (Wolfram engine reactivated — the deferred second-path mirrors VERIFIED: base "
+        "v": "Wolfram engine reactivated — the deferred second-path mirrors VERIFIED: base "
       },
       {
         "k": "m",
@@ -21787,11 +25091,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · III",
     "heading": [
       {
         "k": "t",
-        "v": "III) (CELEST.SEAM.01 WP3 "
+        "v": "CELEST.SEAM.01 WP3 "
       },
       {
         "k": "m",
@@ -22597,11 +25901,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-21",
-    "dateLabel": "2026-07-21",
+    "dateLabel": "2026-07-21 · II",
     "heading": [
       {
         "k": "t",
-        "v": "II) (PG.06b FULL: the complete NICER Vela archive reduced — the first X-ray "
+        "v": "PG.06b FULL: the complete NICER Vela archive reduced — the first X-ray "
       },
       {
         "k": "m",
@@ -23764,11 +27068,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · VIII",
     "heading": [
       {
         "k": "t",
-        "v": "VIII) (E8 mass-ladder blind-recovery bed EXECUTED: verdict "
+        "v": "E8 mass-ladder blind-recovery bed EXECUTED: verdict "
       },
       {
         "k": "c",
@@ -24386,12 +27690,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · VII",
     "heading": [
-      {
-        "k": "t",
-        "v": "VII) ("
-      },
       {
         "k": "c",
         "v": "v493"
@@ -25435,11 +28735,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · VI",
     "heading": [
       {
         "k": "t",
-        "v": "VI) (HFQPO “third tooth”: the preregistered archival RXTE PCA scan has RUN — a well-powered null with limits; scorecard row S1.e "
+        "v": "HFQPO “third tooth”: the preregistered archival RXTE PCA scan has RUN — a well-powered null with limits; scorecard row S1.e "
       },
       {
         "k": "c",
@@ -25844,12 +29144,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · V",
     "heading": [
-      {
-        "k": "t",
-        "v": "V) ("
-      },
       {
         "k": "c",
         "v": "v492"
@@ -26681,11 +29977,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · IV",
     "heading": [
       {
         "k": "t",
-        "v": "IV) (evidence scorecard: five new typed rows — the "
+        "v": "evidence scorecard: five new typed rows — the "
       },
       {
         "k": "m",
@@ -27665,12 +30961,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · III",
     "heading": [
-      {
-        "k": "t",
-        "v": "III) ("
-      },
       {
         "k": "c",
         "v": "v491"
@@ -28222,12 +31514,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-20",
-    "dateLabel": "2026-07-20",
+    "dateLabel": "2026-07-20 · II",
     "heading": [
-      {
-        "k": "t",
-        "v": "II) ("
-      },
       {
         "k": "c",
         "v": "v490"
@@ -29180,12 +32468,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-15",
-    "dateLabel": "2026-07-15",
+    "dateLabel": "2026-07-15 · III",
     "heading": [
-      {
-        "k": "t",
-        "v": "III) ("
-      },
       {
         "k": "c",
         "v": "v488"
@@ -29652,12 +32936,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-15",
-    "dateLabel": "2026-07-15",
+    "dateLabel": "2026-07-15 · II",
     "heading": [
-      {
-        "k": "t",
-        "v": "II) ("
-      },
       {
         "k": "c",
         "v": "v487"
@@ -30480,12 +33760,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-14",
-    "dateLabel": "2026-07-14",
+    "dateLabel": "2026-07-14 · IV",
     "heading": [
-      {
-        "k": "t",
-        "v": "IV) ("
-      },
       {
         "k": "c",
         "v": "v485"
@@ -30912,12 +34188,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-14",
-    "dateLabel": "2026-07-14",
+    "dateLabel": "2026-07-14 · III",
     "heading": [
-      {
-        "k": "t",
-        "v": "III) ("
-      },
       {
         "k": "c",
         "v": "v484"
@@ -31365,12 +34637,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-14",
-    "dateLabel": "2026-07-14",
+    "dateLabel": "2026-07-14 · II",
     "heading": [
-      {
-        "k": "t",
-        "v": "II) ("
-      },
       {
         "k": "c",
         "v": "v482"

@@ -262,17 +262,49 @@ def parse_items(body: str) -> list[list[dict]]:
     return items
 
 
+def strip_outer_parens(s: str) -> str:
+    """Drop one balanced outer '(...)' wrapper; leave the string untouched if the
+    parentheses are not a single outermost balanced pair (safe no-op fallback)."""
+    s = s.strip()
+    if not (s.startswith("(") and s.endswith(")")):
+        return s
+    depth = 0
+    for idx, ch in enumerate(s):
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth -= 1
+            if depth == 0:                    # first '(' closes here
+                return s[1:-1].strip() if idx == len(s) - 1 else s
+    return s
+
+
 def parse_title(title_raw: str) -> tuple[str, str, list[dict]]:
     title_raw = title_raw.strip()
-    m = re.match(
-        r"\s*(20\d\d-\d\d-\d\d(?:\s*/\s*20\d\d-\d\d-\d\d)*)\s*(?:\((.*)\))?\s*$",
+    dm = re.match(
+        r"\s*(20\d\d-\d\d-\d\d(?:\s*/\s*20\d\d-\d\d-\d\d)*)\s*",
         title_raw, re.S,
     )
-    if m:
-        date_label = re.sub(r"\s+", " ", m.group(1)).strip()
-        heading_raw = (m.group(2) or "").strip()
+    if dm:
+        date_label = re.sub(r"\s+", " ", dm.group(1)).strip()
+        rest = title_raw[dm.end():].strip()
     else:
-        date_label, heading_raw = "", title_raw
+        date_label, rest = "", title_raw
+
+    # Multi-entry days tag each entry with a roman-numeral enumerator that is its
+    # own leading parenthetical, e.g. "(XXIII) (the real summary ...)". Pull the
+    # enumerator into the date label so the heading is only the summary and never
+    # renders as the bogus "XXIII) (" prefix on the site.
+    enum = ""
+    em = re.match(r"\(([IVXLCDM]+)\)\s*(\(.*)$", rest, re.S)
+    if em:
+        enum = em.group(1)
+        rest = em.group(2).strip()
+
+    heading_raw = strip_outer_parens(rest)
+    if enum:
+        date_label = f"{date_label} \u00b7 {enum}" if date_label else enum
+
     dates = re.findall(r"20\d\d-\d\d-\d\d", date_label or title_raw)
     sort_date = max(dates) if dates else "0000-00-00"
     return sort_date, date_label, parse_inline(heading_raw)
