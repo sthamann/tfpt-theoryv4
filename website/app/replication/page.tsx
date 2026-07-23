@@ -148,7 +148,7 @@ export default function ReplicationPage() {
               <div className="mt-3 flex flex-wrap gap-2">
                 <Link
                   href="/verification#dag"
-                  className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
+                  className="inline-flex items-center gap-1.5 border border-blue-400/40 bg-blue-500/15 px-4 py-2 text-xs font-semibold text-blue-100 transition-colors hover:bg-blue-500/25"
                 >
                   Run a check in your browser
                 </Link>
@@ -180,7 +180,7 @@ export default function ReplicationPage() {
               href={`${REPO_URL}/issues`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 border border-blue-400/40 bg-blue-500/15 px-5 py-2.5 text-sm font-semibold text-blue-100 transition-colors hover:bg-blue-500/25"
             >
               <MessageSquare size={15} aria-hidden />
               Open an issue / review

@@ -7,6 +7,7 @@ import { StatusMatrix } from "@/components/orientation/StatusMatrix";
 import { SeriesMap } from "@/components/orientation/SeriesMap";
 import { PublicationOrder } from "@/components/orientation/PublicationOrder";
 import { OrientationDownload } from "@/components/orientation/OrientationDownload";
+import { RosettaLexicon } from "@/components/RosettaLexicon";
 import { SITE_VERSION } from "@/lib/version";
 import { SITE_URL } from "@/lib/utils";
 
@@ -124,6 +125,7 @@ export default function OrientationPage() {
       <StatusMatrix />
       <SeriesMap />
       <PublicationOrder />
+      <RosettaLexicon />
       <OrientationDownload />
     </>
   );

@@ -105,7 +105,7 @@ export default function FalsificationPage() {
             <span className="uppercase">Falsification surface · 2026</span>
           </span>
           <h1 className="mt-6 font-serif text-4xl font-semibold leading-tight text-slate-50 sm:text-5xl md:text-6xl">
-            How to <span className="text-gradient-blue">kill</span> TFPT.
+            How to <span className="text-blue-300">kill</span> TFPT.
           </h1>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-300">
             A theory that cannot fail explains nothing. This page lists the

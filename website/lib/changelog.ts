@@ -47,6 +47,343 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "=150 2026-07-23 (IX) (website entry redesign: narrative home, honesty band, proof strip, guided-tour route — editorial only, NO new modules, NO marker moves)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website home."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Slim one-viewport hero (proof strip: 523 machine-checked modules "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Wolfram mirror "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Lean carrier "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " 0 external replications yet; copyable "
+        },
+        {
+          "k": "c",
+          "v": "python run_all.py $\\to$ ALL CHECKS PASSED"
+        },
+        {
+          "k": "t",
+          "v": "; CTA trio film / browser check / kill board). Narrative order: Hero "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " IntroVideo ("
+        },
+        {
+          "k": "c",
+          "v": "#intro-video"
+        },
+        {
+          "k": "t",
+          "v": " kept) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " In one breath "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " WhyThisMatters (plain-English column) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " TrustContract "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " ClaimStack "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " HonestyBand (honest negatives: RXTE/NICER nulls, 2DCS/v529, ten bit tests) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " Safeguards (four core stats) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " Overview (TheoryUnpacking/ThreeDecoderMap behind progressive disclosure) "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " PathChooser "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " Downloads teaser."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Archive routes."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Full PapersSection "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/papers"
+        },
+        {
+          "k": "t",
+          "v": "; PredictionsSection "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/predictions"
+        },
+        {
+          "k": "t",
+          "v": "; ReconstructionChain "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " HorizonStory "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Gravity "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/architecture"
+        },
+        {
+          "k": "t",
+          "v": "; RosettaLexicon "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/orientation"
+        },
+        {
+          "k": "t",
+          "v": "; OpenGates "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "/verification"
+        },
+        {
+          "k": "t",
+          "v": "; EcosystemSection off home (footer adjacent link). Legacy hash redirects on home for old anchors."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Nav / design."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Primary nav: Start "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Tour "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Verification "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Kill board "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Replication "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " Papers "
+        },
+        {
+          "k": "m",
+          "v": "\\cdot"
+        },
+        {
+          "k": "t",
+          "v": " FAQ (More dropdown for secondary). SuiteBadge (static per release from "
+        },
+        {
+          "k": "c",
+          "v": "suite.ts"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "version.ts"
+        },
+        {
+          "k": "t",
+          "v": "). Design pass: drop purple-gradient pills/glow in hero and accent tokens; lab-notebook proof strip as above-the-fold visual."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
         "v": "=150 2026-07-23 (VIII) (prominence pass — the v519–v529 breakthroughs lifted into the FRAME texts of the papers and the website data layer; purely editorial, NO new modules, NO marker moves — (1) "
       },
       {

@@ -127,7 +127,7 @@ export function IntroVideo() {
   return (
     <section
       id="intro-video"
-      className="relative scroll-mt-20 py-20 sm:py-24"
+      className="relative scroll-mt-20 py-12 sm:py-16"
       aria-labelledby="intro-video-heading"
     >
       <script
@@ -144,7 +144,7 @@ export function IntroVideo() {
         />
 
         <figure className="mt-10">
-          <div className="relative overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-950/60 shadow-2xl shadow-blue-500/10">
+          <div className="relative overflow-hidden border border-slate-700/50 bg-slate-950/60">
             <video
               ref={ref}
               className="aspect-video w-full"
@@ -176,7 +176,7 @@ export function IntroVideo() {
                 aria-label="Play the film — Is reality compiled?"
                 className="group absolute inset-0 flex items-center justify-center bg-slate-950/30 transition-colors hover:bg-slate-950/15 focus-visible:outline-none"
               >
-                <span className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-500 text-white shadow-lg shadow-blue-500/40 ring-1 ring-white/20 transition-transform group-hover:scale-110 group-focus-visible:scale-110">
+                <span className="flex h-20 w-20 items-center justify-center rounded-full border border-blue-400/40 bg-blue-500/20 text-blue-100 ring-1 ring-white/10 transition-transform group-hover:scale-105 group-focus-visible:scale-105">
                   <Play size={34} className="ml-1" aria-hidden />
                 </span>
               </button>

@@ -7,6 +7,8 @@ import { SectionHeader } from "./SectionHeader";
 import { Math } from "./Math";
 import { GlossTerm } from "./GlossTerm";
 import { StatusPyramid } from "./StatusPyramid";
+import { TheoryUnpacking } from "./TheoryUnpacking";
+import { ThreeDecoderMap } from "./ThreeDecoderMap";
 
 interface Pillar {
   icon: typeof Compass;
@@ -42,7 +44,7 @@ const PILLARS: Pillar[] = [
         <GlossTerm term="readout">readout</GlossTerm> after projection.
       </>
     ),
-    accent: "from-violet-500 to-purple-500",
+    accent: "from-slate-500 to-slate-400",
   },
   {
     icon: Target,
@@ -77,7 +79,7 @@ export function Overview() {
   return (
     <section
       id="overview"
-      className="relative scroll-mt-20 py-24 sm:py-32"
+      className="relative scroll-mt-20 py-14 sm:py-16"
       aria-labelledby="overview-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -225,6 +227,29 @@ export function Overview() {
         >
           <StatusPyramid />
         </motion.div>
+
+        {/* Progressive disclosure: the deep mechanism visuals live here, not in the hero */}
+        <details className="group mt-14 border border-slate-700/50 bg-slate-950/40 open:bg-slate-950/60">
+          <summary className="cursor-pointer list-none px-5 py-4 marker:content-none [&::-webkit-details-marker]:hidden">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <div className="font-mono text-[11px] font-semibold uppercase tracking-widest text-slate-500">
+                  How it works — detail
+                </div>
+                <div className="mt-1 font-serif text-lg font-semibold text-slate-100">
+                  Unpack the compiler &amp; the three decoders
+                </div>
+              </div>
+              <span className="font-mono text-xs text-slate-500 transition-transform group-open:rotate-90">
+                →
+              </span>
+            </div>
+          </summary>
+          <div className="border-t border-slate-800/60 px-2 pb-6 sm:px-4">
+            <TheoryUnpacking />
+            <ThreeDecoderMap />
+          </div>
+        </details>
       </div>
     </section>
   );

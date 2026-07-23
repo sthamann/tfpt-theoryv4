@@ -12,6 +12,7 @@ export type DownloadSource =
   | "predictions-summary-cta"
   | "downloads-papers"
   | "downloads-companions"
+  | "downloads-teaser"
   | "footer"
   | "orientation-hero"
   | "orientation-download"

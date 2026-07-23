@@ -41,7 +41,7 @@ const STATS: {
     big: "≤ 10⁻³⁰·⁷",
     small: "≈ 102 bits that a random theory of equal complexity reproduces the scorecard — conditional on the declared grammar (v100).",
     icon: ShieldCheck,
-    tone: "text-violet-300",
+    tone: "text-slate-300",
   },
 ];
 
@@ -92,17 +92,16 @@ const item = {
 };
 
 /**
- * The "why this isn't numerology" band: a prominent, visual statement of the
- * layered anti-coincidence discipline (null model, α uniqueness, reverse audit,
- * over-determination) — sits in the trust beat of the narrative arc and links to
- * the Safeguards paper.
+ * The "why this isn't numerology" band.
+ * Home uses `compact` (four core stats only); full detail stays available
+ * when compact is false.
  */
-export function Safeguards() {
+export function Safeguards({ compact = false }: { compact?: boolean }) {
   return (
     <section
       id="safeguards"
       aria-labelledby="safeguards-heading"
-      className="relative border-t border-slate-800/60 py-16 sm:py-20"
+      className="relative border-t border-slate-800/60 py-14 sm:py-16"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
@@ -112,7 +111,6 @@ export function Safeguards() {
           description="A two-input theory with many small integers is, a priori, at numerology risk. TFPT answers with a layered, machine-checked discipline — making coincidence an expensive explanation of the discrete core, and never letting exact compiler closure pass for closed physics."
         />
 
-        {/* headline statistics */}
         <motion.div
           variants={container}
           initial="hidden"
@@ -126,7 +124,7 @@ export function Safeguards() {
               <motion.div
                 key={s.big}
                 variants={item}
-                className="glass rounded-2xl p-4 ring-1 ring-slate-700/40"
+                className="border border-slate-700/40 bg-slate-950/50 p-4"
               >
                 <Icon size={18} className={s.tone} aria-hidden />
                 <div className={`mt-2 font-serif text-2xl font-semibold ${s.tone}`}>
@@ -140,69 +138,70 @@ export function Safeguards() {
           })}
         </motion.div>
 
-        {/* the seven layers */}
-        <motion.ol
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
-          className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {LAYERS.map((l, i) => (
-            <motion.li
-              key={l}
-              variants={item}
-              className="flex items-center gap-3 rounded-xl border border-slate-700/40 bg-slate-900/50 px-3 py-2.5"
+        {!compact && (
+          <>
+            <motion.ol
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.15 }}
+              className="mt-8 grid gap-2 sm:grid-cols-2 lg:grid-cols-3"
             >
-              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-emerald-500/15 text-xs font-semibold text-emerald-300">
-                {i + 1}
-              </span>
-              <span className="text-xs leading-snug text-slate-300">{l}</span>
-            </motion.li>
-          ))}
-        </motion.ol>
+              {LAYERS.map((l, i) => (
+                <motion.li
+                  key={l}
+                  variants={item}
+                  className="flex items-center gap-3 border border-slate-700/40 bg-slate-900/50 px-3 py-2.5"
+                >
+                  <span className="flex h-6 w-6 flex-none items-center justify-center bg-emerald-500/15 text-xs font-semibold text-emerald-300">
+                    {i + 1}
+                  </span>
+                  <span className="text-xs leading-snug text-slate-300">{l}</span>
+                </motion.li>
+              ))}
+            </motion.ol>
 
-        {/* the figures */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          className="mt-8 grid gap-4 sm:grid-cols-2"
-        >
-          {FIGS.map((f) => (
-            <motion.figure
-              key={f.src}
-              variants={item}
-              className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40"
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className="mt-8 grid gap-4 sm:grid-cols-2"
             >
-              <Image
-                src={f.src}
-                width={f.w}
-                height={f.h}
-                alt={f.cap}
-                sizes="(max-width: 640px) 100vw, 50vw"
-                className="w-full bg-white"
-                style={{ height: "auto" }}
-              />
-              <figcaption className="px-4 py-3 text-xs leading-relaxed text-slate-400">
-                {f.cap}
-              </figcaption>
-            </motion.figure>
-          ))}
-        </motion.div>
+              {FIGS.map((f) => (
+                <motion.figure
+                  key={f.src}
+                  variants={item}
+                  className="overflow-hidden border border-slate-700/40 bg-slate-950/40"
+                >
+                  <Image
+                    src={f.src}
+                    width={f.w}
+                    height={f.h}
+                    alt={f.cap}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="w-full bg-white"
+                    style={{ height: "auto" }}
+                  />
+                  <figcaption className="px-4 py-3 text-xs leading-relaxed text-slate-400">
+                    {f.cap}
+                  </figcaption>
+                </motion.figure>
+              ))}
+            </motion.div>
+          </>
+        )}
 
-        {/* calls to action */}
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="/papers/safeguards"
-            className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-5 py-2.5 text-sm font-semibold text-emerald-200 ring-1 ring-emerald-400/30 transition-colors hover:bg-emerald-500/25"
+            className="inline-flex items-center gap-2 bg-emerald-500/15 px-5 py-2.5 text-sm font-semibold text-emerald-200 ring-1 ring-emerald-400/30 transition-colors hover:bg-emerald-500/25"
           >
             Read the Safeguards paper <ArrowRight size={15} aria-hidden />
           </Link>
           <Link
             href="/verification"
-            className="inline-flex items-center gap-2 rounded-full border border-slate-600/60 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-slate-800/80"
+            className="inline-flex items-center gap-2 border border-slate-600/60 bg-slate-900/60 px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:bg-slate-800/80"
           >
             <GitBranch size={15} className="text-blue-300" aria-hidden /> The
             verification suite

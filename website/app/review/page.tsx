@@ -173,7 +173,7 @@ const BLOCKS: Block[] = [
           changelog
         </Link>
         .{" "}
-        <Link href="/#open-gates" className="font-semibold text-blue-300 hover:text-blue-200">
+        <Link href="/verification#open-gates" className="font-semibold text-blue-300 hover:text-blue-200">
           The open residual →
         </Link>
       </>

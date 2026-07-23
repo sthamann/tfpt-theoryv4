@@ -34,7 +34,11 @@ npm run start   # serve production build
 website/
 ├── app/
 │   ├── layout.tsx        Root layout with SEO + JSON-LD
-│   ├── page.tsx          Home (Hero → Overview → Pipeline → Documents → Predictions → Downloads)
+│   ├── page.tsx          Home narrative (Hero → Film → Mechanism → Trust → Honesty → Paths)
+│   ├── papers/page.tsx   Document-set archive (was on home)
+│   ├── predictions/page.tsx  Prediction surface archive
+│   ├── architecture/page.tsx Compiler pipeline / horizon / gravity
+│   ├── tour/page.tsx     Guided tour (parallel surface)
 │   ├── changelog/page.tsx  /changelog — dated record (generated from ../changelog.tex)
 │   ├── robots.ts         /robots.txt
 │   ├── sitemap.ts        /sitemap.xml

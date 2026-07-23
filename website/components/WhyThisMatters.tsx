@@ -18,6 +18,7 @@ function markerTone(marker: string) {
 
 interface Row {
   q: string;
+  plain: string;
   sm: string;
   smKind: "input" | "fitted" | "unexplained";
   tfpt: string;
@@ -27,6 +28,7 @@ interface Row {
 const ROWS: Row[] = [
   {
     q: "Fine-structure constant α⁻¹",
+    plain: "Why light couples at ~1/137",
     sm: "measured input",
     smKind: "input",
     tfpt: "unique root of F_U(1)(α) = 0",
@@ -34,6 +36,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Number of fermion families",
+    plain: "Why matter comes in threes",
     sm: "input (= 3, observed)",
     smKind: "input",
     tfpt: "N_fam = 3 from ℙ¹∖μ₄ = A₃",
@@ -41,6 +44,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Hypercharge assignments",
+    plain: "Why electric charges take their values",
     sm: "input (anomaly-chosen)",
     smKind: "input",
     tfpt: "roots of x² − x − 6 = 0 on the 3+2 carrier",
@@ -48,6 +52,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Higgs doublet count",
+    plain: "Why there is one Higgs doublet",
     sm: "input (= 1)",
     smKind: "input",
     tfpt: "N_Φ = g_car − |μ₄| = 1",
@@ -55,6 +60,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Flavor / CKM / PMNS structure",
+    plain: "Why mixing angles are not free dials",
     sm: "fitted by hand",
     smKind: "fitted",
     tfpt: "one φ₀-ladder + residue matrix R (det 8)",
@@ -62,6 +68,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Solar mixing angle θ₁₂",
+    plain: "A frozen number for JUNO to hit or miss",
     sm: "fitted",
     smKind: "fitted",
     tfpt: "1/3 − φ₀/2 = 0.3067 (conditional)",
@@ -69,6 +76,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Strong-CP phase θ̄",
+    plain: "Why the neutron electric dipole is tiny",
     sm: "unexplained (tuned ≈ 0)",
     smKind: "unexplained",
     tfpt: "structural null θ_eff = 0",
@@ -76,6 +84,7 @@ const ROWS: Row[] = [
   },
   {
     q: "Inflation / scalaron scale",
+    plain: "Why the early-universe scale is fixed",
     sm: "free parameter",
     smKind: "fitted",
     tfpt: "seam-fixed M = c₃^(7/2) M̄",
@@ -92,21 +101,18 @@ const SM_KIND_TONE: Record<Row["smKind"], string> = {
 const LEVELS: { level: string; time: string; label: string; href: string }[] = [
   { level: "Level 0", time: "30 sec", label: "Two axioms → E₈ → the SM (this page)", href: "/#overview" },
   { level: "Level 1", time: "5 min", label: "The reading guide", href: "/orientation" },
-  { level: "Level 2", time: "30 min", label: "The four core documents", href: "/#papers" },
+  { level: "Level 2", time: "30 min", label: "The four core documents", href: "/papers" },
   { level: "Level 3", time: "full", label: "Papers + run the verification", href: "/verification" },
 ];
 
 /**
- * "Why this matters" — the motivation the site was missing. It states the
- * physics problem (the Standard Model leaves ~20 numbers as inputs/fits) and
- * contrasts it with what TFPT derives, each with its honest status grade. The
- * TFPT column doubles as a per-topic status dashboard.
+ * "Why this matters" — SM vs TFPT contrast with a plain-English reading per row.
  */
 export function WhyThisMatters() {
   return (
     <section
       id="why"
-      className="relative scroll-mt-20 py-20 sm:py-24"
+      className="relative scroll-mt-20 py-16 sm:py-20"
       aria-labelledby="why-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -121,10 +127,12 @@ export function WhyThisMatters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.05 }}
           transition={{ duration: 0.6 }}
-          className="mt-10 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40"
+          className="mt-10 overflow-hidden border border-slate-700/40 bg-slate-950/40"
         >
-          <div className="grid grid-cols-[1.3fr_1fr_1.6fr] gap-px border-b border-slate-800/60 bg-slate-800/40 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300 sm:px-5">
+          {/* Desktop header */}
+          <div className="hidden grid-cols-[1.1fr_1.1fr_0.9fr_1.5fr] gap-px border-b border-slate-800/60 bg-slate-800/40 px-4 py-3 text-[10px] font-semibold uppercase tracking-widest text-slate-300 sm:grid sm:px-5">
             <span>Quantity</span>
+            <span>In plain English</span>
             <span>Standard Model</span>
             <span>TFPT</span>
           </div>
@@ -136,16 +144,20 @@ export function WhyThisMatters() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.05 }}
                 transition={{ duration: 0.4, delay: i * 0.03 }}
-                className="grid grid-cols-[1.3fr_1fr_1.6fr] items-start gap-3 px-4 py-3 transition-colors hover:bg-slate-900/40 sm:px-5"
+                className="grid gap-2 px-4 py-3 transition-colors hover:bg-slate-900/40 sm:grid-cols-[1.1fr_1.1fr_0.9fr_1.5fr] sm:items-start sm:gap-3 sm:px-5"
               >
                 <span className="text-sm font-medium text-slate-100">{r.q}</span>
+                <span className="text-xs leading-snug text-slate-400">{r.plain}</span>
                 <span className={cn("text-xs leading-snug", SM_KIND_TONE[r.smKind])}>
+                  <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-slate-600 sm:hidden">
+                    SM ·
+                  </span>
                   {r.sm}
                 </span>
                 <span className="flex flex-wrap items-start gap-2">
                   <span
                     className={cn(
-                      "mt-0.5 flex-none rounded-full px-1.5 py-0.5 font-mono text-[10px] font-semibold ring-1",
+                      "mt-0.5 flex-none rounded-sm px-1.5 py-0.5 font-mono text-[10px] font-semibold ring-1",
                       markerTone(r.marker),
                     )}
                   >
@@ -165,9 +177,8 @@ export function WhyThisMatters() {
           </div>
         </motion.div>
 
-        {/* Reading levels — start at your depth */}
         <div className="mt-8">
-          <div className="mb-3 text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
+          <div className="mb-3 text-[11px] font-semibold uppercase tracking-widest text-slate-400">
             Start at your depth
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -175,13 +186,13 @@ export function WhyThisMatters() {
               <Link
                 key={l.level}
                 href={l.href}
-                className="group flex flex-col rounded-xl border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:border-blue-400/40 hover:bg-blue-500/5"
+                className="group flex flex-col border border-slate-700/40 bg-slate-950/40 p-4 transition-colors hover:border-blue-400/40 hover:bg-blue-500/5"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs font-semibold text-blue-300">
                     {l.level}
                   </span>
-                  <span className="rounded-full bg-slate-800/60 px-2 py-0.5 text-[10px] font-mono text-slate-400">
+                  <span className="border border-slate-700/50 bg-slate-900/60 px-2 py-0.5 font-mono text-[10px] text-slate-400">
                     {l.time}
                   </span>
                 </div>

@@ -153,7 +153,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
         "@type": "ListItem",
         position: 2,
         name: "Papers",
-        item: `${SITE_URL}/#papers`,
+        item: `${SITE_URL}/papers`,
       },
       {
         "@type": "ListItem",
@@ -188,7 +188,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="mb-4">
             <Link
-              href="/#papers"
+              href="/papers"
               className="inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors hover:text-slate-200"
             >
               <ArrowLeft size={14} />

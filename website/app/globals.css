@@ -82,9 +82,10 @@
   }
 
   body {
+    /* Single cool accent wash — no purple/violet second lobe */
     background:
-      radial-gradient(circle at 20% 0%, rgba(59, 130, 246, 0.12), transparent 50%),
-      radial-gradient(circle at 80% 100%, rgba(234, 88, 12, 0.08), transparent 50%),
+      radial-gradient(circle at 18% 0%, rgba(59, 130, 246, 0.09), transparent 48%),
+      radial-gradient(circle at 85% 100%, rgba(14, 165, 233, 0.05), transparent 45%),
       rgb(8 12 24);
     color: rgb(226 232 240);
     font-family: var(--font-sans);
@@ -129,22 +130,18 @@
     border: 1px solid rgba(148, 163, 184, 0.18);
   }
 
+  /* Accent highlight — solid blue, not purple–pink AI shimmer */
   .text-gradient-blue {
     color: #93c5fd;
-    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: shimmer 8s ease-in-out infinite;
+    background: none;
+    -webkit-text-fill-color: #93c5fd;
+    animation: none;
   }
 
   .text-gradient-warm {
     color: #fb923c;
-    background: linear-gradient(135deg, #fb923c 0%, #f87171 50%, #c084fc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: none;
+    -webkit-text-fill-color: #fb923c;
   }
 
   /*

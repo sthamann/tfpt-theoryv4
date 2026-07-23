@@ -10,6 +10,7 @@ import { WoitBridgeProgress } from "@/components/WoitBridgeProgress";
 import { UniversalGapLab } from "@/components/UniversalGapLab";
 import { SuiteTimeline } from "@/components/SuiteTimeline";
 import { ResidualChain } from "@/components/ResidualChain";
+import { OpenGates } from "@/components/OpenGates";
 import { SCRIPT_TOTAL } from "@/lib/suite";
 import { REPO_URL, SITE_URL } from "@/lib/utils";
 
@@ -245,7 +246,7 @@ export default function VerificationPage() {
               href={REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
+              className="inline-flex items-center gap-2 border border-blue-400/40 bg-blue-500/15 px-5 py-2.5 text-sm font-semibold text-blue-100 transition-colors hover:bg-blue-500/25"
             >
               <Github size={16} />
               Open the repository
@@ -487,6 +488,9 @@ export default function VerificationPage() {
         </div>
       </section>
 
+      {/* Open interfaces — moved from homepage archive */}
+      <OpenGates />
+
       {/* The interactive DAG */}
       <section
         id="dag"
@@ -538,7 +542,7 @@ export default function VerificationPage() {
             <ScriptIndex />
           </div>
 
-          <div className="mt-10 flex flex-col items-center gap-3 rounded-2xl border border-blue-400/25 bg-gradient-to-br from-blue-500/10 to-violet-500/5 p-8 text-center">
+          <div className="mt-10 flex flex-col items-center gap-3 border border-blue-400/25 bg-blue-500/5 p-8 text-center">
             <h3 className="font-serif text-xl font-semibold text-slate-50">
               Independent scrutiny is the point
             </h3>
@@ -556,7 +560,7 @@ export default function VerificationPage() {
                 href={REPO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 border border-blue-400/40 bg-blue-500/15 px-5 py-2.5 text-sm font-semibold text-blue-100 transition-colors hover:bg-blue-500/25"
               >
                 <Github size={16} />
                 Source, scripts &amp; ledger

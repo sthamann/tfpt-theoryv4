@@ -6,6 +6,7 @@ import { Logo } from "./Logo";
 import { REPO_URL } from "@/lib/utils";
 import { trackPdfInteraction, type DownloadKind } from "@/lib/track";
 import { SITE_VERSION } from "@/lib/version";
+import { SuiteBadge } from "./SuiteBadge";
 
 interface FooterLink {
   href: string;
@@ -47,7 +48,7 @@ function trackFooter(link: FooterLink) {
 export function Footer() {
   return (
     <footer className="relative mt-24 border-t border-slate-800/80 bg-slate-950/60">
-      <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
+      <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-3 lg:px-8">
         <div>
           <Logo size={40} />
@@ -58,6 +59,9 @@ export function Footer() {
             flavor sector and the scale grammar. No fitted constants; only π is
             irreducible.
           </p>
+          <div className="mt-3">
+            <SuiteBadge />
+          </div>
           <p className="mt-4 text-xs text-slate-500">
             By <span className="text-slate-300">Stefan Hamann</span> &amp;{" "}
             <span className="text-slate-300">Alessandro Rizzo</span>.
@@ -75,46 +79,52 @@ export function Footer() {
 
         <div>
           <h3 className="font-serif text-sm font-semibold uppercase tracking-wider text-slate-200">
-            Theory
+            Explore
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
-              <Link href="/#chain" className="text-slate-400 hover:text-white">
-                Compiler pipeline
+              <Link href="/verification" className="text-slate-400 hover:text-white">
+                Verification
               </Link>
             </li>
             <li>
-              <Link href="/#papers" className="text-slate-400 hover:text-white">
-                Document set
+              <Link href="/falsification" className="text-slate-400 hover:text-white">
+                Kill board
               </Link>
             </li>
             <li>
-              <Link
-                href="/#predictions"
-                className="text-slate-400 hover:text-white"
-              >
-                Prediction surface
+              <Link href="/replication" className="text-slate-400 hover:text-white">
+                Replication
               </Link>
             </li>
             <li>
-              <Link
-                href="/verification"
-                className="text-slate-400 hover:text-white"
-              >
-                Verification &amp; workflow
+              <Link href="/papers" className="text-slate-400 hover:text-white">
+                Papers
               </Link>
             </li>
             <li>
-              <Link
-                href="/falsification"
-                className="text-slate-400 hover:text-white"
-              >
-                How to kill TFPT
+              <Link href="/predictions" className="text-slate-400 hover:text-white">
+                Predictions
+              </Link>
+            </li>
+            <li>
+              <Link href="/architecture" className="text-slate-400 hover:text-white">
+                Architecture
+              </Link>
+            </li>
+            <li>
+              <Link href="/orientation" className="text-slate-400 hover:text-white">
+                Reading guide
+              </Link>
+            </li>
+            <li>
+              <Link href="/compiler" className="text-slate-400 hover:text-white">
+                Compiler
               </Link>
             </li>
             <li>
               <Link href="/review" className="text-slate-400 hover:text-white">
-                For reviewers — read first
+                For reviewers
               </Link>
             </li>
             <li>
@@ -123,29 +133,13 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/replication" className="text-slate-400 hover:text-white">
-                Replication status
-              </Link>
-            </li>
-            <li>
               <Link href="/faq" className="text-slate-400 hover:text-white">
-                Hostile-referee FAQ
+                FAQ
               </Link>
             </li>
             <li>
               <Link href="/changelog" className="text-slate-400 hover:text-white">
                 Changelog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={READING_GUIDE.href}
-                target="_blank"
-                rel="noopener"
-                onClick={() => trackFooter(READING_GUIDE)}
-                className="text-slate-400 hover:text-white"
-              >
-                {READING_GUIDE.label}
               </Link>
             </li>
             <li>
@@ -156,8 +150,18 @@ export function Footer() {
                 className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white"
               >
                 <Github size={13} aria-hidden />
-                Code &amp; verification (GitHub)
+                GitHub
               </Link>
+            </li>
+            <li>
+              <a
+                href="https://www.hylaean.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-300"
+              >
+                Adjacent: Hylaean
+              </a>
             </li>
           </ul>
         </div>
@@ -169,10 +173,13 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <Link
-                href="/orientation"
+                href={READING_GUIDE.href}
+                target="_blank"
+                rel="noopener"
+                onClick={() => trackFooter(READING_GUIDE)}
                 className="text-slate-400 hover:text-white"
               >
-                Reading guide
+                {READING_GUIDE.label}
               </Link>
             </li>
             <li>
@@ -206,6 +213,11 @@ export function Footer() {
                 className="text-slate-400 hover:text-white"
               >
                 {HORIZON.label}
+              </Link>
+            </li>
+            <li>
+              <Link href="/papers" className="text-slate-400 hover:text-white">
+                All papers →
               </Link>
             </li>
           </ul>

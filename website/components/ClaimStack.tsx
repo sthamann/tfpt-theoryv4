@@ -72,7 +72,7 @@ const LAYERS: Layer[] = [
       "β_rad = φ₀/(4π) = 0.2424° — within 0.4σ of ACT DR6",
     ],
     kill: "A unique-root failure for α, or JUNO landing clearly off 0.3067 at high significance.",
-    link: { href: "/#predictions", label: "The prediction surface" },
+    link: { href: "/predictions", label: "The prediction surface" },
     tone: "border-teal-400/30 bg-teal-500/[0.06]",
     markerTone: "bg-teal-500/15 text-teal-200 ring-teal-400/30",
   },
@@ -102,7 +102,7 @@ const LAYERS: Layer[] = [
       "F_transfer — typed runnable solver suite (v371–v375), each with a kill test [C]",
     ],
     kill: "Declared honestly, not hidden — v_geo is the one genuine [O] unit; G_net and F_transfer are [C], written up as numbered research contracts.",
-    link: { href: "/#open-gates", label: "The research contracts" },
+    link: { href: "/verification#open-gates", label: "The research contracts" },
     tone: "border-rose-400/30 bg-rose-500/[0.06]",
     markerTone: "bg-rose-500/15 text-rose-200 ring-rose-400/30",
   },
@@ -112,7 +112,7 @@ export function ClaimStack() {
   return (
     <section
       id="claim-stack"
-      className="relative scroll-mt-20 py-20 sm:py-24"
+      className="relative scroll-mt-20 py-14 sm:py-16"
       aria-labelledby="claim-stack-heading"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -120,19 +120,19 @@ export function ClaimStack() {
           id="claim-stack-heading"
           eyebrow="The claim stack"
           title="One stack, five honestly-typed layers"
-          description="Read top to bottom: the declared inputs at the source, the exact algebraic kernel, the numerical fixed points it forces, the conditional physics on top, and the open interfaces it does not close. Each layer states its status marker and how it can fail — so no conditional claim can be misread as an exact one."
+          description="Read top to bottom: declared inputs → exact kernel → numerical fixed points → conditional physics → open interfaces. Each layer states its marker and how it fails."
         />
 
-        <ol className="mt-10 flex flex-col gap-3" aria-label="The TFPT claim stack, from declared inputs to open interfaces">
+        <ol className="mt-8 flex flex-col gap-2" aria-label="The TFPT claim stack, from declared inputs to open interfaces">
           {LAYERS.map((layer, i) => (
             <li key={layer.key}>
               <motion.article
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
                 className={cn(
-                  "rounded-2xl border p-5 sm:p-6",
+                  "border p-4 sm:p-5",
                   layer.tone,
                 )}
               >
