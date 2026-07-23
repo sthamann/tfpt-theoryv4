@@ -1398,7 +1398,7 @@ datum $\tau=i$ alone. That datum now carries an equivalent \emph{discrete} form
 mark-transitivity is automatic for every deck-invariant configuration $M(\delta)=\{\pm1,\pm
 e^{i\delta}\}$ (the pair-exchanging $V_4$; no local jet sees the side bit), and what selects
 $\delta=\pi/2\iff\tau=i$ is exactly \emph{flag} transitivity ($V_4\to D_4$ symmetry lift), welded
-into a $13$-fold exact equivalence web --- the remaining input is \emph{one discrete symmetry-lift
+into a $13$-fold exact equivalence web (since $15$-fold by \vref{v528} facets \#14/\#15) --- the remaining input is \emph{one discrete symmetry-lift
 bit}, its negation concretely measurable (odd-doublet split $(2/\pi)\ln\cot(\delta/2)\neq0$).
 The candidate \mE-closure route through free OS positivity is since \emph{decided negative}
 (\veri{v521\_seam\_bit\_rp\_blind.py}, \texttt{SEAM.BIT.RPBLIND.01}): free reflection positivity
@@ -1415,9 +1415,14 @@ half of that gap is since decided side-blind too
 (\veri{v525\_seam\_bit\_twist\_blind.py}, \texttt{SEAM.BIT.TWISTBLIND.01}: every well-defined
 mark-decorated state functional in the free-plus-twist class keeps RP positive along the whole
 $M(\delta)$ ladder --- the \emph{ninth} side-blind test, $8\to9$; the free-plus-twist class is
-exhausted and the residual gap narrows to the genuinely interacting
-$\mathcal A_{\mathrm{hol}}$) --- the bit remains genuine
-discrete input.
+exhausted) and the interacting half is since decided too
+(\veri{v529\_seam\_interacting\_toy\_fk.py}, \texttt{SEAM.INT.FKTOY.01}: the \emph{tenth}
+side-blind test, $9\to10$, on genuinely non-Wick dynamics --- $\Theta_{15}$ mirrors
+$H(m)\to H(8-m)$ exactly despite $\delta$-seeing spectra) --- while the bit itself is now
+\emph{physically defined} as the twist-class choice
+(\veri{v528\_seam\_bit\_twist\_class\_definition.py}, \texttt{SEAM.BIT.TWISTCLASS.01}: facets
+\#14/\#15 both directions, order parameter $O$, unification with flag-transitivity, web
+$13\to15$; \mC\ interferometric measurement sketch; the bit remains formal input).
 The full \texttt{QGEO.REALIZE.01} stays \mO;
 no marker moves. \mE\ carrier-side (the four
 levers), \mO\ seam-side (the emergence): a kill-test, \emph{not} a closure (\texttt{QGEO.KILL.01}).
@@ -1449,7 +1454,9 @@ with a physical extension-class face, so only its \emph{position} --- which half
 the input; the freedom theorems (\vref{v510}) finally type that position half as \emph{topology}
 (the collar deck is a covering deck, hence free; the edge class is excluded), so the residual is the
 square-modulus datum $\tau=i$ alone --- restated by the flag-transitivity web (\vref{v512}) as one
-discrete symmetry-lift bit ($V_4\to D_4$: flag transitivity $\iff\tau=i$).
+discrete symmetry-lift bit ($V_4\to D_4$: flag transitivity $\iff\tau=i$), and since \vref{v528}
+equivalently as the \emph{twist-class choice}, in principle interferometrically readable
+(\texttt{SEAM.BIT.TWISTCLASS.01}; the bit remains formal input).
 \mE\ (count $+$ equality), \mO\ (the square modulus and the raw-seam realisation) --- \texttt{QGEO.MARKS.03} /
 \texttt{QGEO.EMERGE.01}.
 \par\smallskip\noindent\textbf{And the four marks are a \emph{four-interval} modular geometry
@@ -3089,11 +3096,12 @@ moved: given the order-$4$ clock, the deformation freezes the $(2,2,2,2)$ modulu
 automatically --- a relocation of the same order-$4$ carrier input, not a new derivation (since
 \vref{v510} that input reads: the square-modulus datum $\tau=i$; its position half is topology;
 since \vref{v512} it reads equivalently: one discrete symmetry-lift bit, flag transitivity
-$\iff\tau=i$; and since \vref{v521}/\vref{v525} free OS positivity and the whole
-mark-decorated free-plus-twist state class are documented as the \emph{eighth} and
-\emph{ninth} side-blind tests --- the bit is not derivable from free RP/$\Theta$ existence or
-from any Wick-computable twist decoration and remains
-genuine discrete input).
+$\iff\tau=i$; and since \vref{v521}/\vref{v525}/\vref{v529} free OS positivity, the whole
+mark-decorated free-plus-twist state class and the first genuinely interacting FK toy are
+documented as the \emph{eighth}, \emph{ninth} and \emph{tenth} side-blind tests --- the bit is
+not derivable from free RP/$\Theta$ existence, from any Wick-computable twist decoration or from
+the FK interaction class, and remains genuine discrete input; since \vref{v528} it is the
+twist-class choice, in principle interferometrically readable).
 \item \textbf{WP3 (\emph{done}, verdict B) \mE/\mC:} the Green--Schwarz alignment test, executed and
 machine-verified as \texttt{CELEST.WP3.01} \veri{v495\_celestial\_wp3\_gs\_alignment.py} (exact
 Fraction/sympy, $25$ checks). The arithmetic side is sharp: the Okubo coefficient
@@ -4112,6 +4120,14 @@ $(E_8)_1$ seam net as an \emph{actual} boundary net (not only as a character).
 $\Theta\rho\Theta=\rho^{-1}$ exists on $\mathcal A_{\mathrm{hol}}$).
 \textbf{(2)} Reflection positivity fails after gauge fixing (the gauge-invariant subalgebra of
 $\mu_{\mathrm{BCOV+SDYM}}$ is not RP).
+\emph{Named toy threat (no status change):} on the first genuinely interacting $16$-Majorana
+Fidkowski--Kitaev seam toy (\texttt{SEAM.INT.FKTOY.01}, \veri{v529\_seam\_interacting\_toy\_fk.py})
+Kill-Test 1 does \emph{not} fire ($\Theta$ exists with $\Theta^2=+1$ and clock-tower inversion),
+but Kill-Test 2 \emph{fires at toy level} --- RP breaks for every $g>0$ by an interference
+mechanism, with the \emph{straddle law} (RP fails exactly on quartet-straddled cuts, stays PD on
+quartet-avoiding ones; $24/24$) as a concrete hurdle for $\beta_3/\gamma$. Fence: one toy / one
+interaction class / \mC\ flat-band parent --- this narrows the route (every $\mathcal A_{\mathrm{hol}}$
+must protect RP against exactly this mechanism), it does not close it.
 \textbf{(3)} The reconstruction produces a vector-like mirror generation (chirality is lost in the
 OS quotient).
 \textbf{(4)} The Penrose transform reaches only free / self-dual states (the interacting extension
@@ -4228,6 +4244,16 @@ $\mathcal A_{\mathrm{hol}}$. Transparency (documented in the module): run 1 scor
 ($\sin(7\pi/16) - \sin(5\pi/16) = 2\cos(3\pi/8)\sin(\pi/16)$), fixed by a Laurent-polynomial
 certificate; no criterion, tolerance or expectation changed. No marker moves: the contract
 stays \mO; $\beta_3$ is the next milestone.
+
+\par\smallskip\noindent\textbf{Thermal follow-on (no status change).} The free OS quotient of
+$\beta_2$ is KMS, and its temperature normalisation closes onto the Nariai/BH chain as the
+\emph{third leg} of $c_3$ (\texttt{SEAM.THERMAL.KMS.01},
+\veri{v526\_seam\_thermal\_kms\_nariai\_bridge.py}: $\beta$ measured $=N$ at both levels;
+$\beta_{\mathrm{angle}}=2\pi=1/(4c_3)$, $T_{\mathrm{seam}}=4c_3$; modular Hamiltonian closed;
+class-$1$ anti-numerology selection; non-compact $\Rightarrow T=0$). The silver clock
+eigenvalue is explained and demystified in parallel (\texttt{SEAM.CLOCK.SILVER.01},
+\veri{v527\_seam\_clock\_silver\_spectrum.py}: structure SUCCESS, connection KILL). No marker
+moves.
 
 \par\smallskip\noindent\textbf{The $\beta$/$\gamma$ roadmap (named milestones, each with success
 and kill criteria).}

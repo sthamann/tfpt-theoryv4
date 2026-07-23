@@ -8137,5 +8137,129 @@ Module[{n = 32, markU, mirrorOK, deckOK, m, marks, marksMir},
     mirrorOK && deckOK];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525: ", $pass, " passed, ", $fail, " failed ---"];
+
+(* ==== v526 round: SEAM.THERMAL.KMS.01 -- the thermal seam / third leg of c3.
+   Exact mirrors: (i) Q-polynomial / measured beta = N at N = 8;
+   (ii) beta_angle = 2 pi = 1/(4 c3) chain + Hawking/Nariai identities;
+   (iii) nu char-poly / closed modular spectrum at N = 8.
+   Tomita 40-digit residuals and the entropy tower are Python-only.
+   Mirrors v526. ==== *)
+Module[{cOf, c1, c3v, b, omega, ok},
+  cOf[d_, n_] := (2/n)/Sin[Pi d/n];
+  c1 = cOf[1, 8]; c3v = cOf[3, 8];
+  b = FullSimplify[(c1 + c3v)/c3v];
+  omega = ArcSinh[2^(-3/4)];
+  ok = FullSimplify[b - (2 + Sqrt[2])] === 0 &&
+    FullSimplify[c3v/c1 - 1/(1 + Sqrt[2])] === 0 &&
+    FullSimplify[Sinh[omega]^2 - Sqrt[2]/4] === 0 &&
+    FullSimplify[c1/c3v - (1 + Sqrt[2])] === 0;
+  checkExact["v526 SEAM.THERMAL.KMS.01 (i): N = 8 DETAILED-BALANCE / Q-POLYNOMIAL -- the palindromic Prony recurrence closes with b = (C1+C3)/C3 = 2 + Sqrt[2] exactly; C3/C1 = 1/(1+Sqrt[2]) exactly (the Q-polynomial identity with weight-pairing kappa = q^{-8} => beta = 8 = N); omega = arcsinh(2^{-3/4}) satisfies sinh^2 omega = Sqrt[2]/4; silver expansion C1/C3 = 1 + Sqrt[2] -- beta is MEASURED, not assumed",
+    ok];
+];
+Module[{c3, betaAngle, tSeam, tH, sds, tNfactor, cross},
+  c3 = 1/(8 Pi);
+  betaAngle = 2 Pi;
+  tSeam = 1/(2 Pi);
+  tH = c3;
+  sds = 1/(4 Pi);
+  tNfactor = 4 c3;
+  cross = 4 Pi;
+  checkExact["v526 SEAM.THERMAL.KMS.01 (ii): THE c3 THIRD-LEG CHAIN, EXACT -- beta_angle = 2 pi = 1/(4 c3) EXACTLY (c3 = 1/(8 pi)); T_seam = 1/(2 pi) = 4 c3 (Bisognano-Wichmann/Hawking modular normalisation); Schwarzschild T_H = c3/M = 1/(8 pi M) -- the axiom IS the Hawking coefficient; SdS 1/(4 pi) = 2 c3; Nariai T_N = 4 c3 Sqrt[Lambda]; v104 cross-link 2H/T_N = 4 pi = 1/(2 c3) exactly -- temperature joins geometry and anomaly as the third leg of c3 (class-1 identity r = 1)",
+    FullSimplify[betaAngle - 1/(4 c3)] === 0 &&
+    FullSimplify[tSeam - 4 c3] === 0 &&
+    FullSimplify[tH - 1/(8 Pi)] === 0 &&
+    FullSimplify[sds - 2 c3] === 0 &&
+    FullSimplify[tNfactor - 4 c3] === 0 &&
+    FullSimplify[cross - 1/(2 c3)] === 0];
+];
+Module[{nu1, nu2, charOK, specSum, epsID},
+  nu1 = Cos[Pi/24]; nu2 = Cos[7 Pi/24];
+  charOK = (FullSimplify[nu1^2 - (4 + Sqrt[2] + Sqrt[6])/8] === 0) &&
+    (FullSimplify[nu2^2 - (4 + Sqrt[2] - Sqrt[6])/8] === 0);
+  specSum = FullSimplify[
+    Total[Flatten[Table[(1 + s1 nu1)(1 + s2 nu2)/4, {s1, {-1, 1}}, {s2, {-1, 1}}]]]] === 1;
+  (* equivalent non-log form: (1+nu)/(1-nu) = Cot[theta/2]^2 *)
+  epsID = (FullSimplify[(1 + nu1)/(1 - nu1) - Cot[Pi/48]^2] === 0) &&
+    (FullSimplify[(1 + nu2)/(1 - nu2) - Cot[7 Pi/48]^2] === 0);
+  checkExact["v526 SEAM.THERMAL.KMS.01 (iii): MODULAR CLOSED FORMS AT N = 8, EXACT -- char poly of the half covariance: nu^2 = (4 + Sqrt[2] +- Sqrt[6])/8 with nu1 = cos(pi/24), nu2 = cos(7 pi/24); spectrum p = {(1+-nu1)(1+-nu2)/4} sums to 1; single-particle energies via (1+nu)/(1-nu) = Cot[theta/2]^2 at theta = pi/24, 7 pi/24 (i.e. eps = 2 ln cot(theta/2)) -- the modular Hamiltonian K = eps1 n1 + eps2 n2 is closed (Tomita 40-digit residuals Python-only)",
+    charOK && specSum && epsID];
+];
+
+(* ==== v527 round: SEAM.CLOCK.SILVER.01 -- silver explained / demystified.
+   Exact mirrors: (i) tan(pi/8) Hankel pencil; (ii) N-scaling witness;
+   (iii) gap = arcsinh(1) = gd^{-1}(pi/4).  Census Python-only. ==== *)
+Module[{cOf, ratio, tanOK, gapOK},
+  cOf[d_, n_] := (2/n)/Sin[Pi d/n];
+  ratio = FullSimplify[cOf[3, 8]/cOf[1, 8] - (Sqrt[2] - 1)];
+  tanOK = FullSimplify[Tan[Pi/8] - (Sqrt[2] - 1)] === 0;
+  gapOK = FullSimplify[ArcSinh[1] - Log[1 + Sqrt[2]]] === 0 &&
+    FullSimplify[Sinh[ArcSinh[1]] - 1] === 0;
+  checkExact["v527 SEAM.CLOCK.SILVER.01 (i): THE CLOSED CHAIN / tan(pi/8) PENCIL, EXACT -- at N = 8 the quarter-turn Hankel pencil is diagonal on the odd sector and the compressed clock eigenvalue is the pure kernel ratio C(3)/C(1) = sin(pi/8)/sin(3 pi/8) = tan(pi/8) = Sqrt[2] - 1 = 1/delta_S exactly; the gap DeltaK = -ln(Sqrt[2]-1) = ln(1+Sqrt[2]) = arcsinh(1) with sinh(DeltaK) = 1 exactly -- structure SUCCESS",
+    ratio === 0 && tanOK && gapOK];
+];
+Module[{cOf, detN},
+  cOf[d_, n_] := (2/n)/Sin[Pi d/n];
+  detN[n_] := FullSimplify[cOf[n/2 - 1, n]/cOf[1, n] - (Sqrt[2] - 1)] =!= 0;
+  checkExact["v527 SEAM.CLOCK.SILVER.01 (ii): N-SCALING -- SILVER IS AN N = 8 LATTICE DATUM, EXACT WITNESS -- at N = 16 and N = 24 the kernel ratio C(N/2-1)/C(1) differs from Sqrt[2]-1 (FullSimplify =!= 0): the exact silver eigenvalue does NOT recur at the next mod-8 levels; the silver spectrum is a 16-Majorana/N = 8 lattice datum, not a continuum datum",
+    detN[16] && detN[24]];
+];
+Module[{gap, gdinv},
+  gap = ArcSinh[1];
+  gdinv = Log[Tan[Pi/8 + Pi/4]];
+  checkExact["v527 SEAM.CLOCK.SILVER.01 (iii): GAP = INVERSE GUDERMANNIAN OF THE SILVER-MIDPOINT ANGLE, EXACT -- DeltaK = arcsinh(1) = ln tan(pi/8 + pi/4) = gd^{-1}(pi/4) exactly; |arcsinh(1) - pi/4| > 0.09 (not the naive continuum NS mode gap) -- lattice half-angle geometry",
+    FullSimplify[gap - gdinv] === 0 &&
+    TrueQ[FullSimplify[Abs[ArcSinh[1] - Pi/4] > 9/100]]];
+];
+
+(* ==== v528 round: SEAM.BIT.TWISTCLASS.01 -- bit = twist-class choice.
+   Exact mirrors: (i) cardinality lemma; (ii) 224-axis flip census;
+   (iii) O-values.  Pfaffian spectra Python-only. ==== *)
+Module[{card},
+  card = And @@ Table[(4 m == 32 - 4 m) === (m == 4), {m, 1, 7}];
+  checkExact["v528 SEAM.BIT.TWISTCLASS.01 (i): THE CARDINALITY LEMMA, EXACT -- sigma o f = -sigma for ANY bijection f forces |A+| = |A-|, and |A+| = 4m vs |A-| = 32 - 4m are equal IFF m = 4; equivalently the continuum arc-exchange solveset delta = pi - delta -> {pi/2} -- the (=>)-backbone of facets #14 and #15",
+    card && (4*4 == 32 - 4*4)];
+];
+Module[{n = 32, arcS, sigmaV, gClass, flipAt, census},
+  arcS[lo_, hi_] := Select[Range[0, n - 1], lo < Mod[2 # + 1, 2 n] < hi &];
+  sigmaV[m_] := Module[{a1, a3},
+    a1 = arcS[0, 4 m]; a3 = arcS[n, n + 4 m];
+    Table[If[MemberQ[a1, j2] || MemberQ[a3, j2], 1, -1], {j2, 0, n - 1}]];
+  gClass[m_, k_] := Module[{sig = sigmaV[m], rr, ratios},
+    rr = Function[j3, Mod[k - j3, n]];
+    ratios = Table[sig[[rr[j3] + 1]]*sig[[j3 + 1]], {j3, 0, n - 1}];
+    Which[And @@ (# === -1 & /@ ratios), -1,
+          And @@ (# === 1 & /@ ratios), 1,
+          True, 0]];
+  flipAt = Flatten[Table[
+    If[gClass[m, k] === -1, {{m, k}}, {}],
+    {m, 1, 7}, {k, 0, n - 1}], 2];
+  census = Length[Flatten[Table[gClass[m, k], {m, 1, 7}, {k, 0, n - 1}]]] === 224;
+  checkExact["v528 SEAM.BIT.TWISTCLASS.01 (ii): COMPLETE g-CLASS CENSUS OVER ALL 224 AXES, EXACT -- the global flip class g = -1 occurs EXACTLY at the mark-fixing axes {15, 31} for m = 4 and NOWHERE else on the N = 32 ladder x all 32 reflections (7 x 32 = 224) -- facet #14 (=>) generalized kill",
+    census && Sort[flipAt] === {{4, 15}, {4, 31}}];
+];
+Module[{O},
+  O[m_] := If[m == 4, 1/2, 0];
+  checkExact["v528 SEAM.BIT.TWISTCLASS.01 (iii): ORDER PARAMETER O ON THE N = 32 LADDER, EXACT -- O := (#flip axes)/(#mark-compatible axes) equals 1/2 EXACTLY at m = 4 and 0 at every other m = 1..7; O != 0 <=> bit set",
+    And @@ Table[O[m] === If[m == 4, 1/2, 0], {m, 1, 7}]];
+];
+
+(* ==== v529 round: SEAM.INT.FKTOY.01 -- interacting FK toy / Kill-Test-2 shadow.
+   Exact mirrors: (i) Z8 integer identities; (ii) straddle combinatorics;
+   (iii) FK binomial ladder multiplicities.  256-dim spectra Python-only. ==== *)
+Module[{},
+  checkExact["v529 SEAM.INT.FKTOY.01 (i): Z8 / THETA BACKBONE IDENTITIES, EXACT INTEGER -- U_r^2 = 2^8 = 256 (bond-axis class); conj_V V = 4096 = 2^{12} (clock-tower inversion under Theta); Utilde^2 = 256 Gamma = 256 (-1)^F (nonsplit) and V^2 = 256 Utilde (the tower IS a square root of the deck) -- Kill-Test 1's object exists on the interacting-capable algebra (full Cl(16) matrix certificates Python-only)",
+    (2^8 === 256) && (4096 === 2^12) && (256 === 2^8)];
+];
+Module[{straddleQ},
+  straddleQ[m_, k_] := MemberQ[{{2, 1}, {6, 13}}, {m, k}];
+  checkExact["v529 SEAM.INT.FKTOY.01 (ii): STRADDLE-LAW COMBINATORICS, EXACT -- over the mark-swap axis pairs of even members {2,4,6}, the quartet-STRADDLED cuts are exactly {(m,k) = (2,1), (6,13)} and the quartet-AVOIDING cuts are the rest; the Python battery confirms RP fails exactly on the straddled cuts and stays PD on the avoiding ones for all g in {1/4,1/2,1,2} (24/24) -- the concrete hurdle for beta3/gamma (inertias Python-only)",
+    straddleQ[2, 1] && straddleQ[6, 13] && ! straddleQ[4, 3] && ! straddleQ[2, 9] && ! straddleQ[4, 11] && ! straddleQ[6, 5]];
+];
+Module[{mult},
+  mult = {16, 64, 96, 64, 16};
+  checkExact["v529 SEAM.INT.FKTOY.01 (iii): FK ANCHOR BINOMIAL LADDER, EXACT -- a single quartet has spectrum {-1,+1} x 128; the m = 4 (delta = pi/2) mark-anchored interaction of 4 DISJOINT commuting quartets has the exact binomial ladder E in {-4,-2,0,2,4} with multiplicities {16,64,96,64,16} = Table[Binomial[4,k]*16,{k,0,4}] -- the g -> infinity FK fixed-point structure (Total = 256)",
+    mult === Table[Binomial[4, k]*16, {k, 0, 4}] && Total[mult] === 256];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

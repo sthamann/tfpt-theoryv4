@@ -47,6 +47,1768 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "=150 2026-07-23 (VII) ("
+      },
+      {
+        "k": "c",
+        "v": "v529"
+      },
+      {
+        "k": "t",
+        "v": " — the interacting Fidkowski–Kitaev seam toy promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.INT.FKTOY.01"
+      },
+      {
+        "k": "t",
+        "v": ": the FIRST firing Kill-Test-2 shadow — triple verdict F1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " KILL / F2 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " KILL / F3 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " ERFOLG; the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 30 and the header goes twenty-six "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " thirty steps — (1) F1 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " KILL "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta"
+      },
+      {
+        "k": "t",
+        "v": " exists exactly on the interacting model ("
+      },
+      {
+        "k": "m",
+        "v": "U_r^2=2^8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta^2=+1"
+      },
+      {
+        "k": "t",
+        "v": ", clock-tower inversion, "
+      },
+      {
+        "k": "m",
+        "v": "[\\Theta,H_g]=0"
+      },
+      {
+        "k": "t",
+        "v": ") so Kill-Test 1 does "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "not"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " fire; but Kill-Test 2 "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "fires at toy level"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ": RP breaks for every "
+      },
+      {
+        "k": "m",
+        "v": "g>0"
+      },
+      {
+        "k": "t",
+        "v": " — inertia ladder "
+      },
+      {
+        "k": "m",
+        "v": "(37,0,0)\\to(33,4,0)\\to(31,6,0)\\to(29,8,0)"
+      },
+      {
+        "k": "t",
+        "v": "; Gibbs "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=2"
+      },
+      {
+        "k": "t",
+        "v": " same ladder; mechanism "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " interference; STRADDLE LAW ("
+      },
+      {
+        "k": "m",
+        "v": "24/24"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "fence one toy / one interaction class / flat-band parent — narrows the Woit route, does "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "not"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " close it; "
+      },
+      {
+        "k": "c",
+        "v": "WOIT.OS.TWISTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " stays Open with the toy shadow documented as a named Kill-Test-2 threat; (2) F2 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " KILL "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the TENTH side-blind test ("
+      },
+      {
+        "k": "m",
+        "v": "9\\to10"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_{15}"
+      },
+      {
+        "k": "t",
+        "v": " maps "
+      },
+      {
+        "k": "m",
+        "v": "H(m)\\to H(8-m)"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY despite "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-seeing spectra; (3) F3 "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " ERFOLG "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": grading "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_8"
+      },
+      {
+        "k": "t",
+        "v": " tower "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " FK anchor "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " constructive OS quotient at "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": "; Wolfram extension "
+      },
+      {
+        "k": "m",
+        "v": "552\\to564"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run); suite "
+      },
+      {
+        "k": "m",
+        "v": "519\\to523"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v529_seam_interacting_toy_fk.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim97"
+        },
+        {
+          "k": "t",
+          "v": " s); registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "523"
+        },
+        {
+          "k": "t",
+          "v": " modules green."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.INT.FKTOY.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " text-precised (Kill-Test-2 toy shadow "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " straddle law); scoreboard rows text-precised ("
+        },
+        {
+          "k": "m",
+          "v": "9\\to10"
+        },
+        {
+          "k": "t",
+          "v": "); no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 30; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (Kill-Test-2 toy threat "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " bit scoreboard "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (tenth side-blind test)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three exact mirrors (Z8 identities; straddle combinatorics; FK binomial ladder)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (story "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " steps "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " scoreboard "
+        },
+        {
+          "k": "m",
+          "v": "10"
+        },
+        {
+          "k": "t",
+          "v": "), generated indices via build; "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "523"
+        },
+        {
+          "k": "t",
+          "v": " modules, highest ID "
+        },
+        {
+          "k": "c",
+          "v": "v529"
+        },
+        {
+          "k": "t",
+          "v": ", Wolfram "
+        },
+        {
+          "k": "m",
+          "v": "564/564"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " notes."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (VI) ("
+      },
+      {
+        "k": "c",
+        "v": "v528"
+      },
+      {
+        "k": "t",
+        "v": " — the alignment bit as an exact measurable TWIST-CLASS choice promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.BIT.TWISTCLASS.01"
+      },
+      {
+        "k": "t",
+        "v": ": the physical definition — verdict SUCCESS; the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 29 — (1) Facets #14 ("
+      },
+      {
+        "k": "m",
+        "v": "\\eta"
+      },
+      {
+        "k": "t",
+        "v": "-flip "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow\\delta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": ") and #15 (twist-frustration "
+      },
+      {
+        "k": "m",
+        "v": "\\Leftrightarrow\\delta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": ") both directions exact "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": " (cardinality lemma "
+      },
+      {
+        "k": "m",
+        "v": "|A_+|=|A_-|\\Rightarrow m=4"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "g"
+      },
+      {
+        "k": "t",
+        "v": "-class census "
+      },
+      {
+        "k": "m",
+        "v": "224"
+      },
+      {
+        "k": "t",
+        "v": " axes: flip class exactly at "
+      },
+      {
+        "k": "m",
+        "v": "\\{15,31\\}"
+      },
+      {
+        "k": "t",
+        "v": "); (2) order parameter "
+      },
+      {
+        "k": "m",
+        "v": "O=1/2"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "m=4"
+      },
+      {
+        "k": "t",
+        "v": " else "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ", gauge-robust; (3) unification #14=#15=flag-transitivity "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " ONE "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": " invariant "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": " web "
+      },
+      {
+        "k": "m",
+        "v": "13\\to15"
+      },
+      {
+        "k": "t",
+        "v": "); Kramers "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " POSITION half (derived), twist class "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " MODULUS half (the input); (4) "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "measurement sketch (interferometric in principle); the bit remains formal input; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v528_seam_bit_twist_class_definition.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "18"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim46"
+        },
+        {
+          "k": "t",
+          "v": " s)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.BIT.TWISTCLASS.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.TAU.FLAG.01"
+        },
+        {
+          "k": "t",
+          "v": " text-precised (web "
+        },
+        {
+          "k": "m",
+          "v": "13\\to15"
+        },
+        {
+          "k": "t",
+          "v": "); no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 29; contracts "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " introduction (“symmetry-lift bit” now also “the twist-class choice, in principle interferometrically readable”)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three exact mirrors (cardinality lemma; "
+        },
+        {
+          "k": "m",
+          "v": "224"
+        },
+        {
+          "k": "t",
+          "v": "-axis census; "
+        },
+        {
+          "k": "m",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "-values)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (V) ("
+      },
+      {
+        "k": "c",
+        "v": "v527"
+      },
+      {
+        "k": "t",
+        "v": " — the silver clock eigenvalue EXPLAINED and DEMYSTIFIED, promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.CLOCK.SILVER.01"
+      },
+      {
+        "k": "t",
+        "v": ": double verdict STRUCTURE "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " SUCCESS / CONNECTION "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " KILL (anti-numerology style); the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 28 — (1) STRUCTURE SUCCESS "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,\\sqrt2-1\\}"
+      },
+      {
+        "k": "t",
+        "v": " closed via diagonal Hankel pencil at "
+      },
+      {
+        "k": "m",
+        "v": "N=8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\tan(\\pi/8)=C(3)/C(1)"
+      },
+      {
+        "k": "t",
+        "v": ", doubling "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " exact second quantisation, carrier "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " silver-midpoint axes, gap "
+      },
+      {
+        "k": "m",
+        "v": "=\\mathrm{arcsinh}(1)=\\mathrm{gd}^{-1}(\\pi/4)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": "-scaling "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " pure "
+      },
+      {
+        "k": "m",
+        "v": "N=8/16"
+      },
+      {
+        "k": "t",
+        "v": " lattice datum (not continuum); positive clock only for "
+      },
+      {
+        "k": "m",
+        "v": "N\\equiv0\\pmod8"
+      },
+      {
+        "k": "t",
+        "v": "; (2) CONNECTION KILL "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": preregistered "
+      },
+      {
+        "k": "m",
+        "v": "11466"
+      },
+      {
+        "k": "t",
+        "v": "-candidate census over "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": " frozen numbers: "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": " hits above null; placebos comparable; (3) cross-link "
+      },
+      {
+        "k": "c",
+        "v": "v526"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\sqrt2-1"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " thermal kernel ratio; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v527_seam_clock_silver_spectrum.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim10"
+        },
+        {
+          "k": "t",
+          "v": " s)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.CLOCK.SILVER.01"
+        },
+        {
+          "k": "t",
+          "v": "; no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 28; contracts thermal/silver follow-on."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three exact mirrors ("
+        },
+        {
+          "k": "m",
+          "v": "\\tan(\\pi/8)"
+        },
+        {
+          "k": "t",
+          "v": " pencil; "
+        },
+        {
+          "k": "m",
+          "v": "N"
+        },
+        {
+          "k": "t",
+          "v": "-scaling witness; gap "
+        },
+        {
+          "k": "m",
+          "v": "=\\mathrm{arcsinh}(1)"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (IV) ("
+      },
+      {
+        "k": "c",
+        "v": "v526"
+      },
+      {
+        "k": "t",
+        "v": " — the thermal seam promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.THERMAL.KMS.01"
+      },
+      {
+        "k": "t",
+        "v": ": KMS of the reconstructed free OS quotient CLOSED onto the Nariai/BH temperature chain — the THIRD LEG of "
+      },
+      {
+        "k": "m",
+        "v": "c_3"
+      },
+      {
+        "k": "t",
+        "v": "; verdict SUCCESS; the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 27 — (1) "
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": " MEASURED "
+      },
+      {
+        "k": "m",
+        "v": "=N"
+      },
+      {
+        "k": "t",
+        "v": " at both levels "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "N=8"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\omega=\\mathrm{arcsinh}(2^{-3/4})"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa=q^{-8}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": ": pairing exponent "
+      },
+      {
+        "k": "m",
+        "v": "(N/2)+1=9"
+      },
+      {
+        "k": "t",
+        "v": "; wrong "
+      },
+      {
+        "k": "m",
+        "v": "\\beta"
+      },
+      {
+        "k": "t",
+        "v": " excluded); (2) "
+      },
+      {
+        "k": "m",
+        "v": "\\beta_{\\mathrm{angle}}=2\\pi"
+      },
+      {
+        "k": "t",
+        "v": " EXACT "
+      },
+      {
+        "k": "m",
+        "v": "=1/(4c_3)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\mathrm{seam}}=4c_3"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " Bisognano–Wichmann/Hawking normalisation ("
+      },
+      {
+        "k": "c",
+        "v": "v208"
+      },
+      {
+        "k": "t",
+        "v": ") "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; (3) modular Hamiltonian closed "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\nu_1=\\cos(\\pi/24)"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\nu_2=\\cos(7\\pi/24)"
+      },
+      {
+        "k": "t",
+        "v": "; Tomita KMS-"
+      },
+      {
+        "k": "m",
+        "v": "\\beta=1"
+      },
+      {
+        "k": "t",
+        "v": " on all "
+      },
+      {
+        "k": "m",
+        "v": "256"
+      },
+      {
+        "k": "t",
+        "v": " pairs); (4) "
+      },
+      {
+        "k": "m",
+        "v": "c_3"
+      },
+      {
+        "k": "t",
+        "v": " third-leg class-"
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " selection "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": " (Hawking/Nariai chain; v104 cross-link); (5) entropy "
+      },
+      {
+        "k": "m",
+        "v": "S(8/16/32)=0.52187/0.63510/0.75006"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Delta S/\\ln2\\to1/6"
+      },
+      {
+        "k": "t",
+        "v": ", horizon fractions do NOT transfer "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "; (6) "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "-5 silver "
+      },
+      {
+        "k": "m",
+        "v": "=C(3)/C(1)"
+      },
+      {
+        "k": "t",
+        "v": " thermal kernel ratio; non-compact "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow T=0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v526_seam_thermal_kms_nariai_bridge.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "22"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim8.4"
+        },
+        {
+          "k": "t",
+          "v": " s)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.THERMAL.KMS.01"
+        },
+        {
+          "k": "t",
+          "v": "; no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 27; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_horizon_readouts"
+        },
+        {
+          "k": "t",
+          "v": " (third leg of "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (thermal follow-on); "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three exact mirrors (Q-polynomial/"
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": " measurement; "
+        },
+        {
+          "k": "m",
+          "v": "2\\pi=1/(4c_3)"
+        },
+        {
+          "k": "t",
+          "v": " chain; "
+        },
+        {
+          "k": "m",
+          "v": "\\nu"
+        },
+        {
+          "k": "t",
+          "v": " char-poly)."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
         "v": "=150 2026-07-23 (III) ("
       },
       {

@@ -152,7 +152,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 519 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 523 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── website/               # the public mirror (fixpoint-theory.com), kept byte-identical by the audit

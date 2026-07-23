@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`519` registered scripts · `590` ledger claims · `10` clusters.
+`523` registered scripts · `594` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -338,7 +338,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (188 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (192 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -717,6 +717,14 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v519_woit_theta_rp_free, v522_woit_beta1_gso_gauge, v521_seam_bit_rp_blind, v510, v519, v522 · cited: 3 e8 audit bootstrap, research contracts
 - **v525_seam_bit_twist_blind** [E/C/O/X] `SEAM.BIT.TWISTBLIND.01` — SEAM.BIT.TWISTBLIND.01: the twist-state attack on the alignment bit DECIDED -- 'mark-decorated states do not see delta', an honest, decided NEGATIVE result (v508 style): the NINTH 
   - deps: v521_seam_bit_rp_blind, v512_seam_tau_flag, v510_seam_bit_freedom, v519_woit_theta_rp_free, v510, v512, v519, v521 · cited: 3 e8 audit bootstrap, research contracts
+- **v526_seam_thermal_kms_nariai_bridge** [E/C] `SEAM.THERMAL.KMS.01` — SEAM.THERMAL.KMS.01: the thermal seam -- KMS of the reconstructed free OS quotient CLOSED onto the Nariai/BH temperature chain (the THIRD LEG of c3). Verdict SUCCESS (22 checks, ~8
+  - deps: v524_woit_beta2_os_quotient, v519_woit_theta_rp_free, v527_seam_clock_silver_spectrum, v58, v104, v208, v519, v524 · cited: 3 e8 audit bootstrap, horizon readouts, research contracts
+- **v527_seam_clock_silver_spectrum** [E/X] `SEAM.CLOCK.SILVER.01` — SEAM.CLOCK.SILVER.01: the silver clock eigenvalue EXPLAINED and DEMYSTIFIED (double verdict, anti-numerology style; 22 checks, ~10 s). STRUCTURE=SUCCESS: {1, sqrt2-1} closed via di
+  - deps: v524_woit_beta2_os_quotient, v526_seam_thermal_kms_nariai_bridge, v512_seam_tau_flag, v519, v524, v526 · cited: 3 e8 audit bootstrap, research contracts
+- **v528_seam_bit_twist_class_definition** [E/C] `SEAM.BIT.TWISTCLASS.01` — SEAM.BIT.TWISTCLASS.01: the alignment bit as an exact measurable TWIST-CLASS choice (the physical definition; 18 checks, ~46 s). Verdict SUCCESS. [E] Facets #14 (eta-flip <=> delta
+  - deps: v512_seam_tau_flag, v521_seam_bit_rp_blind, v525_seam_bit_twist_blind, v510_seam_bit_freedom, v529_seam_interacting_toy_fk, v510, v512, v521 · cited: 3 e8 audit bootstrap, research contracts
+- **v529_seam_interacting_toy_fk** [E/C/O/X] `SEAM.INT.FKTOY.01` — SEAM.INT.FKTOY.01: the minimal interacting Fidkowski-Kitaev seam toy -- the FIRST firing Kill-Test-2 shadow (triple-verdicted; 24 checks, ~97 s). F1=KILL: Theta exists (U_r^2=2^8, 
+  - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v528_seam_bit_twist_class_definition, v512_seam_tau_flag, v492_celestial_z4_orbifold, v510, v512 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1109,10 +1117,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v514_celestial_wp5e_eps1_axion_slot** — `CELEST.WP5E.EPS1.01`
-- **v515_celestial_wp5e_m1_omega_n** — `CELEST.WP5E.M1.01`
-- **v516_celestial_wp5e_m2_twisted_ks_measure** — `CELEST.WP5E.M2.01`
-- **v517_celestial_wp5e_m3_a0_uplift** — `CELEST.WP5E.M3.01`
 - **v518_celestial_wp5e_delta1_derived_kill** — `CELEST.WP5E.DELTA1.01`
 - **v519_woit_theta_rp_free** — `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01`
 - **v520_celestial_wp5e_measure_decision** — `CELEST.WP5E.MEASURE.01`
@@ -1121,4 +1125,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v523_celestial_wp5e_wm_derived** — `CELEST.WP5E.WM.01`
 - **v524_woit_beta2_os_quotient** — `WOIT.BETA2.OS.01`
 - **v525_seam_bit_twist_blind** — `SEAM.BIT.TWISTBLIND.01`
+- **v526_seam_thermal_kms_nariai_bridge** — `SEAM.THERMAL.KMS.01`
+- **v527_seam_clock_silver_spectrum** — `SEAM.CLOCK.SILVER.01`
+- **v528_seam_bit_twist_class_definition** — `SEAM.BIT.TWISTCLASS.01`
+- **v529_seam_interacting_toy_fk** — `SEAM.INT.FKTOY.01`
 

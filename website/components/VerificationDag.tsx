@@ -560,6 +560,10 @@ const NODES: DagNode[] = [
       "v523_celestial_wp5e_wm_derived.py",
       "v524_woit_beta2_os_quotient.py",
       "v525_seam_bit_twist_blind.py",
+      "v526_seam_thermal_kms_nariai_bridge.py",
+      "v527_seam_clock_silver_spectrum.py",
+      "v528_seam_bit_twist_class_definition.py",
+      "v529_seam_interacting_toy_fk.py",
     ],
   },
   {

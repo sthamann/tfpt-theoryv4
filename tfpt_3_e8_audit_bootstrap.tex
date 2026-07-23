@@ -1139,14 +1139,16 @@ directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
 Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent
-twenty-six-step
+thirty-step
 story --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- executed as
 work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$,
 $\gamma$, $\delta_1$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages, the three back-reaction
 milestones M1--M3, the measure decision (Step 21) and the constructive $w_m$ derivation
 (Step 24) of the research contract
 \texttt{CELEST.SEAM.01}, plus the RP-blindness decision on the alignment bit (Step 22) with its
-twist-state completion (Step 26) and the
+twist-state completion (Step 26) with its twist-class definition (Step 29)
+and the interacting FK-toy scoreboard extension (Step 30), the thermal-seam
+third leg of $c_3$ (Step 27) with the silver-eigenvalue demystification (Step 28), and the
 $\alpha$, $\beta_1$ and $\beta_2$ stages of the OS twistor bridge
 \texttt{WOIT.OS.TWISTOR.01} (Steps 20, 23 and 25), whose
 full technical statement, kill tests and typing fence live in \texttt{tfpt\_research\_contracts}. Every
@@ -1901,9 +1903,103 @@ counterwitness is arc-equivalent at $N = 16$ to the blind member $\pi/4$ --- no 
 selector can exclude it; a single twist has $\omega(D) = 0$ identically (twists exist only in
 mark pairs). The free-plus-twist class --- everything Wick-computable --- is hereby
 \emph{exhausted}: what could still see the bit is only a genuinely \emph{interacting}
-$\mathcal A_{\mathrm{hol}}$ whose OS data are not Pfaffian-reducible to the chiral vacuum.
+$\mathcal A_{\mathrm{hol}}$ whose OS data are not Pfaffian-reducible to the chiral vacuum ---
+and that door is since probed by Step 30 (the tenth side-blind test $9\to10$, with Kill-Test 2
+firing at toy level under a typed fence).
 The alignment bit remains genuine discrete input. No marker moves.
 \veri{v525\_seam\_bit\_twist\_blind.py}
+
+\par\smallskip\noindent\textbf{Step 27 --- the thermal seam: KMS closes onto the Nariai/BH
+chain as the third leg of $c_3$ \mE/\mC.} The free OS quotient of Step 25 is not merely
+thermal in dimension ($4^2$): its temperature is \emph{measured}, not assumed. The circle
+kernel $C(d)=(2/N)/\sin(\pi d/N)$ admits exactly one finite thermal-mode representation with
+detailed balance --- at $N=8$ one real frequency $\omega=\mathrm{arcsinh}(2^{-3/4})$ with
+weight ratio $\kappa=q^{-8}$ exactly ($\beta=8=N$; Q-polynomial identity
+$Q^2-(2+\sqrt2)Q+1=0$), at $N=16$ both mode pairs real with pairing exponent
+$(N/2)+1=9$ ($\beta=16=N$), and wrong candidates $\{N/2,N/4,2N\}$ are excluded by
+quantified gaps. In angle units (one clock step $=2\pi/N$, the v519 pin) one obtains
+$\beta_{\mathrm{angle}}=2\pi$ exact, hence $T_{\mathrm{seam}}=1/(2\pi)=4c_3$ ---
+$N$-independent, and exactly the Bisognano--Wichmann/Hawking modular normalisation that
+\vref{v208} carries into the horizon sector. The modular Hamiltonian is closed
+($\nu_1=\cos(\pi/24)$, $\nu_2=\cos(7\pi/24)$; $\varepsilon_i=2\ln\cot(\theta_i/2)$;
+Tomita KMS-$\beta=1$ on all $256$ monomial pairs). The anti-numerology audit selects the
+class-$1$ identity $r=1$: temperature joins geometry and anomaly as the \emph{third leg}
+of $c_3$. The Hawking/Nariai chain then reads in the same normalisation:
+$T_H=c_3/M=1/(8\pi M)$ (the axiom \emph{is} the Hawking coefficient, now from the seam
+KMS), SdS $1/(4\pi)=2c_3$, Nariai $T_N=4c_3\sqrt{\Lambda}$, and the \vref{v104}
+cross-link $2H/T_N=4\pi=1/(2c_3)$ exact. Entropy confirms the chiral $c=1/2$ log-law
+($\Delta S/\ln2\to1/6$) but the v129 horizon fractions $\{1/3,2/3\}$ and the v190 floor
+do \emph{not} transfer --- the temperature bridge closes, the entropy-fraction bridge
+honestly does not. Typed non-gating: the naive clock reading
+$\{1,\sqrt2-1\}=e^{-\Delta K}$ fails; the exact replacement is
+$\sqrt2-1=C(3)/C(1)=1/(2\cosh 2\omega-1)$ --- the silver eigenvalue is a thermal kernel
+ratio (Step 28). Non-compact control: the Stieltjes half-line has $\kappa=0$,
+$\beta=\infty$, $T=0$ --- the temperature hangs exactly on compactness of the euclidean
+circle. \mC-fence: the reading ``seam euclidean circle $=$ thermal circle of the
+reconstructed horizon dynamics''. No marker moves.
+\veri{v526\_seam\_thermal\_kms\_nariai\_bridge.py}
+
+\par\smallskip\noindent\textbf{Step 28 --- the silver eigenvalue explained and demystified
+\mE.} The compressed clock spectrum $\{1,\sqrt2-1\}$ of Step 25 is now closed-form: at
+$N=8$ the Hankel pencil is diagonal, $\tan(\pi/8)=C(3)/C(1)$, the doubling is exact
+fermionic second quantisation, the geometric carrier is the silver-midpoint axis of the
+$\mu_4$ torsor, and the gap is $\mathrm{arcsinh}(1)=\mathrm{gd}^{-1}(\pi/4)$. $N$-scaling
+($N=8..24$) shows a pure $N=8/16$ Majorana \emph{lattice} datum --- not a continuum
+limit; a positive $\mu_4$ clock exists only for $N\equiv0\pmod8$; the golden family
+appears as the $N=10$ control. The connection verdict is an honest KILL in the
+v100/v513 style: a preregistered $11466$-candidate census over the $16$ frozen registry
+numbers yields $0$ hits above null expectation, with golden/plastic placebos comparable
+--- no readout connection. Cross-link to Step 27: $\sqrt2-1$ is the thermal kernel
+ratio. Double verdict; no marker moves.
+\veri{v527\_seam\_clock\_silver\_spectrum.py}
+
+\par\smallskip\noindent\textbf{Step 29 --- the bit as a twist-class choice: the physical
+definition \mE/\mC.} Step 26 harvested two bit-presupposing $\pi/2$ structures (the
+$\eta$ flip and the twist frustration). Both are now exact \emph{equivalences} to the
+bit, both directions each. Facet \#14: $\eta$-flip $\Leftrightarrow\delta=\pi/2$
+($\sigma\circ r=-\sigma$ on all four fixing axes; off $\pi/2$ on every axis
+$\sigma\circ r=+\sigma$; the cardinality lemma $\sigma\circ f=-\sigma\Rightarrow
+|A_+|=|A_-|\Rightarrow m=4$; $g$-class census over all $224$ axes: flip class exactly at
+$\{15,31\}$ for $m=4$). Facet \#15: twist-frustration $\Leftrightarrow\delta=\pi/2$
+($\theta$ exchanges $D_{\mathrm{short}}\leftrightarrow D_{\mathrm{long}}$; Gram
+indefinite $(4,4,0)/(8,8,0)$ exactly at $\pi/2$; off reducible and PD; same cardinality
+lemma). The order parameter $O=$ flip-axis fraction equals $1/2$ at $m=4$ and $0$
+everywhere else, with class alternation $(-,+,-,+)$ the nontrivial $\Z_2$ character of
+the $\Z_8$ clock-tower shadow; gauge-robust under every v525 freedom. Unification:
+$\eta$-flip $=$ frustration $=$ flag-transitivity are \emph{one} $\Z_2$ invariant (same
+arc system); the v510 Kramers class is another (constant on the family) --- Kramers $=$
+POSITION half (derived), twist class $=$ MODULUS half (the input). The \vref{v512} web
+grows $13\to15$ facets. \mC\ measurement sketch (principle only): defect transport around
+the axis torsor accumulates the $\eta$ holonomy $=$ a relative $\pi$ phase iff the bit is
+set --- in principle interferometrically readable. Honest fence: the bit remains formal
+input; a definition replaces no derivation. No marker moves.
+\veri{v528\_seam\_bit\_twist\_class\_definition.py}
+
+\par\smallskip\noindent\textbf{Step 30 --- the interacting FK toy: the first firing
+Kill-Test-2 shadow \mE/\mC/\mO.} The door left open by Steps 22/26 --- a genuinely
+interacting $\mathcal A_{\mathrm{hol}}$ --- is probed on the minimal Fidkowski--Kitaev
+quartic on the $16$-Majorana NS seam circle ($256$-dim, exact). Triple verdict. F1 $=$
+KILL (the most important part): $\Theta$ exists exactly on the interacting model
+($U_r^2=2^8$, $\Theta^2=+1$, clock-tower inversion $\mathrm{conj}_V\cdot V=4096$,
+$[\Theta,H_g]=0$, $\Theta\Omega_g=\Omega_g$) --- Kill-Test 1 does \emph{not} fire; but
+Kill-Test 2 \emph{fires at toy level}: reflection positivity breaks in the interacting
+ground state for every $g>0$ --- inertia ladder $(37,0,0)\to(33,4,0)\to(31,6,0)\to
+(29,8,0)$ (most negative eigenvalue $-4.5\times10^{-2}$); the Gibbs state at $\beta=2$
+carries the same ladder; the mechanism is interference (neither crossing nor half-local
+terms alone break); the STRADDLE LAW holds on all $24$ entries --- RP fails exactly on
+quartet-straddled cuts and stays PD on quartet-avoiding ones. Mandatory fence: one toy,
+one interaction class, \mC\ flat-band parent --- this \emph{narrows} the Woit route
+(every $\mathcal A_{\mathrm{hol}}$ must protect RP against exactly this mechanism; the
+straddle law is a concrete hurdle for $\beta_3/\gamma$), it does \emph{not} close it;
+\texttt{WOIT.OS.TWISTOR.01} stays \mO. F2 $=$ KILL: the \emph{tenth} side-blind test on
+the \vref{v512} scoreboard ($9\to10$), the first with genuinely non-Wick-computable
+dynamics --- the interaction sees $\delta$ massively (spectral spread $1.32$), but the
+mark-axis mirror $\Theta_{15}$ maps $H(m)\to H(8-m)$ exactly; all side data are
+mirror-equal. F3 $=$ ERFOLG: grading and the nonsplit $\Z_8$ tower survive
+($\tilde U^2=256\Gamma=(-1)^F$, $V^2=256\tilde U$); the FK fixed-point anchor holds; the
+v524 OS quotient survives $g>0$ constructively on the $\delta=\pi/2$ mark-anchored model.
+No marker moves.
+\veri{v529\_seam\_interacting\_toy\_fk.py}
 
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:

@@ -1,3 +1,8 @@
+# 2026-07-23 (IV)–(VII) — Promotion v526–v529 (thermische Naht / Silber / Twist-Klasse / FK-Toy)
+# Suite 519→523; Wolfram 552→564; Story 26→30 Steps; Scoreboard 9→10; c3 drittes Standbein.
+# KEINE Marker-Moves (auch nicht beim Toy-Kill — nur Contract-Text + Straddle-Hürde).
+# Ledger: SEAM.THERMAL.KMS.01 / SEAM.CLOCK.SILVER.01 / SEAM.BIT.TWISTCLASS.01 / SEAM.INT.FKTOY.01.
+
 ## 2026-07-22 (X–XIII) — v520/v521/v522 promoviert + HFQPO-NICER-Scorecard: die Maß-Entscheidung (ERFOLG-A), der RP-Selektor-Kill des Alignment-Bits (achter seitenblinder Test) und WOIT-β1 (UNENTSCHIEDEN, typisiert); die tfpt_3-Story ist jetzt DREIUNDZWANZIG Schritte; Suite 513→516, Wolfram 522→540
 
 **v520_celestial_wp5e_measure_decision.py (CELEST.WP5E.MEASURE.01, 39 Checks, ~20 s;
