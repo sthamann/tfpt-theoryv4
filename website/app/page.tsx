@@ -10,6 +10,7 @@ import { OpenGates } from "@/components/OpenGates";
 import { ReconstructionChain } from "@/components/ReconstructionChain";
 import { HorizonStory } from "@/components/HorizonStory";
 import { GravityEmergence } from "@/components/GravityEmergence";
+import { ThermalSeamLegs } from "@/components/ThermalSeamLegs";
 import { SectionHeader } from "@/components/SectionHeader";
 import { PapersSection } from "@/components/PapersSection";
 import { PredictionsSection } from "@/components/PredictionsSection";
@@ -47,9 +48,10 @@ export default function HomePage() {
             id="gravity-heading"
             eyebrow="Gravity, parameter-free"
             title="The Einstein equation falls out — with no free dial"
-            description="The entanglement first law, run with TFPT's atoms, gives the full covariant Einstein equation Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ; the seam constant c₃ arrives by three independent routes that all agree."
+            description="The entanglement first law, run with TFPT's atoms, gives the full covariant Einstein equation Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ; the seam constant c₃ arrives by three independent routes that all agree — and its temperature leg is now measured on the seam itself (T_seam = 4c₃, v526)."
           />
           <GravityEmergence />
+          <ThermalSeamLegs />
         </div>
       </section>
       <PapersSection />

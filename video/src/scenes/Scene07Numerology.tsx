@@ -59,7 +59,7 @@ export const Scene07Numerology: React.FC = () => {
             })}
           </div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
-            <CountUp to={472} start={320} end={690} style={{ fontFamily: SERIF, fontSize: 62, fontWeight: 700, color: COLORS.textBright }} />
+            <CountUp to={523} start={320} end={690} style={{ fontFamily: SERIF, fontSize: 62, fontWeight: 700, color: COLORS.textBright }} />
             <span style={{ fontFamily: SANS, fontSize: 30, color: COLORS.text }}>independent checks — each verified by computer</span>
           </div>
           <div style={{ fontFamily: SANS, fontSize: 26, color: COLORS.textDim }}>

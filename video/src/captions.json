@@ -10,7 +10,7 @@
   { "from": 37.0, "to": 43.0, "text": "Gravity — Einstein's equation, with its constants fixed instead of assumed." },
   { "from": 43.0, "to": 49.5, "text": "Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy." },
   { "from": 49.5, "to": 56.0, "text": "The strength of light — the famous one over one-thirty-seven — is just one line among many." },
-  { "from": 56.0, "to": 64.6, "text": "And twenty-three concrete, testable predictions. That's the output. The real question: from how much input?" },
+  { "from": 56.0, "to": 64.6, "text": "And twenty-seven concrete, testable predictions. That's the output. The real question: from how much input?" },
 
   { "from": 65.4, "to": 69.5, "text": "Here's the surprising part: almost nothing goes in." },
   { "from": 69.5, "to": 75.5, "text": "Two numbers. A tempo — set by the edge of space. And a width: how many slots the building block has — five." },
@@ -45,12 +45,22 @@
   { "from": 231.5, "to": 238.0, "text": "We froze predictions before the data, then ran two hundred thousand random look-alikes." },
   { "from": 238.0, "to": 244.6, "text": "They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero." },
 
-  { "from": 245.4, "to": 251.5, "text": "It isn't finished, and we don't pretend it is." },
-  { "from": 251.5, "to": 258.0, "text": "One theorem from sealing the core; a few bridges to known physics; one unit no pure number can give." },
-  { "from": 258.0, "to": 264.6, "text": "Every gap is labelled — and it's killable: neutrino mass, proton decay, dark energy. One miss, and it's wrong." },
+  { "from": 245.4, "to": 250.2, "text": "And it hasn't stopped. Five new results — each machine-checked, each honestly labelled." },
+  { "from": 250.4, "to": 255.5, "text": "One. The calculating engine of the deepest route used to be declared. Now it is derived —" },
+  { "from": 255.5, "to": 260.4, "text": "its key number, sixty-four, is computed three independent ways instead of put in. One global integral stays open." },
+  { "from": 260.6, "to": 266.0, "text": "Two. The bridge from timeless Euclidean math back to real, physical time now stands — at the free level:" },
+  { "from": 266.0, "to": 270.9, "text": "the reflection structure exists, and the little clock returns as a genuine time operator." },
+  { "from": 271.1, "to": 276.5, "text": "Three. The seam has a temperature — exactly the black-hole value its founding constant demands." },
+  { "from": 276.5, "to": 281.4, "text": "Geometry, anomaly, and now temperature — all from c₃ = 1/(8π). The seam is a miniature horizon." },
+  { "from": 281.6, "to": 287.0, "text": "Four. Ten blind tests prove the one remaining input bit cannot be derived — it is a genuine choice." },
+  { "from": 287.0, "to": 291.9, "text": "But it is now physically defined — in principle readable by an interferometer. One axiom becomes one measurement." },
+  { "from": 292.1, "to": 297.0, "text": "And five — reported just as loudly: the first interacting toy model fails one of our own kill tests." },
+  { "from": 297.0, "to": 301.6, "text": "A real threat — and the first constructive filter for the one construction site left." },
 
-  { "from": 265.4, "to": 270.0, "text": "So — is reality compiled? We don't know. That's the honest answer." },
-  { "from": 270.0, "to": 276.5, "text": "But there's now a version you can test: built from almost nothing, fitting a surprising amount," },
-  { "from": 276.5, "to": 280.5, "text": "with every gap marked and every test named." },
-  { "from": 280.5, "to": 285.0, "text": "Maybe the constants were never arbitrary. Maybe they simply had to add up." }
+  { "from": 302.4, "to": 308.9, "text": "So what's still open? The interacting seam. One global integral. One unit no pure number can give." },
+  { "from": 308.9, "to": 315.6, "text": "Every gap labelled — and still killable: neutrino mass, proton decay, dark energy. One clean miss, and it's wrong." },
+
+  { "from": 316.4, "to": 320.8, "text": "So — is reality compiled? We still don't know. That's the honest answer." },
+  { "from": 320.8, "to": 326.2, "text": "But the version you can test keeps getting sharper — more derived, less declared; every gap marked, every test named." },
+  { "from": 326.2, "to": 330.0, "text": "Maybe the constants were never arbitrary. Maybe they simply had to add up." }
 ]

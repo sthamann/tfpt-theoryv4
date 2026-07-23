@@ -87,7 +87,7 @@ export const Scene02Result: React.FC = () => {
           ))}
         </div>
 
-        {/* the 23-prediction band + the cliffhanger */}
+        {/* the 27-prediction band + the cliffhanger */}
         <div
           style={{
             ...band,
@@ -101,7 +101,7 @@ export const Scene02Result: React.FC = () => {
         >
           <div style={{ display: "flex", alignItems: "baseline", gap: 18 }}>
             <CountUp
-              to={23}
+              to={27}
               start={1075}
               end={1175}
               style={{ fontFamily: SERIF, fontSize: 86, fontWeight: 700, color: COLORS.textBright }}

@@ -130,7 +130,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v512_seam_tau_flag** [E/C] `SEAM.TAU.FLAG.01` — SEAM.TAU.FLAG.01: the flag-transitivity equivalence web -- the tau = i attack executed on the free RP seam circle: which ESTABLISHED seam datum excludes the free-but-non-harmonic c
   - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, AX.P2.01, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v521_seam_bit_rp_blind** [E/C/O/X] `SEAM.BIT.RPBLIND.01` — SEAM.BIT.RPBLIND.01: the RP/Theta attack on the alignment bit DECIDED -- 'free OS positivity does NOT see delta', an honest, decided NEGATIVE result (v508 style; 25 checks, ~25 s):
-  - deps: v512_seam_tau_flag, v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v506, v507, v510 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v512_seam_tau_flag, v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v506, v507, v510 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -716,15 +716,15 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v524_woit_beta2_os_quotient** [E/C/O/X] `WOIT.BETA2.OS.01` — WOIT.BETA2.OS.01: the WOIT-beta2 milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 executed -- 'the OS quotient of the free system made explicit' (verdict SUCCESS per the froze
   - deps: v519_woit_theta_rp_free, v522_woit_beta1_gso_gauge, v521_seam_bit_rp_blind, v510, v519, v522 · cited: 3 e8 audit bootstrap, research contracts
 - **v525_seam_bit_twist_blind** [E/C/O/X] `SEAM.BIT.TWISTBLIND.01` — SEAM.BIT.TWISTBLIND.01: the twist-state attack on the alignment bit DECIDED -- 'mark-decorated states do not see delta', an honest, decided NEGATIVE result (v508 style): the NINTH 
-  - deps: v521_seam_bit_rp_blind, v512_seam_tau_flag, v510_seam_bit_freedom, v519_woit_theta_rp_free, v510, v512, v519, v521 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v521_seam_bit_rp_blind, v512_seam_tau_flag, v510_seam_bit_freedom, v519_woit_theta_rp_free, v510, v512, v519, v521 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 - **v526_seam_thermal_kms_nariai_bridge** [E/C] `SEAM.THERMAL.KMS.01` — SEAM.THERMAL.KMS.01: the thermal seam -- KMS of the reconstructed free OS quotient CLOSED onto the Nariai/BH temperature chain (the THIRD LEG of c3). Verdict SUCCESS (22 checks, ~8
-  - deps: v524_woit_beta2_os_quotient, v519_woit_theta_rp_free, v527_seam_clock_silver_spectrum, v58, v104, v208, v519, v524 · cited: 3 e8 audit bootstrap, horizon readouts, research contracts
+  - deps: v524_woit_beta2_os_quotient, v519_woit_theta_rp_free, v527_seam_clock_silver_spectrum, v58, v104, v208, v519, v524 · cited: origin theory, 3 e8 audit bootstrap, horizon readouts, research contracts
 - **v527_seam_clock_silver_spectrum** [E/X] `SEAM.CLOCK.SILVER.01` — SEAM.CLOCK.SILVER.01: the silver clock eigenvalue EXPLAINED and DEMYSTIFIED (double verdict, anti-numerology style; 22 checks, ~10 s). STRUCTURE=SUCCESS: {1, sqrt2-1} closed via di
   - deps: v524_woit_beta2_os_quotient, v526_seam_thermal_kms_nariai_bridge, v512_seam_tau_flag, v519, v524, v526 · cited: 3 e8 audit bootstrap, research contracts
 - **v528_seam_bit_twist_class_definition** [E/C] `SEAM.BIT.TWISTCLASS.01` — SEAM.BIT.TWISTCLASS.01: the alignment bit as an exact measurable TWIST-CLASS choice (the physical definition; 18 checks, ~46 s). Verdict SUCCESS. [E] Facets #14 (eta-flip <=> delta
-  - deps: v512_seam_tau_flag, v521_seam_bit_rp_blind, v525_seam_bit_twist_blind, v510_seam_bit_freedom, v529_seam_interacting_toy_fk, v510, v512, v521 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v512_seam_tau_flag, v521_seam_bit_rp_blind, v525_seam_bit_twist_blind, v510_seam_bit_freedom, v529_seam_interacting_toy_fk, v510, v512, v521 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 - **v529_seam_interacting_toy_fk** [E/C/O/X] `SEAM.INT.FKTOY.01` — SEAM.INT.FKTOY.01: the minimal interacting Fidkowski-Kitaev seam toy -- the FIRST firing Kill-Test-2 shadow (triple-verdicted; 24 checks, ~97 s). F1=KILL: Theta exists (U_r^2=2^8, 
-  - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v528_seam_bit_twist_class_definition, v512_seam_tau_flag, v492_celestial_z4_orbifold, v510, v512 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v528_seam_bit_twist_class_definition, v512_seam_tau_flag, v492_celestial_z4_orbifold, v510, v512 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._

@@ -13,7 +13,7 @@ interface Row {
 const ROWS: Row[] = [
   {
     layer: "Two axioms {c₃, g_car}",
-    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable, P2 algebra Lean-formalised; reduction state: four marks + one discrete symmetry-lift bit (flag transitivity ⟺ τ = i) + π (v491/v499/v510/v512)",
+    status: "Declared inputs — c₃ Gauss–Bonnet-hardenable (temperature since measured as its third leg, T_seam = 4c₃, v526), P2 algebra Lean-formalised; reduction state: four marks + one discrete symmetry-lift bit — the twist-class choice (flag transitivity ⟺ τ = i; 10 side-blind tests survived, gauge-robust order parameter, in principle interferometrically readable — stays input) + π (v491/v499/v510/v512/v528/v529)",
     paper: "Doc 1",
     tone: "downstream",
   },
@@ -49,7 +49,7 @@ const ROWS: Row[] = [
   },
   {
     layer: "Residual interfaces v_geo [O], G_net [C], F_transfer [C]",
-    status: "Numbered research contracts — the scale anchor (open), the metric inclusion (route split: MMST route SEAM.EQUIV.MMST.01 closed modulo cited theorems, twistor route SEAM.EQUIV.TWISTOR.01 open, parent SEAM.EQUIV.01 [O] as an unconditional claim; extension leg on peer-reviewed crossed-product theorems, v469) and the transfer functor [C]",
+    status: "Numbered research contracts — the scale anchor (open), the metric inclusion (route split: MMST route SEAM.EQUIV.MMST.01 closed modulo cited theorems, twistor route SEAM.EQUIV.TWISTOR.01 open with its measure chain now DERIVED at probe level (v520/v523: single-valuedness from F-independence + Quillen, 1/det_j the Atiyah–Bott fixed-point factor, ψ = 64), parent SEAM.EQUIV.01 [O] as an unconditional claim; extension leg on peer-reviewed crossed-product theorems, v469; OS twistor bridge WOIT.OS.TWISTOR.01 with α/β₁/β₂ executed, β₃ next under the straddle-law constraint, v519/v522/v524/v529, stays [O]) and the transfer functor [C]",
     paper: "Doc 8",
     tone: "downstream",
   },

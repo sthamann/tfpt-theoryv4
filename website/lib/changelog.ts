@@ -47,6 +47,579 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "=150 2026-07-23 (VIII) (prominence pass — the v519–v529 breakthroughs lifted into the FRAME texts of the papers and the website data layer; purely editorial, NO new modules, NO marker moves — (1) "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_5_redteam"
+      },
+      {
+        "k": "t",
+        "v": " gains the seam round Target G: the ten-test side-blind scoreboard on the alignment bit ("
+      },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v521"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v525"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v529"
+      },
+      {
+        "k": "t",
+        "v": ") and the first "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "firing"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " kill test of the programme — the interacting straddle law ("
+      },
+      {
+        "k": "c",
+        "v": "v529"
+      },
+      {
+        "k": "t",
+        "v": "), documented as a named threat AND the first hard selection principle for "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal A_{\\mathrm{hol}}"
+      },
+      {
+        "k": "t",
+        "v": ", fenced at toy level; (2) the bit-reduction statements in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "origin_theory"
+      },
+      {
+        "k": "t",
+        "v": " extended from the v512 state to the current state (ten side-blind tests, the twist-class definition with gauge-robust order parameter, “in principle interferometrically readable”, "
+      },
+      {
+        "k": "c",
+        "v": "v528"
+      },
+      {
+        "k": "t",
+        "v": " — the bit stays formal input); (3) the thermal seam lifted into the "
+      },
+      {
+        "k": "c",
+        "v": "origin_theory"
+      },
+      {
+        "k": "t",
+        "v": " horizon chapter (new keybox: "
+      },
+      {
+        "k": "m",
+        "v": "T_{\\mathrm{seam}}=4c_3"
+      },
+      {
+        "k": "t",
+        "v": " measured, temperature the third leg of "
+      },
+      {
+        "k": "m",
+        "v": "c_3"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v526"
+      },
+      {
+        "k": "t",
+        "v": ") and into the "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_horizon_readouts"
+      },
+      {
+        "k": "t",
+        "v": " head keybox; (4) "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " title/keybox now carry the thirty-step story and “the measure chain is derived” ("
+      },
+      {
+        "k": "c",
+        "v": "v520"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v523"
+      },
+      {
+        "k": "t",
+        "v": ") prominently; (5) "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " title/intro keybox now show the executed stages of "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.SEAM.01"
+      },
+      {
+        "k": "t",
+        "v": " (M1–M3, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-chains decided, "
+      },
+      {
+        "k": "m",
+        "v": "w_m"
+      },
+      {
+        "k": "t",
+        "v": " derived) and "
+      },
+      {
+        "k": "c",
+        "v": "WOIT.OS.TWISTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\alpha/\\beta_1/\\beta_2"
+      },
+      {
+        "k": "t",
+        "v": " executed, "
+      },
+      {
+        "k": "m",
+        "v": "\\beta_3"
+      },
+      {
+        "k": "t",
+        "v": " next under the straddle constraint); both contracts stay Open)"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_5_redteam"
+        },
+        {
+          "k": "t",
+          "v": " (Target G "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " method/outcome/title honesty pass); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (bit-reduction statements "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " ten tests "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " twist-class definition); "
+        },
+        {
+          "k": "c",
+          "v": "origin_theory"
+        },
+        {
+          "k": "t",
+          "v": " (thermal-seam keybox, horizon chapter); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_horizon_readouts"
+        },
+        {
+          "k": "t",
+          "v": " (head keybox third leg); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " (title "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " keybox: thirty-step story, measure chain derived); "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (title "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " intro keybox: executed contract stages)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (redteam Target G, horizon third leg, audit/contracts abstracts, architecture reduction state); "
+        },
+        {
+          "k": "c",
+          "v": "orientation/StatusMatrix.tsx"
+        },
+        {
+          "k": "t",
+          "v": " (v512 "
+        },
+        {
+          "k": "m",
+          "v": "\\to"
+        },
+        {
+          "k": "t",
+          "v": " current state); "
+        },
+        {
+          "k": "c",
+          "v": "glossary.ts"
+        },
+        {
+          "k": "t",
+          "v": " (new terms: twist-class choice, thermal seam, straddle law, side-blind scoreboard); new visual components "
+        },
+        {
+          "k": "c",
+          "v": "ThermalSeamLegs"
+        },
+        {
+          "k": "t",
+          "v": " (three legs of "
+        },
+        {
+          "k": "m",
+          "v": "c_3"
+        },
+        {
+          "k": "t",
+          "v": ": geometry "
+        },
+        {
+          "k": "c",
+          "v": "v58"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " anomaly/modular "
+        },
+        {
+          "k": "c",
+          "v": "v208"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " temperature "
+        },
+        {
+          "k": "c",
+          "v": "v526"
+        },
+        {
+          "k": "t",
+          "v": ") and "
+        },
+        {
+          "k": "c",
+          "v": "WoitBridgeProgress"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "\\alpha"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\beta_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\beta_2"
+        },
+        {
+          "k": "t",
+          "v": " done, "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": " open, straddle warning) on the home and verification pages."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Counters."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Predictions counter made consistent with "
+        },
+        {
+          "k": "c",
+          "v": "predictions.ts"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "27"
+        },
+        {
+          "k": "t",
+          "v": " falsifiable test surfaces): "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": " badge/hero/prose and the intro-film description ("
+        },
+        {
+          "k": "m",
+          "v": "23\\to27"
+        },
+        {
+          "k": "t",
+          "v": "; the film narration already says twenty-seven)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honesty."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " No marker moves anywhere; "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " stay Open; the bit stays input; all fences (“derived at probe level”, “at the free level”, “toy model”) preserved verbatim."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
         "v": "=150 2026-07-23 (VII) ("
       },
       {

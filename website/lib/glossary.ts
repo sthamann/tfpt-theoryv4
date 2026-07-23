@@ -164,7 +164,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "celestial route",
     alias: ["CELEST.SEAM.01", "celestial sphere", "celestial-holographic route"],
     short:
-      "The fourth research contract: the seam's boundary 2-sphere IS the celestial sphere of null directions (Möb ≅ PSL(2,ℂ)), and the E₈ μ₄-glue is a flat ℤ₄ monodromy on the A₃ ALE space ℂ²/ℤ₄. WP1–WP5d (both WP5d stages) plus the WP5e α, β, γ, δ₁, δ₂, ε₂ and ε₁ stages and the three back-reaction milestones M1–M3 executed exactly (clock² = deck, null ideal derived, deleting operator explicit, GNS limit state constructed, two-interval index measured, split + strong additivity witnessed, prefactor + level k = 1 pinned on the CFT side, the equivariant anomaly ledger exact on the twistor side with the honest a₀ refutation, the exchange sub-branch closed with certificate, 'one level' a theorem of clock invariance, the O(−2) bulk-axion slot built with λ̃ = 6 triply pinned, the back-reacted Ω_N closed-form with (2πi)²-integral lockstep periods and the lens-forced source charge 4 = |μ₄|, the twisted KS measure on the declared completion reading cancelling the 32·T₃ residual and supplying the ψ = 64 slice without the cubic d-channel, the a₀ uplift coupled to the centre count on four scales, the δ₁ chain DECIDED — the derived chiral measure fails all three preregistered testers, a genuine kill on the derived surface in stated tension with the declared v516 reading — and the measure question since DECIDED at probe level (v520, ERFOLG-A: single-valuedness derived from F-independence + the Quillen pairing under the typed premises TP-1..TP-4, the completion reading wins, the kill sharpened), and the w_m normalisation since DERIVED constructively (v523, ERFOLG: 1/det_j = the Atiyah–Bott/zeta-determinant fixed-point factor, three independent sources — mode ledger, zeta/Quillen, δ₁f blocks — with the v516 chain reproduced number by number under TP-REG/TP-Q/TP-NUM/TP-CH); WP5e proper (the global BCOV quantisation, narrowed to the global BCOV integral beyond the fibre zero-mode factor) open [O]. A second, quantitative approach to SEAM.EQUIV.01 — which stays [O]. (v492–v525)",
+      "The fourth research contract: the seam's boundary 2-sphere IS the celestial sphere of null directions (Möb ≅ PSL(2,ℂ)), and the E₈ μ₄-glue is a flat ℤ₄ monodromy on the A₃ ALE space ℂ²/ℤ₄. WP1–WP5d (both WP5d stages) plus the WP5e α, β, γ, δ₁, δ₂, ε₂ and ε₁ stages and the three back-reaction milestones M1–M3 executed exactly (clock² = deck, null ideal derived, deleting operator explicit, GNS limit state constructed, two-interval index measured, split + strong additivity witnessed, prefactor + level k = 1 pinned on the CFT side, the equivariant anomaly ledger exact on the twistor side with the honest a₀ refutation, the exchange sub-branch closed with certificate, 'one level' a theorem of clock invariance, the O(−2) bulk-axion slot built with λ̃ = 6 triply pinned, the back-reacted Ω_N closed-form with (2πi)²-integral lockstep periods and the lens-forced source charge 4 = |μ₄|, the twisted KS measure on the declared completion reading cancelling the 32·T₃ residual and supplying the ψ = 64 slice without the cubic d-channel, the a₀ uplift coupled to the centre count on four scales, the δ₁ chain DECIDED — the derived chiral measure fails all three preregistered testers, a genuine kill on the derived surface in stated tension with the declared v516 reading — and the measure question since DECIDED at probe level (v520, ERFOLG-A: single-valuedness derived from F-independence + the Quillen pairing under the typed premises TP-1..TP-4, the completion reading wins, the kill sharpened), and the w_m normalisation since DERIVED constructively (v523, ERFOLG: 1/det_j = the Atiyah–Bott/zeta-determinant fixed-point factor, three independent sources — mode ledger, zeta/Quillen, δ₁f blocks — with the v516 chain reproduced number by number under TP-REG/TP-Q/TP-NUM/TP-CH); WP5e proper (the global BCOV quantisation, narrowed to the global BCOV integral beyond the fibre zero-mode factor) open [O]. A second, quantitative approach to SEAM.EQUIV.01 — which stays [O]. (v492–v529)",
   },
   {
     term: "ALE space",
@@ -177,6 +177,30 @@ export const GLOSSARY: GlossaryEntry[] = [
     alias: ["level-2 null ideal", "the 27000"],
     short:
       "The maximal submodule the (E₈)₁ vacuum character deletes at level 2: exactly 27000 = 30³ = (h∨)³ out of Sym²(248) = 27000+3875+1, derived from root data (v497); its generator is the explicit singular vector |s⟩ = (E^θ_{−1})²|0⟩ with J^a_1|s⟩ = 0 on all 248 generators (v498). Quotient 4124 = the μ₄ sector sum.",
+  },
+  {
+    term: "twist-class choice",
+    alias: ["twist class", "alignment bit", "symmetry-lift bit", "the bit"],
+    short:
+      "The physical definition of the one discrete carrier input: which twist class nature realises on the seam (v528). A 15-facet exact equivalence web (flag transitivity ⟺ τ = i) with a gauge-robust order parameter O = 1/2 vs 0, in principle interferometrically readable via the η holonomy. Survivor of ten side-blind tests — it remains formal input, not derived.",
+  },
+  {
+    term: "thermal seam",
+    alias: ["T_seam", "third leg of c₃", "third leg", "SEAM.THERMAL.KMS.01"],
+    short:
+      "The reconstructed free seam OS quotient is KMS with a MEASURED temperature: detailed balance gives β = N clock steps, β_angle = 2π exact, T_seam = 4c₃ — the Bisognano–Wichmann/Hawking normalisation (v526). Temperature joins geometry and anomaly as the third leg of c₃ = 1/(8π). [C]-typed reading; the entropy-fraction bridge honestly does not close.",
+  },
+  {
+    term: "straddle law",
+    alias: ["straddle filter", "quartet-straddled cuts", "SEAM.INT.FKTOY.01"],
+    short:
+      "The failure law of the first interacting seam toy (v529): reflection positivity breaks for every g > 0 exactly on quartet-straddled cuts and stays positive on quartet-avoiding ones (24/24). Kill-Test 2 fires at toy level under a typed fence — an honest threat AND the first hard selection principle for the interacting algebra A_hol. WOIT.OS.TWISTOR.01 stays [O].",
+  },
+  {
+    term: "side-blind scoreboard",
+    alias: ["side-blind test", "side-blind tests", "ten side-blind tests"],
+    short:
+      "The running tally of attacks that tried to DERIVE the alignment bit from side-blind data — all killed: the v512 jet web, free RP/Θ (8th, v521), the exhausted Wick-computable twist-state class (9th, v525), the interacting FK toy (10th, v529). Ten tests, ten kills: the bit stays genuine discrete input.",
   },
 ];
 

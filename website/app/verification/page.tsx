@@ -5,6 +5,8 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { VerificationDag } from "@/components/VerificationDag";
 import { ScriptIndex } from "@/components/ScriptIndex";
 import { GravityEmergence } from "@/components/GravityEmergence";
+import { ThermalSeamLegs } from "@/components/ThermalSeamLegs";
+import { WoitBridgeProgress } from "@/components/WoitBridgeProgress";
 import { UniversalGapLab } from "@/components/UniversalGapLab";
 import { SuiteTimeline } from "@/components/SuiteTimeline";
 import { ResidualChain } from "@/components/ResidualChain";
@@ -466,6 +468,7 @@ export default function VerificationPage() {
           <div className="mt-8">
             <ResidualChain />
           </div>
+          <WoitBridgeProgress />
           <p className="mt-5 break-words text-sm leading-relaxed text-slate-400">
             The bedrock is closed modulo cited theorems via the Seam Equivalence Theorem
             (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
@@ -480,6 +483,7 @@ export default function VerificationPage() {
             <span className="font-mono">v_geo</span> stays the one no-unit primitive.
           </p>
           <GravityEmergence />
+          <ThermalSeamLegs />
         </div>
       </section>
 

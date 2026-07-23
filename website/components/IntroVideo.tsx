@@ -9,7 +9,7 @@ const VIDEO_SRC = "/intro/tfpt-intro.mp4";
 const POSTER_SRC = "/intro/tfpt-intro-poster.jpeg";
 const CAPTIONS_SRC = "/intro/tfpt-intro.en.vtt";
 
-/** Chapter markers — seconds match the video's nine beats (script.ts). */
+/** Chapter markers — seconds match the video's ten beats (script.ts). */
 const CHAPTERS: { t: number; label: string }[] = [
   { t: 0, label: "Is reality compiled?" },
   { t: 20, label: "What comes out" },
@@ -18,8 +18,9 @@ const CHAPTERS: { t: number; label: string }[] = [
   { t: 135, label: "It computes itself" },
   { t: 165, label: "The beauty" },
   { t: 195, label: "Not numerology" },
-  { t: 245, label: "Honest gaps" },
-  { t: 265, label: "The honest answer" },
+  { t: 245, label: "Five breakthroughs" },
+  { t: 302, label: "Honest gaps" },
+  { t: 316, label: "The honest answer" },
 ];
 
 /**
@@ -35,7 +36,7 @@ const TRANSCRIPT: { heading: string; body: string }[] = [
   },
   {
     heading: "What comes out (0:20)",
-    body: "Start at the end — with what this one idea actually produces. Almost the whole Standard Model — our rulebook for every known particle and force: the forces, why matter comes in three families, the single Higgs, the masses, how they mix. Gravity — Einstein's equation, with its constants fixed instead of assumed. Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy. The strength of light — the famous one over one-thirty-seven — is just one line among many. And twenty-three concrete, testable predictions. That's the output. The real question: from how much input?",
+    body: "Start at the end — with what this one idea actually produces. Almost the whole Standard Model — our rulebook for every known particle and force: the forces, why matter comes in three families, the single Higgs, the masses, how they mix. Gravity — Einstein's equation, with its constants fixed instead of assumed. Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy. The strength of light — the famous one over one-thirty-seven — is just one line among many. And twenty-seven concrete, testable predictions. That's the output. The real question: from how much input?",
   },
   {
     heading: "From how little (1:05)",
@@ -58,12 +59,16 @@ const TRANSCRIPT: { heading: string; body: string }[] = [
     body: "Now the fair objection: small whole numbers that fit reality — isn't that just numerology, like seeing faces in clouds? We took it seriously. Nobody drew this picture top-down. It assembled itself — out of hundreds of small, independent checks, each verified by computer, that slowly clicked into one whole. E₈ proves the pieces can fit. These checks prove we're not fooling ourselves — every load-bearing claim machine-verified twice, with a team tasked to break it. We froze predictions before the data, then ran two hundred thousand random look-alikes. They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero.",
   },
   {
-    heading: "Honest about the gaps (4:05)",
-    body: "It isn't finished, and we don't pretend it is. One theorem from sealing the core; a few bridges to known physics; one unit no pure number can give. Every gap is labelled — and it's killable: neutrino mass, proton decay, dark energy. One miss, and it's wrong.",
+    heading: "Five breakthroughs (4:05)",
+    body: "And it hasn't stopped. Five new results — each machine-checked, each honestly labelled. One. The calculating engine of the deepest route used to be declared. Now it is derived — its key number, sixty-four, is computed three independent ways instead of put in. One global integral stays open. Two. The bridge from timeless Euclidean math back to real, physical time now stands — at the free level: the reflection structure exists, and the little clock returns as a genuine time operator. Three. The seam has a temperature — exactly the black-hole value its founding constant demands. Geometry, anomaly, and now temperature — all from c₃ = 1/(8π). The seam is a miniature horizon. Four. Ten blind tests prove the one remaining input bit cannot be derived — it is a genuine choice. But it is now physically defined — in principle readable by an interferometer. One axiom becomes one measurement. And five — reported just as loudly: the first interacting toy model fails one of our own kill tests. A real threat — and the first constructive filter for the one construction site left.",
   },
   {
-    heading: "The honest answer (4:25)",
-    body: "So — is reality compiled? We don't know. That's the honest answer. But there's now a version you can test: built from almost nothing, fitting a surprising amount, with every gap marked and every test named. Maybe the constants were never arbitrary. Maybe they simply had to add up.",
+    heading: "Honest gaps (5:02)",
+    body: "So what's still open? The interacting seam. One global integral. One unit no pure number can give. Every gap labelled — and still killable: neutrino mass, proton decay, dark energy. One clean miss, and it's wrong.",
+  },
+  {
+    heading: "The honest answer (5:16)",
+    body: "So — is reality compiled? We still don't know. That's the honest answer. But the version you can test keeps getting sharper — more derived, less declared; every gap marked, every test named. Maybe the constants were never arbitrary. Maybe they simply had to add up.",
   },
 ];
 
@@ -74,10 +79,10 @@ const videoJsonLd = {
   "@type": "VideoObject",
   name: "TFPT — Is reality compiled?",
   description:
-    "A short film on Topological Fixed-Point Theory (TFPT) built around one honest question: is reality compiled? It opens with the output — almost the whole Standard Model (forces, three generations, one Higgs, the masses and mixings, strong-CP = 0), gravity (Einstein's equation with fixed constants), pieces of cosmology, the fine-structure constant α⁻¹ = 137.0359992 as just one line among many, and 23 testable predictions — then shows how little goes in: two numbers that reduce to one small whole-number pattern and π. E₈ is the proof layer: the referee (240-root projection) where the parts fit only one way, so the inputs are forced — a fixed point. The same 2·3·5 runs through every part, and a spectral-gap clock settles on one attractor (constants selected, not tuned). On numerology: hundreds of machine-checks assembled the picture bottom-up, verified twice (Wolfram + Lean) with a red team; 13 predictions were frozen before the data and beat 200,000 random look-alikes (≤5/13), odds below 10⁻³⁰. It is honest about the gaps (one theorem, a few bridges, one unit no pure number can give) and falsifiable (neutrino mass, proton decay, dark energy). The verdict is humble: we don't know — but here is a version you can test.",
+    "A short film on Topological Fixed-Point Theory (TFPT) built around one honest question: is reality compiled? It opens with the output — almost the whole Standard Model (forces, three generations, one Higgs, the masses and mixings, strong-CP = 0), gravity (Einstein's equation with fixed constants), pieces of cosmology, the fine-structure constant α⁻¹ = 137.0359992 as just one line among many, and 27 testable predictions — including the derived measure chain and the thermal seam — then shows how little goes in: two numbers that reduce to one small whole-number pattern and π. E₈ is the proof layer: the referee (240-root projection) where the parts fit only one way, so the inputs are forced — a fixed point. The same 2·3·5 runs through every part, and a spectral-gap clock settles on one attractor (constants selected, not tuned). On numerology: hundreds of machine-checks assembled the picture bottom-up, verified twice (Wolfram + Lean) with a red team; 13 predictions were frozen before the data and beat 200,000 random look-alikes (≤5/13), odds below 10⁻³⁰. Five machine-checked breakthroughs sharpen the picture; the remaining gaps stay labelled and killable (neutrino mass, proton decay, dark energy). The verdict is humble: we still don't know — but here is a version you can test.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-07-14",
-  duration: "PT4M45S",
+  uploadDate: "2026-07-23",
+  duration: "PT5M30S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
   isFamilyFriendly: true,
@@ -135,7 +140,7 @@ export function IntroVideo() {
           align="center"
           eyebrow="Start here"
           title="Is reality compiled?"
-          description="A short film: the whole Standard Model, gravity and 23 predictions out of almost nothing — why E₈ is the proof layer, how the two inputs fix themselves, the beauty of one connected object, and how we keep it honest rather than numerology."
+          description="A short film: the whole Standard Model, gravity and 27 predictions out of almost nothing — why E₈ is the proof layer, how the two inputs fix themselves, the beauty of one connected object, and how we keep it honest rather than numerology."
         />
 
         <figure className="mt-10">
@@ -199,9 +204,9 @@ export function IntroVideo() {
           </nav>
 
           <figcaption className="mt-3 text-center text-xs text-slate-500">
-            English narration with on-screen captions; a selectable subtitle
-            track and the full transcript below are generated from the same
-            source.
+            English captions burned into the picture (silent track); a selectable
+            subtitle track and the full transcript below are generated from the
+            same source.
           </figcaption>
         </figure>
 

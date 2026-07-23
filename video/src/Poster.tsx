@@ -37,9 +37,9 @@ export const Poster: React.FC = () => {
             textAlign: "center",
           }}
         >
-          The whole Standard Model, gravity and 23 predictions — from almost nothing.
+          The whole Standard Model, gravity and 27 predictions — from almost nothing.
         </div>
-        <div style={{ fontFamily: MONO, fontSize: 26, color: COLORS.textDim }}>a 5-minute introduction</div>
+        <div style={{ fontFamily: MONO, fontSize: 26, color: COLORS.textDim }}>a 5½-minute introduction</div>
       </AbsoluteFill>
     </AbsoluteFill>
   );

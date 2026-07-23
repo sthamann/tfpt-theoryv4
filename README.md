@@ -4,7 +4,7 @@
 
 ### Can the structure of fundamental physics be compiled from one discrete seed and π?
 
-<a href="assets/readme/00_hero.png"><img src="assets/readme/00_hero.png" alt="TFPT: one seed a=(1,1,2)+π → E8 consistency hull → Standard Model, α⁻¹=137.0359992, gravity, cosmology → 23 falsifiable predictions, 3 verification engines" width="880"></a>
+<a href="assets/readme/00_hero.png"><img src="assets/readme/00_hero.png" alt="TFPT: one seed a=(1,1,2)+π → E8 consistency hull → Standard Model, α⁻¹=137.0359992, gravity, cosmology → 27 falsifiable predictions, 3 verification engines" width="880"></a>
 
 **TFPT is a falsifiable, machine-checked framework that reconstructs major dimensionless structures
 of particle physics, gravity and cosmology from `a = (1, 1, 2)` and `π`** — a *candidate*
@@ -16,19 +16,20 @@ parameter-free compiler for the dimensionless skeleton of fundamental physics.
   <a href="https://github.com/sthamann/tfpt/actions/workflows/lean.yml"><img alt="Lean Proofs" src="https://github.com/sthamann/tfpt/actions/workflows/lean.yml/badge.svg"></a>
   <br>
   <img alt="Version 5.4" src="https://img.shields.io/badge/version-5.4-6e56cf">
-  <img alt="Predictions" src="https://img.shields.io/badge/predictions-23_falsifiable-db2777">
+  <img alt="Predictions" src="https://img.shields.io/badge/predictions-27_falsifiable-db2777">
   <img alt="Engines" src="https://img.shields.io/badge/verification-Python_·_Wolfram_·_Lean-16a34a">
   <a href="https://doi.org/10.5281/zenodo.20846087"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20846087-3b82f6"></a>
   <a href="https://www.fixpoint-theory.com"><img alt="Website" src="https://img.shields.io/badge/website-fixpoint--theory.com-2563eb"></a>
 </p>
 
-**[▶︎ Understand it in 5 minutes](https://www.fixpoint-theory.com/#intro-video)** ·
+**[▶︎ Understand it in five and a half minutes](https://www.fixpoint-theory.com/#intro-video)** ·
 **[⚡ Run the verifier](#run-the-verifier)** ·
 **[📄 Read the theory](docs/THEORY.md)**
 
 </div>
 
-This repository contains the complete theory, **23 frozen predictions**, three independent
+This repository contains the complete theory, **27 falsifiable predictions** (the core registry
+frozen before the data), three independent
 verification engines (Python + Wolfram + Lean), and a versioned status ledger that types every
 claim — including its **explicit open problems and falsification criteria**.
 
@@ -43,7 +44,7 @@ Different readers want different proof. Pick your route:
 | a **physicist** | [`docs/FOR_PHYSICISTS.md`](docs/FOR_PHYSICISTS.md) — the assumptions, the derivation, the open interfaces |
 | a **mathematician** | [`docs/FOR_MATHEMATICIANS.md`](docs/FOR_MATHEMATICIANS.md) — the `E8` closure and the formal certificates |
 | here to **verify the claims** | [Run the 30-second verifier](#run-the-verifier), then [`docs/VERIFICATION.md`](docs/VERIFICATION.md) |
-| here for the **intuition** | [the 5-minute film](https://www.fixpoint-theory.com/#intro-video) |
+| here for the **intuition** | [the 5½-minute film](https://www.fixpoint-theory.com/#intro-video) |
 | here to **falsify it** | [`docs/FALSIFICATION.md`](docs/FALSIFICATION.md) — the kill tests |
 
 ---

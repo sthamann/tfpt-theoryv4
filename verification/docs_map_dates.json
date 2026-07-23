@@ -100,8 +100,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::How to read this document::1": {
-  "hash": "e997c72a494c",
-  "date": "2026-07-22"
+  "hash": "818fd9e7fe9d",
+  "date": "2026-07-23"
  },
  "tfpt_1_architecture_e8::section::Headline: the Pascal compiler on five carrier slots::1": {
   "hash": "32b8525a612e",
@@ -304,8 +304,8 @@
   "date": "2026-06-12"
  },
  "tfpt_1_architecture_e8::section::Theorem 7 --- the $D_5\\times A_3$ lift of the $E_8$ atlas::1": {
-  "hash": "139264e6aedc",
-  "date": "2026-07-22"
+  "hash": "1fc34aad14bd",
+  "date": "2026-07-23"
  },
  "tfpt_1_architecture_e8::section::Theorem 8 --- the $(1,1,2)$ anchor microcode and the $\\varphi_0$-ladder::1": {
   "hash": "8bd4d14e4c33",
@@ -424,8 +424,8 @@
   "date": "2026-06-12"
  },
  "tfpt_2_standard_model::section::Global computation: the anchor multiset is derived::1": {
-  "hash": "f4c99985896d",
-  "date": "2026-07-22"
+  "hash": "ca541ddd8934",
+  "date": "2026-07-23"
  },
  "tfpt_2_standard_model::subsection::Part (ii): the $\\mathbb Z_6$ structure of the residues, and the frontier::1": {
   "hash": "460dabfecef9",
@@ -504,8 +504,8 @@
   "date": "2026-06-25"
  },
  "tfpt_3_e8_audit_bootstrap::front::(front matter)::1": {
-  "hash": "28184b45056a",
-  "date": "2026-06-12"
+  "hash": "fd75ac49ad8c",
+  "date": "2026-07-23"
  },
  "tfpt_3_e8_audit_bootstrap::section::The compiler core (where this note sits)::1": {
   "hash": "8e3d9559b8f4",
@@ -636,12 +636,12 @@
   "date": "2026-06-25"
  },
  "tfpt_5_redteam::front::(front matter)::1": {
-  "hash": "aef4220c9a9f",
-  "date": "2026-07-22"
+  "hash": "6176bd571cf4",
+  "date": "2026-07-23"
  },
  "tfpt_5_redteam::section::Method::1": {
-  "hash": "610fddcc2990",
-  "date": "2026-06-23"
+  "hash": "0a16de6f1fa8",
+  "date": "2026-07-23"
  },
  "tfpt_5_redteam::section::Target A --- the $(E8)_1$ boundary-net identification::1": {
   "hash": "a2a8182c2254",
@@ -667,13 +667,17 @@
   "hash": "0be253919300",
   "date": "2026-07-14"
  },
- "tfpt_5_redteam::section::Outcome::1": {
-  "hash": "a78ce472cb03",
+ "tfpt_5_redteam::section::Target G --- the alignment bit and the interacting seam (the first shot that lands)::1": {
+  "hash": "fd795d46876d",
   "date": "2026-07-22"
  },
+ "tfpt_5_redteam::section::Outcome::1": {
+  "hash": "eb00cca76727",
+  "date": "2026-07-23"
+ },
  "tfpt_horizon_readouts::front::(front matter)::1": {
-  "hash": "091987bff9bb",
-  "date": "2026-06-12"
+  "hash": "50c90976f69a",
+  "date": "2026-07-23"
  },
  "tfpt_horizon_readouts::section::The seam constant is the universal horizon temperature factor::1": {
   "hash": "5a3f38cb2349",
@@ -712,8 +716,8 @@
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "0057bea0da79",
-  "date": "2026-07-03"
+  "hash": "d39820e04942",
+  "date": "2026-07-23"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
   "hash": "5021eb42d534",
@@ -740,12 +744,12 @@
   "date": "2026-06-24"
  },
  "origin_theory::section::The whole integer skeleton from one pair $(\\gcar,\\Nfam)=(5,3)$::1": {
-  "hash": "292ee0fa4de4",
-  "date": "2026-07-22"
+  "hash": "dfe00c3ca3b0",
+  "date": "2026-07-23"
  },
  "origin_theory::section::The ``$8$'' is triply forced: geometry $=$ lattice $=$ gravity::1": {
-  "hash": "649048863210",
-  "date": "2026-06-12"
+  "hash": "5d4220f72d42",
+  "date": "2026-07-23"
  },
  "origin_theory::section::A cyclic element \\emph{inside} the hull: the order-$30$ Coxeter rotation::1": {
   "hash": "c0f94313a091",
@@ -780,8 +784,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "8eaaf44269fd",
-  "date": "2026-07-22"
+  "hash": "984d89a19610",
+  "date": "2026-07-23"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",

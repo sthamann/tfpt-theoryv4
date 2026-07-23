@@ -31,7 +31,7 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \title{\vspace{-1.2cm}\textbf{TFPT --- Red Team / Stress Test layer}\\[2mm]
-\large Five adversarial targets (A--E): try to \emph{break} the reductions, not confirm them}
+\large Adversarial targets A--E, the QFT round (F) and the seam round (G): try to \emph{break} the reductions, not confirm them}
 \author{\TFPTauthors}\date{\TFPTdatestamp}
 
 \def\TFPTdoctitle{Red Team}
@@ -57,7 +57,10 @@ where the statement works, where it could fail, and the residual risk. The layer
 by \veri{redteam/rt\_A\_e8net.py} \dots \veri{redteam/rt\_E\_vgeo.py}, \veri{redteam/rt\_F\_qft4d.py} and
 \veri{redteam/run\_redteam.py}; a red-team check asserts an \emph{adversarial} fact (a counterexample
 really exists, a hidden assumption is really needed, a firewall really holds), and the honest
-outcome lives in the \textbf{status} of each target, never in a green pass.
+outcome lives in the \textbf{status} of each target, never in a green pass. The layer has since
+grown a seam round (Target~G): the ten-test side-blind scoreboard on the alignment bit and the
+first \emph{firing} kill test of the programme --- the interacting straddle law
+(\vref{v521}/\vref{v525}/\vref{v528}/\vref{v529}), fenced at toy level.
 \end{keybox}
 
 \begin{center}\small
@@ -84,7 +87,12 @@ allowed --- \textbf{survives} (stands as worded), \textbf{survives (narrowed)} (
 silent assumption is made explicit), \textbf{reduced, not closed} (the conservative wording is
 the correct one), and --- reached by Target~A after the lattice/$S_3$ round --- \textbf{closed modulo a cited
 theorem} (pinned at every computable level, only an external published existence theorem left). A fifth,
-\textbf{broken}, is reserved for an actual failure; none occurred.
+\textbf{broken}, is reserved for an actual failure; none occurred on the load-bearing surface. The
+closest call is deliberately kept visible rather than filed away: the first genuinely
+\emph{interacting} seam toy fires Kill-Test~2 of the OS twistor contract \emph{at toy level} ---
+reflection positivity breaks after the \emph{straddle law} (Target~G below) --- a fenced toy result,
+not a target downgrade, and simultaneously the first hard selection principle the adversarial layer
+has produced.
 
 % =====================================================================
 \section*{Target A --- the $(E8)_1$ boundary-net identification}\label{sec:A}
@@ -276,14 +284,74 @@ above to a derived statement. (\texttt{GRAV.KMS.HESSIAN.01}; the exact off-shell
 identification stays the cited heat-kernel step, and it is perturbative, not the nonperturbative measure.)
 
 % =====================================================================
+\section*{Target G --- the alignment bit and the interacting seam (the first shot that lands)}\label{sec:G}
+% =====================================================================
+\noindent\textbf{Minimal claim.} The compiler's residual discrete carrier input is \emph{one
+symmetry-lift bit} --- flag transitivity of the four marks $\iff\tau=i$ (\vref{v512}) --- and the
+free-seam OS/RP structure that the Woit bridge (\texttt{WOIT.OS.TWISTOR.01}) builds on survives
+adversarial attack. The red-team questions are two: \emph{can the bit be derived} (in which case
+calling it an input would be a hidden redundancy), and \emph{can the OS/RP structure be broken}?
+
+\smallskip\noindent\textbf{Attack 1 --- derive the bit (ten failures, honestly banked).} Every
+attack class that could compute the bit from side-blind data has been run and \emph{killed}: the
+\vref{v512} equivalence web itself (no local jet sees the side bit), free RP/$\Theta$ existence
+(the \emph{eighth} side-blind test, \veri{v521\_seam\_bit\_rp\_blind.py}), every Wick-computable
+mark-decorated state --- twist/defect insertions --- (the \emph{ninth}; the free-plus-twist class
+is \emph{exhausted}, \veri{v525\_seam\_bit\_twist\_blind.py}), and now the first genuinely
+\emph{interacting}, non-Wick-computable dynamics (the \emph{tenth}: the interaction sees $\delta$
+massively, spectral spread $1.32$, yet the mark-axis mirror maps $H(m)\to H(8-m)$ exactly ---
+all side data mirror-equal; \veri{v529\_seam\_interacting\_toy\_fk.py}). Ten side-blind tests,
+ten kills: the bit is \emph{not} derivable from any tested class and remains genuine discrete
+input. The flip side is a sharper ontology, not a promotion: the bit is now physically
+\emph{defined} as the twist-class choice --- facets \#14/\#15 of the (now $15$-fold) web are
+exact equivalences both directions, the flip-axis fraction is a gauge-robust order parameter
+($O=\tfrac12$ at $m=4$, $0$ elsewhere), and its $\eta$ holonomy is in principle
+interferometrically readable (\veri{v528\_seam\_bit\_twist\_class\_definition.py}; \mC\
+measurement sketch --- a definition replaces no derivation, no marker moves).
+
+\begin{gapbox}[Where it fires: the straddle law (toy level) --- the first live ammunition]
+The minimal interacting Fidkowski--Kitaev quartic on the $16$-Majorana NS seam circle
+($256$-dim, exact) is the first adversarial probe with genuinely non-Wick-computable dynamics
+--- and Kill-Test~2 of \texttt{WOIT.OS.TWISTOR.01} \emph{fires at toy level}. $\Theta$ exists
+exactly on the interacting model ($\Theta^2={+}1$, $[\Theta,H_g]=0$, $\Theta\Omega_g=\Omega_g$,
+clock-tower inversion exact), so Kill-Test~1 does \emph{not} fire; but reflection positivity
+breaks in the interacting ground state for \emph{every} $g>0$ --- inertia ladder
+$(37,0,0)\to(33,4,0)\to(31,6,0)\to(29,8,0)$, Gibbs state at $\beta=2$ the same ladder, mechanism
+\emph{interference} (neither crossing nor half-local terms alone break) --- and the failure
+pattern is a law, not noise: on all $24$ tested entries \textbf{RP fails exactly on
+quartet-straddled cuts and stays positive definite on quartet-avoiding ones} (the
+\emph{straddle law}). This is the honest reading of ``first live ammunition'': every previous
+red-team round ended in survives/narrowed; here an interacting mechanism actually breaks a
+load-bearing structure --- at toy level, under the mandatory fence (one toy, one interaction
+class, \mC\ flat-band parent). The same law is the first \emph{hard selection principle} for the
+interacting algebra: every candidate $\mathcal A_{\mathrm{hol}}$ must protect RP against exactly
+this mechanism on quartet-straddled cuts --- a concrete, checkable hurdle for the $\beta_3/\gamma$
+stages. Threat and filter are one statement. \veri{v529\_seam\_interacting\_toy\_fk.py}
+\end{gapbox}
+
+\noindent\textbf{Verdict.} \textsc{Survives (narrowed)} for the bit claim: ten side-blind kills
+leave the bit underivable from every tested class, and the twist-class definition makes its
+negation measurable without moving any marker (the bit stays formal input; \mC/\mO\ as ledgered).
+For the OS/RP structure the honest outcome is \textsc{fires at toy level (fenced)}: the free and
+gauge-fixed layers survive ($\beta_1$/$\beta_2$, \vref{v522}/\vref{v524}, including the grading,
+the nonsplit $\Z_8$ tower and the OS quotient surviving $g>0$ constructively), while the
+interacting straddle threat is the named residual risk of the whole Woit route ---
+\texttt{WOIT.OS.TWISTOR.01} stays \mO, and any future $\mathcal A_{\mathrm{hol}}$ that cannot
+pass the straddle filter is dead on arrival. Residual: the $\beta_3/\gamma$ stages under the
+straddle constraint; the bit's derivation (if any) must come from outside the exhausted classes.
+
+% =====================================================================
 \section*{Outcome}
 % =====================================================================
 \par\smallskip\noindent\textbf{What the red team changed.}
-No target broke. The hardest gate (A) is now \emph{closed modulo cited theorems} on its MMST route \texttt{SEAM.EQUIV.MMST.01} (the lattice/$S_3$ round pins it
+No target broke on the load-bearing surface. The hardest gate (A) is now \emph{closed modulo cited theorems} on its MMST route \texttt{SEAM.EQUIV.MMST.01} (the lattice/$S_3$ round pins it
 at every computable level, Lean-formalised, only an external published existence theorem left,
 \vref{v367}/\vref{v368}/\vref{v376}--\vref{v379});
 four targets (B, D, E, F) \emph{survive once a silent assumption is named}; one (C) survives as
-worded. The net effect is not new physics but sharper typing: the package now states \emph{where}
+worded; and the seam round (G) banks ten side-blind kills on the alignment bit while producing
+the layer's first toy-level firing --- the straddle law (\vref{v529}), a named threat that doubles
+as the first hard selection principle for $\mathcal A_{\mathrm{hol}}$. The net effect is not new
+physics but sharper typing: the package now states \emph{where}
 each reduction would fail and \emph{which} assumptions are truly necessary, exactly at the weakest
 logical transitions. Reproduce with \texttt{cd verification/redteam \&\& python run\_redteam.py}.
 

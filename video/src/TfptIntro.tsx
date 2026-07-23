@@ -11,8 +11,9 @@ import { Scene04Proof } from "./scenes/Scene04Proof";
 import { Scene05FixedPoint } from "./scenes/Scene05FixedPoint";
 import { Scene06Beauty } from "./scenes/Scene06Beauty";
 import { Scene07Numerology } from "./scenes/Scene07Numerology";
-import { Scene08Open } from "./scenes/Scene08Open";
-import { Scene09Resolution } from "./scenes/Scene09Resolution";
+import { Scene08Breakthroughs } from "./scenes/Scene08Breakthroughs";
+import { Scene09Open } from "./scenes/Scene09Open";
+import { Scene10Resolution } from "./scenes/Scene10Resolution";
 
 const SCENE_COMPONENTS: Record<string, React.FC> = {
   question: Scene01Question,
@@ -22,8 +23,9 @@ const SCENE_COMPONENTS: Record<string, React.FC> = {
   "fixed-point": Scene05FixedPoint,
   beauty: Scene06Beauty,
   numerology: Scene07Numerology,
-  open: Scene08Open,
-  resolution: Scene09Resolution,
+  breakthroughs: Scene08Breakthroughs,
+  open: Scene09Open,
+  resolution: Scene10Resolution,
 };
 
 const ProgressBar: React.FC = () => {
