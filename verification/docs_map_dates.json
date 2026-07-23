@@ -12,8 +12,8 @@
   "date": "2026-07-22"
  },
  "introduction::subsection::Sharper still: one anchor $a=(1,1,2)$, and $E_8$ as a compiler hull \\texorpdfstring{(\\mE)}{}::1": {
-  "hash": "3f416b4c0c2e",
-  "date": "2026-07-22"
+  "hash": "d589fcdd868d",
+  "date": "2026-07-23"
  },
  "introduction::subsection::The companion documents::1": {
   "hash": "cb43f67f0b4b",
@@ -572,8 +572,8 @@
   "date": "2026-07-22"
  },
  "tfpt_3_e8_audit_bootstrap::section::The celestial and twistor continuum route::1": {
-  "hash": "22d3fa55da4c",
-  "date": "2026-07-22"
+  "hash": "769af7ea0e37",
+  "date": "2026-07-23"
  },
  "tfpt_3_e8_audit_bootstrap::section::Honest status: bootstrap, not creation from nothing::1": {
   "hash": "8a9d20e27d27",
@@ -624,8 +624,8 @@
   "date": "2026-06-15"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "135f37a53232",
-  "date": "2026-07-22"
+  "hash": "6931512e5c9c",
+  "date": "2026-07-23"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "c0bc3591e81c",
@@ -716,20 +716,20 @@
   "date": "2026-07-03"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
-  "hash": "699b5104942d",
-  "date": "2026-07-22"
+  "hash": "c248e01c6135",
+  "date": "2026-07-23"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
   "hash": "3cd69e059ee5",
   "date": "2026-07-14"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
-  "hash": "ce673634cffd",
-  "date": "2026-07-22"
+  "hash": "17bf6b6b5388",
+  "date": "2026-07-23"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{WOIT.OS.TWISTOR.01} (the Osterwalder--Schrader twistor bridge)::1": {
-  "hash": "11db9ae194ed",
-  "date": "2026-07-22"
+  "hash": "070e318065f9",
+  "date": "2026-07-23"
  },
  "tfpt_research_contracts::section::Certifiability and recommended order::1": {
   "hash": "0e935206f060",
@@ -816,8 +816,8 @@
   "date": "2026-06-25"
  },
  "tfpt_safeguards::section::Layer 6 --- two independent reproduction paths::1": {
-  "hash": "aa1de6c309d6",
-  "date": "2026-07-22"
+  "hash": "dcf859c296ea",
+  "date": "2026-07-23"
  },
  "tfpt_safeguards::section::Layer 7 --- the red team::1": {
   "hash": "0a2585467b1c",

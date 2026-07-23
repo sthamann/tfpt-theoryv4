@@ -5173,3 +5173,61 @@ zwischen deklariertem und abgeleitetem Mass entscheidet -- Erfolg = die
 Ableitung landet auf der v516-Lesart (traegt 4:3); Kill = sie landet auf dem
 v518-Mass (dann ist die Twisted-Contact-Route tot und die 32-T3-Kuerzung muss
 anderswo herkommen).
+
+=== 2026-07-23 (I)-(III): v523/v524/v525 -- w_m-Herleitung ERFOLG, WOIT-beta2
+SUCCESS, Twist-Zustands-KILL (neunter seitenblinder Test) ===
+Drei Sandbox-Proben vom 2026-07-23 frueh promoviert (Suite 516 -> 519 Module,
+Wolfram-Extension 540 -> 552 engine-verifiziert, Story tfpt_3 23 -> 26 Steps).
+(1) v523_celestial_wp5e_wm_derived.py (26/26, ~1 s; Ledger CELEST.WP5E.WM.01,
+ERFOLG): das Residual-[O] von v516/v520 ist auf Faser-Nullmoden-Ebene
+GESCHLOSSEN -- 1/det_j ist der Atiyah-Bott-/Zeta-Determinanten-Fixpunktfaktor,
+aus drei unabhaengigen Quellen BERECHNET (Moden-Ledger exakt in Q(i) bis n=120,
+Abel-Wert (1/2,1/4,1/2), Fixpunkt-Abspaltung auf jedem Trunkierungslevel fuer
+phased UND unphased; det_zeta = 4sin^2(pi j/4) = det_j mit eindeutiger reell
+positiver Quillen-Sektion; delta1f-Block-Konstantterm 1/det_b); die v516-Kette
+Zahl fuer Zahl reproduziert (w = 4h, c = 4 = |mu4|, Quadrate (18,9,18), Total
+45<x,x>^2, psi +-64); Negativkontrollen: 1/det^2 laesst (2,12) + Quillen-
+Widerspruch, 1/|1-i^j| verlaesst Q, Z2/EH-Anker c = 2 = |Z2|, so16-KILL feuert,
+diag(i,i) bricht Zeta=AB selbst, k = 3/5 wandern korrekt. [C]-Fence TP-REG/
+TP-Q/TP-NUM/TP-CH; das Rest-[O] verengt sich auf das GLOBALE BCOV-Integral
+jenseits des Faser-Nullmoden-Faktors. Kein Marker bewegt.
+(2) v524_woit_beta2_os_quotient.py (20/20, ~5 s; Ledger WOIT.BETA2.OS.01,
+SUCCESS [C]-typisiert per Praezision (iii)): der OS-Quotient EXPLIZIT --
+H_phys PD auf beiden Ebenen (37 = 29+8, min EW 1.7801e-6; 16 = 4^2 thermisch/
+KMS, Garnitur sin^2(3pi/8) - sin(pi/8)sin(5pi/8) = 1/2 exakt); Klein-Landau-
+Transfer-Halbgruppe exakt hermitesch, Site/Bond-Dichotomie als Positivitaets-
+muster (gerade PSD via T(2j) = A*A, ungerade indefinit); die Uhr = T^{N/4}
+positiv mit Spektralkalkuel (N=8-Spektrum EXAKT {1, sqrt(2)-1} = Silber!),
+rekonstruierte Rotationsgruppe unitaer; v522-Zensus (745,96,0) = reines
+Wrap-Artefakt; praeregistrierte KMS-Abweichung mit exakt den Silber-Zeugen
+(C(1)/C(3) = 1+sqrt2, det(G-tau4) < 0); Theta_phys^2 = +1 Kramers-frei;
+Kill-Tests (1)/(2) verstaerkt, (3)-Schatten geschaerft, keiner feuert;
+Transparenz: Lauf 1 = 18/20 (sympy-simplify an WAHRER pi/16-Produktformel,
+Laurent-Zertifikat, kein Kriterium geaendert). beta3 als naechstes.
+(3) v525_seam_bit_twist_blind.py (20/20, ~80 s; Ledger SEAM.BIT.TWISTBLIND.01,
+KILL wie praeregistriert): der NEUNTE seitenblinde Test (8 -> 9) -- alle
+Markendekorationen (sigma-Eiche, Kadanoff-Ceva-4-Twist, mu4/Bogoliubov)
+wohldefiniert und RP-blind; die Insertion-Spektren haengen ERSTMALS von delta
+ab (bis 1.05), die Traegheit bleibt (16,0,0) PD mit demselben eta = +i;
+Strukturtheorem: Defekt-Ebenen nie auf Schnittbonds => quasi-freie
+Dekorationen RP-spektral unsichtbar; E_def = 1.2752872 delta-blind, Casimir
+ln|w(D)| spiegelsymmetrisch m <-> 8-m (Familien-Messgeraet, nie Selektor);
+Ernte: eta-Flip + Fixier-Frustration (4,4,0) nur bei pi/2 (praesupponieren
+das Bit); v512-Gegenzeuge arc-aequivalent zu pi/4. Die freie-plus-Twist-
+Klasse (alles Wick-Berechenbare) ist ERSCHOEPFT; das Bit bleibt echter
+diskreter Input.
+SYNC: run_all/Registry/Ledger (3 neue Zeilen; v516/v520/v521/v512/WOIT-Zeilen
+textpraezisiert; GATE.WOLFRAM.02 540 -> 552), contracts (Massfrage-Block
+verengt + WM.01-Statusblock; WOIT beta2-Block executed + Roadmap + Scope-Fence;
+Reduktionsabsatz 8 -> 9), tfpt_3 (Steps 24/25/26, Kopfzeile SECHSUNDZWANZIG,
+What-remains verengt, Woit-Absatz beta2), introduction (neunter Test),
+changelog 2026-07-23 (I)/(II)/(III), Wolfram +12 Spiegel (5+4+3; Engine-Lauf
+2026-07-23 verifiziert 552/552 + Basis 116/116), README/zenodo (519 Module,
+hoechste ID v525), papers.ts/DAG/Glossar-Spiegel.
+NAECHSTE SCHRITTE: (a) WP5e proper = das globale BCOV-Integral auf PT/Z4
+jenseits des Faser-Nullmoden-Faktors (die tau-integrierte Dressing-Schicht
+des v518/v520-Geruests konstruktiv machen; alternativ die aufgeloeste-ALE-
+Route v514/v517 bauen); (b) WOIT beta3: die PT <-> PT*-Dualitaet gegen
+sigma_std typisieren (Kill: die Dualitaet erzwingt Familie A); (c) fuer das
+Bit bleibt nur noch echt wechselwirkendes A_hol mit nicht-Pfaffian-
+reduzierbaren OS-Daten -- jenseits jeder Wick-Klasse.

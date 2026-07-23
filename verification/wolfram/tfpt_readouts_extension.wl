@@ -7790,5 +7790,352 @@ Module[{cOf, C16, Ca, antiOK, towPS, thetaC, alphaOne, normJ, jj, a,
     antiOK && normJ === {False, False, False, False}];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v523 round: CELEST.WP5E.WM.01 -- "the constructive w_m
+   derivation": the residual [O] of v516/v520 closed at the
+   fibre-zero-mode level (verdict ERFOLG; the typed premises
+   TP-REG/TP-Q/TP-NUM/TP-CH are the [C] fence, a typing, not
+   mirrorable).  Five exact mirrors: (i) the equivariant mode ledger
+   = the closed form 1/((1-q i^j)(1-q i^{-j})) at every order n <= 40
+   with the Abel value (1/2, 1/4, 1/2) = 1/det_j, Dedekind sum 5/4
+   and product 16; (ii) the zeta-determinant route (reflection
+   formula symbolic, det_zeta = 4 sin^2(pi j/4) = det_j, Quillen
+   split det Delta = det_j^2, the unique REAL POSITIVE section, the
+   diag(i,i) control breaking realness and the conjugation pairing);
+   (iii) the derived-weight contact vectors + per-sector Okubo
+   squares + total 45<x,x>^2 + psi certificates on the 240 glue
+   roots + the Z2/EH anchor; (iv) the consistency chain w = 4h =
+   -4 ch2 with the T3 budget c = 4 and the two wrong-weight negative
+   controls (1/det^2 leftovers (2, 12) + Quillen contradiction;
+   1/|1-i^j| irrational with T5/T3 leftovers in Q(sqrt2)); (v) the
+   k = 3, 5 cyclotomic wandering controls w_m = m(k-m)/2 = k h_m.
+   The (C,2) Cesaro truncation means, the Hurwitz/Lerch 40-digit
+   certificates and the delta-1f stripped block limits are numerical
+   (mpmath), Python-only, flagged here.  Mirrors v523. ==== *)
+Module[{dets, ok, abel, ded, prodd, q, j, n},
+  dets = Table[FullSimplify[(1 - I^j) (1 - I^(-j))], {j, 1, 3}];
+  ok = And @@ Flatten[Table[
+    FullSimplify[Sum[I^(j (a - (n - a))), {a, 0, n}] -
+      SeriesCoefficient[1/((1 - q I^j) (1 - q I^(-j))), {q, 0, n}]]
+      === 0, {j, 1, 3}, {n, 0, 40}]];
+  abel = Table[FullSimplify[1/((1 - I^j) (1 - I^(-j)))], {j, 1, 3}];
+  ded = FullSimplify[Total[1/dets]];
+  prodd = FullSimplify[Times @@ dets];
+  checkExact["v523 CELEST.WP5E.WM.01 (i): THE EQUIVARIANT MODE LEDGER IS THE CLOSED FORM, ABEL VALUE = 1/det_j -- the direct fibre ledger c_n = sum_{a+b=n} i^{j(a-b)} equals the series coefficient of 1/((1-q i^j)(1-q i^{-j})) = the reciprocal characteristic polynomial of g^j at EVERY order n <= 40 for j = 1, 2, 3 (exact in Q(i)); the closed form is REGULAR at q = 1 (no volume pole in the twisted sectors) with Abel value (1/2, 1/4, 1/2) = 1/det_j, det_j = det(1 - g^j) = (2, 4, 2); Dedekind sum 5/4 = (|Z4|^2 - 1)/12 and product 16 = |Z4|^2 -- the fixed-point weight of the w_m derivation is COMPUTED from the mode ledger, not chosen (the Cesaro truncation means are numerical, Python-only)",
+    dets === {2, 4, 2} && ok && abel === {1/2, 1/4, 1/2} &&
+    ded === 5/4 && prodd === 16];
+];
+Module[{a, refl, zdet, quillen, sect, o0, wf, m, j},
+  refl = FullSimplify[(2 Pi/(Gamma[a] Gamma[1 - a]))^2 -
+    4 Sin[Pi a]^2, 0 < a < 1] === 0;
+  zdet = Table[FullSimplify[4 Sin[Pi j/4]^2], {j, 1, 3}];
+  quillen = Table[FullSimplify[4 Sin[Pi j/4]^2 4 Sin[Pi (1 - j/4)]^2],
+    {j, 1, 3}];
+  sect = Table[FullSimplify[(1 - I^j) (1 - I^(-j))], {j, 1, 3}];
+  o0 = Table[FullSimplify[(1 - I^(-j))^2], {j, 1, 3}];
+  wf = Table[FullSimplify[Sum[(1 - I^(j m))/o0[[j]], {j, 1, 3}]],
+    {m, 0, 3}];
+  checkExact["v523 CELEST.WP5E.WM.01 (ii): THE ZETA/QUILLEN ROUTE -- the reflection formula (2 pi/(Gamma(a) Gamma(1-a)))^2 = 4 sin^2(pi a) holds SYMBOLICALLY on 0 < a < 1 (the Lerch closed form of the twisted circle determinant), so det_zeta(a = j/4) = 4 sin^2(pi j/4) = (2, 4, 2) = det_j EXACTLY -- the spectral determinant of the g^j-twisted fibre Laplacian IS the Atiyah-Bott denominator; the Quillen split over the two fibre directions (twists a and 1-a) gives det Delta_j = det_j^2 = (4, 16, 4), and the AB holomorphic section (1-i^j)(1-i^{-j}) = det_j is REAL POSITIVE (SU(2) conjugation pairing) so the positive square root det dbar = det_j is unique and canonical; diag(i, i) CONTROL: the fake denominators (1-i^j)^2 = (2i, 4, -2i) are COMPLEX (arg((1-i)^2) = -pi/2, no real Quillen section) and the fake weights (0, -1/2, 0, 3/2) break the pairing w_1 != w_3 -- the zeta = AB agreement REQUIRES the SU(2) pairing (the Hurwitz 40-digit certificates are numerical, Python-only)",
+    refl && zdet === {2, 4, 2} && quillen === {4, 16, 4} &&
+    sect === {2, 4, 2} &&
+    (And @@ Table[sect[[j]] > 0, {j, 1, 3}]) &&
+    FullSimplify[Arg[(1 - I)^2] + Pi/2] === 0 &&
+    o0 === {2 I, 4, -2 I} &&
+    wf === {0, -1/2, 0, 3/2} && wf[[2]] =!= wf[[4]]];
+];
+Module[{d5r, d5v, d5s, d5c, a3r, wcl, z5, z4, glue, xs, ys, y4, lin,
+        S5v, S3v, basis, vec5, Q, Qv, Qtw, dets, Afix, contact,
+        skeleton, sums, targets, tot, phiT3, phiP, psiF, cert, A2,
+        contactZ2, totZ2, m, j},
+  d5r = Select[Tuples[Range[-1, 1], 5], # . # == 2 &];
+  d5v = Select[Tuples[Range[-1, 1], 5], # . # == 1 &];
+  d5s = Select[Tuples[{-1/2, 1/2}, 5], EvenQ[Count[#, -1/2]] &];
+  d5c = Select[Tuples[{-1/2, 1/2}, 5], OddQ[Count[#, -1/2]] &];
+  a3r = Select[Tuples[Range[-1, 1], 4], Total[#] == 0 && # . # == 2 &];
+  wcl[k_] := (ConstantArray[-k/4, 4] +
+    Total[IdentityMatrix[4][[#]]]) & /@ Subsets[Range[4], {k}];
+  z5 = ConstantArray[0, 5]; z4 = ConstantArray[0, 4];
+  glue = Join[
+    {Join[#, z4], 0} & /@ d5r, {Join[z5, #], 0} & /@ a3r,
+    Flatten[Table[{Join[d, w], 1}, {d, d5s}, {w, wcl[1]}], 1],
+    Flatten[Table[{Join[d, w], 2}, {d, d5v}, {w, wcl[2]}], 1],
+    Flatten[Table[{Join[d, w], 3}, {d, d5c}, {w, wcl[3]}], 1]];
+  xs = Array[Subscript[x, #] &, 5];
+  ys = Array[Subscript[y, #] &, 3];
+  y4 = Append[ys, -Total[ys]];
+  lin[alpha_] := alpha[[1 ;; 5]] . xs + alpha[[6 ;; 9]] . y4;
+  S5v = xs . xs; S3v = Expand[y4 . y4];
+  basis = {Expand[S5v^2], Expand[S5v S3v], Expand[S3v^2],
+    Total[xs^4], Expand[Total[y4^4]]};
+  vec5[expr_] := Module[{cs = Array[Subscript[cv, #] &, 5], eqs, sol},
+    eqs = Thread[(CoefficientRules[Expand[expr - cs . basis],
+      Join[xs, ys]][[All, 2]]) == 0];
+    sol = Quiet[Solve[eqs, cs]];
+    If[sol === {}, $Failed, cs /. First[sol]]];
+  Q = Table[Expand[Total[lin[#[[1]]]^4 & /@
+    Select[glue, #[[2]] == m &]]], {m, 0, 3}];
+  Qv = vec5 /@ Q;
+  dets = <|1 -> 2, 2 -> 4, 3 -> 2|>;
+  Qtw = Table[Simplify[Sum[I^(j m) Qv[[m + 1]], {m, 0, 3}]], {j, 0, 3}];
+  Afix = Simplify[Sum[Qtw[[j + 1]]/dets[j], {j, 1, 3}]];
+  contact = Table[Simplify[(Qtw[[1]] - Qtw[[j + 1]])/dets[j]],
+    {j, 1, 3}];
+  skeleton = Table[Qtw[[j + 1]]/dets[j], {j, 1, 3}];
+  sums = skeleton + contact;
+  targets = Table[Qtw[[1]]/dets[j], {j, 1, 3}];
+  tot = Afix + Total[contact];
+  phiT3[v_] := v[[5]]; phiP[v_] := 3 v[[1]] - v[[2]] - v[[3]];
+  psiF[v_] := phiP[v] - phiT3[v]/4;
+  cert = {phiT3[Afix], phiT3[Total[contact]], phiP[Afix],
+    phiP[Total[contact]], psiF[Afix], psiF[Total[contact]]};
+  A2 = Simplify[(Qv[[1]] - Qv[[2]] + Qv[[3]] - Qv[[4]])/4];
+  contactZ2 = Simplify[(1/2) (Qv[[2]] + Qv[[4]])];
+  totZ2 = A2 + contactZ2;
+  checkExact["v523 CELEST.WP5E.WM.01 (iii): THE DERIVED-WEIGHT CONTACT VECTORS + THE SUCCESS TABLE ON THE 240 GLUE ROOTS -- with det_j = (2, 4, 2) DERIVED (checks (i)/(ii)), the Abel-limit contact vectors contact_j = (Q^(0) - Q^(j))/det_j = (12, 48, 30, 4, -24)/(12, 24, 0, -8, 16)/(12, 48, 30, 4, -24) are the v516 contact vectors COMPUTED; per sector skeleton_j + contact_j = Q^(0)/det_j = the perfect Okubo squares (18, 9, 18) x <x,x>^2 with T5 = T3 = 0 in EVERY channel; total A_fix + contact = (45, 90, 45, 0, 0) = 45<x,x>^2 = (5/4) x 36<x,x>^2; certificates Phi_T3: 32 -> 0, Phi_P: 72 -> 0, psi: +64/-64; Z2/EGUCHI-HANSON ANCHOR with the SAME derivation (det(1-(-1)) = 4, derived weight 1/2 = |Z2| h^{A1}): A_2 + (1/2)(Q_1 + Q_3) = (9, 18, 9, 0, 0) = 9<x,x>^2 = (1/4) x 36<x,x>^2 with psi(A_2) = -8 -- the published anchor passes with the constructive weight",
+    contact[[1]] === {12, 48, 30, 4, -24} &&
+    contact[[2]] === {12, 24, 0, -8, 16} &&
+    contact[[3]] === contact[[1]] &&
+    (And @@ Table[sums[[j]] === targets[[j]], {j, 1, 3}]) &&
+    sums[[1]] === {18, 36, 18, 0, 0} &&
+    sums[[2]] === {9, 18, 9, 0, 0} &&
+    tot === {45, 90, 45, 0, 0} &&
+    cert === {32, -32, 72, -72, 64, -64} &&
+    (1 - (-1))/((1 - (-1)) (1 - (-1))) === 1/2 &&
+    Simplify[(1 - (-1)) (1 - (-1))] === 4 &&
+    A2 === {-3, -6, 9, 8, -16} &&
+    contactZ2 === {12, 24, 0, -8, 16} &&
+    totZ2 === {9, 18, 9, 0, 0} && psiF[A2] === -8];
+  Module[{h, w, f, ch2, CA3, leftovers, dets2, wp, contactp, totp,
+          wpp, t5pp, t3pp, cS, solC},
+    h = Table[m (4 - m)/8, {m, 0, 3}];
+    CA3 = {{2, -1, 0}, {-1, 2, -1}, {0, -1, 2}};
+    ch2 = Table[-Inverse[CA3][[m, m]]/2, {m, 1, 3}];
+    f = Table[Simplify[(1/4) Sum[(I^(j m) - 1)/dets[j], {j, 1, 3}]],
+      {m, 0, 3}];
+    w = Table[Simplify[Sum[(1 - I^(j m))/dets[j], {j, 1, 3}]],
+      {m, 0, 3}];
+    leftovers = Table[Expand[32 +
+      c Sum[(m (4 - m)/8) Qv[[m + 1, 5]], {m, 0, 3}]], {c, 1, 5}];
+    solC = Solve[Expand[32 +
+      cS Sum[(m (4 - m)/8) Qv[[m + 1, 5]], {m, 0, 3}]] == 0, cS];
+    dets2 = <|1 -> 4, 2 -> 16, 3 -> 4|>;
+    wp = Table[Simplify[Sum[(1 - I^(j m))/dets2[j], {j, 1, 3}]],
+      {m, 0, 3}];
+    contactp = Sum[wp[[m + 1]] Qv[[m + 1]], {m, 0, 3}];
+    totp = Simplify[Afix + contactp];
+    wpp = Table[FullSimplify[Sum[(1 - I^(j m))/Abs[1 - I^j],
+      {j, 1, 3}]], {m, 0, 3}];
+    t5pp = FullSimplify[Sum[wpp[[m + 1]] Qv[[m + 1, 4]], {m, 0, 3}]];
+    t3pp = FullSimplify[32 +
+      Sum[wpp[[m + 1]] Qv[[m + 1, 5]], {m, 0, 3}]];
+    checkExact["v523 CELEST.WP5E.WM.01 (iv): THE CONSISTENCY CHAIN UNDER THE DERIVED WEIGHT + WRONG-WEIGHT CONTROLS -- index bridge f(m) = (1/4) sum_j (i^{jm}-1)/det_j = (0, -3/8, -1/2, -3/8) = ch2(T_m) = -h_m; weights w_m = sum_j (1-i^{jm})/det_j = (0, 3/2, 2, 3/2) = 4 h_m with ratio h_2 : h_1 = 4 : 3; the T3 budget 32 - 8c leaves (24, 16, 8, 0, -8) for c = 1..5 and Solve forces c = 4 = |mu4| uniquely; NC-1 (wrong weight 1/det^2): w' = (0, 5/8, 1, 5/8) with ratio 8 : 5 != 4 : 3 and the totals keep (T5, T3) = (2, 12) != (0, 0) against the v505-forced skeleton, while the zeta side CONTRADICTS it (det dbar = det^2 would demand det Delta = det^4 = (16, 256, 16) != measured det^2 = (4, 16, 4)); NC-2 (wrong weight 1/|1-i^j|): w''_1 = 1 + sqrt2 IRRATIONAL (leaves Q, the index bridge w = 4h unreachable), contact T5 = 8 sqrt2 - 16 != 0 and total T3 = 64 - 48 sqrt2 != 0 exactly in Q(sqrt2) -- both wrong weights break the chain QUANTIFIABLY",
+      f === {0, -3/8, -1/2, -3/8} &&
+      Table[f[[m + 1]], {m, 1, 3}] === ch2 &&
+      w === {0, 3/2, 2, 3/2} && w === 4 h &&
+      h[[3]]/h[[2]] === 4/3 &&
+      leftovers === {24, 16, 8, 0, -8} &&
+      solC === {{cS -> 4}} &&
+      wp === {0, 5/8, 1, 5/8} &&
+      wp[[3]]/wp[[2]] === 8/5 &&
+      totp[[4]] === 2 && totp[[5]] === 12 &&
+      Table[dets2[j]^2, {j, 1, 3}] === {16, 256, 16} &&
+      Table[dets[j]^2, {j, 1, 3}] === {4, 16, 4} &&
+      FullSimplify[wpp[[2]] - (1 + Sqrt[2])] === 0 &&
+      FullSimplify[t5pp - (8 Sqrt[2] - 16)] === 0 &&
+      FullSimplify[t3pp - (64 - 48 Sqrt[2])] === 0];
+  ];
+];
+Module[{wander, k, zk, detsK, wK, dedK, prodK, zetaK, hK, m, j},
+  wander = And @@ Table[
+    zk = Exp[2 Pi I/k];
+    detsK = Table[FullSimplify[(1 - zk^j) (1 - zk^(-j))], {j, 1, k - 1}];
+    wK = Table[FullSimplify[Sum[(1 - zk^(j m))/detsK[[j]],
+      {j, 1, k - 1}]], {m, 1, k - 1}];
+    hK = Table[m (k - m)/(2 k), {m, 1, k - 1}];
+    dedK = FullSimplify[Total[1/detsK]];
+    prodK = FullSimplify[Times @@ detsK];
+    zetaK = And @@ Table[
+      FullSimplify[4 Sin[Pi j/k]^2 - detsK[[j]]] === 0, {j, 1, k - 1}];
+    wK === Table[m (k - m)/2, {m, 1, k - 1}] &&
+    wK === FullSimplify[k hK] &&
+    dedK === (k^2 - 1)/12 && prodK === k^2 && zetaK,
+    {k, {3, 5}}];
+  checkExact["v523 CELEST.WP5E.WM.01 (v): THE k = 3, 5 WANDERING CONTROLS, EXACT CYCLOTOMIC -- the SAME constructive derivation on C^2/Z_k (g = diag(zeta_k, zeta_k^-1)): the derived weights w_m^(k) = sum_j (1 - zeta_k^{jm})/det_j^(k) = m(k-m)/2 = k h_m^(k) = -k ch2(T_m^{A_{k-1}}) EXACTLY (k = 3: w = (1, 1); k = 5: w = (2, 3, 3, 2)); the Dedekind sum is (k^2-1)/12 and the product of denominators k^2; the zeta determinants 4 sin^2(pi j/k) match the AB denominators per j -- the constructive weight moves CORRECTLY with the centre count (cf. v517 S5.3), so only k = 4 = |mu4| carries the E8-glue chain of (iii)/(iv): the derivation is geometry-tracking, not tuned",
+    wander];
+];
+
+(* ==== v524 round: WOIT.BETA2.OS.01 -- "the OS quotient of the free
+   system made explicit" (verdict SUCCESS, [C]-typed per contract
+   precision (iii)).  Four exact mirrors: (i) the euclidean-rotation
+   preconditions (alpha_1^N = (-1)^F wrap arithmetic at N = 16 and
+   N = 8) + the exact PD certificate identity sin^2(3pi/8) -
+   sin(pi/8) sin(5pi/8) = 1/2; (ii) the Klein-Landau one-particle
+   transfer forms tau_k on the shrinking domains at N = 16, k = 1..7:
+   exactly Hermitian, odd k with exactly ZERO diagonal (the C(even) =
+   0 checkerboard), even k = 2j obeying the exact square identity
+   tau_2j(a, b) = <alpha_j a, alpha_j b> entrywise; (iii) the clock
+   identities (C(9) = C(7), C(11) = C(5), the transparency product
+   formula sin(7pi/16) - sin(5pi/16) = 2 cos(3pi/8) sin(pi/16) > 0)
+   + the N = 8 compressed clock spectrum EXACTLY {1, sqrt(2)-1} =
+   {1, 1/delta_S} via the generalized eigenvalues of (tau_2, G) on
+   the one-particle domain, with sin(pi/8)/sin(3pi/8) = sqrt(2)-1;
+   (iv) the pre-declared KMS witnesses (C(1)/C(3) = 1 + sqrt(2) =
+   delta_S at N = 8; -(C5-C7)((C3-C7)+(C5-C7)) < 0 exactly at
+   N = 16, i.e. det(G - tau_4) < 0 on the odd one-particle clock
+   block).  The 37x37/16x16 H_phys Grams, the 40-digit inertia
+   certificates, the spectral projections and the reconstructed
+   rotation group are numerical (mpmath eighe), Python-only, flagged
+   here.  Mirrors v524. ==== *)
+Module[{wrapProd, n, a, garn},
+  wrapProd[n_] := And @@ Table[
+    Times @@ Table[If[Mod[a + t, n] == 0, -1, 1], {t, 1, n}] === -1,
+    {a, 0, n - 1}];
+  garn = FullSimplify[Sin[3 Pi/8]^2 - Sin[Pi/8] Sin[5 Pi/8] - 1/2]
+    === 0;
+  checkExact["v524 WOIT.BETA2.OS.01 (i): EUCLIDEAN-ROTATION PRECONDITIONS + THE EXACT PD CERTIFICATE -- the one-step NS rotation alpha_1 (2 pi/N) wound N times around the seam circle picks up EXACTLY one wrap sign per generator: alpha_1^N = (-1)^F at N = 16 AND N = 8 (lattice spin-statistics: the 2 pi seam rotation is the GSO element, the exact integer wrap arithmetic mirrored generator by generator); and the exact certificate identity sin^2(3 pi/8) - sin(pi/8) sin(5 pi/8) = 1/2 that makes the N = 8 one-particle checkerboard determinants exactly positive (the H_phys nondegeneracy witness of the quotient construction)",
+    wrapProd[16] && wrapProd[8] && garn];
+];
+Module[{cOf, osT, herm, oddZero, sqId, n = 16, cut = 8, k, aa, bb, j},
+  cOf[dd_, nn_] := If[EvenQ[dd], 0, (2/nn)/Sin[Pi dd/nn]];
+  (* one-particle tau_k entry: <theta(g_a) alpha_k(g_b)> with theta
+     the bond-cut reflection a -> 15 - a (eta = +i) and alpha_k the
+     one-step NS shift tower: theta(g_a) alpha_k(g_b) =
+     i (-1)^wrap <g_{15-a} g_{b+k}> *)
+  osT[aa_, bb_, k_] := Module[{img = Mod[bb + k, n],
+      sgn = (-1)^Quotient[bb + k, n], ta = Mod[15 - aa, n]},
+    I sgn If[ta === img, 1, I cOf[ta - img, n]]];
+  herm = And @@ Flatten[Table[
+    Module[{dom = Range[cut, n - 1 - k]},
+      Table[RootReduce[osT[dom[[i1]], dom[[j1]], k] -
+        Conjugate[osT[dom[[j1]], dom[[i1]], k]]] === 0,
+        {i1, Length[dom]}, {j1, Length[dom]}]],
+    {k, 1, 7}]];
+  oddZero = And @@ Flatten[Table[
+    Module[{dom = Range[cut, n - 1 - k]},
+      Table[RootReduce[osT[dom[[i1]], dom[[i1]], k]] === 0,
+        {i1, Length[dom]}]],
+    {k, {1, 3, 5, 7}}]];
+  sqId = And @@ Flatten[Table[
+    Module[{dom = Range[cut, n - 1 - 2 j]},
+      Table[Module[{sa = (-1)^Quotient[dom[[i1]] + j, n],
+          sb = (-1)^Quotient[dom[[j1]] + j, n],
+          ia = Mod[dom[[i1]] + j, n], ib = Mod[dom[[j1]] + j, n]},
+        RootReduce[osT[dom[[i1]], dom[[j1]], 2 j] -
+          sa sb osT[ia, ib, 0]] === 0],
+        {i1, Length[dom]}, {j1, Length[dom]}]],
+    {j, 1, 3}]];
+  checkExact["v524 WOIT.BETA2.OS.01 (ii): THE KLEIN-LANDAU LOCAL TRANSFER FORMS, EXACT -- the one-particle insertions tau_k(a, b) = <theta(g_a) alpha_k(g_b)> on the shrinking domains D_k = {8, ..., 15-k} of the N = 16 bond cut are EXACTLY Hermitian for ALL k = 1..7 (entrywise RootReduce zero -- the OS-quotient cure of the v522 pre-quotient Hermiticity failure); the ODD steps have EXACTLY ZERO diagonal (the chiral checkerboard C(even) = 0 lands the effective reflection on a site axis: the one-step transfer is NOT positive -- the free chirality/staggering datum); and the EVEN steps obey the exact square identity tau_2j(a, b) = <alpha_j g_a, alpha_j g_b> ENTRYWISE for j = 1, 2, 3 (T(2j) = A_j* A_j: even powers of the transfer are manifestly PSD) -- the v519 site/bond RP dichotomy resurfacing INSIDE the reconstructed semigroup (the 40-digit inertia certificates are Python-only)",
+    herm && oddZero && sqId];
+];
+Module[{cOf, osT, n = 8, cut = 4, G, T2, lam, sols, target, cid,
+        transp, silver},
+  cOf[dd_, nn_] := If[EvenQ[dd], 0, (2/nn)/Sin[Pi dd/nn]];
+  osT[aa_, bb_, k_] := Module[{img = Mod[bb + k, n],
+      sgn = (-1)^Quotient[bb + k, n], ta = Mod[7 - aa, n]},
+    I sgn If[ta === img, 1, I cOf[ta - img, n]]];
+  G = Table[osT[aa, bb, 0], {aa, {4, 5}}, {bb, {4, 5}}];
+  T2 = Table[osT[aa, bb, 2], {aa, {4, 5}}, {bb, {4, 5}}];
+  sols = lam /. Solve[Det[T2 - lam G] == 0, lam];
+  target = Sort[RootReduce[sols]] === Sort[RootReduce[{1, Sqrt[2] - 1}]];
+  cid = FullSimplify[Sin[Pi/8]/Sin[3 Pi/8] - (Sqrt[2] - 1)] === 0;
+  transp = Module[{z, lhs},
+    lhs = Sin[7 Pi/16] - Sin[5 Pi/16] - 2 Cos[3 Pi/8] Sin[Pi/16];
+    RootReduce[TrigToExp[lhs]] === 0] &&
+    Simplify[Sin[7 Pi/16] - Sin[5 Pi/16] > 0];
+  silver = {FullSimplify[cOf[9, 16] - cOf[7, 16]] === 0,
+    FullSimplify[cOf[11, 16] - cOf[5, 16]] === 0};
+  checkExact["v524 WOIT.BETA2.OS.01 (iii): THE CLOCK = T^{N/4}, EXACT SPECTRUM -- at N = 8 the compressed clock on the one-particle Klein-Landau domain {4, 5} has generalized eigenvalues det(tau_2 - lambda G) = 0 solving to EXACTLY {1, sqrt(2) - 1} = {1, 1/delta_Silver} (the silver-midpoint axes of the v519 mu4 torsor return as the exact clock-transfer eigenvalue; sin(pi/8)/sin(3 pi/8) = sqrt(2) - 1 exactly); at N = 16 the quarter-turn one-particle block is exactly PD via the kernel identities C(9) = C(7), C(11) = C(5) and the TRANSPARENCY product formula sin(7 pi/16) - sin(5 pi/16) = 2 cos(3 pi/8) sin(pi/16) > 0 -- the TRUE pi/16 identity that sympy simplify missed on run 1, certified here symbolically (RootReduce on the exponential rewrite; no criterion changed)",
+    target && cid && transp && silver === {True, True}];
+];
+Module[{cOf, silverR, detWit, mono},
+  cOf[dd_, nn_] := If[EvenQ[dd], 0, (2/nn)/Sin[Pi dd/nn]];
+  silverR = FullSimplify[cOf[1, 8]/cOf[3, 8] - (1 + Sqrt[2])] === 0;
+  mono = Simplify[cOf[3, 16] > cOf[5, 16] > cOf[7, 16] > 0];
+  detWit = Simplify[-(cOf[5, 16] - cOf[7, 16]) ((cOf[3, 16] -
+    cOf[7, 16]) + (cOf[5, 16] - cOf[7, 16])) < 0];
+  checkExact["v524 WOIT.BETA2.OS.01 (iv): THE PRE-DECLARED KMS WITNESSES, EXACT -- the local clock step EXPANDS the N = 8 edge mode by exactly the SILVER RATIO C(1)/C(3) = sin(3 pi/8)/sin(pi/8) = 1 + sqrt(2) = delta_S (while the compressed spectrum is {1, 1/delta_S}: no contraction on the compact euclidean circle -- the reconstruction is THERMAL/KMS, dim H_phys = 4^2); and at N = 16 the odd one-particle clock block has det(G - tau_4) = -(C5 - C7)((C3 - C7) + (C5 - C7)) < 0 EXACTLY (kernel monotonicity C3 > C5 > C7 > 0), so the compressed clock exceeds 1 -- contraction failure with EXACTLY the pre-declared witnesses, a typed KMS finding, not a beta2 failure (the compressed lambda_max = 1.6414 is numerical, Python-only)",
+    silverR && mono && detWit];
+];
+
+(* ==== v525 round: SEAM.BIT.TWISTBLIND.01 -- "the twist-state kill":
+   the NINTH side-blind test on the v512 scoreboard (8 -> 9); the
+   free-plus-twist class is exhausted.  Three exact mirrors: (i) the
+   integer incidence frame + the sigma o r = +-sigma congruence
+   mechanism (swap axes: sigma o r = sigma => the twisted Gram is the
+   diagonal unitary congruence D M D = spectrally invisible; fixing
+   axes at pi/2: sigma o r = -sigma = the eta flip); (ii) the
+   pi/2-existence solveset of the mark-fixing axes + the exact
+   counterwitness census ((3+4i)/5 unimodular but NEVER a root of
+   unity up to order 64 -- no lattice mark-compatible reflection at
+   any dyadic refinement); (iii) the delta <-> pi - delta mirror
+   equivariance (the lattice reflection maps the m-mark set EXACTLY
+   to the (8-m)-mark set -- the exact mechanism behind the Casimir
+   mirror symmetry ln|omega(D)|(m) = ln|omega(D)|(8-m) and behind
+   pi/2 as the symmetric point of every invariant readout).  The
+   Pfaffian insertion spectra, the Bogoliubov 2-of-16 pattern census,
+   the defect energy and the 40-digit inertia certificates are
+   numerical (mpmath), Python-only, flagged here.  Mirrors v525. ==== *)
+Module[{n = 32, markU, arcS, sigmaV, swapAx, fixAx, ok, fixmech, m,
+        j, k, mu, marks, sig, r, planes, dshort},
+  markU[m_] := {4 m, {0, 4 m, n, n + 4 m}};
+  arcS[lo_, hi_] := Select[Range[0, n - 1],
+    lo < Mod[2 # + 1, 2 n] < hi &];
+  sigmaV[m_] := Module[{mu2 = 4 m, a1, a3},
+    a1 = arcS[0, 4 m]; a3 = arcS[n, n + 4 m];
+    Table[If[MemberQ[a1, j2] || MemberQ[a3, j2], 1, -1],
+      {j2, 0, n - 1}]];
+  swapAx[m_] := {Mod[2 m - 1, n], Mod[2 m - 1 + n/2, n]};
+  fixAx = {n - 1, n/2 - 1};
+  ok = And @@ Flatten[Table[
+    {mu, marks} = markU[m];
+    sig = sigmaV[m];
+    {(* marks avoid the odd-unit sites *)
+     Intersection[Mod[marks, 2 n], Table[2 j2 + 1, {j2, 0, n - 1}]]
+       === {},
+     (* sigma flips exactly at the 4 marks *)
+     Count[Table[sig[[j2 + 1]] != sig[[Mod[j2 + 1, n] + 1]],
+       {j2, 0, n - 1}], True] === 4,
+     (* |D_short| = mu = 2 x (mu/2) sites *)
+     Length[Join[arcS[0, mu], arcS[n, n + mu]]] === 4 m,
+     (* swap axes are BOND axes (odd k) preserving the mark set *)
+     And @@ Table[OddQ[k] &&
+       (Sort[Mod[2 (k + 1) - marks, 2 n]] === Sort[Mod[marks, 2 n]]),
+       {k, swapAx[m]}],
+     (* sigma o r = sigma on both swap axes *)
+     And @@ Table[Module[{rr = Function[j3, Mod[k - j3, n]]},
+       And @@ Table[sig[[rr[j3] + 1]] === sig[[j3 + 1]],
+         {j3, 0, n - 1}]], {k, swapAx[m]}],
+     (* defect planes pairwise disjoint at N = 32 *)
+     Length[Union[Flatten[Table[{Mod[Quotient[u - 2, 2], n],
+       Mod[Quotient[u, 2], n]}, {u, marks}]]]] === 8},
+    {m, 1, 7}]];
+  fixmech = Module[{sig4 = sigmaV[4]},
+    And @@ Table[Module[{rr = Function[j3, Mod[k - j3, n]]},
+      And @@ Table[sig4[[rr[j3] + 1]] === -sig4[[j3 + 1]],
+        {j3, 0, n - 1}]], {k, fixAx}]];
+  checkExact["v525 SEAM.BIT.TWISTBLIND.01 (i): THE INTEGER FRAME + THE sigma o r = +-sigma CONGRUENCE MECHANISM, EXACT -- on the N = 32 ladder (delta = m pi/8, m = 1..7, incl. pi/2 +- pi/8): the four marks sit on bond midpoints (never on the odd-unit sites), sigma flips exactly at the 4 marks, |D_short| = mu, the two mark-swapping axes k = 2m-1 and k = 2m+15 are BOND axes preserving the mark set, the mu4 defect planes are pairwise disjoint; the MECHANISM: sigma o r = sigma EXACTLY on every swap axis (so the twisted Gram is the diagonal unitary congruence D M D of the untwisted one = RP-spectrally INVISIBLE -- the exact reason the sigma decoration is delta-blind), while on the mark-fixing axes k = 31, 15 (existing iff delta = pi/2) sigma o r = -sigma EXACTLY (the odd-sector negation = the eta flip +i -> -i: twist-visible, but only formulable at pi/2 -- presupposes-the-bit class)",
+    ok && fixmech];
+];
+Module[{sol, bcw, powersOK, unimod, dlt},
+  sol = Reduce[Cos[dlt] == 0 && 0 < dlt <= Pi/2, dlt];
+  bcw = (3 + 4 I)/5;
+  powersOK = And @@ Table[FullSimplify[bcw^k - 1] =!= 0, {k, 1, 64}];
+  unimod = FullSimplify[Abs[bcw] - 1] === 0;
+  checkExact["v525 SEAM.BIT.TWISTBLIND.01 (ii): THE pi/2 EXISTENCE SOLVESET + THE COUNTERWITNESS CENSUS, EXACT -- mark-FIXING reflections on M(delta) exist exactly at cos(delta) = 0, i.e. delta = pi/2 (the v521 S1.1 solveset: every twist-visible clause of v525 lives on axes that exist iff delta = pi/2 -- the presupposes-the-bit fence is a theorem about the frame, not a convention); and the v512/v510 counterwitness mark (3 + 4i)/5 is UNIMODULAR but not a root of unity of ANY order k = 1..64 (exact power census), so it never carries a lattice mark-compatible reflection at any dyadic refinement -- no decorated-state selector can exclude it without excluding a blind lattice member (its N = 16 arc content is IDENTICAL to the blind member delta = pi/4)",
+    sol === (dlt == Pi/2) && powersOK && unimod];
+];
+Module[{n = 32, markU, mirrorOK, deckOK, m, marks, marksMir},
+  markU[m_] := {0, 4 m, n, n + 4 m};
+  mirrorOK = And @@ Table[
+    marks = markU[m];
+    marksMir = Sort[Mod[-marks, 2 n]];
+    marksMir === Sort[Mod[markU[8 - m], 2 n]],
+    {m, 1, 7}];
+  deckOK = And @@ Table[
+    Sort[Mod[markU[m] + n, 2 n]] === Sort[Mod[markU[m], 2 n]],
+    {m, 1, 7}];
+  checkExact["v525 SEAM.BIT.TWISTBLIND.01 (iii): THE delta <-> pi - delta MIRROR EQUIVARIANCE, EXACT INTEGER -- the lattice reflection u -> -u maps the m-mark set {0, 4m, 32, 32 + 4m} EXACTLY onto the (8-m)-mark set for every m = 1..7 (and the deck u -> u + n preserves every mark set): the family equivariance delta <-> pi - delta is an exact lattice symmetry, so EVERY invariant readout of a mark decoration is mirror-symmetric under m <-> 8 - m with pi/2 the SYMMETRIC POINT -- the exact mechanism behind the measured Casimir mirror symmetry ln|omega(D)|(m) = ln|omega(D)|(8 - m) (spread 1.15e-40, Python-only) and behind 'measuring, never selecting': the twisted data can gauge delta but cannot pick a side of pi/2",
+    mirrorOK && deckOK];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

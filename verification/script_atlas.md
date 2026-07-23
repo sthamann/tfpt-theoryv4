@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`516` registered scripts · `587` ledger claims · `10` clusters.
+`519` registered scripts · `590` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -338,7 +338,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (185 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (188 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -711,6 +711,12 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v492_celestial_z4_orbifold, v516_celestial_wp5e_m2_twisted_ks_measure, v518_celestial_wp5e_delta1_derived_kill, v502, v505, v508, v511, v514 · cited: 3 e8 audit bootstrap, research contracts
 - **v522_woit_beta1_gso_gauge** [E/C/O/X] `WOIT.BETA1.GSO.01` — WOIT.BETA1.GSO.01: the WOIT-beta1 milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 executed -- 'the clock is time-like, GSO is the gauge datum' (typed result: verdict UNDECIDE
   - deps: v519_woit_theta_rp_free, v521_seam_bit_rp_blind, v506_seam_clock_rigidity, v510, v519 · cited: 3 e8 audit bootstrap, research contracts
+- **v523_celestial_wp5e_wm_derived** [E/C/O/X] `CELEST.WP5E.WM.01` — CELEST.WP5E.WM.01: the constructive derivation of the w_m normalisation -- '1/det_j is the Atiyah-Bott / zeta-determinant fixed-point factor, COMPUTED from three independent source
+  - deps: v492_celestial_z4_orbifold, v516_celestial_wp5e_m2_twisted_ks_measure, v520_celestial_wp5e_measure_decision, v518_celestial_wp5e_delta1_derived_kill, v505, v514, v516, v517 · cited: 3 e8 audit bootstrap, research contracts
+- **v524_woit_beta2_os_quotient** [E/C/O/X] `WOIT.BETA2.OS.01` — WOIT.BETA2.OS.01: the WOIT-beta2 milestone of the OS twistor bridge WOIT.OS.TWISTOR.01 executed -- 'the OS quotient of the free system made explicit' (verdict SUCCESS per the froze
+  - deps: v519_woit_theta_rp_free, v522_woit_beta1_gso_gauge, v521_seam_bit_rp_blind, v510, v519, v522 · cited: 3 e8 audit bootstrap, research contracts
+- **v525_seam_bit_twist_blind** [E/C/O/X] `SEAM.BIT.TWISTBLIND.01` — SEAM.BIT.TWISTBLIND.01: the twist-state attack on the alignment bit DECIDED -- 'mark-decorated states do not see delta', an honest, decided NEGATIVE result (v508 style): the NINTH 
+  - deps: v521_seam_bit_rp_blind, v512_seam_tau_flag, v510_seam_bit_freedom, v519_woit_theta_rp_free, v510, v512, v519, v521 · cited: 3 e8 audit bootstrap, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1097,15 +1103,12 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Dependency overview
 
-**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×24, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
+**Most-depended-on claims** (the load-bearing roots): `SEAM.EQUIV.01`×86, `v336`×37, `QGEO.SYM.01`×33, `v216`×28, `CELEST.SEAM.01`×25, `v76`×19, `QG.AMB.01`×18, `v56`×18, `v367`×18, `v492`×18, `E8.GLU.01`×17, `v312`×16, `v54`×15, `REG.FREEZE.01`×15, `HOR.NARIAI.01`×15
 
 **Axiom/root claims with no dependencies:** 5 (e.g. `BOOT.01`, `CAR.PAS.01`, `CAS.01`, `FLAV.R.01`, `FR.KOIDE.01` …)
 
 ## Current frontier (highest-id scripts)
 
-- **v511_celestial_wp5e_delta2_tensor_ledger** — `CELEST.WP5E.DELTA2.01`
-- **v512_seam_tau_flag** — `SEAM.TAU.FLAG.01`
-- **v513_celestial_dterm_nonderivation** — `CELEST.DTERM.NONDERIV.01`
 - **v514_celestial_wp5e_eps1_axion_slot** — `CELEST.WP5E.EPS1.01`
 - **v515_celestial_wp5e_m1_omega_n** — `CELEST.WP5E.M1.01`
 - **v516_celestial_wp5e_m2_twisted_ks_measure** — `CELEST.WP5E.M2.01`
@@ -1115,4 +1118,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v520_celestial_wp5e_measure_decision** — `CELEST.WP5E.MEASURE.01`
 - **v521_seam_bit_rp_blind** — `SEAM.BIT.RPBLIND.01`
 - **v522_woit_beta1_gso_gauge** — `WOIT.BETA1.GSO.01`
+- **v523_celestial_wp5e_wm_derived** — `CELEST.WP5E.WM.01`
+- **v524_woit_beta2_os_quotient** — `WOIT.BETA2.OS.01`
+- **v525_seam_bit_twist_blind** — `SEAM.BIT.TWISTBLIND.01`
 

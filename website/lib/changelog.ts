@@ -42,6 +42,2826 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (III) ("
+      },
+      {
+        "k": "c",
+        "v": "v525"
+      },
+      {
+        "k": "t",
+        "v": " — the twist-state attack on the alignment bit DECIDED and promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.BIT.TWISTBLIND.01"
+      },
+      {
+        "k": "t",
+        "v": ": “mark-decorated states do not see "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "” — an honest, decided NEGATIVE result (v508 style), the NINTH side-blind test on the "
+      },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": " scoreboard ("
+      },
+      {
+        "k": "m",
+        "v": "8\\to9"
+      },
+      {
+        "k": "t",
+        "v": "); the free-plus-twist class (everything Wick-computable) is EXHAUSTED; the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 26 and the header goes twenty-three "
+      },
+      {
+        "k": "m",
+        "v": "\\to"
+      },
+      {
+        "k": "t",
+        "v": " twenty-six steps — (1) ALL LIFTINGS WELL-DEFINED AND BLIND "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": (a) the "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "-gauge arc decoration ("
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": ") satisfies "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma\\circ r=\\sigma"
+      },
+      {
+        "k": "t",
+        "v": " on the swap axes "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " the twisted Gram is a diagonal unitary congruence "
+      },
+      {
+        "k": "m",
+        "v": "DMD"
+      },
+      {
+        "k": "t",
+        "v": ", spectra IDENTICAL to untwisted (dev "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": "); (b) the Kadanoff–Ceva "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "-twist insertion "
+      },
+      {
+        "k": "m",
+        "v": "\\omega(D\\,\\cdot)/\\omega(D)"
+      },
+      {
+        "k": "t",
+        "v": " is well-defined on the "
+      },
+      {
+        "k": "m",
+        "v": "N=32"
+      },
+      {
+        "k": "t",
+        "v": " ladder ("
+      },
+      {
+        "k": "m",
+        "v": "\\omega(D)"
+      },
+      {
+        "k": "t",
+        "v": " real nonzero; the "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": " odd-"
+      },
+      {
+        "k": "m",
+        "v": "m"
+      },
+      {
+        "k": "t",
+        "v": " degeneration is the "
+      },
+      {
+        "k": "m",
+        "v": "C(\\mathrm{even})=0"
+      },
+      {
+        "k": "t",
+        "v": " checkerboard artifact) and its RP SPECTRA are the FIRST free-class data of the programme that depend on "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": " (pairwise up to "
+      },
+      {
+        "k": "m",
+        "v": "1.05"
+      },
+      {
+        "k": "t",
+        "v": ") — yet the INERTIA is "
+      },
+      {
+        "k": "m",
+        "v": "(16,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " PD with the same "
+      },
+      {
+        "k": "m",
+        "v": "\\eta=+i"
+      },
+      {
+        "k": "t",
+        "v": " for EVERY "
+      },
+      {
+        "k": "m",
+        "v": "m=1..7"
+      },
+      {
+        "k": "t",
+        "v": ": the decoration sees "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": ", positivity does not; (c) the "
+      },
+      {
+        "k": "m",
+        "v": "\\mu_4"
+      },
+      {
+        "k": "t",
+        "v": " twist at "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": " is pure plane gauge; (c"
+      },
+      {
+        "k": "m",
+        "v": "'"
+      },
+      {
+        "k": "t",
+        "v": ") the genuine Bogoliubov defect at "
+      },
+      {
+        "k": "m",
+        "v": "\\beta=\\pi/4"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta"
+      },
+      {
+        "k": "t",
+        "v": "-compatibility selects exactly "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": " of "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": " sign patterns (NS-wrap-forced), the winner genuinely non-monomial — still PD, spectra identical; STRUCTURE THEOREM (mechanism exact): the defect planes never straddle a cut bond, so every "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta"
+      },
+      {
+        "k": "t",
+        "v": "-compatible quasi-free mark decoration is RP-spectrally INVISIBLE; (2) SUB-RESULTS "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the defect energy "
+      },
+      {
+        "k": "m",
+        "v": "E_{\\mathrm{def}}=1.2752872"
+      },
+      {
+        "k": "t",
+        "v": " for EVERY "
+      },
+      {
+        "k": "m",
+        "v": "m"
+      },
+      {
+        "k": "t",
+        "v": " (spread "
+      },
+      {
+        "k": "m",
+        "v": "4\\times10^{-40}"
+      },
+      {
+        "k": "t",
+        "v": ") — "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": "-blind; the "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "-twist Casimir "
+      },
+      {
+        "k": "m",
+        "v": "\\ln|\\omega(D)|"
+      },
+      {
+        "k": "t",
+        "v": " measures "
+      },
+      {
+        "k": "m",
+        "v": "\\delta"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "-0.890..-1.348"
+      },
+      {
+        "k": "t",
+        "v": ") but exactly mirror-symmetric under "
+      },
+      {
+        "k": "m",
+        "v": "m\\leftrightarrow8-m"
+      },
+      {
+        "k": "t",
+        "v": " — a family gauge, never a side selector; Kramers "
+      },
+      {
+        "k": "m",
+        "v": "\\langle\\Gamma\\rangle_{\\mathrm{tw}}=+1"
+      },
+      {
+        "k": "t",
+        "v": " for every "
+      },
+      {
+        "k": "m",
+        "v": "m"
+      },
+      {
+        "k": "t",
+        "v": "; (3) the HARVEST "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": two bit-presupposing "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": " structures (the "
+      },
+      {
+        "k": "m",
+        "v": "\\eta"
+      },
+      {
+        "k": "t",
+        "v": " flip "
+      },
+      {
+        "k": "m",
+        "v": "+i\\to-i"
+      },
+      {
+        "k": "t",
+        "v": " on the mark-fixing axes via "
+      },
+      {
+        "k": "m",
+        "v": "\\sigma\\circ r=-\\sigma"
+      },
+      {
+        "k": "t",
+        "v": "; the twist frustration of the mark-fixing mirror, "
+      },
+      {
+        "k": "m",
+        "v": "(4,4,0)"
+      },
+      {
+        "k": "t",
+        "v": " indefinite for both "
+      },
+      {
+        "k": "m",
+        "v": "\\eta"
+      },
+      {
+        "k": "t",
+        "v": " — the lattice shadow of the Ising twist field's mirror-oddness) — both formulable only on the fixing axes existing iff "
+      },
+      {
+        "k": "m",
+        "v": "\\delta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": " (the "
+      },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": " facet class); (4) NEGATIVE CONTROLS "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the twist-free limit "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " v519/v521 exactly; the site cut keeps failing; the "
+      },
+      {
+        "k": "c",
+        "v": "v512"
+      },
+      {
+        "k": "t",
+        "v": " counterwitness is arc-equivalent at "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": " to the blind member "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/4"
+      },
+      {
+        "k": "t",
+        "v": " — no state selector can exclude it; a single twist has "
+      },
+      {
+        "k": "m",
+        "v": "\\omega(D)=0"
+      },
+      {
+        "k": "t",
+        "v": " identically; "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": the door narrows to a genuinely INTERACTING "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal A_{\\mathrm{hol}}"
+      },
+      {
+        "k": "t",
+        "v": " whose OS data are NOT Pfaffian-reducible to the chiral vacuum; Wolfram extension (with v523/v524) "
+      },
+      {
+        "k": "m",
+        "v": "540\\to552"
+      },
+      {
+        "k": "t",
+        "v": " (verified engine run 2026-07-23, "
+      },
+      {
+        "k": "m",
+        "v": "552/552"
+      },
+      {
+        "k": "t",
+        "v": " + base "
+      },
+      {
+        "k": "m",
+        "v": "116/116"
+      },
+      {
+        "k": "t",
+        "v": "); suite "
+      },
+      {
+        "k": "m",
+        "v": "516\\to519"
+      },
+      {
+        "k": "t",
+        "v": " modules; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — the alignment bit remains genuine discrete input"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v525_seam_bit_twist_blind.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim80"
+        },
+        {
+          "k": "t",
+          "v": " s; Pfaffian-exact insertion machinery cross-validated three ways, "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": "-digit certificates); registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "; suite "
+        },
+        {
+          "k": "m",
+          "v": "519"
+        },
+        {
+          "k": "t",
+          "v": " modules green."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.BIT.TWISTBLIND.01"
+        },
+        {
+          "k": "t",
+          "v": " (KILL, honest negative, preregistered); "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.BIT.RPBLIND.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.TAU.FLAG.01"
+        },
+        {
+          "k": "t",
+          "v": " text-precised (scoreboard "
+        },
+        {
+          "k": "m",
+          "v": "8\\to9"
+        },
+        {
+          "k": "t",
+          "v": ", “the free-plus-twist class is exhausted”); no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 26 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the story header (twenty-six steps) "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the Step-22 gap sentence; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "c",
+          "v": "QGEO.REALIZE.01"
+        },
+        {
+          "k": "t",
+          "v": " reduction paragraph "
+        },
+        {
+          "k": "m",
+          "v": "8\\to9"
+        },
+        {
+          "k": "t",
+          "v": " and the WP2 relocation note extended by "
+        },
+        {
+          "k": "c",
+          "v": "v525"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "c",
+          "v": "introduction"
+        },
+        {
+          "k": "t",
+          "v": " (the ninth side-blind test added to the reduction-state sentence)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Three exact mirrors (the "
+        },
+        {
+          "k": "m",
+          "v": "N=32"
+        },
+        {
+          "k": "t",
+          "v": " integer frame "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma\\circ r=\\pm\\sigma"
+        },
+        {
+          "k": "t",
+          "v": " congruence mechanism; the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " existence solveset "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "(3+4i)/5"
+        },
+        {
+          "k": "t",
+          "v": " root-of-unity census; the "
+        },
+        {
+          "k": "m",
+          "v": "\\delta\\leftrightarrow\\pi-\\delta"
+        },
+        {
+          "k": "t",
+          "v": " mirror equivariance); the Pfaffian spectra, the "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-of-"
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": " pattern census and "
+        },
+        {
+          "k": "m",
+          "v": "E_{\\mathrm{def}}"
+        },
+        {
+          "k": "t",
+          "v": " stay Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (tfpt_3 story mirror "
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": " steps "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " scoreboard "
+        },
+        {
+          "k": "m",
+          "v": "9"
+        },
+        {
+          "k": "t",
+          "v": "), generated indices ("
+        },
+        {
+          "k": "c",
+          "v": "ScriptIndex.tsx"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "changelog.ts"
+        },
+        {
+          "k": "t",
+          "v": ", maps) via build; "
+        },
+        {
+          "k": "c",
+          "v": "README.md"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "zenodo_description.html"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "519"
+        },
+        {
+          "k": "t",
+          "v": " modules, highest ID "
+        },
+        {
+          "k": "c",
+          "v": "v525"
+        },
+        {
+          "k": "t",
+          "v": ", Wolfram "
+        },
+        {
+          "k": "m",
+          "v": "552/552"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "c",
+          "v": "next.txt"
+        },
+        {
+          "k": "t",
+          "v": " notes."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (II) ("
+      },
+      {
+        "k": "c",
+        "v": "v524"
+      },
+      {
+        "k": "t",
+        "v": " — the WOIT-"
+      },
+      {
+        "k": "m",
+        "v": "\\beta_2"
+      },
+      {
+        "k": "t",
+        "v": " milestone of the OS twistor bridge "
+      },
+      {
+        "k": "c",
+        "v": "WOIT.OS.TWISTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " executed and promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "WOIT.BETA2.OS.01"
+      },
+      {
+        "k": "t",
+        "v": ": “the OS quotient of the free system made explicit” — verdict SUCCESS per the frozen preregistration, "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "-typed per contract precision (iii); the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 25 — (1) "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal H_{\\mathrm{phys}}"
+      },
+      {
+        "k": "t",
+        "v": " EXPLICIT "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\deg\\le2"
+      },
+      {
+        "k": "t",
+        "v": "): the "
+      },
+      {
+        "k": "m",
+        "v": "37\\times37"
+      },
+      {
+        "k": "t",
+        "v": " bond-cut OS Gram exactly Hermitian, parity-block-diagonal, inertia "
+      },
+      {
+        "k": "m",
+        "v": "(37,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " PD (min eigenvalue "
+      },
+      {
+        "k": "m",
+        "v": "1.7801\\times10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "40"
+      },
+      {
+        "k": "t",
+        "v": " digits), null space "
+      },
+      {
+        "k": "m",
+        "v": "\\{0\\}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\dim 37=29\\oplus8"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N=8"
+      },
+      {
+        "k": "t",
+        "v": " (complete half algebra): "
+      },
+      {
+        "k": "m",
+        "v": "(16,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " PD (min "
+      },
+      {
+        "k": "m",
+        "v": "3.3471\\times10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\dim 16=8\\oplus8=4^2"
+      },
+      {
+        "k": "t",
+        "v": " — compact euclidean time reconstructs a THERMAL (KMS) representation; exact certificate "
+      },
+      {
+        "k": "m",
+        "v": "\\sin^2(3\\pi/8)-\\sin(\\pi/8)\\sin(5\\pi/8)=1/2"
+      },
+      {
+        "k": "t",
+        "v": "; (2) the TRANSFER SEMIGROUP (Klein–Landau) "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_k"
+      },
+      {
+        "k": "t",
+        "v": " exactly Hermitian on all domains ("
+      },
+      {
+        "k": "m",
+        "v": "k=1..7"
+      },
+      {
+        "k": "t",
+        "v": ", dims "
+      },
+      {
+        "k": "m",
+        "v": "29,22,16,11,7,4,2"
+      },
+      {
+        "k": "t",
+        "v": "), chain identities exact, vacuum fixed; the positivity pattern "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the site/bond dichotomy: even "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " PSD via the exact square identity "
+      },
+      {
+        "k": "m",
+        "v": "T(2j)=A_j^*A_j"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "(22,0,0)/(11,0,0)/(4,0,0)"
+      },
+      {
+        "k": "t",
+        "v": "), odd "
+      },
+      {
+        "k": "m",
+        "v": "k"
+      },
+      {
+        "k": "t",
+        "v": " indefinite ("
+      },
+      {
+        "k": "m",
+        "v": "(10,12,7)/(5,6,5)/(2,2,3)"
+      },
+      {
+        "k": "t",
+        "v": ") — the one-step transfer is NOT positive (the chirality datum, kill-3 shadow sharpened), its even powers are; (3) THE CLOCK "
+      },
+      {
+        "k": "m",
+        "v": "=T^{N/4}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "N=16"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\tau_4"
+      },
+      {
+        "k": "t",
+        "v": " PD "
+      },
+      {
+        "k": "m",
+        "v": "(11,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " (min "
+      },
+      {
+        "k": "m",
+        "v": "6.6821\\times10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": "), compressed spectrum "
+      },
+      {
+        "k": "m",
+        "v": "[0.0194517,1.64144]"
+      },
+      {
+        "k": "t",
+        "v": ", vacuum eigenvalue exactly "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ", spectral projections "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-40}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N=8"
+      },
+      {
+        "k": "t",
+        "v": ": spectrum EXACTLY "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,\\sqrt2-1\\}=\\{1,1/\\delta_{\\mathrm{Silber}}\\}"
+      },
+      {
+        "k": "t",
+        "v": " in both parity sectors — the silver axes of the "
+      },
+      {
+        "k": "c",
+        "v": "v519"
+      },
+      {
+        "k": "t",
+        "v": " torsor return as the clock eigenvalue; the reconstructed rotation group "
+      },
+      {
+        "k": "m",
+        "v": "U(s)=e^{isH}"
+      },
+      {
+        "k": "t",
+        "v": " unitary with the group law; (4) the "
+      },
+      {
+        "k": "c",
+        "v": "v522"
+      },
+      {
+        "k": "t",
+        "v": " RESOLUTION "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the census "
+      },
+      {
+        "k": "m",
+        "v": "(745,96,0)"
+      },
+      {
+        "k": "t",
+        "v": " reproduced; EVERY anti-matching entry is a wrap overlap, every overlap-free entry matches — the pre-quotient non-Hermiticity is EXACTLY the domain/wrap artifact; on the quotient the clock has spectral calculus; pre-registered KMS deviation: no contraction on the compact circle ("
+      },
+      {
+        "k": "m",
+        "v": "C(1)/C(3)=1+\\sqrt2=\\delta_S"
+      },
+      {
+        "k": "t",
+        "v": " exactly, "
+      },
+      {
+        "k": "m",
+        "v": "\\det(G-\\tau_4)<0"
+      },
+      {
+        "k": "t",
+        "v": "); (5) GSO/"
+      },
+      {
+        "k": "m",
+        "v": "\\Theta"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the grading survives; the perpendicular torsor mirror descends anti-unitarily ("
+      },
+      {
+        "k": "m",
+        "v": "\\eta_\\perp\\in\\{\\pm i\\}"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "\\Theta_{\\mathrm{phys}}^2=+1"
+      },
+      {
+        "k": "t",
+        "v": " on every sector (Kramers-free), "
+      },
+      {
+        "k": "m",
+        "v": "\\theta_{\\mathrm{cut}}\\circ\\theta_\\perp=\\alpha_{N/2}"
+      },
+      {
+        "k": "t",
+        "v": " exactly; (6) CONTROLS "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": site cut "
+      },
+      {
+        "k": "m",
+        "v": "(3,3,1)/(2,2,4)"
+      },
+      {
+        "k": "t",
+        "v": " — the kill branch fires there; family A "
+      },
+      {
+        "k": "m",
+        "v": "(4,4,0)"
+      },
+      {
+        "k": "t",
+        "v": "; anti-chiral "
+      },
+      {
+        "k": "m",
+        "v": "(8,8,0)"
+      },
+      {
+        "k": "t",
+        "v": " no quotient; wrong direction non-Hermitian (all mismatches wrap-overlap); KILL TESTS: (1)/(2) strengthened, (3) shadow sharpened, none fires, all seven stay live on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathcal A_{\\mathrm{hol}}"
+      },
+      {
+        "k": "t",
+        "v": "; TRANSPARENCY: run 1 "
+      },
+      {
+        "k": "m",
+        "v": "=18/20"
+      },
+      {
+        "k": "t",
+        "v": " (a sympy simplify failure on a TRUE "
+      },
+      {
+        "k": "m",
+        "v": "\\pi/16"
+      },
+      {
+        "k": "t",
+        "v": " product formula, fixed by a Laurent-polynomial certificate; no criterion changed); "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves — "
+          },
+          {
+            "k": "c",
+            "v": "WOIT.OS.TWISTOR.01"
+          },
+          {
+            "k": "t",
+            "v": " stays Open, "
+          },
+          {
+            "k": "m",
+            "v": "\\beta_3"
+          },
+          {
+            "k": "t",
+            "v": " is next"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v524_woit_beta2_os_quotient.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim5"
+        },
+        {
+          "k": "t",
+          "v": " s; exact sympy "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " Pfaffian-Wick "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": "-digit inertia certificates); registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.BETA2.OS.01"
+        },
+        {
+          "k": "t",
+          "v": " (SUCCESS, "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "-typed per precision (iii)); "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " claim/canonical status extended ("
+        },
+        {
+          "k": "m",
+          "v": "\\beta_2"
+        },
+        {
+          "k": "t",
+          "v": " executed, "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_3"
+        },
+        {
+          "k": "t",
+          "v": " next); no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ": Step 25 plus the Woit-bridge paragraph with the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta_2"
+        },
+        {
+          "k": "t",
+          "v": "-stage status. "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": ": a full “"
+        },
+        {
+          "k": "m",
+          "v": "\\beta_2"
+        },
+        {
+          "k": "t",
+          "v": " stage — executed” block with "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": "; the "
+        },
+        {
+          "k": "m",
+          "v": "\\beta"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\gamma"
+        },
+        {
+          "k": "t",
+          "v": " roadmap entry marked executed; the scope-fence status sentence extended."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Four exact mirrors (the "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_1^N=(-1)^F"
+        },
+        {
+          "k": "t",
+          "v": " wrap arithmetic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the certificate identity; the Klein–Landau one-particle transfer forms with odd-"
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " zero diagonal and the even-"
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": " square identity; the exact "
+        },
+        {
+          "k": "m",
+          "v": "N=8"
+        },
+        {
+          "k": "t",
+          "v": " clock spectrum "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,\\sqrt2-1\\}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the transparency "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/16"
+        },
+        {
+          "k": "t",
+          "v": " product formula certified symbolically; the KMS silver witnesses); the "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal H_{\\mathrm{phys}}"
+        },
+        {
+          "k": "t",
+          "v": " Grams, inertia spectra and the rotation group stay Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (tfpt_3 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " contracts mirrors), generated indices via build."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "",
+    "heading": [
+      {
+        "k": "t",
+        "v": "=150 2026-07-23 (I) ("
+      },
+      {
+        "k": "c",
+        "v": "v523"
+      },
+      {
+        "k": "t",
+        "v": " — the constructive "
+      },
+      {
+        "k": "m",
+        "v": "w_m"
+      },
+      {
+        "k": "t",
+        "v": " derivation executed and promoted as the ledger row "
+      },
+      {
+        "k": "c",
+        "v": "CELEST.WP5E.WM.01"
+      },
+      {
+        "k": "t",
+        "v": ": “"
+      },
+      {
+        "k": "m",
+        "v": "1/\\det_j"
+      },
+      {
+        "k": "t",
+        "v": " is the Atiyah–Bott / zeta-determinant fixed-point factor, COMPUTED from three independent sources” — verdict ERFOLG per the frozen preregistration; the residual "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "of "
+      },
+      {
+        "k": "c",
+        "v": "v516"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v520"
+      },
+      {
+        "k": "t",
+        "v": " is closed at the fibre-zero-mode level and narrows to the GLOBAL BCOV integral on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb{PT}/\\Z_4"
+      },
+      {
+        "k": "t",
+        "v": " beyond the fibre zero-mode factor; the celestial/twistor story in "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_3"
+      },
+      {
+        "k": "t",
+        "v": " gains Step 24 — (1) ATIYAH–BOTT (route i) "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": the equivariant mode ledger of the fibre "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb C^2"
+      },
+      {
+        "k": "t",
+        "v": " equals the closed form "
+      },
+      {
+        "k": "m",
+        "v": "1/((1-q\\,i^j)(1-q\\,i^{-j}))"
+      },
+      {
+        "k": "t",
+        "v": " exactly in "
+      },
+      {
+        "k": "m",
+        "v": "\\Q(i)"
+      },
+      {
+        "k": "t",
+        "v": " for all "
+      },
+      {
+        "k": "m",
+        "v": "n\\le120"
+      },
+      {
+        "k": "t",
+        "v": "; REGULAR at "
+      },
+      {
+        "k": "m",
+        "v": "q=1"
+      },
+      {
+        "k": "t",
+        "v": " with Abel value "
+      },
+      {
+        "k": "m",
+        "v": "(1/2,1/4,1/2)=1/\\det_j"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\det_j=\\det(1-g^j)=(2,4,2)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "(C,2)"
+      },
+      {
+        "k": "t",
+        "v": " Cesàro convergence in exact arithmetic; fixed-point splitting at EVERY truncation level "
+      },
+      {
+        "k": "m",
+        "v": "d\\in\\{7,12,25\\}"
+      },
+      {
+        "k": "t",
+        "v": " for the phased (skeleton) AND the "
+      },
+      {
+        "k": "c",
+        "v": "v520"
+      },
+      {
+        "k": "t",
+        "v": "-forced unphased (completion) trace — the Abel-limit "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{contact}_j=(Q^{(0)}-Q^{(j)})/\\det_j"
+      },
+      {
+        "k": "t",
+        "v": " is the "
+      },
+      {
+        "k": "c",
+        "v": "v516"
+      },
+      {
+        "k": "t",
+        "v": " contact vector COMPUTED, not declared; (2) ZETA/QUILLEN (routes ii/iii) "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\det_\\zeta"
+      },
+      {
+        "k": "t",
+        "v": " of the "
+      },
+      {
+        "k": "m",
+        "v": "g^j"
+      },
+      {
+        "k": "t",
+        "v": "-twisted circle Laplacian "
+      },
+      {
+        "k": "m",
+        "v": "=4\\sin^2(\\pi j/4)=\\det_j"
+      },
+      {
+        "k": "t",
+        "v": " EXACTLY (Lerch "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " reflection formula symbolically, Hurwitz certificates "
+      },
+      {
+        "k": "m",
+        "v": "\\sim10^{-41}"
+      },
+      {
+        "k": "t",
+        "v": "); Quillen split "
+      },
+      {
+        "k": "m",
+        "v": "\\det\\Delta=\\det_j^2"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "|\\det\\bar\\partial|=\\det_j"
+      },
+      {
+        "k": "t",
+        "v": ", the real positive holomorphic section UNIQUE via the "
+      },
+      {
+        "k": "m",
+        "v": "SU(2)"
+      },
+      {
+        "k": "t",
+        "v": " conjugation pairing; the "
+      },
+      {
+        "k": "m",
+        "v": "\\delta_{1f}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "f_1f_3"
+      },
+      {
+        "k": "t",
+        "v": " block at the "
+      },
+      {
+        "k": "m",
+        "v": "(0,b)"
+      },
+      {
+        "k": "t",
+        "v": " nodes carries the exact constant term "
+      },
+      {
+        "k": "m",
+        "v": "1/\\det_b"
+      },
+      {
+        "k": "t",
+        "v": " (deviations "
+      },
+      {
+        "k": "m",
+        "v": "\\le5.2\\times10^{-28}"
+      },
+      {
+        "k": "t",
+        "v": "); (3) the CONSISTENCY CHAIN "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "w_m=(0,\\tfrac32,2,\\tfrac32)=4h_m=|\\mu_4|h_m=-4\\,\\mathrm{ch}_2(T_m)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "T_5=0"
+      },
+      {
+        "k": "t",
+        "v": " at every scale; "
+      },
+      {
+        "k": "m",
+        "v": "h_2:h_1=4:3"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "T_3"
+      },
+      {
+        "k": "t",
+        "v": " budget "
+      },
+      {
+        "k": "m",
+        "v": "32-8c"
+      },
+      {
+        "k": "t",
+        "v": " forces "
+      },
+      {
+        "k": "m",
+        "v": "c=4=|\\mu_4|"
+      },
+      {
+        "k": "t",
+        "v": " uniquely (leftovers "
+      },
+      {
+        "k": "m",
+        "v": "24/16/8/0/-8"
+      },
+      {
+        "k": "t",
+        "v": "); per-sector Okubo squares "
+      },
+      {
+        "k": "m",
+        "v": "(18,9,18)\\langle x,x\\rangle^2"
+      },
+      {
+        "k": "t",
+        "v": "; total "
+      },
+      {
+        "k": "m",
+        "v": "45\\langle x,x\\rangle^2"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi_{T_3}\\!:32\\to0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi_P\\!:72\\to0"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(A_{\\mathrm{fix}})=+64"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\psi(\\mathrm{contact})=-64"
+      },
+      {
+        "k": "t",
+        "v": "; (4) NEGATIVE CONTROLS "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "1/\\det^2"
+      },
+      {
+        "k": "t",
+        "v": " gives "
+      },
+      {
+        "k": "m",
+        "v": "w'=(0,5/8,1,5/8)"
+      },
+      {
+        "k": "t",
+        "v": ", leftovers "
+      },
+      {
+        "k": "m",
+        "v": "(2,12)"
+      },
+      {
+        "k": "t",
+        "v": ", Quillen contradiction; "
+      },
+      {
+        "k": "m",
+        "v": "1/|1-i^j|"
+      },
+      {
+        "k": "t",
+        "v": " gives "
+      },
+      {
+        "k": "m",
+        "v": "w''_1=1+\\sqrt2\\notin\\Q"
+      },
+      {
+        "k": "t",
+        "v": "; the "
+      },
+      {
+        "k": "m",
+        "v": "\\Z_2"
+      },
+      {
+        "k": "t",
+        "v": "/Eguchi–Hanson anchor PASSES with the same derivation ("
+      },
+      {
+        "k": "m",
+        "v": "\\det=4"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "w=1/2=|\\Z_2|h^{A_1}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9\\langle x,x\\rangle^2=\\tfrac14\\times36"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "c=2=|\\Z_2|"
+      },
+      {
+        "k": "t",
+        "v": "); the "
+      },
+      {
+        "k": "m",
+        "v": "SO(16)/D_8"
+      },
+      {
+        "k": "t",
+        "v": " KILL fires; "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{diag}(i,i)"
+      },
+      {
+        "k": "t",
+        "v": " breaks the zeta "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " AB identity itself; "
+      },
+      {
+        "k": "m",
+        "v": "k=3,5"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "w_m=m(k-m)/2=k\\,h_m"
+      },
+      {
+        "k": "t",
+        "v": " — the weights wander correctly, only "
+      },
+      {
+        "k": "m",
+        "v": "k=4"
+      },
+      {
+        "k": "t",
+        "v": " carries the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " chain; TYPED PREMISES "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "(the mandatory fence): TP-REG (Abel/Cesàro/zeta regularisation "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " the definition of the equivariant character), TP-Q (Quillen structure of BCOV "
+      },
+      {
+        "k": "m",
+        "v": "F_1"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v520"
+      },
+      {
+        "k": "t",
+        "v": " TP-4), TP-NUM (unphased numerator "
+      },
+      {
+        "k": "m",
+        "v": "="
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v520"
+      },
+      {
+        "k": "t",
+        "v": " ERFOLG-A), TP-CH (insertion channel "
+      },
+      {
+        "k": "m",
+        "v": "(0,j)"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ": the global BCOV integral beyond the fibre zero-mode factor, the resolved-ALE route not built, "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.TWISTOR.01"
+      },
+      {
+        "k": "t",
+        "v": " stays Open; "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "NO marker moves"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": ")"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Suite."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New module "
+        },
+        {
+          "k": "c",
+          "v": "v523_celestial_wp5e_wm_derived.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "26"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim1"
+        },
+        {
+          "k": "t",
+          "v": " s; exact "
+        },
+        {
+          "k": "m",
+          "v": "\\Q(i)"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "m",
+          "v": "\\Q(\\sqrt2)"
+        },
+        {
+          "k": "t",
+          "v": "/cyclotomic arithmetic "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "40"
+        },
+        {
+          "k": "t",
+          "v": "-digit Hurwitz/block certificates); registered in "
+        },
+        {
+          "k": "c",
+          "v": "run_all.py"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "script_registry.csv"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Ledger."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " New row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.WM.01"
+        },
+        {
+          "k": "t",
+          "v": " (ERFOLG); the "
+        },
+        {
+          "k": "c",
+          "v": "v516"
+        },
+        {
+          "k": "t",
+          "v": " row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.M2.01"
+        },
+        {
+          "k": "t",
+          "v": " and the "
+        },
+        {
+          "k": "c",
+          "v": "v520"
+        },
+        {
+          "k": "t",
+          "v": " row "
+        },
+        {
+          "k": "c",
+          "v": "CELEST.WP5E.MEASURE.01"
+        },
+        {
+          "k": "t",
+          "v": " text-precised (“the "
+        },
+        {
+          "k": "m",
+          "v": "w_m"
+        },
+        {
+          "k": "t",
+          "v": " normalisation is now DERIVED at probe level; the residual "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": " narrows to the global BCOV integral beyond the fibre zero-mode factor”); no status moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Papers."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": " Step 24 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " the “What remains, honestly” narrowing; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": " (the WP5e measure-question block extended by the executed derivation with "
+        },
+        {
+          "k": "c",
+          "v": "\\veri"
+        },
+        {
+          "k": "t",
+          "v": ", the M2 fence, the celestial summary blocks and the section status list); "
+        },
+        {
+          "k": "c",
+          "v": "SEAM.EQUIV.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " stays Open."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Five exact mirrors (the mode ledger "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " closed form with Abel value; the zeta/Quillen route with the symbolic reflection formula and the "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{diag}(i,i)"
+        },
+        {
+          "k": "t",
+          "v": " control; the derived-weight contact vectors "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " success table "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\Z_2"
+        },
+        {
+          "k": "t",
+          "v": "/EH anchor on the "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " glue roots; the consistency chain "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " wrong-weight controls; the "
+        },
+        {
+          "k": "m",
+          "v": "k=3,5"
+        },
+        {
+          "k": "t",
+          "v": " cyclotomic wandering controls); the Cesàro/Hurwitz/stripped-block numerics stay Python-only."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Website."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " (tfpt_3 "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " contracts mirrors), generated indices via build."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-22",
     "dateLabel": "",
     "heading": [

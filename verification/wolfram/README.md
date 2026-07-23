@@ -104,8 +104,8 @@ time `v99`, horizon anchor `v101`, seam orientation `v102`, trisection normal fo
 **Status: verified.** First engine run 2026-06-11 (Wolfram Engine 14.3): the
 v84–v93 block passed **45/45** on first run; the v94–v140 blocks were added
 the same day, the v141–v144 block on 2026-06-12. Current state (verified
-engine run 2026-07-21, license reactivated, Wolfram Engine 14.3 — the 16
-mirrors deferred since 2026-07-14 counted with the reactivation run, 378 →
+engine run 2026-07-23, Wolfram Engine 14.3 — the 16
+mirrors deferred since 2026-07-14 counted with the 2026-07-21 reactivation run, 378 →
 394: v479 (2) + v491 (3) + v493 (4) + v495 (3) + v496 (4); the same-day
 `v497` WP5a round adds 4 more exact mirrors, verified directly with the
 active engine, 394 → 398; the same-day `v498` WP5b round adds 5 more exact
@@ -170,10 +170,35 @@ reflection census, the exact Hermiticity witness -i/(8 sin(5 pi/16))
 with the full 745/96/0 census, the GSO 2-torsion census, and the
 family-A tower-normalisation failure — the GSO-fixed RP inertia
 certificates stay Python-only), all verified directly with the active
-engine, 522 → 540):
+engine, 522 → 540; the 2026-07-23 `v523` constructive-w_m round adds 5
+more (the equivariant mode ledger = closed form at every order n ≤ 40
+with Abel value (1/2, 1/4, 1/2) = 1/det_j, Dedekind sum 5/4 and product
+16; the zeta/Quillen route with the symbolic reflection formula, det Δ =
+det_j² = (4, 16, 4), the unique real positive section and the diag(i,i)
+control (2i, 4, −2i); the derived-weight contact vectors + per-sector
+Okubo squares + total 45⟨x,x⟩² + ψ ±64 + the Z2/EH anchor on the 240
+glue roots; the consistency chain w = 4h with the T3 budget c = 4 and
+both wrong-weight controls; the k = 3, 5 cyclotomic wandering controls —
+the Cesàro means, Hurwitz/Lerch certificates and stripped block limits
+stay Python-only), the same-day `v524` WOIT-beta2 round adds 4 more (the
+α₁^N = (−1)^F wrap arithmetic + the exact certificate sin²(3π/8) −
+sin(π/8) sin(5π/8) = 1/2; the Klein–Landau one-particle transfer forms
+exactly Hermitian with odd-k zero diagonal and the even-k square
+identity; the exact N = 8 clock spectrum {1, √2−1} = {1, 1/δ_S} + the
+transparency π/16 product formula certified symbolically; the KMS silver
+witnesses C(1)/C(3) = 1+√2 and det(G − τ₄) < 0 — the H_phys Grams,
+40-digit inertia spectra, spectral projections and the reconstructed
+rotation group stay Python-only), and the same-day `v525` twist-state
+round adds 3 more (the N = 32 integer incidence frame + the σ∘r = ±σ
+congruence mechanism on both axis types; the π/2 existence solveset +
+the (3+4i)/5 root-of-unity census; the δ ↔ π−δ mirror equivariance
+behind the Casimir symmetry — the Pfaffian insertion spectra, the
+Bogoliubov 2-of-16 pattern census and the defect energy stay
+Python-only), all verified directly with the active engine (run
+2026-07-23), 540 → 552):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522: 540 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525: 552 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 
