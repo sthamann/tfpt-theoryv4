@@ -42,12 +42,3333 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-07-24",
+    "dateLabel": "2026-07-24 · XIV",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v536"
+      },
+      {
+        "k": "t",
+        "v": " — Eichler trace layer at the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " lattice: Witt "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\mathrm{Eis}}"
+      },
+      {
+        "k": "t",
+        "v": " + two-sided Eichler identity + Type-A/B local densities + signed "
+      },
+      {
+        "k": "m",
+        "v": "a_p"
+      },
+      {
+        "k": "t",
+        "v": "; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v536"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HECKE.GEOM.EICHLER.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Consolidated promotion of discovery probes T33/T36/T37/T42 into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "23"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim30"
+        },
+        {
+          "k": "t",
+          "v": " s). Builds on "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": " (Kneser counts, "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_p"
+        },
+        {
+          "k": "t",
+          "v": " law, oldforms) without duplicating those checks. The claim is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " RH-related: the Eichler/Witt package of the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-glue census is lattice-native and two-sided in-suite."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) Witt layer "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{Eis}}=\\sigma_3(\\#\\mathbb P^3-\\sigma_3)=L-\\sigma_3^2"
+        },
+        {
+          "k": "t",
+          "v": " identically (sympy) and for all "
+        },
+        {
+          "k": "m",
+          "v": "24"
+        },
+        {
+          "k": "t",
+          "v": " odd primes "
+        },
+        {
+          "k": "m",
+          "v": "p\\le100"
+        },
+        {
+          "k": "t",
+          "v": "; anchors "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{Eis}}(3,5,7)=(336,3780,19264)"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Eichler identity "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "/"
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{geom}}=\\lambda_{\\mathrm{Eis}}+a_p^2"
+        },
+        {
+          "k": "t",
+          "v": "; type-(i) "
+        },
+        {
+          "k": "m",
+          "v": "N_\\perp=(p^6-1)/(p-1)"
+        },
+        {
+          "k": "t",
+          "v": " live constant on all "
+        },
+        {
+          "k": "m",
+          "v": "240"
+        },
+        {
+          "k": "t",
+          "v": " roots at "
+        },
+        {
+          "k": "m",
+          "v": "p=3,5"
+        },
+        {
+          "k": "t",
+          "v": "; type-(ii) live at "
+        },
+        {
+          "k": "m",
+          "v": "p=3"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "352=364-12"
+        },
+        {
+          "k": "t",
+          "v": ") with Kneser filter "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " identity; "
+        },
+        {
+          "k": "m",
+          "v": "p=5"
+        },
+        {
+          "k": "t",
+          "v": " T36-validated freeze ("
+        },
+        {
+          "k": "m",
+          "v": "3784=3906-122"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "R=4"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Shell}(25)"
+        },
+        {
+          "k": "t",
+          "v": " re-enumeration budget-gated); assembler "
+        },
+        {
+          "k": "m",
+          "v": "R(p)=\\sigma_3-1-c(p^2)/8=a_p^2"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "R(7)=576"
+        },
+        {
+          "k": "t",
+          "v": " prognosis ("
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Shell}(49)"
+        },
+        {
+          "k": "t",
+          "v": " out of scope)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Local densities "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Type-A "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " isotropic cosets representing the integer "
+        },
+        {
+          "k": "m",
+          "v": "p"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "N_A=\\min\\bigl(240(1+p^3),\\,p^7+p^4-p^3-1\\bigr)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "N_B=(\\#\\mathrm{iso}-1)-N_A"
+        },
+        {
+          "k": "t",
+          "v": "; B empty iff "
+        },
+        {
+          "k": "m",
+          "v": "p^4<241"
+        },
+        {
+          "k": "t",
+          "v": " (only "
+        },
+        {
+          "k": "m",
+          "v": "p=3"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "p=7"
+        },
+        {
+          "k": "t",
+          "v": " live "
+        },
+        {
+          "k": "m",
+          "v": "82560/743040"
+        },
+        {
+          "k": "t",
+          "v": "; injectivity at "
+        },
+        {
+          "k": "m",
+          "v": "p=11,13"
+        },
+        {
+          "k": "t",
+          "v": "; fibre refinement scoped to "
+        },
+        {
+          "k": "m",
+          "v": "\\{5,7,11\\}"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(D) Signed extraction "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "a_p=-c(p)/8"
+        },
+        {
+          "k": "t",
+          "v": " from geometric "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Shell}(p)"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "(-4,-2,+24)"
+        },
+        {
+          "k": "t",
+          "v": " at "
+        },
+        {
+          "k": "m",
+          "v": "p=3,5,7"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "b=\\sigma_3+a_p\\in\\{24,124,368\\}"
+        },
+        {
+          "k": "t",
+          "v": " (hooks the "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_p"
+        },
+        {
+          "k": "t",
+          "v": " law of "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(E) "
+            },
+            {
+              "k": "m",
+              "v": "O(1)"
+            },
+            {
+              "k": "t",
+              "v": " assembler "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{geom}}(p)"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "R(p)=a_p^2"
+        },
+        {
+          "k": "t",
+          "v": " for all odd "
+        },
+        {
+          "k": "m",
+          "v": "p\\le31"
+        },
+        {
+          "k": "t",
+          "v": " against the eta product "
+        },
+        {
+          "k": "m",
+          "v": "f_8"
+        },
+        {
+          "k": "t",
+          "v": " (Ramanujan bound included)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Classical Eichler/Siegel/Witt named classical — the claim is in-suite two-sidedness (mod-"
+        },
+        {
+          "k": "m",
+          "v": "p"
+        },
+        {
+          "k": "t",
+          "v": " geometry left, eta product right) and the closed compiler densities; no RH statement; "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Shell}(p^2)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "p\\ge7"
+        },
+        {
+          "k": "t",
+          "v": " out of scope; weight-"
+        },
+        {
+          "k": "m",
+          "v": "4\\to"
+        },
+        {
+          "k": "t",
+          "v": "GL"
+        },
+        {
+          "k": "m",
+          "v": "(1)"
+        },
+        {
+          "k": "t",
+          "v": " stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; no marker moves of any pre-existing contract."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.EICHLER.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\backslash"
+        },
+        {
+          "k": "t",
+          "v": "veri in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension mirrors (exact Witt/density/assembler/"
+        },
+        {
+          "k": "m",
+          "v": "a_p"
+        },
+        {
+          "k": "t",
+          "v": " identities); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " + VerificationDag E8 + ScriptIndex via "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "dateLabel": "2026-07-24 · XIII",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v535"
+      },
+      {
+        "k": "t",
+        "v": " — Hecke from geometry: Kneser correspondence + affine neighbour-sum + 2-adic oldform recovery on the "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " census channels; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v535"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HECKE.GEOM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Consolidated promotion of discovery probes T27/T31/T32 into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "25"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim11"
+        },
+        {
+          "k": "t",
+          "v": " s). The claim is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " RH-related: the Hecke structure of the "
+        },
+        {
+          "k": "m",
+          "v": "\\mu_4"
+        },
+        {
+          "k": "t",
+          "v": "-glue census is lattice-native."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) Kneser carries Hecke "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\#\\mathrm{iso\\_pts}=p^7+p^4-p^3"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\#\\mathrm{iso\\_lines}=\\sigma_3(p)\\,\\#\\mathbb P^3(\\mathbb F_p)"
+        },
+        {
+          "k": "t",
+          "v": " identically and by full enumeration at "
+        },
+        {
+          "k": "m",
+          "v": "p=2,3,5,7"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "135/1120/19656/137600"
+        },
+        {
+          "k": "t",
+          "v": " lines) — the Eisenstein eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "\\sigma_3(p)=1+p^3"
+        },
+        {
+          "k": "t",
+          "v": " is an exact factor of a lattice-native correspondence count."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Neighbour-sum "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " affine Hecke element "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\nu_p=a\\,\\mathrm{Id}+b\\,T_p"
+        },
+        {
+          "k": "t",
+          "v": " exactly (overdetermined, residual "
+        },
+        {
+          "k": "m",
+          "v": "0"
+        },
+        {
+          "k": "t",
+          "v": ") with "
+        },
+        {
+          "k": "m",
+          "v": "b=\\sigma_3+a_p"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a=\\#\\mathrm{lines}-b\\sigma_3"
+        },
+        {
+          "k": "t",
+          "v": "; cusp rule "
+        },
+        {
+          "k": "m",
+          "v": "a_p=b-\\sigma_3"
+        },
+        {
+          "k": "t",
+          "v": " recovers "
+        },
+        {
+          "k": "m",
+          "v": "a_3=-4"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "a_5=-2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "p=3"
+        },
+        {
+          "k": "t",
+          "v": " live orbit-reduced; "
+        },
+        {
+          "k": "m",
+          "v": "p=5"
+        },
+        {
+          "k": "t",
+          "v": " T31-validated freeze of "
+        },
+        {
+          "k": "m",
+          "v": "S[1]"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{odd}}=3784"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "p=7"
+        },
+        {
+          "k": "t",
+          "v": " consistency "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_{\\mathrm{odd}}=\\#\\mathrm{lines}-\\sigma_3^2+a_p^2=19840"
+        },
+        {
+          "k": "t",
+          "v": "; placebo fails."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Redundancy "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " 2-adic oldform structure "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\dim_{\\mathbb Q}V=7=5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "E_4"
+        },
+        {
+          "k": "t",
+          "v": "-copies, levels "
+        },
+        {
+          "k": "m",
+          "v": "1,2,4,8,16"
+        },
+        {
+          "k": "t",
+          "v": ") "
+        },
+        {
+          "k": "m",
+          "v": "+2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "f_8"
+        },
+        {
+          "k": "t",
+          "v": "-copies, levels "
+        },
+        {
+          "k": "m",
+          "v": "8,16"
+        },
+        {
+          "k": "t",
+          "v": "); every "
+        },
+        {
+          "k": "m",
+          "v": "\\Theta_j"
+        },
+        {
+          "k": "t",
+          "v": " an explicit "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q"
+        },
+        {
+          "k": "t",
+          "v": "-linear combination; recovery "
+        },
+        {
+          "k": "m",
+          "v": "\\pi_{\\mathrm{cusp}}=(28-T_3)/32"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\pi_{\\mathrm{Eis}}=(T_3+4)/32"
+        },
+        {
+          "k": "t",
+          "v": ", newform via "
+        },
+        {
+          "k": "m",
+          "v": "(1-V_2U_2)"
+        },
+        {
+          "k": "t",
+          "v": "; new quotients each dimension "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "; level census purely "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": "-adic."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Classical theorems (Kneser, Hecke, Atkin–Lehner, multiplicity one) named classical — the TFPT content is the in-suite mechanics. No RH statement. Weight-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " restriction named: GL"
+        },
+        {
+          "k": "m",
+          "v": "(1)"
+        },
+        {
+          "k": "t",
+          "v": "/weight-drop transport stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". No marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Cited in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; ledger row "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " exact mirrors ("
+        },
+        {
+          "k": "m",
+          "v": "588\\to593"
+        },
+        {
+          "k": "t",
+          "v": "); website sync."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
+    "dateLabel": "2026-07-24 · I",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v534"
+      },
+      {
+        "k": "t",
+        "v": " — the straddle cone executed: THE FIRST DYNAMICAL SELECTION OF THE ALIGNMENT BIT — reflection positivity keeps exactly ONE member of the interacting mark family alive, "
+      },
+      {
+        "k": "m",
+        "v": "\\delta=\\pi/2"
+      },
+      {
+        "k": "t",
+        "v": " with positive coupling; the literal leading-order cone formalization dies; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v534"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "SEAM.STRADDLE.CONE.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The 2026-07-23 review-round contract (recorded “not promoted” in entry (X)) is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "executed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ", double-verdicted. "
+        },
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "V2 "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " ERFOLG — the selection law (the central datum):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " with independent couplings "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda_q"
+        },
+        {
+          "k": "t",
+          "v": " on the four mark quartets of "
+        },
+        {
+          "k": "m",
+          "v": "M(\\delta=m\\pi/8)"
+        },
+        {
+          "k": "t",
+          "v": " and the equivariant (uniform) direction, reflection positivity holds on "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "every"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " admissible cut over the whole grid "
+        },
+        {
+          "k": "m",
+          "v": "g\\in\\{1/32..8\\}"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " member "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " sign: "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "m=4"
+        },
+        {
+          "k": "t",
+          "v": ") with "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "positive"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " coupling — all four Grams PD "
+        },
+        {
+          "k": "m",
+          "v": "(37,0,0)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "including the previously untested straddled clock axes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "7/15"
+        },
+        {
+          "k": "t",
+          "v": ", minimum eigenvalue "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "lifted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " off the free RP boundary ("
+        },
+        {
+          "k": "m",
+          "v": "1.78\\cdot10^{-6}\\to5.5\\cdot10^{-5}"
+        },
+        {
+          "k": "t",
+          "v": " near "
+        },
+        {
+          "k": "m",
+          "v": "g=1/4"
+        },
+        {
+          "k": "t",
+          "v": ": the "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " interaction pushes "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "away"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " from the boundary), Gibbs "
+        },
+        {
+          "k": "m",
+          "v": "\\beta=2"
+        },
+        {
+          "k": "t",
+          "v": " identical "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". The asymmetric members die: "
+        },
+        {
+          "k": "m",
+          "v": "m=2/6"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "s=+"
+        },
+        {
+          "k": "t",
+          "v": " already at "
+        },
+        {
+          "k": "m",
+          "v": "g=1/32"
+        },
+        {
+          "k": "t",
+          "v": ", with "
+        },
+        {
+          "k": "m",
+          "v": "s=-"
+        },
+        {
+          "k": "t",
+          "v": " from "
+        },
+        {
+          "k": "m",
+          "v": "g=1/8"
+        },
+        {
+          "k": "t",
+          "v": ". The "
+        },
+        {
+          "k": "c",
+          "v": "v529"
+        },
+        {
+          "k": "t",
+          "v": " straddle law "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "refines"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": asymmetric straddling kills RP, the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "symmetric"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " straddling of the self-mirror member protects it."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "V1 "
+            },
+            {
+              "k": "m",
+              "v": "="
+            },
+            {
+              "k": "t",
+              "v": " KILL (the literal cone formalization)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The leading-order soft-block cone "
+        },
+        {
+          "k": "m",
+          "v": "K_{\\mathrm{RP}}=\\operatorname{Fix}(G_\\delta)\\cap\\bigcap_c\\{\\lambda: G_c^{\\mathrm{lead}}\\succeq0\\}"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "empty"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " for every member and both signs (first-order PT via the exact reduced resolvent, Hermitian to "
+        },
+        {
+          "k": "m",
+          "v": "10^{-15}"
+        },
+        {
+          "k": "t",
+          "v": ", central-difference regression "
+        },
+        {
+          "k": "m",
+          "v": "2\\cdot10^{-8}"
+        },
+        {
+          "k": "t",
+          "v": ") — the linear pencil cannot carry the selection; the protection at "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "nonperturbative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ". Recoverable leading-order content: the straddled-cut drift signs are exact ("
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "+1.4\\cdot10^{-4}"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "s=+"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "-3.7\\cdot10^{-2}"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "s=-"
+        },
+        {
+          "k": "t",
+          "v": "; asymmetric members reversed) — necessary, not sufficient."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "The exact geometry behind it "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\delta=\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "unique symmetric-straddle member"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": stabilizer "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the full clock"
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": "mirror group (rotations "
+        },
+        {
+          "k": "m",
+          "v": "\\{0,4,8,12\\}"
+        },
+        {
+          "k": "t",
+          "v": ", reflection axes "
+        },
+        {
+          "k": "m",
+          "v": "\\{3,7,11,15\\}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " four admissible bond cuts, straddled "
+        },
+        {
+          "k": "m",
+          "v": "\\{7,15\\}"
+        },
+        {
+          "k": "t",
+          "v": "), the four quartets "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "partition"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "16"
+        },
+        {
+          "k": "t",
+          "v": "-circle, and every straddling quartet is reflection-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " across its cut with exact sign "
+        },
+        {
+          "k": "m",
+          "v": "+1"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "m=2/6"
+        },
+        {
+          "k": "t",
+          "v": " straddle asymmetrically; odd "
+        },
+        {
+          "k": "m",
+          "v": "m"
+        },
+        {
+          "k": "t",
+          "v": " carry no bond axis (the typed "
+        },
+        {
+          "k": "c",
+          "v": "v521"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "v525"
+        },
+        {
+          "k": "t",
+          "v": " placement artifact). "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{Fix}(G_\\delta)"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "-dimensional throughout: uniform on "
+        },
+        {
+          "k": "m",
+          "v": "m=2..6"
+        },
+        {
+          "k": "t",
+          "v": ", NS-wrap-"
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "twisted"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "(1,-1,1,1)/(-1,-1,-1,1)"
+        },
+        {
+          "k": "t",
+          "v": " on the tight members "
+        },
+        {
+          "k": "m",
+          "v": "m=1/7"
+        },
+        {
+          "k": "t",
+          "v": ". Typed cross-link: the RP-selected member "
+        },
+        {
+          "k": "m",
+          "v": "m=4"
+        },
+        {
+          "k": "t",
+          "v": " is exactly the carrier of the "
+        },
+        {
+          "k": "c",
+          "v": "v528"
+        },
+        {
+          "k": "t",
+          "v": " twist-class order parameter "
+        },
+        {
+          "k": "m",
+          "v": "O=1/2"
+        },
+        {
+          "k": "t",
+          "v": " — the dynamical selector and the kinematic definition point at the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "same"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " member."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest fences "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " One toy, one interaction class (FK quartets), flat-band parent, "
+        },
+        {
+          "k": "m",
+          "v": "\\deg\\le2"
+        },
+        {
+          "k": "t",
+          "v": " OS bases, finite coupling grid — toy-level evidence "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "for"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the bit's dynamical origin, "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "not"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " a derivation; nothing about the continuum "
+        },
+        {
+          "k": "m",
+          "v": "\\mathcal A_{\\mathrm{hol}}"
+        },
+        {
+          "k": "t",
+          "v": " is claimed; "
+        },
+        {
+          "k": "c",
+          "v": "WOIT.OS.TWISTOR.01"
+        },
+        {
+          "k": "t",
+          "v": " stays Open, NO marker moves. Transparency: the run-1 preregistered verdict logic conflated formalization and substance (UNENTSCHIEDEN, mismatch typed); run 2 split V1/V2 with no tolerance change and no number changed — note kept verbatim in the probe. Discovery provenance: "
+        },
+        {
+          "k": "c",
+          "v": "experiments/tfpt-discovery/seam_straddle_cone_probe.py"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "15/15"
+        },
+        {
+          "k": "t",
+          "v": ", 2026-07-24)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Four exact mirrors (stabilizer census, "
+        },
+        {
+          "k": "m",
+          "v": "\\pi/2"
+        },
+        {
+          "k": "t",
+          "v": " partition "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " straddle incidence, reflection-closure signs, equivariant Fix rays incl. the wrap-twisted "
+        },
+        {
+          "k": "m",
+          "v": "m=1/7"
+        },
+        {
+          "k": "t",
+          "v": " rays) in "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": ", verified engine run 2026-07-24, "
+        },
+        {
+          "k": "m",
+          "v": "584\\to588"
+        },
+        {
+          "k": "t",
+          "v": " (the "
+        },
+        {
+          "k": "m",
+          "v": "256"
+        },
+        {
+          "k": "t",
+          "v": "-dim Fock spectra, PT corrections and finite-"
+        },
+        {
+          "k": "m",
+          "v": "g"
+        },
+        {
+          "k": "t",
+          "v": " scans stay Python-only, flagged); suite "
+        },
+        {
+          "k": "m",
+          "v": "527\\to528"
+        },
+        {
+          "k": "t",
+          "v": " modules."
+        }
+      ]
+    ]
+  },
+  {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · X",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v530"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v533"
+      },
+      {
+        "k": "t",
+        "v": " — the external review round promoted: center quotient compiler, Coxeter Stage A tensor clock, dual-degree modular checksum "
+      },
+      {
+        "k": "m",
+        "v": "744"
+      },
+      {
+        "k": "t",
+        "v": ", sheet-transfer disc "
+      },
+      {
+        "k": "m",
+        "v": "-7"
+      },
+      {
+        "k": "t",
+        "v": " norm line; every identity machine-confirmed exactly before promotion (probe "
+      },
+      {
+        "k": "m",
+        "v": "76/76"
+      },
+      {
+        "k": "t",
+        "v": "); NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v530"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "DIAMOND.CENTER.QUOTIENT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The Sheet-Diamond center "
+        },
+        {
+          "k": "m",
+          "v": "C=M(1,0)"
+        },
+        {
+          "k": "t",
+          "v": " carries the fixed primitive line "
+        },
+        {
+          "k": "m",
+          "v": "Cv=v"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "v=(-1,1,0)"
+        },
+        {
+          "k": "t",
+          "v": "), and the induced operator on "
+        },
+        {
+          "k": "m",
+          "v": "\\Z^3/\\Z v"
+        },
+        {
+          "k": "t",
+          "v": " is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "exactly"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " the atom matrix "
+        },
+        {
+          "k": "m",
+          "v": "A=\\big(\\begin{smallmatrix}8&2\\\\5&3\\end{smallmatrix}\\big)\n=\\big(\\begin{smallmatrix}\\operatorname{rank}E_8&|\\Z_2|\\\\ \\gcar&\\Nfam\\end{smallmatrix}\\big)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "with "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}A=11"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det A=14"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{disc}=65=5\\cdot13"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{perm}A=34=p_5(a)"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\prod A_{ij}=240"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\det(A{-}I)=4"
+        },
+        {
+          "k": "t",
+          "v": ". The center "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "self-codes"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": row sums "
+        },
+        {
+          "k": "m",
+          "v": "C\\mathbf 1=(7,11,13)=(\\det A/|\\Z_2|,\\operatorname{tr}A,\\operatorname{disc}/\\gcar)"
+        },
+        {
+          "k": "t",
+          "v": "; with the fixed eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " this is "
+        },
+        {
+          "k": "m",
+          "v": "(1,7,11,13)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the CP-halved "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " Coxeter exponents. The "
+        },
+        {
+          "k": "c",
+          "v": "v414"
+        },
+        {
+          "k": "t",
+          "v": " resolvent ladder factorises: "
+        },
+        {
+          "k": "m",
+          "v": "\\det(C{+}kI)=(k{+}1)\\det(A{+}kI)"
+        },
+        {
+          "k": "t",
+          "v": " identically, quotient ladder "
+        },
+        {
+          "k": "m",
+          "v": "(14,26,40,56)"
+        },
+        {
+          "k": "t",
+          "v": ", differences "
+        },
+        {
+          "k": "m",
+          "v": "(12,14,16)"
+        },
+        {
+          "k": "t",
+          "v": ", endpoint "
+        },
+        {
+          "k": "m",
+          "v": "224=248-24"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Honest correction of the review:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " eigenvalue "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " is NOT unique to "
+        },
+        {
+          "k": "m",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "K"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "Q"
+        },
+        {
+          "k": "t",
+          "v": " share it) — uniqueness holds for the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "conjunction"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fixed line "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " atom quotient "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " CP self-code; the full selector-stratum ablation stays "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": ". New paragraph in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " (Sheet Diamond section)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v531"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "COX.STAGEA.TENSOR.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " two-stage Coxeter audit (Stage A: a natural order-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " operator with "
+        },
+        {
+          "k": "m",
+          "v": "\\chi=\\Phi_{30}"
+        },
+        {
+          "k": "t",
+          "v": " on the even-flip atlas "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "or its "
+            },
+            {
+              "k": "m",
+              "v": "8"
+            },
+            {
+              "k": "t",
+              "v": "-dim primitive-character space"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ") is "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "closed on the character-space alternative"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "T_{30}=\n\\operatorname{Comp}(\\Phi_5)\\otimes\\operatorname{Comp}(\\Phi_6)"
+        },
+        {
+          "k": "t",
+          "v": " has exact order "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "m",
+          "v": "\\chi_{T_{30}}=\\Phi_{30}"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "(CRT, "
+        },
+        {
+          "k": "m",
+          "v": "\\gcd(5,6)=1"
+        },
+        {
+          "k": "t",
+          "v": ": carrier clock "
+        },
+        {
+          "k": "m",
+          "v": "\\times"
+        },
+        {
+          "k": "t",
+          "v": " family clock "
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " Coxeter clock as "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one integer operator"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": "); Ramanujan trace tomography "
+        },
+        {
+          "k": "m",
+          "v": "\\operatorname{tr}(T_{30}^k)=c_{30}(k)\n=c_5(k)c_6(k)"
+        },
+        {
+          "k": "t",
+          "v": " for all "
+        },
+        {
+          "k": "m",
+          "v": "k"
+        },
+        {
+          "k": "t",
+          "v": ", signed table "
+        },
+        {
+          "k": "m",
+          "v": "(-1,1,2,4,-2,-4,-8,8)"
+        },
+        {
+          "k": "t",
+          "v": ", atom readout "
+        },
+        {
+          "k": "m",
+          "v": "(2,4,8)=\n(|\\Z_2|,|\\mu_4|,\\operatorname{rank}E_8)"
+        },
+        {
+          "k": "t",
+          "v": "; honest kill scope ("
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_{15}"
+        },
+        {
+          "k": "t",
+          "v": " passes the unsigned triple — the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "signed"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " table discriminates; "
+        },
+        {
+          "k": "m",
+          "v": "\\Phi_{16}/\\Phi_{20}/\\Phi_{24}"
+        },
+        {
+          "k": "t",
+          "v": " die on the triple). The flip-atlas intertwiner ("
+        },
+        {
+          "k": "c",
+          "v": "COX.FLIP.INTERTWINER"
+        },
+        {
+          "k": "t",
+          "v": ") and Stage B stay "
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " Stage A prose updated."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v532"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "E8.DEGREE.MODULAR.01"
+            },
+            {
+              "k": "t",
+              "v": ", audit-only)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The dual products of the "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": " invariant degrees, "
+        },
+        {
+          "k": "m",
+          "v": "(60,192,240,252)"
+        },
+        {
+          "k": "t",
+          "v": ", satisfy simultaneously "
+        },
+        {
+          "k": "m",
+          "v": "\\sum=744=3\\cdot248"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "="
+        },
+        {
+          "k": "t",
+          "v": " the "
+        },
+        {
+          "k": "m",
+          "v": "j"
+        },
+        {
+          "k": "t",
+          "v": "-function constant, recomputed from the "
+        },
+        {
+          "k": "m",
+          "v": "q"
+        },
+        {
+          "k": "t",
+          "v": "-series "
+        },
+        {
+          "k": "m",
+          "v": "E_4^3/\\Delta"
+        },
+        {
+          "k": "t",
+          "v": "), "
+        },
+        {
+          "k": "m",
+          "v": "\\prod=|W(E_8)|"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\gcd=12"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\tfrac1{12}(\\cdot)=(\\gcar,\\dim S^+,\\det L,7\\Nfam)"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Mandatory fence:"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "D_{16}"
+        },
+        {
+          "k": "t",
+          "v": " passes the same checksum ("
+        },
+        {
+          "k": "m",
+          "v": "1488=3\\cdot496=2\\cdot744"
+        },
+        {
+          "k": "t",
+          "v": " — heterotic, NOT "
+        },
+        {
+          "k": "m",
+          "v": "E_8"
+        },
+        {
+          "k": "t",
+          "v": "-exclusive); six non-heterotic controls fail. "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "Prime-totative fingerprint (audit):"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "\\{2,3,5\\}\\cup(\\operatorname{Exp}(E_8)\\setminus\\{1\\})="
+        },
+        {
+          "k": "t",
+          "v": " all primes below "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": ", and "
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " is the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "largest"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " integer whose totatives are all "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": " or prime (scan to "
+        },
+        {
+          "k": "m",
+          "v": "10^4"
+        },
+        {
+          "k": "t",
+          "v": ") — "
+        },
+        {
+          "k": "m",
+          "v": "h_{E_8}"
+        },
+        {
+          "k": "t",
+          "v": " as the maximal prime-totative Coxeter number; per the no-free-pattern rule nothing here is load-bearing. New keybox in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": ", cross-note in the "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "496"
+        },
+        {
+          "k": "t",
+          "v": " box."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v533"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "FTR.DISC7.NORM.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The branch-preserving transfer path "
+        },
+        {
+          "k": "m",
+          "v": "J,K,C,F=M(1,-2..1)"
+        },
+        {
+          "k": "t",
+          "v": " is a "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "norm line"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": ": "
+        },
+        {
+          "k": "m",
+          "v": "\\det M(1,t)=4t^2{+}14t{+}14=((4t{+}7)^2{+}7)/4\n=N(\\alpha_t)"
+        },
+        {
+          "k": "t",
+          "v": " with "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_t=(4t{+}7{+}\\sqrt{-7})/2"
+        },
+        {
+          "k": "t",
+          "v": " integral in "
+        },
+        {
+          "k": "m",
+          "v": "\\Z[(1{+}\\sqrt{-7})/2]"
+        },
+        {
+          "k": "t",
+          "v": ", the path one translation "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_{t+1}=\\alpha_t+2"
+        },
+        {
+          "k": "t",
+          "v": ", norms "
+        },
+        {
+          "k": "m",
+          "v": "(2,4,14,32)"
+        },
+        {
+          "k": "t",
+          "v": ", constant discriminant "
+        },
+        {
+          "k": "m",
+          "v": "-7"
+        },
+        {
+          "k": "t",
+          "v": ", vertex "
+        },
+        {
+          "k": "m",
+          "v": "7/4>0"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "s",
+          "v": "E"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "2"
+        },
+        {
+          "k": "t",
+          "v": " splits in "
+        },
+        {
+          "k": "m",
+          "v": "\\mathbb Q(\\sqrt{-7})"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-7\\equiv1\\bmod8"
+        },
+        {
+          "k": "t",
+          "v": ", class number "
+        },
+        {
+          "k": "m",
+          "v": "1"
+        },
+        {
+          "k": "t",
+          "v": "); controls: winding axis linear, anchor block disc "
+        },
+        {
+          "k": "m",
+          "v": "+105"
+        },
+        {
+          "k": "t",
+          "v": ". "
+        },
+        {
+          "k": "s",
+          "v": "C"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "s",
+          "v": "O"
+        },
+        {
+          "k": "t",
+          "v": "preregistered next test: do the four external transfer solvers share "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "one"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " fractional-linear action on "
+        },
+        {
+          "k": "m",
+          "v": "\\alpha_t"
+        },
+        {
+          "k": "t",
+          "v": " (kill: four incompatible actions)? "
+        },
+        {
+          "k": "c",
+          "v": "GATE.FTRANSFER"
+        },
+        {
+          "k": "t",
+          "v": " unchanged. New paragraph in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_2"
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "+"
+        },
+        {
+          "k": "t",
+          "v": " frame note in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Wolfram mirror."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " All four modules mirrored exactly in "
+        },
+        {
+          "k": "c",
+          "v": "wolfram/tfpt_readouts_extension.wl"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " new checks, verified engine run 2026-07-23, "
+        },
+        {
+          "k": "m",
+          "v": "564\\to584"
+        },
+        {
+          "k": "t",
+          "v": "); suite "
+        },
+        {
+          "k": "m",
+          "v": "523\\to527"
+        },
+        {
+          "k": "t",
+          "v": " modules."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Not promoted (honest fences)."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " The review's remaining proposals stay research contracts, not verifications: the straddle-cone selector on the interacting FK quartets (the highest-leverage attack on the alignment bit after "
+        },
+        {
+          "k": "c",
+          "v": "v529"
+        },
+        {
+          "k": "t",
+          "v": ") and the metrology-torsor formalisation of "
+        },
+        {
+          "k": "m",
+          "v": "v_{\\mathrm{geo}}"
+        },
+        {
+          "k": "t",
+          "v": " are recorded as next steps in "
+        },
+        {
+          "k": "c",
+          "v": "experiments/next.txt"
+        },
+        {
+          "k": "t",
+          "v": "; the primes-below-"
+        },
+        {
+          "k": "m",
+          "v": "30"
+        },
+        {
+          "k": "t",
+          "v": " identity stays an audit fingerprint exactly as the no-free-pattern rule demands."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "dateLabel": "2026-07-23 · IX",
     "heading": [
       {
         "k": "t",
-        "v": "=150 2026-07-23 (IX) (website entry redesign: narrative home, honesty band, proof strip, guided-tour route — editorial only, NO new modules, NO marker moves)"
+        "v": "website entry redesign: narrative home, honesty band, proof strip, guided-tour route — editorial only, NO new modules, NO marker moves"
       }
     ],
     "items": [
@@ -380,11 +3701,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · VIII",
     "heading": [
       {
         "k": "t",
-        "v": "=150 2026-07-23 (VIII) (prominence pass — the v519–v529 breakthroughs lifted into the FRAME texts of the papers and the website data layer; purely editorial, NO new modules, NO marker moves — (1) "
+        "v": "prominence pass — the v519–v529 breakthroughs lifted into the FRAME texts of the papers and the website data layer; purely editorial, NO new modules, NO marker moves — (1) "
       },
       {
         "k": "c",
@@ -605,7 +3926,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " next under the straddle constraint); both contracts stay Open)"
+        "v": " next under the straddle constraint); both contracts stay Open"
       }
     ],
     "items": [
@@ -953,12 +4274,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · VII",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (VII) ("
-      },
       {
         "k": "c",
         "v": "v529"
@@ -1286,10 +4603,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -1580,12 +4893,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · VI",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (VI) ("
-      },
       {
         "k": "c",
         "v": "v528"
@@ -1778,10 +5087,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -1929,12 +5234,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · V",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (V) ("
-      },
       {
         "k": "c",
         "v": "v527"
@@ -2127,10 +5428,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -2262,12 +5559,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · IV",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (IV) ("
-      },
       {
         "k": "c",
         "v": "v526"
@@ -2548,10 +5841,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -2715,12 +6004,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · III",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (III) ("
-      },
       {
         "k": "c",
         "v": "v525"
@@ -3273,10 +6558,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves — the alignment bit remains genuine discrete input"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -3695,12 +6976,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · II",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (II) ("
-      },
       {
         "k": "c",
         "v": "v524"
@@ -4213,10 +7490,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": " is next"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -4555,12 +7828,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-23",
-    "dateLabel": "",
+    "dateLabel": "2026-07-23 · I",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-23 (I) ("
-      },
       {
         "k": "c",
         "v": "v523"
@@ -5193,10 +8462,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "NO marker moves"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -5535,11 +8800,11 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · XIII",
     "heading": [
       {
         "k": "t",
-        "v": "=150 2026-07-22 (XIII) (HFQPO scorecard extension — the NICER/MAXI J1820+070 third-tooth null and the AstroSat/LAXPC block integrated as a new evidence-scorecard row (search target, never a claim): the preregistered single-QPO extension of the H3 ladder discriminator (frozen "
+        "v": "HFQPO scorecard extension — the NICER/MAXI J1820+070 third-tooth null and the AstroSat/LAXPC block integrated as a new evidence-scorecard row (search target, never a claim): the preregistered single-QPO extension of the H3 ladder discriminator (frozen "
       },
       {
         "k": "c",
@@ -5755,7 +9020,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " HFQPO row extended (“Kanal ruhend”); experiment-only integration — no verification claim, no marker moves)"
+        "v": " HFQPO row extended (“Kanal ruhend”); experiment-only integration — no verification claim, no marker moves"
       }
     ],
     "items": [
@@ -5897,12 +9162,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · XII",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-22 (XII) ("
-      },
       {
         "k": "c",
         "v": "v522"
@@ -6379,10 +9640,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "\\beta_2"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -6828,12 +10085,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · XI",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-22 (XI) ("
-      },
       {
         "k": "c",
         "v": "v521"
@@ -7474,10 +10727,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "carrier input"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -7970,12 +11219,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · X",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-22 (X) ("
-      },
       {
         "k": "c",
         "v": "v520"
@@ -8712,10 +11957,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": "VERDICT ERFOLG-A per the preregistered criteria — both constructive sources fire independently, the consistency closure carries"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -9338,12 +12579,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · IX",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-22 (IX) ("
-      },
       {
         "k": "c",
         "v": "v519"
@@ -10146,10 +13383,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": " stays Open: kill test 1 is discharged on the FREE level only and stays formally live on the interacting algebra"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [
@@ -10859,12 +14092,8 @@ export const CHANGELOG: ChangelogEntry[] = [
   },
   {
     "date": "2026-07-22",
-    "dateLabel": "",
+    "dateLabel": "2026-07-22 · VIII",
     "heading": [
-      {
-        "k": "t",
-        "v": "=150 2026-07-22 (VIII) ("
-      },
       {
         "k": "c",
         "v": "v518"
@@ -11897,10 +15126,6 @@ export const CHANGELOG: ChangelogEntry[] = [
             "v": " untouched"
           }
         ]
-      },
-      {
-        "k": "t",
-        "v": ")"
       }
     ],
     "items": [

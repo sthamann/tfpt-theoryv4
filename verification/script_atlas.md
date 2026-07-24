@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`523` registered scripts · `594` ledger claims · `10` clusters.
+`530` registered scripts · `601` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (60 scripts)
+### `core` — Compiler core & the E₈ glue  (63 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -131,6 +131,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, AX.P2.01, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v521_seam_bit_rp_blind** [E/C/O/X] `SEAM.BIT.RPBLIND.01` — SEAM.BIT.RPBLIND.01: the RP/Theta attack on the alignment bit DECIDED -- 'free OS positivity does NOT see delta', an honest, decided NEGATIVE result (v508 style; 25 checks, ~25 s):
   - deps: v512_seam_tau_flag, v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v506, v507, v510 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
+- **v532_e8_degree_modular_checksum** [E] `E8.DEGREE.MODULAR.01` — Dual-degree checksum: (60,192,240,252) → 744=3·248, |W(E8)|, gcd 12; j = q⁻¹+744+…; D16 control 1488=3·496; primes<30 fingerprint [audit]
+  - deps: E8.DEG.01 (v66), CELEST.WP4.01 (v496), v390_prime2_facet, v403_facet_compositum · cited: 1 architecture e8, 3 e8 audit bootstrap
+- **v535_hecke_from_geometry** [E/C/O] `HECKE.GEOM.01` — Kneser #iso_lines = sigma3*#P3 (135/1120/19656/137600); nu_p = a Id + b T_p with a_p = b-sigma3 => a3=-4, a5=-2; dim V = 7 = 5+2 oldforms; pi_cusp = (28-T3)/32; 2-adic levels only 
+  - deps: v1, v89, v532_e8_degree_modular_checksum, T27, T31, T32 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v536_eichler_trace_layer** [E/C/O] `HECKE.GEOM.EICHLER.01` — Witt λ_Eis; two-sided λ_geom=λ_Eis+a_p² (p=3 live, p=5 freeze); Type-A/B densities N_A=min(240(1+p³),#iso−1); signed a_p=−c(p)/8 (−4,−2,+24); O(1) assembler p≤31 (23 checks, ~30 s)
+  - deps: v535_hecke_from_geometry, v535, T33, T36, T37, T42 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -190,7 +196,7 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
 - **v488_majorana_clebsch_door** [E/O] `FLAV.NUSCALE.04` — FLAV.NUSCALE.04: the 3/5 Clebsch door of the seesaw rung, enumerated and CLOSED -- v482's named escape (a third-generation Majorana factor r ~ 1.6696, 0.18% from g_car/N_fam = 5/3)
   - deps: v482_seesaw_rung_decision, v481_seesaw_carrier_ladder, v247_e8_branching_no126, v247, v249, v470, v481, v482 · cited: 2 standard model
 
-### `masses` — Masses, leptons & quark ratios  (11 scripts)
+### `masses` — Masses, leptons & quark ratios  (12 scripts)
 _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-Plücker quark ratios._
 
 - **v18_quark_yukawa** [E] `FLAV.QUARK.01` — quark source ratios; lepton c=(16/7,4/3,7/6); full hierarchy
@@ -215,6 +221,8 @@ _The φ₀-ladder mass formula, the exact lepton coefficients, and the integer-P
   - deps: v218_diamond_axis_geometry, v213_ftransfer_functor · cited: 2 standard model, research contracts
 - **v229_lepton_frobenius_algebra** [E/C] `LEP.FROB.01` — a commutative Frobenius algebra. The C₆ shift has charpoly t⁶−1 (spectrum μ₆=μ₃ family ×μ₂ sheet). PMNS extension via Aut(A)+the hex CM point is [C].
   - deps: FLAV.LEPTON.01, ARCH.HEXRES.01, v220_cp_hexagonal_modulus · cited: 2 standard model
+- **v533_ftransfer_disc7_norm** [E/C/O] `FTR.DISC7.NORM.01` — Sheet transfer = disc −7 norm line: D(t)=N(α_t), α_{t+1}=α_t+2, norms (2,4,14,32) on J→K→C→F, constant disc −7
+  - deps: v224_diamond_ftransfer_path, DIAMOND.SHEET.SOURCE.J.01 (v412), DIAMOND.SHEET.CALCULUS.01 (v413), v224 · cited: 2 standard model, research contracts
 
 ### `neutrinos` — Neutrinos & the solar angle  (14 scripts)
 _The Majorana texture, the dual anchor, and the previously open solar angle from the seam._
@@ -266,7 +274,7 @@ _The R + R² spectral-action shadow, the seam-fixed scalaron, and the cosmologic
 - **v494_cosmo_running_mu_record** [E/C/X] `COSMO.RUNNING.01, COSMO.MUDIST.01` — α_s/β_s running + μ-distortion promoted to the suite: [E] LO identities α_s=−2/N★²=−r/6, β_s=−4/N★³ (sympy exact) + exact slow roll α_s(51.4)=−7.09×10⁻⁴, β_s=−2.70×10⁻⁵ (band −8.0…
   - deps: v7_gravity_cosmo, v86_nstar_reheating, v22_open_gates_audit · cited: 1 architecture e8, 2 standard model
 
-### `horizon` — Horizon code & Origin Theory (self-consistency)  (20 scripts)
+### `horizon` — Horizon code & Origin Theory (self-consistency)  (21 scripts)
 _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gapped unique attractor that makes parameter-freeness a theorem._
 
 - **v6_bootstrap** [E] `BOOT.01` — reverse glue μ²−5μ+4=0; g_car=5 three ways; 8 = rank E₈ = φ(30)
@@ -309,6 +317,8 @@ _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gap
   - deps: v314_rate_translation, v315_coxeter_coupling, v318_arithmetic_capstone, v314, v315, v124, v55 · cited: origin theory
 - **v471_seam_horizon_replica** [E/O] `SEAM.EHMODEL.04` — SEAM.EHMODEL.04: the Seam-Horizon replica chain exercised numerically on a discretized seam collar -- the kernel-identification premise of SEAM.THEOREM.01 (residual of v150/v151/v1
   - deps: v152_norm_is_anchor, v151_bfk_split, v150_replica_eh_model, v58_seam_horizon_chain, v90_conical_defect_chain, v56, v73, v90 · cited: origin theory
+- **v531_coxeter_tensor_stage_a** [E/C/O/X] `COX.STAGEA.TENSOR.01` — Stage A tensor clock: T30 = Comp(Φ5)⊗Comp(Φ6), order 30, χ=Φ30; Ramanujan traces c30(k)=c5(k)c6(k); atom readout (2,4,8)
+  - deps: v223_coxeter_totative_clock, v315_coxeter_coupling, v223, v418, v55 · cited: 1 architecture e8
 
 ### `uwall` — Open gate (U_wall) — the flavor wall  (12 scripts)
 _The parabolic wall-selection contract: the quark ratios are closed; only the absolute amplitude scale stays open._
@@ -338,7 +348,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (192 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (193 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -725,8 +735,10 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v512_seam_tau_flag, v521_seam_bit_rp_blind, v525_seam_bit_twist_blind, v510_seam_bit_freedom, v529_seam_interacting_toy_fk, v510, v512, v521 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 - **v529_seam_interacting_toy_fk** [E/C/O/X] `SEAM.INT.FKTOY.01` — SEAM.INT.FKTOY.01: the minimal interacting Fidkowski-Kitaev seam toy -- the FIRST firing Kill-Test-2 shadow (triple-verdicted; 24 checks, ~97 s). F1=KILL: Theta exists (U_r^2=2^8, 
   - deps: v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v528_seam_bit_twist_class_definition, v512_seam_tau_flag, v492_celestial_z4_orbifold, v510, v512 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
+- **v534_seam_straddle_cone** [E/C/O/X] `SEAM.STRADDLE.CONE.01` — the FIRST DYNAMICAL SELECTION of the alignment bit (15 checks, ~7 s). V1=KILL: the literal leading-order cone is empty everywhere (linear pencil cannot carry the selection; recover
+  - deps: v529_seam_interacting_toy_fk, v528_seam_bit_twist_class_definition, v519_woit_theta_rp_free, v524_woit_beta2_os_quotient, v525_seam_bit_twist_blind, v510, v519, v524 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, 5 redteam, research contracts
 
-### `registry` — Blind registry & red-team follow-ups (v84–v175)  (182 scripts)
+### `registry` — Blind registry & red-team follow-ups (v84–v175)  (183 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
 
 - **v84_frozen_registry** [E] `REG.FREEZE.01` — blind-prediction registry FROZEN 2026-06-09: every dimensionless prediction of record at 25 digits, re-derived from the two axioms each run (formula↔value lock); exactly ONE θ₁₂ pr
@@ -1093,6 +1105,8 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
   - deps: v306_seed_crossval, v23_anchor_generator, v84_frozen_registry · cited: origin theory, 5 redteam
 - **v466_seed_leptonmass_channel** [E/C/O] `SEED.LEPTONMASS.01` — SEED.LEPTONMASS.01: a sixth, new-sector seed channel -- the charged-lepton mass ratio m_e/m_mu=(12/7)phi0^2 points to the SAME axiom seed phi0, extending the empirical seed over-de
   - deps: v306_seed_crossval, v465_seed_crosssector_joint, v84_frozen_registry, v393_corrections_numeric · cited: 5 redteam
+- **v530_center_quotient_compiler** [E/C/O] `DIAMOND.CENTER.QUOTIENT.01` — Center quotient: Cv=v, Z³/Zv = [[8,2],[5,3]] atom matrix; row sums (7,11,13) self-code; CP code (1,7,11,13); det(C+kI)=(k+1)det(A+kI)
+  - deps: DIAMOND.CENTER.01, v414_center_resolvent_portal, v223_coxeter_totative_clock, v95, v223, v414 · cited: 2 standard model
 
 ## Supersede map — do NOT reuse the left-hand claim
 
@@ -1117,16 +1131,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v518_celestial_wp5e_delta1_derived_kill** — `CELEST.WP5E.DELTA1.01`
-- **v519_woit_theta_rp_free** — `WOIT.OS.TWISTOR.01, WOIT.THETA.FREE.01`
-- **v520_celestial_wp5e_measure_decision** — `CELEST.WP5E.MEASURE.01`
-- **v521_seam_bit_rp_blind** — `SEAM.BIT.RPBLIND.01`
-- **v522_woit_beta1_gso_gauge** — `WOIT.BETA1.GSO.01`
-- **v523_celestial_wp5e_wm_derived** — `CELEST.WP5E.WM.01`
-- **v524_woit_beta2_os_quotient** — `WOIT.BETA2.OS.01`
 - **v525_seam_bit_twist_blind** — `SEAM.BIT.TWISTBLIND.01`
 - **v526_seam_thermal_kms_nariai_bridge** — `SEAM.THERMAL.KMS.01`
 - **v527_seam_clock_silver_spectrum** — `SEAM.CLOCK.SILVER.01`
 - **v528_seam_bit_twist_class_definition** — `SEAM.BIT.TWISTCLASS.01`
 - **v529_seam_interacting_toy_fk** — `SEAM.INT.FKTOY.01`
+- **v530_center_quotient_compiler** — `DIAMOND.CENTER.QUOTIENT.01`
+- **v531_coxeter_tensor_stage_a** — `COX.STAGEA.TENSOR.01`
+- **v532_e8_degree_modular_checksum** — `E8.DEGREE.MODULAR.01`
+- **v533_ftransfer_disc7_norm** — `FTR.DISC7.NORM.01`
+- **v534_seam_straddle_cone** — `SEAM.STRADDLE.CONE.01`
+- **v535_hecke_from_geometry** — `HECKE.GEOM.01`
+- **v536_eichler_trace_layer** — `HECKE.GEOM.EICHLER.01`
 

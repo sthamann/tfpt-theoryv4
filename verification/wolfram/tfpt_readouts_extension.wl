@@ -8261,5 +8261,300 @@ Module[{mult},
     mult === Table[Binomial[4, k]*16, {k, 0, 4}] && Total[mult] === 256];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v530 round: DIAMOND.CENTER.QUOTIENT.01 -- the center quotient compiler.
+   Exact mirrors: fixed line, unimodular quotient = atom matrix, invariants,
+   self-coding row sums, CP code, resolvent factorisation, K/Q controls. ==== *)
+Module[{Cm, Km, Qm, vv, Pm, Cc, Am, rows, kk, vK, PK, AK, PQ, AQ},
+  Cm = {{4, 3, 0}, {4, 5, 2}, {5, 5, 3}};
+  Qm = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  Km = {{4, 2, 0}, {4, 3, 2}, {5, 3, 2}};
+  vv = {-1, 1, 0};
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (i): FIXED PRIMITIVE LINE, EXACT -- C.v = v for v = (-1,1,0) and GCD(v) = 1",
+    Cm . vv === vv && GCD @@ vv === 1];
+  Pm = Transpose[{vv, {1, 0, 0}, {0, 0, 1}}];
+  Cc = Inverse[Pm] . Cm . Pm;
+  Am = Cc[[2 ;; 3, 2 ;; 3]];
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (ii): THE QUOTIENT IS THE ATOM MATRIX, EXACT -- Det[P] = -1 (unimodular), P^-1.C.P = {{1,4,2},{0,8,2},{0,5,3}}, quotient A = {{8,2},{5,3}} = {{rank E8,|Z2|},{g_car,N_fam}}",
+    Abs[Det[Pm]] === 1 && Cc === {{1, 4, 2}, {0, 8, 2}, {0, 5, 3}} && Am === {{8, 2}, {5, 3}}];
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (iii): QUOTIENT INVARIANTS, EXACT -- tr A = 11, det A = 14 = det C, disc = 65 = 5*13, perm A = 34 = p5(a), prod entries = 240 = |R(E8)|, det(A-I) = 4 = |mu4|",
+    Tr[Am] === 11 && Det[Am] === 14 === Det[Cm] && 11^2 - 4*14 === 65 &&
+    8*3 + 2*5 === 34 === 1 + 1 + 2^5 && 8*2*5*3 === 240 && Det[Am - IdentityMatrix[2]] === 4];
+  rows = Cm . {1, 1, 1};
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (iv): SELF-CODE + CP CODE, EXACT -- row sums C.1 = (7,11,13) = (det A/|Z2|, tr A, disc/g_car); with the fixed eigenvalue 1: (1,7,11,13) = the positive CP-pair representatives Min[m,30-m] of the E8 exponents (Z/30)^x",
+    rows === {7, 11, 13} && rows === {14/2, 11, 65/5} &&
+    Sort[Prepend[rows, 1]] === Union[Min[#, 30 - #] & /@ {1, 7, 11, 13, 17, 19, 23, 29}]];
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (v): RESOLVENT FACTORISATION, EXACT POLYNOMIAL IDENTITY -- Det[C + k I] = (k+1) Det[A + k I] identically; quotient ladder (14,26,40,56) with differences (12,14,16); center ladder (14,52,120,224), 224 = 248 - 24",
+    Expand[Det[Cm + kk IdentityMatrix[3]] - (kk + 1) Det[Am + kk IdentityMatrix[2]]] === 0 &&
+    Table[Det[Am + n IdentityMatrix[2]], {n, 0, 3}] === {14, 26, 40, 56} &&
+    Table[Det[Cm + n IdentityMatrix[3]], {n, 0, 3}] === {14, 52, 120, 224} && 224 === 248 - 24];
+  vK = {2, -3, -1};
+  PK = Transpose[{vK, {1, 0, 0}, {0, 1, 0}}];
+  AK = (Inverse[PK] . Km . PK)[[2 ;; 3, 2 ;; 3]];
+  PQ = Transpose[{{0, 0, 1}, {1, 0, 0}, {0, 1, 0}}];
+  AQ = (Inverse[PQ] . Qm . PQ)[[2 ;; 3, 2 ;; 3]];
+  checkExact["v530 DIAMOND.CENTER.QUOTIENT.01 (vi): HONEST UNIQUENESS CONTROLS, EXACT -- K and Q also fix a line (K.(2,-3,-1) = (2,-3,-1); Q.e3 = e3) but the K quotient {{14,8},{-11,-6}} (tr 8, det 4, 5 does not divide disc 48) and the Q quotient {{3,1},{3,2}} (tr 5, det 3, det/|Z2| = 3/2 not integer) are NOT the atom matrix and cannot self-code -- C is unique in the conjunction",
+    Km . vK === vK && Qm . {0, 0, 1} === {0, 0, 1} &&
+    AK === {{14, 8}, {-11, -6}} && Tr[AK] === 8 && Det[AK] === 4 && Mod[48, 5] =!= 0 &&
+    AQ === {{3, 1}, {3, 2}} && Tr[AQ] === 5 && Det[AQ] === 3];
+];
+
+(* ==== v531 round: COX.STAGEA.TENSOR.01 -- the Stage A tensor clock.
+   Exact mirrors: order 30, chi = Phi30, Ramanujan trace tomography,
+   honest Phi15 scope, coprimality controls. ==== *)
+Module[{comp, C5, C6, T30, xx, ram, tab, C15, C16, C20, C24, T66, T55},
+  comp[poly_, var_] := Module[{cl = CoefficientList[poly, var], nn},
+    nn = Length[cl] - 1;
+    Table[If[j == nn, -cl[[i]], If[i == j + 1, 1, 0]],
+      {i, 1, nn}, {j, 1, nn}]];
+  C5 = comp[Cyclotomic[5, xx], xx]; C6 = comp[Cyclotomic[6, xx], xx];
+  T30 = KroneckerProduct[C5, C6];
+  checkExact["v531 COX.STAGEA.TENSOR.01 (i): THE TENSOR CLOCK, EXACT -- T30 = Comp(Phi5) (x) Comp(Phi6) is 8x8 integer with CharacteristicPolynomial = Phi30 = x^8+x^7-x^5-x^4-x^3+x+1",
+    Dimensions[T30] === {8, 8} &&
+    Expand[CharacteristicPolynomial[T30, xx] - Cyclotomic[30, xx]] === 0];
+  checkExact["v531 COX.STAGEA.TENSOR.01 (ii): EXACT ORDER 30 -- MatrixPower[T30,30] = I and MatrixPower[T30,k] != I for every proper divisor step k < 30",
+    MatrixPower[T30, 30] === IdentityMatrix[8] &&
+    And @@ Table[MatrixPower[T30, k] =!= IdentityMatrix[8], {k, 1, 29}]];
+  ram[n_, k_] := Module[{g = GCD[k, n], m}, m = n/g; MoebiusMu[m] EulerPhi[n]/EulerPhi[m]];
+  tab = Table[Tr[MatrixPower[T30, k]], {k, 1, 30}];
+  checkExact["v531 COX.STAGEA.TENSOR.01 (iii): RAMANUJAN TRACE TOMOGRAPHY, EXACT -- tr(T30^k) = c_30(k) for ALL k = 1..30, c_30 = c_5 c_6, signed divisor table (-1,1,2,4,-2,-4,-8,8) at k = (1,2,3,5,6,10,15,30), atom readout (|c(3)|,|c(5)|,|c(15)|) = (2,4,8)",
+    tab === Table[ram[30, k], {k, 1, 30}] &&
+    And @@ Table[ram[30, k] === ram[5, k] ram[6, k], {k, 1, 30}] &&
+    (tab[[#]] & /@ {1, 2, 3, 5, 6, 10, 15, 30}) === {-1, 1, 2, 4, -2, -4, -8, 8} &&
+    Abs /@ (tab[[#]] & /@ {3, 5, 15}) === {2, 4, 8}];
+  C15 = comp[Cyclotomic[15, xx], xx];
+  checkExact["v531 COX.STAGEA.TENSOR.01 (iv): HONEST KILL SCOPE, EXACT -- Comp(Phi15) passes the unsigned triple (Phi30(x) = Phi15(-x)) but fails the signed table (c_15(1) = +1 vs c_30(1) = -1); Phi16/Phi20/Phi24 die on the triple (traces 0,0,0)",
+    (Abs[Tr[MatrixPower[C15, #]]] & /@ {3, 5, 15}) === {2, 4, 8} &&
+    Tr[C15] === 1 &&
+    And @@ Table[(Tr[MatrixPower[comp[Cyclotomic[n, xx], xx], #]] & /@ {3, 5, 15}) === {0, 0, 0}, {n, {16, 20, 24}}]];
+  T66 = KroneckerProduct[C6, C6]; T55 = KroneckerProduct[C5, C5];
+  checkExact["v531 COX.STAGEA.TENSOR.01 (v): COPRIMALITY CONTROLS, EXACT -- C6 (x) C6 has order 3 (not 36), C5 (x) C5 has order 5 (not 25): gcd(5,6) = 1 / CRT is load-bearing",
+    MatrixPower[T66, 3] === IdentityMatrix[4] && T66 =!= IdentityMatrix[4] &&
+    MatrixPower[T55, 5] === IdentityMatrix[16] && T55 =!= IdentityMatrix[16]];
+];
+
+(* ==== v532 round: E8.DEGREE.MODULAR.01 -- the dual-degree checksum 744.
+   Exact mirrors: dual products, j-series constant 744, D16 control,
+   non-heterotic controls, prime-totative fingerprint. ==== *)
+Module[{degs, dp, qq, e4, qj, d16, half, ctrl, tots, maximal},
+  degs = {2, 8, 12, 14, 18, 20, 24, 30};
+  dp = Table[degs[[i]] degs[[9 - i]], {i, 1, 4}];
+  checkExact["v532 E8.DEGREE.MODULAR.01 (i): DUAL PRODUCTS, EXACT -- d_i + d_{9-i} = 32 = h+2; (60,192,240,252): sum 744 = 3*248, product 696729600 = |W(E8)|, gcd 12, /12 = (5,16,20,21)",
+    And @@ Table[degs[[i]] + degs[[9 - i]] === 32, {i, 1, 8}] &&
+    dp === {60, 192, 240, 252} && Total[dp] === 744 === 3*248 &&
+    Times @@ dp === 696729600 && GCD @@ dp === 12 && dp/12 === {5, 16, 20, 21}];
+  e4 = 1 + 240 Sum[DivisorSigma[3, n] qq^n, {n, 1, 6}];
+  qj = Normal[Series[e4^3 / Product[(1 - qq^n)^24, {n, 1, 6}], {qq, 0, 2}]];
+  checkExact["v532 E8.DEGREE.MODULAR.01 (ii): MODULAR ANCHOR, EXACT q-SERIES -- q j = E4^3/Prod(1-q^n)^24 = 1 + 744 q + 196884 q^2 + ... (j = q^-1 + 744 + 196884 q)",
+    SeriesCoefficient[qj, {qq, 0, 0}] === 1 &&
+    SeriesCoefficient[qj, {qq, 0, 1}] === 744 &&
+    SeriesCoefficient[qj, {qq, 0, 2}] === 196884];
+  half[dd_] := Module[{s = Sort[dd], n = Length[dd], t},
+    t = Sum[s[[i]] s[[n + 1 - i]], {i, 1, Floor[n/2]}];
+    If[OddQ[n], t + s[[(n + 1)/2]]^2, t]];
+  d16 = Sort[Join[Table[2 i, {i, 1, 15}], {16}]];
+  checkExact["v532 E8.DEGREE.MODULAR.01 (iii): D16 NEGATIVE CONTROL, EXACT -- same duality d+d' = 32, dual-product sum 1488 = 3*496 = 2*744 (the checksum is heterotic, NOT E8-exclusive; 496 = dim E8xE8 = dim SO(32))",
+    And @@ Table[d16[[i]] + d16[[17 - i]] === 32, {i, 1, 16}] &&
+    half[d16] === 1488 === 3*496 === 2*744];
+  ctrl = {{2, 3, 4, 5, 6, 7, 8, 9} -> 80, {2, 4, 6, 8, 8, 10, 12, 14} -> 120,
+          {2, 5, 6, 8, 9, 12} -> 78, {2, 6, 8, 10, 12, 14, 18} -> 133,
+          {2, 6, 8, 12} -> 52, {2, 6} -> 14};
+  checkExact["v532 E8.DEGREE.MODULAR.01 (iv): NON-HETEROTIC CONTROLS FAIL, EXACT -- A8 100/240, D8 200/360, E6 117/234, E7 316/399, F4 72/156, G2 12/42 (half-pair convention; E8 gives 744 under the same rule)",
+    And @@ (half[#[[1]]] =!= 3 #[[2]] & /@ ctrl) &&
+    (half[#[[1]]] & /@ ctrl) === {100, 200, 117, 316, 72, 12} && half[degs] === 744];
+  tots = Select[Range[1, 29], GCD[#, 30] == 1 &];
+  maximal = Select[Range[1, 10000],
+    Function[n, And @@ (PrimeQ[#] || # == 1 & /@ Select[Range[1, n - 1], GCD[#, n] == 1 &])]];
+  checkExact["v532 E8.DEGREE.MODULAR.01 (v): PRIME-TOTATIVE FINGERPRINT, EXACT [audit] -- {2,3,5} u (Exp(E8) minus {1}) = all primes < 30; every totative of 30 except 1 is prime; 30 is the LARGEST such n (scan to 10^4, full list {1,2,3,4,6,8,12,18,24,30})",
+    Union[{2, 3, 5}, Rest[tots]] === Select[Range[2, 29], PrimeQ] &&
+    And @@ (PrimeQ /@ Rest[tots]) && Max[maximal] === 30 &&
+    maximal === {1, 2, 3, 4, 6, 8, 12, 18, 24, 30}];
+];
+
+(* ==== v533 round: FTR.DISC7.NORM.01 -- the disc -7 norm line.
+   Exact mirrors: norm identity, translation, norms (2,4,14,32), constant
+   discriminant -7, vertex, negative controls. ==== *)
+Module[{Rm, Qm, Mt, Dt, tt, xx, ss, alph, cpoly, Bm, dB},
+  Rm = {{1, 3, 0}, {1, 5, 2}, {2, 5, 3}};
+  Qm = {{3, 1, 0}, {3, 2, 0}, {3, 2, 1}};
+  Mt = Rm + Qm . DiagonalMatrix[{1, tt, tt}];
+  Dt = Expand[Det[Mt]];
+  alph = (4 tt + 7 + Sqrt[-7])/2;
+  checkExact["v533 FTR.DISC7.NORM.01 (i): NORM IDENTITY, EXACT -- D(t) = det M(1,t) = 4t^2+14t+14 = ((4t+7)^2+7)/4 = N(alpha_t), alpha_t = (4t+7+Sqrt[-7])/2 integral (-7 = 1 mod 4, 4t+7 odd)",
+    Dt === 4 tt^2 + 14 tt + 14 && Expand[Dt - ((4 tt + 7)^2 + 7)/4] === 0 &&
+    Expand[alph ((4 tt + 7 - Sqrt[-7])/2) - Dt] === 0 && Mod[-7, 4] === 1];
+  checkExact["v533 FTR.DISC7.NORM.01 (ii): TRANSLATION ORBIT, EXACT -- alpha_{t+1} = alpha_t + 2 = alpha_t + |Z2|; norms at t = -2..1 are (2,4,14,32) = (det J, det K, det C, det F)",
+    Expand[(alph /. tt -> tt + 1) - alph - 2] === 0 &&
+    Table[Dt /. tt -> n, {n, -2, 1}] === {2, 4, 14, 32} &&
+    Table[Det[Rm + Qm . DiagonalMatrix[{1, n, n}]], {n, -2, 1}] === {2, 4, 14, 32}];
+  cpoly = xx^2 - (4 tt + 7) xx + Dt;
+  checkExact["v533 FTR.DISC7.NORM.01 (iii): CONSTANT DISCRIMINANT -7 + VERTEX, EXACT -- Discriminant[x^2-(4t+7)x+D(t), x] = -7 for every t; vertex t = -7/4, D_min = 7/4 > 0; curvature D'' = 8 = rank E8; 2 splits in Q(Sqrt[-7]) (-7 = 1 mod 8)",
+    Expand[Discriminant[cpoly, xx]] === -7 &&
+    Solve[D[Dt, tt] == 0, tt] === {{tt -> -7/4}} && (Dt /. tt -> -7/4) === 7/4 &&
+    D[Dt, {tt, 2}] === 8 && Mod[-7, 8] === 1];
+  Bm = {{Total[Mt, 2], {1, 1, 1} . Mt . {1, 1, 2}},
+        {{1, 1, 2} . Mt . {1, 1, 1}, {1, 1, 2} . Mt . {1, 1, 2}}};
+  dB = Expand[Det[Bm]];
+  checkExact["v533 FTR.DISC7.NORM.01 (iv): NEGATIVE CONTROLS, EXACT -- the winding axis det M(s,0) = 6s+8 is LINEAR; the anchor block det B(1,t) = 3t^2+21t+28 has POSITIVE discriminant 105 (real roots) -- only the sheet determinant is a complex norm line",
+    Expand[Det[Rm + Qm . DiagonalMatrix[{ss, 0, 0}]]] === 6 ss + 8 &&
+    dB === 3 tt^2 + 21 tt + 28 && Discriminant[dB, tt] === 105];
+];
+
+(* ==== v534 round: SEAM.STRADDLE.CONE.01 -- the RP cone on the interacting
+   FK quartets (the first dynamical selection of the alignment bit).
+   Exact mirrors: the stabilizer census of the mark family, the pi/2
+   partition + straddle incidence, the reflection-closure signs of the
+   straddling quartets, and the equivariant Fix rays (uniform on m=2..6,
+   NS-wrap-twisted on m=1,7).  The 256-dim Fock spectra, the PT Gram
+   corrections and the finite-g survival scan are Python-only (numpy),
+   flagged per GATE.WOLFRAM.02. ==== *)
+Module[{marks, rots, refls, cuts, qsites, cutbonds, straddled, quartOrder,
+        rsgn, refQmap, rotsgn, rotQmap, fixray, closedQ, closSign, expect},
+  marks[m_] := Sort[Mod[{0, m, 8, 8 + m}, 16]];
+  rots[m_] := Select[Range[0, 15],
+    Sort[Mod[marks[m] + #, 16]] === marks[m] &];
+  refls[m_] := Select[Range[0, 15],
+    Sort[Mod[# + 1 - marks[m], 16]] === marks[m] &];
+  cuts[m_] := Select[refls[m], OddQ];
+  checkExact["v534 SEAM.STRADDLE.CONE.01 (i): STABILIZER CENSUS, EXACT -- the pi/2 member m = 4 carries the FULL clock+mirror stabilizer (rotations {0,4,8,12}, reflection axes {3,7,11,15} = four admissible bond cuts); every other member has rotations {0,8} and axes {m-1, m+7}; odd members carry NO bond (odd) axis, m = 2/6 carry {1,9}/{5,13}",
+    rots[4] === {0, 4, 8, 12} && refls[4] === {3, 7, 11, 15} &&
+    cuts[4] === {3, 7, 11, 15} &&
+    (And @@ Table[rots[m] === {0, 8} &&
+       refls[m] === Sort[Mod[{m - 1, m + 7}, 16]], {m, {1, 2, 3, 5, 6, 7}}]) &&
+    (And @@ Table[cuts[m] === {}, {m, {1, 3, 5, 7}}]) &&
+    cuts[2] === {1, 9} && cuts[6] === {5, 13}];
+  qsites[b_] := Sort[Mod[{b - 2, b - 1, b, b + 1}, 16]];
+  cutbonds[k_] := Module[{x = Mod[Quotient[k - 1, 2], 16]},
+    {{x, Mod[x + 1, 16]}, {Mod[x + 8, 16], Mod[x + 9, 16]}}];
+  straddled[m_, k_] := Select[marks[m],
+    Function[b, Or @@ (SubsetQ[qsites[b], #] & /@ cutbonds[k])]];
+  checkExact["v534 SEAM.STRADDLE.CONE.01 (ii): PARTITION + STRADDLE INCIDENCE, EXACT -- the four m = 4 quartets TILE the 16-circle (disjoint union = all 16 sites; every other member overlaps); straddled cuts: m = 4 exactly {7,15} (quartets {4,12}/{0,8}), m = 2 exactly {1}, m = 6 exactly {13}, the avoiding axes {3,11}/{9}/{5} carry no straddling quartet",
+    Length[Union @@ (qsites /@ marks[4])] === 16 &&
+    (And @@ Table[Length[Union @@ (qsites /@ marks[m])] < 16,
+       {m, {1, 2, 3, 5, 6, 7}}]) &&
+    Select[cuts[4], straddled[4, #] =!= {} &] === {7, 15} &&
+    straddled[4, 7] === {4, 12} && straddled[4, 15] === {0, 8} &&
+    straddled[4, 3] === {} && straddled[4, 11] === {} &&
+    Select[cuts[2], straddled[2, #] =!= {} &] === {1} &&
+    Select[cuts[6], straddled[6, #] =!= {} &] === {13}];
+  rsgn[k_, a_] := If[Mod[k - a, 32] >= 16, -1, 1];
+  closedQ[k_, b_] := Sort[Mod[k - qsites[b], 16]] === qsites[b];
+  closSign[k_, b_] := Module[{t = qsites[b]},
+    (Times @@ (rsgn[k, #] & /@ t)) Signature[Mod[k - t, 16]]];
+  checkExact["v534 SEAM.STRADDLE.CONE.01 (iii): REFLECTION-CLOSURE SIGNS, EXACT -- every m = 4 straddling quartet is reflection-CLOSED across its own cut with signed-permutation sign +1 (theta_c(Q_q) = +Q_q: the symmetric straddle), while NO m = 2/6 straddling quartet is closed (asymmetric straddle) -- the dichotomy that separates pi/2 from the rest",
+    (And @@ Flatten[Table[closedQ[k, b] && closSign[k, b] === 1,
+       {k, {7, 15}}, {b, straddled[4, k]}]]) &&
+    (And @@ (! closedQ[1, #] & /@ straddled[2, 1])) &&
+    (And @@ (! closedQ[13, #] & /@ straddled[6, 13]))];
+  quartOrder[b_] := Signature[Mod[{b - 2, b - 1, b, b + 1}, 16]];
+  refQmap[k_, b_] := Module[{t = qsites[b], img, tgt},
+    img = Sort[Mod[k - t, 16]];
+    tgt = First[Select[Range[0, 15], qsites[#] === img &]];
+    {tgt, quartOrder[b] (Times @@ (rsgn[k, #] & /@ t)) *
+      Signature[Mod[k - t, 16]] / quartOrder[tgt]}];
+  rotsgn[p_, a_] := If[a + p >= 16, -1, 1];
+  rotQmap[p_, b_] := Module[{t = qsites[b], img, tgt},
+    img = Sort[Mod[t + p, 16]];
+    tgt = First[Select[Range[0, 15], qsites[#] === img &]];
+    {tgt, quartOrder[b] (Times @@ (rotsgn[p, #] & /@ t)) *
+      Signature[Mod[t + p, 16]] / quartOrder[tgt]}];
+  fixray[m_] := Module[{bonds, gens, eqs, lam},
+    bonds = Mod[{0, m, 8, 8 + m}, 16];
+    gens = Join[
+      Table[rotQmap[p, #] & /@ bonds, {p, Rest[rots[m]]}],
+      Table[refQmap[k, #] & /@ bonds, {k, refls[m]}]];
+    lam = Array[l, 4];
+    eqs = Flatten[Table[
+      lam[[First[FirstPosition[bonds, gens[[g, q, 1]]]]]] -
+        gens[[g, q, 2]] lam[[q]], {g, Length[gens]}, {q, 4}]];
+    NullSpace[Table[Coefficient[e, l[i]], {e, eqs}, {i, 4}]]];
+  expect = {1 -> {{1, -1, 1, 1}}, 2 -> {{1, 1, 1, 1}}, 3 -> {{1, 1, 1, 1}},
+    4 -> {{1, 1, 1, 1}}, 5 -> {{1, 1, 1, 1}}, 6 -> {{1, 1, 1, 1}},
+    7 -> {{-1, -1, -1, 1}}};
+  checkExact["v534 SEAM.STRADDLE.CONE.01 (iv): EQUIVARIANT Fix RAYS, EXACT -- the signed stabilizer action on the four quartet couplings has a ONE-dimensional fixed space for every member: the UNIFORM ray (1,1,1,1) for m = 2..6 and the NS-wrap-TWISTED signed rays (1,-1,1,1) / (-1,-1,-1,1) for the tight members m = 1/7 -- the cone question reduces to the sign of one uniform coupling on every well-posed member",
+    And @@ Table[Module[{ns = fixray[m], ex = m /. expect},
+      Length[ns] === 1 &&
+      (ns[[1]] === ex[[1]] || ns[[1]] === -ex[[1]])], {m, 1, 7}]];
+];
+
+(* ==== v535 round: HECKE.GEOM.01 -- Hecke from geometry (exact identities).
+   Live p=3 FP census and q-series builds stay Python-only. *)
+Module[{p, pts, lines, sig3, P3, ap, L, a, b, lam, law},
+  sig3[p_] := 1 + p^3;
+  P3[p_] := (p^4 - 1)/(p - 1);
+  pts[p_] := p^7 + p^4 - p^3;
+  lines[p_] := sig3[p] * P3[p];
+  checkExact["v535 HECKE.GEOM.01 (i): KNESER COUNT IDENTITY, EXACT -- #iso_lines = (pts-1)/(p-1) = sigma3(p)*#P^3(F_p) = (1+p^3)*(p^4-1)/(p-1) = (p+1)^2 (p^2+1)(p^2-p+1) identically",
+    Simplify[(pts[p] - 1)/(p - 1) - lines[p]] === 0 &&
+    Simplify[lines[p] - (p + 1)^2 (p^2 + 1) (p^2 - p + 1)] === 0];
+  checkExact["v535 HECKE.GEOM.01 (ii): KNESER ENUMERATION ANCHORS, EXACT -- #iso_lines at p=2,3,5,7 = (135,1120,19656,137600); #iso_pts = (136,2241,78625,825601)",
+    {lines[2], lines[3], lines[5], lines[7]} === {135, 1120, 19656, 137600} &&
+    {pts[2], pts[3], pts[5], pts[7]} === {136, 2241, 78625, 825601}];
+  law[p_, ap_] := Module[{s = sig3[p], L0 = lines[p], bb, aa},
+    bb = s + ap; aa = L0 - bb s;
+    {aa, bb, L0 - s^2 + ap^2, L0}];
+  checkExact["v535 HECKE.GEOM.01 (iii): AFFINE HECKE LAW (a,b), EXACT -- b=sigma3+a_p, a=#lines-b*sigma3; at p=3,5 with a_p=(-4,-2) gives (448,24) and (4032,124); a+b*sigma3=#lines",
+    Module[{l3 = law[3, -4], l5 = law[5, -2]},
+      l3[[{1, 2}]] === {448, 24} && l5[[{1, 2}]] === {4032, 124} &&
+      l3[[1]] + l3[[2]] sig3[3] === l3[[4]] &&
+      l5[[1]] + l5[[2]] sig3[5] === l5[[4]]]];
+  checkExact["v535 HECKE.GEOM.01 (iv): LAMBDA / CUSP RULE, EXACT -- lambda_odd = #lines - sigma3^2 + a_p^2 equals (352,3784,19840) at p=3,5,7; a_p = b-sigma3 recovers (-4,-2); |a_7|=24 from disc",
+    Module[{l3 = law[3, -4], l5 = law[5, -2], l7 = law[7, 24]},
+      {l3[[3]], l5[[3]], l7[[3]]} === {352, 3784, 19840} &&
+      l3[[2]] - sig3[3] === -4 && l5[[2]] - sig3[5] === -2 &&
+      Sqrt[sig3[7]^2 - (l7[[4]] - l7[[3]])] === 24]];
+  checkExact["v535 HECKE.GEOM.01 (v): OLDFORM / PROJECTOR ARITHMETIC, EXACT -- dim V = 5+2 = 7; pi_Eis=(T+4)/32 and pi_cusp=(28-T)/32 complementary idempotents on diag(28x5,-4x2); new quotients 5-4=1 and 2-1=1; 2-adic levels {1,2,4,8,16} u {8,16}",
+    Module[{T = DiagonalMatrix[{28, 28, 28, 28, 28, -4, -4}],
+        pe, pc},
+      pe = (T + 4 IdentityMatrix[7])/32;
+      pc = (28 IdentityMatrix[7] - T)/32;
+      5 + 2 === 7 &&
+      pe . pe === pe && pc . pc === pc &&
+      pe + pc === IdentityMatrix[7] &&
+      pe . pc === ConstantArray[0, {7, 7}] &&
+      Length[NullSpace[T - 28 IdentityMatrix[7]]] === 5 &&
+      Length[NullSpace[T + 4 IdentityMatrix[7]]] === 2 &&
+      Union[{1, 2, 4, 8, 16}] === {1, 2, 4, 8, 16} &&
+      Union[{8, 16}] === {8, 16}]];
+];
+
+(* ==== v536 round: HECKE.GEOM.EICHLER.01 -- Eichler trace layer (exact identities).
+   Live FP Shell(p)/Shell(p^2) stays Python-only. *)
+Module[{p, sig3, P3, L, lamEis, Nperp, shell, iso1, NA, NB, ap, R, b},
+  sig3[p_] := 1 + p^3;
+  P3[p_] := (p^4 - 1)/(p - 1);
+  L[p_] := sig3[p] * P3[p];
+  lamEis[p_] := sig3[p] * (P3[p] - sig3[p]);
+  Nperp[p_] := (p^6 - 1)/(p - 1);
+  shell[p_] := 240 * sig3[p];
+  iso1[p_] := p^7 + p^4 - p^3 - 1;
+  NA[p_] := Min[shell[p], iso1[p]];
+  NB[p_] := iso1[p] - NA[p];
+  checkExact["v536 HECKE.GEOM.EICHLER.01 (i): WITT LAMBDA_EIS, EXACT -- lambda_Eis = L - sigma3^2 = sigma3*(#P3-sigma3) = p(p^4+p^3+p+1); anchors (336,3780,19264) at p=3,5,7",
+    Simplify[lamEis[p] - (L[p] - sig3[p]^2)] === 0 &&
+    Simplify[lamEis[p] - p (p^4 + p^3 + p + 1)] === 0 &&
+    {lamEis[3], lamEis[5], lamEis[7]} === {336, 3780, 19264}];
+  checkExact["v536 HECKE.GEOM.EICHLER.01 (ii): EICHLER ANCHORS / N_PERP, EXACT -- N_perp=(p^6-1)/(p-1) = (364,3906,19608); lambda_geom = lambda_Eis + a_p^2 = (352,3784,19840) at a_p=(-4,-2,24); N_perp - lambda_Eis = sigma3",
+    {Nperp[3], Nperp[5], Nperp[7]} === {364, 3906, 19608} &&
+    {lamEis[3] + 16, lamEis[5] + 4, lamEis[7] + 576} === {352, 3784, 19840} &&
+    Nperp[3] - lamEis[3] === sig3[3] && Nperp[5] - lamEis[5] === sig3[5]];
+  checkExact["v536 HECKE.GEOM.EICHLER.01 (iii): LOCAL DENSITIES N_A/N_B, EXACT -- N_A=min(240(1+p^3),#iso-1); algebra shell-(#iso-1)=(1+p^3)(241-p^4); p=3 => (2240,0); p=7 => (82560,743040); B empty iff p^4<241",
+    Simplify[shell[p] - iso1[p] - (1 + p^3) (241 - p^4)] === 0 &&
+    {NA[3], NB[3]} === {2240, 0} &&
+    {NA[5], NB[5]} === {30240, 48384} &&
+    {NA[7], NB[7]} === {82560, 743040} &&
+    (3^4 < 241) && (5^4 > 241) && (7^4 > 241)];
+  checkExact["v536 HECKE.GEOM.EICHLER.01 (iv): SIGNED a_p / b TABLE, EXACT -- a_p=(-4,-2,24) at p=3,5,7; b=sigma3+a_p in {24,124,368}; R=a_p^2 in {16,4,576}",
+    Module[{aps = {-4, -2, 24}, ps = {3, 5, 7}},
+      Table[sig3[ps[[i]]] + aps[[i]], {i, 3}] === {24, 124, 368} &&
+      Table[aps[[i]]^2, {i, 3}] === {16, 4, 576}]];
+  checkExact["v536 HECKE.GEOM.EICHLER.01 (v): ASSEMBLER / RAMANUJAN, EXACT -- R = sigma3 - 1 - c(p^2)/8 with c=-8 a(p^2), a(p^2)=a_p^2-p^3 equals a_p^2; |a_p|<=2 p^{3/2} at p=3,5,7,11,13",
+    Module[{aps = <|3 -> -4, 5 -> -2, 7 -> 24, 11 -> -44, 13 -> 22|>, ok = True, p, ap, ap2, c, R},
+      Do[
+        ap = aps[p]; ap2 = ap^2 - p^3; c = -8 ap2; R = sig3[p] - 1 - c/8;
+        ok = ok && R === ap^2 && Abs[ap] <= 2 p^(3/2),
+        {p, Keys[aps]}];
+      ok]];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

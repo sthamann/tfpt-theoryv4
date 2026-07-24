@@ -62,6 +62,160 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-24 (XIV) (\texttt{v536} --- Eichler trace layer at the $E_8$ lattice: Witt $\lambda_{\mathrm{Eis}}$ + two-sided Eichler identity + Type-A/B local densities + signed $a_p$; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v536} (\texttt{HECKE.GEOM.EICHLER.01}).} Consolidated promotion of discovery
+probes T33/T36/T37/T42 into one load-bearing module ($23$ checks, $\sim30$\,s). Builds on
+\texttt{v535}/\texttt{HECKE.GEOM.01} (Kneser counts, $\nu_p$ law, oldforms) without duplicating those
+checks. The claim is \emph{not} RH-related: the Eichler/Witt package of the $\mu_4$-glue census is
+lattice-native and two-sided in-suite.
+\item \textbf{(A) Witt layer \mE.} $\lambda_{\mathrm{Eis}}=\sigma_3(\#\mathbb P^3-\sigma_3)=L-\sigma_3^2$
+identically (sympy) and for all $24$ odd primes $p\le100$; anchors
+$\lambda_{\mathrm{Eis}}(3,5,7)=(336,3780,19264)$.
+\item \textbf{(B) Eichler identity \mE/\mC.} $\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$;
+type-(i) $N_\perp=(p^6-1)/(p-1)$ live constant on all $240$ roots at $p=3,5$; type-(ii) live at
+$p=3$ ($352=364-12$) with Kneser filter $=$ identity; $p=5$ T36-validated freeze
+($3784=3906-122$, $R=4$; $\mathrm{Shell}(25)$ re-enumeration budget-gated); assembler
+$R(p)=\sigma_3-1-c(p^2)/8=a_p^2$; $R(7)=576$ prognosis ($\mathrm{Shell}(49)$ out of scope).
+\item \textbf{(C) Local densities \mE.} Type-A $=$ isotropic cosets representing the integer $p$;
+$N_A=\min\bigl(240(1+p^3),\,p^7+p^4-p^3-1\bigr)$, $N_B=(\#\mathrm{iso}-1)-N_A$; B empty iff
+$p^4<241$ (only $p=3$); $p=7$ live $82560/743040$; injectivity at $p=11,13$; fibre refinement
+scoped to $\{5,7,11\}$.
+\item \textbf{(D) Signed extraction \mE.} $a_p=-c(p)/8$ from geometric $\mathrm{Shell}(p)$:
+$(-4,-2,+24)$ at $p=3,5,7$; $b=\sigma_3+a_p\in\{24,124,368\}$ (hooks the $\nu_p$ law of
+\texttt{v535}).
+\item \textbf{(E) $O(1)$ assembler \mE.} $\lambda_{\mathrm{geom}}(p)$ and $R(p)=a_p^2$ for all odd
+$p\le31$ against the eta product $f_8$ (Ramanujan bound included).
+\item \textbf{Fences.} Classical Eichler/Siegel/Witt named classical --- the claim is in-suite
+two-sidedness (mod-$p$ geometry left, eta product right) and the closed compiler densities; no RH
+statement; $\mathrm{Shell}(p^2)$ for $p\ge7$ out of scope; weight-$4\to$GL$(1)$ stays \mO; no
+marker moves of any pre-existing contract.
+\item \textbf{Surfaces.} Ledger \texttt{HECKE.GEOM.EICHLER.01}; $\backslash$veri in
+\texttt{tfpt\_1}/\texttt{tfpt\_3}/\texttt{tfpt\_research\_contracts}; Wolfram extension mirrors
+(exact Witt/density/assembler/$a_p$ identities); website \texttt{papers.ts} + VerificationDag E8 +
+ScriptIndex via \texttt{bash build.sh gen}.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-07-24 (XIII) (\texttt{v535} --- Hecke from geometry: Kneser correspondence + affine neighbour-sum + 2-adic oldform recovery on the $E_8$ census channels; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v535} (\texttt{HECKE.GEOM.01}).} Consolidated promotion of discovery
+probes T27/T31/T32 into one load-bearing module ($25$ checks, $\sim11$\,s). The claim is
+\emph{not} RH-related: the Hecke structure of the $\mu_4$-glue census is lattice-native.
+\item \textbf{(A) Kneser carries Hecke \mE.} $\#\mathrm{iso\_pts}=p^7+p^4-p^3$ and
+$\#\mathrm{iso\_lines}=\sigma_3(p)\,\#\mathbb P^3(\mathbb F_p)$ identically and by full enumeration at
+$p=2,3,5,7$ ($135/1120/19656/137600$ lines) --- the Eisenstein eigenvalue $\sigma_3(p)=1+p^3$ is an
+exact factor of a lattice-native correspondence count.
+\item \textbf{(B) Neighbour-sum $=$ affine Hecke element \mE.} $\nu_p=a\,\mathrm{Id}+b\,T_p$ exactly
+(overdetermined, residual $0$) with $b=\sigma_3+a_p$, $a=\#\mathrm{lines}-b\sigma_3$; cusp rule
+$a_p=b-\sigma_3$ recovers $a_3=-4$, $a_5=-2$ ($p=3$ live orbit-reduced; $p=5$ T31-validated freeze of
+$S[1]$ with $\lambda_{\mathrm{odd}}=3784$); $p=7$ consistency
+$\lambda_{\mathrm{odd}}=\#\mathrm{lines}-\sigma_3^2+a_p^2=19840$; placebo fails.
+\item \textbf{(C) Redundancy $=$ 2-adic oldform structure \mE.} $\dim_{\mathbb Q}V=7=5$ ($E_4$-copies,
+levels $1,2,4,8,16$) $+2$ ($f_8$-copies, levels $8,16$); every $\Theta_j$ an explicit $\mathbb Q$-linear
+combination; recovery $\pi_{\mathrm{cusp}}=(28-T_3)/32$, $\pi_{\mathrm{Eis}}=(T_3+4)/32$, newform via
+$(1-V_2U_2)$; new quotients each dimension $1$; level census purely $2$-adic.
+\item \textbf{Fences.} Classical theorems (Kneser, Hecke, Atkin--Lehner, multiplicity one) named
+classical --- the TFPT content is the in-suite mechanics. No RH statement. Weight-$4$ restriction
+named: GL$(1)$/weight-drop transport stays \mO. No marker moves.
+\item \textbf{Surfaces.} Cited in \texttt{tfpt\_1}, \texttt{tfpt\_3}, \texttt{tfpt\_research\_contracts};
+ledger row \texttt{HECKE.GEOM.01}; Wolfram extension $+5$ exact mirrors ($588\to593$); website sync.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-07-24 (I) (\texttt{v534} --- the straddle cone executed: THE FIRST DYNAMICAL SELECTION OF THE ALIGNMENT BIT --- reflection positivity keeps exactly ONE member of the interacting mark family alive, $\delta=\pi/2$ with positive coupling; the literal leading-order cone formalization dies; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v534} (\texttt{SEAM.STRADDLE.CONE.01}).} The 2026-07-23 review-round
+contract (recorded ``not promoted'' in entry (X)) is \emph{executed}, double-verdicted. \textbf{V2 $=$
+ERFOLG --- the selection law (the central datum):} with independent couplings $\lambda_q$ on the four mark
+quartets of $M(\delta=m\pi/8)$ and the equivariant (uniform) direction, reflection positivity holds on
+\emph{every} admissible cut over the whole grid $g\in\{1/32..8\}$ for \emph{exactly one} member $\times$
+sign: $\delta=\pi/2$ ($m=4$) with \emph{positive} coupling --- all four Grams PD $(37,0,0)$
+\emph{including the previously untested straddled clock axes} $7/15$, minimum eigenvalue \emph{lifted} off
+the free RP boundary ($1.78\cdot10^{-6}\to5.5\cdot10^{-5}$ near $g=1/4$: the $\pi/2$ interaction pushes
+\emph{away} from the boundary), Gibbs $\beta=2$ identical \mE. The asymmetric members die: $m=2/6$ with
+$s=+$ already at $g=1/32$, with $s=-$ from $g=1/8$. The \vref{v529} straddle law \emph{refines}:
+asymmetric straddling kills RP, the \emph{symmetric} straddling of the self-mirror member protects it.
+\item \textbf{V1 $=$ KILL (the literal cone formalization).} The leading-order soft-block cone
+$K_{\mathrm{RP}}=\operatorname{Fix}(G_\delta)\cap\bigcap_c\{\lambda: G_c^{\mathrm{lead}}\succeq0\}$ is
+\emph{empty} for every member and both signs (first-order PT via the exact reduced resolvent, Hermitian to
+$10^{-15}$, central-difference regression $2\cdot10^{-8}$) --- the linear pencil cannot carry the
+selection; the protection at $\pi/2$ is \emph{nonperturbative}. Recoverable leading-order content: the
+straddled-cut drift signs are exact ($\pi/2$: $+1.4\cdot10^{-4}$ for $s=+$, $-3.7\cdot10^{-2}$ for $s=-$;
+asymmetric members reversed) --- necessary, not sufficient.
+\item \textbf{The exact geometry behind it \mE.} $\delta=\pi/2$ is the \emph{unique symmetric-straddle
+member}: stabilizer $=$ the full clock$+$mirror group (rotations $\{0,4,8,12\}$, reflection axes
+$\{3,7,11,15\}$ $=$ four admissible bond cuts, straddled $\{7,15\}$), the four quartets \emph{partition}
+the $16$-circle, and every straddling quartet is reflection-\emph{closed} across its cut with exact sign
+$+1$; $m=2/6$ straddle asymmetrically; odd $m$ carry no bond axis (the typed \vref{v521}/\vref{v525}
+placement artifact). $\operatorname{Fix}(G_\delta)$ is $1$-dimensional throughout: uniform on $m=2..6$,
+NS-wrap-\emph{twisted} $(1,-1,1,1)/(-1,-1,-1,1)$ on the tight members $m=1/7$. Typed cross-link: the
+RP-selected member $m=4$ is exactly the carrier of the \vref{v528} twist-class order parameter $O=1/2$ ---
+the dynamical selector and the kinematic definition point at the \emph{same} member.
+\item \textbf{Honest fences \mC.} One toy, one interaction class (FK quartets), flat-band parent,
+$\deg\le2$ OS bases, finite coupling grid --- toy-level evidence \emph{for} the bit's dynamical origin,
+\emph{not} a derivation; nothing about the continuum $\mathcal A_{\mathrm{hol}}$ is claimed;
+\texttt{WOIT.OS.TWISTOR.01} stays Open, NO marker moves. Transparency: the run-1 preregistered verdict
+logic conflated formalization and substance (UNENTSCHIEDEN, mismatch typed); run 2 split V1/V2 with no
+tolerance change and no number changed --- note kept verbatim in the probe. Discovery provenance:
+\texttt{experiments/tfpt-discovery/seam\_straddle\_cone\_probe.py} ($15/15$, 2026-07-24).
+\item \textbf{Wolfram mirror.} Four exact mirrors (stabilizer census, $\pi/2$ partition $+$ straddle
+incidence, reflection-closure signs, equivariant Fix rays incl. the wrap-twisted $m=1/7$ rays) in
+\texttt{wolfram/tfpt\_readouts\_extension.wl}, verified engine run 2026-07-24, $584\to588$ (the $256$-dim
+Fock spectra, PT corrections and finite-$g$ scans stay Python-only, flagged); suite $527\to528$ modules.
+\end{itemize}
+
+\subsection*{\interlinepenalty=150\relax 2026-07-23 (X) (\texttt{v530}--\texttt{v533} --- the external review round promoted: center quotient compiler, Coxeter Stage A tensor clock, dual-degree modular checksum $744$, sheet-transfer disc $-7$ norm line; every identity machine-confirmed exactly before promotion (probe $76/76$); NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v530} (\texttt{DIAMOND.CENTER.QUOTIENT.01}).} The Sheet-Diamond center $C=M(1,0)$
+carries the fixed primitive line $Cv=v$ ($v=(-1,1,0)$), and the induced operator on $\Z^3/\Z v$ is
+\emph{exactly} the atom matrix $A=\big(\begin{smallmatrix}8&2\\5&3\end{smallmatrix}\big)
+=\big(\begin{smallmatrix}\operatorname{rank}E_8&|\Z_2|\\ \gcar&\Nfam\end{smallmatrix}\big)$ \mE\ with
+$\operatorname{tr}A=11$, $\det A=14$, $\operatorname{disc}=65=5\cdot13$, $\operatorname{perm}A=34=p_5(a)$,
+$\prod A_{ij}=240$, $\det(A{-}I)=4$. The center \emph{self-codes}: row sums
+$C\mathbf 1=(7,11,13)=(\det A/|\Z_2|,\operatorname{tr}A,\operatorname{disc}/\gcar)$; with the fixed
+eigenvalue $1$ this is $(1,7,11,13)$ $=$ the CP-halved $E_8$ Coxeter exponents. The \vref{v414} resolvent
+ladder factorises: $\det(C{+}kI)=(k{+}1)\det(A{+}kI)$ identically, quotient ladder $(14,26,40,56)$,
+differences $(12,14,16)$, endpoint $224=248-24$. \emph{Honest correction of the review:} eigenvalue $1$ is
+NOT unique to $C$ ($K$, $Q$ share it) --- uniqueness holds for the \emph{conjunction} fixed line $+$ atom
+quotient $+$ CP self-code; the full selector-stratum ablation stays \mO. New paragraph in
+\texttt{tfpt\_2} (Sheet Diamond section).
+\item \textbf{New module \texttt{v531} (\texttt{COX.STAGEA.TENSOR.01}).} The \texttt{tfpt\_1} two-stage Coxeter
+audit (Stage A: a natural order-$30$ operator with $\chi=\Phi_{30}$ on the even-flip atlas \emph{or its
+$8$-dim primitive-character space}) is \emph{closed on the character-space alternative}: $T_{30}=
+\operatorname{Comp}(\Phi_5)\otimes\operatorname{Comp}(\Phi_6)$ has exact order $30$ and
+$\chi_{T_{30}}=\Phi_{30}$ \mE\ (CRT, $\gcd(5,6)=1$: carrier clock $\times$ family clock $=$ Coxeter
+clock as \emph{one integer operator}); Ramanujan trace tomography $\operatorname{tr}(T_{30}^k)=c_{30}(k)
+=c_5(k)c_6(k)$ for all $k$, signed table $(-1,1,2,4,-2,-4,-8,8)$, atom readout $(2,4,8)=
+(|\Z_2|,|\mu_4|,\operatorname{rank}E_8)$; honest kill scope ($\Phi_{15}$ passes the unsigned triple ---
+the \emph{signed} table discriminates; $\Phi_{16}/\Phi_{20}/\Phi_{24}$ die on the triple). The flip-atlas
+intertwiner (\texttt{COX.FLIP.INTERTWINER}) and Stage B stay \mO; \texttt{tfpt\_1} Stage A prose updated.
+\item \textbf{New module \texttt{v532} (\texttt{E8.DEGREE.MODULAR.01}, audit-only).} The dual products of the
+$E_8$ invariant degrees, $(60,192,240,252)$, satisfy simultaneously $\sum=744=3\cdot248$ ($=$ the
+$j$-function constant, recomputed from the $q$-series $E_4^3/\Delta$), $\prod=|W(E_8)|$, $\gcd=12$,
+$\tfrac1{12}(\cdot)=(\gcar,\dim S^+,\det L,7\Nfam)$ \mE. \emph{Mandatory fence:} $D_{16}$ passes the same
+checksum ($1488=3\cdot496=2\cdot744$ --- heterotic, NOT $E_8$-exclusive); six non-heterotic controls fail.
+\emph{Prime-totative fingerprint (audit):} $\{2,3,5\}\cup(\operatorname{Exp}(E_8)\setminus\{1\})=$ all
+primes below $30$, and $30$ is the \emph{largest} integer whose totatives are all $1$ or prime (scan to
+$10^4$) --- $h_{E_8}$ as the maximal prime-totative Coxeter number; per the no-free-pattern rule nothing
+here is load-bearing. New keybox in \texttt{tfpt\_3}, cross-note in the \texttt{tfpt\_1} $496$ box.
+\item \textbf{New module \texttt{v533} (\texttt{FTR.DISC7.NORM.01}).} The branch-preserving transfer path
+$J,K,C,F=M(1,-2..1)$ is a \emph{norm line}: $\det M(1,t)=4t^2{+}14t{+}14=((4t{+}7)^2{+}7)/4
+=N(\alpha_t)$ with $\alpha_t=(4t{+}7{+}\sqrt{-7})/2$ integral in $\Z[(1{+}\sqrt{-7})/2]$, the path one
+translation $\alpha_{t+1}=\alpha_t+2$, norms $(2,4,14,32)$, constant discriminant $-7$, vertex $7/4>0$
+\mE; $2$ splits in $\mathbb Q(\sqrt{-7})$ ($-7\equiv1\bmod8$, class number $1$); controls: winding axis linear,
+anchor block disc $+105$. \mC/\mO\ preregistered next test: do the four external transfer solvers share
+\emph{one} fractional-linear action on $\alpha_t$ (kill: four incompatible actions)?
+\texttt{GATE.FTRANSFER} unchanged. New paragraph in \texttt{tfpt\_2} $+$ frame note in
+\texttt{tfpt\_research\_contracts}.
+\item \textbf{Wolfram mirror.} All four modules mirrored exactly in
+\texttt{wolfram/tfpt\_readouts\_extension.wl} ($20$ new checks, verified engine run 2026-07-23,
+$564\to584$); suite $523\to527$ modules.
+\item \textbf{Not promoted (honest fences).} The review's remaining proposals stay research contracts, not
+verifications: the straddle-cone selector on the interacting FK quartets (the highest-leverage attack on
+the alignment bit after \vref{v529}) and the metrology-torsor formalisation of $v_{\mathrm{geo}}$ are
+recorded as next steps in \texttt{experiments/next.txt}; the primes-below-$30$ identity stays an audit
+fingerprint exactly as the no-free-pattern rule demands.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-23 (IX) (website entry redesign: narrative home, honesty band, proof strip, guided-tour route --- editorial only, NO new modules, NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{Website home.} Slim one-viewport hero (proof strip: 523 machine-checked modules $\cdot$ Wolfram mirror $\cdot$ Lean carrier $\cdot$ 0 external replications yet; copyable \texttt{python run\_all.py $\to$ ALL CHECKS PASSED}; CTA trio film / browser check / kill board). Narrative order: Hero $\to$ IntroVideo (\texttt{\#intro-video} kept) $\to$ In one breath $\to$ WhyThisMatters (plain-English column) $\to$ TrustContract $\to$ ClaimStack $\to$ HonestyBand (honest negatives: RXTE/NICER nulls, 2DCS/v529, ten bit tests) $\to$ Safeguards (four core stats) $\to$ Overview (TheoryUnpacking/ThreeDecoderMap behind progressive disclosure) $\to$ PathChooser $\to$ Downloads teaser.

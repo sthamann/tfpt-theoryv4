@@ -92,7 +92,7 @@ export const TOY_KILL = {
   name: "straddle law",
   status: "published, not buried",
   plain:
-    "The first interacting toy model fails a preregistered kill test (straddle law). Banked openly — anti-numerology style.",
+    "The first interacting toy model fails a preregistered kill test (straddle law). Banked openly — anti-numerology style. Executed as a selector (v534), the same filter keeps exactly one member alive: reflection positivity dynamically selects the alignment bit δ = π/2 (toy-fenced).",
 } as const;
 
 export const EMPIRICAL_NULLS = {
@@ -115,9 +115,9 @@ export const OPEN = {
 export const BRIDGES = {
   celestial: {
     name: "Celestial / twistor route",
-    steps: 30,
+    steps: 31,
     measureChain: "derived at probe level",
-    progressLabel: "thirty-step story; measure chain derived",
+    progressLabel: "thirty-one-step story; measure chain derived",
   },
   woit: {
     name: "Woit OS-twistor bridge",
@@ -227,7 +227,7 @@ export const TOUR_STEPS: readonly TourStepMeta[] = [
     short: "Two bridges",
     title: "Celestial measure chain · Woit free bridge",
     plain:
-      "Two research bridges toward physics: a thirty-step celestial/twistor story with a derived measure chain, and a Woit OS route with α→β₂ executed (interacting still open).",
+      "Two research bridges toward physics: a thirty-one-step celestial/twistor story with a derived measure chain, and a Woit OS route with α→β₂ executed (interacting still open; its straddle filter already selects the bit at toy level, v534).",
   },
   {
     id: "join-in",

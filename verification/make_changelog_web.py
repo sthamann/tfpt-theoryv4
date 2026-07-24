@@ -280,6 +280,10 @@ def strip_outer_parens(s: str) -> str:
 
 
 def parse_title(title_raw: str) -> tuple[str, str, list[dict]]:
+    # drop pure TeX plumbing (line-break penalties) that some section titles
+    # carry -- it must never leak into the rendered heading ("=150" artifact)
+    title_raw = re.sub(r"\\interlinepenalty\s*=\s*\d+\s*(\\relax)?\s*", "",
+                       title_raw)
     title_raw = title_raw.strip()
     dm = re.match(
         r"\s*(20\d\d-\d\d-\d\d(?:\s*/\s*20\d\d-\d\d-\d\d)*)\s*",

@@ -195,10 +195,49 @@ the (3+4i)/5 root-of-unity census; the δ ↔ π−δ mirror equivariance
 behind the Casimir symmetry — the Pfaffian insertion spectra, the
 Bogoliubov 2-of-16 pattern census and the defect energy stay
 Python-only), all verified directly with the active engine (run
-2026-07-23), 552 → 564):
+2026-07-23), 552 → 564; and the same-day `v530`–`v533` review-round
+promotion adds 20 more exact mirrors (v530 center quotient compiler: the
+fixed line `Cv = v`, the unimodular quotient `= {{8,2},{5,3}}` atom matrix,
+the invariants/self-code `(7,11,13)`/CP code `(1,7,11,13)`, the resolvent
+factorisation `Det[C+kI] = (k+1)Det[A+kI]` and the honest K/Q uniqueness
+controls — 6 checks; v531 Stage A tensor clock: `T₃₀ = Comp(Φ₅)⊗Comp(Φ₆)`
+with `χ = Φ₃₀`, exact order 30, the full Ramanujan trace tomography
+`c₃₀ = c₅·c₆`, the honest Φ₁₅ signed-table scope and the coprimality
+controls — 5 checks; v532 dual-degree modular checksum: the `(60,192,240,
+252)` sum/product/gcd identities, the `q`-series recomputation of
+`j = q⁻¹+744+196884q`, the D16 control `1488 = 3·496`, the six
+non-heterotic control failures and the prime-totative fingerprint with
+the maximality scan to 10⁴ — 5 checks; v533 disc −7 norm line: the norm
+identity `D(t) = N(α_t)`, the translation orbit with norms `(2,4,14,32)`,
+the constant discriminant −7 + vertex and the winding/anchor-block
+negative controls — 4 checks), verified directly with the active engine
+(run 2026-07-23), 564 → 584; and the `v534` straddle-cone round adds 4
+more exact mirrors (the stabilizer census of the mark family — the π/2
+member carries the full clock+mirror group with four admissible bond
+cuts; the π/2 quartet partition + the straddle incidence tables; the
+reflection-closure signs `θ_c(Q_q) = +Q_q` of the symmetric straddles
+vs the open asymmetric ones; and the equivariant Fix rays, uniform on
+`m = 2..6` and NS-wrap-twisted `(1,−1,1,1)`/`(−1,−1,−1,1)` on the tight
+members `m = 1/7` — the 256-dim Fock spectra, the PT Gram corrections
+and the finite-g survival scans stay Python-only, flagged), verified
+directly with the active engine (run 2026-07-24), 584 → 588; and the
+`v535` Hecke-from-geometry round adds 5 more exact mirrors (the Kneser
+count identity `#iso_lines = σ₃·#P³` with anchors
+`(135,1120,19656,137600)`; the affine law `(a,b)=(448,24)/(4032,124)` at
+`p=3,5`; the `λ_odd`/`a_p` cusp rule with `p=7` consistency `19840`; and
+the dim-7 / projector / 2-adic oldform arithmetic — the live `p=3` FP
+census and q-series builds stay Python-only, flagged), verified directly
+with the active engine (run 2026-07-24), 588 → 593; and the `v536`
+Eichler-trace-layer round adds 5 more exact mirrors (Witt `λ_Eis`
+identity with anchors `(336,3780,19264)`; Eichler anchors / `N_⊥`
+`(352,3784,19840)` / `(364,3906,19608)`; local densities
+`N_A/N_B` with `p=7` `(82560,743040)`; signed `a_p`/`b`/`R` tables; and
+the assembler / Ramanujan identities — live FP `Shell(p)`/`Shell(p²)`
+stay Python-only, flagged), verified directly with the active engine
+(run 2026-07-24), 593 → 598):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529: 564 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536: 598 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 

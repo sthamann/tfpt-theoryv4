@@ -85,7 +85,12 @@ certified Calder\'on datum --- closing $G_{\mathrm{net}}$ therefore also closes 
 F_{\mathrm{transfer}}$: named QFT/cosmology \emph{transfer} interfaces, never compiler powers --- and
 \emph{not} four unrelated interfaces but \emph{one} discrete geodesic on the Sheet Diamond (the
 $K{\to}C{\to}F$ sheet axis $M(1,t)$, with the Koide source$\to$pole as its $1$-D M\"obius projection), along
-which the external continuous solver merely evaluates (\veri{v224\_diamond\_ftransfer\_path.py}).
+which the external continuous solver merely evaluates (\veri{v224\_diamond\_ftransfer\_path.py}); the
+discrete data of that geodesic are now arithmetically framed --- $\det M(1,t)=N(\alpha_t)$ with
+$\alpha_t=(4t{+}7{+}\sqrt{-7})/2$ integral, the path one translation $\alpha_{t+1}=\alpha_t+2$ of constant
+discriminant $-7$ (\veri{v533\_ftransfer\_disc7\_norm.py}), and the preregistered next test is whether the
+four external solvers share \emph{one} fractional-linear action on $\alpha_t$ (kill: four incompatible
+arithmetic actions).
 \smallskip\\
 \noindent\textbf{The residual is certification, not construction (\veri{v384\_residual\_certification.py}).} A
 ledger-CI audit classifies every remaining item into exactly three \emph{external} kinds, with \emph{zero} open
@@ -151,7 +156,11 @@ both levels, the clock a positive transfer operator with spectral calculus, \vre
 $\beta_3$ is next, now under the \emph{straddle-law} constraint: the first interacting seam toy
 fires Kill-Test~2 at toy level (RP breaks on exactly the quartet-straddling cuts,
 \vref{v529}) --- an honest threat and simultaneously the first hard selection principle for
-$\mathcal A_{\mathrm{hol}}$. Both contracts stay \mO; no marker moves.
+$\mathcal A_{\mathrm{hol}}$, since \emph{executed} as such: run as a selector on the interacting
+mark family, reflection positivity keeps exactly \emph{one} member alive --- $\delta=\pi/2$ with
+positive coupling, the alignment bit itself (\vref{v534}, toy-fenced; the literal leading-order
+cone formalization is dead, the protection is nonperturbative). Both contracts stay \mO; no
+marker moves.
 \end{keybox}
 
 % =====================================================================
@@ -1448,7 +1457,11 @@ $H(m)\to H(8-m)$ exactly despite $\delta$-seeing spectra) --- while the bit itse
 \emph{physically defined} as the twist-class choice
 (\veri{v528\_seam\_bit\_twist\_class\_definition.py}, \texttt{SEAM.BIT.TWISTCLASS.01}: facets
 \#14/\#15 both directions, order parameter $O$, unification with flag-transitivity, web
-$13\to15$; \mC\ interferometric measurement sketch; the bit remains formal input).
+$13\to15$; \mC\ interferometric measurement sketch; the bit remains formal input) --- and since
+carries the first \emph{positive} selection datum: the straddle filter, run as a selector on the
+interacting mark family, keeps exactly \emph{one} member alive --- $\delta=\pi/2$ with positive
+coupling (\veri{v534\_seam\_straddle\_cone.py}, \texttt{SEAM.STRADDLE.CONE.01}; toy-level
+evidence for a dynamical origin, not a derivation).
 The full \texttt{QGEO.REALIZE.01} stays \mO;
 no marker moves. \mE\ carrier-side (the four
 levers), \mO\ seam-side (the emergence): a kill-test, \emph{not} a closure (\texttt{QGEO.KILL.01}).
@@ -2349,6 +2362,40 @@ $248=120_{\mathrm{NS}}+128_{\mathrm R}$. \emph{Consequence \mC:} the index-$4$ e
 twisted-sector structure of the seam--Calder\'on net, with the sheet choice realised as the R-projection;
 the finite shadow is exhausted (\vref{v113}/\vref{v125}/\vref{v143} $+$ this census).
 
+\par\smallskip\noindent\textbf{Hecke from geometry on the glue census
+(\texttt{HECKE.GEOM.01}).}
+The $\mu_4$-refined $E_8$ class thetas that underlie the glue Q-system now carry an
+\emph{in-suite} Hecke package (consolidated from discovery T27/T31/T32; $25$ checks,
+$\sim11$\,s).
+\emph{(A)} Kneser $p$-neighbours realise
+$\#\mathrm{iso\_lines}=\sigma_3(p)\,\#\mathbb P^3(\mathbb F_p)$ identically and at
+$p=2,3,5,7$ ($135/1120/19656/137600$).
+\emph{(B)} The marked neighbour-sum is the affine Hecke element
+$\nu_p=a\,\mathrm{Id}+b\,T_p$ with cusp rule $a_p=b-\sigma_3$, recovering
+$a_3=-4$, $a_5=-2$ ($p=7$ consistency $\lambda_{\mathrm{odd}}=19840$).
+\emph{(C)} The census form space has $\dim_{\mathbb Q}V=7=5{+}2$ as the $2$-adic oldform
+hull of $E_4$ and $f_8$, with recovery $\pi_{\mathrm{cusp}}=(28-T_3)/32$ and newform via
+$(1-V_2U_2)$. Classical theorems named classical; the claim is the compiler identification
+(correspondence $\to$ operator $\to a_p$; redundancy $=\mu_4$/$2$-adic). Fence: both new
+systems stay weight~$4$ --- GL$(1)$/weight-drop transport remains \mO; no RH claim; no
+marker moves. Machine-checked: \veri{v535\_hecke\_from\_geometry.py}.
+\mE\ (mechanics) / \mO\ (weight drop)
+
+\par\smallskip\noindent\textbf{Eichler trace layer at the $E_8$ lattice
+(\texttt{HECKE.GEOM.EICHLER.01}).}
+Consolidated promotion of discovery T33/T36/T37/T42 ($23$ checks, $\sim30$\,s; builds on
+\texttt{HECKE.GEOM.01}). Witt $\lambda_{\mathrm{Eis}}=\sigma_3(\#\mathbb P^3-\sigma_3)$ closed
+in $p$; Eichler $\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$ two-sided at $p=3$
+(live type-(i)/(ii): $352=364-12$) and $p=5$ (T36 freeze: $3784=3906-122$) with assembler
+$R=\sigma_3-1-c(p^2)/8$; Type-A/B densities
+$N_A=\min(240(1+p^3),\#\mathrm{iso}-1)$ ($p=7$ live $82560/743040$; injectivity $p=11,13$);
+signed $a_p=-c(p)/8\Rightarrow(-4,-2,+24)$ and $b\in\{24,124,368\}$; $O(1)$ assembler for odd
+$p\le31$. Classical scaffolding named classical; claim $=$ in-suite two-sidedness $+$ closed
+compiler densities. Fences: $\mathrm{Shell}(p^2)$ for $p\ge7$ out of scope; fibre refinement
+scoped to $\{5,7,11\}$; weight-$4\to$GL$(1)$ stays \mO; no RH; no marker moves.
+Machine-checked: \veri{v536\_eichler\_trace\_layer.py}.
+\mE\ (mechanics) / \mO\ (weight drop)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel
@@ -3127,7 +3174,9 @@ mark-decorated free-plus-twist state class and the first genuinely interacting F
 documented as the \emph{eighth}, \emph{ninth} and \emph{tenth} side-blind tests --- the bit is
 not derivable from free RP/$\Theta$ existence, from any Wick-computable twist decoration or from
 the FK interaction class, and remains genuine discrete input; since \vref{v528} it is the
-twist-class choice, in principle interferometrically readable).
+twist-class choice, in principle interferometrically readable; and since \vref{v534} it carries
+the first \emph{positive} selection datum --- reflection positivity on the interacting mark
+family keeps exactly the $\delta=\pi/2$ member alive, toy-fenced).
 \item \textbf{WP3 (\emph{done}, verdict B) \mE/\mC:} the Green--Schwarz alignment test, executed and
 machine-verified as \texttt{CELEST.WP3.01} \veri{v495\_celestial\_wp3\_gs\_alignment.py} (exact
 Fraction/sympy, $25$ checks). The arithmetic side is sharp: the Okubo coefficient
@@ -4154,6 +4203,19 @@ mechanism, with the \emph{straddle law} (RP fails exactly on quartet-straddled c
 quartet-avoiding ones; $24/24$) as a concrete hurdle for $\beta_3/\gamma$. Fence: one toy / one
 interaction class / \mC\ flat-band parent --- this narrows the route (every $\mathcal A_{\mathrm{hol}}$
 must protect RP against exactly this mechanism), it does not close it.
+\emph{The hurdle, executed as a selector (\texttt{SEAM.STRADDLE.CONE.01},
+\veri{v534\_seam\_straddle\_cone.py}; no status change):} on the equivariant interacting mark
+family (independent couplings on the four mark quartets, both signs, every admissible cut ---
+including the $\pi/2$ straddled clock axes the $24$-entry law had not covered) reflection
+positivity survives for \emph{exactly one} member $\times$ sign: $\delta=\pi/2$ with positive
+coupling, PD on all four cuts over $g\in\{1/32..8\}$ with the minimum eigenvalue lifted
+\emph{away} from the RP boundary; every asymmetric member dies. The straddle law refines
+(asymmetric straddling kills, symmetric straddling protects), the literal leading-order cone
+formalization is dead (the protection is nonperturbative), and the threat paragraph gains its
+complement: a passing interaction class \emph{exists} and its unique survivor is the alignment
+bit --- the same member that carries the \vref{v528} twist-class order parameter. Toy-level
+evidence for a dynamical origin of the bit, not a derivation; the kill tests stay formally live
+on $\mathcal A_{\mathrm{hol}}$.
 \textbf{(3)} The reconstruction produces a vector-like mirror generation (chirality is lost in the
 OS quotient).
 \textbf{(4)} The Penrose transform reaches only free / self-dual states (the interacting extension

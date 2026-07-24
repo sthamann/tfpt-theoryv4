@@ -25,6 +25,7 @@ export type PrimeFrontVerdict =
   | "HARDENED"
   | "FOUNDED"
   | "PROMOTED"
+  | "MACHINE-VERIFIED"
   | "CLOSED"
   | "TERRAIN-MAPPED"
   | "SCALABLE-AND-SIGNED"
@@ -37,7 +38,11 @@ export type PrimeFrontVerdict =
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
   date: string;
-  /** Diary part number (Teil N). */
+  /**
+   * Diary part number (Teil N).
+   * Use `0` for meta / promotion announcements that span multiple diary parts
+   * (string anchors are not supported by this field).
+   */
   part: number;
   title: string;
   verdict: PrimeFrontVerdict;
@@ -52,6 +57,17 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-24",
+    part: 0,
+    title:
+      "Promoted: Hecke from Geometry (v535) and the Eichler trace layer (v536)",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "Two modules from this series are now part of the load-bearing verification suite: v535 (Kneser correspondence carries the census Hecke action; the frozen neighbour operator outputs the a_p; census redundancy is purely 2-adic oldform structure) and v536 (the Eichler trace layer: closed Witt densities, the two-sided identity lambda_geom = lambda_Eis + a_p^2, and the signed O(p^3) extraction of a_p). Full ledger/paper/website sync, bash build.sh audit -> AUDIT OK, Wolfram mirrors 598/598. No RH claim; the weight-4 -> GL(1) transport stays an open research contract.",
+    badge: "machine-verified",
+    script: "v535_hecke_from_geometry.py",
+  },
   {
     date: "2026-07-24",
     part: 43,

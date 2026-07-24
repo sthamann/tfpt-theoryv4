@@ -218,7 +218,12 @@ physically \emph{defined} as the \emph{twist-class choice}: facets \#14/\#15 ext
 $15$ exact equivalences (both directions each), the flip-axis fraction is a gauge-robust order
 parameter ($O=\tfrac12$ at $m=4$, $0$ elsewhere), and its $\eta$ holonomy is in principle
 interferometrically readable (\vref{v528}, \texttt{SEAM.BIT.TWISTCLASS.01}; the bit remains
-formal input --- a definition replaces no derivation, no marker moves); plus the \mC\
+formal input --- a definition replaces no derivation, no marker moves); and it now carries the
+first \emph{positive} selection datum: reflection positivity, imposed on the interacting mark
+family, keeps exactly \emph{one} member alive --- $\delta=\pi/2$ with positive coupling, the
+carrier of that order parameter (\veri{v534\_seam\_straddle\_cone.py},
+\texttt{SEAM.STRADDLE.CONE.01}; toy-level evidence for a dynamical origin, not a derivation);
+plus the \mC\
 identifications R1/R2
 of \vref{v499}. In one sentence: \textbf{the compiler's dimensionless inputs reduce to four marks
 (derived from P1-side topology), one discrete symmetry-lift bit --- the twist-class choice (flag
@@ -704,6 +709,40 @@ sheets over the four corners $\mu_4$.}
 and assembling $D_5\oplus D_3\subset D_8$ with the even spinor coset produces all $240$ roots
 (norm $2$, Cartan $\det=1$, every root an integer combination of one simple-root basis): \emph{the
 $240$-metrisation is no longer blind --- $E_8$ is built}. \mE
+
+\par\smallskip\noindent\textbf{Hecke structure of the glue census is lattice-native
+(\texttt{HECKE.GEOM.01}).}
+The $\mu_4$-glue class thetas that refine the $240$-root branching ($240=52{+}64{+}60{+}64$ over
+$\Z/4$) now carry a machine-checked Hecke package
+(\veri{v535\_hecke\_from\_geometry.py}): Kneser $p$-neighbours realise
+$\#\mathrm{iso\_lines}=\sigma_3(p)\,\#\mathbb P^3(\mathbb F_p)$ at $p=2,3,5,7$; the marked
+neighbour-sum is the affine element $\nu_p=a\,\mathrm{Id}+b\,T_p$ with cusp output
+$a_3=-4$, $a_5=-2$; and the seven census $q$-series span exactly the $2$-adic oldform hull of
+$E_4$ and $f_8$ (levels $\{1,2,4,8,16\}$ and $\{8,16\}$). Classical scaffolding named classical;
+weight-$4\to$GL$(1)$ stays \mO; no RH claim. \mE\ (in-suite mechanics)
+
+\par\smallskip\noindent\textbf{Eichler trace layer at the $E_8$ lattice
+(\texttt{HECKE.GEOM.EICHLER.01}).}
+The same census channels now carry a machine-checked Eichler/Witt package
+(\veri{v536\_eichler\_trace\_layer.py}; $23$ checks, $\sim30$\,s; builds on
+\texttt{HECKE.GEOM.01} without duplicating Kneser/$\nu_p$/oldform checks).
+\emph{(A)} The elementary Witt shadow
+$\lambda_{\mathrm{Eis}}=\sigma_3(\#\mathbb P^3-\sigma_3)=L-\sigma_3^2$ is closed in $p$
+(identically and for all odd $p\le100$).
+\emph{(B)} The Eichler identity $\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$ is
+two-sided at $p=3$ (live type-(i)/(ii) split: $352=364-12$) and at $p=5$ via a T36-validated
+freeze ($3784=3906-122$); the assembler $R(p)=\sigma_3-1-c(p^2)/8$ equals $a_p^2$ with
+Kneser filter $=$ identity.
+\emph{(C)} Closed Type-A/B local densities
+$N_A=\min\bigl(240(1+p^3),\,p^7+p^4-p^3-1\bigr)$ (B empty iff $p^4<241$; $p=7$ live
+$82560/743040$; injectivity at $p=11,13$).
+\emph{(D)} Signed extraction $a_p=-c(p)/8$ from geometric $\mathrm{Shell}(p)$ recovers
+$(-4,-2,+24)$ and $b\in\{24,124,368\}$.
+\emph{(E)} $O(1)$ assembler for all odd $p\le31$ against the eta product $f_8$.
+Classical Eichler/Siegel/Witt named classical; the claim is in-suite two-sidedness and the
+closed compiler densities. Honest fences: $\mathrm{Shell}(p^2)$ for $p\ge7$ out of scope;
+fibre refinement scoped to $\{5,7,11\}$; weight-$4\to$GL$(1)$ stays \mO; no RH claim; no
+marker moves. \mE\ (mechanics) / \mO\ (weight drop)
 
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
@@ -1627,7 +1666,26 @@ hard; a much earlier, cheaper test is the Coxeter spectrum. \emph{Stage A:} find
 operator $C_{\mathrm{TFPT}}$ on the even-flip atlas (or its $8$-dimensional primitive-character space)
 with characteristic polynomial $\chi_{C_{\mathrm{TFPT}}}(t)=\Phi_{30}(t)$. \emph{Stage B (only if A
 holds):} the norm-$2$, $E_8$-profile, Weyl-closure metrization. Stage A can fail or carry far sooner
-than B, so it is the right first falsifier. \mO
+than B, so it is the right first falsifier.
+\par\smallskip\noindent\textbf{Stage A is closed on the primitive-character space
+(\veri{v531\_coxeter\_tensor\_stage\_a.py}).} The explicit integer operator
+\[
+  T_{30}=\operatorname{Comp}(\Phi_5)\otimes\operatorname{Comp}(\Phi_6)
+\]
+(the $4{\times}4$ carrier clock of \vref{v418} tensor the $2{\times}2$ family/CP hexagon) has \emph{exact}
+order $30$ ($T_{30}^{30}=I$, $T_{30}^k\neq I$ for $1\le k<30$) and
+$\chi_{T_{30}}=\Phi_{30}=t^8+t^7-t^5-t^4-t^3+t+1$ exactly: by CRT ($\gcd(5,6)=1$) its eigenvalues are the
+products (primitive $5$th)$\times$(primitive $6$th) $=$ exactly the eight primitive $30$th roots --- the
+carrier clock times the family clock \emph{is} the Coxeter clock, as one integer operator. Its traces are
+the Ramanujan sums, $\operatorname{tr}(T_{30}^k)=c_{30}(k)=c_5(k)\,c_6(k)$ for all $k$, with the signed
+divisor table $(-1,1,2,4,-2,-4,-8,8)$ at $k=(1,2,3,5,6,10,15,30)$ and the atom readout
+$(|\operatorname{tr}T^3|,|\operatorname{tr}T^5|,|\operatorname{tr}T^{15}|)=(2,4,8)
+=(|\Z_2|,|\mu_4|,\operatorname{rank}E_8)$ --- eight integer traces type the clock \emph{without}
+diagonalisation, a cheap kill test for any flip-operator candidate (honest scope: $\Phi_{15}$ passes the
+unsigned triple since $\Phi_{30}(t)=\Phi_{15}(-t)$; the \emph{signed} table is the discriminator, and
+$\Phi_{16},\Phi_{20},\Phi_{24}$ die on the triple already). \mE\ \emph{What stays open (\mO):} a canonical
+intertwiner from the concrete even-flip atlas onto this primitive space
+(\texttt{COX.FLIP.INTERTWINER}), and Stage B.
 
 \par\smallskip\noindent\textbf{Audit only --- \emph{non-load-bearing} speculation: the $\dim 496$ heterotic count \mO.}
 \emph{This box feeds no derivation; it is an arithmetic coincidence kept for completeness only, under the
@@ -1639,7 +1697,11 @@ states) gives
 \]
 i.e.\ the two halves read as two $E_8$ root atlases, all $\binom{32}{2}=496$ pairs as $SO(32)$ --- the two
 anomaly-free heterotic gauge dimensions. The \emph{dimension} equality is exact; that the carrier algebra
-\emph{is} either gauge group is unproven and not used anywhere. \mO\ (audit-only).
+\emph{is} either gauge group is unproven and not used anywhere. \mO\ (audit-only). The same fingerprint
+recurs at checksum level: the dual products of the $E_8$ invariant degrees sum to $744=3\cdot248$ (the
+$j$-function constant), and the identical construction for $D_{16}$ gives $1488=3\cdot496=2\cdot744$
+(\veri{v532\_e8\_degree\_modular\_checksum.py}) --- the checksum measures the common heterotic
+rank-$16$/Coxeter-$30$ structure, \emph{not} $E_8$ uniqueness. \mE\ (audit-only).
 \par\smallskip
 
 \subsection{Level 2.7 --- the carrier Coxeter theorem (the strongest new bridge)}
@@ -1990,7 +2052,7 @@ Family $=$ ladder $=$ Pascal row $\{1,5,10\}$; $16=1+5+10$ & \mE & central new i
 $\gcar=5$ via $2^{\gcar-1}=\binom{\gcar}{0}{+}\binom{\gcar}{1}{+}\binom{\gcar}{2}$ & \mE & Pascal closure (unique) \\
 $\operatorname{Tr}_{S^+}X^2=5!$ generates $40,41,240,\dtwo$ & \mE & master moment \\
 $|R(E_8)|=16\cdot5\cdot3$; $\dim E_8=240+8$ & \mE & $E_8$ compression \\
-Even-flip atlas $240=160+80$ & \mE/\mO & $E_8$ metrization open ($\neq112+128$) \\
+Even-flip atlas $240=160+80$ & \mE/\mO & metrization open ($\neq112+128$); Coxeter Stage A closed on the character space (v531) \\
 $\delta_{\mathrm{CKM}}-\pi/3=3\useed(1-\useed)$ & \mE & CP $=$ triple seed variance \\
 Observable quadrilateral ($\useed=\Omega_b+\betarad$) & \mE & closed UV-shadow cycle \\
 Power tower $v{=}x^1,\,H{=}x^5R_H,\,\Lambda{=}x^{10}R_\Lambda$ & \mE & $K_5$ vertices/edges \\
@@ -2108,7 +2170,9 @@ $+\ 2{\cdot}3{\cdot}5$ Coxeter compiler. From the three atoms $(2,3,\gcar{=}5)$:
 action) $=\useed^{5+3+2}$ (lepton determinant) $=h_{E_8}/\Nfam$ (Coxeter per family). $\Lambda$, the
 charged-lepton determinant, the $E_8$ Coxeter structure and the action ladder all read the \emph{same}
 carrier pair-decuple. The open core is one question: can the even-flip atlas be metrised as a genuine
-$E_8$ root system (the $160{+}80$ vs $112{+}128$ obstruction)?
+$E_8$ root system (the $160{+}80$ vs $112{+}128$ obstruction)? Its Coxeter half (Stage A) is closed on
+the primitive-character space by the tensor clock $T_{30}=\operatorname{Comp}(\Phi_5)\otimes
+\operatorname{Comp}(\Phi_6)$ (\vref{v531}); the atlas intertwiner and the metrization (Stage B) remain.
 
 \clearpage
 \part{The Coxeter--cyclotomic compiler and the explicit $E_8$ construction}
@@ -2532,7 +2596,9 @@ local jet seeing the side bit (\veri{v512\_seam\_tau\_flag.py}, \texttt{SEAM.TAU
 a residual that has since survived ten side-blind derivation attacks
 (\vref{v521}/\vref{v525}/\vref{v529}) and carries a physical definition as the twist-class
 choice with a gauge-robust order parameter, in principle interferometrically readable
-(\vref{v528}; it remains formal input).
+(\vref{v528}; it remains formal input) --- and, since \vref{v534}, the first \emph{dynamical}
+selection datum: reflection positivity on the interacting mark family keeps exactly the
+$\delta=\pi/2$ member alive (toy-fenced).
 So the theory's only transcendental is $\pi$ (through
 $\cthree=\tfrac1{8\pi}$, $8=\operatorname{rank}E_8$, and the seed $\tfrac1{6\pi}$, $6=|R^+(A_3)|$);
 everything else is this $(5,3)$-generated integer skeleton.

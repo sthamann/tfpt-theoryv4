@@ -182,7 +182,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "twist-class choice",
     alias: ["twist class", "alignment bit", "symmetry-lift bit", "the bit"],
     short:
-      "The physical definition of the one discrete carrier input: which twist class nature realises on the seam (v528). A 15-facet exact equivalence web (flag transitivity ⟺ τ = i) with a gauge-robust order parameter O = 1/2 vs 0, in principle interferometrically readable via the η holonomy. Survivor of ten side-blind tests — it remains formal input, not derived.",
+      "The physical definition of the one discrete carrier input: which twist class nature realises on the seam (v528). A 15-facet exact equivalence web (flag transitivity ⟺ τ = i) with a gauge-robust order parameter O = 1/2 vs 0, in principle interferometrically readable via the η holonomy. Survivor of ten side-blind tests — and since v534 carrier of the first POSITIVE selection datum: reflection positivity on the interacting mark family keeps exactly the δ = π/2 member alive (toy-fenced). It remains formal input, not derived.",
   },
   {
     term: "thermal seam",
@@ -194,7 +194,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "straddle law",
     alias: ["straddle filter", "quartet-straddled cuts", "SEAM.INT.FKTOY.01"],
     short:
-      "The failure law of the first interacting seam toy (v529): reflection positivity breaks for every g > 0 exactly on quartet-straddled cuts and stays positive on quartet-avoiding ones (24/24). Kill-Test 2 fires at toy level under a typed fence — an honest threat AND the first hard selection principle for the interacting algebra A_hol. WOIT.OS.TWISTOR.01 stays [O].",
+      "The failure law of the first interacting seam toy (v529): reflection positivity breaks for every g > 0 exactly on quartet-straddled cuts and stays positive on quartet-avoiding ones (24/24). Kill-Test 2 fires at toy level under a typed fence — an honest threat AND the first hard selection principle for the interacting algebra A_hol. Refined and executed as a selector (v534): the 24 entries covered asymmetric straddles only — asymmetric straddling kills RP, the symmetric straddling of the self-mirror member protects it, and exactly ONE member × sign survives on all cuts: δ = π/2 with positive coupling — the first dynamical selection of the alignment bit (toy-fenced). WOIT.OS.TWISTOR.01 stays [O].",
   },
   {
     term: "side-blind scoreboard",

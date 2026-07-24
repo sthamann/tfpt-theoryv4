@@ -115,7 +115,7 @@ raster (every load-bearing number must appear in at least one projection), the b
 $E_8$ orbit cascade $D{=}60{-}2n$ is the same even-integer spine as the compiler, and the M\"obius bootstrap
 in which $g_{\mathrm{car}}=5$ and the ``$8$'' in $c_3$ are overdetermined $E_8$-closure fixed points (only
 $\pi$ irreducible). Since the celestial/twistor round the note also carries the
-\textbf{thirty-step continuum story} (\S\ref{sec:celestial}) --- from the $\mu_4$ clock to the
+\textbf{thirty-one-step continuum story} (\S\ref{sec:celestial}) --- from the $\mu_4$ clock to the
 $(E_8)_1$ boundary shadow --- in which the \textbf{measure chain of the celestial route is
 derived, not declared}: single-valuedness from F-independence $+$ the Quillen pairing
 (\vref{v520}), the $1/\det_j$ normalisation the Atiyah--Bott fixed-point factor computed from
@@ -123,7 +123,10 @@ three independent sources with $\psi=64$ reproduced (\vref{v523}), the residual 
 the global BCOV integral beyond the fibre zero-mode factor; plus the Woit OS-bridge stages
 $\alpha/\beta_1/\beta_2$ (\vref{v519}/\vref{v522}/\vref{v524}), the thermal seam
 (\vref{v526}), the ten-test side-blind scoreboard with the twist-class definition of the bit
-(\vref{v528}) and the first firing interacting kill test under its typed fence (\vref{v529}).
+(\vref{v528}) and the first firing interacting kill test under its typed fence (\vref{v529}) ---
+whose straddle filter, since run as a \emph{selector}, keeps exactly \emph{one} member alive:
+reflection positivity dynamically selects the alignment bit $\delta=\pi/2$ with positive coupling
+(\vref{v534}, toy level).
 \texttt{SEAM.EQUIV.01} and \texttt{WOIT.OS.TWISTOR.01} stay \mO; no marker moves.
 \end{keybox}
 
@@ -560,6 +563,40 @@ $\sigma_3(2)=9=a^TV\mathbf 1=\Nfam^2$, $\sigma_3(3)=28=\mathbf 1^TV^3a=\det(I{+}
 $\sigma_3(5)=126$ --- the local $E_7$ root shell $\{0{:}126\}$ of lemma (v) below. If later one-loop or CMB
 shell degeneracies touch these multiplicities, the theta series is the right place to type them --- as an
 audit raster, not a claim. \mO\ (\veri{v410\_sheet\_generator\_binary.py})
+
+\par\smallskip\noindent\textbf{Hecke from geometry on the glue census (\texttt{HECKE.GEOM.01}).}
+The same $E_8$ theta/$q$-series channels that feed the atlas raster now carry an
+\emph{in-suite} Hecke mechanics, machine-checked as one module
+(\veri{v535\_hecke\_from\_geometry.py}). \emph{(A)} The classical Kneser $p$-neighbour
+correspondence (isotropic lines of $(E_8/pE_8,q)$) factors as
+$\#\mathrm{iso\_lines}=\sigma_3(p)\,\#\mathbb P^3(\mathbb F_p)$ identically and by full
+enumeration at $p=2,3,5,7$ ($135/1120/19656/137600$) --- the Eisenstein eigenvalue
+$\sigma_3(p)=1+p^3$ is a lattice-native correspondence count. \emph{(B)} The marked
+neighbour-sum operator is an affine Hecke element
+$\nu_p=a\,\mathrm{Id}+b\,T_p$ with $b=\sigma_3+a_p$ and cusp rule $a_p=b-\sigma_3$,
+recovering $a_3=-4$, $a_5=-2$ (and $p=7$ consistency $\lambda_{\mathrm{odd}}=19840$).
+\emph{(C)} The seven-dimensional census form space is exactly the $2$-adic oldform hull of
+two weight-$4$ systems ($5$ copies of $E_4$ at levels $1,2,4,8,16$ plus $2$ copies of
+$f_8$ at levels $8,16$), with recovery projectors
+$\pi_{\mathrm{cusp}}=(28-T_3)/32$ and newform via $(1-V_2U_2)$.
+Classical theorems (Kneser, Hecke, Atkin--Lehner, multiplicity one) are named classical;
+the TFPT content is the compiler identification. Honest fence: both new systems stay
+weight~$4$ --- the GL$(1)$/weight-drop transport remains \mO; no RH claim.
+\mE\ (mechanics) / \mO\ (weight drop)
+
+\par\smallskip\noindent\textbf{Eichler trace layer at the $E_8$ lattice
+(\texttt{HECKE.GEOM.EICHLER.01}).}
+Building on the Hecke package without duplicating it, the census channels now carry a
+machine-checked Eichler/Witt layer (\veri{v536\_eichler\_trace\_layer.py}; $23$ checks,
+$\sim30$\,s). Witt $\lambda_{\mathrm{Eis}}=L-\sigma_3^2$ is closed; the identity
+$\lambda_{\mathrm{geom}}=\lambda_{\mathrm{Eis}}+a_p^2$ is two-sided at $p=3$ (live;
+$352=364-12$) and at $p=5$ via a T36-validated freeze ($3784=3906-122$), with assembler
+$R=\sigma_3-1-c(p^2)/8=a_p^2$. Closed Type-A/B densities
+$N_A=\min(240(1+p^3),\#\mathrm{iso}-1)$ give the $p=7$ prediction $82560/743040$ live;
+signed $a_p=-c(p)/8$ recovers $(-4,-2,+24)$. Classical Eichler/Siegel/Witt named classical;
+$\mathrm{Shell}(p^2)$ for $p\ge7$ out of scope; weight-$4\to$GL$(1)$ stays \mO; no RH claim;
+no marker moves.
+\mE\ (mechanics) / \mO\ (weight drop)
 \par\smallskip
 
 % =====================================================================
@@ -1120,6 +1157,28 @@ Since $E_8$ is the audit hull, its invariant degrees being the theory's integers
 expected} --- an organizing simplification that confirms the $E_8$ choice rather than a coincidence.
 \end{keybox}
 
+\begin{keybox}[The dual-degree modular checksum $744$ --- audit-only \mE\,(\veri{v532\_e8\_degree\_modular\_checksum.py})]
+The degrees pair dually, $d_i+d_{9-i}=32=h+2$, and the four dual products
+$(2{\cdot}30,\,8{\cdot}24,\,12{\cdot}20,\,14{\cdot}18)=(60,192,240,252)$ satisfy \emph{simultaneously}
+\[
+  \begin{gathered}
+  \textstyle\sum=744=3\cdot248,\qquad \prod=696\,729\,600=|W(E_8)|,\qquad \gcd=12=\dim\mathfrak g_{\mathrm{SM}},\\[2pt]
+  \tfrac1{12}(60,192,240,252)=(\gcar,\dim S^+,\det L,7\Nfam),
+  \end{gathered}
+\]
+where $744$ is the constant coefficient of the modular $j$-function ($j=E_4^3/\Delta=q^{-1}+744+196884\,q+\dots$,
+recomputed from the $q$-series; $\chi_{(E_8)_1}^3=j$, \vref{v496}) --- a finite-to-affine checksum.
+\emph{Mandatory fence:} the checksum is \emph{not} $E_8$-exclusive --- $D_{16}$ (same $h=30$, rank $16$)
+passes with $1488=3\cdot496=2\cdot744$, exactly the heterotic dimension equality; the non-heterotic
+controls all fail the $3\dim$ rule ($A_8$: $100/240$, $D_8$: $200/360$, $E_6$: $117/234$, $E_7$: $316/399$,
+$F_4$: $72/156$, $G_2$: $12/42$). \emph{Prime-totative fingerprint (audit):}
+$\{2,3,5\}\cup(\operatorname{Exp}(E_8)\setminus\{1\})=\{2,3,5,7,11,13,17,19,23,29\}$ --- all primes below
+$30$; every totative of $30$ except $1$ is prime, and $30$ is the \emph{largest} integer with this property
+(exact scan; full list $\{1,2,3,4,6,8,12,18,24,30\}$): $h_{E_8}$ is the maximal prime-totative Coxeter
+number. Under the no-free-pattern rule none of this is load-bearing --- it is recorded as a checksum with
+its own negative controls.
+\end{keybox}
+
 \begin{keybox}[Two-level foundation, and the parameter audit]
 \textbf{Local foundation:} $\cthree,\gcar$ are the two operational inputs (the two axioms).
 \textbf{Global bootstrap foundation:} $\gcar$ and the integer in $\cthree$ are $E_8$-closure fixed
@@ -1149,7 +1208,7 @@ directions ($\mathrm{M\ddot{o}b}(\hat{\mathbb C})\cong\mathrm{PSL}(2,\mathbb C)\
 clock $=$ order-$4$ M\"obius map \veri{v180\_clock\_is\_mobius.py}). Taking that identification seriously
 and reading the seam through the celestial-holography lens (the celestial-chiral-algebra construction of
 Bittleston--Homans--Sharma on ALE spaces; Costello's twistorial SDYM) produces a coherent
-thirty-step
+thirty-one-step
 story --- the narrative arc from the $\mu_4$ clock to the $(E_8)_1$ boundary shadow --- executed as
 work packages WP1--WP5d (both WP5d stages) plus the WP5e $\alpha$, $\beta$,
 $\gamma$, $\delta_1$, $\delta_2$, $\varepsilon_2$ and $\varepsilon_1$ stages, the three back-reaction
@@ -1157,7 +1216,8 @@ milestones M1--M3, the measure decision (Step 21) and the constructive $w_m$ der
 (Step 24) of the research contract
 \texttt{CELEST.SEAM.01}, plus the RP-blindness decision on the alignment bit (Step 22) with its
 twist-state completion (Step 26) with its twist-class definition (Step 29)
-and the interacting FK-toy scoreboard extension (Step 30), the thermal-seam
+and the interacting FK-toy scoreboard extension (Step 30) with the straddle-cone
+selection law (Step 31), the thermal-seam
 third leg of $c_3$ (Step 27) with the silver-eigenvalue demystification (Step 28), and the
 $\alpha$, $\beta_1$ and $\beta_2$ stages of the OS twistor bridge
 \texttt{WOIT.OS.TWISTOR.01} (Steps 20, 23 and 25), whose
@@ -1915,7 +1975,9 @@ mark pairs). The free-plus-twist class --- everything Wick-computable --- is her
 \emph{exhausted}: what could still see the bit is only a genuinely \emph{interacting}
 $\mathcal A_{\mathrm{hol}}$ whose OS data are not Pfaffian-reducible to the chiral vacuum ---
 and that door is since probed by Step 30 (the tenth side-blind test $9\to10$, with Kill-Test 2
-firing at toy level under a typed fence).
+firing at toy level under a typed fence) --- and answered \emph{positively at selector level} by
+Step 31: reflection positivity, imposed on the interacting mark family, keeps exactly one member
+alive, $\delta=\pi/2$.
 The alignment bit remains genuine discrete input. No marker moves.
 \veri{v525\_seam\_bit\_twist\_blind.py}
 
@@ -1997,7 +2059,8 @@ ground state for every $g>0$ --- inertia ladder $(37,0,0)\to(33,4,0)\to(31,6,0)\
 (29,8,0)$ (most negative eigenvalue $-4.5\times10^{-2}$); the Gibbs state at $\beta=2$
 carries the same ladder; the mechanism is interference (neither crossing nor half-local
 terms alone break); the STRADDLE LAW holds on all $24$ entries --- RP fails exactly on
-quartet-straddled cuts and stays PD on quartet-avoiding ones. Mandatory fence: one toy,
+quartet-straddled cuts and stays PD on quartet-avoiding ones (the $24$ entries cover
+\emph{asymmetric} straddles only --- refined in Step 31). Mandatory fence: one toy,
 one interaction class, \mC\ flat-band parent --- this \emph{narrows} the Woit route
 (every $\mathcal A_{\mathrm{hol}}$ must protect RP against exactly this mechanism; the
 straddle law is a concrete hurdle for $\beta_3/\gamma$), it does \emph{not} close it;
@@ -2010,6 +2073,35 @@ mirror-equal. F3 $=$ ERFOLG: grading and the nonsplit $\Z_8$ tower survive
 v524 OS quotient survives $g>0$ constructively on the $\delta=\pi/2$ mark-anchored model.
 No marker moves.
 \veri{v529\_seam\_interacting\_toy\_fk.py}
+
+\par\smallskip\noindent\textbf{Step 31 --- the straddle cone executed: reflection positivity
+\emph{selects} the bit \mE/\mC.} The review contract left by Step 30 (independent couplings
+$\lambda_q$ on the four mark quartets of $M(\delta)$; the RP cone on the equivariant family) is
+executed, double-verdicted. V1 $=$ KILL: the literal \emph{leading-order} cone is empty for every
+member and both signs (first-order perturbation of the OS Gram via the exact reduced resolvent,
+Hermitian to $10^{-15}$, central-difference regression $2\times10^{-8}$) --- the linear pencil
+cannot carry the selection; the recoverable leading-order content is the straddled-cut drift sign
+pattern ($\pi/2$: $+1.4\times10^{-4}$ for $s{=}+$, $-3.7\times10^{-2}$ for $s{=}-$; the asymmetric
+members exactly reversed) --- necessary, not sufficient. V2 $=$ ERFOLG, \emph{the selection law}
+(the central datum): among \emph{all} well-posed members and both coupling signs, reflection
+positivity holds on \emph{every} admissible cut over the whole grid $g\in\{1/32..8\}$ for
+\emph{exactly one} combination --- $\delta=\pi/2$ with \emph{positive} coupling: all four Grams PD
+$(37,0,0)$ \emph{including the previously untested straddled clock axes} $7/15$, minimum
+eigenvalue \emph{lifted} off the free RP boundary ($1.78\times10^{-6}\to5.5\times10^{-5}$ near
+$g=1/4$), Gibbs $\beta=2$ identical; the asymmetric members die ($s{=}+$ already at $g=1/32$,
+$s{=}-$ from $1/8$: the protection at $\pi/2$ is \emph{nonperturbative}). The Step-30 straddle law
+refines: asymmetric straddling kills RP, the \emph{symmetric} straddling of the self-mirror member
+protects it. The geometry behind the dichotomy is exact: $\delta=\pi/2$ is the \emph{unique}
+member whose four quartets partition the $16$-circle and whose straddling quartets are
+reflection-closed across their cuts with sign $+1$ (stabilizer $=$ the full clock$+$mirror group,
+four admissible cuts $\{3,7,11,15\}$); the equivariant $\mathrm{Fix}$ rays are uniform on
+$m=2..6$ and NS-wrap-twisted on the tight members $m=1/7$. Typed cross-link: the RP-selected
+member is exactly the carrier of the Step-29 twist-class order parameter $O=\tfrac12$ --- the
+dynamical selector and the kinematic definition point at the \emph{same} member. Honest fence:
+one toy, one interaction class, \mC\ flat-band parent, $\deg\le2$ OS bases --- toy-level
+\emph{evidence for} the bit's dynamical origin, not a derivation; \texttt{WOIT.OS.TWISTOR.01}
+stays \mO. No marker moves.
+\veri{v534\_seam\_straddle\_cone.py}
 
 \par\smallskip\noindent\textbf{What remains, honestly (WP5e proper \mO).}
 The single open step is the \emph{global} BCOV/Kodaira--Spencer quantisation on $\mathbb{PT}/\Z_4$:

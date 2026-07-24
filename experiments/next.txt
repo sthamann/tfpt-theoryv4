@@ -1,3 +1,1068 @@
+# 2026-07-24 (XVIII) — Teile 41–43 (delegiert): die Brücke ist HECKE-ÄQUIVARIANT (FUNCTOR-WIRED) + Dichten geschlossen (T42 → v536 promoviert, s. (XVII)) + Kohnen-Plus PARTIAL — 13/13 + 25/25 + 12/12, Sandbox
+# functor_wiring_halfintegral_probe.py (T41, 22s), e8_local_densities_probe.py (T42, 25s),
+# kohnen_plus_waldspurger_probe.py (T43, 47s).
+#
+# T41 **FUNCTOR-WIRED** (der Zufalls-Verdacht ist tot): das T38-Objekt g = θ₂(q²)²·θ₃(q²)·θ₄·θ₄(q²)
+#    (Gewicht 5/2, Nebentypus trivial) ist EXAKTE T(p²)-Eigenform mit Eigenwerten GENAU a_p(f₈) für
+#    p = 3, 5, 7, 11, 13 (−4, −2, 24, −44, 22; Shimura-1973-Formel, O(q²⁰⁰⁰⁰)); Trial-FE der
+#    5/2-Seite um Zentrum 5/4 (N = 512, ε = +1, 2.3e-3). Die kuspidale Brücke ist ein MECHANISMUS:
+#    das Compiler-Monoid-Objekt TRÄGT die Primzahl-Fingerabdrücke als Hecke-Eigenwerte. Ehrlich:
+#    g ∉ Kohnen-plus ⇒ Waldspurger-Fenster scheitert (K3, wie vorregistriert).
+# T42 **DENSITIES-CLOSED**: trennende Invariante gefunden — Type-A = isotrope Cosets, die Norm p
+#    DARSTELLEN; B = ∅ ⟺ p⁴ < 241 (erklärt p = 3); geschlossene Dichten N_A = min(240(1+p³),
+#    #iso−1); p = 7-VORHERSAGE live bestätigt (82560/743040); O(1)-Assembler λ_geom = λ_Eis + a_p²
+#    bis p = 31. → PROMOVIERT als v536 (Eintrag (XVII)).
+# T43 **PARTIAL** (ehrliche Verengung): ein Plus-Raum-Objekt mit den korrekten T(p²)-Eigenwerten
+#    liegt im q⁴-erweiterten Monoid (pr⁺_supp(g) = θ₂(q²)²·θ₃(q⁴)·θ₄(q⁴)² bis Skalar), ist aber
+#    NICHT das Kohnen-Isomorphie-Urbild von f₈ (Sh bei t = 2 verschwindet auf Plus; t = 1 trifft
+#    nur ungerade n; lstsq-Residuum 0.355 im 411er-Kandidatenraum) ⇒ Waldspurger-Quotient streut
+#    ~294 % statt konstant. Zentralwert-Verdrahtung OFFEN; Hebel: echte modulare Plus-Projektion
+#    (Operator statt Support-Cut) oder metaplektische Erweiterung.
+# FUNKTOR-KARTIERUNG nach dieser Runde: abelsch → Zentrum 1/2 (T39, geschlossen); kuspidal →
+#    a_p als T(p²)-Eigenwerte eines Compiler-Objekts (T41, geschlossen auf Probenebene);
+#    Zentralwert-Familie am GL(2)-Zentrum: offen (T43); ξ(s) weiterhin NUR abelsch erreicht;
+#    ZETA.HP.CARRIER unberührt (T40-Diagnose gilt).
+# Serie (XII)–(LIV): 43 Proben, 876/876 Checks Sandbox + Promotionen v535 (25/25) und v536 (23/23,
+# AUDIT OK, Suite 530, Wolfram 598/598). Website /prime-front live, Feed aktuell bis Teil 43.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Shimura, Kohnen, Waldspurger, Eichler, Siegel,
+# Witt) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-24 (XVII) — PROMOTION: T33+T36+T37+T42 → verification/v536_eichler_trace_layer.py (HECKE.GEOM.EICHLER.01) — 23/23, ~30 s; Eichler trace layer at the E8 lattice (Witt + two-sided identity + Type-A/B densities + signed a_p); NO marker moves
+# Konsolidierte Promotion der Discovery-Proben e8_nu_rule_many_primes_probe.py (T33), e8_lambda_charsum_evaluator_probe.py (T36),
+# e8_salie_signed_cusp_probe.py (T37), e8_local_densities_probe.py (T42) in EIN load-bearing Modul. Baut auf v535/HECKE.GEOM.01
+# auf (Kneser/nu_p/Oldforms NICHT dupliziert). Claim ist NICHT RH-bezogen.
+#
+# (A) Witt-Schicht: λ_Eis = σ₃(#P³−σ₃) = L−σ₃² symbolisch + für alle 24 ungeraden p ≤ 100; Anker (336,3780,19264).
+# (B) Eichler-Identität: λ_geom = λ_Eis + a_p²; Typ-(i) N_⊥ live konstant auf 240 Roots bei p=3,5; Typ-(ii) live bei p=3
+#     (352=364−12), p=5 T36-Freeze (3784=3906−122; Shell(25) Budget-Gate); Assembler R=σ₃−1−c(p²)/8; R(7)=576 Prognose.
+# (C) Lokale Dichten: N_A = min(240(1+p³), #iso−1); B leer ⟺ p⁴<241; p=7 live 82560/743040; Injektivität p=11,13;
+#     Faser-Verfeinerung scoped {5,7,11}.
+# (D) Signierte Extraktion: a_p = −c(p)/8 aus Shell(p): (−4,−2,+24); b ∈ {24,124,368} (Anschluss v535 nu_p).
+# (E) O(1)-Assembler + Ramanujan für alle ungeraden p ≤ 31 gegen η-Produkt f₈.
+# Fences: Klassik (Eichler/Siegel/Witt) als klassisch benannt; in-suite Zweiseitigkeit + geschlossene Compiler-Dichten;
+#     Shell(p²) p≥7 out of scope; Gewicht-4→GL(1) bleibt [O]; keine Marker-Moves.
+# Surfaces: Ledger HECKE.GEOM.EICHLER.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XIV);
+#     Wolfram extension 593 → 598; website papers.ts + VerificationDag E8 + ScriptIndex via gen; AUDIT OK.
+#
+# 2026-07-24 (XVI) — Teile 37–40 (delegiert, Stufe-2/3/4-Front parallel): SCALABLE-AND-SIGNED + **BRIDGE-FOUND** (Shimura-Urbild von f₈ IM Compiler-Monoid!) + ABELIAN-DROP-CLOSED + TERRAIN-MAPPED — 37/37 + 13/13 + 13/13 + 24/24, KEINE Promotion
+# e8_salie_signed_cusp_probe.py (T37, 159s), cuspidal_bridge_probe.py (T38, 267s),
+# zeta_center_atlas_probe.py (T39, 0.9s), weil_recovery_compiler_sector_probe.py (T40, 28s).
+#
+# T37 **SCALABLE-AND-SIGNED**: der naive Invarianten-Kollaps (q(c), c=0?) stirbt bei p = 5 (preregistrierter
+#    Kill), die Verfeinerung über das Shell(p)-Bild (Type-A/B; p=3: N_A = 81 = p⁴, B leer; p=5: 45/50,
+#    Gap = p) kollabiert exakt. ASSEMBLER-IDENTITÄT: R(p) = σ₃ − 1 − c(p²)/8 reproduziert 16/4 live und
+#    prognostiziert R(7) = 576 (Shell(49)-Gegenmessung out of budget, ~898s ETA, ehrlich dokumentiert).
+#    VORZEICHEN skalierbar: a_p = −c(p)/8 aus Shell(p) (O(p³) statt O(p⁷)): −4, −2, **+24** korrekt
+#    signiert; b = σ₃ + a_p ∈ {24, 124, 368}. Einzelnes Salié S(1,1;p) ≠ a_p (Kill gefeuert).
+#    Promotionsreife der Eichler-Schicht: erst mit geschlossenen lokalen Dichten für Type-A/B.
+# T38 **BRIDGE-FOUND** (das stärkste Einzelergebnis seit v535): B2: im 70-elementigen Compiler-
+#    Kandidatenraum (Theta-Monome + q²-Skalierungen, O(q^10000)) existiert EXAKT EIN Shimura-Urbild:
+#    **g = θ₂(q²)²·θ₃(q²)·θ₄·θ₄(q²)** (Gewicht 5/2) mit Sh_{t=2}(g) = −8·f₈ koeffizientenweise bis
+#    n = 120 — die kuspidale Brücke Gewicht 4 ↔ Gewicht 5/2 steht mit compiler-nativem Baustein
+#    (NICHT Kohnen-plus; reines V0-Monoid reicht nicht — die q²-Skalierung ist nötig). B1: Selbst-RS
+#    von f₈ sauber: Euler-Struktur (1+p³X)/[(1−p³X)(1−(a_p²−2p³)X+p⁶X²)], Pol bei s = 4 (Residuum
+#    0.40264165 = ½·L(sym²,4)_odd/ζ_odd(5)), D·ζ(2s−3)/L(sym²) = ζ(s−3) auf ≥20 Stellen; SHIFT-
+#    DIAGNOSE: kuspidale Route nach Gewichts-Normierung Δ = 0 (ζ AUF der Linie!) vs abelsche Route
+#    Δ = ±1 — die Restlücke der abelschen Route ist (k_h−k_g)/2, kein universeller Half-Step.
+# T39 **ABELIAN-DROP-CLOSED-TYPED**: ZENTRUM-ATLAS aller in-suite L-Objekte: ξ-Linie (Zentrum 1/2)
+#    wird EXAKT von den Gewicht-≤1-Theta-Faktoren erreicht — Mellin(θ₃) → ζ(2s) und ζ_{Q(i)} =
+#    ζ(s)L(s,χ₄) (Dedekind-FE um 1/2 auf 5e-29; Kette Zensus → eindeutige Faktorisierung → θ₃² →
+#    Mellin, K3-Fence intakt: nichts extern eingeschleust). Der abelsche Weight-Drop = FAKTORISIERUNG
+#    + MELLIN, GESCHLOSSEN; kuspidal (Zentrum 2 bzw. sym² 7/2) blieb offen — bis T38. A4-Fence als
+#    eigener Check: Funktion ≠ Spektrum, ZETA.HP.CARRIER unberührt, RH-Nähe-Lesarten gekillt.
+# T40 **TERRAIN-MAPPED** (Stufe-4-Landkarte): W1 verengte Recovery-Bilanz (Arch = deklariertes
+#    Externum) balanciert auf {2,3,5}-Fejér-Fenstern (max rel 3.2e-4, 300 Nullstellen). W2 typisiertes
+#    NULL: Weil-Gram passt NICHT zur v221-Struktur (Ratios 1:0.05:0.03 vs 1:0.088:0.001, keine
+#    Doppelt-Stochastik; Placebo feuerfrei) — die naive Gram-Analogie ist beerdigt. W3 EXAKTE Diagnose:
+#    der heutige Operatorbestand hat GENAU ZWEI Gelfand-Punkte (σ₃-, f₈-System); Aggregation über p
+#    bleibt lokal-endlich (2^π(P)) — für einen HP-Träger fehlt kategorisch ein unbeschränkter
+#    selbstadjungierter Operator (R1–R4); NUR ZWEI Kandidatenklassen übrig: C1 Naht-Modularfluss
+#    (Arch-Sitz bereits tot), C2 adelische BC-Vervollständigung (Kill: scheitert an R1).
+# GESAMTBILD nach dieser Runde: der Weight-Drop ist ZWEIKANALIG GELÖST auf Probenebene — abelsch via
+#    Faktorisierung+Mellin (T39), kuspidal via Shimura-Urbild im Compiler-Monoid (T38, Δ = 0-Route);
+#    ZETA.COMPILER.FUNCTOR verengt auf die VERDRAHTUNG: T(p²) auf g vs a_p (Hecke-Kompatibilität der
+#    Brücke) + Mellin/FE der Gewicht-5/2-Seite gegen Zentrum 1/2 (ehrliche Hürde: halb-ganzzahlige
+#    L-Reihen haben i.A. KEIN Euler-Produkt — Fence). Eichler-Schicht promotionsreif nach lokalen
+#    Dichten. Websites: /prime-front live (Commits b6a121d, d2cf683), Feed wird pro Lauf gepostet.
+# Serie (XII)–(LI): 40 Proben, 826/826 Checks Sandbox + Promotion v535 (25/25, AUDIT OK).
+# Firewall: Konsistenz, keine RH-Evidenz (A4-Fence explizit); Klassik (Shimura 1973, Kohnen, sym²/RS,
+# Salié, Gelfand, Dedekind-FE) als klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-24 (XV) — Teile 35–36 (delegiert): die STRUKTURELLE TRENNUNG steht — Rankin–Selberg übersetzt EXAKT den abelschen Schatten (RS-TRANSLATES-EISENSTEIN), der Cusp-Rest ist f₈-frei geometrisch isoliert (TWO-SIDED bis p ≤ 5) — 13/13 + 29/29, KEINE Promotion
+# rankin_selberg_functor_probe.py (T35, 13/13, 35s) und e8_lambda_charsum_evaluator_probe.py (T36, 29/29, 111s).
+#
+# T35 RANKIN–SELBERG-ÜBERSETZUNG: **RS-TRANSLATES-EISENSTEIN.** Die multiplikative Faltung der Compiler-
+#    Faktoren D(s) = Σ r₂(n)(−1)ⁿr₆(n) n^{−s} hat exakt Grad-4-Lokalfaktoren
+#    (1−p²X²)/[(1−X)(1−χ₄(p)X)(1−p²X)(1−χ₄(p)p²X)] (p ≤ 50 exakt rational rekonstruiert) und die
+#    geschlossene Form D(s) = −48·(1−10·2^{−s}+8·4^{−s})·ζ(s)L(s,χ₄)ζ(s−2)L(s−2,χ₄)/(ζ(2s−2)(1−2^{2−2s}))
+#    (numerisch ≥ 20 Stellen; r₆ = 16σ₂^♯ − 4σ₂^♭ klassisch/Jacobi verifiziert). Der Funktor-Kanal
+#    EXISTIERT und liefert wörtlich ζ(s) und L(s,χ₄) im Roh-Produkt — ABER: nach Gewichts-Normierung
+#    liegen die vier GL(1)-Komponenten auf Shifts {+1,+1,−1,−1}, KEINE auf der ξ-Linie; und f₈ ist
+#    VOLLSTÄNDIG unsichtbar (b_n(3) = 0 vs a₃ = −4; p ≡ 1 mod 4: rein elementar). ⇒ RS übersetzt den
+#    ABELSCHEN Schatten {1,χ₄}; der Cusp-Anteil passiert diese Brücke nicht (K1/K2 feuern nicht).
+# T36 λ_geom-EVALUATOR (f₈-frei): **PARTIAL = TWO-SIDED-CONFIRMED-TO-p≤5.** Unabhängige Route
+#    λ_geom = λ_i + λ_ii: Typ (i) (Vektoren in L∩L'): N_⊥ = (p⁶−1)/(p−1) = σ₃·#P² (Witt, 7-dim
+#    Quadrik, klassisch) konstant auf den 240 Roots ⇒ λ_i − λ_Eis = σ₃ ELEMENTAR; Typ (ii) (neue
+#    Vektoren): signierte Kongruenz-Schalen-Summe über Shell(p²)\pE8 mit Kneser-Filter, OHNE f₈-Input.
+#    Anker LIVE getroffen: λ_geom(3) = 364 − 12 = 352, λ_geom(5) = 3906 − 122 = 3784 ✓✓; der EINZIGE
+#    nicht-elementare Restterm R(p) = σ₃ + (−1/8)Σ_ℓ Σ_{z∈Shell(p²)\pE8∩F_ℓ} χ_μ4(deg′(z)) = a_p²
+#    (16 bzw. 4) — die Eichler-Identität ist bei p ≤ 5 ECHT ZWEISEITIG (links mod-p-Geometrie, rechts
+#    eta-Produkt). p ≥ 7 gated an |Shell(49)| ~ 2.8e7 (Budget); Negativkontrollen brechen.
+#    Hebel: geschlossene S_w(p²)-Formel (Witt-Orbits + EIN Salié-/kuspidaler Term) → O(p²)-Assembler;
+#    Salié-Summen tragen VORZEICHEN → Kandidat für die signierte a_p-Extraktion (statt nur a_p²).
+# SYNTHESE DER RUNDE (das Review-Raster ist eingetreten, „schwach-aber-klar" auf T35-Seite = die
+#    SAUBERSTE Variante): der Weight-Drop ist KEINE einzelne Operation, sondern zerfällt in zwei Kanäle:
+#    (1) Eisenstein-System → abelsche RS-Übersetzung in GL(1)-Produkte aus {1,χ₄} (steht, exakt);
+#    (2) Cusp-System → NICHT-abelscher Kongruenz-/Interferenz-Rest der Geometrie (f₈-frei isoliert bis
+#    p ≤ 5), Träger des künftigen HP-Kandidaten. GL(1) ist das Bild des ABELSCHEN QUOTIENTEN des
+#    Compilers; ξ(s) selbst bleibt unerreicht (kein Faktor auf Zentrum 1/2 nach Normierung).
+#    ZETA.COMPILER.FUNCTOR [O] entsprechend verengt: gesucht ist jetzt (a) die Enttwistung/der Shift
+#    für den abelschen Kanal UND (b) die kuspidale Brücke (Shimura/RS-gegen-Cuspform), die a_p sieht.
+# Serie (XII)–(XLVII): 36 Proben, 739/739 Checks Sandbox + Promotion v535 (25/25, AUDIT OK).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Rankin–Selberg, Jacobi-r₆, Witt, Salié) als
+# klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (XIV) — Teile 33–34 (delegiert, parallel zur v535-Promotion): Härtung HARDENED-TO-p≤100 mit EICHLER-BEFUND (λ_geom − λ_Eis = a_p² exakt) + Projektgründung ZETA.COMPILER.FUNCTOR (FOUNDED-WITH-ANCHOR) — 26/26 + 13/13, KEINE Promotion
+# e8_nu_rule_many_primes_probe.py (T33, 26/26, 0.1s) und compiler_functor_theta_probe.py (T34, 13/13, 0.4s).
+#
+# T33 VIELE-PRIMZAHLEN-HÄRTUNG: **HARDENED-TO-p≤100.** Geschlossene Formen (Witt/Gauss, klassisch):
+#    λ_Eis = L − σ₃² = σ₃(#P³ − σ₃) REIN in p; die geometrische Zählung weicht davon um EXAKT a_p² ab:
+#    **λ_odd = λ_Eis + a_p(f₈)²** — der Gitter-Schatten einer Eichler–Selberg-artigen Spurformel
+#    (eigenständiger Befund: elementarer Witt-Anteil + quadratische Kuspidal-Korrektur). Blöcke:
+#    β = (σ₃² − a_p²)/2, α = (L + λ)/2; Cusp-Regel a_p = b − σ₃ und Ramanujan-Schranke für ALLE 24
+#    ungeraden p ≤ 100 (Anker p = 3,5,7 voll geometrisch; p = 11: 177760, p = 13: 400520; darüber
+#    theta-seitig — Beträge; Vorzeichen aus Fit bei 3,5, aus f₈ bei 7; FP-Census p = 11 wäre 4.3e8
+#    Vektoren, ehrlich als Closed-Form-Skalierung dokumentiert). Placebo/σ₁-Ersatz brechen.
+#    Hebel: unabhängiger O(p²..p³)-Charaktersummen-Evaluator für λ_geom (zweiseitiger Check).
+# T34 COMPILER FUNCTOR (Projektgründung, vormals „Weight Drop"): **FOUNDED-WITH-ANCHOR.**
+#    F1 exakt: das RH-Zentrum 1/2 ist IN-SUITE definiert — Mellin((θ₃−1)/2)(s) = π^{−s}Γ(s)ζ(2s)
+#    (~40 Stellen), FE Λ(s) = Λ(1/2−s) via θ₃-Poisson (Riemanns klassischer Beweis), Zentrum-Arithmetik
+#    Gewicht 1/2 → Mellin-Zentrum 1/4 → ζ-Argument 2s → Zentrum 1/2. F2 exakt: die Theta-Faktorisierung
+#    ist EINDEUTIG — unter allen 45 Monomen θ₂^a θ₃^b θ₄^c (a+b+c = 8) reproduziert NUR (2,6,0) die
+#    signierte Glue-Theta; Borwein-Analogie nur a¹b³ ⇒ Φ(Θ₀−Θ₂) := θ₃-Anteil (Exponent 2 = θ_{Z[i]})
+#    ist wohldefiniert (K1 feuert nicht). F3 Lücke typisiert: Bare-Shimura auf θ₃ gibt T(p²)-Eigenwerte
+#    ω_p = 1 + p⁻¹ (4/3, 6/5, 8/7 exakt, n ≤ 100) — sieht a_p NICHT; Mellin faktorisiert nicht über
+#    Produkte; a_p·p/(p+1) nicht konstant (kein naiver Lift). VERTRAG ZETA.COMPILER.FUNCTOR [O]:
+#    Φ: {Zensus-New-Systeme, Gewicht 4} → {Gewicht-1/2-Thetas} kanonisch (via eindeutiger
+#    Faktorisierung) + Hecke-übersetzend + Euler-erhaltend + ξ-tragend; Kills K1–K3 vorregistriert
+#    (insb. Langlands-Ehrlichkeit: ein solcher Funktor wäre NEU; ζ extern einschleusen zählt nicht).
+#    Benannter erster Übersetzungstest: Rankin–Selberg L(θ₃² × θ₄⁶, s) gegen die bekannte
+#    L(Θ₀−Θ₂, s) = 16·2^{−s}η(s)η(s−3) − 8L(f₈,s).
+# Serie (XII)–(XLV): 34 Proben, 697/697 Checks Sandbox + Promotion v535 (25/25, HECKE.GEOM.01, AUDIT OK).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Witt/Gauss, Eichler–Selberg, Riemann-θ-Beweis,
+# Shimura, Rankin–Selberg) als klassisch benannt; Sandbox-Teile ohne Ledger-/Paper-/Website-Änderung.
+
+# 2026-07-24 (XIII) — PROMOTION: T27+T31+T32 → verification/v535_hecke_from_geometry.py (HECKE.GEOM.01) — 25/25, ~11 s; Hecke from geometry on the E8 census (Kneser + affine ν_p + 2-adic oldforms); NO marker moves
+# Konsolidierte Promotion der Discovery-Proben e8_pneighbor_hecke_probe.py (T27), e8_neighbor_operator_decomposition_probe.py (T31),
+# census_newform_recovery_probe.py (T32) in EIN load-bearing Modul. Claim ist NICHT RH-bezogen.
+#
+# (A) Kneser trägt Hecke: #iso_pts = p^7+p^4−p^3, #iso_lines = σ₃(p)·#P³(F_p) symbolisch + Enumeration
+#     p = 2,3,5,7 → 135/1120/19656/137600.
+# (B) Markierter Nachbar-Summenoperator = affines Hecke-Element: ν_p = a Id + b T_p mit b = σ₃+a_p,
+#     a = #lines − b·σ₃; Cusp-Regel a_p = b−σ₃ liefert a₃ = −4, a₅ = −2 (p = 3 live orbit-reduziert;
+#     p = 5 T31-validierter Freeze von S[1], λ_odd = 3784); p = 7-Konsistenz λ_odd = 19840; Placebo fail.
+# (C) Zensus-Redundanz = 2-adische Oldform-Struktur: dim V = 7 = 5+2; π_cusp = (28−T₃)/32,
+#     π_Eis = (T₃+4)/32, Newform via (1−V₂U₂); New-Räume dim 1; Level-Census rein 2-adisch.
+# Fences: Klassik (Kneser, Hecke, Atkin–Lehner, Multiplicity One) als klassisch benannt; Gewicht-4 → GL(1)
+#     bleibt [O] (ZETA.CENSUS.TO.GL1); keine RH-Aussage; keine Marker-Moves.
+# Surfaces: Ledger HECKE.GEOM.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XIII);
+#     Wolfram extension 588 → 593; website papers.ts + VerificationDag E8 + ScriptIndex via gen.
+# (XII) blieb Sandbox-Tagebuch („KEINE Promotion"); der dort benannte Brandt-/Hecke-Promotionspfad ist HIermit ausgeführt.
+
+# 2026-07-24 (XII) — Teile 31–32 (delegiert): BEIDE Programm-Prioritäten auf Probenebene GESCHLOSSEN — die Cusp-Extraktion ist eine REGEL (ν_p = a·Id + b·T_p, REPAIRED-BY-DICTIONARY) und die Zensus-Redundanz ist EXAKT 2-adische Oldform-Struktur (REDUNDANCY-IS-OLDFORM) — 49/49 + 24/24, KEINE Promotion
+# e8_neighbor_operator_decomposition_probe.py (T31, 49/49, 497s) und census_newform_recovery_probe.py (T32, 24/24, 4s).
+#
+# T31 NACHBAR-OPERATOR-ZERLEGUNG: **REPAIRED-BY-DICTIONARY.** Der markierte Kneser-Nachbar-Summenoperator
+#    ist EXAKT ein affines Hecke-Element: ν_p = a(p)·Id + b(p)·T_p mit b = σ₃(p) + a_p und
+#    a = #lines − b·σ₃(p) — EIN (a,b) für alle Schalen und Kanäle (Residuen exakt 0; überbestimmt),
+#    p = 3: (448, 24), p = 5: (4032, 124), p = 7: (11008, 368) konsistent (λ_odd = #lines − σ₃² + a_p²:
+#    352/3784/19840 ✓). CUSP-REGEL: **a_p = b(p) − σ₃(p)** — der eingefrorene geometrische Operator
+#    liefert a₃ = −4, a₅ = −2, a₇ = ±24 (Betrag aus λ, Vorzeichen aus dem Fit) als OUTPUT. T30-BROKEN
+#    war falsche Normalisierung, keine fehlende Struktur. KEIN χ₄-Split der Koeffizienten (die
+#    p-mod-4-Verdachtsspur ist tot). Placebos inkonsistent. Even-Schalen-Auflösung: dort gilt
+#    T_p Θ_j = σ₃ Θ_j, kompatibel mit demselben (a,b) — der Even/Odd-„Split" war Projektions-Artefakt.
+#    ⇒ ZETA.LOCAL.EULER M1: Eisenstein (T27) UND Cusp (T31) sind jetzt gitter-nativ auf Probenebene —
+#    die a_p sind Eigenwert-Daten einer realen, eingefrorenen Compiler-Korrespondenz.
+# T32 NEWFORM-RECOVERY: **REDUNDANCY-IS-OLDFORM.** Der volle Zensus-Formenraum hat dim V = 7 =
+#    5 (E4-Kopien, Level 1,2,4,8,16) + 2 (f₈-Kopien, Level 8,16), kollisionsfrei; alle Θ-Kanäle als
+#    explizite rationale Kombinationen (z.B. Θ₁ = (4/15)(E4(q) − E4(q²))). Recovery-Projektion
+#    KONSTRUIERT: π_cusp = (28 − T₃)/32, π_Eis = (T₃ + 4)/32, Newform via (1 − V₂U₂); New-Räume je
+#    DIM 1 (Multiplicity One, klassisch, in-suite: ker(T₃−28) = 5, ker(T₃+4) = 2). Level-Census REIN
+#    2-ADISCH (Kill „fremde Level" feuert nicht) — die Redundanz der E8-Schalenwelt ist exakt
+#    μ4/Glue-seitig. ⇒ ZETA.MULTIPLICITY.ONE auf FORMEN-Ebene gelöst-durch-Identifikation: genau
+#    ZWEI irreduzible Systeme (σ₃(n) und a_n(f₈)), je Multiplizität 1; Vektor-Ebene bleibt
+#    nachweislich redundant (T26).
+# PROGRAMM-BILANZ (Review-Synthese-Bild, jetzt maschinell unterlegt): E8 = redundante 2-adische
+#    Oldform-Kodierung zweier arithmetischer Systeme; μ4/Glue = Level-Steuerung + Primtypen;
+#    Recovery = Newform-Projektion; Hecke = eingefrorene Nachbar-Korrespondenz mit a_p als Output;
+#    Primon-Monoid = verifizierte Transportalgebra (T29). DER EINE verbleibende Flaschenhals ist
+#    unverändert und jetzt ISOLIERT: beide New-Systeme sind GEWICHT 4 (L = ζ(s)ζ(s−3) bzw. L(f₈,s),
+#    GL(2)-Objekte) — ZETA.CENSUS.TO.GL1 (Weight-Drop zu ξ(s), Zentrum 1/2) ist der einzige noch
+#    offene Schritt vor ZETA.HP.CARRIER; P3/P4 (HP-Carrier, Blindfenster) bleiben daran gated.
+#    Benannte Hebel: p = 11/13-Spot-Checks der ν_p-Regel; Fricke/Level-16-Erklärung des Even-Verhaltens;
+#    Brandt-Packaging als möglicher Promotionspfad für T27+T31+T32 (EIN vN-Modul „Hecke aus dem Gitter").
+# Serie (XII)–(XLIII): 32 Proben, 658/658 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Kneser, Hecke-Algebra, Atkin–Lehner/Oldforms,
+# Multiplicity One) als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (XI) — Teil 30 (delegiert): UNIFORMITÄTSTEST BROKEN — die Teil-28-Ablesung a_p = #P³ − λ_odd/8 war eine p=3-Koinzidenz; die TRANSPORT-STRUKTUR selbst hält bei p = 5 exakt — 32/32, KEINE Promotion
+# e8_transport_cusp_uniformity_probe.py (T30, 32/32, 144s; Orbit-Reduktion an p = 3 validiert: Even 1120·I,
+# Odd-Block [[736,384],[384,736]], a₃ = −4 reproduziert — Gate offen, DANN der Test):
+# p = 5 VOLLSTÄNDIG (19656 Geraden, 25 Orbits): λ_odd(5) = 3784 ≠ 1264 (Vorhersage der Regel); „a₅" = −317
+# ≠ −2. p = 7 Profiling: λ = 19840 ≠ 3008. Placebo verfehlt beide. STRUKTUR HÄLT: Totals = #lines·240,
+# Spinor-Eigenwert = #lines, (0,2)-Block symmetrisch mit Eigenwerten {#lines, λ_odd} — nur die λ↔a_p-
+# ABLESUNG bricht. DIAGNOSE (typisiert): der signierte Kanal ist KEIN Eigenvektor (T28-Closure:
+# T(Θ₀−Θ₂) = σ₃(Θ₀−Θ₂) + 8(σ₃−a_p)f₈ mischt Eis/f₈ mit verschiedenen Schalen-Koeffizienten) — die
+# Block-Eigenwert-Ablesung an niedrigen Schalen konnte p = 3 zufällig treffen. Ehrlich: T28-Kernbefund
+# fällt von „Cusp-Regel" auf „Cusp bei p = 3 sichtbar, Regel offen" zurück. Benannter sauberer Nachtest
+# (T31): exakte 4-Komponenten-Zerlegung des markierten Nachbar-Summenoperators ν_p auf dem Hecke-stabilen
+# Span (Tot, Spinor, Eis_c, f₈) mit 2-Parameter-Ansatz ν_p = a(p)·Id + b(p)·T_p — pro Primzahl
+# überbestimmt; Erfolg = einheitliches (a,b)-Gesetz macht die Cusp-Extraktion doch zur Regel; Kill =
+# kein linearer Ansatz konsistent.
+# Serie (XII)–(XLI): 30 Proben, 585/585 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Kneser, Hecke) benannt; keine Ledger-/Paper-/
+# Website-/Marker-Änderung.
+
+# 2026-07-24 (X) — Teile 28–29 (delegiert): der CUSP-KOEFFIZIENT IST TRANSPORT-SICHTBAR — a₃ = −4 exakt aus reiner mod-3-Gitter-Geometrie (Kneser-Transport, vollständige Enumeration); Primon-Monoid RELATIONS-VERIFIED — 22/22 + 16/16, KEINE Promotion
+# e8_kneser_transport_holonomy_probe.py (T28, 22/22, 146s) und primon_transport_category_probe.py (T29, 16/16, 117s).
+#
+# T28 KNESER-TRANSPORT-HOLONOMIE, der Kernbefund: für p = 3 VOLLSTÄNDIG (alle 1120 Nachbargitter,
+#    Schalen n = 1..3, glue-klassifiziert via wohldefiniertem deg′(x) = p⁻¹·deg(px) mod 4): der
+#    Transport hat einen exakten Even/Odd-Schalen-Split; auf den UNGERADEN Schalen hat der
+#    (0,2)-Glue-Block die Matrix [[736, 384],[384, 736]] mit Eigenwerten {1120 (D8-Kanal),
+#    352 (signierter Kanal)} — und **a₃ = #P³(F₃) − λ_odd/8 = 40 − 44 = −4** EXAKT: der
+#    Cusp-Koeffizient von f₈ ist erstmals aus reiner Gitter-Geometrie (Zählen von Nachbar-Transporten,
+#    kein Modulformen-Import) extrahiert. Placebo (seed-fixiert) verfehlt (−5.33 ≠ −4). EHRLICH:
+#    (i) bisher NUR p = 3 (Uniformität ungetestet — Folgeprobe nötig!); (ii) die naive Erwartung
+#    einer konstanten 4×4-Matrix scheitert (T_p erhält den rohen Klassen-Span NICHT; Closure:
+#    T(Θ₀−Θ₂) = σ₃(Θ₀−Θ₂) + 8(σ₃−a_p)f₈ — konsistent mit T29-C4c); Even-Schalen: M = 1120·I.
+# T29 PRIMON-TRANSPORT-KATEGORIE: **RELATIONS-VERIFIED** — das Primon-Monoid steht exakt auf den
+#    Compiler-Kanälen (Thetas bis O(q²⁰⁰⁰)): C1 Koprimalität T_mT_n = T_{mn} (7 Paare inkl. p = 2),
+#    C2 Leiter T_pT_{p^k} = T_{p^{k+1}} + p³T_{p^{k−1}} (p = 3,5,7; k = 1,2), C3 konstruktive
+#    Zerlegungen (T₁₂ = (T₂²−8)T₃, T₄₅ = (T₃²−27)T₅) + Irreduzibilitäts-Zeugen ((T_p e₁)[p] = p³),
+#    C4 stabile 4×4 auf (Tot, Spinor, Eis, f₈): T₃ = diag(28,28,28,−4), T₅ = diag(126,126,126,−2) —
+#    drei Kanäle σ₃(p), der vierte exakt a_p. FENCE: der rohe Glue-Span ist NICHT Hecke-stabil —
+#    der Transport erzwingt den Eisenstein/Cusp-Split; C5 (Kategorie) bleibt PARTIAL-TYPED, gated
+#    an die gitter-native Cusp-Wirkung (T28-Linie). Klassik benannt (Hecke-Algebra = Z[T_p]).
+# PROGRAMM-STAND: eindeutige Faktorisierung = verifizierte Kompositionsgesetze der Transport-Algebra
+#    auf Compiler-Trägern; Eisenstein-Hecke mechanisch (T27); Cusp-Hecke transport-sichtbar (T28,
+#    p = 3). DER ENTSCHEIDENDE NÄCHSTE TEST (Folgeprobe T30): gilt a_p = #P³(F_p) − λ_odd(p)/8
+#    mit EINER Regel auch für p = 5 (a₅ = −2 ⇒ λ_odd = 8·(156+2) = 1264?) und p = 7 (a₇ = 24 ⇒
+#    λ_odd = 8·(400−24) = 3008) — Uniformität oder p=3-Koinzidenz.
+# Serie (XII)–(XL): 29 Proben, 553/553 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Kneser, Hecke-Algebra, Eichler) als
+# klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (IX) — Teile 26–27 (delegiert, Prioritäten 1+2 des GL1-Programms): Schalen-Quotientierung TOT, aber die EISENSTEIN-HÄLFTE der Hecke-Regel ist jetzt MECHANISCH (Kneser-Nachbarn) — 18/18 + 27/27, beide PARTIAL, KEINE Promotion
+# shell_multiplicity_one_quotient_probe.py (T26, 18/18, 36s) und e8_pneighbor_hecke_probe.py (T27, 27/27, 81s).
+#
+# T26 MULTIPLIZITÄT-1-QUOTIENT (Experiment B, E1–E4 preregistriert): **Schalen-Quotientierung TOT.**
+#    Q1 Weyl-Orbiten (Fundamentalkammer-Reduktion, kanonischste Wahl): E1-Multiplikativität bricht
+#    schon bei (2,5) (q(10) = 2 ≠ 1); Q2 (W(D5)×W(A3) × Glue-Klasse): bricht bei (2,3) (235 ≠ 198);
+#    Tensor-Funktor Shell(m)⊗Shell(n) → Shell(mn) damit auf KLASSENEBENE tot. NEBENBEFUND (wichtig):
+#    W(E8) erhält die μ4-Glue-Klasse NICHT (explizit: deg 0 → 2 unter Reflexion); nur W(D5)×W(A3)
+#    erhält sie — volle Gittersymmetrie und Charakterstruktur sind Gegenspieler. Einziger multiplikativer
+#    Quotient: die klassische Primitiv-Schichtung β = r_prim/240 (β(p) = 1+p³, Dirichlet
+#    ζ(s)ζ(s−3)/ζ(2s)) — bleibt Gewicht 4, kein GL(1). ZETA.CENSUS.TO.GL1: Reduktion führt NICHT über
+#    Schalen-Äquivalenzen.
+# T27 p-NEIGHBOR-HECKE (Experiment A, H1–H3 preregistriert): **H1 = der Mechanismus-Treffer der Runde:**
+#    die Kneser-Nachbar-Korrespondenz (Index-p-Unterstrukturen ⟺ isotrope Geraden in E8/pE8; E8 hat
+#    Klassenzahl 1, klassisch) trägt die Hecke-Faktorstruktur EXAKT und einheitlich in p:
+#    #iso_pts = p⁷ + p⁴ − p³, #iso_lines = (1+p³)·(p⁴−1)/(p−1) = σ₃(p)·#P³(F_p) — symbolisch
+#    bestätigt, p = 2,3,5,7 vollständig enumeriert (135/1120/19656/137600 Geraden). ⇒ Der
+#    Hecke-Eigenwert σ₃(p) = 1+p³ des trivialen Zensus-Kanals IST ein exakter Faktor einer
+#    gitter-nativen Korrespondenz-Zählung — die Eisenstein-Hälfte von Teil-16-M1 ist auf Probenebene
+#    GESCHLOSSEN (Korrelation → Mechanismus). Bonus: pure-D5-Geraden = #P³, pure-A3 = #P¹ (Witt auf
+#    den Faktoren). **H2 NEGATIV (ehrlich):** die μ4-Glue-Verfeinerung der Geradenzählung (kanonischer
+#    Lift, ψ-signiert, exakt bis p = 13) reproduziert die Cusp-Koeffizienten a_p(f₈) = (−4,−2,24,−44,22)
+#    NICHT (keine der 7 vorregistrierten Auswertungen trifft); deg steigt nicht auf E8/pE8 ab
+#    (dokumentiert). H3-Placebos sauber. ⇒ Eisenstein mechanisch, Cusp-Schicht widersteht sowohl
+#    Quotient (T26) als auch Nachbar-Verfeinerung (T27).
+# PROGRAMM-STAND (Review-Synthese-Prioritäten): P1 (Quotient) tot auf Schalen; P2 (Hecke-Korrespondenz)
+#    halb geschlossen (Eisenstein ja, Cusp offen); P3 (Primon-Kategorie) bleibt gated — Kandidaten-Basis
+#    wären jetzt TRANSPORT-Klassen (Nachbar-Graph) statt Vektor-Klassen; P4 (Blindfenster) weiter gated
+#    (kein Operator ohne Zeta-Input). Benannte Hebel: voller Kneser-TRANSPORT mit D5⊕A3-Markierung
+#    (Isometrie E8′ → E8 verfolgt die Glue-Zerlegung — dort könnte der Cusp-Anteil sitzen) oder
+#    Brandt-artige Glue-Paarung auf dem Nachbar-Graphen.
+# Serie (XII)–(XXXVIII): 27 Proben, 515/515 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Kneser-Nachbarn, Klassenzahl 1, Witt,
+# Weyl-Kammer) als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (VIII) — Teil 25 (delegiert): seam_tate_phase_probe.py — das LETZTE Observable (Streuphase statt Zählung) DEAD; die Arch-Route T20→T22→T23/24→T25 ist VOLLSTÄNDIG GESCHLOSSEN — 29/29, KEINE Promotion
+# experiments/tfpt-discovery/seam_tate_phase_probe.py (~0.3 s; preregistrierter Entscheidungsbaum P0–P3).
+# S1 KONTINUUMS-REFERENZ validiert (klassisch, Mellin/Unruh): Mellin-Integral = z^{−α}Γ(α) (3.2e-18);
+#    thermischer Betrag |I₊/I₋| = e^{−πs} (2.4e-41); Phasenableitung = Re ψ(1/2+is) − ln k (1.2e-10) —
+#    das Ziel war sauber definiert, BEVOR die Naht befragt wurde.
+# P0 BETRAGS-VORTEST (gauge-frei): HARD FAIL — rms(log|ov| ± πs) = 1.60..2.81 (Schwelle 0.35, 0/6 Cuts):
+#    die Naht-Overlaps tragen schon den THERMISCHEN Unruh-Betrag nicht (nur niedrigste Moden ok, Rest
+#    floored) ⇒ Phasen-Route hoffnungslos per Vorregistrierung.
+# P2 bestätigt: alle vier Γ-Kandidaten (Tate gerade/ungerade, Unruh, Lerch) verlieren gegen die
+#    LINEARE Nullhypothese (rms 1.65–1.79 vs 0.33). P1/P3-Residual (getypt, kein Claim): statt einer
+#    kontinuierlichen Streuphase trägt die Naht eine DISKRETE SEKTORUHR — Phasenraster π/4 bei
+#    Schnitt-Anteil 1/2, π/2 bei 1/4 (med dist 0.012, stabil über N ∈ {128,256,512}) — konsistent mit
+#    dem μ4/μ8-Uhren-Charakter der Naht, NICHT mit dem archimedischen Platz.
+# ABSCHLUSS DER ARCH-ROUTE (vier Kill-Stufen, alle preregistriert): die Naht trägt real den Boost
+#    (T22 K1/K2: 1/lnL-Spacing, Peschel-Universalform) und diskrete Uhren-Phasen — aber weder
+#    Zählgrößen (T20/T23/T24) noch Streuphasen (T25) rekonstruieren den archimedischen Term.
+#    STEHENDE TYPISIERUNG ab jetzt: der Arch-Term der expliziten Formel ist für TFPT ein KLASSISCHES
+#    EXTERNUM; ZETA.WEIL.RECOVERY verengt sich auf die Identifikation der POL- + PRIM-Terme als
+#    Recovery-Bilanz (v221-Anker), mit dem Arch-Term als gegebenem Input. Keine weiteren
+#    Arch-from-seam-Proben ohne qualitativ neues Objekt. Die produktiven offenen Hebel bleiben die
+#    Zensus-Seite: Hecke-aus-der-Naht (T16 M1) und Multiplizität-1-Tensor-Funktor (T15).
+# Serie (XII)–(XXXVI): 25 Proben, 470/470 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Tate, Unruh/Rindler-Bogoliubov, Mellin)
+# als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (VII) — Teile 23–24 (delegiert): BEIDE Wörterbuch-Schließversuche der Arch-Route DEAD — die Naht trägt den Boost, aber nicht den archimedischen Platz (auf Zähl-/Dichte-Objektebene abschließend entschieden) — 23/23 + 25/25, KEINE Promotion
+# seam_boost_arch_dictionary_probe.py (T23, 23/23, 0.7s) und seam_truncated_trace_rvm_probe.py (T24, 25/25, 0.2s).
+#
+# T23 (H1/H2/H3, preregistriert): **DEAD auf allen drei Linien.** H1 Geometrie-Hypothese „2/π = Sehne-vs-
+#    Bogen" TOT: Kreis- vs Linien-Kernel liefern praktisch identische Boost-Dichten (emp-Ratio 0.978 ≠ 2/π
+#    = 0.637; lead-coeff rel 0.003) — der Faktor kommt NICHT aus der Kernel-Geometrie. H2 gekoppelte
+#    Cutoffs L = (T/2π)^α, α ∈ {1/2, 1, 2}: med-rel 0.371/0.851/1.810 — alle MISS; der analytisch
+#    passende Exponent wäre α* = π/2 (irrational, per Fence verboten — besonders klarer Negativbefund).
+#    H3 Digamma-in-der-Naht: c0 → 5.32 (Kreis UND Flach), kein vorab benannter ψ-/log-Kandidat (nächster:
+#    π²/2, Distanz 0.38 > 0.15); Eigenmoden-Phasen ≠ arg Γ-Form (med rel 0.415).
+# T24 (Truncated-Trace/RvM, R1–R4 preregistriert): **DEAD.** Klassische Referenz steht (N_smooth =
+#    siegeltheta/π + 1, Residuen O(1/T), max|T·resid| = 0.0066; Tate-Link 3.5e-9). Semiklassische Box
+#    SYMBOLISCH: A = T − Λ + T ln(Λ²/T); mit selbstdualem Λ² = T folgt A = T − √T — die Box liefert
+#    das T log T NUR bei energiegekoppeltem Λ² ∝ T^{>1}-Wachstum; unter der EINEN erlaubten selbstdualen
+#    Regel L = √T liefert die Peschel-Zählung führend 1/(2π²) statt 1/(2π) (Fehlfaktor 1/π; NC1 L = T/2π
+#    gibt 2/π = der Teil-22-Faktor — konsistentes Bild); NUR der VERBOTENE Fit L = e^{−π/2−c0/2}(T/2π)^{π/2}
+#    träfe RvM exakt (Algebra-Identität — d.h. die Information steckt in der Abbildung, nicht in der Naht).
+# BILANZ DER ARCH-ROUTE (T20 → T22 → T23/T24, drei Kill-Stufen): die Naht trägt REAL die Boost-Struktur
+#    (Intervall-Schnitt: 1/ln L-Spacing, Peschel-Universalform — T22 K1/K2 bleiben), aber der archimedische
+#    Platz der expliziten Formel ist aus Naht-ZÄHLGRÖSSEN (DOS, Dichte-Koeffizienten, gekoppelte
+#    Truncated-Trace-Counts) NICHT rekonstruierbar — π-Fehlfaktoren in jeder erlaubten Fassung.
+#    ZETA.WEIL.RECOVERY bleibt [O] mit ehrlicher Gabelung: (i) LETZTES Nicht-Zähl-Observable: die
+#    kontinuierliche Tate-PHASE auf dem Naht-Netz (Streuphase statt Modenzählung — qualitativ anderes
+#    Objekt, ungetestet); ODER (ii) der archimedische Term wird als klassisches EXTERNUM typisiert und
+#    die Recovery-Identifikation auf Pol- + Prim-Terme beschränkt (schwächere, aber ehrliche Route).
+#    Teil-14-Residual unverändert Teil desselben BW-Objekts.
+# Serie (XII)–(XXXV): 24 Proben, 441/441 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Riemann–Siegel, Berry–Keating/Connes-Box,
+# Peschel, Tate) als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (VI) — Teil 22 (delegiert): seam_halfcut_dilation_arch_probe.py — der Nicht-DOS-Nachfolger des Teil-20-Kills: das fehlende Log SITZT im Intervall-Schnitt der Naht, aber das Ein-Konstanten-Wörterbuch scheitert an 2/π — 25/25, PARTIAL (K1✓ K2✓ K3✗), KEINE Promotion
+# experiments/tfpt-discovery/seam_halfcut_dilation_arch_probe.py (~2 s; preregistrierte Kriterien K1–K3).
+# S1 KLASSISCHE REFERENZ maschinell fixiert (Tate/Connes, klassisch): der Arch-Kernel IST die
+#    Dilatations-Streuphasendichte am Platz ∞: |m±(t)| = 1, (d/dt) arg m₊ = Re ψ(1/4+it/2) − log π
+#    (max. Residuum 5.45e-14 an t = 2..50; ungerader Sektor analog mit Γ(3/4+it/2)).
+# K1 ✓ (der Teil-20-Gegensatz löst sich auf): der ENTANGLEMENT-Hamiltonian eines Intervall-Schnitts
+#    der v526-Naht hat 1/ln(L)-Niveauabstand (gap·ln L Spread 0.068, Slope −0.88; Dichte flach in ε,
+#    Höhe wächst ~ ln L mit Slope 0.103 ≈ 1/π²) — das fehlende LOG existiert in der Naht, aber im
+#    Intervall-Modularspektrum, nicht in der Voll-Naht-DOS (Teil-20-Kill bleibt korrekt).
+# K2 ✓ Peschel/Casini-Universalform (klassisch): ε_k = π²(2k−1)/(2 ln L + c0), EIN c0 ≈ 5.23;
+#    k = 1 auf 0.15 % (N = 512), fit-freie Ratios ε_k/ε₁ ~ (2k−1) median 7 %; höhere k mit
+#    1/ln²-Korrekturen, schrumpfend in L — der Naht-Schnitt IST der Boost (Bisognano–Wichmann).
+# K3 ✗ (ehrlich): unter der EINEN erlaubten BW-Konstante (2π) verfehlt das Wörterbuch
+#    ln L ↔ ln(T/2π) den Digamma-Kernel um einen KLASSISCHEN Faktor 2/π (Koeffizienten-rms 0.363;
+#    Zählfunktions-rms 1.13: flach·ln L vs T·log T — die FORM der Zählfunktion passt nicht, nur der
+#    Dichte-Log). VERDIKT PARTIAL: Boost-Struktur da, Ein-Konstanten-Match fehlt.
+# TYPISIERT: Teil-14-Residual (2π-Winkel) und Arch-Platz-Kandidat entstammen DEMSELBEN
+#    BW-Modularfluss — ZETA.WEIL.RECOVERY und SEAM.SELFDUAL.WIDTH-Residual sind EIN Objekt geworden.
+#    Vertrag bleibt [O]; Hebel: (i) den 2/π seam-nativ ableiten, (ii) Connes-Truncated-Trace/
+#    Dilatations-Resolvente statt DOS-Koeffizient, (iii) Arch ehrlich als klassisches Externum typisieren.
+# Serie (XII)–(XXXIII): 22 Proben, 393/393 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Tate, Connes, Bisognano–Wichmann,
+# Peschel/Casini) als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (V) — Teile 20–21 (delegiert): Arch-Kernel-Test KILLED-AS-NAIVE + „Wie könnte TFPT Primzahlen vorhersagen?" in vier Kanälen quantifiziert — 25/25 + 19/19, KEINE Promotion
+# seam_archimedean_kernel_probe.py (T20, 25/25, 6.5s) und prime_prediction_mechanics_probe.py (T21, 19/19, 46s).
+#
+# T20 ARCH-KERNEL (der Teil-18-Hebel, preregistrierte Kriterien K1 Form / K2 keine freie Reparametrisierung /
+#    K3 N-Stabilität): die rohe v526-Williamson-Modendichte ist LEICHT FALLEND/O(1) (loglog-Steigung ≈ −0.40;
+#    Bulk-Dichte 0.28→0.26 über N = 32..256; log-Zähl-Steigung 0.059→0.009), der klassische Digamma-Arch-
+#    Kernel wächst LOG (gemessen 0.15917 vs 1/(2π) = 0.159155; rms 3e-6 gegen (1/2π)log(t/2π) ab t ≥ 20).
+#    Naiv t = ε: K1 FAIL; t = e^ε/sinh: loglog ≈ −1.02, schlimmer; K2-Fence blockt Reparam-Numerologie;
+#    Kontrollen (Primon Hagedorn loglog ≈ 7, T30-Lattenzaun) treffen ebenfalls nicht. VERDIKT:
+#    **KILLED-AS-NAIVE** — der archimedische Term wohnt NICHT in der freien Naht-DOS; Teil-18-Kill „Route
+#    tot" feuert nicht absolut. ZETA.WEIL.RECOVERY [O] DOPPELT VERENGT: Arch-Platz müsste in einem
+#    Nicht-DOS-Objekt (Kontinuums-KMS-Resolvente/Modularfluss-Generator) mit compiler-nativ begründeter
+#    Variabler liegen — oder der Arch-Term wird ehrlich als externes klassisches Input typisiert.
+# T21 PRIMZAHL-VORHERSAGE-MECHANIK, vier Kanäle, alle maschinell:
+#    (A) PRIMALITÄTS-KRITERIUM, gitter-geometrisch EXAKT: n > 1 prim ⟺ E8-Schale bei Norm 2n hat exakt
+#        240(1+n³) Vektoren (σ₃-Kriterium, klassisch); direkte Enumeration n ≤ 7 + Konfusionsmatrix
+#        n ≤ 1e4: TP 1229 / FP 0 / FN 0. Spinor-Kanal: ungerade n perfekt (1228/0), n = 2 blind
+#        (Θ₁(2)/64 = 8 ≠ 9) — der 2-adische Kanal sieht die 2 nicht.
+#    (B) EIGENSCHAFTS-VORHERSAGE pro Primzahl, 100%: χ₄-Faser ⟺ p = a²+b² (Fermat; p < 1000:
+#        81/0/87/0), χ₃-Faser ⟺ p = a²+3b² (80/0/86/0) — der Compiler sagt nicht WO Primzahlen sind,
+#        aber WAS jede tut; die Glue-Charaktere (Teile 11/13) sind echte Prädiktoren.
+#    (C) POSITIONS-VORHERSAGE quantifiziert (Riemann–von-Mangoldt-Rekonstruktion, klassisch): im Fenster
+#        [80,130] Recall/Precision = 1/1 erst ab K* = 200 Nullstellen (K = 50: R 0.33; K = 500:
+#        Over-Peaks P 0.48 — Schwellen-Tuning nötig); BUDGET-GESETZ gemessen: x_max ≈ 0.308·γ_max
+#        (γ₅₀₀ = 811 ⇒ x_max ≈ 250; Fenster 500: 11/13, 1000: 8/17 aufgelöst). ⇒ „TFPT sagt Primzahlen
+#        bis x vorher" ⟺ „TFPT liefert das Nullstellen-Spektrum bis T ≈ x/0.31" — und diesen Operator
+#        GIBT es nicht ((XII)-Kill; Anforderungen R1–R4 = ZETA.HP.CARRIER).
+#    (D) INVENTAR: Energien log p hergeleitet (T4) / Charakterfasern in-suite (T13) / all-primes-Spur
+#        in-suite (Tr e^{−6H} rel 1.1e-11, T15) / Nullstellen-Spektrum FEHLT = der eine Meta-Gap
+#        ZETA.CENSUS.TO.GL1. Deterministische Einzel-Vorhersage ohne Spektrum: NEIN (für niemanden).
+# Serie (XII)–(XXXII): 21 Proben, 368/368 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz; klassische Sätze (Digamma-Term, σ₃-Kriterium, Fermat,
+# Riemann–von-Mangoldt) als klassisch benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (IV) — Teile 14–19: ALLE sechs neuen Kandidatenverträge parallel getestet (6 Sub-Agenten, 6 Proben, 86/86 Checks) — 3×PARTIAL, 1×DEFLATED, 1×BENCHMARK+OPEN, 1×MIXED; ZWEI Ehrlichkeits-Korrekturen an eigenen Teil-12-Lesarten
+# Sechs Discovery-Proben (delegierte Läufe, alle grün, Sandbox, KEINE Promotion):
+#   seam_selfdual_width_probe.py (T14, 13/13, 0.2s) / zeta_arith_completion_probe.py (T15, 12/12, 1.6s) /
+#   zeta_local_euler_probe.py (T16, 16/16, 0.6s) / zeta_funceq_duality_probe.py (T17, 9/9, 0.8s) /
+#   zeta_weil_recovery_trace_probe.py (T18, 17/17, 56s) / prime_thinning_seam_truncation_probe.py (T19, 19/19, 0.2s).
+#
+# T14 SEAM.SELFDUAL.WIDTH: **DEFLATED** (Pflicht-Korrektur am Teil-12-Slogan): v526 misst β_steps = N
+#    (Detailed Balance des Kernels, compilerspezifisch); der Winkel β_angle = 2π ist die UNIVERSELLE
+#    BW/Unruh-Umrechnung — „das gemessene 2π ist die selbstduale Breite" überdehnte v526. RESIDUAL [O]
+#    geschärft: (i) Faktor 4 = |μ4| in c₃ = 1/(4β); (ii) normierungsfreie Kopplung Modularfluss ↔
+#    E8-Gauß-Breite (Wurzelnorm-Torsor: root-norm 2 ⇒ t* = π, root-norm 1 ⇒ t* = 2π — Konvention!);
+#    (iii) NEU, positiv-notwendig: UNIMODULARITÄTS-GATE — von allen Atlas-Gittern hat NUR E8 (det 1)
+#    eine Poisson-selbstduale Breite (D5+A3 Self-Ratio 0.253, D8 0.501, Dual-Poisson je exakt 1.0);
+#    erst die μ4-Vervollständigung des Axioms macht Selbstdualität möglich. Hebel: skalierungsinvariante
+#    Paarung v526-Modularhamiltonian (ε = 2 ln cot(θ/2)) ↔ E8-Normform.
+# T15 ZETA.ARITH.COMPLETION: **PARTIAL**. Operator-Seite: Abschluss von Level 30 unter {Teiler, lcm,
+#    σ_m, Tensor} = EXAKT die 175 {2,3,5}-glatten Zahlen ≤ 1e4, kein einziges neues p ≤ 200 —
+#    Teil-KILL der naiven All-N-Lesart. Zähl-Seite: E8-Schalen-Hamiltonian H|x⟩ = log(|x|²/2) ist
+#    gitter-kanonisch (KEIN ad-hoc N) mit Tr e^{−sH} = 240ζ(s)ζ(s−3) (rel 1.1e-13 bei s = 6) und
+#    multiplikativer Zählung (431 Paare exakt) — alle Primzahlen, ABER Multiplizität 240σ₃(n) ≠ 1.
+#    Vertrag VERENGT auf: gitter-intrinsische Multiplizität-1-Reduktion / Tensor-Funktor
+#    Shell(m)⊗Shell(n) → Shell(mn). Kill vorregistriert (ad-hoc-Sektion zählt nicht).
+# T16 ZETA.LOCAL.EULER: **PARTIAL** — die Eine-Regel-These hält am Zensus: EIN Gewicht-4-Hecke-
+#    Polynom 1 − a_p x + p³x² deckt alle drei Charakterkanäle (trivial/μ4/μ3): Eisenstein faktorisiert
+#    SYMBOLISCH (1−x)(1−p³x) (⇒ ζ(s)ζ(s−3)-Faktoren), f₈ mit Deligne-Purity (Wurzeln auf |x| = p^{−3/2},
+#    p ≤ 47), CM-Kanal liest das χ₃-Split-Gesetz (inert ⇒ 1+p³x²; 8 inert/6 split verifiziert).
+#    NEGATIVKONTROLLEN: Uhren-Regel (Grad p−1, falsche Form) und Artin–Mazur (ζ(s)/ζ(s−1)-Typ)
+#    verfehlen die Faktoren. Offen (M1) Naht-Herleitung der Hecke-Operation, (M2) GL(1)-Transport zu
+#    ξ(s). Hebel: seam-nativer Operator mit Charpoly = Hecke-Polynom auf endlichem Compiler-Modul.
+# T17 ZETA.FUNCEQ.DUALITY: **PARTIAL** — J EXISTIERT am Zensus als Poisson-Involution ohne per-s-
+#    Normierung: Λ_E8(s) = Λ_E8(4−s) numerisch ≥ 20 Stellen (drei s-Punkte, auch komplex); die
+#    Charakterkanäle bilden ein exaktes DUAL-PAAR Λ_F(s) = 1·Λ_G(4−s) (Faktor EXAKT 1; Self-Gaps
+#    0.20–0.61 ⇒ F nicht selbstdual) — das klassische Muster „ξ selbstdual, L(χ) ↔ L(χ̄)" ist am
+#    Compiler-Zensus realisiert; Fixlinie Re s = 2 = k/2; Γ-Faktor = Gauß-Mellin (1e-29). Offen:
+#    Gewichtstransport 4 → 1/2 (Kill darauf vorregistriert) + Operatorform JHJ = k−H.
+# T18 ZETA.TRACE.COMPLETENESS: **BENCHMARK_STANDING** — Guinand–Weil-Balance maschinell verifiziert
+#    (500 Nullstellen, Fejér a ∈ {2,3,4}: skalierte Residuen 1.5e-4/5.8e-5/2.9e-5, monoton in N):
+#    der Ziel-Standard, den JEDE künftige TFPT-Spurformel treffen muss (alle drei Termfamilien:
+#    Pol/Prim/archimedisch), steht jetzt als ausführbare Referenz; klassische Verifikation, KEIN
+#    TFPT-Resultat, Vertrag bleibt [O]. ZETA.WEIL.RECOVERY: **[O] VERENGT** — Weil-Quadratik
+#    instanziiert (8 Fenster, Q ≥ 0, Konsistenz ohne Evidenz); Dictionary Weil ↔ v221 (beide
+#    PSD-Bilanzen „Erhalt − Verlust ≥ 0"; Pol-Term ↔ Eigenwert 1; Primkamm ↔ Gap (2/3)⁶), aber der
+#    ARCHIMEDISCHE Term (Digamma-Integral) hat KEIN Naht-Gegenstück — das ist die präzise Lücke.
+#    Hebel: Arch-Kandidat aus dem N→∞-Limes der v526-KMS-Modendichte gegen den Fejér-Arch-Kernel.
+# T19 PRIMON.SEAM.TRUNCATION (User-Frage „Verdünnung ↔ TFPT"): **MIXED**. SUPPORTED: bei den
+#    Suite-Temperaturen trägt der kleine Primturm fast ganz log ζ(β) — Anteil {2,3,5}: 99.962 %
+#    (β = 2π) / 97.87 % (β = π) / 99.946 % (β = 6); nahe Hagedorn kollabiert es (49.6 % bei β = 1.1;
+#    β₅₀% = 1.10307) — die Verdünnung erklärt, warum der endliche Compiler thermodynamisch reicht.
+#    DEAD (Look-elsewhere, eigene Vermutung korrigiert): „kleinste 99-%-Menge = exakt {2,3,5}" —
+#    99 % wählt schon {2,3}; die {2,3,5}-Schwelle (~99.7 %) wäre post hoc. Zusätzlich: ψ(x)/x → 1
+#    (0.999854 bei 1e7) = „immer seltener aber immer da" ist eine KONSTANTE Schreibrate in Logzeit
+#    (Dichte 1/E × Gewicht E = konstant); Weyl-Nulltest: die TFPT-Töne ω₁/ω₂ sind auf der Prim-Uhr
+#    NICHT ausgezeichnet (Placebo-kontrolliert; W ~ 1/|1+iω| = ζ-1-Linie-Kontrolle). Hebel:
+#    preregistrierte Schwellenfamilie statt %-Cut + fermionischer Vergleich log(ζ(β)/ζ(2β)).
+# QUERBEFUND aller sechs: die Struktur existiert durchgehend EXAKT auf Zensus-/Gitter-Ebene
+#    (Gewicht 4), und die Lücke ist überall DIESELBE Klasse: der kanonische Transport zur
+#    GL(1)/ξ(s)-Welt (Multiplizität-1, Gewicht 1/2, archimedischer Platz, Hecke-Herleitung) —
+#    de facto EIN Meta-Vertrag: ZETA.CENSUS.TO.GL1 [O].
+# Serie (XII)–(XXX): 19 Proben, 324/324 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz, keine Metaphysik; klassische Sätze (BW/Unruh, Hecke,
+# Deligne, Riemann/Poisson-FE, Guinand–Weil, PNT/Mertens) als klassisch benannt; keine Ledger-/
+# Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (II) — v534 PROMOVIERT (SEAM.STRADDLE.CONE.01): DIE ERSTE DYNAMISCHE SELEKTION DES ALIGNMENT-BITS — RP hält für GENAU EIN Member × Vorzeichen: δ=π/2, s=+ — 15/15, Doppel-Verdikt V1=KILL / V2=ERFOLG
+# Der benannte v534-Kandidat der Review-Runde (X) ist AUSGEFÜHRT und promoviert (Suite 527→528,
+# Wolfram 584→588 engine-verifiziert, Changelog 2026-07-24 (I)). Probe:
+# experiments/tfpt-discovery/seam_straddle_cone_probe.py (15/15, Transparenz-Note Run 1→2 verbatim).
+#
+# V2 = ERFOLG — DAS SELEKTIONSGESETZ (das zentrale Datum): unabhängige Kopplungen λ_q auf den vier
+#   Mark-Quartetten von M(δ=mπ/8), äquivariante (uniforme) Richtung. Unter ALLEN wohlgestellten
+#   Membern × Kopplungsvorzeichen hält Reflection Positivity auf JEDEM zulässigen Schnitt über das
+#   gesamte Grid g ∈ {1/32..8} für GENAU EINE Kombination: δ=π/2 (m=4) mit POSITIVER Kopplung —
+#   alle vier Grams PD (37,0,0) INKLUSIVE der v529-ungetesteten Straddle-Uhrachsen 7/15, min-Eigenwert
+#   von der freien RP-Grenze WEGGEHOBEN (1.78e-6 → 5.5e-5 bei g≈1/4), Gibbs β=2 identisch.
+#   m=2/6 sterben: s=+ schon bei g=1/32 (Drift −1.9e-2), s=− ab g=1/8. Das v529-Straddle-Law
+#   VERFEINERT: asymmetrisches Straddling tötet RP, das SYMMETRISCHE Straddling des Selbstspiegel-
+#   Members schützt es.
+# V1 = KILL — die wörtliche Kegel-Formalisierung der Review-Runde ist tot: der führende Soft-Block-
+#   Kegel K_RP = Fix(G_δ) ∩ ∩_c {λ: G_c^lead ⪰ 0} ist für JEDES Member und BEIDE Vorzeichen leer
+#   (PT 1. Ordnung exakt via reduzierter Resolvente, hermitesch 1e-15, Zentraldifferenzen-Regression
+#   2e-8) — der lineare Pencil kann die Selektion nicht tragen; der Schutz bei π/2 ist
+#   NICHTPERTURBATIV (m=2/6 s=− tragen positiven Straddle-Drift +1.1e-4 und sterben trotzdem ab 1/8).
+#   Rettbarer Anteil: das Straddle-Drift-Vorzeichenmuster (π/2: +1.4e-4 / −3.7e-2; asymmetrisch
+#   exakt umgekehrt) — notwendig, nicht hinreichend.
+# EXAKTE GEOMETRIE dahinter: δ=π/2 ist das EINZIGE symmetrische Straddle-Member — Stabilisator =
+#   volle Uhr+Spiegel-Gruppe (rot {0,4,8,12}, refl {3,7,11,15} = VIER zulässige Schnitte, gestraddelt
+#   {7,15}), die vier Quartette PARTITIONIEREN den 16er-Kreis, jedes straddelnde Quartett
+#   spiegel-GESCHLOSSEN mit Vorzeichen +1; m=2/6 asymmetrisch; ungerade m ohne Bond-Achse (getypter
+#   v521/v525-Artefakt). Fix(G_δ) überall 1-dim: uniform auf m=2..6, NS-Wrap-GETWISTET (1,−1,1,1) /
+#   (−1,−1,−1,1) auf den engen Membern m=1/7 (Wolfram-gespiegelt!). Getypter Querlink: das
+#   RP-selektierte Member m=4 ist exakt der Träger des v528-Twist-Klassen-Ordnungsparameters O=1/2 —
+#   dynamischer Selektor und kinematische Definition zeigen auf DASSELBE Member.
+# ZÄUNE [C]: EIN Toy, EINE Interaktionsklasse (FK-Quartette), Flat-Band-Parent, deg≤2-OS-Basen,
+#   endliches Grid — Toy-Level-EVIDENZ für den dynamischen Ursprung des Bits, KEINE Herleitung;
+#   nichts über das Kontinuums-A_hol behauptet; WOIT.OS.TWISTOR.01 bleibt Open, KEINE Marker-Moves.
+# NÄCHSTE SCHRITTE (destilliert): (a) Störungs-Robustheit der Selektion — überlebt (4,+) unter
+#   Deformationen der Quartett-Klasse (deg-6-Terme, Nächst-Nachbar-Anker) bzw. bricht die Eindeutigkeit?
+#   (b) der NICHTPERTURBATIVE Schutzmechanismus bei π/2 (Kommutanten-/Fixpunkt-Struktur der vier
+#   disjunkten, spiegel-geschlossenen Quartette — Kandidat: RP-Erhaltung via θ-faktorisierbare
+#   Störungen, ein beweisbares Lemma?); (c) WOIT-beta3 (PT ↔ PT*-Dualität) mit dem Selektionsdatum
+#   als neuem Eingang: der Kontrakt-Text „jedes A_hol muss RP gegen genau diesen Mechanismus schützen"
+#   hat jetzt ein POSITIV-Beispiel (die π/2-Klasse schützt).
+#
+# 2026-07-24 (III) — Discovery-Probe e8_glue_character_atlas_probe.py (Teil 13): der GLUE-CHARAKTER-ATLAS von E8 — „ist μ4 der erste Fall eines universellen Charaktersystems?" — 11/11, KEINE Promotion
+# experiments/tfpt-discovery/e8_glue_character_atlas_probe.py (~0.7 s). Externe Review-Fragen (1)–(4) ausgeführt:
+# andere Zerlegungen ⇒ andere Charaktere? Differenzzählung ⇒ allgemeine L-Funktionen? μ4 = Charakter statt
+# Kleber? Kodieren (−8, 16, 32) Charakterdaten? Antworten, alle maschinell:
+#
+# S1 GLUE-ATLAS: NEUN maximale Wurzel-Unterzerlegungen in EINEM E8-Rahmen konstruiert (D8, D5⊕A3, E6⊕A2, A8,
+#    E7⊕A1, A4⊕A4, A5⊕A2⊕A1, A7⊕A1, A3²⊕A1²); SNF-Invarianten: [2],[4],[3],[3],[2],[5],[6],[4],[2,4];
+#    Wurzel-Zählungen 112/52/78/72/128/40/38/58/28 = Klassifikation. ZYKLISCHE Glue-Ordnungen: {2,3,4,5,6}
+#    — μ3, μ5, μ6 EXISTIEREN; μ8 existiert NICHT (A3²⊕A1² hat [2,4], Exponent ≤ 4; A7⊕A1 ist ZWEITE Z4).
+#    Der Charakter-Turm des Compilers ist ENDLICH.
+# S2 μ_m IST CHARAKTER-TRÄGER (Review-Frage 3): deg: E8 → Z_m als Gruppen-HOMOMORPHISMUS verifiziert (200
+#    Zufallspaare je Zerlegung); Wurzel-Zensus je Klasse: D5A3 (52,64,60,64), A8 (72,84,84), E6A2 (78,81,81),
+#    A4A4 (40,50,50,50,50), A7A1 (58,56,70,56), A5A2A1 (38,36,45,40,45,36).
+# S3 μ3-FALL, der Kernbefund — Charaktergehalt ist GLUE-ORDNUNGS-LIMITIERT UND ZERLEGUNGS-SELEKTIV:
+#    E6⊕A2-signiert = (3⁴E4(q³) − E4(q))/(3⁴−1) — REIN 3-adisch Eisenstein, χ₃-blind (exakte Z3-Analogie
+#    der D8-Formel (2⁴E4(q²)−E4(q))/(2⁴−1)); ABER Borwein-Identität: E6⊕A2-signiert = a(q)·b(q)³ mit
+#    a = θ_{Z[ω]} = 1+6Σ(1∗χ₃)qⁿ und b = η(q)³/η(q³) — die EXAKTE μ3-Analogie von Teil 11 (θ₃²·θ₄⁶ mit
+#    Exponenten (2,6) ↦ (1,3)); a³−b³ = 27η(q³)⁹/η(q)³ verifiziert; beide Identifikationen (Level-9-Basis
+#    vs Borwein-Monome) stimmen bis O(q⁴⁰). A8-signiert TRÄGT die volle χ₃-Schicht: (1/160)E4(q) −
+#    (21/40)E4(q³) + (243/160)E4(q⁹) − (9/2)·Eis(χ₃,χ₃) − 9·η(3τ)⁸, mit η(3τ)⁸ = DIE CM-Form von
+#    Q(√−3) = Q(μ3) (a_p = 0 exakt für χ₃-inerte p ≡ 2 mod 3, p ≤ 97). POL-KILLING wiederholt sich:
+#    beide Eisenstein-Türme erfüllen a₁ + a₃/3⁴ + a₉/9⁴ = 0 exakt ⇒ signierte L-Reihen GANZ (wie μ4,
+#    Teil 12). ⇒ Das μ4-Muster VERALLGEMEINERT: Q(i) ↦ Q(ω), f₈ ↦ η(3τ)⁸ (jetzt sogar CM im μ_m-Feld).
+# S4 Z2-KONTROLLE: E7⊕A1-signiert = (1/15)E4(q) − (6/5)E4(q²) + (32/15)E4(q⁴) — rein Eisenstein, zweite
+#    Instanz (mit D8): Ordnung-2-Glue trägt KEINEN ungeraden Charaktergehalt.
+# S5 μ5-FALL: A4⊕A4 (Z5): ζ₅-signierte Kombinationen tragen exakt GOLDENE-SCHNITT-Koeffizienten
+#    (ζ₅+ζ₅⁴ = 1/φ, ζ₅²+ζ₅³ = −φ; g_car = 5!); ABER der √5-Schatten U = Θ₁ − Θ₂ ist IDENTISCH NULL
+#    (n ≤ 7): alle vier nichttrivialen Klassen theta-entartet — die Z5-Glue ist χ₅-BLIND auf dieser
+#    Auflösung; nur die rationale signierte Theta (Kopf 40−50 = −10) überlebt. Ehrliches Negativ zur
+#    μ5-Hypothese.
+# S6 SYNTHESE + Antwort auf Review-Frage 4: die Köpfe sind KEINE universellen Charakterwerte — sie sind
+#    zerlegungsabhängig (D5A3: −8; A7A1 als zweite Z4: −12, Kopfserie [1,−12,56,−112,16,...] ≠ D5A3);
+#    das AXIOM wählt mit D5⊕A3 eines der charakter-REICHEN Mitglieder (wie A8 bei Z3), nicht ein
+#    generisches. Getypt (kein Claim): Glue-Ordnungen 4 und 6 = Einheitengruppen-Ordnungen w(Q(i)),
+#    w(Q(ω)) der beiden Klassenzahl-1-Felder, deren L-Werte π erzwingen (Teil 7).
+#
+# RH-PROGRAMM-VERTRÄGE (Review-Synthese typisiert; KEINE Promotion, reine Kandidaten-Verträge mit Kills):
+#   * ZETA.ARITH.COMPLETION [O]: kanonischer unendlicher Hilbertraum |n⟩ aus dem endlichen Compiler OHNE
+#     ad-hoc-Einschreiben von N/log n. Kill: |n⟩/Multiplikation/log n per Definition eingesetzt ⇒ nichts
+#     gewonnen. Vehikel: ZETA.BC.SEAM.KMS (Energie kanonisch via σ_m-Entropie, Teil 4) + ZETA.EULER.EXTENSION.
+#   * ZETA.LOCAL.EULER [O]: pro Primzahl p ein lokaler Operator F_p mit det(1−F_p p^{−s})^{−1} = lokaler
+#     Euler-Faktor, aus EINER Compiler-Regel für alle p. Kill: fallweise Anpassung. Anker: Atlas zeigt
+#     lokale Charakterfasern (μ3/μ4) existieren; v533-Split-Gesetz als Muster.
+#   * ZETA.FUNCEQ.DUALITY [O]: Involution J mit JHJ⁻¹ ↔ s ↦ 1−s aus Compiler-Dualität (Γ-Faktor inklusive).
+#     Anker: SEAM.SELFDUAL.WIDTH (Teil 12: β = 2π = Poisson-selbstduale Breite; Fixlinie = selbstduale
+#     Achse), Woit-OS-Programm (v519/v521/v524). Kill: J existiert nur nach Normierungswahl pro s.
+#   * ZETA.WEIL.RECOVERY [O] (der eigentliche Hebel): Q_Weil(f) = ||Rf||² für dichte Testfunktionsklasse —
+#     Weil-Positivität als Recovery-Normquadrat (Connes–Consani-Richtung als externes Vorbild). Anker:
+#     v221 SEAM.QECC (Recovery-Bilanz IST Normquadrat, lokal, [E]). Kill: die Identifikation erzwingt
+#     Zusatzterme, die nicht in der expliziten Formel stehen.
+#   * ZETA.TRACE.COMPLETENESS [O]: TFPT-Spurformel = explizite Formel EXAKT (alle Prim-, archimedischen,
+#     Nullstellen-Terme, keine Geistermoden). Kill: ein zusätzlicher spektraler Sektor oder fehlender
+#     archimedischer Term. Vorstufe existiert: (XIII) R1–R4-Anforderungsprofil.
+#   EHRLICH: keiner dieser Verträge ist gestartet; Teil 11–13 liefern die lokale Charakterfaser-Evidenz
+#   (μ3/μ4 exakt), NICHT die globale Struktur. Numerische Nullstellen-Reproduktion bleibt bewusst AUS
+#   (Plots ≠ Beweis; (XII) S4-Kill steht).
+# Serie (XII)–(XXIV): 13 Proben, 238/238 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz, keine Metaphysik; klassische Sätze (Borwein, CM-Formen) benannt;
+# keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-24 (II) — Discovery-Probe e8_glue_lseries_selfdual_probe.py (Teil 12): L-Reihe der signierten Glue-Zählung, Apéry/ζ(3)-Brücke, Poisson-selbstduale Breite 2π = 1/(4c₃) — 16/16, KEINE Promotion
+# experiments/tfpt-discovery/e8_glue_lseries_selfdual_probe.py (~0.4 s). Vertiefung von Teil 11 („übersehen wir
+# etwas Großes?"). Drei exakte Befunde, alle klassische Mathematik (Ahlgren–Ono, Kilbourn, Poisson,
+# Chowla–Selberg — als solche benannt); Probeninhalt = das In-Suite-Korrelationsnetz.
+#
+# S1 GESCHLOSSENE FORMEN von c(n) global (n ≤ 4096, zwei unabhängige Routen): gerade c(2m) = 16σ₃(m) −
+#    288σ₃(m/2) + 512σ₃(m/4) EXAKT für alle geraden n; ungerade c(n) = −8·a_n(f₈) EXAKT für alle ungeraden n.
+#    Das 2-adische Polynom faktorisiert: 16x(1−18x+32x²) = 16x(1−2x)(1−16x) ⇒ Eisenstein-Teil der
+#    Zählungs-L-Reihe = 16·2^{−s}·η(s)·η(s−3) mit η = DIRICHLET-ETA: die μ4-Signierung ersetzt ζζ durch ηη.
+# S2 POL-KILLING — die DREI Charakterkanäle der E8-Zählfunktion: trivial = 240ζ(s)ζ(s−3), einfacher Pol bei
+#    s = 4 mit Residuum 240ζ(4) = 8π⁴/3 (numerisch 5e-4); Spinor: Θ₁(n)/64 = Σ_{d|n ungerade}(n/d)³ exakt
+#    (n ≤ 300) ⇒ 64(1−2^{−s})ζζ — Pol ÜBERLEBT; μ4-signiert = 16·2^{−s}ηη − 8L(f₈,s) ⇒ GANZ (L_c(4.001) =
+#    −6.976 endlich). Der signierte Kanal ist der EINZIGE polfreie — der Glue-Charakter ist ein Pol-Killer,
+#    exakt das ζ-vs-L(χ)-Muster. SPEZIALWERTE EXAKT: Eis(1) = 0 (via triviale Nullstelle ζ(−2) = 0),
+#    Eis(2) = π²/12, Eis(3) = (3/4)ζ(3), Eis(4) = 7π⁴ln2/720 — ζ(3) und ln2 (erste BC-Energie, Teil 4) an
+#    den ganzzahligen Punkten; getypt: 3/4 = v205-Baum-Ratio.
+# S3 APÉRY/ζ(3)-BRÜCKE: f₈ = η(2τ)⁴η(4τ)⁴ IST die Beukers/Ahlgren–Ono-Form: A((p−1)/2) ≡ a_p mod p²
+#    (Apéry-Zahlen des ζ(3)-Irrationalitätsbeweises) für ALLE ungeraden p ≤ 97 exakt verifiziert; Kilbourn/
+#    van-Hamme (M.2): Σ_{k≤(p−1)/2}((1/2)_k/k!)⁴ ≡ a_p mod p³ ebenso 24/24. Via Teil 11: die signierte
+#    E8-Glue-Zählung an ungeraden Prim-Shells erfüllt c(p) = −8a_p ≡ −8·A((p−1)/2) mod p² — die Zählung
+#    „kennt" die Apéry-Zahlen. PLACEBO: beide Kongruenzen scheitern für η(4τ)⁸ auf 24/24 Primzahlen —
+#    formspezifisch, kein Eta-Rauschen.
+# S4 L-WERTE: f₈ Hecke-Eigenform (a₉ = a₃²−27 etc.), Fricke-Vorzeichen ε = +1 (Formel-vs-Direktsumme,
+#    Gap-Ratio 3e11); L(f₈,1) = 0.35450068, L(f₈,2) = 0.69003116, L(f₈,3) = 0.87469538 (30 Stellen im Log);
+#    Funktionalgleichung L(1) = 4L(3)/π² (1e-20). Zusammenbau: L_c(5) aus [ηη − 8L] = Direktsumme über
+#    c(n) (1e-7). L_c(1..4) = −2.83601, −4.69778, −6.09602, −6.97557.
+# S5 SELBSTDUALE BREITE (der große Reframe): Poisson-Summation der E8-Zählung Σe^{−t|x|²} =
+#    (π/t)⁴Σe^{−(π²/t)|x|²} (25 Stellen); die EINZIGE selbstduale Breite ist t = π. KETTE (jedes Glied
+#    exakt, als Rewriting getypt): c₃ = 1/(8π) ⟺ β = 1/(4c₃) = 2π (v526-GEMESSENER Naht-KMS-Winkel) ⟺
+#    Boltzmann-Gewicht e^{−β·norm/2} = e^{−π|x|²} = DIE selbstduale Gauß-Funktion ⟺ τ = i = CM-Punkt von
+#    Q(i) = μ4-Feld. Also 8π = |μ4|·β_selfdual, c₃ = 1/(|μ4|·2π). OFFEN [O] (Fence): dass der Naht-KMS-
+#    Parameter DIE Zählungs-Gauß-Breite ist, ist NICHT hergeleitet — Kandidat-Vertrag SEAM.SELFDUAL.WIDTH,
+#    Kill: Herleitung fixiert Breite ≠ 2π oder trennt die Parameter. Komponenten-S-Dualität:
+#    F(e^{−π/x}) = x⁴G(e^{−πx}) mit G = θ₃²θ₂⁶ (Fixpunkt x = 1); am Fixpunkt LEMNISKATISCH
+#    (Chowla–Selberg-Klasse von Q(i)): F(e^{−π}) = 2^{−3/2}π²/Γ(3/4)⁸ = Γ(1/4)⁸/(2^{11/2}π⁶) =
+#    √2/AGM(1,√2)⁴ = 0.68625321 (Gauß-Konstante, je 25 Stellen); die beiden Spezialtemperaturen VERKNÜPFT:
+#    F(e^{−π})/Θ_E8(e^{−2π}) = √2/3 exakt (Komponenten-Fixpunkt β = π vs Naht-Punkt β = 2π); ϖ =
+#    Γ(1/4)²/(2^{3/2}√π) bestätigt — das μ4-Feld erzwingt die Transzendenzklasse {Γ(1/4), π} an seinen
+#    Spezialpunkten.
+# S6 REGISTRY-CENSUS ehrlich: neue Spezialwerte {L(f₈,1..3), L_c(2..4), F(e^{−π}), AGM, √2/3} gegen die 16
+#    eingefrorenen Werte: T2 = 0, T3 = 3 (Placebo: T2 = 0, T3 = 6) — die neue exakte Struktur leckt NICHT
+#    in die eingefrorenen Readouts. Ehrliches Null.
+# VERTRAGS-STAND: NEUER Kandidat SEAM.SELFDUAL.WIDTH [O] (β = 2π als Poisson-selbstduale Breite — schärfste
+#    bisherige Fassung der 8π-Mechanismus-Frage; PI.CHARACTER.GEAR wird darauf verwiesen); ZETA.GLUE.LSERIES-
+#    Befund getypt (signierter Kanal als einziger ganzer; ηη-Skelett; Apéry-Kongruenzen) — KEIN neuer Claim,
+#    kein Marker-Move.
+# Serie (XII)–(XXIII): 12 Proben, 227/227 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz, keine Metaphysik; klassische Sätze benannt; keine Ledger-/Paper-/
+# Website-/Marker-Änderung.
+
+# 2026-07-24 (I) — Discovery-Probe e8_glue_chi4_signed_theta_probe.py (Teil 11): die χ₄-signierte Glue-Theta — Teil 6 und Teil 7 EXAKT verschweißt — 19/19, KEINE Promotion
+# experiments/tfpt-discovery/e8_glue_chi4_signed_theta_probe.py (~0.2 s). Big-Picture-Auftrag der Runde:
+# „direkte Korrelationen zwischen Primzahl-Front und Theorie suchen". Gefunden: EIN exaktes Objekt, das die
+# μ4-Glue-Zerlegung von E8 (Teil 6) und die χ₄/π-Maschine (Teil 7) verbindet. Klassische Theta-Algebra
+# (Jacobi) — der Probeninhalt ist die IN-SUITE-Korrelation, keine neue Mathematik.
+#
+# S1 PER-KLASSEN-THETA der Glue-Gruppe E8/(D5⊕A3) = Z4 = μ4 (SNF-Recheck + linearer Funktional-Klassifikator,
+#    exakt gegen sympy auf allen 240 Wurzeln): Wurzel-Census (52, 64, 60, 64); SIGNIERTE Zählung 52 − 60 =
+#    −8 = −rank(E8). Shells n = 1..6 direkt enumeriert (Klasse 0: 52, 576, 1584, 4592, 7064, 16128;
+#    Klasse 2: 60, 560, 1552, 4736, 7048, 15680; Spinor-Klassen shellweise GLEICH: 64, 512, 1792, 4096,
+#    8064, 14336); Serien = Produkte von Theta-Konstanten treffen die Enumeration exakt; ΣΘ_j = E4 =
+#    1 + 240Σσ₃(n)qⁿ bis O(q⁴⁸) (Teil-6-Recheck). D8-Kette E8 ⊃ D8 ⊃ D5⊕A3: Θ₀+Θ₂ = Θ_D8, Θ₁+Θ₃ = θ₂⁸/2.
+# S2 HAUPTIDENTITÄT (neu auf dieser Front): Θ₀ − Θ₂ = θ₃(q)²·θ₄(q)⁶ = θ₄(q)⁴·θ₄(q²)⁴ exakt bis O(q⁴⁸)
+#    (zwei unabhängige Konstruktionsrouten: u-Serien-Algebra der 5+3-Splits vs direkte q-Serien).
+#    θ₃(q)² IST die Theta von Z[i]: Koeffizienten r₂(n) = 4Σ_{d|n}χ₄(d) (bis O(q⁴⁸) exakt; (1∗χ₄)
+#    multiplikativ ⇒ ζ_{Q(i)}(s) = ζ(s)L(s,χ₄)) — die π-erzeugende χ₄-Maschine (Teil 7: L(1,χ₄) = π/4)
+#    ist ein exakter TENSORFAKTOR der signierten μ4-Glue-Theta von E8.
+# S3 KILL-KONTRAST (wo genau χ₄ einsteigt): die gröbere Kette E8/D8 = Z2 gibt signierte Theta θ₄(q)⁸ mit
+#    Koeffizienten 16Σ(−1)^d d³ = (16E4(q²) − E4(q))/15 — REIN Eisenstein (Level 4), nur die Primzahl 2
+#    getwistet, KEIN χ₄-Faktor, KEIN Kuspidalanteil. ⇒ Der Gauß/χ₄-Gehalt entsteht EXAKT bei der
+#    μ4-Verfeinerung D5⊕A3 (dem Axiom-Split), nicht bei der generischen Z2-Verfeinerung. Eindeutigkeit:
+#    alle drei nichttrivialen μ4-Charaktere liefern DIESELBE signierte Theta (Θ₁ = Θ₃) — genau EIN Objekt.
+# S4 ARITHMETIK der signierten Zählung c(n) = 1, −8, 16, 32, −144, 16, 448, −192, −912, 88, 2016, ...:
+#    Eta-Quotient η(q)⁸η(q²)⁴/η(q⁴)⁴; EXAKTE Zerlegung (Level-16-Basis, rationale lineare Algebra,
+#    verifiziert bis O(q⁴⁸)): Θ₀ − Θ₂ = (1/15)E4(q²) − (6/5)E4(q⁴) + (32/15)E4(q⁸) − 8·f₈ mit
+#    f₈ = η(2τ)⁴η(4τ)⁴ (Gewicht-4-Level-8-Newform). KONSEQUENZ: bei UNGERADEN n exakt c(n) = −8·a_n —
+#    der „Fehlercode"-Fluktuationsteil der signierten Glue-Zählung ist eine reine Hecke-Eigenform mal
+#    −rank(E8); Purity |a_p| ≤ 2p^{3/2} bestätigt (p ≤ 47) — Kontrast: Teil 1 tötete den
+#    Quotientenoperator A exakt an Weil-Purity; die Glue-Objekte BESTEHEN den Purity-Test.
+#    Getypt: μ4-signiert = Eisenstein {2-adischer Turm} + Kuspidal; Z2-signiert = nur Eisenstein.
+# S5 COMPILER-ANBINDUNG ehrlich: Bernoulli-Kette exakt (B₄ = −1/30, h(E8) = 30 = −1/B₄, ζ(−3) = 1/120,
+#    240 = 2/ζ(−3) = −8/B₄; signiert/total am Wurzel-Shell = −8/240 = B₄ = −1/h(E8)); Gauß-Kreis
+#    (1/N)Σr₂ → π (3.14159052 bei N = 1e8) ⇒ c₃⁻¹ = 8π mit BEIDEN Atomen aus EINEM Objekt lesbar
+#    (8 = |c(1)| = signierter Wurzel-Census, π = Cesàro-Mittel des θ₃²-Faktors) — bleibt REWRITING,
+#    kein Mechanismus wählt Shell-1 + Cesàro-Mittel als physikalisches Readout; PI.CHARACTER.GEAR bleibt
+#    [O]. Getypte Integer-Beobachtungen: |c(1)|, c(2), c(3) = 8, 16, 32 = 2³, 2⁴, 2⁵ (rank E8 /
+#    v221-Code-Dim 2^(g_car−1) / 2^g_car = v533-Max-Pfadnorm); c(4) = −144 = −12². Zweites Feld:
+#    √7·2^±a·π^±1-Census gegen die 16 eingefrorenen Registry-Werte: T2 = 0, T3 = 8 (Placebo √11:
+#    T2 = 0, T3 = 6) — der 32-Mechanismus verlängert sich NICHT ins −7-Feld; ehrliches Null.
+# VERTRAGS-STAND danach: PI.CHARACTER.GEAR [O] VERSCHÄRFT (beide 8π-Atome in einem Glue-Objekt; fehlend:
+#    Mechanismus für das Readout-Paar); ZETA.EULER.EXTENSION [O] ANGEREICHERT (die E8-Zählfunktion trägt
+#    jetzt DREI Charakterkanäle exakt: trivial → ζ(s)ζ(s−3), μ4-signiert → Eisenstein+Newform mit
+#    Z[i]-Faktor, Spinor → θ₂⁸/4 rein 2-adisch — ein in-suite Beispiel charaktergetwisteter Aggregation,
+#    aber weiterhin kein Mechanismus, der die Aggregation über ALLE q erzwingt).
+# Serie (XII)–(XXII): 11 Proben, 211/211 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: Konsistenz, keine RH-Evidenz, keine Metaphysik-Claims; klassische Theta-Identitäten als solche
+# benannt; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-23 (XXI) — Discovery-Probe substrate_falsification_probe.py (Teil 10): Substrat-Klassen der Simulationshypothese — Verdikt-Tabelle mit exakten Kills/Schranken — 9/9, KEINE Promotion
+# experiments/tfpt-discovery/substrate_falsification_probe.py (~0.1 s). „Simulation" ist keine These, sondern
+# eine FAMILIE von Substrat-Klassen; einige sind tot, andere beschränkt, der Rest prinzipiell unentscheidbar.
+#
+# S1 TOT: lokal-klassischer Code. Exakte Enumeration ALLER 16 deterministischen lokalen Strategien: |CHSH| ≤ 2
+#    (exakt); Quantenwert an den optimalen Winkeln = 2√2 (Tsirelson, sympy exakt); loophole-freie Experimente
+#    (Delft/NIST/Wien 2015, S ≈ 2.42 > 2, zitierte Daten) ⇒ die Realität ist KEIN klassisch-lokales Programm;
+#    jeder Simulator muss quantum, nichtlokal oder superdeterministisch sein. Beobachtung (typisiert):
+#    2√2 = 2(δ_S − 1), δ_S = 1+√2 — die Quanten/Klassik-Lücke ist ein Silber-Datum (v527-Thema).
+# S2 BESCHRÄNKT + DETEKTIONSKRAFT DEMONSTRIERT: Signifikand-normierter, ulp-zertifizierter Kettenbruch-Zensus
+#    der 16 eingefrorenen Konstanten: der blinde Zensus flaggt EXAKT die Konstante, deren Registry-Formel ein
+#    purer Bruch IST — MU_OVER_MD als 550/117-Signifikand zertifiziert (err 3e-25), Ground Truth: Formel
+#    „55/117" (Integer-Plücker-Readout). Alle anderen: ≥ 15 zertifizierte Quotienten (keine Register-Speicherung
+#    oberhalb 1e-25), gepoolter Khinchin-Geo-Mean 2.679 vs Kontrolle 3.026 (K₀ = 2.685) — Khinchin-typisch
+#    auf 0.2 %. Benford-Census (N=16, underpowered, nur Info). ⇒ Kein Fließkomma-/Rundungs-Substrat-Signal.
+# S3 BESCHRÄNKT: Update/Drift-Substrat: Uhren |α̇/α| ~ 1e-18/yr ⇒ akkumuliert < 1.4e-8 über Hubble-Zeit;
+#    Oklo ~1e-8/2 Gyr, Quasare ~1e-6/10 Gyr (zitiert) — jedes „Versions-Update" von α über ~1e-8 in der
+#    kosmischen Geschichte ist AUSGESCHLOSSEN; Attraktor-Lesart verlangt exakt 0 (SIM.DRIFT.DISCRIMINATOR).
+# S4 GEMESSEN: die Axiome sitzen am Simplizitäts-Boden: Enumeration aller Konstanten aus ≤ 3 Atomen {1..9, π}
+#    mit {+,−,·,÷,^}: 5714 verschiedene Werte, 1/(8π) ist dabei (3 Atome) ⇒ Design-Kapazität des P1-Axioms
+#    ≈ 12.5 Bit, vollständig vom Gesetz verbraucht (g_car = 5: +~3 Bit) — kein Platz für ein Schöpfer-Wasserzeichen
+#    in den Axiomen.
+# S5 VERDIKT-TABELLE (typisiert): lokal-klassisch = TOT (Bell); endliche Register = BESCHRÄNKT < 1e-25 auf
+#    den Konstanten; Update/Drift = BESCHRÄNKT bei 1e-8 kosmisch (Diskriminator vorregistriert); Gitter-
+#    Anisotropie = BESCHRÄNKT (Scorecard-Suchen, ehrliche Nulls + 9 Tensionen); Lazy-Rendering/Flächengesetz =
+#    KONSISTENT aber nicht diskriminierend (Holographie = v129/v526-Log-Gesetz, von Notwendigkeit gleichermaßen
+#    vorhergesagt); Quanten-Substrat = BEOBACHTUNGSIDENTISCH mit Notwendigkeit. Ehrliches Fazit: entscheidbar
+#    ist nicht „Simulation ja/nein" (perfekte Quantensimulation der Notwendigkeit ist von Notwendigkeit
+#    ununterscheidbar — Konvergenz im Limes), sondern die Substrat-KLASSE; Stand: die Realität ist MINDESTENS
+#    eine nichtlokale Quantenrechnung mit Boundary-Fehlerkorrektur (v221 [E]), null gemessener Gesetzes-Drift
+#    und GUE-zufällig-aber-determinierten Spektren — exakt der Phänotyp von „Notwendigkeit, die sich selbst
+#    ausführt". Nur Zustands-Relikte (Teil 9) oder bestätigte Drift könnten die Hypothesen wieder trennen.
+# Serie (XII)–(XXI): 10 Proben, 192/192 Checks, alles Sandbox, KEINE Promotion.
+# Firewall: externe Messwerte (Bell, Uhren) zitiert, nicht nachgerechnet; keine Metaphysik-Claims;
+# keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-23 (XX) — Discovery-Probe recursion_traces_probe.py (Teil 9, Serienabschluss): die 4 Follow-ups ausgeführt + Rekursions-These („π = Vorgängeruniversum?") quantitativ beantwortet — 11/11, KEINE Promotion
+# experiments/tfpt-discovery/recursion_traces_probe.py (~0.3 s). Führt die vier Teil-8-Follow-ups aus und
+# beantwortet die assoziativen Fragen (Funktion der π-Unendlichkeit; π als Gesamtheit des Vorgängeruniversums).
+#
+# S1 DIE 9 SCORECARD-TENSIONEN live enumeriert: muon g−2 (3.92σ), Axion-Relic, Inflation A_s (−11.3), θ13
+#    (2.0), (w,Σmν)-Pincer, Σmν, R_D(*) (3.8), ⁷Li (9.9), Protonzerfall — alle mit vorregistrierter
+#    Kill-Condition, ≥5 unabhängige Domänen, KEINE ist eine Gesetzes-Drift-Signatur (nur Werte-Pulls).
+# S2 QEC-GIBBS-HIERARCHIE VERTIEFT: Hamming-Nebenklassen-Hierarchie EXAKT (1,8,7) — 1 Code-Klasse,
+#    8 korrigierbare Ein-Fehler-Syndrome, 7 nur-detektierbare Klassen, Summe 16 = 2^(g_car−1) = v221-Code-Dim;
+#    v221-Spektrum {1,(2/3)⁶,(1/3)⁶} = Gibbs-Gewichte e^{−6E} über {0, ln(3/2), ln3} (exakt), n=3-Wand (v124-Pol)
+#    ↔ Mindestabstands-Limit (d=4 korrigiert ⌊3/2⌋ = 1) — Code-Stufen und Uhr-Stufen teilen das Skelett
+#    code/correctable/detectable/wall.
+# S3 SYNDROM-TEST AUSGEFÜHRT (Teil-6-Follow-up): E8 trägt ZWEI verschiedene Code-Schichten — binäre
+#    Hamming-Syndromschicht L_A/2Z⁸ = (Z2)⁴ (SNF 1,1,1,1,2,2,2,2; 16 Syndrome) und quaternäre μ4-Glue
+#    E8/(D5⊕A3) = Z4 (Teil 6). VERDIKT: μ4-Grad ist KEINE Funktion des Hamming-Syndroms (verschiedene
+#    Quotienten, verschiedene Gruppentypen) — Materie-Labels (μ4) und Fehler-Labels (Syndrome) sind
+#    KOMPLEMENTÄRE Code-Koordinaten desselben Gitters.
+# S4 FUNKTION DER π-UNENDLICHKEIT: lzma auf 100 000 π-Stellen: Ratio 0.4373 vs PRNG 0.4369 (gleich; Boden
+#    0.415) vs periodische Kontrolle 0.0016 — π ist für endliche Beobachter maximal zufällig, obwohl
+#    K(π) = O(1) (BBP, Teil 8): maximale SCHEINBARE Entropie bei minimaler WAHRER Komplexität. Die
+#    Unendlichkeit von π = unbegrenztes gesetzmäßiges Entfalten; gleiche epistemische Signatur wie die
+#    Zeta-Nullstellen (determiniert, aber GUE-zufällig, Teile 1–2): von innen sind perfektes Gesetz und
+#    Zufall durch endliche Beobachtung ununterscheidbar.
+# S5 „π = GESAMTHEIT DES VORGÄNGERUNIVERSUMS": ZWEIFACH GETÖTET. (a) Kapazität: K(π-Präfix) = O(log n)
+#    kann keinen kontingenten Zustand (~1e122 Bits holographisch) archivieren. (b) Die Origin-These SELBST
+#    verbietet es: origin_theory (§cycle, [C]) macht die realisierten Konstanten zum EINDEUTIGEN ATTRAKTOR
+#    der Zyklus-Abbildung (Perron–Frobenius, v55) — eine KONTRAKTION löscht Vorgänger-Daten aktiv; mit der
+#    verifizierten v221-Rate (2/3)⁶ pro Schritt fällt ein holographischer Vorgänger in exakt
+#    ⌈122·ln10/(6·ln(3/2))⌉ = 116 Schritten unter 1 Bit. ⇒ π ist der ZYKLUS-INVARIANTE KERN (in jedem
+#    Zyklus identisch), nicht das Archiv des Vorgängers; was rekursiert, ist das Gesetz — dasselbe Gesetz.
+#    SPUREN-VERTRÄGE (typisiert): (i) SIM.DRIFT.DISCRIMINATOR — Attraktor-Lesart verlangt EXAKT null
+#    Drift/Ortsvariation dimensionsloser Konstanten; bestätigte Drift tötet die Notwendigkeits-Lesart und
+#    begünstigt Kontingenz/Simulation; (ii) Vorgänger-Relikte höchstens EINEN Kollaps tief (Löschtiefe 116)
+#    — zulässiger Kanal: CCC-artige low-ℓ-CMB-Anomalien; (iii) CMB-Kapazität: 6 254 997 Moden ⇒ ≤ ~1e6
+#    Cosmic-Variance-Bits, realistisch (Hsu–Zee) ~1e3.
+# Serie (XII)–(XX): 9 Proben, 183/183 Checks, alles Sandbox; Verträge: ZETA.HP.CARRIER, ZETA.EULER.EXTENSION,
+# ZETA.BC.SEAM.KMS, CARRIER.SATURATION.LOG, FIELD.H1.UNIQUE.DECODING, PI.CHARACTER.GEAR, SIM.CHANNEL.TYPING,
+# SIM.DRIFT.DISCRIMINATOR. Firewall: keine Metaphysik-Claims; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-23 (XIX) — Discovery-Probe simulation_signatures_message_capacity_probe.py (Teil 8): Simulations-/Programm-Hypothese — Kanalkapazität für „Schöpfer-Nachrichten" quantifiziert — 13/13, KEINE Promotion
+# experiments/tfpt-discovery/simulation_signatures_message_capacity_probe.py (~1 s). Philosophie-Firewall:
+# Simulation/„Erschaffer" bleibt Hypothesen-Klasse; getestet werden Kompressibilität, Eindeutigkeit, Kapazitäten.
+#
+# S1 π IST KERNEL, KEIN MESSAGE-BOARD: BBP-Ziffernextraktion (~12 Zeilen, hier implementiert) reproduziert die
+#    exakten Hex-Ziffern von π an Position 1/1001/10001 (243F6A / 49F1C0 / 8AC8FC, gegen exakte Big-Int-
+#    Expansion) ⇒ K(π) = O(1), Informationskapazität ~0; Muster-Census (20 vorregistrierte 5-Ziffern-Muster,
+#    erste 100 000 Dezimalstellen): π 18 Treffer vs PRNG 21, Poisson-Erwartung 20 — NULL; Feynman-Punkt
+#    „999999" bei Position 762 als Korrektheitsanker. „Nachrichten in π" sind Base-Rate-Rauschen.
+# S2 DER COMPILER IST selbst eine „Universum = kurzes Programm"-Instanz: 16 Registry-Einträge, 443 Wert-
+#    Zeichen (25-Digit-Snapshots) aus 353 Formel- + 30 Axiom-Zeichen, jede Formel erzeugt beliebig viele
+#    Stellen (v84 rechnet sie bei jedem Suite-Lauf nach). Konsequenz: stimmt der Compiler, sind die
+#    Konstanten-Ziffern DETERMINIERT ⇒ null Rest-Nachrichtenkapazität im Konstanten-Kanal.
+# S3 DIE FEHLERKORREKTUR-SCHICHT IST SCHON LOAD-BEARING (v221 SEAM.QECC): Naht = endlicher Recovery-Code
+#    ([E]: Code-Dim 16 = 2^(g_car−1), doppelt-stochastischer Transport, Recovery-Schranke (2/3)⁶).
+#    NEUER EXAKTER QUERLINK: (2/3)⁶ = 64/729 = e^{−p₂·E₁} mit E₁ = ln(3/2) — die v221-Recovery-Rate IST
+#    das v124-Gibbs-Gewicht (Teile 4–5): QEC-Schicht und Log-Energie-Thermodynamik sind EINE Struktur.
+#    Beobachtung (typisiert): v221-Code-Dim 16 = Hamming-[8,4,4]-Codewortzahl 16 (Teil 6).
+# S4 NACHRICHTENKAPAZITÄT DER GESETZE (Freiheitsbudget, exakt): (a) Brute-Force über ALLE 200 787
+#    4-dim Binärcodes der Länge 8: EXAKT 30 doppelt-gerade (Typ II), alle mit Gewichtszähler 1+14y⁴+y⁸
+#    = EINE Äquivalenzklasse (erw. Hamming) ⇒ 0 Bit Wahl; Beobachtung (typisiert): 30 gelabelte
+#    Typ-II-Codes = h(E8) = 30, schon wieder die Coxeter-Zahl. (b) Einheitenzählung aller Fundamental-
+#    diskriminanten −3..−200: w = 4 = |μ4| NUR bei d = −4 (w = 6 nur −3) ⇒ μ4 erzwingt Q(i): 0 Bit.
+#    (c) h = 1 in [−200,−3] = exakt die Heegner-Menge {−3,−4,−7,−8,−11,−19,−43,−67,−163} ⇒ zweites
+#    Compiler-Feld (−7, v533) ≤ 3 Bit FALLS frei (v533 leitet intern her ⇒ eher 0). GESAMT-Kapazität
+#    des Gesetze-Kanals ≤ ~3 Bit: „Schöpfer-Nachrichten" können nicht in den diskreten Gesetzes-Wahlen
+#    liegen — maximale Konsistenz BEDEUTET null Nachrichtenkapazität; die Eindeutigkeit IST die Botschaft.
+# S5 WO SIGNATUREN NOCH LIEGEN KÖNNTEN: nur der ZUSTANDS-Kanal (Anfangsbedingungen/CMB/Diskretheits-
+#    Residuen) — und genau dort horcht die Suite bereits (Scorecard live: 121 Zeilen, consistent 49 /
+#    null 27 / data_limited 33 / tension 9 / parked 3; kein „confirmed signature"-Status). Typisierung
+#    SIM.CHANNEL.TYPING: (i) Gesetze ~0 Bit, (ii) berechenbare Konstanten 0 Bit, (iii) Zustand offen
+#    (Horchposten aktiv), (iv) die „Code-Schicht" der Theorie ist v221s Recovery-Code = Gibbs-Struktur.
+# Firewall: keine Metaphysik-Claims, keine RH-Evidenz; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-23 (XVIII) — Discovery-Probe pi_prime_error_os_probe.py (Teil 7): „Primzahlen als laufender Fehlercode, π als Betriebssystem" — präzisiert, getestet, typisiert — 15/15, KEINE Promotion
+# experiments/tfpt-discovery/pi_prime_error_os_probe.py (~0.7 s). Philosophie-Firewall: „OS der Realität" wird
+# NICHT behauptet; getestet wird der exakte mathematische Gehalt der Metapher + wo der Compiler in diesem Netz sitzt.
+#
+# S1 „FEHLERCODE" PRÄZISE: eindeutige Faktorisierung = eindeutige Decodierung über dem Prim-Alphabet;
+#    μ(n) = Syndrom-Detektor (μ=0 ⟺ doppelter Primfaktor); REDUNDANZRATE des Integer-Codes = 6/π² = 1/ζ(2):
+#    Quadratfrei-Zählung Q(1e7) = 6 079 291 vs 6N/π² = 6 079 271 (Diff +20 « √N = 3162); Totientensumme
+#    Φ(1e6) rel. 4.8e-9. π IST die Fehlerraten-Konstante des Prim-Codes. Beobachtung (typisiert, kein Claim):
+#    Rate = p₂/π² mit 6 = p₂ = |R⁺(A3)|.
+# S2 π = L-WERT DES μ4-GEARS: χ₄ = nichttrivialer Charakter mod 4; L(1,χ₄) = π/4 (1e-12); Klassenzahlformel
+#    L(1,χ₋₄) = 2πh/(w√4) = π/4 mit h = 1 und w = 4 = |μ4| — die μ4 IST die Einheitengruppe {±1,±i} von Z[i];
+#    v533-Feld: h(−7) = 1, L(1,χ₋₇) = π/√7 (1.1874097 vs 1.1874104) — π ist in BEIDEN Compiler-Feldern von
+#    der Klassenzahlformel erzwungen; Fermat-Zweiquadrate = μ4-Klassifikation der Primzahlen (p<300 exakt).
+# S3 π ALS MITTELWERT DES CODES: r₂(n) = 4Σ_{d|n}χ₄(d) exakt (n≤300); Gauß-Kreis: Gitterzählung =
+#    Charaktersumme EXAKT (Integer-Identität bei N=1e4); (1/N)Σr₂ → π (1e-3 bei N=1e6); Konsistenznetz:
+#    vier unabhängige π-Routen stimmen (L-Wert / Gitter / ζ(2) / Γ(½)²).
+# S4 KLASSENZAHL = ANZAHL NICHT-DECODIERBARER SYNDROMKLASSEN: reduzierte Formen exakt: h(−4) = h(−7) = 1,
+#    h(−20) = 2, h(−23) = 3; NEGATIVKONTROLLE: im h=2-Feld (−20) ist die Split-Primzahl 3 NICHT von der
+#    Hauptform x²+5y² dargestellt (liegt in 2x²+2xy+3y²) — die v533-Split-Gesetz⟺Normform-Äquivalenz
+#    FUNKTIONIERT WEIL h = 1: die beiden Compiler-Felder (−4 via μ4, −7 via v533) decodieren eindeutig.
+#    Kandidat-Vertrag FIELD.H1.UNIQUE.DECODING [O]: braucht v533s Normgerade (Elemente α_t!) h = 1 zwingend?
+# S5 TFPT-ANBINDUNG ehrlich: c3 = 1/(8π) = 1/(32·L(1,χ₄)) EXAKT — ein REWRITING, keine Herleitung (P1-Konstante
+#    und μ4-Gear treffen sich in einem arithmetischen Objekt; Inhalt erst, wenn ein Mechanismus die 32 = 2⁵
+#    erzwingt). Vertrag PI.CHARACTER.GEAR [O], Kill: kein Mechanismus ⇒ bleibt Rewriting.
+# WO WEITERSCHAUEN (aus der Serie destilliert): (a) Syndrom-Test Probe (Hamming-Nebenklassen ⟺ μ4-Grade ⟺
+#    Materie-Blätter, Teil 6 Follow-up); (b) FIELD.H1: v533-Konstruktion in h>1-Feld nachbauen → muss brechen;
+#    (c) PI.CHARACTER.GEAR: Mechanismus für 32; (d) D5-Transferspektrum (CARRIER.SATURATION.LOG, echter Kill);
+#    (e) ZETA.BC.SEAM.KMS: Naht-Realisierung des log-Hamiltonians (Teil 3/4-Kills beachten).
+# Firewall: Konsistenz, keine RH-Evidenz, keine Metaphysik-Claims; keine Ledger-/Paper-/Website-/Marker-Änderung.
+
+# 2026-07-23 (XVII) — Discovery-Probe e8_unused_prime_code_probe.py (Teil 6): „ungenutzte" E8-Anteile ↔ Primzahlen ↔ Fehlercode — 15/15, KEINE Promotion
+# experiments/tfpt-discovery/e8_unused_prime_code_probe.py (~0.3 s). Frage der Review-Runde: sind die nicht
+# SM-gemappten E8-Anteile mit der Primzahl-Thematik korreliert / ein Fehlercode? Antwort: JA, in zwei exakten,
+# nicht-numerologischen Bedeutungen — plus D5-Sättigungs-Census (Proxy-Kill) ausgeführt.
+#
+# S1 Inventur exakt: 240 Wurzeln unter D5⊕A3 (Koord. 0–4 | 5–7): 40 + 12 + 60 (10,6) + 64 + 64 (Spinor-
+#    Blätter); Coset = 188 Wurzelrichtungen; 248 = 45+15+60+64+64 (tfpt_1-Dictionary bestätigt).
+# S2 DIE GLUE IST μ4, EXAKT: [E8 : D5⊕A3] = 4, Smith-Normalform diag(1,…,1,4) ⇒ Quotient ZYKLISCH Z4 = μ4
+#    (nicht Z2×Z2); μ4-Graduierung der Wurzeln: Grad 0 = 52 (D5+A3), Grad 2 = 60 ((10,6)), Grad 1/3 = 64/64
+#    (jedes Spinor-Blatt EINE uniforme Glue-Klasse). Die „ungenutzten" 188 SIND die nichttrivialen
+#    μ4-Glue-Klassen — das Axiom „D5⊕A3+μ4 ⇒ E8" rückwärts gelesen, jetzt als Gitteridentität.
+# S3 FEHLERCODE WÖRTLICH: erweiterter Hamming-Code [8,4,4] (= RM(1,3), der paradigmatische 1-Fehler-
+#    korrigierende Code): 16 Codewörter, selbstdual, doppelt-gerade, Gewichtszähler 1 + 14y⁴ + y⁸;
+#    Construction A liftet ihn zum E8-Gitter: 240 Wurzeln = 16 [(±2,0⁷)] + 14·2⁴ [Gewicht-4-Wörter mit
+#    Vorzeichen] — E8 IST der Gitter-Lift eines Fehlerkorrektur-Codes (Theorem, konstruktiv verifiziert).
+#    Beobachtung (typisiert, kein Claim): 14 Gewicht-4-Wörter = det A = dim G2 (v530-Leiter-Start).
+# S4 WO DIE PRIMZAHLEN EINSTEIGEN: N(2n) = 240·σ₃(n) (direkte Gitterzählung n=1..6: 240, 2160, 6720,
+#    17520, 30240, 60480); σ₃ multiplikativ (σ₃(6) = 9·28 = 252 = v532-Dualprodukt; Euler-Faktor exakt);
+#    Dirichlet-Reihe Σσ₃(n)n^{−s} = ζ(s)ζ(s−3) (s=5: 1.705672 vs 1.705678) — die Riemann-Zeta steht in
+#    E8s EIGENER Zählfunktion; Multiplikativitäts-Identität N(4)N(6) = N(12)N(2) = 14 515 200 exakt.
+#    KILL-KONTRAST: dieselbe Identität SCHEITERT für das D5⊕A3-Untergitter allein (52, 576, 1584, 16128:
+#    576·1584 ≠ 16128·52) — OHNE die 188 Glue-Wurzeln bricht die Euler/Prim-Struktur der Zählung.
+#    ⇒ Antwort: der „ungenutzte" Teil ist exakt (a) die μ4-Glue und (b) die modulare Vervollständigung,
+#    die E8 an die Primzahlen koppelt. Keine Verschwendung — Redundanz im wörtlichen Codierungs-Sinn.
+# S5 CARRIER.SATURATION.LOG-Census (ausführbarer Proxy des D5-Kill-Tests): Sättigungsklasse (p/q)·b^{±1},
+#    b ∈ {(5/(5−n))^20, 20·ln(5/(5−n))} (20 = |R⁺(D5)|), gegen die 16 eingefrorenen Registry-Werte
+#    (v527-Disziplin): T2 = 0, T3 = 1 (Golden-Placebo: T2 = 0, T3 = 5) ⇒ NULL — kein Readout-Support;
+#    Vertrag bleibt [O]; der ECHTE Kill bleibt ein eingefrorenes D5-Transferspektrum der Form (1−n/5)^c.
+# Firewall: Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-, Website- oder Marker-Änderung.
+
+# 2026-07-23 (XVI) — Discovery-Probe compiler_bc_subsystem_probe.py (Teil 5): das {2,3,5}-BC-Subsystem des Compilers + Gibbs-Lesart von v124 — 13/13, KEINE Promotion
+# experiments/tfpt-discovery/compiler_bc_subsystem_probe.py (~0.1 s). Schließt die Fünfer-Serie (XII)–(XVI) ab.
+#
+# S1 GIBBS-LESART von v124 (exakt): die eingefrorenen Transfer-Eigenwerte {1, (2/3)⁶, (1/3)⁶} sind EXAKT
+#    Boltzmann-Gewichte e^{−βE_n} mit β = p₂ = 6 = |R⁺(A3)| und log-rationalen Energien E_n = ln(3/(3−n)) ∈
+#    {0, ln(3/2), ln3} — das Transferspektrum IST ein Gibbs-System über Log-Energien bei ganzzahliger
+#    Temperatur; Sättigungsidentität rate_N(N−1)/p = ln N symbolisch für jede Trägergröße N.
+# S2 SÄTTIGUNGS-TRIPEL: {|Z₂|, N_fam, g_car} = {2,3,5} ⇒ Sättigungsenergien {ln2, ln3, ln5} exakt = die drei
+#    Modenenergien des Compiler-Primon-Gases; N=3∪N=5-Uhrenergien erzeugen das VOLLE Rang-3-Log-Gitter der
+#    {2,3,5}-glatten Rationalen. EHRLICH: nur N_fam = 3 ist suite-backed ([I] v124, frozen v54/v69/v95);
+#    N = 2 / g_car = 5 sind FORMAL — Kandidat-Vertrag CARRIER.SATURATION.LOG [O], vorregistrierter Kill:
+#    das D5-Träger-Transferspektrum muss (1−n/5)^c lesen.
+# S3 Das {2,3,5}-BC-SUBSYSTEM steht: glatte Zahlen = 3-Moden-Bose-Fockraum (Eindeutige-Faktorisierung-
+#    Bijektion exakt auf 9×6×5-Box, 270 Zustände); H additiv (ln n = a ln2 + b ln3 + c ln5); Zustandssumme
+#    faktorisiert EXAKT (rationale Box-Identität) → Tr e^{−2H} = 25/16 im Limes ((XIV) S3).
+# S4 NULLSTELLEN der Compiler-Zeta: 1/ζ₂₃₅(s) = Π(1−p^{−s}) verschwindet EXAKT auf Re s = 0 bei 2πk/ln p
+#    (periodische Türme, Abstände 9.065/5.719/3.904); KEINE Nullstellen für Re s > 0 (|1−w| ≥ 1−|w|).
+#    ⇒ Der Compiler ist das STARRE lokale Skelett (Nullstellen Re=0, kein RH-Gehalt); die kritische Linie
+#    Re = 1/2 mit GUE existiert erst nach Vervollständigung über ALLE Primzahlen. (Echo ohne Claim: wahres
+#    Nullstellen-Spacing 2π/ln(T/2π) hat dieselbe Funktionsform mit ln p ↔ ln(T/2π).)
+# S5 Der Pol entsteht nur LOGARITHMISCH (Mertens 3): Π_{p≤P}(1−1/p)^{−1}/ln P = 1.78799/1.78327/1.78161/
+#    1.78114 (P = 1e3..1e6) → e^γ = 1.78107 — der β=1-Pol braucht die UNENDLICHKEIT der Primzahlen;
+#    keine endliche Compiler-Erweiterung erreicht ihn.
+# THEORIE-LESART (typisiert, kein neuer Claim): (i) {2,3,5} bekommen eine DRITTE Lesart — Gruppenordnungen,
+#    Träger-Slots UND die ersten drei BC/Primon-Energien via Sättigungsraten (N=3 backed, N=2/5 formal);
+#    (ii) Transfer-Uhr (v124) und thermische Naht (v526) hängen jetzt in EINEM Gibbs-Rahmen zusammen
+#    (β = p₂ = 6 vs β_angle = 2π — Dictionary offen); (iii) die ζ/RH-Frage faktorisiert sauber:
+#    starrer lokaler Compiler vs kritische Vervollständigung — RH lebt NUR in der Vervollständigung.
+# Firewall: Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-, Website- oder Marker-Änderung.
+
+# 2026-07-23 (XV) — Discovery-Probe bc_energy_from_entropy_probe.py (Teil 4): die BC-Energie E_q = log q ist KANONISCH — Orbit-Wachstums-Entropie der Uhren-Potenz-Halbgruppe — 15/15, KEINE Promotion
+# experiments/tfpt-discovery/bc_energy_from_entropy_probe.py (~0.5 s). Antwort auf die in (XIV) isolierte Lücke
+# („woher kommt E_q = log q?"): die Energie ist keine Zuweisung, sie ist ABLEITBAR.
+#
+# S1 Die Potenz-Halbgruppe σ_m: T_q ↦ T_q^m ist TFPT-nativ und IST Bost–Connes' σ_m: Halbgruppengesetz exakt
+#    ((T30²)³ = T30⁶ etc.); Galois-Sektor gcd(m,q)=1 ⇒ charpoly(T_q^m) = Φ_q (q≤16, m≤7); Level-Senkung
+#    exakt wie BCs e(a/q) ↦ e(ma/q): charpoly(T_4²) = Φ_2², charpoly(T30⁵) = Φ_6⁴, charpoly(T30⁶) = Φ_5²
+#    (Multiplizität φ(q)/φ(q/gcd)).
+# S2 E_m = log m HERGELEITET als Entropie: #Fix(σ_m^k auf Q/Z) = m^k−1 exakt; die Fixpunkte verteilen sich
+#    über die Uhren-Level d | m^k−1 (Gauß Σφ(d) = n; m ∈ {2,3,5,7,10}, k ≤ 12); Artin–Mazur-Zeta von σ_m
+#    = (1−z)/(1−mz) SYMBOLISCH in m (Log-Reihen-Identität bis z⁹) ⇒ Entropie = log(Pol) = log m
+#    (numerisch 1e-10 bei k=40); Additivität h(σ_mn) = h(σ_m)+h(σ_n) exakt ⇒ die BC-Energie ist der
+#    Entropie-Homomorphismus der Potenz-Halbgruppe. ζ(β) = Σ_m e^{−β·h(σ_m)} = entropie-gewichtete Zählung.
+# S3 Mini-BC-Kovarianzalgebra auf dem Uhren-Index-Raum ℓ²({1..60}): μ_m|n⟩ = |mn⟩ Isometrien (Trunkierungs-
+#    Buchhaltung exakt: μ_m*μ_m = P_Domäne, μ₂μ₃ = μ₆); BC-Kovarianz U(t)μ_mU(−t) = m^{it}μ_m (1e-13,
+#    H = diag(log n)); definierende KMS-β-Skalierung ω(μ_m x μ_m*) = m^{−β}ω(x) EXAKT (rational, β=2).
+#    Die Algebra existiert und ist konsistent — offen ist NUR ihre Naht-Realisierung.
+# S4 Interner Hook-Census (ehrlich): die v124-Uhr rate(n) = −6 ln(1−n/3) hat Raten {0, 6ln(3/2), 6ln3};
+#    das Raten-Z-Gitter ist EXAKT 6·(Z log2 + Z log3) (Rang 2, rate(2)−rate(1) = 6ln2, explizite Inverse
+#    (a,b) = (−u,u+v)) — die ersten zwei BC-Energien log2, log3 stehen BEREITS in der Suite, skaliert mit
+#    p₂ = 6. EHRLICHE LÜCKE: log 5 ist NICHT im Gitter (5 ≠ 2^a3^b) — Compiler-Primzahl 5 fehlt. Hook [O].
+# S5 Vertragsstand ZETA.BC.SEAM.KMS nach Teil 4: Energie KANONISCH (S2), Algebra KONSISTENT (S3),
+#    Raten-Hook PARTIELL {2,3} (S4), OFFEN: Naht-Realisierung von H. Vorregistrierte Kills für jeden
+#    Kandidaten: K1 m^{it}-Kovarianz, K2 m^{−β}-KMS-Skalierung, K3 Hagedorn-Divergenz bei β=1
+#    (tötet jeden endlichen/quasi-linearen Turm, (XIV) S4).
+# Firewall: Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-, Website- oder Marker-Änderung.
+
+# 2026-07-23 (XIV) — Discovery-Probe seam_bc_primon_bridge_probe.py (Teil 3): erster ausführbarer Schritt von ZETA.BC.SEAM.KMS — 17/17, Verdikt: freier Naht-Turm als ζ-Zustandssumme GETÖTET, Hindernis KOMPLEMENTÄR typisiert
+# experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py (~0.4 s). KEINE Promotion, keine Marker-Moves.
+#
+# S1 UNABHÄNGIGER NACHBAU der v526-Naht (nur aus dem deklarierten Kernel C(d) = (2/N)/sin(πd/N), kein v526-Code):
+#    Williamson-Werte bei N=8 treffen die exakten Anker ν = cos(π/24), cos(7π/24) auf 1e-12; Energien
+#    ε = 2 ln cot(π/48), 2 ln cot(7π/48) (Identitäten tanh(ln y) = (y²−1)/(y²+1), (cot²−1)/(cot²+1) = cos 2θ
+#    symbolisch + 50-stellig); ENTROPIE-TURM REPRODUZIERT: S(8) = 0.52187, S(16) = 0.63510, S(32) = 0.75006 nats
+#    (v526 [E]-5). ⇒ Die Naht ist ein freier Fermion-KMS-Turm mit N/4 Moden; Z(β) = Π(1+e^{−βε_k}) ist GANZ.
+# S2 PRIMON-GAS-WÖRTERBUCH (was „Z = ζ" mikroskopisch heißt): bosonisches Primon-Gas (eine Mode pro Primzahl,
+#    Energie log p) ⇒ Z = ζ(β); fermionisch ⇒ ζ(β)/ζ(2β) = Summe über QUADRATFREIE n (1.51981715 vs 1.51981775);
+#    (−1)^F-GRADUIERT ⇒ Z = Σμ(n)n^{−β} = 1/ζ(β) (0.60792710 = 1/ζ(2)) — EXAKT die Uhren-Spurenreihe aus (XII):
+#    der arithmetische Sektor trägt bereits die naht-kompatible (Majorana/graduierte) Statistik. Der β=1-Pol
+#    ist HAGEDORN (Primzahl-Modendichte π(e^E) ~ e^E/E; Mertens-Konstante 0.2615362 vs 0.2614972).
+# S3 COMPILER-PRIMON-GAS {2,3,5}: EXAKT Π_{p∈{2,3,5}}(1−p^{−s}) = Σ_{d|30}μ(d)d^{−s} = Σ_{d|30}tr(T_d)d^{−s} —
+#    die inverse Compiler-Zeta IST das Spurpolynom des Coxeter-Turms; Teilmengenprodukte von {2,3,5} =
+#    divisors(30) = die 8 Turm-Level (quadratfreier Sektor des Compiler-Fockraums, 8 = 2³); Z_235(2) = 25/16
+#    exakt, Z_235(1) = 15/4 ENDLICH — drei Moden erzeugen nie den ζ-Pol; der Pol braucht ALLE Primzahlen
+#    (= die ZETA.EULER.EXTENSION-Lücke).
+# S4 DER DISKRIMINATOR (Modenzählung, mpmath-60-stellig für N=64 wegen 1−ν ~ e^{−N}): Naht-Leitern
+#    N=16/32/64: ε_max/N = 0.871/0.995/1.069 (Bandbreite LINEAR in N, exakt N/4 Moden, Gaps max/min ≤ 4.5);
+#    log-Zähl-Steigungen: Naht 0.032 vs Primon 0.891 (Hagedorn ~1); Spacing-Kollaps Primon max/min = 255403
+#    vs Naht 4.5. VERDIKT KILL: „ζ als Zustandssumme des FREIEN Naht-Turms" ist auf Probenniveau tot —
+#    keine exponentielle Modenvermehrung, Z ganz, kein β=1-Pol möglich.
+# S5 ZETA.BC.SEAM.KMS VERSCHÄRFT — das Hindernis ist KOMPLEMENTÄR: die Naht HAT die Thermodynamik
+#    (gemessenes β_angle = 2π = 1/(4c₃), KMS/Tomita, graduierte Majorana-Statistik), aber KEINE arithmetische
+#    Modendichte; die Uhrenfamilie HAT die Arithmetik (Divisor-Turm-Halbgruppe, Galois Ẑ*, μ = Spur, 1/ζ als
+#    graduierte Zustandssumme), aber KEINEN Hamiltonian. Brücken-Anforderung: eine Energiezuweisung
+#    E_q = log q auf den Uhren-Leveln (BC-Form H|n⟩ = log n|n⟩). Ehrliche Beobachtung (typisiert, kein Claim):
+#    Naht-Energien sind Logs algebraischer Einheiten (ln cot²(π/48), ln cot²(7π/48)), BC-Energien Logs ganzer
+#    Zahlen — beide leben in „log(arithmetisches Objekt)", mehr ist NICHT gezeigt.
+# Firewall: Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-, Website- oder Marker-Änderung.
+
+# 2026-07-23 (XIII) — Discovery-Probe zeta_explicit_formula_trace_probe.py (Teil 2): „Ist die explizite Formel eine Spurformel?" — 19/19, KEINE Promotion
+# experiments/tfpt-discovery/zeta_explicit_formula_trace_probe.py (~45 s). Fortsetzung von (XII); beantwortet die
+# dritte Review-Frage konstruktiv und typisiert das Operator-Zuhause von ζ.
+#
+# S1 JA, numerisch: ψ(x) aus dem Nullstellen-Spektrum rekonstruiert (ψ₀ = x − 2ReΣx^ρ/ρ − log2π − ½log(1−x⁻²));
+#    RMS über 60 Punkte in [50,3000]: 2.21 (N=100) → 1.95 (N=250) → 1.48 (N=500), monoton; punktweise bei
+#    x=1000.5: ψ_exakt = 996.681 vs ψ_500 = 997.119. Richtung Spektrum→Primzahlen funktioniert konkret.
+# S2 Montgomery-Paarkorrelation (über Nearest-Neighbour von (XII) hinaus): 1245 Paare, L1(GUE 1−sinc²) = 0.061
+#    vs L1(Poisson) = 0.190; erster Bin 0.000 (Levelabstoßung). DICHTE-Gesetz: mittlere Gaps in drei Fenstern
+#    treffen 2π/log(γ/2π) auf 0.3–0.7 % — Linie mit LOG-wachsender Dichte. VERSCHÄRFTER KILL: jeder
+#    Uhrenfamilien-Operator hat |λ| = 1 (beschränkt, kreis-uniform) → als HP-Träger schon durch die DICHTE
+#    ausgeschlossen, vor jeder Statistik.
+# S3 Die exakten Spurformeln des Compilers: (a) Divisor-Turm z³⁰−1 = Π_{d|30}Φ_d, Shift Z30 = ⊕T_d
+#    (8 Blöcke, dims 1,1,2,4,2,4,8,8; Spuren 30·[30|k]), endliche Poisson-Summation Σ_{d|30}c_d(k) = 30·[30|k]
+#    für k≤90 exakt — die Aggregation über DIVISOR-Level ist von der zyklischen Gruppe ERZWUNGEN (die
+#    Aggregation über ALLE q — profinite Vervollständigung — ist es noch nicht: genau dort sitzt
+#    ZETA.EULER.EXTENSION); (b) dynamische explizite Formel für A=[[8,2],[5,3]]: Orbitzahlen p_1..p_4 =
+#    4, 50, 624, 7514, Rekonstruktion N_k = Σ_{d|k}d·p_d exakt (k≤20), EULER-PRODUKT ζ_A(z) = Π(1−z^ℓ)^{−p_ℓ}
+#    koeffizientenweise bis z¹² exakt — die TFPT-Seite hat echte „Primzahlen" (periodische Orbits) mit
+#    eigenem Euler-Produkt; (c) Weyl-Summen des gepoolten Spektrums = Mertens-artige Spursummen Σ_q c_q(m):
+#    m=1..6 → (−4,−6,−10,−14,−9,−30) gegen |F_512| = 79852 (<0.04 %) — Gleichverteilungsrate = Spurauslöschung.
+# S4 BOST–CONNES-TYPISIERUNG (das kanonische Operator-Zuhause von ζ): ζ erscheint dort THERMODYNAMISCH,
+#    nicht spektral — Tr e^{−βH} = ζ(β) auf ℓ²(N), H|n⟩ = log n|n⟩ (β=2 via Euler–Maclaurin < 1e-9),
+#    Phasenübergang AM Pol β=1 (harmonische Summe → log N + γ, < 1e-8), Symmetrie = zyklotomische Galois Ẑ*.
+#    Substrat-Identität mit der Uhrenfamilie exakt geprüft: c_q(mk) = c_q(k) für Einheiten m (q≤36),
+#    Φ_q irreduzibel (EIN Galois-Orbit pro Level). ⇒ Kandidat-Vertrag ZETA.BC.SEAM.KMS [O]: die Naht ist
+#    KMS-thermisch (v526 SEAM.THERMAL.KMS) — die BC-Brücke wäre „ζ als Zustandssumme des Naht-Sektors",
+#    NICHT „Nullstellen als Eigenwerte". Das ist die konkreteste offene Route.
+# S5 Vorregistriertes Anforderungsprofil für JEDEN künftigen HP-Kandidaten: (R1) unbeschränkt selbstadjungiert,
+#    (R2) Zählfunktion (E/2π)log(E/2πe)+7/8, (R3) GUE-Paarkorrelation, (R4) Spurformel-Match gegen die
+#    explizite Formel. Uhrenfamilie scheitert an R1/R2, A an Purity ((XII) S5) — offene Route: Seam-Transfer/KMS.
+# Firewall: Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-, Website- oder Marker-Änderung.
+
+# 2026-07-23 (XII) — Discovery-Probe zeta_prime_spectral_bridge_probe.py: die Zeta/Primzahl-Frage der Review-Runde („1/(8π) & Hilbert–Pólya"), falsifizierbar gemacht — 35/35, KEINE Promotion
+# experiments/tfpt-discovery/zeta_prime_spectral_bridge_probe.py (~48 s; exakt sympy + numerisch mpmath/numpy).
+# Frage: Zufall (1) / gemeinsame Mathematik (2) / tiefe Verbindung (3)? PROBEN-VERDIKT: (2), mit vier exakten
+# Strukturbrücken und einem Kill; (3) bleibt offener Forschungsvertrag mit vorregistrierten Kill-Tests.
+#
+# S1 Schoenfeld-1/(8π), Provenienz geklärt: Schranke |π(x)−li(x)| < √x·log x/(8π) numerisch bestätigt (Ratio
+#    0.47→0.10 auf 1e4..1e8, monoton lockerer); RvM-Hauptterm N(T) ±1 bei 500 Nullstellen; Σ1/γ − (1/4π)log²(T/2π)
+#    konstant (−0.0158/−0.0163 bei N=250/500) → Schoenfelds 1/(8π) ist ein NULLSTELLENDICHTE-Integral (2π-Atom der
+#    Fourier-Dualität), TFPT-c3 ist AXIOM P1. Gleiche Zahl, verschiedene Provenienztypen → KEINE Identifikation.
+# S2 MÖBIUS = SPUR (exakt): Stage-A (v531) verallgemeinert über ALLE Level q: tr(T_q^k) = c_q(k) für q≤32, k≤30;
+#    μ(q) = tr(T_q) für q≤1000; Ramanujan–Dirichlet Σ_q tr(T_q^k)/q^s = σ_{1−s}(k)/ζ(s) auf 6 Stellen (s=2,3;
+#    k=1,6,30) — 1/ζ IST das erzeugende Objekt der Uhrenfamilien-Spuren; Mertens M(x) = Σ_{q≤x} tr(T_q):
+#    max|M|/√x = 0.832 auf [10,1e6] (Konsistenz, KEIN Claim); s→1-Kante: Partialsummen Σc_q(30)/q = ±0.003
+#    gegen 23.9 ohne Auslöschung (PNT-Stärke, vier Größenordnungen Cancellation).
+# S3 RH = Gleichverteilungsaussage über das GEPOOLTE Uhrenspektrum: spec{T_q, q≤Q} = e(2πi·F_Q) (Farey Ordnung Q,
+#    exakt; |F_Q| = Σφ(q)); Franel–Landau macht RH ÄQUIVALENT zu Defektschranken genau dieses Spektrums:
+#    Landau-Summe ~ Q^0.386 (RH ⟺ 1/2+ε), Franel-Summe ~ Q^−0.928 (RH ⟺ −1+ε) auf Q=128..1024 — Konsistenzfit,
+#    keine Evidenz. Ein einzelnes Level (q=30) trägt KEINEN RH-Gehalt.
+# S4 Statistik-Typisierung: 500 Zeta-Nullstellen entfaltet (Mittelabstand 0.9997): KS(GUE)=0.050 vs KS(Poisson)=0.331
+#    (Montgomery–Odlyzko reproduziert); T30 = starrer Lattenzaun (exakt 3 Gap-Werte (2,4,6)·2π/30, KS(GUE)=0.24);
+#    Farey-Gaps (Hall-Verteilung) verwerfen GUE UND Poisson (0.158/0.278) → Poolen/Deformieren der Uhren nähert
+#    sich der Nullstellenstatistik NICHT. KEIN Operator der aktuellen Suite kann die Nullstellen als Spektrum tragen.
+# S5 WEIL-PURITY-KILL für A = [[8,2],[5,3]] (v530): exakte Genus-1-Weil-FORM N_k = det(A^k−I) = 14^k+1−tr(A^k)
+#    („q"=14, a=11, N_1=4=|μ4|; Artin–Mazur-Zeta = (1−11z+14z²)/((1−z)(1−14z))), ABER drei exakte Kills:
+#    Hasse-Schranke verletzt (11 > 2√14, 121 > 56), Purity verletzt (λ± = (11±√65)/2 nicht auf |z|=√14),
+#    14 = 2·7 keine Primpotenz (kein F_14). Dynamischer PNT hält (k·p_k/14^k = 0.9999 bei k=24, Orbitzahlen ganz)
+#    mit RH-VERLETZENDEM Fehlerexponent log λ₊/log 14 = 0.854 > 1/2. KONTRAST: T30 hat Artin–Mazur-Zeta = 1/Φ30(z),
+#    Gewicht-0-pur — der EINZIGE pure Operator der Diamant-Menge (C,K,L,F,J,Q,R,A alle unpur), das einzige
+#    funktionenkörper-artige Objekt.
+# S6 Euler-Lokalfaktoren schon vorhanden: {2,3,5} ∪ Exp(E8)\{1} = alle Primzahlen < 30 (v532); disc −7 (v533):
+#    Split-Gesetz p = x²+xy+2y² ⟺ kronecker(−7,p) ∈ {0,1} (alle p<100), Pfadnormen (2,4,14,32) getragen von
+#    exakt {2,7} = {split, verzweigt}; lokale Dedekind-Faktorisierung ζ_{K,p} = ζ_p·L_p(χ₋₇) je Klasse;
+#    Compiler-Primzahlen im Transferkörper: 2 split, 3 & 5 inert.
+#
+# FORSCHUNGSVERTRÄGE (offen, NICHT promoviert; Typisierung der vier Review-Kandidaten):
+#   * ZETA.HP.CARRIER [O]: Hilbert–Pólya-Träger existiert in der Suite NICHT (S4: alle Spektren algebraisch+starr,
+#     Nullstellen GUE). Vorregistrierte billige Kill-Tests für JEDEN künftigen Kandidaten: (a) entfaltete
+#     Abstandsstatistik gegen GUE-Wigner (KS < 0.08 nötig), (b) Spurformel-Matching gegen die explizite Formel
+#     (Weil-Positivität). Kandidat „Quotientenoperator A": auf Probenniveau GETÖTET (S5). Kandidat
+#     „T30-Deformation": die natürliche Deformation ist die FAMILIE {T_q} — Brücken exakt verifiziert, ein
+#     einzelner endlicher Operator reicht prinzipiell nie. Kandidaten „Seam-Transfer" / „MMST/Woit": einzige
+#     Route zu unendlich-dim selbstadjungiertem Spektrum, derzeit ohne konkreten Operator — bleibt [O].
+#   * ZETA.EULER.EXTENSION [O]: „Compiler auf alle Primzahlen erweitern" hat jetzt eine präzise Form: Level 30
+#     ist der E8-Punkt der Uhrenfamilie {T_q}; das Euler-Produkt lebt in der q-AGGREGATION (S2/S3), nicht im
+#     Einzellevel. Vertragsfähig erst, wenn ein TFPT-Mechanismus die Aggregation ERZWINGT (nicht nur erlaubt).
+# Firewall: Wachstumsexponenten/Mertens-Checks sind Konsistenz, keine RH-Evidenz; keine Ledger-, Paper-,
+# Website- oder Marker-Änderung.
+
+# 2026-07-23 (XII) — Sandbox-Probe pi_clock_comb_prime_probe.py: Uhr/Such-Signaturen/Fraktal/Primkette auf π (Vertiefung von XI)
+# UHR (exakt): π IST der Blatt-Tick der μ4-Uhr (Euler e^{iπ} = −1 = clock²); Achtel-Tick trägt die
+#   Silber-Ratio cot(π/8) = 1+√2 (Pell-Ast des Markov-Ankers); Rekursion auf π-als-Winkel exakt 4-periodisch.
+# UHR-CHARAKTER × PRIMKETTE (exakt, Richtung UMGEKEHRT): L(1,χ₄) = π/4 (Leibniz/Euler) — der μ4-Charakter
+#   über ALLE Primzahlen ERZEUGT π; 30er-Uhr-Trunkierung (Zehn-Prim-Kette) NICHT ausgezeichnet
+#   (Cutoff-Kontrolle glatt: 3.9e-2 bei X=30 für π/4, 7.2e-3 für π² via ζ(2)); E8-Exponenten exakt
+#   χ₄-phasenbalanciert auf dem 30er-Rad (4+4, Σ Exponenten = 120 = #Φ⁺).
+# SUCH-SIGNATUREN (eingefrorener Comb-Kernel, 11 Töne inkl. S1/S4-Spacings, seed 41) auf π-Serien:
+#   CF-Terme (3000, Gauss-Kuzmin-χ² p = 0.72 generisch; Lévy-Rate 3.266 vs 3.276 — universell, nicht
+#   π-spezifisch), Dezimal-Ziffern-Gaps (100k Stellen): ALLES null nach Bonferroni (global p = 1.0/0.68).
+# PRIMKETTE × ZIFFERN: Basis-30-Ziffern (20k) bevorzugen die E8-Exponenten-Residuen NICHT
+#   (z = −1.30, p = 0.19; Kontrolle e identisch); 30-Zellen-χ² p = 0.34 uniform.
+# FRAKTAL: β=3/2-Expansion (exakter mpmath-Orbit, 5000 Digits): Digit-1-Frequenz 0.1952 vs MC-Null
+#   0.1995±0.0029 (z = −1.49, p = 0.14), Gap-Comb null → π ist generischer Punkt der DSI-Map.
+# FAZIT: alle EXAKTEN Verbindungen laufen generativ (Uhr+Primzahlen → π, klassisch: Euler/Leibniz/Lévy);
+#   alle STATISTISCHEN Proben von π's Entwicklungen mit den TFPT-Detektoren sind null. π trägt die
+#   Strukturen als OUTPUT, nicht als versteckten Inhalt. Konsistent mit Library-of-Babel-Verdikt (XI).
+#   KEIN Promotionskandidat.
+#
+# 2026-07-23 (XI) — Sandbox-Probe pi_signature_self_application_probe.py: TFPT-Signaturen auf π selbst (einmalig + rekursiv)
+# EINMALIG = der Compiler: S/M/D/Φ/A auf π reproduzieren exakt {c3, φ_base, dtop, φ0, α} — nichts Neues.
+# REKURSIV, drei Regime: (i) S,M sind Involutionen (2-Zyklen durch π); S∘M = Skalierung um exakt 3/4 = ξ
+#   (v205-Baum-Identität als Rekursionsverhältnis der Seed-Gruppe ⟨S,M⟩ ≅ D∞ gelesen); Orbit von π trifft
+#   exakt nur {π, c3, φ_base}; φ0 liegt NICHT im Orbit (Abweichung = dtop/φ0 = 0.226 %).
+#   (ii) Φ = M+D: einziger Fixpunkt x* = 0.5067 ist REPELLIEREND (|Φ'| = 2.05) → von π aus oszillierende
+#   super-exponentielle Divergenz; der Top-Form-Term ist eine Einmal-Korrektur, kein iterierbares Gesetz.
+#   (iii) EM-Closure: π liegt im Eindeutigkeitsfenster [~0.56, >993] der F_U1-Wurzel, aber EIN Rekursionsschritt
+#   verlässt es (bei x1 = α(π) zwei Wurzeln, physischer Branch weg); α⁻¹-Map divergiert monoton
+#   super-exponentiell (137 → 2.0e5 → 3.3e11 → …), α⁻¹(x) − x > 0 im gesamten Fenster → KEIN Fixpunkt,
+#   keine „selbstkonsistente Kreiskonstante". Look-elsewhere-MC (v100-Geist): 2^{-3/2}, 6^{-1/2}, x*_Φ
+#   treffen kein TFPT-Target über Zufall (p = 0.99/0.91/0.67). FAZIT: die Signaturen sind eine
+#   One-Pass-Pipeline in π, kein dynamisches System mit π als Attraktor; einzige exakte Rekursionsstruktur
+#   ist die Dieder-Seed-Gruppe mit Ratio 3/4 (bereits Theorieinhalt, v205). KEIN Promotionskandidat.
+#
+# 2026-07-23 (X) — Review-Runde promoviert: v530–v533 (Center-Quotient / Stage-A-Tensoruhr / 744-Checksum / disc −7 Normgerade)
+# Suite 523→527; Wolfram 564→584; Probe center_quotient_coxeter_modular_disc7_probe.py 76/76. KEINE Marker-Moves.
+# Ledger: DIAMOND.CENTER.QUOTIENT.01 / COX.STAGEA.TENSOR.01 / E8.DEGREE.MODULAR.01 (audit) / FTR.DISC7.NORM.01.
+#
+# Ehrliche Korrekturen am Review (beide im v530/v531-Modul dokumentiert):
+#   (1) Die Fixgerade Cv=v ist NICHT eindeutig — K und Q haben ebenfalls Eigenwert 1;
+#       eindeutig ist erst die KONJUNKTION Fixgerade + Atomquotient [[8,2],[5,3]] + CP-Selbstcode (7,11,13).
+#   (2) Das |·|-Kill-Tripel (2,4,8) tötet Φ15 NICHT (Φ30(x)=Φ15(−x)) — Diskriminator ist die
+#       VORZEICHENBEHAFTETE 8-Werte-Tabelle (c30(1)=−1 vs c15(1)=+1).
+#
+# NÄCHSTE SCHRITTE aus der Review-Runde (bewusst NICHT promoviert — Forschungsverträge, keine exakten Identitäten):
+#   * SEAM.STRADDLE.CONE (Kandidat v534): die RP-Kegel-Formulierung des Alignment-Bits auf den
+#     wechselwirkenden FK-Quartetten — H_int = Σ_q λ_q γγγγ, Straddle-Inzidenz S_cq, führende
+#     OS-Gram-Korrektur G_c^lead(λ,δ), Kegel K_RP(δ) = Fix(G_δ) ∩ ∩_c {λ: G_c^lead ⪰ 0}.
+#     Erfolg: K_RP(π/2) ≠ {0} und K_RP(δ) = {0} sonst (Bit dynamisch selektiert);
+#     Kill: Kegel generisch nichttrivial ODER bei π/2 leer. Aufbau direkt auf v529 (Straddle-Law 24/24);
+#     höchster Hebel auf die letzte diskrete Eingabe. Rechenaufwand: 256-dim Cl(16)-Fock + SDP — eigener Sprint.
+#   * COX.FLIP.INTERTWINER (Kandidat-Test [O]/[X]): kanonischer Intertwiner vom konkreten Even-Flip-Atlas
+#     (240=160+80) auf den 8-dim primitiven Charakterraum von v531; die v531-Spur-Tomographie
+#     (vorzeichenbehaftete c30-Tabelle) ist der vorregistrierte billige Kill-Test für jeden Kandidaten.
+#   * FTR.DISC7.SOLVER (v533-Folge): die vier externen Transfer-Solver (Koide, η_B, Axion, m_p/m_e) in der
+#     α_t-Koordinate prüfen — teilen sie EINE gebrochen-lineare Wirkung auf Q(√−7)?
+#     Kill: vier inkompatible arithmetische Aktionen. Erst dann wird „ein Funktor, vier Interfaces" Vertrag.
+#   * METROLOGY.TORSOR: v_geo als Sektion eines 1-dim Skalierungs-Torsors S ≅ R_{>0} formalisieren
+#     (dimensionslose Invarianten prognostiziert, dimensionsbehaftete Relationen äquivariant, eine Messung
+#     = Wahl der Sektion). Beendet die semantische Unschärfe um v_geo, erzeugt aber KEINEN Meter aus
+#     Mathematik — konsistent mit No-Unit-Theorem (v153/v364); Kandidat für tfpt_research_contracts-Prosa.
+
 # 2026-07-23 (IV)–(VII) — Promotion v526–v529 (thermische Naht / Silber / Twist-Klasse / FK-Toy)
 # Suite 519→523; Wolfram 552→564; Story 26→30 Steps; Scoreboard 9→10; c3 drittes Standbein.
 # KEINE Marker-Moves (auch nicht beim Toy-Kill — nur Contract-Text + Straddle-Hürde).

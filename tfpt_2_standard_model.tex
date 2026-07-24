@@ -776,6 +776,53 @@ $\sum_{ij}C_{ij}=31=2^{\gcar}{-}1=248/8$; its shifted determinants climb the exc
 \]
 i.e.\ $\det(C{+}kI)$ for $k=0,1,2$ traces $G_2\!\to\!F_4\!\to\!E_8^+$ --- exact \mE, the portal reading \mC.
 \smallskip\\
+\noindent\textbf{The center quotient compiler: the atoms as one operator, and the CP-halved Coxeter code
+(\veri{v530\_center\_quotient\_compiler.py}).} The center carries a \emph{fixed primitive line}: with
+$v=(-1,1,0)$ one has $Cv=v$ exactly, and in the unimodular basis $P=(v,e_1,e_3)$ the induced operator on
+the quotient lattice $\Z^3/\Z v$ is
+\[
+  A=\begin{pmatrix}8&2\\5&3\end{pmatrix}
+   =\begin{pmatrix}\operatorname{rank}E_8&|\Z_2|\\ \gcar&\Nfam\end{pmatrix}:
+\]
+the four discrete atoms form \emph{one integer quotient operator}, with
+$\operatorname{tr}A=11$, $\det A=14=\det C$, $\operatorname{disc}\chi_A=65=5\cdot13$,
+$\operatorname{perm}A=34=p_5(a)$, $\prod A_{ij}=240=|R(E_8)|$ and $\det(A{-}I)=4=|\mu_4|$. The center
+\emph{self-codes}: its row sums $C\mathbf 1=(7,11,13)$ equal exactly
+$(\det A/|\Z_2|,\ \operatorname{tr}A,\ \operatorname{disc}\chi_A/\gcar)$, and together with the fixed
+eigenvalue $1$ this is $(1,7,11,13)$ --- the positive representatives of the CP pairs $m\sim30{-}m$ of the
+$E_8$ Coxeter exponents $(\Z/30)^\times$ (the CP-halved Coxeter clock, \vref{v223}). The \vref{v414}
+resolvent ladder acquires its inner structure: $\det(C{+}kI)=(k{+}1)\det(A{+}kI)$ \emph{identically}, with
+$(k{+}1)=(1,2,3,4)=(N_\Phi,|\Z_2|,\Nfam,|\mu_4|)$ and the quotient ladder
+$\det(A{+}kI)=(14,26,40,56)$ (readings $\dim G_2$, $\dim V_{26}(F_4)$, $|R(D_5)|$, $\dim V_{56}(E_7)$,
+audit-typed \mC), first differences $(12,14,16)=(\dim\mathfrak g_{\mathrm{SM}},\dim G_2,\dim S^+)$, and the
+new endpoint $\det(C{+}3I)=224=248-24$. \emph{Honest uniqueness:} eigenvalue $1$ is \emph{not} unique to
+$C$ ($K$ and $Q$ share it), but the $K$ quotient
+$\big(\begin{smallmatrix}14&8\\-11&-6\end{smallmatrix}\big)$ and the $Q$ quotient
+$\big(\begin{smallmatrix}3&1\\3&2\end{smallmatrix}\big)$ are not the atom matrix and cannot self-code
+($5\nmid48$; $3/2\notin\Z$) --- $C$ is unique in the \emph{conjunction} fixed line $+$ atom quotient $+$
+CP self-code; the full selector-stratum ablation stays open \mO. Exact \mE, readings \mC.
+\smallskip\\
+\noindent\textbf{The sheet transfer is a norm line of discriminant $-7$
+(\veri{v533\_ftransfer\_disc7\_norm.py}).} The branch-preserving transfer path $J,K,C,F=M(1,-2..1)$
+(\vref{v224}/\vref{v412}) carries the exact norm identity
+\[
+  D(t)=\det M(1,t)=4t^2+14t+14=\frac{(4t+7)^2+7}{4}
+      =N_{\mathbb Q(\sqrt{-7})/\mathbb Q}(\alpha_t),\qquad \alpha_t=\frac{4t+7+\sqrt{-7}}2,
+\]
+with $\alpha_t$ an \emph{algebraic integer} ($-7\equiv1\bmod4$, $4t{+}7$ odd, so
+$\alpha_t\in\Z[(1{+}\sqrt{-7})/2]$) and the whole path one arithmetic \emph{translation}
+$\alpha_{t+1}=\alpha_t+2=\alpha_t+|\Z_2|$ with norms $(2,4,14,32)=(\det J,\det K,\det C,\det F)$. The
+characteristic polynomial $x^2-(4t{+}7)x+D(t)$ has discriminant $-7$ for \emph{every} $t$; the vertex sits
+at $t=-7/4$ with $D_{\min}=7/4>0$ (no real zero on the branch-preserving path), and the two sheet
+coefficients reappear arithmetically: curvature $D''=8=\operatorname{rank}E_8$, $\sqrt{-\operatorname{disc}}
+=\sqrt7$ (the scalaron as fixed quadratic discriminant, \mC). Since $-7\equiv1\bmod 8$, the prime $2$
+\emph{splits} in $\mathbb Q(\sqrt{-7})$ (class number $1$): the $J$ endpoint norm $2=|\Z_2|$ is the split prime
+above~$2$ (audit). Negative controls: the winding axis $\det M(s,0)=6s{+}8$ is linear and the anchor block
+$\det B(1,t)=3t^2{+}21t{+}28$ has \emph{positive} discriminant $105$ --- only the sheet determinant is a
+complex norm line. Whether the four external transfer solvers act on $\alpha_t$ by a \emph{common}
+fractional-linear action is the preregistered next test (kill: four incompatible arithmetic actions);
+$F_{\mathrm{transfer}}$ itself stays an external interface \mO. Exact \mE, the arithmetic frame \mC/\mO.
+\smallskip\\
 \noindent\textbf{The square CM-norm dictionary is operator-realised, and the deck is intrinsic
 (\veri{v415\_gaussian\_operator.py}).} The non-commutativity of the two axes is itself a $\mu_4$
 quarter-turn: the integer commutator
@@ -2289,7 +2336,12 @@ free-plus-twist state class (the ninth, \vref{v525}), the first genuinely intera
 (the tenth, \vref{v529}) --- and is now physically \emph{defined} as the twist-class choice:
 a $15$-facet exact equivalence web with a gauge-robust order parameter ($O=\tfrac12$ at $m=4$,
 $0$ elsewhere), in principle interferometrically readable (\vref{v528},
-\texttt{SEAM.BIT.TWISTCLASS.01}; the bit remains formal input, no marker moves).
+\texttt{SEAM.BIT.TWISTCLASS.01}; the bit remains formal input, no marker moves) --- and it now
+carries the first \emph{positive} selection datum: reflection positivity, imposed on the
+interacting mark family, keeps exactly \emph{one} member alive, $\delta=\pi/2$ with positive
+coupling --- the carrier of that order parameter
+(\veri{v534\_seam\_straddle\_cone.py}, \texttt{SEAM.STRADDLE.CONE.01}; toy-level evidence for a
+dynamical origin, not a derivation).
 
 \begin{proposition}[Per-sector assignment from the cusp ordering --- part (i) closed]
 A parabolic line sub-bundle $\ell$ of the slope-$0$ semistable $E$ obeys

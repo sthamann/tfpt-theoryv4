@@ -6,7 +6,9 @@ import { Check, CircleDashed, TriangleAlert } from "lucide-react";
 /**
  * WoitBridgeProgress -- compact stage bar for WOIT.OS.TWISTOR.01 (the
  * Osterwalder-Schrader twistor bridge): alpha / beta1 / beta2 executed,
- * beta3 open under the straddle-law constraint (v529). Contract stays [O].
+ * beta3 open under the straddle-law constraint (v529), the straddle filter
+ * since executed as a selector with a unique survivor (v534). Contract
+ * stays [O].
  */
 
 type StageState = "done" | "open";
@@ -115,7 +117,11 @@ export function WoitBridgeProgress() {
           <em>straddle law</em> (RP fails exactly on quartet-straddled cuts, 24/24). Fenced — one
           toy, one interaction class — this is a named threat <em>and</em> the first hard selection
           principle: every candidate <span className="font-mono">A_hol</span> must pass the
-          straddle filter. No marker moves; the contract stays [O].
+          straddle filter. Executed as a selector (v534), the filter keeps exactly{" "}
+          <em>one</em> member alive: reflection positivity dynamically selects the alignment bit{" "}
+          <span className="font-mono">δ = π/2</span> with positive coupling — the symmetric
+          straddling of the self-mirror member protects RP where every asymmetric member dies.
+          No marker moves; the contract stays [O].
         </span>
       </div>
     </div>
