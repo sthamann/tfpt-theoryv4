@@ -89,6 +89,7 @@ const CLUSTERS: Cluster[] = [
       { file: "v532_e8_degree_modular_checksum.py", what: "Dual-degree checksum: (60,192,240,252) → 744=3·248, |W(E8)|, gcd 12; j = q⁻¹+744+…; D16 control 1488=3·496; primes<30 fingerprint [audit]" },
       { file: "v535_hecke_from_geometry.py", what: "HECKE.GEOM.01: Hecke from geometry — Kneser #iso_lines = sigma3*#P3 (135/1120/19656/137600); nu_p = a Id + b T_p with a_p = b-sigma3 => a3=-4, a5=-2; dim V = 7 = 5+2 oldforms; pi_cusp = (28-T3)/32; 2-adic levels only (25 checks, ~11 s)" },
       { file: "v536_eichler_trace_layer.py", what: "HECKE.GEOM.EICHLER.01: Eichler trace layer at E8 — Witt λ_Eis; two-sided λ_geom=λ_Eis+a_p² (p=3 live, p=5 freeze); Type-A/B densities N_A=min(240(1+p³),#iso−1); signed a_p=−c(p)/8 (−4,−2,+24); O(1) assembler p≤31 (23 checks, ~30 s)" },
+      { file: "v537_halfintegral_bridge.py", what: "HECKE.GEOM.HALFINT.01: half-integral bridge — unique Sh_{t=2}(g)=-8 f8 in 70-monoid; T(p^2) eigen a_p(f8); U4(g)=0 / outside Kohnen 1982; Waldspurger R=23.1873585645... constant on 10 d≡1 mod 8 (20 checks, ~90 s)" },
     ],
   },
   {

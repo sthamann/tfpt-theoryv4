@@ -62,6 +62,35 @@ compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/v
 \fi
 
 
+\subsection*{\interlinepenalty=150\relax 2026-07-24 (XV) (\texttt{v537} --- half-integral bridge: unique Shimura preimage + $T(p^2)$ Hecke equivariance + Kohnen scope fence + Waldspurger/Baruch--Mao constancy; NO marker moves)}
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{New module \texttt{v537} (\texttt{HECKE.GEOM.HALFINT.01}).} Consolidated promotion of discovery
+probes T38/T41/T44/T45 into one load-bearing module ($20$ checks, $\sim90$\,s). Companion to
+\texttt{v535}/\texttt{HECKE.GEOM.01} and \texttt{v536}/\texttt{HECKE.GEOM.EICHLER.01} without duplicating
+weight-$4$ Kneser/Eichler checks. Classical Shimura/Kohnen/Waldspurger/Baruch--Mao named classical ---
+the claim is the unique signed-scale monoid preimage, the in-suite chain, and the \emph{measured}
+constant $R$.
+\item \textbf{(A) Unique Shimura preimage at scale $-8$ \mE.} In the $70$-element compiler weight-$5/2$
+theta-monoid exactly one object satisfies $\mathrm{Sh}_{t=2,\psi=1}(g)=-8\,f_8$ (witness
+$g=\vartheta_2(q^2)^2\,\vartheta_3(q^2)\,\vartheta_4\,\vartheta_4(q^2)$, verified through $n\le120$);
+three further monoid elements lift to scales $+8,-16,+16$.
+\item \textbf{(B) Hecke equivariance \mE.} Exact $T(p^2)$-eigenform, trivial nebentypus, with
+$\lambda=a_p(f_8)$ for $p=3,5,7,11,13$ ($-4,-2,24,-44,22$); trial FE $N=512$, $\varepsilon=+1$
+(centre $5/4$).
+\item \textbf{(C) Kohnen scope fence \mE.} $U_4(g)=0$ (mass mod~$4$ on $\{1,2\}$); level
+$32=4\cdot8$ outside Kohnen~$1982$ --- plus-route structurally closed (negative result part of the
+claim).
+\item \textbf{(D) Waldspurger/Baruch--Mao constancy \mC.} AFE twist $L$-values
+($\varepsilon_d=\chi_d(8)$); $R(d)=23.1873585645\ldots$ constant on ten fundamental
+$d\equiv1\pmod8$ (spread $\le10^{-12}$, including $d=89$); $d\equiv5\pmod8$ vanishes.
+\item \textbf{Fences.} GL$(2)$ centre $s=2$, not the $\xi$-line; no RH; \texttt{ZETA.HP.CARRIER}
+untouched; no marker moves.
+\item \textbf{Surfaces.} Ledger \texttt{HECKE.GEOM.HALFINT.01}; $\backslash$veri in
+\texttt{tfpt\_1}/\texttt{tfpt\_3}/\texttt{tfpt\_research\_contracts}; Wolfram extension $+5$
+($598\to603$); website \texttt{papers.ts} + VerificationDag E8 + ScriptIndex via
+\texttt{bash build.sh gen}.
+\end{itemize}
+
 \subsection*{\interlinepenalty=150\relax 2026-07-24 (XIV) (\texttt{v536} --- Eichler trace layer at the $E_8$ lattice: Witt $\lambda_{\mathrm{Eis}}$ + two-sided Eichler identity + Type-A/B local densities + signed $a_p$; NO marker moves)}
 \begin{itemize}[leftmargin=1.5em]
 \item \textbf{New module \texttt{v536} (\texttt{HECKE.GEOM.EICHLER.01}).} Consolidated promotion of discovery

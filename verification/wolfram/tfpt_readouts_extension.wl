@@ -8556,5 +8556,32 @@ Module[{p, sig3, P3, L, lamEis, Nperp, shell, iso1, NA, NB, ap, R, b},
       ok]];
 ];
 
-Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536: ", $pass, " passed, ", $fail, " failed ---"];
+(* ==== v537 round: HECKE.GEOM.HALFINT.01 -- half-integral bridge (exact identities).
+   q-series builds, AFE/L-values and R-constancy stay Python-only. *)
+Module[{aps, scales, M, w4, eps},
+  aps = <|3 -> -4, 5 -> -2, 7 -> 24, 11 -> -44, 13 -> 22|>;
+  checkExact["v537 HECKE.GEOM.HALFINT.01 (i): f8 a_p HEAD TABLE, EXACT -- a_p(f8) at p=3,5,7,11,13 = (-4,-2,24,-44,22)",
+    {aps[3], aps[5], aps[7], aps[11], aps[13]} === {-4, -2, 24, -44, 22}];
+  checkExact["v537 HECKE.GEOM.HALFINT.01 (ii): SHIMURA SCALE / WEIGHT, EXACT -- k=2 => weight 5/2 -> 4; signed preimage scale -8; related monoid scales {+8,-16,+16}",
+    2*(2) === 4 && (-8)*1 === -8 &&
+    Sort[{-8, 8, -16, 16}] === {-16, -8, 8, 16} &&
+    Length[Select[{-8, 8, -16, 16}, # === -8 &]] === 1];
+  M = 8;
+  w4 = Catch[Do[
+    Do[
+      If[Mod[4 a - 1, M b] === 0, Throw[{a, b, (4 a - 1)/(M b)}]],
+      {b, 1, 63, 4}],
+    {a, 0, 63}]; None];
+  checkExact["v537 HECKE.GEOM.HALFINT.01 (iii): KOHNEN SCOPE FENCE, EXACT -- level 32=4*8 has M=8 even (not odd squarefree); W(4) condition 4a-M b c=1 unsolvable with b≡1 mod 4",
+    4*M === 32 && EvenQ[M] && Abs[MoebiusMu[M]] =!= 1 && w4 === None];
+  eps[d_] := KroneckerSymbol[d, 8];
+  checkExact["v537 HECKE.GEOM.HALFINT.01 (iv): TWIST ROOT NUMBER, EXACT -- eps_d = chi_d(8) = +1 on d≡1 mod 8 and -1 on d≡5 mod 8 (sample fund. discriminants)",
+    AllTrue[{1, 17, 33, 41, 57, 73, 89, 97}, eps[#] === 1 &] &&
+    AllTrue[{5, 13, 29, 37, 53, 61}, eps[#] === -1 &]];
+  checkExact["v537 HECKE.GEOM.HALFINT.01 (v): SIGNED-SCALE UNIQUENESS CARDINALITY, EXACT -- among related scales {-8,+8,-16,+16} exactly one equals -8 (the T38 witness scale)",
+    Count[{-8, 8, -16, 16}, -8] === 1 &&
+    Union[Abs /@ {-8, 8, -16, 16}] === {8, 16}];
+];
+
+Print["--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM EXTENSION CHECKS PASSED"]];

@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`530` registered scripts · `601` ledger claims · `10` clusters.
+`531` registered scripts · `602` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (63 scripts)
+### `core` — Compiler core & the E₈ glue  (64 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -137,6 +137,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v1, v89, v532_e8_degree_modular_checksum, T27, T31, T32 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v536_eichler_trace_layer** [E/C/O] `HECKE.GEOM.EICHLER.01` — Witt λ_Eis; two-sided λ_geom=λ_Eis+a_p² (p=3 live, p=5 freeze); Type-A/B densities N_A=min(240(1+p³),#iso−1); signed a_p=−c(p)/8 (−4,−2,+24); O(1) assembler p≤31 (23 checks, ~30 s)
   - deps: v535_hecke_from_geometry, v535, T33, T36, T37, T42 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+- **v537_halfintegral_bridge** [E/C] `HECKE.GEOM.HALFINT.01` — unique Sh_{t=2}(g)=-8 f8 in 70-monoid; T(p^2) eigen a_p(f8); U4(g)=0 / outside Kohnen 1982; Waldspurger R=23.1873585645... constant on 10 d≡1 mod 8 (20 checks, ~90 s)
+  - deps: v535_hecke_from_geometry, v536_eichler_trace_layer, v535, v536, T38, T41, T44, T45 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1131,7 +1133,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v525_seam_bit_twist_blind** — `SEAM.BIT.TWISTBLIND.01`
 - **v526_seam_thermal_kms_nariai_bridge** — `SEAM.THERMAL.KMS.01`
 - **v527_seam_clock_silver_spectrum** — `SEAM.CLOCK.SILVER.01`
 - **v528_seam_bit_twist_class_definition** — `SEAM.BIT.TWISTCLASS.01`
@@ -1143,4 +1144,5 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v534_seam_straddle_cone** — `SEAM.STRADDLE.CONE.01`
 - **v535_hecke_from_geometry** — `HECKE.GEOM.01`
 - **v536_eichler_trace_layer** — `HECKE.GEOM.EICHLER.01`
+- **v537_halfintegral_bridge** — `HECKE.GEOM.HALFINT.01`
 

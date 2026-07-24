@@ -61,6 +61,16 @@ export type PrimeFrontUpdate = {
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
   {
     date: "2026-07-24",
+    part: 0,
+    title: "Promoted: the half-integral bridge (v537)",
+    verdict: "MACHINE-VERIFIED",
+    summary:
+      "The half-integral bridge is now load-bearing: v537 verifies in one module that the compiler theta monoid contains a unique weight-5/2 Shimura preimage of f8 (Sh(g) = -8 f8 to n = 120), that g is an exact T(p^2)-eigenform with eigenvalues a_p (p = 3..13), that the Kohnen-plus route is structurally out of scope (an honest negative built into the claim), and that the Waldspurger quotient is constant to thirteen decimal places across ten discriminants (R = 23.1873585645..., d = 5 mod 8 vanishing structurally). Audit OK, Wolfram mirrors 603/603. Classical theorems named as classical; no RH claim.",
+    badge: "machine-verified",
+    script: "v537_halfintegral_bridge.py",
+  },
+  {
+    date: "2026-07-24",
     part: 45,
     title: "Central values wired: Waldspurger constancy to thirteen decimal places",
     verdict: "CENTRAL-VALUES-WIRED",

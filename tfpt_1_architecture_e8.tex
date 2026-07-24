@@ -744,6 +744,34 @@ closed compiler densities. Honest fences: $\mathrm{Shell}(p^2)$ for $p\ge7$ out 
 fibre refinement scoped to $\{5,7,11\}$; weight-$4\to$GL$(1)$ stays \mO; no RH claim; no
 marker moves. \mE\ (mechanics) / \mO\ (weight drop)
 
+\par\smallskip\noindent\textbf{Half-integral bridge
+(\texttt{HECKE.GEOM.HALFINT.01}).}
+The weight-$4$ cusp $f_8$ now has a machine-checked half-integral companion in the compiler
+theta-monoid (\veri{v537\_halfintegral\_bridge.py}; $20$ checks, $\sim90$\,s; companion to
+\texttt{HECKE.GEOM.01}/\texttt{HECKE.GEOM.EICHLER.01}).
+\emph{(A)} In the $70$-element weight-$5/2$ theta-monoid (plain and $q^2$-scaled
+$\vartheta_2,\vartheta_3,\vartheta_4$) there is exactly one object with the signed Shimura
+identity $\mathrm{Sh}_{t=2,\psi=1}(g)=-8\,f_8$ (witness
+$g=\vartheta_2(q^2)^2\,\vartheta_3(q^2)\,\vartheta_4\,\vartheta_4(q^2)$, verified
+coefficientwise through $n\le120$; three further monoid elements lift to scales
+$+8,-16,+16$).
+\emph{(B)} $g$ is an exact $T(p^2)$-eigenform of weight $5/2$, trivial nebentypus, with
+eigenvalues $a_p(f_8)$ for $p=3,5,7,11,13$ ($-4,-2,24,-44,22$); trial FE of the
+$5/2$-side around centre $5/4$ with $N=512$, $\varepsilon=+1$.
+\emph{(C)} $U_4(g)=0$ exactly (mass mod~$4$ supported on $\{1,2\}$); level $32=4\cdot8$
+with $M=8$ even lies outside Kohnen~$1982$ --- the plus-route is structurally closed
+(negative result part of the claim).
+\emph{(D)} With AFE-based twist $L$-values
+($\varepsilon_d=\chi_d(8)$; $\varepsilon=-1\Rightarrow L(2)=0$), the Waldspurger quotient
+$R(d)=b(|d|)^2\big/\bigl(|d|^{3/2}L(f_8\times\chi_d,2)\bigr)$ is constant on ten
+fundamental discriminants $d\equiv1\pmod8$ ($R=23.1873585645\ldots$, relative spread
+$\le10^{-12}$, including $d=89$); the class $d\equiv5\pmod8$ vanishes structurally.
+Classical Shimura/Kohnen/Waldspurger/Baruch--Mao named classical; the claim is the unique
+signed-scale monoid preimage, the in-suite chain, and the \emph{measured} constant $R$.
+Honest fences: GL$(2)$ centre $s=2$, not the $\xi$-line; no RH claim;
+\texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+\mE\ (Shimura/Hecke/Kohnen fence) / \mC\ (measured $R$)
+
 \subsection{Glue-norm arithmetic, and three readings of $41$, $60$, $120$}
 The two glue norms generate the carrier integers through sum, difference and product. With
 $\dim S^+=16$:

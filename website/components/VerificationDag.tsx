@@ -171,6 +171,7 @@ const NODES: DagNode[] = [
       "v532_e8_degree_modular_checksum.py",
       "v535_hecke_from_geometry.py",
       "v536_eichler_trace_layer.py",
+      "v537_halfintegral_bridge.py",
       "v227_degree_exponent_channel_split.py",
       "v232_e8_kleinian_seam.py",
       "v234_seam_holomorphy_selection.py",

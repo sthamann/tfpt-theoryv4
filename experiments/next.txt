@@ -1,3 +1,61 @@
+# 2026-07-24 (XXI) — PROMOTION: T38+T41+T44+T45 → verification/v537_halfintegral_bridge.py (HECKE.GEOM.HALFINT.01) — 20/20, ~90 s; half-integral bridge (unique Shimura preimage + Hecke equivariance + Kohnen scope fence + Waldspurger/Baruch–Mao constancy); NO marker moves
+# Konsolidierte Promotion der Discovery-Proben cuspidal_bridge_probe.py (T38), functor_wiring_halfintegral_probe.py (T41),
+# kohnen_operator_projection_probe.py (T44), baruch_mao_metaplectic_probe.py (T45) in EIN load-bearing Modul. Companion zu
+# v535/HECKE.GEOM.01 und v536/HECKE.GEOM.EICHLER.01 (Gewicht-4 Kneser/Eichler NICHT dupliziert). Claim ist NICHT RH-bezogen.
+#
+# (A) Eindeutiges Shimura-Urbild bei Scale −8: im 70er Compiler-Theta-Monoid Gewicht 5/2 genau EIN Objekt mit
+#     Sh_{t=2,ψ=1}(g)=−8·f₈ (Zeuge g=θ₂(q²)²·θ₃(q²)·θ₄·θ₄(q²); n≤120); drei weitere Monoid-Elemente heben auf
+#     Scales +8/−16/+16 (dokumentiert).
+# (B) Hecke-Äquivarianz: exakte T(p²)-Eigenform, Nebentypus trivial, λ=a_p(f₈) für p=3,5,7,11,13 (−4,−2,24,−44,22);
+#     Trial-FE N=512, ε=+1 (Zentrum 5/4).
+# (C) Kohnen-Scope-Fence (NEGATIV-Resultat Teil des Claims): U₄(g)=0 (Masse mod4 {0:0,1:39464,2:53280,3:0});
+#     Level 32=4·8 außerhalb Kohnen 1982 — Plus-Route strukturell zu.
+# (D) Waldspurger/Baruch–Mao-Konstanz [C]: AFE-Twist-L-Werte (rel≤1e-8 bei s=3.5; ε_d=χ_d(8));
+#     R(d)≡23.1873585645… konstant über 10 Fund.-Diskriminanten d≡1 mod 8 (Spread ≤1e-12, inkl. d=89);
+#     d≡5 mod 8 verschwindet strukturell.
+# Fences: Klassik (Shimura/Kohnen/Waldspurger/Baruch–Mao) als klassisch benannt; GL(2)-Zentrum s=2, NICHT ξ-Linie;
+#     kein RH; ZETA.HP.CARRIER unberührt; keine Marker-Moves.
+# Surfaces: Ledger HECKE.GEOM.HALFINT.01; \veri in tfpt_1 / tfpt_3 / tfpt_research_contracts; Changelog (XV);
+#     Wolfram extension 598 → 603; website papers.ts + VerificationDag E8 + ScriptIndex via gen; AUDIT OK.
+#
+# 2026-07-24 (XX) — Teil 45 (delegiert): baruch_mao_metaplectic_probe.py — **CENTRAL-VALUES-WIRED-BM**: die Zentralwert-Familie IST als b(d)² des Compiler-Objekts g realisiert; R(d) EXAKT konstant (Spread 2.7e-13 über 10 Diskriminanten) — 13/13, 19s, Sandbox
+# Der Finaltest der Zentralwert-Linie, mit der T43/T44-Lektion (L-Wert-Qualität zuerst): B1 AFE-basierte
+# Twist-L-Werte (T12-Lambda-Technik; AFE↔Direktsumme rel 1e-8..1e-11 bei s = 3.5; ε_d = χ_d(8);
+# ε = −1 ⇒ L(2) = 0 korrekt) — der T44-Ausreißer d = 89 stabilisiert auf L(2) = 0.210389 (er WAR
+# numerisch, die Direktsumme bei s = 2 bleibt falsch — Diagnose bestätigt). B2: R(d) =
+# b(|d|)²/(|d|^{3/2}·L(f₈×χ_d, 2)) über 10 Fundamentaldiskriminanten d ≡ 1 mod 8:
+# **R ≡ 23.1873585645, Spread 2.7e-13** (d = 1, 17, 33, 57, 65, 73, 89, 97, 105, 113); die Klasse
+# d ≡ 5 mod 8 verschwindet STRUKTURELL (alle 13 mit b = 0; Wurzelzahl −1 ⇒ L(2) = 0 — Konsistenz,
+# kein Fail). Klassik: Waldspurger 1981 / Baruch–Mao für Non-Plus-Formen.
+# ⇒ DRITTER FUNKTOR-KANAL VERDRAHTET: die zentrale L-Wert-Familie L(f₈×χ_d, 2) ist (bis auf EINE
+# gemessene Konstante) die Koeffizienten-Quadrat-Familie des Compiler-Objekts g. Die Funktor-Kartierung
+# ist damit auf Probenebene DREIKANALIG geschlossen: abelsch → Zentrum 1/2 (T39); kuspidal → a_p als
+# T(p²)-Eigenwerte (T41); Zentralwerte → b(d)² (T45). Ehrlich: GL(2)-Zentrum s = 2, NICHT die ξ-Linie;
+# kein RH-Gehalt; ZETA.HP.CARRIER unberührt (T40-Diagnose gilt).
+# PROMOTIONSKANDIDAT benannt (v537): die Halb-Gewicht-Brücke als Paket T38+T41+T44+T45 (eindeutiges
+# Shimura-Urbild im Monoid + Hecke-Äquivarianz + Kohnen-Scope-Abgrenzung + Baruch–Mao-Konstanz).
+# Serie (XII)–(LVI): 45 Proben, 906/906 Checks Sandbox + v535/v536 promoviert.
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Waldspurger, Baruch–Mao, Shimura, AFE) als
+# klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
+# 2026-07-24 (XIX) — Teil 44 (delegiert): kohnen_operator_projection_probe.py — **OUTSIDE-KOHNEN-SCOPE**, die Zentralwert-Route über Kohnen-Plus ist STRUKTURELL ZU (drei unabhängige Gründe) — 17/17, Sandbox
+# (V1 Operator-Validierung: Jacobi-FE-Kalibrierung U4W4(θ₃⁵) = 4√2·θ₃⁵; Even-M-Projektor idempotent/
+# plus/T(p²)-kommutierend; spektrales pr⁺₄ auf ker(U4) = (1/3)Id, nicht idempotent — korrekt, denn:)
+# (1) U₄(g) = 0 EXAKT (g hat keinerlei Masse auf n ≡ 0 mod 4; Support mod 4 = {0: 0, 1: 39464,
+#     2: 53280, 3: 0} bis n = 800) ⇒ das spektrale Kohnen-pr⁺ sieht keine Plus-Komponente;
+# (2) der Even-M-Support-Cut ist plus + a_p-eigen, aber KEIN Shimura–Kohnen-Urbild von f₈ (T43);
+# (3) Level 32 = 4·8 mit M = 8 GERADE liegt außerhalb von Kohnen 1982 (braucht M ungerade quadratfrei;
+#     4a − Mbc = 1 unlösbar). ⇒ Kohnen-Isomorphie nicht auf M = 8 biegen — Verdikt nach Vorregistrierung.
+# EXPLORATIV (nicht verdikt-bildend): Waldspurger-Quotienten CLUSTERN (21.2/21.5/29.3/21.2/23.0/−27.5;
+# der Ausreißer d = 89 hat schlecht konvergenten Twist-L-Wert) — Motivation für den LETZTEN Hebel der
+# Zentralwert-Linie: Baruch–Mao/metaplektische Waldspurger-Formeln für NON-PLUS-Formen (klassisch),
+# mit sauberer FE-basierter Twist-L-Berechnung statt Direktsummen (T45 gestartet). Wenn auch das
+# scheitert, ruht die Zentralwert-Linie als getypt-offen; die Funktor-Kartierung (abelsch → 1/2,
+# kuspidal → a_p) bleibt davon unberührt.
+# Serie (XII)–(LV): 44 Proben, 893/893 Checks Sandbox + v535/v536 promoviert (Commit faf47e4).
+# Firewall: Konsistenz, keine RH-Evidenz; Klassik (Kohnen 1980/82, Baruch–Mao, Waldspurger) als
+# klassisch benannt; Sandbox ohne Ledger-/Paper-/Marker-Änderung.
+
 # 2026-07-24 (XVIII) — Teile 41–43 (delegiert): die Brücke ist HECKE-ÄQUIVARIANT (FUNCTOR-WIRED) + Dichten geschlossen (T42 → v536 promoviert, s. (XVII)) + Kohnen-Plus PARTIAL — 13/13 + 25/25 + 12/12, Sandbox
 # functor_wiring_halfintegral_probe.py (T41, 22s), e8_local_densities_probe.py (T42, 25s),
 # kohnen_plus_waldspurger_probe.py (T43, 47s).

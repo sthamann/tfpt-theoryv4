@@ -2396,6 +2396,26 @@ scoped to $\{5,7,11\}$; weight-$4\to$GL$(1)$ stays \mO; no RH; no marker moves.
 Machine-checked: \veri{v536\_eichler\_trace\_layer.py}.
 \mE\ (mechanics) / \mO\ (weight drop)
 
+\par\smallskip\noindent\textbf{Half-integral bridge
+(\texttt{HECKE.GEOM.HALFINT.01}).}
+Consolidated promotion of discovery T38/T41/T44/T45 ($20$ checks, $\sim90$\,s; companion
+to \texttt{HECKE.GEOM.01}/\texttt{HECKE.GEOM.EICHLER.01}). Unique signed Shimura preimage
+$\mathrm{Sh}_{t=2,\psi=1}(g)=-8\,f_8$ in the $70$-element compiler weight-$5/2$
+theta-monoid (witness
+$g=\vartheta_2(q^2)^2\,\vartheta_3(q^2)\,\vartheta_4\,\vartheta_4(q^2)$; three further
+monoid elements lift to scales $+8,-16,+16$); exact $T(p^2)$-eigenform with
+$\lambda=a_p(f_8)$ for $p=3,5,7,11,13$; $U_4(g)=0$ and level $32=4\cdot8$ outside
+Kohnen~$1982$ (plus-route structurally closed --- negative result part of the claim);
+AFE-based Waldspurger/Baruch--Mao quotient
+$R(d)=b(|d|)^2\big/\bigl(|d|^{3/2}L(f_8\times\chi_d,2)\bigr)$ constant on ten
+fundamental $d\equiv1\pmod8$ ($R=23.1873585645\ldots$, spread $\le10^{-12}$, including
+$d=89$), with $d\equiv5\pmod8$ vanishing via root number $-1$. Classical
+Shimura/Kohnen/Waldspurger/Baruch--Mao named classical; claim $=$ unique monoid preimage
+$+$ in-suite chain $+$ \emph{measured} $R$. Fences: GL$(2)$ centre $s=2$ (not the
+$\xi$-line); no RH; \texttt{ZETA.HP.CARRIER} untouched; no marker moves.
+Machine-checked: \veri{v537\_halfintegral\_bridge.py}.
+\mE\ (Shimura/Hecke/Kohnen fence) / \mC\ (measured $R$)
+
 
 \begin{lemma}[G3--G4 --- reflection positivity, fixed and integrated]
 For each $\Theta$-invariant $g$ in the Calderón ball the physical boundary kernel

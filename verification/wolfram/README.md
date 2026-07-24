@@ -234,10 +234,17 @@ identity with anchors `(336,3780,19264)`; Eichler anchors / `N_⊥`
 `N_A/N_B` with `p=7` `(82560,743040)`; signed `a_p`/`b`/`R` tables; and
 the assembler / Ramanujan identities — live FP `Shell(p)`/`Shell(p²)`
 stay Python-only, flagged), verified directly with the active engine
-(run 2026-07-24), 593 → 598):
+(run 2026-07-24), 593 → 598; and the `v537` half-integral-bridge round
+adds 5 more exact mirrors (the `a_p(f8)` head table
+`(-4,-2,24,-44,22)`; Shimura scale `-8` / weight `5/2→4` with related
+scales `{+8,-16,+16}`; Kohnen scope fence `M=8` even / `W(4)`
+unsolvable; twist root number `ε_d=χ_d(8)` on `d≡1,5 mod 8`; and
+signed-scale uniqueness cardinality `1-of-4` — q-series builds,
+AFE/L-values and `R`-constancy stay Python-only, flagged), verified
+directly with the active engine (run 2026-07-24), 598 → 603):
 
 ```
---- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536: 598 passed, 0 failed ---
+--- Wolfram extension v84-v237 + v259-v260 + v267-v268 + v271 + v273 + v277 + v278 + v281 + v282 + v313-v320 + v325 + v327 + v337 + v341 + v342 + v344 + v345 + v347 + v348 + v349 + v350 + v351 + v352 + v354 + v355 + v358 + v359 + v410-v419 + v422 + v429 + v430 + v431 + v437 + v445 + v450-v454 + v456 + v457 + v459 + v461 + v462 + v463 + v469 + v470 + v473 + v474 + v475 + v477 + v479 + v491 + v493 + v495 + v496 + v497 + v498 + v499 + v500 + v501 + v502 + v503 + v504 + v505 + v506 + v507 + v508 + v509 + v510 + v511 + v512 + v513 + v514 + v515 + v516 + v517 + v518 + v519 + v520 + v521 + v522 + v523 + v524 + v525 + v526 + v527 + v528 + v529 + v530 + v531 + v532 + v533 + v534 + v535 + v536 + v537: 603 passed, 0 failed ---
 ALL WOLFRAM EXTENSION CHECKS PASSED
 ```
 

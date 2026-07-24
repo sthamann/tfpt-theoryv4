@@ -43,6 +43,572 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-07-24",
+    "dateLabel": "2026-07-24 · XV",
+    "heading": [
+      {
+        "k": "c",
+        "v": "v537"
+      },
+      {
+        "k": "t",
+        "v": " — half-integral bridge: unique Shimura preimage + "
+      },
+      {
+        "k": "m",
+        "v": "T(p^2)"
+      },
+      {
+        "k": "t",
+        "v": " Hecke equivariance + Kohnen scope fence + Waldspurger/Baruch–Mao constancy; NO marker moves"
+      }
+    ],
+    "items": [
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "New module "
+            },
+            {
+              "k": "c",
+              "v": "v537"
+            },
+            {
+              "k": "t",
+              "v": " ("
+            },
+            {
+              "k": "c",
+              "v": "HECKE.GEOM.HALFINT.01"
+            },
+            {
+              "k": "t",
+              "v": ")."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Consolidated promotion of discovery probes T38/T41/T44/T45 into one load-bearing module ("
+        },
+        {
+          "k": "m",
+          "v": "20"
+        },
+        {
+          "k": "t",
+          "v": " checks, "
+        },
+        {
+          "k": "m",
+          "v": "\\sim90"
+        },
+        {
+          "k": "t",
+          "v": " s). Companion to "
+        },
+        {
+          "k": "c",
+          "v": "v535"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.01"
+        },
+        {
+          "k": "t",
+          "v": " and "
+        },
+        {
+          "k": "c",
+          "v": "v536"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.EICHLER.01"
+        },
+        {
+          "k": "t",
+          "v": " without duplicating weight-"
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " Kneser/Eichler checks. Classical Shimura/Kohnen/Waldspurger/Baruch–Mao named classical — the claim is the unique signed-scale monoid preimage, the in-suite chain, and the "
+        },
+        {
+          "k": "i",
+          "c": [
+            {
+              "k": "t",
+              "v": "measured"
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " constant "
+        },
+        {
+          "k": "m",
+          "v": "R"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(A) Unique Shimura preimage at scale "
+            },
+            {
+              "k": "m",
+              "v": "-8"
+            },
+            {
+              "k": "t",
+              "v": " "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " In the "
+        },
+        {
+          "k": "m",
+          "v": "70"
+        },
+        {
+          "k": "t",
+          "v": "-element compiler weight-"
+        },
+        {
+          "k": "m",
+          "v": "5/2"
+        },
+        {
+          "k": "t",
+          "v": " theta-monoid exactly one object satisfies "
+        },
+        {
+          "k": "m",
+          "v": "\\mathrm{Sh}_{t=2,\\psi=1}(g)=-8\\,f_8"
+        },
+        {
+          "k": "t",
+          "v": " (witness "
+        },
+        {
+          "k": "m",
+          "v": "g=\\vartheta_2(q^2)^2\\,\\vartheta_3(q^2)\\,\\vartheta_4\\,\\vartheta_4(q^2)"
+        },
+        {
+          "k": "t",
+          "v": ", verified through "
+        },
+        {
+          "k": "m",
+          "v": "n\\le120"
+        },
+        {
+          "k": "t",
+          "v": "); three further monoid elements lift to scales "
+        },
+        {
+          "k": "m",
+          "v": "+8,-16,+16"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(B) Hecke equivariance "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Exact "
+        },
+        {
+          "k": "m",
+          "v": "T(p^2)"
+        },
+        {
+          "k": "t",
+          "v": "-eigenform, trivial nebentypus, with "
+        },
+        {
+          "k": "m",
+          "v": "\\lambda=a_p(f_8)"
+        },
+        {
+          "k": "t",
+          "v": " for "
+        },
+        {
+          "k": "m",
+          "v": "p=3,5,7,11,13"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "-4,-2,24,-44,22"
+        },
+        {
+          "k": "t",
+          "v": "); trial FE "
+        },
+        {
+          "k": "m",
+          "v": "N=512"
+        },
+        {
+          "k": "t",
+          "v": ", "
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon=+1"
+        },
+        {
+          "k": "t",
+          "v": " (centre "
+        },
+        {
+          "k": "m",
+          "v": "5/4"
+        },
+        {
+          "k": "t",
+          "v": ")."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(C) Kohnen scope fence "
+            },
+            {
+              "k": "s",
+              "v": "E"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " "
+        },
+        {
+          "k": "m",
+          "v": "U_4(g)=0"
+        },
+        {
+          "k": "t",
+          "v": " (mass mod "
+        },
+        {
+          "k": "m",
+          "v": "4"
+        },
+        {
+          "k": "t",
+          "v": " on "
+        },
+        {
+          "k": "m",
+          "v": "\\{1,2\\}"
+        },
+        {
+          "k": "t",
+          "v": "); level "
+        },
+        {
+          "k": "m",
+          "v": "32=4\\cdot8"
+        },
+        {
+          "k": "t",
+          "v": " outside Kohnen "
+        },
+        {
+          "k": "m",
+          "v": "1982"
+        },
+        {
+          "k": "t",
+          "v": " — plus-route structurally closed (negative result part of the claim)."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "(D) Waldspurger/Baruch–Mao constancy "
+            },
+            {
+              "k": "s",
+              "v": "C"
+            },
+            {
+              "k": "t",
+              "v": "."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " AFE twist "
+        },
+        {
+          "k": "m",
+          "v": "L"
+        },
+        {
+          "k": "t",
+          "v": "-values ("
+        },
+        {
+          "k": "m",
+          "v": "\\varepsilon_d=\\chi_d(8)"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "R(d)=23.1873585645\\ldots"
+        },
+        {
+          "k": "t",
+          "v": " constant on ten fundamental "
+        },
+        {
+          "k": "m",
+          "v": "d\\equiv1\\pmod8"
+        },
+        {
+          "k": "t",
+          "v": " (spread "
+        },
+        {
+          "k": "m",
+          "v": "\\le10^{-12}"
+        },
+        {
+          "k": "t",
+          "v": ", including "
+        },
+        {
+          "k": "m",
+          "v": "d=89"
+        },
+        {
+          "k": "t",
+          "v": "); "
+        },
+        {
+          "k": "m",
+          "v": "d\\equiv5\\pmod8"
+        },
+        {
+          "k": "t",
+          "v": " vanishes."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Fences."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " GL"
+        },
+        {
+          "k": "m",
+          "v": "(2)"
+        },
+        {
+          "k": "t",
+          "v": " centre "
+        },
+        {
+          "k": "m",
+          "v": "s=2"
+        },
+        {
+          "k": "t",
+          "v": ", not the "
+        },
+        {
+          "k": "m",
+          "v": "\\xi"
+        },
+        {
+          "k": "t",
+          "v": "-line; no RH; "
+        },
+        {
+          "k": "c",
+          "v": "ZETA.HP.CARRIER"
+        },
+        {
+          "k": "t",
+          "v": " untouched; no marker moves."
+        }
+      ],
+      [
+        {
+          "k": "b",
+          "c": [
+            {
+              "k": "t",
+              "v": "Surfaces."
+            }
+          ]
+        },
+        {
+          "k": "t",
+          "v": " Ledger "
+        },
+        {
+          "k": "c",
+          "v": "HECKE.GEOM.HALFINT.01"
+        },
+        {
+          "k": "t",
+          "v": "; "
+        },
+        {
+          "k": "m",
+          "v": "\\backslash"
+        },
+        {
+          "k": "t",
+          "v": "veri in "
+        },
+        {
+          "k": "c",
+          "v": "tfpt_1"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_3"
+        },
+        {
+          "k": "t",
+          "v": "/"
+        },
+        {
+          "k": "c",
+          "v": "tfpt_research_contracts"
+        },
+        {
+          "k": "t",
+          "v": "; Wolfram extension "
+        },
+        {
+          "k": "m",
+          "v": "+5"
+        },
+        {
+          "k": "t",
+          "v": " ("
+        },
+        {
+          "k": "m",
+          "v": "598\\to603"
+        },
+        {
+          "k": "t",
+          "v": "); website "
+        },
+        {
+          "k": "c",
+          "v": "papers.ts"
+        },
+        {
+          "k": "t",
+          "v": " + VerificationDag E8 + ScriptIndex via "
+        },
+        {
+          "k": "c",
+          "v": "bash build.sh gen"
+        },
+        {
+          "k": "t",
+          "v": "."
+        }
+      ]
+    ]
+  },
+  {
+    "date": "2026-07-24",
     "dateLabel": "2026-07-24 · XIV",
     "heading": [
       {
