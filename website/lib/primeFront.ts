@@ -33,7 +33,8 @@ export type PrimeFrontVerdict =
   | "FUNCTOR-WIRED"
   | "RUNNING"
   | "TYPED"
-  | "DENSITIES-CLOSED";
+  | "DENSITIES-CLOSED"
+  | "OUTSIDE-KOHNEN-SCOPE";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -57,6 +58,16 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-24",
+    part: 44,
+    title: "The Kohnen-plus route is structurally closed",
+    verdict: "OUTSIDE-KOHNEN-SCOPE",
+    summary:
+      "Three independent reasons close the central-value route via the Kohnen plus space: the compiler object g has exactly zero mass on n = 0 mod 4 (so the spectral projector sees no plus component), the support-cut is not a Shimura-Kohnen preimage, and the level 32 = 4*8 with even M = 8 lies outside Kohnen's 1982 theorem. Exploratory Waldspurger quotients nevertheless cluster around ~21-23 with one badly-converged outlier — motivating one final probe of this line via the Baruch-Mao metaplectic formulas for non-plus forms (classical).",
+    badge: "sandbox",
+    script: "kohnen_operator_projection_probe.py",
+  },
   {
     date: "2026-07-24",
     part: 0,
