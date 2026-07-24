@@ -54,6 +54,16 @@ export type PrimeFrontUpdate = {
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
   {
     date: "2026-07-24",
+    part: 43,
+    title: "Kohnen plus space: eigenform found, isomorphism preimage not yet",
+    verdict: "PARTIAL",
+    summary:
+      "A plus-space object with the correct T(p^2) eigenvalues (-4, -2, 24) does live in the q^4-extended compiler monoid, but it is not the Kohnen-isomorphism preimage of f8 (its Shimura lift vanishes at t = 2), so the Waldspurger central-value quotient scatters (~294%) instead of being constant. The central-value wire stays open; the named next lever is a true modular plus projection (operator, not a support cut) or the metaplectic extension. Classical ingredients (Kohnen 1980/82, Waldspurger) named as classical.",
+    badge: "sandbox",
+    script: "kohnen_plus_waldspurger_probe.py",
+  },
+  {
+    date: "2026-07-24",
     part: 42,
     title: "Local densities closed: the Eichler layer is promotion-ready",
     verdict: "DENSITIES-CLOSED",
