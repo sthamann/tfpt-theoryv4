@@ -27,6 +27,7 @@ export type PrimeFrontVerdict =
   | "PROMOTED"
   | "CLOSED"
   | "TERRAIN-MAPPED"
+  | "SCALABLE-AND-SIGNED"
   | "RUNNING"
   | "TYPED";
 
@@ -61,12 +62,12 @@ export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
   {
     date: "2026-07-24",
     part: 37,
-    title: "Signed / scalable cusp evaluator (in progress)",
-    verdict: "RUNNING",
+    title: "Signed and scalable: the prime fingerprint from small shells",
+    verdict: "SCALABLE-AND-SIGNED",
     summary:
-      "Building an independent O(p²)-scale character-sum evaluator for λ_geom that can extract signed a_p (not only a_p²). Placeholder until the run completes.",
-    badge: "running",
-    script: "e8_lambda_charsum_evaluator_probe.py",
+      "The naive invariant classification died at p = 5 (preregistered kill) and was repaired via the Shell(p)-image refinement; the assembler identity R(p) = σ₃ − 1 − c(p²)/8 reproduces the cusp residues 16 and 4 live and predicts R(7) = 576. The sign of a_p now comes from Shell(p) (order p³ work instead of p⁷): a_p = −c(p)/8 gives −4, −2, +24 with correct signs. A single Salié sum is not a_p (kill fired); promotion needs closed local densities first.",
+    badge: "sandbox",
+    script: "e8_salie_signed_cusp_probe.py",
   },
   {
     date: "2026-07-24",
