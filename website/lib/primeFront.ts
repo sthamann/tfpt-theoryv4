@@ -29,6 +29,7 @@ export type PrimeFrontVerdict =
   | "TERRAIN-MAPPED"
   | "SCALABLE-AND-SIGNED"
   | "BRIDGE-FOUND"
+  | "FUNCTOR-WIRED"
   | "RUNNING"
   | "TYPED";
 
@@ -50,6 +51,16 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-24",
+    part: 41,
+    title: "The bridge is Hecke-equivariant: g carries the prime fingerprints as eigenvalues",
+    verdict: "FUNCTOR-WIRED",
+    summary:
+      "The weight-5/2 compiler object g from part 38 is an exact T(p^2)-eigenform with eigenvalues precisely a_p(f8) for p = 3, 5, 7, 11, 13 (-4, -2, 24, -44, 22) — the Shimura bridge is a mechanism, not a coefficient coincidence (classical Shimura correspondence). A trial functional equation completes the half-integral side around centre 5/4. Honest gap: g is not in the Kohnen plus space, so the Waldspurger central-value window fails for now — the Kohnen projection is the named next lever.",
+    badge: "sandbox",
+    script: "functor_wiring_halfintegral_probe.py",
+  },
   {
     date: "2026-07-24",
     part: 38,
