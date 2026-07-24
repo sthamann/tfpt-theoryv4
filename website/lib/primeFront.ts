@@ -34,7 +34,8 @@ export type PrimeFrontVerdict =
   | "RUNNING"
   | "TYPED"
   | "DENSITIES-CLOSED"
-  | "OUTSIDE-KOHNEN-SCOPE";
+  | "OUTSIDE-KOHNEN-SCOPE"
+  | "CENTRAL-VALUES-WIRED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -58,6 +59,16 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-24",
+    part: 45,
+    title: "Central values wired: Waldspurger constancy to thirteen decimal places",
+    verdict: "CENTRAL-VALUES-WIRED",
+    summary:
+      "With functional-equation-based twisted L-values (the part-44 outlier d = 89 was purely numerical and now sits exactly on the constant), the Waldspurger quotient R(d) = b(d)^2 / (d^{3/2} L(f8 x chi_d, 2)) is constant to 2.7e-13 across ten fundamental discriminants d = 1 mod 8, while the d = 5 mod 8 class vanishes structurally via root number -1. The central L-value family is realised as the coefficient squares of the compiler object g — the third functor channel is wired (classical Waldspurger/Baruch-Mao; GL(2) centre s = 2, not the xi-line; no RH content).",
+    badge: "sandbox",
+    script: "baruch_mao_metaplectic_probe.py",
+  },
   {
     date: "2026-07-24",
     part: 44,
