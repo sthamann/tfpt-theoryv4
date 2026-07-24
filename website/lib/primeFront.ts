@@ -31,7 +31,8 @@ export type PrimeFrontVerdict =
   | "BRIDGE-FOUND"
   | "FUNCTOR-WIRED"
   | "RUNNING"
-  | "TYPED";
+  | "TYPED"
+  | "DENSITIES-CLOSED";
 
 export type PrimeFrontUpdate = {
   /** ISO date (YYYY-MM-DD) of the agent run. */
@@ -51,6 +52,16 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-07-24",
+    part: 42,
+    title: "Local densities closed: the Eichler layer is promotion-ready",
+    verdict: "DENSITIES-CLOSED",
+    summary:
+      "The separating invariant is found — Type-A isotropic cosets are exactly those representing norm p, and the closed densities N_A = min(240(1+p^3), #iso-1) predict p = 7 correctly (82560/743040, verified live). The O(1) assembler lambda_geom = lambda_Eis + a_p^2 now runs to p = 31 with no enumeration, and the checklist for promoting the Eichler trace layer (candidate v536) is fully green. Classical ingredients (Witt, Eichler, Siegel densities) named as classical; the claim is the two-sided in-suite identity.",
+    badge: "sandbox",
+    script: "e8_local_densities_probe.py",
+  },
   {
     date: "2026-07-24",
     part: 41,
